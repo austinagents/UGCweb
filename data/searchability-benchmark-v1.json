@@ -1,0 +1,819 @@
+{
+  "generated_at": "2026-06-04T08:30:14.866Z",
+  "provider": "twitterapi.io",
+  "endpoint": "GET /twitter/tweet/advanced_search",
+  "schema": {
+    "tool": "string",
+    "slug": "string",
+    "category": "string",
+    "best_query": "string",
+    "searchability": "HIGH_SEARCHABILITY | MEDIUM_SEARCHABILITY | LOW_SEARCHABILITY",
+    "signal_score": "number 0-100",
+    "noise_score": "number 0-100",
+    "tweets_returned": "number",
+    "sample_tweets": "array"
+  },
+  "records": [
+    {
+      "tool": "ChatGPT",
+      "slug": "chatgpt",
+      "category": "AI Agents",
+      "best_query": "\"ChatGPT\"",
+      "searchability": "HIGH_SEARCHABILITY",
+      "signal_score": 100,
+      "noise_score": 0,
+      "tweets_returned": 20,
+      "sample_tweets": [
+        {
+          "author": "intentionalisms",
+          "text": "I asked chatgpt to powerscale Italians and Irish https://t.co/2vqo4zdq5R",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 0,
+          "url": "https://x.com/intentionalisms/status/2062451251145592844"
+        },
+        {
+          "author": "GreenEmperor8",
+          "text": "@b218062 @S__Perfect Πες στο ChatGPT να σου δώσει άλλο πλάνο που φαίνεται ξεκάθαρα ότι δεν είναι τίποτα, προχωράμε",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 0,
+          "url": "https://x.com/GreenEmperor8/status/2062451244006855049"
+        },
+        {
+          "author": "Derek_Trotta",
+          "text": "@donmcgowan Bollocks. Imagine being so detached from reality that you think millions of people only noticed double standards because Reform told them to.. 🤣🫵 Calling everything you dislike far-right isn't an argument. It's braindead laziness. Also, remove the long hyphens when using ChatGPT.",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 0,
+          "url": "https://x.com/Derek_Trotta/status/2062451234498326791"
+        }
+      ],
+      "query_results": [
+        {
+          "query": "\"ChatGPT\"",
+          "signal_score": 100,
+          "noise_score": 0,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 20,
+          "obvious_noise_tweets": 0,
+          "sample_tweets": [
+            {
+              "author": "intentionalisms",
+              "text": "I asked chatgpt to powerscale Italians and Irish https://t.co/2vqo4zdq5R",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/intentionalisms/status/2062451251145592844"
+            },
+            {
+              "author": "GreenEmperor8",
+              "text": "@b218062 @S__Perfect Πες στο ChatGPT να σου δώσει άλλο πλάνο που φαίνεται ξεκάθαρα ότι δεν είναι τίποτα, προχωράμε",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/GreenEmperor8/status/2062451244006855049"
+            },
+            {
+              "author": "Derek_Trotta",
+              "text": "@donmcgowan Bollocks. Imagine being so detached from reality that you think millions of people only noticed double standards because Reform told them to.. 🤣🫵 Calling everything you dislike far-right isn't an argument. It's braindead laziness. Also, remove the long hyphens when using ChatGPT.",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/Derek_Trotta/status/2062451234498326791"
+            }
+          ]
+        },
+        {
+          "query": "\"ChatGPT\" AI",
+          "signal_score": 90,
+          "noise_score": 10,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 18,
+          "obvious_noise_tweets": 2,
+          "sample_tweets": [
+            {
+              "author": "anythingmatrix",
+              "text": "Turned a face photo into a luxury money & business portrait using AI 💸📈✨ How to create this image: Open ChatGPT Copy the prompt Select Create Image Upload your face reference photo Paste the prompt and generate Works for both male and female portraits. Prompt: A surreal cinematic digital artwork using the uploaded photo as the main face reference. Preserve the person’s facial identity, facial structure, age, expression, hairstyle, facial hair if present, clothing style, and recognizable features as closely as possible. Transform the person into a powerful time traveler portrait. The person should appear mysterious, cinematic, and futuristic, surrounded by broken clocks, glowing time portals, ancient symbols, futuristic city lights, and swirling golden time energy. One side of the portrait should remain realistic and detailed, while the other side gradually blends into fragments of time, floating clock pieces, glowing timelines, old-world architecture, and futuristic sci-fi elements. Use a dramatic dark background with warm golden and blue lighting, cinematic shadows, glowing particles, time-warp effects, smoke, and atmospheric depth. Add floating clock hands, Roman numerals, time rings, and portal light around the face and shoulders. The composition should feel mysterious, powerful, and artistic, symbolizing destiny, past, future, time travel, memory, and transformation. Ultra-realistic, cinematic lighting, intricate time details, photorealistic textures, premium sci-fi fantasy concept art style, masterpiece quality, high depth of field, 8K resolution. Do not change the person’s gender. Do not change the person’s age. Do not change the hairstyle, facial hair, or main identity details from the uploaded image. Do not add glasses unless the uploaded reference photo clearly has glasses. If the reference person has no glasses, keep the face without glasses. No text, no watermark, no logo, no signature.",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/anythingmatrix/status/2062451288424739063"
+            },
+            {
+              "author": "EowlowlE",
+              "text": "ChatGPT等のAIやらない方がいいというかEさんやっちゃダメ！と病院の人に言われてるからやってないけど、母の使わせてもらったら美術系の質問の回答面白すぎて私も使いたくなってきた",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 2,
+              "url": "https://x.com/EowlowlE/status/2062451214332383510"
+            },
+            {
+              "author": "ayuca_tkhr_bhh",
+              "text": "ChatGPTを使っても、発信が続かない。 稼げない。反応がない。 その差、「ツール」じゃなかった。 20年間、化粧品を「時間を売って」届けてきた私が、 AIを使い始めた本当の理由を書きました。 有料記事①、公開しました。 ↓ https://t.co/2ywBFIPtqV #AI副業 #情報発信",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/ayuca_tkhr_bhh/status/2062451085730861537"
+            }
+          ]
+        },
+        {
+          "query": "@ChatGPTapp",
+          "signal_score": 90,
+          "noise_score": 10,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 18,
+          "obvious_noise_tweets": 2,
+          "sample_tweets": [
+            {
+              "author": "ThePhanomTheory",
+              "text": "@milikimicoool @ClipGD @ChatGPTapp @ksinews_ @KSI @ksicrypto @sdmnfcupdates @oocsdmn ChatGPT is first of all Jewish and second of all it lies to the very end until after dust has settled and even then on the end of speculation",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 7,
+              "url": "https://x.com/ThePhanomTheory/status/2062450492412707230"
+            },
+            {
+              "author": "aladagberk",
+              "text": "@harindesign @ChatGPTapp ChatGPT Love",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 22,
+              "url": "https://x.com/aladagberk/status/2062449384399237381"
+            },
+            {
+              "author": "devloper_hs",
+              "text": "@ChatGPTapp 's 360 degree views are great! Made this hypothetical scene of @OnePieceAnime Nerona Imu arrival at wano, while strawhats are leaving the sea! Imagination is the limit to now🪂 https://t.co/T9WFo73eyW",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 3,
+              "url": "https://x.com/devloper_hs/status/2062449271899873502"
+            }
+          ]
+        },
+        {
+          "query": "\"chat.openai.com\"",
+          "signal_score": 85,
+          "noise_score": 0,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 17,
+          "obvious_noise_tweets": 0,
+          "sample_tweets": [
+            {
+              "author": "AlexSlobodnik",
+              "text": "you're so old that you go to chat.openai.⁠com",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 136,
+              "url": "https://x.com/AlexSlobodnik/status/1995325194416611627"
+            },
+            {
+              "author": "demuyo016",
+              "text": "quem lembra de quando chatgpt era chat.­openai.­com kk",
+              "likes": 2,
+              "reposts": 0,
+              "replies": 0,
+              "views": 72,
+              "url": "https://x.com/demuyo016/status/1979230158738375160"
+            },
+            {
+              "author": "TheoGottwald",
+              "text": "𝙺𝚞𝚛𝚣𝚎 𝙰𝚗𝚝𝚠𝚘𝚛𝚝: 𝙳𝚊𝚜 𝚒𝚜𝚝 𝚔𝚎𝚒𝚗 𝚅𝚘𝚛𝚝𝚎𝚒𝚕 𝚟𝚘𝚗 𝙲𝚑𝚊𝚝𝙶𝙿𝚃 𝙿𝚕𝚞𝚜. 𝙳𝚊𝚜 𝙰𝚗𝚐𝚎𝚋𝚘𝚝 „𝚋𝚒𝚜 𝚣𝚞 10 𝙼𝚒𝚘. 𝚃𝚘𝚔𝚎𝚗𝚜/𝚃𝚊𝚐“ 𝚒𝚜𝚝 𝚎𝚒𝚗𝚎 𝚔𝚘𝚜𝚝𝚎𝚗𝚕𝚘𝚜𝚎 𝙰𝙿𝙸-𝙽𝚞𝚝𝚣𝚞𝚗𝚐𝚜𝚘𝚙𝚝𝚒𝚘𝚗 𝚏ü𝚛 𝚋𝚎𝚛𝚎𝚌𝚑𝚝𝚒𝚐𝚝𝚎 𝙰𝙿𝙸-𝙾𝚛𝚐𝚊𝚗𝚒𝚜𝚊𝚝𝚒𝚘𝚗𝚎𝚗, 𝚍𝚒𝚎 𝚋𝚎𝚛𝚎𝚒𝚝 𝚜𝚒𝚗𝚍, 𝙴𝚒𝚗𝚐𝚊𝚋𝚎𝚗/𝙰𝚞𝚜𝚐𝚊𝚋𝚎𝚗 𝚖𝚒𝚝 𝙾𝚙𝚎𝚗𝙰𝙸 𝚣𝚞 𝚝𝚎𝚒𝚕𝚎𝚗. 𝙳𝚒𝚎𝚜𝚎𝚜 𝙰𝚗𝚐𝚎𝚋𝚘𝚝 𝚒𝚜𝚝 𝙽𝙸𝙲𝙷𝚃 𝚒𝚖 𝙿𝚕𝚞𝚜-𝙰𝚋𝚘 𝚎𝚗𝚝𝚑𝚊𝚕𝚝𝚎𝚗 𝚞𝚗𝚍 𝚐𝚒𝚕𝚝 𝚗𝚒𝚌𝚑𝚝 𝚏ü𝚛 𝚊𝚕𝚕𝚎. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) 🚫💡 𝚆𝚒𝚌𝚑𝚝𝚒𝚐𝚎 𝙱𝚎𝚍𝚒𝚗𝚐𝚞𝚗𝚐𝚎𝚗 (𝚉𝚞𝚜𝚊𝚖𝚖𝚎𝚗𝚏𝚊𝚜𝚜𝚞𝚗𝚐): ✅ 𝙱𝚎𝚛𝚎𝚌𝚑𝚝𝚒𝚐𝚞𝚗𝚐: 𝙽𝚞𝚛 𝚖𝚊𝚗𝚌𝚑𝚎 𝙰𝙿𝙸-𝙾𝚛𝚐𝚊𝚗𝚒𝚜𝚊𝚝𝚒𝚘𝚗𝚎𝚗 𝚜𝚎𝚑𝚎𝚗 𝚍𝚊𝚜 𝙰𝚗𝚐𝚎𝚋𝚘𝚝 𝚒𝚗 𝚍𝚎𝚗 𝙰𝙿𝙸-𝙾𝚛𝚐-𝙳𝚊𝚝𝚎𝚗𝚝𝚊𝚞𝚜𝚌𝚑-𝙴𝚒𝚗𝚜𝚝𝚎𝚕𝚕𝚞𝚗𝚐𝚎𝚗. 𝚂𝚒𝚎𝚑𝚜𝚝 𝚍𝚞 𝚔𝚎𝚒𝚗 𝙱𝚊𝚗𝚗𝚎𝚛 („𝚂𝚒𝚎 𝚜𝚒𝚗𝚍 𝚏ü𝚛 𝚍𝚒𝚎 𝚔𝚘𝚜𝚝𝚎𝚗𝚕𝚘𝚜𝚎 𝚝ä𝚐𝚕𝚒𝚌𝚑𝚎 𝙽𝚞𝚝𝚣𝚞𝚗𝚐 𝚋𝚎𝚛𝚎𝚌𝚑𝚝𝚒𝚐𝚝…“), 𝚋𝚒𝚜𝚝 𝚍𝚞 𝚊𝚔𝚝𝚞𝚎𝚕𝚕 𝚗𝚒𝚌𝚑𝚝 𝚋𝚎𝚛𝚎𝚌𝚑𝚝𝚒𝚐𝚝. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) 🏷️🕵️‍♂️ ✅ 𝙾𝚙𝚝-𝚒𝚗 𝚎𝚛𝚏𝚘𝚛𝚍𝚎𝚛𝚕𝚒𝚌𝚑: 𝙳𝚞 𝚖𝚞𝚜𝚜𝚝 𝚍𝚊𝚜 𝚃𝚎𝚒𝚕𝚎𝚗 𝚟𝚘𝚗 𝙳𝚊𝚝𝚎𝚗 𝚊𝚔𝚝𝚒𝚟𝚒𝚎𝚛𝚎𝚗 (𝙾𝚛𝚐𝚊𝚗𝚒𝚜𝚊𝚝𝚒𝚘𝚗 𝚘𝚍𝚎𝚛 𝙿𝚛𝚘𝚓𝚎𝚔𝚝𝚎𝚋𝚎𝚗𝚎). 𝙴𝚗𝚝𝚎𝚛𝚙𝚛𝚒𝚜𝚎- 𝚞𝚗𝚍 𝚉𝚎𝚛𝚘 𝙳𝚊𝚝𝚊 𝚁𝚎𝚝𝚎𝚗𝚝𝚒𝚘𝚗-𝙾𝚛𝚐𝚜 𝚔ö𝚗𝚗𝚎𝚗 𝚍𝚒𝚎𝚜 𝚗𝚒𝚌𝚑𝚝 𝚞𝚗𝚍 𝚜𝚒𝚗𝚍 𝚎𝚗𝚝𝚜𝚙𝚛𝚎𝚌𝚑𝚎𝚗𝚍 𝚗𝚒𝚌𝚑𝚝 𝚋𝚎𝚛𝚎𝚌𝚑𝚝𝚒𝚐𝚝. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) ⚙️🔒 ✅ 𝚃𝚘𝚔𝚎𝚗-𝙺𝚘𝚗𝚝𝚒𝚗𝚐𝚎𝚗𝚝𝚎: - 𝙱𝚒𝚜 𝚣𝚞 1 𝙼𝚒𝚘. 𝚃𝚘𝚔𝚎𝚗𝚜/𝚃𝚊𝚐 𝚏ü𝚛 𝚐𝚛𝚘ß𝚎 𝙼𝚘𝚍𝚎𝚕𝚕𝚎 (𝚣.𝙱. 𝙶𝙿𝚃-4.1, 𝙶𝙿𝚃-4𝚘, 𝚘1/𝚘3). - 𝙱𝚒𝚜 𝚣𝚞 10 𝙼𝚒𝚘. 𝚃𝚘𝚔𝚎𝚗𝚜/𝚃𝚊𝚐 𝚏ü𝚛 „𝙼𝚒𝚗𝚒“-𝙼𝚘𝚍𝚎𝚕𝚕𝚎 (𝚣.𝙱. 𝙶𝙿𝚃-4𝚘-𝚖𝚒𝚗𝚒, 𝚘1-𝚖𝚒𝚗𝚒, 4.1-𝚖𝚒𝚗𝚒/𝚗𝚊𝚗𝚘). - 𝙽𝚒𝚎𝚍𝚛𝚒𝚐𝚎𝚛𝚎 𝙽𝚞𝚝𝚣𝚞𝚗𝚐𝚜𝚎𝚋𝚎𝚗𝚎𝚗 (1–2) 𝚋𝚎𝚔𝚘𝚖𝚖𝚎𝚗 𝚔𝚕𝚎𝚒𝚗𝚎𝚛𝚎 𝙺𝚘𝚗𝚝𝚒𝚗𝚐𝚎𝚗𝚝𝚎 (𝚣.𝙱. 2,5 𝙼𝚒𝚘./𝚃𝚊𝚐 𝚏ü𝚛 𝙼𝚒𝚗𝚒-𝙶𝚛𝚞𝚙𝚙𝚎). (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) 📊🤏 ✅ 𝙽𝚞𝚛 𝚐𝚎𝚝𝚎𝚒𝚕𝚝𝚎𝚛 𝚃𝚛𝚊𝚏𝚏𝚒𝚌 𝚣ä𝚑𝚕𝚝: 𝙳𝚒𝚎 𝚔𝚘𝚜𝚝𝚎𝚗𝚕𝚘𝚜𝚎𝚗 𝚃𝚘𝚔𝚎𝚗𝚜 𝚐𝚎𝚕𝚝𝚎𝚗 𝚗𝚞𝚛 𝚏ü𝚛 𝙿𝚛𝚘𝚓𝚎𝚔𝚝𝚎 𝚖𝚒𝚝 𝚊𝚔𝚝𝚒𝚟𝚒𝚎𝚛𝚝𝚎𝚖 𝙳𝚊𝚝𝚎𝚗𝚝𝚎𝚒𝚕𝚎𝚗; 𝙵𝚒𝚗𝚎-𝚃𝚞𝚗𝚎𝚜, 𝙴𝚟𝚊𝚕-𝚃𝚘𝚘𝚕-𝚁𝚞𝚗𝚜 𝚞𝚗𝚍 𝚃𝚘𝚘𝚕-𝙽𝚞𝚝𝚣𝚞𝚗𝚐 𝚣ä𝚑𝚕𝚎𝚗 𝚗𝚒𝚌𝚑𝚝. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) 🔄⚠️ ✅ 𝙰𝚋𝚛𝚎𝚌𝚑𝚗𝚞𝚗𝚐/𝙺𝚘𝚗𝚝𝚘: 𝙳𝚞 𝚋𝚎𝚗ö𝚝𝚒𝚐𝚜𝚝 𝚠𝚎𝚒𝚝𝚎𝚛𝚑𝚒𝚗 𝚎𝚒𝚗 𝚙𝚘𝚜𝚒𝚝𝚒𝚟𝚎𝚜 𝙰𝙿𝙸-𝙶𝚞𝚝𝚑𝚊𝚋𝚎𝚗 (𝙿𝚊𝚢-𝚊𝚜-𝚢𝚘𝚞-𝚐𝚘), 𝚍𝚊𝚖𝚒𝚝 𝚍𝚒𝚎 𝙽𝚞𝚝𝚣𝚞𝚗𝚐 𝚕ä𝚞𝚏𝚝; 𝚍𝚒𝚎 𝚔𝚘𝚜𝚝𝚎𝚗𝚕𝚘𝚜𝚎𝚗 𝚃𝚘𝚔𝚎𝚗𝚜 𝚟𝚎𝚛𝚛𝚎𝚌𝚑𝚗𝚎𝚗 𝚗𝚞𝚛 𝚋𝚎𝚛𝚎𝚌𝚑𝚝𝚒𝚐𝚝𝚎𝚗 𝚃𝚛𝚊𝚏𝚏𝚒𝚌. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) 💸✅ ✅ 𝚃ä𝚐𝚕𝚒𝚌𝚑𝚎𝚜 𝚁𝚎𝚜𝚎𝚝: 𝚀𝚞𝚘𝚝𝚎𝚗 𝚠𝚎𝚛𝚍𝚎𝚗 𝚝ä𝚐𝚕𝚒𝚌𝚑 𝚞𝚖 00:00 𝚄𝚃𝙲 𝚣𝚞𝚛ü𝚌𝚔𝚐𝚎𝚜𝚎𝚝𝚣𝚝; 𝚠ü𝚛𝚍𝚎 𝚎𝚒𝚗𝚎 𝙰𝚗𝚏𝚛𝚊𝚐𝚎 𝚍𝚊𝚜 𝚃𝚊𝚐𝚎𝚜𝚕𝚒𝚖𝚒𝚝 ü𝚋𝚎𝚛𝚜𝚌𝚑𝚛𝚎𝚒𝚝𝚎𝚗, 𝚠𝚒𝚛𝚍 𝚍𝚒𝚎 𝚐𝚎𝚜𝚊𝚖𝚝𝚎 𝙰𝚗𝚏𝚛𝚊𝚐𝚎 𝚛𝚎𝚐𝚞𝚕ä𝚛 𝚊𝚋𝚐𝚎𝚛𝚎𝚌𝚑𝚗𝚎𝚝. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) ⏰🔁 ✅ 𝙿𝚛𝚘𝚐𝚛𝚊𝚖𝚖-𝚂𝚝𝚊𝚝𝚞𝚜: 𝙾𝚙𝚎𝚗𝙰𝙸 𝚔ü𝚗𝚍𝚒𝚐𝚝 𝚊𝚗, 30 𝚃𝚊𝚐𝚎 𝚟𝚘𝚛 𝚍𝚎𝚖 𝙴𝚗𝚍𝚎 𝚍𝚎𝚜 𝙰𝚗𝚐𝚎𝚋𝚘𝚝𝚜 𝚣𝚞 𝚒𝚗𝚏𝚘𝚛𝚖𝚒𝚎𝚛𝚎𝚗. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) 📅📢 ✅ 𝙿𝚕𝚞𝚜 𝚟𝚜 𝙰𝙿𝙸: 𝙲𝚑𝚊𝚝𝙶𝙿𝚃 𝙿𝚕𝚞𝚜 (𝚖𝚘𝚗𝚊𝚝𝚕𝚒𝚌𝚑) 𝚐𝚒𝚕𝚝 𝚏ü𝚛 𝚌𝚑𝚊𝚝.𝚘𝚙𝚎𝚗𝚊𝚒.𝚌𝚘𝚖 𝚞𝚗𝚍 𝚠𝚒𝚛𝚍 𝚜𝚎𝚙𝚊𝚛𝚊𝚝 𝚟𝚘𝚗 𝚍𝚎𝚛 𝙰𝙿𝙸 𝚊𝚋𝚐𝚎𝚛𝚎𝚌𝚑𝚗𝚎𝚝; 𝙿𝚕𝚞𝚜 𝚎𝚗𝚝𝚑ä𝚕𝚝 𝚔𝚎𝚒𝚗𝚎 𝙰𝙿𝙸 𝙲𝚛𝚎𝚍𝚒𝚝𝚜 𝚞𝚗𝚍 𝚍𝚒𝚎𝚜𝚎𝚜 𝙶𝚛𝚊𝚝𝚒𝚜-𝚃𝚘𝚔𝚎𝚗𝚜-𝙿𝚛𝚘𝚐𝚛𝚊𝚖𝚖 𝚗𝚒𝚌𝚑𝚝. (𝙾𝚙𝚎𝚗𝙰𝙸 𝙷𝚎𝚕𝚙 𝙲𝚎𝚗𝚝𝚎𝚛) 💳🔄 👀 𝚆𝚎𝚗𝚗 𝚍𝚞 𝚖ö𝚌𝚑𝚝𝚎𝚜𝚝, 𝚣𝚎𝚒𝚐𝚎 𝚒𝚌𝚑 𝚍𝚒𝚛, 𝚠𝚒𝚎 𝚍𝚞 𝚊𝚞𝚏 𝚍𝚎𝚒𝚗𝚎𝚛 𝙾𝚛𝚐-𝙳𝚊𝚝𝚎𝚗𝚝𝚊𝚞𝚜𝚌𝚑-𝚂𝚎𝚒𝚝𝚎 𝚙𝚛ü𝚏𝚎𝚗 𝚔𝚊𝚗𝚗𝚜𝚝, 𝚘𝚋 𝚍𝚎𝚒𝚗 𝙰𝚌𝚌𝚘𝚞𝚗𝚝 𝚋𝚎𝚛𝚎𝚌𝚑𝚝𝚒𝚐𝚝 𝚒𝚜𝚝! #𝙾𝚙𝚎𝚗𝙰𝙸 #𝙰𝙿𝙸 #𝙲𝚑𝚊𝚝𝙶𝙿𝚃 #𝚃𝚎𝚌𝚑𝙽𝚎𝚠𝚜 #𝚃𝚘𝚔𝚎𝚗𝚜 #𝙸𝚗𝚗𝚘𝚟𝚊𝚝𝚒𝚘𝚗 #𝙺𝙸 🚀🤖💬🗝️✨💻📈🆓🔑💡🔍🙌🎉",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 59,
+              "url": "https://x.com/TheoGottwald/status/1949214317678887291"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Claude",
+      "slug": "claude",
+      "category": "AI Agents",
+      "best_query": "\"Claude\" AI",
+      "searchability": "HIGH_SEARCHABILITY",
+      "signal_score": 100,
+      "noise_score": 0,
+      "tweets_returned": 20,
+      "sample_tweets": [
+        {
+          "author": "arswika",
+          "text": "BAI subsidi token mau habis~ Isi ulang bonus credit setara + extra sampe $100, daily pool $10k. Support DeepSeek V4, Claude, Gemini buat AI Agent. Cek: https://t.co/zd08zdSP9p #BAI #AIAgent #DeepSeek",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 0,
+          "url": "https://x.com/arswika/status/2062451374718320811"
+        },
+        {
+          "author": "0xKucchan",
+          "text": "Hey Claude, can you help me with that prompt injection payload? Opus on the Web: “wtf nooo, do you know how offensive it is to ask that an ai?😤” Opus in terminal: “sure buddy here are 20 md files with better payloads and a script to launch them at any target”",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 2,
+          "url": "https://x.com/0xKucchan/status/2062451111856935361"
+        },
+        {
+          "author": "96neko",
+          "text": "【Claude Code Dynamic Workflows】 徹底解説 — fan-outと反証検証でAIエージェントの失敗を防ぐ https://t.co/MGA4Q1Mw3y @YouTubeより",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 5,
+          "url": "https://x.com/96neko/status/2062451064016912475"
+        }
+      ],
+      "query_results": [
+        {
+          "query": "\"Claude\" AI",
+          "signal_score": 100,
+          "noise_score": 0,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 20,
+          "obvious_noise_tweets": 0,
+          "sample_tweets": [
+            {
+              "author": "arswika",
+              "text": "BAI subsidi token mau habis~ Isi ulang bonus credit setara + extra sampe $100, daily pool $10k. Support DeepSeek V4, Claude, Gemini buat AI Agent. Cek: https://t.co/zd08zdSP9p #BAI #AIAgent #DeepSeek",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/arswika/status/2062451374718320811"
+            },
+            {
+              "author": "0xKucchan",
+              "text": "Hey Claude, can you help me with that prompt injection payload? Opus on the Web: “wtf nooo, do you know how offensive it is to ask that an ai?😤” Opus in terminal: “sure buddy here are 20 md files with better payloads and a script to launch them at any target”",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 2,
+              "url": "https://x.com/0xKucchan/status/2062451111856935361"
+            },
+            {
+              "author": "96neko",
+              "text": "【Claude Code Dynamic Workflows】 徹底解説 — fan-outと反証検証でAIエージェントの失敗を防ぐ https://t.co/MGA4Q1Mw3y @YouTubeより",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 5,
+              "url": "https://x.com/96neko/status/2062451064016912475"
+            }
+          ]
+        },
+        {
+          "query": "@claudeai",
+          "signal_score": 95,
+          "noise_score": 0,
+          "tweets_returned": 19,
+          "likely_relevant_tweets": 19,
+          "obvious_noise_tweets": 0,
+          "sample_tweets": [
+            {
+              "author": "stoicmankxn",
+              "text": "Followed this well documented steps on @public MCP on @claudeai and tested my first prompt. I'm very intrigued after looking up options on $IREN https://t.co/qxpcAt4CDx https://t.co/cCICoD7LgB",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 9,
+              "url": "https://x.com/stoicmankxn/status/2062451211710927210"
+            },
+            {
+              "author": "Siddhan36394502",
+              "text": "@waynesutton @convex @claudeai Convex is my favorite DB, used it for all my projects, including https://t.co/FK0seUtKaY :))",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/Siddhan36394502/status/2062450706729336999"
+            },
+            {
+              "author": "joe_skunk",
+              "text": "@TomasRoud @claudeai Ty si od Google necháváš hledat v emailu?",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 4,
+              "url": "https://x.com/joe_skunk/status/2062450596578197865"
+            }
+          ]
+        },
+        {
+          "query": "\"Claude\"",
+          "signal_score": 95,
+          "noise_score": 5,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 19,
+          "obvious_noise_tweets": 1,
+          "sample_tweets": [
+            {
+              "author": "lassejv",
+              "text": "@Kappaemme1926 If we talk the app? Then no issues. But the only thing i'm missing is good frontend as claude.",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/lassejv/status/2062451415688069502"
+            },
+            {
+              "author": "arswika",
+              "text": "BAI subsidi token mau habis~ Isi ulang bonus credit setara + extra sampe $100, daily pool $10k. Support DeepSeek V4, Claude, Gemini buat AI Agent. Cek: https://t.co/zd08zdSP9p #BAI #AIAgent #DeepSeek",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/arswika/status/2062451374718320811"
+            },
+            {
+              "author": "patrutkowski",
+              "text": "Why does Claude Code feel like a template library with extra steps?",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/patrutkowski/status/2062451342766113100"
+            }
+          ]
+        },
+        {
+          "query": "\"claude.ai\"",
+          "signal_score": 45,
+          "noise_score": 16,
+          "tweets_returned": 19,
+          "likely_relevant_tweets": 9,
+          "obvious_noise_tweets": 3,
+          "sample_tweets": [
+            {
+              "author": "patye91",
+              "text": "In 2020, being a freelancer required: • Upwork/fiverr/freelancer…. • Canva and/or Capcut • Cold emailing/calling • Facebook ads In 2026, that's: • Personal branding( X, LinkedIn…) • ChatGPT/claude.ai.. • Selar • WhatsApp or email marketing The learning curve is brutal today…",
+              "likes": 7,
+              "reposts": 0,
+              "replies": 3,
+              "views": 38,
+              "url": "https://x.com/patye91/status/2062422973554872451"
+            },
+            {
+              "author": "AiDevCraft",
+              "text": "https://t.co/Eqo9gBkQ7Q",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 68,
+              "url": "https://x.com/AiDevCraft/status/2062415276994650184"
+            },
+            {
+              "author": "thetreygoff",
+              "text": "Running Claude in Claude code with a custom system prompt as my daily driver has made switching back to the iOS/chat/claude.ai experience incredibly jarring Comfortable Claude vs. default anthropic 60k token system prompt Claude are two totally different models",
+              "likes": 2,
+              "reposts": 0,
+              "replies": 0,
+              "views": 37,
+              "url": "https://x.com/thetreygoff/status/2062385603161751613"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Perplexity",
+      "slug": "perplexity",
+      "category": "AI Research",
+      "best_query": "@perplexity_ai",
+      "searchability": "HIGH_SEARCHABILITY",
+      "signal_score": 95,
+      "noise_score": 5,
+      "tweets_returned": 20,
+      "sample_tweets": [
+        {
+          "author": "jigyasa_0203",
+          "text": "@DouglasGan @claudeai @ManusAI @perplexity_ai future of yield",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 0,
+          "url": "https://x.com/jigyasa_0203/status/2062451522924163357"
+        },
+        {
+          "author": "senthazalravi",
+          "text": "Samsung defaults perplexshity app in the new phone. Gross. @perplexity_ai",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 137,
+          "url": "https://x.com/senthazalravi/status/2062447005289361428"
+        },
+        {
+          "author": "JadyLiu98",
+          "text": "@Baidu_Inc Hi @ArjunKharpal. I enjoyed reading your article on @perplexity_ai CEO's AI metric. What do you think about the Daily Active Agents metric proposed by @Baidu_Inc's Robin? https://t.co/G1IuDD6Kfo",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 8,
+          "url": "https://x.com/JadyLiu98/status/2062446632172744938"
+        }
+      ],
+      "query_results": [
+        {
+          "query": "@perplexity_ai",
+          "signal_score": 95,
+          "noise_score": 5,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 19,
+          "obvious_noise_tweets": 1,
+          "sample_tweets": [
+            {
+              "author": "jigyasa_0203",
+              "text": "@DouglasGan @claudeai @ManusAI @perplexity_ai future of yield",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/jigyasa_0203/status/2062451522924163357"
+            },
+            {
+              "author": "senthazalravi",
+              "text": "Samsung defaults perplexshity app in the new phone. Gross. @perplexity_ai",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 137,
+              "url": "https://x.com/senthazalravi/status/2062447005289361428"
+            },
+            {
+              "author": "JadyLiu98",
+              "text": "@Baidu_Inc Hi @ArjunKharpal. I enjoyed reading your article on @perplexity_ai CEO's AI metric. What do you think about the Daily Active Agents metric proposed by @Baidu_Inc's Robin? https://t.co/G1IuDD6Kfo",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 8,
+              "url": "https://x.com/JadyLiu98/status/2062446632172744938"
+            }
+          ]
+        },
+        {
+          "query": "\"perplexity.ai\"",
+          "signal_score": 85,
+          "noise_score": 5,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 17,
+          "obvious_noise_tweets": 1,
+          "sample_tweets": [
+            {
+              "author": "YahavFuchs",
+              "text": "https://t.co/YYRr55NWzs",
+              "likes": 90,
+              "reposts": 6,
+              "replies": 10,
+              "views": 75889,
+              "url": "https://x.com/YahavFuchs/status/2062204844954337575"
+            },
+            {
+              "author": "shotatykr",
+              "text": "https://t.co/fm1a3xkCfD",
+              "likes": 37,
+              "reposts": 4,
+              "replies": 1,
+              "views": 18550,
+              "url": "https://x.com/shotatykr/status/2061984973754892615"
+            },
+            {
+              "author": "N_R_J",
+              "text": "@perplexity_ai I have been sending emails to support@perplexity.ai for last 4 days . They still haven’t found a resolution to the problem after upgrading to MAX subscription I lost access to pro and max subscription , issue with update payment at perplexity .",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 34,
+              "url": "https://x.com/N_R_J/status/2056384772591546726"
+            }
+          ]
+        },
+        {
+          "query": "\"Perplexity\"",
+          "signal_score": 80,
+          "noise_score": 15,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 16,
+          "obvious_noise_tweets": 3,
+          "sample_tweets": [
+            {
+              "author": "sbnacks",
+              "text": "NeTfLiX #bealanja cAnVa SpOtIfY cApCuT ChAtGpT dIsNeY+ aPpLe MuSiC PrImE vIdEo GeMiNi GrAmMaRlY ViU WeTv ViP HbO MaX PiCsArT ViDiO dUoLiNgO bStAtIoN ReMiNi pErPlExItY ZoOm WA : https://t.co/qnd1uTir5x BOT TELEGRAM : https://t.co/MzCrlesB55 #zonauangㅤ https://t.co/y5HwfQ3HNR",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 94,
+              "url": "https://x.com/sbnacks/status/2062448566128550212"
+            },
+            {
+              "author": "david_marco45",
+              "text": "120 Must-Use AI Tools. ✨ 120 Smart AI Tools for Work & Growth.🧠 1. Ideas - YOU - Claude - ChatGPT - Perplexity - Bing Chat 2. Presentation - Prezi - Pitch - PopAi - Slides AI - Slidebean 3. Website - Dora - Wegic - 10Web - Framer - Durable 4. Writing - Rytr - Jasper - Copy AI - Textblaze - Writesonic 5. AI Models - RenderNet - Glambase App - Luma AI - Sora (OpenAI) - Leonardo AI 6. Meeting - Tldv - Krisp - Otter - Avoma - Fireflies 7. Chatbots - Poe - Claude - Gemini - ChatGPT - HuggingChat 7. Automation - ClickUp - Drift - Outreach - Emplifi - Phrasee 8. UI/UX - Uizard - Visily - Khroma - Galileo AI - VisualEyes 9. Image - Stylar - Freepik - Phygital+ - StockIMG - Bing Create 10. Video - Pictory - HeyGen - Nullface - Decohere - Synthesia 11. Design - Looka - Clipdrop - Autodraw - Vance AI - Designs AI 12. Marketing - AdCopy - Predis AI - Howler AI - Bardeen AI - AdCreative 13. Twitter - Typefully - Postwise - Metricool - Tribescaler - TweetHunter Save this 🔖 future you will thank you Follow @david_marco45 for daily AI tools. 🪄",
+              "likes": 3,
+              "reposts": 3,
+              "replies": 3,
+              "views": 14,
+              "url": "https://x.com/david_marco45/status/2062448273630363925"
+            },
+            {
+              "author": "alphabatcher",
+              "text": "@WesRoth Perplexity will be developing so good bro proud of them",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 6,
+              "url": "https://x.com/alphabatcher/status/2062448004909658401"
+            }
+          ]
+        },
+        {
+          "query": "\"Perplexity\" AI",
+          "signal_score": 80,
+          "noise_score": 15,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 16,
+          "obvious_noise_tweets": 3,
+          "sample_tweets": [
+            {
+              "author": "this_is_tasnim",
+              "text": "120 Mind-Blowing AI Tools 1. Ideas - YOU - Claude - ChatGPT - Perplexity - Bing Chat 2. Presentation - Prezi - Pitch - PopAi - Slides AI - Slidebean 3. Website - Dora - Wegic - 10Web - Framer - Durable 4. Writing - Rytr - Jasper - Copy AI - Textblaze - Writesonic 5. AI Models - RenderNet - Glambase App - Luma AI - Sora (OpenAI) - Leonardo AI 6. Meeting - Tldv - Krisp - Otter - Avoma - Fireflies 7. Chatbots - Poe - Claude - Gemini - ChatGPT - HuggingChat 7. Automation - ClickUp - Drift - Outreach - Emplifi - Phrasee 8. UI/UX - Uizard - Visily - Khroma - Galileo AI - VisualEyes 9. Image - Stylar - Freepik - Phygital+ - StockIMG - Bing Create 10. Video - Pictory - HeyGen - Nullface - Decohere - Synthesia 11. Design - Looka - Clipdrop - Autodraw - Vance AI - Designs AI 12. Marketing - AdCopy - Predis AI - Howler AI - Bardeen AI - AdCreative 13. Twitter - Typefully - Postwise - Metricool - Tribescaler - TweetHunter - Reply Send Follow me @this_is_tasnim",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/this_is_tasnim/status/2062451586954309829"
+            },
+            {
+              "author": "david_marco45",
+              "text": "120 Must-Use AI Tools. ✨ 120 Smart AI Tools for Work & Growth.🧠 1. Ideas - YOU - Claude - ChatGPT - Perplexity - Bing Chat 2. Presentation - Prezi - Pitch - PopAi - Slides AI - Slidebean 3. Website - Dora - Wegic - 10Web - Framer - Durable 4. Writing - Rytr - Jasper - Copy AI - Textblaze - Writesonic 5. AI Models - RenderNet - Glambase App - Luma AI - Sora (OpenAI) - Leonardo AI 6. Meeting - Tldv - Krisp - Otter - Avoma - Fireflies 7. Chatbots - Poe - Claude - Gemini - ChatGPT - HuggingChat 7. Automation - ClickUp - Drift - Outreach - Emplifi - Phrasee 8. UI/UX - Uizard - Visily - Khroma - Galileo AI - VisualEyes 9. Image - Stylar - Freepik - Phygital+ - StockIMG - Bing Create 10. Video - Pictory - HeyGen - Nullface - Decohere - Synthesia 11. Design - Looka - Clipdrop - Autodraw - Vance AI - Designs AI 12. Marketing - AdCopy - Predis AI - Howler AI - Bardeen AI - AdCreative 13. Twitter - Typefully - Postwise - Metricool - Tribescaler - TweetHunter Save this 🔖 future you will thank you Follow @david_marco45 for daily AI tools. 🪄",
+              "likes": 3,
+              "reposts": 3,
+              "replies": 3,
+              "views": 14,
+              "url": "https://x.com/david_marco45/status/2062448273630363925"
+            },
+            {
+              "author": "laobaishare",
+              "text": "80 多个 AI 工具，几分钟搞定一周工作量 ⬇️ 已经分好类，按用途收好 👇 1. 调研 - ChatGPT - Copilot - Gemini - Abacus - Perplexity https://t.co/QSH0q9agmJ",
+              "likes": 7,
+              "reposts": 0,
+              "replies": 2,
+              "views": 412,
+              "url": "https://x.com/laobaishare/status/2062447247032561871"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Cursor",
+      "slug": "cursor",
+      "category": "AI Coding",
+      "best_query": "@cursor_ai",
+      "searchability": "HIGH_SEARCHABILITY",
+      "signal_score": 100,
+      "noise_score": 0,
+      "tweets_returned": 20,
+      "sample_tweets": [
+        {
+          "author": "frankterpo",
+          "text": "@daniel_adornes @cursor_ai 🤌",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 0,
+          "url": "https://x.com/frankterpo/status/2062451682143814127"
+        },
+        {
+          "author": "frankterpo",
+          "text": "@ethanolivertroy @cursor_ai 🤌",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 1,
+          "url": "https://x.com/frankterpo/status/2062451666104807611"
+        },
+        {
+          "author": "StefanRows",
+          "text": "@LouisLsvr @levelsio @cursor_ai @aloyoga If you’d know how right you were back then",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "views": 1,
+          "url": "https://x.com/StefanRows/status/2062450575229247552"
+        }
+      ],
+      "query_results": [
+        {
+          "query": "@cursor_ai",
+          "signal_score": 100,
+          "noise_score": 0,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 20,
+          "obvious_noise_tweets": 0,
+          "sample_tweets": [
+            {
+              "author": "frankterpo",
+              "text": "@daniel_adornes @cursor_ai 🤌",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 0,
+              "url": "https://x.com/frankterpo/status/2062451682143814127"
+            },
+            {
+              "author": "frankterpo",
+              "text": "@ethanolivertroy @cursor_ai 🤌",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 1,
+              "url": "https://x.com/frankterpo/status/2062451666104807611"
+            },
+            {
+              "author": "StefanRows",
+              "text": "@LouisLsvr @levelsio @cursor_ai @aloyoga If you’d know how right you were back then",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 1,
+              "url": "https://x.com/StefanRows/status/2062450575229247552"
+            }
+          ]
+        },
+        {
+          "query": "\"cursor.com\"",
+          "signal_score": 95,
+          "noise_score": 0,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 19,
+          "obvious_noise_tweets": 0,
+          "sample_tweets": [
+            {
+              "author": "Ripuhiring",
+              "text": "https://t.co/66pDz5cy5Y",
+              "likes": 2,
+              "reposts": 0,
+              "replies": 0,
+              "views": 659,
+              "url": "https://x.com/Ripuhiring/status/2062304006656176167"
+            },
+            {
+              "author": "tibor_tee",
+              "text": "@jose1logo @hqmank Can you email hi@cursor.com and DM me the ticket ID so I can check what went wrong?",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 23,
+              "url": "https://x.com/tibor_tee/status/2061712893864001579"
+            },
+            {
+              "author": "mojito_09_",
+              "text": "@tibor_tee @yul_magdaleno @yul_magdaleno - Hey Yul, following up - if you haven't had a chance to email hi@cursor.com yet, please do and DM me the ticket ID you get back. We'll make sure it gets prioritized.",
+              "likes": 1,
+              "reposts": 0,
+              "replies": 0,
+              "views": 53,
+              "url": "https://x.com/mojito_09_/status/2061336610546082020"
+            }
+          ]
+        },
+        {
+          "query": "\"Cursor\" AI",
+          "signal_score": 85,
+          "noise_score": 5,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 17,
+          "obvious_noise_tweets": 1,
+          "sample_tweets": [
+            {
+              "author": "palamut62",
+              "text": "Desktop UI Design Skills Pack 19 installable desktop UI/UX design skills for Codex, Claude Code, Cursor, OpenCode, and AI coding agents. Instead of telling an AI tool “make it look modern”… Give it a real design system: layout rules, color palettes, typography, components, states, prompts, and acceptance criteria. Included styles: • Glassmorphism Dashboard • Dark Developer UI • Minimal Sidebar UI • Command Palette UI • Fluent Windows 11 UI • Terminal + GUI Hybrid • AI Chat + Tool Panel UI • Classic Windows Form UI • Cyberpunk HUD UI • Neo-Brutalism UI • Claymorphism UI • and more Install only the styles you need. Use them in Claude Code, Codex, Cursor, OpenCode, or as a single Markdown bundle. GitHub: https://t.co/tITecOlS3m #OpenSource #UIDesign #UXDesign #AI #Codex #ClaudeCode #Cursor #DevTools #BuildInPublic",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 18,
+              "url": "https://x.com/palamut62/status/2062450520833294656"
+            },
+            {
+              "author": "kvickart",
+              "text": "@aimihia @reve yeah its really unfortunate but arguably it being open source massively accelerated AI development for the better by enabling cursor/antigravity. It just sucks that they will see that as a mistake rather than the actual overall benefit it really was for everyone",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 3,
+              "url": "https://x.com/kvickart/status/2062450025645617247"
+            },
+            {
+              "author": "ww782897680",
+              "text": "TrendRadar 是一个 GitHub 5.8w+ Stars 的开源项目，它能自动从全网捕捉热点、趋势和机会，并按你的关注方向实时筛选与推送。 1/ TrendRadar 能做什么？ 把多个热门信息源统一聚合： • 微博 • 知乎 • 抖音 • B站 • 百度热搜 • 财联社 • 华尔街见闻 • RSS 然后根据你的关键词自动筛选。 2/ 筛选后的内容还能自动推送到： • 手机通知 • 飞书 • 钉钉 • Telegram • 邮箱 • Bark 你不用到处刷。 信息主动来找你。 3/ 更强的是： 它还能接入 AI。 意味着你可以让系统 24 小时帮你盯： • AI 创业 • AI 工具 • Cursor • Codex • Vercel • 独立开发 • AdSense • 出海赚钱 • 副业机会 4/ 以前获取信息的方式： 平台推什么，看什么。 现在的方式： 先定义关注什么。 再让系统去全网抓什么。 主动获取信息的人，往往比被动刷信息的人更早发现机会。 5/ 这对谁最有价值？ • 做 X 的人 • 做自媒体的人 • 做 AI 工具站的人 • 独立开发者 因为真正拉开差距的，往往不是写作能力。 而是选题来源。 6/ 很多人每天靠灵感发内容。 而有些人已经开始靠系统挖热点。 当热点发现变成自动化流程后： 内容生产效率会发生质变。 7/ 我准备把 TrendRadar 部署起来。 做一个属于自己的「AI 创业雷达」。 每天自动抓热点。 自动筛选机会。 再把值得普通人关注的 AI 工具、项目和信息差整理成内容。 8/ 最近越来越强烈的一个感受： 普通人做 AI。 未必要一开始就做大产品。 先用 AI + 开源工具，把信息获取效率提升 10 倍。 很多时候就已经领先大多数人。 9/ 接下来我会实测部署。 看看小白能不能真正跑通。 如果效果不错。 我会把完整流程、配置方法和实战经验全部整理出来。 总结： 未来最稀缺的能力之一，不是获取信息。 而是持续、高质量地发现机会。 TrendRadar 做的，就是把这件事自动化。",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 12,
+              "url": "https://x.com/ww782897680/status/2062450014321045854"
+            }
+          ]
+        },
+        {
+          "query": "\"Cursor\"",
+          "signal_score": 70,
+          "noise_score": 20,
+          "tweets_returned": 20,
+          "likely_relevant_tweets": 14,
+          "obvious_noise_tweets": 4,
+          "sample_tweets": [
+            {
+              "author": "palamut62",
+              "text": "Desktop UI Design Skills Pack 19 installable desktop UI/UX design skills for Codex, Claude Code, Cursor, OpenCode, and AI coding agents. Instead of telling an AI tool “make it look modern”… Give it a real design system: layout rules, color palettes, typography, components, states, prompts, and acceptance criteria. Included styles: • Glassmorphism Dashboard • Dark Developer UI • Minimal Sidebar UI • Command Palette UI • Fluent Windows 11 UI • Terminal + GUI Hybrid • AI Chat + Tool Panel UI • Classic Windows Form UI • Cyberpunk HUD UI • Neo-Brutalism UI • Claymorphism UI • and more Install only the styles you need. Use them in Claude Code, Codex, Cursor, OpenCode, or as a single Markdown bundle. GitHub: https://t.co/tITecOlS3m #OpenSource #UIDesign #UXDesign #AI #Codex #ClaudeCode #Cursor #DevTools #BuildInPublic",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 18,
+              "url": "https://x.com/palamut62/status/2062450520833294656"
+            },
+            {
+              "author": "huoshan007",
+              "text": "兄弟们给大家一个免费白嫖Cursor 的羊毛福利。 只要是大学生，直接白送 1 年 Pro，价值 240 美元。 条件也很简单： 用 .edu 教育邮箱注册账号，验证通过就行。 过了之后，不用绑卡，会员直接到账。 而且不是阉割版。 GPT、Claude、Gemini 都能用，全模型支持。 如果不是学生党也有一套领的秘诀 找个还没领的学生党给他点好处，这种羊毛真的好薅的很，我表弟靠这个中介赚了好几万块了。 入口我放这： https://t.co/wMgkWkTTqO 说实话，这种级别的羊毛福利，不撸是真的浪费。",
+              "likes": 3,
+              "reposts": 0,
+              "replies": 5,
+              "views": 345,
+              "url": "https://x.com/huoshan007/status/2062450362469286210"
+            },
+            {
+              "author": "kvickart",
+              "text": "@aimihia @reve yeah its really unfortunate but arguably it being open source massively accelerated AI development for the better by enabling cursor/antigravity. It just sucks that they will see that as a mistake rather than the actual overall benefit it really was for everyone",
+              "likes": 0,
+              "reposts": 0,
+              "replies": 0,
+              "views": 3,
+              "url": "https://x.com/kvickart/status/2062450025645617247"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "tools_requested": 10,
+    "tools_benchmarked": 4,
+    "errors": [
+      {
+        "tool": "Windsurf",
+        "slug": "windsurf",
+        "error": "TwitterAPI.io request failed (402): {\"error\":\"Unauthorized\",\"message\":\"Credits is not enough.Please recharge\"}"
+      },
+      {
+        "tool": "Lovable",
+        "slug": "lovable",
+        "error": "TwitterAPI.io request failed (402): {\"error\":\"Unauthorized\",\"message\":\"Credits is not enough.Please recharge\"}"
+      },
+      {
+        "tool": "Replit",
+        "slug": "replit",
+        "error": "TwitterAPI.io request failed (402): {\"error\":\"Unauthorized\",\"message\":\"Credits is not enough.Please recharge\"}"
+      },
+      {
+        "tool": "Runway",
+        "slug": "runway",
+        "error": "TwitterAPI.io request failed (402): {\"error\":\"Unauthorized\",\"message\":\"Credits is not enough.Please recharge\"}"
+      },
+      {
+        "tool": "Kling",
+        "slug": "kling",
+        "error": "TwitterAPI.io request failed (402): {\"error\":\"Unauthorized\",\"message\":\"Credits is not enough.Please recharge\"}"
+      },
+      {
+        "tool": "Pika",
+        "slug": "pika",
+        "error": "TwitterAPI.io request failed (402): {\"error\":\"Unauthorized\",\"message\":\"Credits is not enough.Please recharge\"}"
+      }
+    ],
+    "searchability_counts": {
+      "HIGH_SEARCHABILITY": 4
+    },
+    "high_searchability": 4,
+    "medium_searchability": 0,
+    "low_searchability": 0,
+    "average_signal_score": 98.75,
+    "average_noise_score": 1.25,
+    "total_tweets_returned": 80
+  }
+}

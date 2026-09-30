@@ -1,0 +1,53 @@
+tool,slug,x_handle,tweets_returned,useful_proof_count,proof_quality_score,status
+11x,11x,@11x_official,20,19,100,qualified_3_plus
+Arize Phoenix,arize-phoenix,@ArizeAI,20,20,100,qualified_3_plus
+AssemblyAI,assemblyai,@AssemblyAI,20,16,100,qualified_3_plus
+Avaturn,avaturn,@avaturn_me,20,17,100,qualified_3_plus
+Baseten,baseten,@basetenco,20,18,100,qualified_3_plus
+Bland AI,bland-ai,@usebland,20,20,100,qualified_3_plus
+Botpress,botpress,@getbotpress,20,17,100,qualified_3_plus
+Browserbase,browserbase,@browserbase,20,20,100,qualified_3_plus
+Cartesia,cartesia,@cartesia,20,19,100,qualified_3_plus
+Comet,comet,@comet,20,19,100,qualified_3_plus
+Continue.dev,continue-dev,@continuedev,20,19,100,qualified_3_plus
+Convai,convai,@convai,0,0,0,no_useful_proof
+Crawl4AI,crawl4ai,@crawl4ai,14,12,100,qualified_3_plus
+D-ID,d-id,@D_ID_,20,13,100,qualified_3_plus
+Deepgram,deepgram,@DeepgramAI,20,19,100,qualified_3_plus
+Dia Browser,dia-browser,@diabrowser,20,16,100,qualified_3_plus
+Dreamina,dreamina,@DreaminaAI,0,0,0,no_useful_proof
+Fellou,fellou,@FellouAI,20,16,100,qualified_3_plus
+Firecrawl,firecrawl,@firecrawl_dev,20,19,100,qualified_3_plus
+Genspark,genspark,@genspark_ai,20,16,100,qualified_3_plus
+Hailuo,hailuo,@Hailuo_AI,20,16,100,qualified_3_plus
+Haiper,haiper,@HaiperGenAI,20,13,100,qualified_3_plus
+Helicone,helicone,@helicone_ai,20,18,100,qualified_3_plus
+Higgsfield,higgsfield,@higgsfield_ai,19,14,100,qualified_3_plus
+Hume AI,hume-ai,@hume_ai,20,18,100,qualified_3_plus
+Jina AI,jina-ai,@JinaAI_,20,19,100,qualified_3_plus
+Kagi Assistant,kagi-assistant,@KagiHQ,20,18,100,qualified_3_plus
+Langfuse,langfuse,@langfuse,20,20,100,qualified_3_plus
+LangGraph,langgraph,@LangChainAI,20,3,30,qualified_3_plus
+LlamaParse,llamaparse,@llama_index,20,19,100,qualified_3_plus
+Masterpiece Studio,masterpiece-studio,@MasterpieceVR,20,19,100,qualified_3_plus
+Mem0,mem0,@mem0ai,20,18,100,qualified_3_plus
+MindsDB,mindsdb,@MindsDB,17,11,100,qualified_3_plus
+Open WebUI,open-webui,@OpenWebUI,20,19,100,qualified_3_plus
+OpenHands,openhands,@OpenHandsDev,20,18,100,qualified_3_plus
+PlayAI,playai,@PlayAIOfficial,20,2,20,partial_1_plus
+Predibase,predibase,@predibase,20,20,100,qualified_3_plus
+Retell AI,retell-ai,@retellai,20,19,100,qualified_3_plus
+Screen Studio,screen-studio,@screenstudio,20,18,100,qualified_3_plus
+Sesame,sesame,@sesame,20,17,100,qualified_3_plus
+SkyReels,skyreels,@SkyReelsAI,0,0,0,no_useful_proof
+Smallest AI,smallest-ai,@smallest_ai,20,20,100,qualified_3_plus
+Stagehand,stagehand,@Stagehanddev,20,19,100,qualified_3_plus
+Tavily,tavily,@tavilyai,20,18,100,qualified_3_plus
+Temporal,temporal,@temporalio,20,18,100,qualified_3_plus
+Trigger.dev,trigger-dev,@triggerdotdev,20,20,100,qualified_3_plus
+Unstructured,unstructured,@UnstructuredIO,20,16,100,qualified_3_plus
+Voiceflow,voiceflow,@VoiceflowHQ,20,20,100,qualified_3_plus
+Weights & Biases,weights-biases,@wandb,20,20,100,qualified_3_plus
+Wordware,wordware,@wordware,20,13,100,qualified_3_plus
+World Labs,world-labs,@theworldlabs,20,19,100,qualified_3_plus
+Zed,zed,@zeddotdev,20,20,100,qualified_3_plus

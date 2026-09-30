@@ -1,0 +1,100 @@
+ChatGPT
+Claude
+Google Gemini
+Perplexity
+Cursor
+GitHub Copilot
+Midjourney
+ElevenLabs
+Microsoft Copilot
+DeepSeek
+Hugging Face
+NotebookLM
+OpenAI Platform
+Anthropic Console
+Meta AI
+Character.AI
+Runway
+Adobe Firefly
+Canva AI
+Stable Diffusion
+LangChain
+LlamaIndex
+Grok
+Mistral AI
+Synthesia
+HeyGen
+Vertex AI
+Amazon Bedrock
+Azure AI Foundry
+OpenRouter
+Databricks Mosaic AI
+Cohere
+Pinecone
+Replicate
+Together AI
+Groq
+Fireworks AI
+Weaviate
+Chroma
+Claude Code
+OpenAI Codex
+Windsurf
+v0
+Lovable
+Bolt
+Replit
+Devin
+Codeium
+Sourcegraph Cody
+Tabnine
+Phind
+Blackbox AI
+LangSmith
+Modal
+CrewAI
+AutoGen
+n8n
+Zapier
+Make
+Relevance AI
+Lindy
+Gumloop
+Glean
+Hebbia
+Harvey
+Notion AI
+Grammarly
+Jasper
+Writer
+Copy.ai
+Gamma
+Tome
+Descript
+CapCut
+Figma AI
+Framer AI
+Webflow AI
+Suno
+Udio
+Luma
+Kling
+Pika
+Ollama
+LM Studio
+ComfyUI
+AnythingLLM
+Flowise
+Cline
+Aider
+Otter.ai
+Fireflies.ai
+Fathom
+Granola
+Superhuman AI
+Reclaim AI
+Motion
+Clay
+Instantly
+Poe
+Slack

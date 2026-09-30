@@ -1,0 +1,22 @@
+{
+  "provider": "twitterapi.io",
+  "endpoint": "https://api.twitterapi.io/twitter/tweet/advanced_search",
+  "handle": "@comet",
+  "since": "2026-05-11",
+  "until": "2026-06-10",
+  "fetched_at": "2026-06-09T20:36:28.041Z",
+  "pages": [
+    {
+      "request": {
+        "query": "from:comet since:2026-05-11 until:2026-06-10",
+        "queryType": "Latest",
+        "next_cursor": ""
+      },
+      "response": {
+        "tweets": [],
+        "has_next_page": false,
+        "next_cursor": null
+      }
+    }
+  ]
+}

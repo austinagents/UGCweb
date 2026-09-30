@@ -1,0 +1,450 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MindsHub — The open platform for running AI agents</title><meta name="description" content="MindsHub by MindsDB is the open platform for running AI agents. Host and manage open-source agents with the infrastructure they need for real tools, data, credentials, and models."><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"><link rel="canonical" href="https://mindshub.ai/"><!-- Brand framing — carries "MindsHub by MindsDB" into SEO metadata
+         everywhere, not just structured data. --><meta property="og:site_name" content="MindsHub by MindsDB"><meta name="publisher" content="MindsDB"><meta property="og:title" content="MindsHub — The open platform for running AI agents"><meta property="og:description" content="MindsHub by MindsDB is the open platform for running AI agents. Host and manage open-source agents with the infrastructure they need for real tools, data, credentials, and models."><meta property="og:url" content="https://mindshub.ai/"><meta property="og:type" content="website"><meta property="og:image" content="https://mindshub.ai/og/og-home.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MindsHub — The open platform for running AI agents"><meta name="twitter:description" content="MindsHub by MindsDB is the open platform for running AI agents. Host and manage open-source agents with the infrastructure they need for real tools, data, credentials, and models."><meta name="twitter:image" content="https://mindshub.ai/og/og-home.png"><!-- Organization JSON-LD — emitted on every page (SEO migration §1.6).
+         Source of truth: src/lib/organization.ts. --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"MindsHub","alternateName":"MindsDB","url":"https://mindshub.ai","logo":"https://mindshub.ai/brand/MindsHub-logo-horizontal.svg","description":"MindsHub by MindsDB — the open platform for running AI agents.","parentOrganization":{"@type":"Organization","name":"MindsDB","url":"https://mindsdb.com"},"sameAs":["https://mindsdb.com","https://en.wikipedia.org/wiki/MindsDB","https://github.com/mindsdb","https://x.com/MindsDB","https://www.linkedin.com/company/mindsdb/","https://www.youtube.com/@MindsDB","https://www.facebook.com/MindsDB/","https://www.crunchbase.com/organization/mindsdb","https://www.capterra.com/p/202576/MindsDB/","https://www.g2.com/products/mindsdb/reviews"]}</script><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Brand fonts: Arimo (headings) + Noto Sans (body). Per MindsDB Brand
+         Guide §3, both are Google Fonts. Self-host later for performance. --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Noto+Sans:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="/_astro/analytics.BSGwqeaB.css">
+<link rel="stylesheet" href="/_astro/index.D880Wci7.css">
+<style>.status-badge[data-astro-cid-maosqwjj]{display:inline-flex;align-items:center;gap:var(--space-1);padding:var(--space-0-5) var(--space-2);border-radius:var(--radius-full);font-family:var(--font-sans);font-size:var(--fs-xs);font-weight:600;line-height:1;letter-spacing:.02em;text-transform:uppercase;border:1px solid transparent;vertical-align:middle;margin-inline-start:var(--space-2);white-space:nowrap}.status-badge[data-astro-cid-maosqwjj].is-live{background:var(--accent-green-pale);color:var(--brand-aqua-700);border-color:var(--accent-green-med)}.status-badge[data-astro-cid-maosqwjj].is-coming-soon{background:var(--brand-frost-100);color:var(--brand-aqua-700);border-color:var(--brand-frost-100)}
+</style>
+<link rel="stylesheet" href="/_astro/ai-policy.DCJUgUmh.css"></head> <body>  <header class="site-header" data-astro-cid-3ef6ksr2> <div class="header-inner" data-astro-cid-3ef6ksr2> <a href="/" class="brand" aria-label="MindsHub home" data-astro-cid-3ef6ksr2> <img src="/brand/MindsHub-logo-horizontal.svg" alt="MindsHub" height="56" data-astro-cid-3ef6ksr2> </a> <nav class="primary" aria-label="Primary" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li class="has-children" data-astro-cid-3ef6ksr2> <a href="/agents" data-astro-cid-3ef6ksr2> Agents <svg class="caret" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-3ef6ksr2></path> </svg> </a> <ul class="submenu" data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/agents/openclaw" data-astro-cid-3ef6ksr2> OpenClaw </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/openclaw-gbrain" data-astro-cid-3ef6ksr2> OpenClaw + GBrain </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/nanoclaw" data-astro-cid-3ef6ksr2> NanoClaw </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/anton" data-astro-cid-3ef6ksr2> Anton </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/hermes" data-astro-cid-3ef6ksr2> Hermes </a> </li> </ul> </li><li class data-astro-cid-3ef6ksr2> <a href="/cowork" data-astro-cid-3ef6ksr2> CoWork  </a>  </li><li class data-astro-cid-3ef6ksr2> <a href="/use-cases" data-astro-cid-3ef6ksr2> Use cases  </a>  </li><li class data-astro-cid-3ef6ksr2> <a href="/pricing" data-astro-cid-3ef6ksr2> Pricing  </a>  </li><li class="has-children" data-astro-cid-3ef6ksr2> <a href="/about" data-astro-cid-3ef6ksr2> Company <svg class="caret" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-3ef6ksr2></path> </svg> </a> <ul class="submenu" data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/about" data-astro-cid-3ef6ksr2> About </a> </li><li data-astro-cid-3ef6ksr2> <a href="/contact" data-astro-cid-3ef6ksr2> Contact </a> </li><li data-astro-cid-3ef6ksr2> <a href="/mindshub-vs-mindsdb" data-astro-cid-3ef6ksr2> MindsHub vs MindsDB </a> </li> </ul> </li> </ul> </nav> <div class="header-actions" data-astro-cid-3ef6ksr2> <a class="gh-stars" href="https://github.com/mindsdb/minds-platform" target="_blank" rel="noopener" aria-label="Star mindsdb/minds-platform on GitHub" data-gh-repo="mindsdb/minds-platform" data-astro-cid-3ef6ksr2> <svg class="gh-stars-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M12 .5C5.7.5.5 5.7.5 12.04c0 5.1 3.3 9.42 7.86 10.95.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.96-3.2.7-3.88-1.55-3.88-1.55-.52-1.34-1.27-1.7-1.27-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.2 1.76 1.2 1.03 1.78 2.7 1.27 3.36.97.1-.75.4-1.27.73-1.56-2.55-.3-5.24-1.3-5.24-5.74 0-1.27.45-2.3 1.18-3.11-.12-.3-.51-1.49.11-3.1 0 0 .97-.32 3.18 1.19a10.9 10.9 0 015.79 0c2.2-1.51 3.17-1.19 3.17-1.19.63 1.61.24 2.8.12 3.1.74.81 1.18 1.84 1.18 3.11 0 4.45-2.69 5.43-5.25 5.72.41.36.78 1.07.78 2.16 0 1.56-.02 2.81-.02 3.2 0 .31.21.67.8.55A11.55 11.55 0 0023.5 12.04C23.5 5.7 18.3.5 12 .5z" data-astro-cid-3ef6ksr2></path> </svg> <span class="gh-stars-label" data-astro-cid-3ef6ksr2>Star</span> <span class="gh-stars-divider" aria-hidden="true" data-astro-cid-3ef6ksr2></span> <span class="gh-stars-count" data-gh-stars-count data-astro-cid-3ef6ksr2>—</span> <svg class="gh-stars-star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-astro-cid-3ef6ksr2></path> </svg> </a> <a href="https://console.mindshub.ai/" class="btn btn-secondary-cta" data-astro-cid-3ef6ksr2>Log in</a> <a href="https://auth.mindshub.ai/auth/realms/mindsdb/protocol/openid-connect/registrations?client_id=public-client&response_type=code&scope=openid&redirect_uri=https%3A%2F%2Fconsole.mindshub.ai%2F" class="btn btn-primary-cta" data-astro-cid-3ef6ksr2>Get started</a> </div> <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle data-astro-cid-3ef6ksr2> <span aria-hidden="true" data-astro-cid-3ef6ksr2>☰</span> </button> </div> <div id="mobile-menu" class="mobile-menu" hidden data-astro-cid-3ef6ksr2> <nav aria-label="Mobile primary" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/agents" data-astro-cid-3ef6ksr2> Agents </a> <ul class="mobile-submenu" data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/agents/openclaw" data-astro-cid-3ef6ksr2> OpenClaw </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/openclaw-gbrain" data-astro-cid-3ef6ksr2> OpenClaw + GBrain </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/nanoclaw" data-astro-cid-3ef6ksr2> NanoClaw </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/anton" data-astro-cid-3ef6ksr2> Anton </a> </li><li data-astro-cid-3ef6ksr2> <a href="/agents/hermes" data-astro-cid-3ef6ksr2> Hermes </a> </li> </ul> </li><li data-astro-cid-3ef6ksr2> <a href="/cowork" data-astro-cid-3ef6ksr2> CoWork </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/use-cases" data-astro-cid-3ef6ksr2> Use cases </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/pricing" data-astro-cid-3ef6ksr2> Pricing </a>  </li><li data-astro-cid-3ef6ksr2> <a href="/about" data-astro-cid-3ef6ksr2> Company </a> <ul class="mobile-submenu" data-astro-cid-3ef6ksr2> <li data-astro-cid-3ef6ksr2> <a href="/about" data-astro-cid-3ef6ksr2> About </a> </li><li data-astro-cid-3ef6ksr2> <a href="/contact" data-astro-cid-3ef6ksr2> Contact </a> </li><li data-astro-cid-3ef6ksr2> <a href="/mindshub-vs-mindsdb" data-astro-cid-3ef6ksr2> MindsHub vs MindsDB </a> </li> </ul> </li> </ul> </nav> <div class="mobile-actions" data-astro-cid-3ef6ksr2> <a href="https://console.mindshub.ai/" class="btn btn-secondary-cta" data-astro-cid-3ef6ksr2>Log in</a> <a href="https://auth.mindshub.ai/auth/realms/mindsdb/protocol/openid-connect/registrations?client_id=public-client&response_type=code&scope=openid&redirect_uri=https%3A%2F%2Fconsole.mindshub.ai%2F" class="btn btn-primary-cta" data-astro-cid-3ef6ksr2>Get started</a> </div> </div> </header> <script type="module">const n=document.querySelector("[data-menu-toggle]"),r=document.getElementById("mobile-menu");n&&r&&(n.addEventListener("click",()=>{!r.hasAttribute("hidden")?(r.setAttribute("hidden",""),n.setAttribute("aria-expanded","false"),n.setAttribute("aria-label","Open menu"),document.body.style.overflow=""):(r.removeAttribute("hidden"),n.setAttribute("aria-expanded","true"),n.setAttribute("aria-label","Close menu"),document.body.style.overflow="hidden")}),window.addEventListener("resize",()=>{window.innerWidth>1024&&!r.hasAttribute("hidden")&&(r.setAttribute("hidden",""),n.setAttribute("aria-expanded","false"),n.setAttribute("aria-label","Open menu"),document.body.style.overflow="")}));(()=>{const o=document.querySelector("a.gh-stars[data-gh-repo]");if(!o)return;const a=o.dataset.ghRepo;if(!a)return;const u=3600*1e3,i=`gh-stars:${a}:v1`;function d(e){return e>=1e6?(e/1e6).toFixed(1).replace(/\.0$/,"")+"M":e>=1e3?(e/1e3).toFixed(1).replace(/\.0$/,"")+"k":String(e)}function s(e){const t=o.querySelector("[data-gh-stars-count]");t&&(t.textContent=d(e))}try{const e=localStorage.getItem(i);if(e){const t=JSON.parse(e);if(t&&typeof t.count=="number"&&Date.now()-t.at<u){s(t.count);return}}}catch{}fetch(`https://api.github.com/repos/${a}`,{headers:{Accept:"application/vnd.github+json"}}).then(e=>e.ok?e.json():null).then(e=>{const t=e;if(!t||typeof t.stargazers_count!="number")return;const c=t.stargazers_count;try{localStorage.setItem(i,JSON.stringify({count:c,at:Date.now()}))}catch{}s(c)}).catch(()=>{})})();</script>  <main>  <section class="hero container" data-astro-cid-j7pv25f6> <div class="hero-text" data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>The open platform for running AI agents</p> <h1 data-astro-cid-j7pv25f6>
+Run open agents without worrying<br data-astro-cid-j7pv25f6> <span class="accent" data-astro-cid-j7pv25f6>about agent infrastructure.</span> </h1> <p class="lede" data-astro-cid-j7pv25f6>
+Host OpenClaw, OpenClaw + GBrain, NanoClaw, Anton, Hermes, and
+        other open-source agents with the infrastructure they need to
+        work with real tools, data, credentials, and models.
+</p> <div class="cta" data-astro-cid-j7pv25f6> <a class="btn" href="https://auth.mindshub.ai/auth/realms/mindsdb/protocol/openid-connect/registrations?client_id=public-client&response_type=code&scope=openid&redirect_uri=https%3A%2F%2Fconsole.mindshub.ai%2F" data-astro-cid-j7pv25f6>Get started</a> </div> </div> </section>  <section class="container architecture-section" aria-label="MindsHub architecture" data-astro-cid-j7pv25f6> <!-- Hidden SVG defs — icon library used by the diagram tiles --><svg width="0" height="0" class="mh-diagram-defs" aria-hidden="true" data-astro-cid-buo24ucb> <defs data-astro-cid-buo24ucb> <symbol id="ic-scratchpad" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <rect x="4.5" y="3" width="13" height="17" rx="2" data-astro-cid-buo24ucb></rect> <path d="M7.5 7h7M7.5 10.5h7M7.5 14h4.5" data-astro-cid-buo24ucb></path> <path d="M16.5 16.5l2.2-2.2 1.6 1.6-2.2 2.2-1.9.3.3-1.9z" fill="currentColor" fill-opacity=".18" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-router" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <circle cx="12" cy="12" r="3.2" data-astro-cid-buo24ucb></circle> <circle cx="4" cy="6" r="1.6" data-astro-cid-buo24ucb></circle> <circle cx="20" cy="6" r="1.6" data-astro-cid-buo24ucb></circle> <circle cx="4" cy="18" r="1.6" data-astro-cid-buo24ucb></circle> <circle cx="20" cy="18" r="1.6" data-astro-cid-buo24ucb></circle> <path d="M5.2 7l4.4 3.2M18.8 7l-4.4 3.2M5.2 17l4.4-3.2M18.8 17l-4.4-3.2" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-memory" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <path d="M16 4.5c-1.6 0-2.8.8-3.5 2-.7-1.2-1.9-2-3.5-2C7 4.5 5.5 6 5.5 8c0 3.2 3.5 5 7 8 3.5-3 7-4.8 7-8 0-2-1.5-3.5-3.5-3.5z" opacity=".5" data-astro-cid-buo24ucb></path> <rect x="3" y="14" width="18" height="6" rx="1.5" data-astro-cid-buo24ucb></rect> <path d="M7 14v6M11 14v6M15 14v6M19 14v6" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-vault" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z" data-astro-cid-buo24ucb></path> <circle cx="12" cy="11.5" r="2" data-astro-cid-buo24ucb></circle> <path d="M12 13.5V16" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-db" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <ellipse cx="12" cy="5.5" rx="7" ry="2.2" data-astro-cid-buo24ucb></ellipse> <path d="M5 5.5v6c0 1.2 3.1 2.2 7 2.2s7-1 7-2.2v-6" data-astro-cid-buo24ucb></path> <path d="M5 11.5v6c0 1.2 3.1 2.2 7 2.2s7-1 7-2.2v-6" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-warehouse" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <rect x="3.5" y="5" width="6" height="6" rx="1" data-astro-cid-buo24ucb></rect> <rect x="14.5" y="5" width="6" height="6" rx="1" data-astro-cid-buo24ucb></rect> <rect x="3.5" y="13" width="6" height="6" rx="1" data-astro-cid-buo24ucb></rect> <rect x="14.5" y="13" width="6" height="6" rx="1" data-astro-cid-buo24ucb></rect> <path d="M9.5 8h5M9.5 16h5M12 11v2" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-api" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <path d="M6 13c-1.5 0-3-1.2-3-3s1.5-3 3-3c.3-2 2-3.5 4-3.5s3.7 1.5 4 3.5c1.5 0 3 1.2 3 3s-1.5 3-3 3" data-astro-cid-buo24ucb></path> <path d="M8 13.5l-.6 1.9M16 13.5l.6 1.9M11 13.5v2M13 13.5v2" data-astro-cid-buo24ucb></path> <circle cx="12" cy="19.5" r="1.2" data-astro-cid-buo24ucb></circle> </g> </symbol> <symbol id="ic-docs" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <path d="M7 4.5h7l4 4V18a1.5 1.5 0 0 1-1.5 1.5h-9.5A1.5 1.5 0 0 1 5.5 18V6a1.5 1.5 0 0 1 1.5-1.5z" data-astro-cid-buo24ucb></path> <path d="M14 4.5v4h4" data-astro-cid-buo24ucb></path> <path d="M8.5 12h6M8.5 15h6M8.5 18h4" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-saas" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <rect x="3.5" y="3.5" width="17" height="17" rx="3" data-astro-cid-buo24ucb></rect> <path d="M8 9h8M8 12h5M8 15h8" data-astro-cid-buo24ucb></path> <circle cx="15.5" cy="12" r="1.5" fill="currentColor" fill-opacity=".15" data-astro-cid-buo24ucb></circle> </g> </symbol> <symbol id="ic-mail" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <rect x="3.5" y="5.5" width="17" height="13" rx="2" data-astro-cid-buo24ucb></rect> <path d="M4 7l8 6 8-6" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-cal" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <rect x="3.5" y="5.5" width="17" height="14" rx="2" data-astro-cid-buo24ucb></rect> <path d="M3.5 10h17M8 4v3M16 4v3" data-astro-cid-buo24ucb></path> <rect x="7" y="13" width="4" height="3" rx=".5" fill="currentColor" fill-opacity=".15" data-astro-cid-buo24ucb></rect> </g> </symbol> <symbol id="ic-people" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <circle cx="9" cy="9" r="3" data-astro-cid-buo24ucb></circle> <circle cx="16.5" cy="10.5" r="2.2" data-astro-cid-buo24ucb></circle> <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" data-astro-cid-buo24ucb></path> <path d="M14.5 19c0-2 1.5-3.5 3.5-3.5s3.5 1.5 3.5 3.5" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-infra" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <rect x="3.5" y="4" width="17" height="5" rx="1.5" data-astro-cid-buo24ucb></rect> <rect x="3.5" y="11.5" width="17" height="5" rx="1.5" data-astro-cid-buo24ucb></rect> <circle cx="7" cy="6.5" r=".8" fill="currentColor" data-astro-cid-buo24ucb></circle> <circle cx="7" cy="14" r=".8" fill="currentColor" data-astro-cid-buo24ucb></circle> <path d="M11 6.5h7M11 14h7" data-astro-cid-buo24ucb></path> <path d="M9 19h6M12 17v2" data-astro-cid-buo24ucb></path> </g> </symbol> <symbol id="ic-cowork" viewBox="0 0 24 24" data-astro-cid-buo24ucb> <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-buo24ucb> <rect x="3" y="4.5" width="18" height="15" rx="2" data-astro-cid-buo24ucb></rect> <path d="M9 4.5v15" data-astro-cid-buo24ucb></path> <path d="M5.6 8.2h1.6M5.6 11.2h1.6" data-astro-cid-buo24ucb></path> <path d="M12 9h6M12 12.4h6M12 15.8h3.4" data-astro-cid-buo24ucb></path> </g> </symbol> </defs> </svg> <div class="mh-diagram" data-astro-cid-buo24ucb> <div class="mh-frame" data-astro-cid-buo24ucb> <span class="mh-frame-corner tl" data-astro-cid-buo24ucb></span> <span class="mh-frame-corner tr" data-astro-cid-buo24ucb></span> <span class="mh-frame-corner bl" data-astro-cid-buo24ucb></span> <span class="mh-frame-corner br" data-astro-cid-buo24ucb></span> <span class="mh-frame-label" data-astro-cid-buo24ucb> <svg class="ic" aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-infra" data-astro-cid-buo24ucb></use></svg>
+Managed Infrastructure
+</span> <div class="mh-stack" data-astro-cid-buo24ucb> <!-- COWORK (UI layer on top) --> <div class="mh-vault mh-cowork" data-astro-cid-buo24ucb> <div class="mh-vault-icon" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-cowork" data-astro-cid-buo24ucb></use></svg></div> <div data-astro-cid-buo24ucb> <div class="mh-vault-title" data-astro-cid-buo24ucb>CoWork UI</div> <div class="mh-vault-sub" data-astro-cid-buo24ucb>The agent UI for knowledge workers — brief the work, watch it run, collect the artifacts.</div> </div> <div class="mh-vault-flow" data-astro-cid-buo24ucb> <span class="mh-vault-token" data-astro-cid-buo24ucb>PROJECTS</span> <span class="mh-vault-token" data-astro-cid-buo24ucb>ARTIFACTS</span> <span class="mh-vault-token" data-astro-cid-buo24ucb>SCHEDULE</span> <span class="mh-vault-token" data-astro-cid-buo24ucb>SKILLS</span> </div> </div> <div class="mh-connector" data-astro-cid-buo24ucb></div> <!-- AGENTS RUNTIME --> <div class="mh-runtime" data-astro-cid-buo24ucb> <div class="mh-layer-head" data-astro-cid-buo24ucb> <div class="mh-layer-title" data-astro-cid-buo24ucb>Agents Runtime</div> </div> <div class="mh-runtime-body" data-astro-cid-buo24ucb> <div class="mh-agents" data-astro-cid-buo24ucb> <div class="mh-agents-head" data-astro-cid-buo24ucb><span class="mh-agents-title" data-astro-cid-buo24ucb>Open agents</span></div> <div class="mh-agent-grid" data-astro-cid-buo24ucb> <div class="mh-agent" title="OpenClaw" data-astro-cid-buo24ucb> <div class="mh-agent-logo" data-astro-cid-buo24ucb> <span class="status" data-astro-cid-buo24ucb></span> <img class="logo" src="/brand/agents/openclaw.svg" alt="OpenClaw" loading="lazy" data-astro-cid-buo24ucb> </div> <div class="mh-agent-name" data-astro-cid-buo24ucb>OpenClaw</div> </div> <div class="mh-agent" title="NanoClaw" data-astro-cid-buo24ucb> <div class="mh-agent-logo" data-astro-cid-buo24ucb> <span class="status" data-astro-cid-buo24ucb></span> <img class="logo" src="/brand/agents/nanoclaw.svg" alt="NanoClaw" loading="lazy" data-astro-cid-buo24ucb> </div> <div class="mh-agent-name" data-astro-cid-buo24ucb>NanoClaw</div> </div> <div class="mh-agent" title="Anton" data-astro-cid-buo24ucb> <div class="mh-agent-logo" data-astro-cid-buo24ucb> <span class="status" data-astro-cid-buo24ucb></span> <img class="logo" src="/brand/agents/anton.svg" alt="Anton" loading="lazy" data-astro-cid-buo24ucb> </div> <div class="mh-agent-name" data-astro-cid-buo24ucb>Anton</div> </div> <div class="mh-agent" title="Hermes" data-astro-cid-buo24ucb> <div class="mh-agent-logo" data-astro-cid-buo24ucb> <span class="status" data-astro-cid-buo24ucb></span> <img class="logo" src="/brand/agents/hermes.svg" alt="Hermes" loading="lazy" data-astro-cid-buo24ucb> </div> <div class="mh-agent-name" data-astro-cid-buo24ucb>Hermes</div> </div> </div> </div> <div class="mh-caps" data-astro-cid-buo24ucb> <div class="mh-cap cap-router" data-astro-cid-buo24ucb> <div class="mh-cap-router-head" data-astro-cid-buo24ucb> <div class="mh-cap-icon" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-router" data-astro-cid-buo24ucb></use></svg></div> <div class="mh-cap-body" data-astro-cid-buo24ucb> <div class="mh-cap-title" data-astro-cid-buo24ucb>Model Router</div> <p class="mh-cap-desc" data-astro-cid-buo24ucb>Routes each step to the right LLM by cost, latency, and capability.</p> </div> </div> <!-- Curated provider set. Other logos (Meta, Microsoft, 01.AI,
+                   Black Forest Labs, Stability AI, Nous) remain in
+                   public/brand/providers/ so we can fold them back in later
+                   without re-acquiring assets. --> <div class="mh-providers" data-astro-cid-buo24ucb> <div class="mh-providers-label" data-astro-cid-buo24ucb>Right model for every task</div> <div class="mh-providers-grid" data-astro-cid-buo24ucb> <div class="mh-prov" title="Anthropic" data-astro-cid-buo24ucb><img src="/brand/providers/anthropic.svg" alt="Anthropic" loading="lazy" data-astro-cid-buo24ucb></div> <div class="mh-prov" title="OpenAI" data-astro-cid-buo24ucb><img src="/brand/providers/openai.svg" alt="OpenAI" loading="lazy" data-astro-cid-buo24ucb></div> <div class="mh-prov" title="Google" data-astro-cid-buo24ucb><img src="/brand/providers/google.svg" alt="Google" loading="lazy" data-astro-cid-buo24ucb></div> <div class="mh-prov" title="Kimi (Moonshot)" data-astro-cid-buo24ucb><img src="/brand/providers/kimi.svg" alt="Kimi (Moonshot)" loading="lazy" data-astro-cid-buo24ucb></div> <div class="mh-prov" title="DeepSeek" data-astro-cid-buo24ucb><img src="/brand/providers/deepseek.svg" alt="DeepSeek" loading="lazy" data-astro-cid-buo24ucb></div> <div class="mh-prov" title="Qwen" data-astro-cid-buo24ucb><img src="/brand/providers/qwen.svg" alt="Qwen" loading="lazy" data-astro-cid-buo24ucb></div> </div> </div> </div> <div class="mh-cap cap-scratch" data-astro-cid-buo24ucb> <div class="mh-cap-icon" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-scratchpad" data-astro-cid-buo24ucb></use></svg></div> <div class="mh-cap-title" data-astro-cid-buo24ucb>Scratchpads</div> <p class="mh-cap-desc" data-astro-cid-buo24ucb>Protected reproducible execution environment.</p> </div> <div class="mh-cap cap-memory" data-astro-cid-buo24ucb> <div class="mh-cap-icon" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-memory" data-astro-cid-buo24ucb></use></svg></div> <div class="mh-cap-title" data-astro-cid-buo24ucb>Memories</div> <p class="mh-cap-desc" data-astro-cid-buo24ucb>Long-term, cross-run recall — facts, preferences, prior outcomes.</p> </div> </div> </div> </div> <div class="mh-connector" data-astro-cid-buo24ucb></div> <!-- CREDENTIALS VAULT --> <div class="mh-vault" data-astro-cid-buo24ucb> <div class="mh-vault-icon" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-vault" data-astro-cid-buo24ucb></use></svg></div> <div data-astro-cid-buo24ucb> <div class="mh-vault-title" data-astro-cid-buo24ucb>Credentials Vault</div> <div class="mh-vault-sub" data-astro-cid-buo24ucb>Encrypted secrets store — agents never see raw credentials.</div> </div> <div class="mh-vault-flow" data-astro-cid-buo24ucb> <span class="mh-vault-token" data-astro-cid-buo24ucb>OAUTH</span> <span class="mh-vault-token" data-astro-cid-buo24ucb>API KEY</span> <span class="mh-vault-token" data-astro-cid-buo24ucb>JWT</span> <span class="mh-vault-token" data-astro-cid-buo24ucb>SSH</span> </div> </div> <div class="mh-connector" data-astro-cid-buo24ucb></div> <!-- DATA & TOOLS ACCESS --> <div class="mh-tools" data-astro-cid-buo24ucb> <div class="mh-layer-head" data-astro-cid-buo24ucb> <div class="mh-layer-title" data-astro-cid-buo24ucb>Data &amp; Tools Access</div> </div> <div class="mh-tools-grid" data-astro-cid-buo24ucb> <div class="mh-tool kind-data" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-db" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>Databases</span></div> <div class="mh-tool kind-data" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-warehouse" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>Warehouses</span></div> <div class="mh-tool kind-files" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-docs" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>Docs &amp; files</span></div> <div class="mh-tool kind-saas" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-saas" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>SaaS apps</span></div> <div class="mh-tool kind-saas" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-mail" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>Email &amp; chat</span></div> <div class="mh-tool kind-saas" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-cal" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>Calendars</span></div> <div class="mh-tool kind-saas" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-people" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>CRM</span></div> <div class="mh-tool kind-api" data-astro-cid-buo24ucb><span class="kind" data-astro-cid-buo24ucb></span><span class="ic" data-astro-cid-buo24ucb><svg aria-hidden="true" data-astro-cid-buo24ucb><use href="#ic-api" data-astro-cid-buo24ucb></use></svg></span><span class="lbl" data-astro-cid-buo24ucb>APIs</span></div> </div> <div class="mh-tools-legend" data-astro-cid-buo24ucb> <span class="mh-legend-item" data-astro-cid-buo24ucb><span class="mh-legend-dot" style="background:var(--mh-signal-cobalt)" data-astro-cid-buo24ucb></span>Data</span> <span class="mh-legend-item" data-astro-cid-buo24ucb><span class="mh-legend-dot" style="background:var(--mh-signal-clay)" data-astro-cid-buo24ucb></span>Files</span> <span class="mh-legend-item" data-astro-cid-buo24ucb><span class="mh-legend-dot" style="background:var(--mh-signal-citrine)" data-astro-cid-buo24ucb></span>SaaS</span> <span class="mh-legend-item" data-astro-cid-buo24ucb><span class="mh-legend-dot" style="background:var(--mh-signal-sage)" data-astro-cid-buo24ucb></span>API / MCP</span> </div> </div> </div> </div> </div>  </section>  <section class="cowork-section" id="cowork" data-astro-cid-j7pv25f6> <div class="container" data-astro-cid-j7pv25f6> <div class="cowork-layout" data-astro-cid-j7pv25f6> <div class="cowork-copy" data-astro-cid-j7pv25f6> <span class="eyebrow" data-astro-cid-j7pv25f6>CoWork</span> <h2 data-astro-cid-j7pv25f6>Built for real work, not another chat box.</h2> <p class="section-lede" data-astro-cid-j7pv25f6>
+All that infrastructure needs a front door. CoWork is the agent
+            UI for knowledge workers — a real workspace, not a chat window.
+            Brief the work, watch every step, and collect the artifacts.
+</p> <ul class="cowork-points" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6>Connect data and tools through a credentials vault</li> <li data-astro-cid-j7pv25f6>Choose models from a dropdown in settings — no API keys to wire up for every LLM</li> <li data-astro-cid-j7pv25f6>Turn agent output into artifacts you can publish and share</li> <li data-astro-cid-j7pv25f6>One workspace for every agent — start here, switch the agent underneath</li> </ul> <div class="cta" data-astro-cid-j7pv25f6> <a class="btn" href="/cowork" data-astro-cid-j7pv25f6>Explore CoWork</a> <a class="btn btn-secondary" href="https://auth.mindshub.ai/auth/realms/mindsdb/protocol/openid-connect/registrations?client_id=public-client&response_type=code&scope=openid&redirect_uri=https%3A%2F%2Fconsole.mindshub.ai%2F" data-astro-cid-j7pv25f6>Start with CoWork</a> </div> </div> <a class="cowork-shot" href="/cowork" aria-label="Explore CoWork" data-astro-cid-j7pv25f6> <img src="/cowork/overview.webp" alt="The CoWork workspace — projects, scheduled tasks, live artifacts, connected data, memories, and skills." width="1198" height="697" loading="lazy" data-astro-cid-j7pv25f6> </a> </div> </div> </section>  <section class="band" id="agents" data-astro-cid-j7pv25f6> <div class="container" data-astro-cid-j7pv25f6> <div class="section-head" data-astro-cid-j7pv25f6> <span class="eyebrow" data-astro-cid-j7pv25f6>Open agents</span> <h2 data-astro-cid-j7pv25f6>Bring the agents you want to run.</h2> <p class="section-lede" data-astro-cid-j7pv25f6>
+MindsHub is built as a home for open agents and the builders
+          who want control, inspectability, portability, and model choice.
+          Run agents like OpenClaw, OpenClaw + GBrain, NanoClaw, Anton,
+          and Hermes with shared infrastructure instead of stitching it
+          together yourself.
+</p> </div> <div class="grid five" data-astro-cid-j7pv25f6> <article class="card agent-card" data-astro-cid-j7pv25f6> <img class="agent-logo" src="/brand/agents/openclaw.svg" alt="OpenClaw logo" width="72" height="72" loading="lazy" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>OpenClaw</h3> <p data-astro-cid-j7pv25f6>Run OpenClaw with the infrastructure it needs for tools, credentials, models, data, and persistence.</p> </article> <article class="card agent-card" data-astro-cid-j7pv25f6> <img class="agent-logo" src="/brand/agents/openclaw-gbrain.svg" alt="OpenClaw + GBrain logo" width="72" height="72" loading="lazy" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>OpenClaw + GBrain</h3> <p data-astro-cid-j7pv25f6>OpenClaw with a brain that compounds. Memory survives across sessions; the agent gets sharper week over week.</p> </article> <article class="card agent-card" data-astro-cid-j7pv25f6> <img class="agent-logo" src="/brand/agents/nanoclaw.svg" alt="NanoClaw logo" width="72" height="72" loading="lazy" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>NanoClaw <span class="status-badge is-coming-soon" data-astro-cid-maosqwjj>SSH/CLI only</span> </h3> <p data-astro-cid-j7pv25f6>Move lightweight agent experiments from local runs to managed, reliable execution.</p> </article> <article class="card agent-card" data-astro-cid-j7pv25f6> <img class="agent-logo" src="/brand/agents/anton.svg" alt="Anton logo" width="72" height="72" loading="lazy" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Anton</h3> <p data-astro-cid-j7pv25f6>The open-source AI coworker. Describe the outcome you need and get a finished artifact back.</p> </article> <article class="card agent-card" data-astro-cid-j7pv25f6> <img class="agent-logo" src="/brand/agents/hermes.svg" alt="Hermes logo" width="72" height="72" loading="lazy" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Hermes <span class="status-badge is-coming-soon" data-astro-cid-maosqwjj>SSH/CLI only</span> </h3> <p data-astro-cid-j7pv25f6>Host Hermes alongside your other open agents and connect it to the systems it needs to work.</p> </article> </div> </div> </section>  <section class="container section" id="llm-choice" data-astro-cid-j7pv25f6> <div class="section-head" data-astro-cid-j7pv25f6> <span class="eyebrow" data-astro-cid-j7pv25f6>LLM choice</span> <h2 data-astro-cid-j7pv25f6>Bring the right model to every agent task.</h2> <p class="section-lede" data-astro-cid-j7pv25f6>
+MindsHub gives open agents a Model Router they can actually
+        work with: use proprietary and open models side by side, route
+        tasks to the best provider, control cost, and avoid locking
+        every workflow into one LLM.
+</p> </div> <div class="llm-layout" data-astro-cid-j7pv25f6> <div class="router-showcase" aria-label="Model providers supported by the Model Router" data-astro-cid-j7pv25f6> <div class="router-card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>One agent. Any model.</h3> <p data-astro-cid-j7pv25f6>
+Agents pick the model that fits the job: reasoning, coding,
+            vision, long context, fast drafts, or cost-sensitive background
+            work.
+</p> </div> <!-- Curated provider set. Other logos (Meta, Microsoft, Stability AI,
+             01.AI, Black Forest Labs, Nous) remain in public/brand/providers/
+             so we can fold them back in later without re-acquiring assets.
+             Two carousels scroll in opposite directions; the second uses a
+             shifted start order so the rows don't visually pair up. --> <div class="provider-carousel" aria-label="Featured model providers" data-astro-cid-j7pv25f6> <ul class="provider-track" data-astro-cid-j7pv25f6> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/anthropic.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Anthropic</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/openai.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>OpenAI</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/google.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Google</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/kimi.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Kimi (Moonshot)</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/deepseek.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>DeepSeek</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/qwen.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Qwen</span></li> <!-- duplicated set keeps the marquee seamless --> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/anthropic.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Anthropic</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/openai.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>OpenAI</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/google.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Google</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/kimi.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Kimi (Moonshot)</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/deepseek.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>DeepSeek</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/qwen.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Qwen</span></li> </ul> </div> <div class="provider-carousel reverse" aria-hidden="true" data-astro-cid-j7pv25f6> <ul class="provider-track" data-astro-cid-j7pv25f6> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/kimi.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Kimi (Moonshot)</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/deepseek.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>DeepSeek</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/qwen.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Qwen</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/anthropic.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Anthropic</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/openai.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>OpenAI</span></li> <li class="provider-pill" data-astro-cid-j7pv25f6><img src="/brand/providers/google.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Google</span></li> <!-- duplicated set keeps the marquee seamless --> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/kimi.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Kimi (Moonshot)</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/deepseek.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>DeepSeek</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/qwen.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Qwen</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/anthropic.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Anthropic</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/openai.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>OpenAI</span></li> <li class="provider-pill" aria-hidden="true" data-astro-cid-j7pv25f6><img src="/brand/providers/google.svg" alt="" width="28" height="28" loading="lazy" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6>Google</span></li> </ul> </div> </div> <aside class="llm-proof" aria-label="Why LLM choice matters" data-astro-cid-j7pv25f6> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Best model per step</h3> <p data-astro-cid-j7pv25f6>Run a strong reasoning model for planning, a fast model for extraction, a coding model for scripts, or a vision model when the workflow needs images and documents.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Mix open and closed</h3> <p data-astro-cid-j7pv25f6>Experiment with open models while still using commercial providers where they make sense for quality, speed, context length, or reliability.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Control cost and lock-in</h3> <p data-astro-cid-j7pv25f6>Swap providers, compare outputs, and route background work to lower-cost models without rewriting the agent every time the model strategy changes.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Production flexibility</h3> <p data-astro-cid-j7pv25f6>Model choice becomes part of the infrastructure: keys, routing, provider selection, and ongoing execution live behind the agent instead of inside one-off scripts.</p> </article> </aside> </div> </section>  <section class="container section" id="infrastructure" data-astro-cid-j7pv25f6> <div class="section-head" data-astro-cid-j7pv25f6> <span class="eyebrow" data-astro-cid-j7pv25f6>Agent infrastructure</span> <h2 data-astro-cid-j7pv25f6>Everything agents need for real work, not just demos.</h2> <p class="section-lede" data-astro-cid-j7pv25f6>
+Real work needs real systems. MindsHub gives open agents access
+        to the infrastructure layer they need to operate safely, usefully,
+        and reliably.
+</p> </div> <div class="grid three" data-astro-cid-j7pv25f6> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Model router <span class="status-badge is-coming-soon" data-astro-cid-maosqwjj>Coming soon</span> </h3> <p data-astro-cid-j7pv25f6>Use the right model for each task. Switch providers, control cost, use open models, and avoid being locked into one LLM.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Credentials vault <span class="status-badge is-coming-soon" data-astro-cid-maosqwjj>Coming soon</span> </h3> <p data-astro-cid-j7pv25f6>Connect agents to real apps and services without pasting secrets into prompts, notebooks, or one-off scripts.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Tools and data access</h3> <p data-astro-cid-j7pv25f6>Let agents work with files, apps, databases, warehouses, SaaS tools, and knowledge sources.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Hosting and persistence</h3> <p data-astro-cid-j7pv25f6>Turn local experiments into ongoing workers that keep running after the terminal closes.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Logs and visibility</h3> <p data-astro-cid-j7pv25f6>Inspect plans, steps, code, outputs, and intermediate state so agent work is understandable and reusable.</p> </article> <article class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Scheduling and uptime</h3> <p data-astro-cid-j7pv25f6>Run recurring jobs, daily digests, ongoing research, and operational workflows without babysitting a local process.</p> </article> </div> </section>  <section class="band" id="workflow" data-astro-cid-j7pv25f6> <div class="container" data-astro-cid-j7pv25f6> <div class="section-head" data-astro-cid-j7pv25f6> <span class="eyebrow" data-astro-cid-j7pv25f6>From local to always-on</span> <h2 data-astro-cid-j7pv25f6>Start with an experiment. Graduate to a reliable worker.</h2> </div> <div class="grid four" data-astro-cid-j7pv25f6> <article class="card step-card" data-astro-cid-j7pv25f6> <span class="step" data-astro-cid-j7pv25f6>1</span> <h3 data-astro-cid-j7pv25f6>Choose an open agent</h3> <p data-astro-cid-j7pv25f6>Start with OpenClaw, OpenClaw + GBrain, NanoClaw, Anton, Hermes, or another open-source agent your team wants to run.</p> </article> <article class="card step-card" data-astro-cid-j7pv25f6> <span class="step" data-astro-cid-j7pv25f6>2</span> <h3 data-astro-cid-j7pv25f6>Choose your models</h3> <p data-astro-cid-j7pv25f6>Pick the LLM that fits each task. Switch providers, mix open and proprietary models, and keep keys managed in one place.</p> </article> <article class="card step-card" data-astro-cid-j7pv25f6> <span class="step" data-astro-cid-j7pv25f6>3</span> <h3 data-astro-cid-j7pv25f6>Connect tools and data</h3> <p data-astro-cid-j7pv25f6>Give the agent access to the apps, files, databases, and knowledge sources it needs — with credentials handled for you.</p> </article> <article class="card step-card" data-astro-cid-j7pv25f6> <span class="step" data-astro-cid-j7pv25f6>4</span> <h3 data-astro-cid-j7pv25f6>Run it with managed infrastructure</h3> <p data-astro-cid-j7pv25f6>Move beyond the laptop with hosted execution, persistence, scheduling, logs, and operational control.</p> </article> </div> </div> </section>  <section class="start-here" id="start" data-astro-cid-j7pv25f6> <div class="container" data-astro-cid-j7pv25f6> <div class="section-head start-here-head" data-astro-cid-j7pv25f6> <span class="eyebrow" data-astro-cid-j7pv25f6>Not sure where to start?</span> <h2 data-astro-cid-j7pv25f6>Run an agent that can actually finish the work.</h2> <p class="section-lede" data-astro-cid-j7pv25f6>
+MindsHub is built for open agents. For a practical first
+          run, start with Anton: an open-source AI coworker you can hand
+          work to, inspect while it runs, and use with the models, tools,
+          and credentials your workflow needs.
+</p> <p class="section-lede" data-astro-cid-j7pv25f6>
+Describe the outcome in plain language. Anton plans the steps,
+          works in a secure scratchpad, and returns useful artifacts —
+          instead of making you copy, format, and stitch the result
+          together yourself.
+</p> </div> <div class="grid three" data-astro-cid-j7pv25f6> <article class="card start-here-card featured" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Delegate outcomes, not prompts</h3> <p data-astro-cid-j7pv25f6>Hand off the task in plain language. Anton plans the work and runs the steps instead of requiring step-by-step supervision.</p> </article> <article class="card start-here-card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Get finished artifacts back</h3> <p data-astro-cid-j7pv25f6>Reports, spreadsheets, summaries, organized folders, daily digests, reproducible analyses, documents, and dashboards.</p> </article> <article class="card start-here-card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Choose the right LLM</h3> <p data-astro-cid-j7pv25f6>Bring model choice into the workflow so each task can use the right provider, cost profile, or open model.</p> </article> <article class="card start-here-card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Connect real tools securely</h3> <p data-astro-cid-j7pv25f6>A credentials vault lets the agent work with apps, files, data, and tools without pasting secrets into prompts or scripts.</p> </article> <article class="card start-here-card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Inspect the scratchpad</h3> <p data-astro-cid-j7pv25f6>Review plans, steps, code, outputs, and intermediate state so the work is visible, reusable, and easier to trust.</p> </article> <article class="card start-here-card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Keep getting smarter</h3> <p data-astro-cid-j7pv25f6>Anton can use memory to preserve context from prior work, learn from repeated workflows, and make each handoff easier to continue.</p> </article> </div> <div class="start-here-footer" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>Start with a ready-made open-source coworker.</p> <div class="cta" data-astro-cid-j7pv25f6> <a class="btn" href="https://auth.mindshub.ai/auth/realms/mindsdb/protocol/openid-connect/registrations?client_id=public-client&response_type=code&scope=openid&redirect_uri=https%3A%2F%2Fconsole.mindshub.ai%2F" data-astro-cid-j7pv25f6>Get started</a> <a class="btn btn-secondary" href="/agents/anton" data-astro-cid-j7pv25f6>Learn more</a> </div> </div> </div> </section>  <section class="container section" id="definition" data-astro-cid-j7pv25f6> <div class="definition-feature" data-astro-cid-j7pv25f6> <div class="definition-copy" data-astro-cid-j7pv25f6> <span class="eyebrow" data-astro-cid-j7pv25f6>What is MindsHub?</span> <h2 data-astro-cid-j7pv25f6>A place for open agents to run, persist, and do real work.</h2> <p class="section-lede" data-astro-cid-j7pv25f6>
+Open-source agents are powerful, but running them reliably
+          should not turn every developer into an agent infrastructure
+          team. MindsHub gives agents a safe place to run — hosting,
+          credentials, model access, tool access, data access, and
+          persistent execution beyond a local experiment.
+</p> <p class="section-lede" data-astro-cid-j7pv25f6>
+Start with an open agent. Connect the systems it needs.
+          Choose the model that fits the task. Then run it as an
+          always-on worker with the control, visibility, and reliability
+          technical teams expect.
+</p> </div> <!-- Illustration: agents + infra panels --> <div class="hero-stage" aria-hidden="true" data-astro-cid-j7pv25f6> <div class="stage-head" data-astro-cid-j7pv25f6> <span data-astro-cid-j7pv25f6><span class="dot" data-astro-cid-j7pv25f6></span>MindsHub — running</span> <span class="meta" data-astro-cid-j7pv25f6>4 agents · 6 connectors · 12 jobs</span> </div> <div class="stage-grid" data-astro-cid-j7pv25f6> <div class="stage-col" data-astro-cid-j7pv25f6> <span class="label" data-astro-cid-j7pv25f6>Open agents</span> <ul class="agent-list" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6><span class="agent-name" data-astro-cid-j7pv25f6>OpenClaw</span><span class="agent-state ok" data-astro-cid-j7pv25f6>running</span></li> <li data-astro-cid-j7pv25f6><span class="agent-name" data-astro-cid-j7pv25f6>OpenClaw + GBrain</span><span class="agent-state ok" data-astro-cid-j7pv25f6>running</span></li> <li data-astro-cid-j7pv25f6><span class="agent-name" data-astro-cid-j7pv25f6>NanoClaw</span><span class="agent-state" data-astro-cid-j7pv25f6>SSH only</span></li> <li data-astro-cid-j7pv25f6><span class="agent-name" data-astro-cid-j7pv25f6>Anton</span><span class="agent-state ok" data-astro-cid-j7pv25f6>running</span></li> <li data-astro-cid-j7pv25f6><span class="agent-name" data-astro-cid-j7pv25f6>Hermes</span><span class="agent-state" data-astro-cid-j7pv25f6>SSH only</span></li> </ul> </div> <div class="stage-col" data-astro-cid-j7pv25f6> <span class="label" data-astro-cid-j7pv25f6>Infrastructure</span> <ul class="infra-list" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6><span class="bullet" data-astro-cid-j7pv25f6></span>LLM router · 3 providers</li> <li data-astro-cid-j7pv25f6><span class="bullet" data-astro-cid-j7pv25f6></span>Credentials vault · coming soon</li> <li data-astro-cid-j7pv25f6><span class="bullet" data-astro-cid-j7pv25f6></span>Tools &amp; data · 9 connectors</li> <li data-astro-cid-j7pv25f6><span class="bullet" data-astro-cid-j7pv25f6></span>Persistent execution</li> <li data-astro-cid-j7pv25f6><span class="bullet" data-astro-cid-j7pv25f6></span>Logs &amp; tracing</li> <li data-astro-cid-j7pv25f6><span class="bullet" data-astro-cid-j7pv25f6></span>Scheduler · 12 jobs</li> </ul> </div> </div> </div> </div> </section>  <section class="container" id="run-agent" data-astro-cid-j7pv25f6> <div class="footer-cta" data-astro-cid-j7pv25f6> <span class="eyebrow on-accent" data-astro-cid-j7pv25f6>Get started</span> <h2 data-astro-cid-j7pv25f6>Give your open agents the infrastructure to do real work.</h2> <p data-astro-cid-j7pv25f6>
+Host, manage, and run open-source agents with access to
+        models, credentials, tools, data, persistence, and operational
+        control.
+</p> <div class="cta" data-astro-cid-j7pv25f6> <a class="btn btn-on-accent" href="https://auth.mindshub.ai/auth/realms/mindsdb/protocol/openid-connect/registrations?client_id=public-client&response_type=code&scope=openid&redirect_uri=https%3A%2F%2Fconsole.mindshub.ai%2F" data-astro-cid-j7pv25f6>Get started</a> </div> </div> </section> </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container" data-astro-cid-sz7xmlte> <div class="footer-top" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <a href="/" aria-label="MindsHub home" class="footer-logo" data-astro-cid-sz7xmlte> <img src="/brand/MindsHub-logo-horizontal.svg" alt="MindsHub" height="40" data-astro-cid-sz7xmlte> <span class="by-mindsdb" data-astro-cid-sz7xmlte>by MindsDB</span> </a> <ul class="footer-social" aria-label="Social links" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/mindsdb/minds-platform" target="_blank" rel="noopener" aria-label="GitHub" data-astro-cid-sz7xmlte> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-sz7xmlte> <path d="M12 .5C5.7.5.5 5.7.5 12.04c0 5.1 3.3 9.42 7.86 10.95.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.96-3.2.7-3.88-1.55-3.88-1.55-.52-1.34-1.27-1.7-1.27-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.2 1.76 1.2 1.03 1.78 2.7 1.27 3.36.97.1-.75.4-1.27.73-1.56-2.55-.3-5.24-1.3-5.24-5.74 0-1.27.45-2.3 1.18-3.11-.12-.3-.51-1.49.11-3.1 0 0 .97-.32 3.18 1.19a10.9 10.9 0 015.79 0c2.2-1.51 3.17-1.19 3.17-1.19.63 1.61.24 2.8.12 3.1.74.81 1.18 1.84 1.18 3.11 0 4.45-2.69 5.43-5.25 5.72.41.36.78 1.07.78 2.16 0 1.56-.02 2.81-.02 3.2 0 .31.21.67.8.55A11.55 11.55 0 0023.5 12.04C23.5 5.7 18.3.5 12 .5z" data-astro-cid-sz7xmlte></path> </svg>    </a> </li><li data-astro-cid-sz7xmlte> <a href="https://youtube.com/@mindsdb" target="_blank" rel="noopener" aria-label="YouTube" data-astro-cid-sz7xmlte>  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-sz7xmlte> <path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z" data-astro-cid-sz7xmlte></path> </svg>   </a> </li><li data-astro-cid-sz7xmlte> <a href="https://x.com/MindsDB" target="_blank" rel="noopener" aria-label="X" data-astro-cid-sz7xmlte>   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-sz7xmlte> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.16 17.52h1.833L7.084 4.126H5.117L17.085 19.77z" data-astro-cid-sz7xmlte></path> </svg>  </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/company/mindsdb" target="_blank" rel="noopener" aria-label="LinkedIn" data-astro-cid-sz7xmlte>    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-sz7xmlte> <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11-.001-4.121 2.06 2.06 0 01.001 4.121zM7.12 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" data-astro-cid-sz7xmlte></path> </svg> </a> </li> </ul> <div class="footer-compliance" data-astro-cid-sz7xmlte> <a href="https://trust.mindsdb.com" target="_blank" rel="noopener" class="soc-badge" aria-label="SOC 2 Type II compliant — visit our Trust Center" data-astro-cid-sz7xmlte> <img src="/brand/soc2-badge.webp" alt="AICPA SOC — SOC 2 Type II compliant" width="72" height="72" loading="lazy" data-astro-cid-sz7xmlte> <span class="soc-badge-tip" role="tooltip" data-astro-cid-sz7xmlte>SOC 2 Type II</span> </a> </div> </div> <nav class="footer-nav" aria-label="Footer" data-astro-cid-sz7xmlte> <div class="footer-col" data-astro-cid-sz7xmlte> <h3 data-astro-cid-sz7xmlte>Product</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/cowork" data-astro-cid-sz7xmlte> CoWork </a> </li><li data-astro-cid-sz7xmlte> <a href="/agents/openclaw" data-astro-cid-sz7xmlte> OpenClaw </a> </li><li data-astro-cid-sz7xmlte> <a href="/agents/openclaw-gbrain" data-astro-cid-sz7xmlte> OpenClaw + GBrain </a> </li><li data-astro-cid-sz7xmlte> <a href="/agents/nanoclaw" data-astro-cid-sz7xmlte> NanoClaw </a> </li><li data-astro-cid-sz7xmlte> <a href="/agents/anton" data-astro-cid-sz7xmlte> Anton </a> </li><li data-astro-cid-sz7xmlte> <a href="/agents/hermes" data-astro-cid-sz7xmlte> Hermes </a> </li> </ul> </div><div class="footer-col" data-astro-cid-sz7xmlte> <h3 data-astro-cid-sz7xmlte>Learn</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/use-cases" data-astro-cid-sz7xmlte> Use cases </a> </li><li data-astro-cid-sz7xmlte> <a href="/blog" data-astro-cid-sz7xmlte> Blog </a> </li><li data-astro-cid-sz7xmlte> <a href="/newsroom" data-astro-cid-sz7xmlte> Newsroom </a> </li><li data-astro-cid-sz7xmlte> <a href="/events" data-astro-cid-sz7xmlte> Events </a> </li><li data-astro-cid-sz7xmlte> <a href="/mindsdb-query-engine" data-astro-cid-sz7xmlte> MindsDB Query Engine </a> </li> </ul> </div><div class="footer-col" data-astro-cid-sz7xmlte> <h3 data-astro-cid-sz7xmlte>Company</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/about" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/careers" data-astro-cid-sz7xmlte> Careers </a> </li><li data-astro-cid-sz7xmlte> <a href="/contact" data-astro-cid-sz7xmlte> Contact </a> </li><li data-astro-cid-sz7xmlte> <a href="/mindshub-vs-mindsdb" data-astro-cid-sz7xmlte> MindsHub vs MindsDB </a> </li><li data-astro-cid-sz7xmlte> <a href="/press-kit" data-astro-cid-sz7xmlte> Press Kit </a> </li> </ul> </div> </nav> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte>© 2026 All rights reserved by MindsDB</p> <ul class="footer-legal" aria-label="Legal" data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/privacy-policy" data-astro-cid-sz7xmlte>Privacy Policy</a></li><li data-astro-cid-sz7xmlte><a href="/cookie-policy" data-astro-cid-sz7xmlte>Cookie Policy</a></li><li data-astro-cid-sz7xmlte><a href="/terms" data-astro-cid-sz7xmlte>Terms</a></li><li data-astro-cid-sz7xmlte><a href="/ai-policy" data-astro-cid-sz7xmlte>AI Policy</a></li><li data-astro-cid-sz7xmlte><a href="/legal-documents" data-astro-cid-sz7xmlte>Legal Documents</a></li> <li data-astro-cid-sz7xmlte> <button type="button" class="footer-consent-btn" data-mh-consent-open data-astro-cid-sz7xmlte> Your Privacy Choices </button> </li> </ul> </div> </div> </footer>  <script>
+  // Wire any [data-mh-consent-open] element to ask <ConsentBanner /> to
+  // open the right modal for the visitor's jurisdiction. Delegated so a
+  // single listener covers every consent trigger on the page (currently
+  // just the footer link, but future surfaces are free).
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (!(t instanceof Element)) return;
+    if (!t.closest('[data-mh-consent-open]')) return;
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent('mh:consent:open'));
+  });
+</script>  <div id="mh-consent-root" data-country="US" data-opt-in="0" data-storage-key="mh-consent" data-cookie-max-age="31536000" data-optout-toast="Opted out of personalized ads." hidden data-astro-cid-2effgw6e>  <div class="mh-banner" role="dialog" aria-labelledby="mh-banner-h" aria-describedby="mh-banner-body" hidden data-astro-cid-2effgw6e> <div class="mh-banner-inner" data-astro-cid-2effgw6e> <div class="mh-banner-text" data-astro-cid-2effgw6e> <h2 id="mh-banner-h" data-astro-cid-2effgw6e>We use cookies and similar technologies</h2> <p id="mh-banner-body" data-astro-cid-2effgw6e> Essential cookies are always on so the site works. With your consent, we also use analytics and marketing-measurement cookies to understand how the site is used and to measure our ads performance. 
+See our <a href="/cookie-policy" data-astro-cid-2effgw6e>Cookie Policy</a> and  <a href="/privacy-policy" data-astro-cid-2effgw6e>Privacy Notice</a>.
+</p> </div> <div class="mh-banner-actions" data-astro-cid-2effgw6e> <button type="button" class="mh-btn mh-btn-ghost" data-action="manage" data-astro-cid-2effgw6e>Manage preferences</button> <button type="button" class="mh-btn mh-btn-secondary" data-action="reject" data-astro-cid-2effgw6e>Reject non-essential</button> <button type="button" class="mh-btn mh-btn-primary" data-action="accept" data-astro-cid-2effgw6e>Accept all</button> </div> </div> </div>  <div class="mh-modal" role="dialog" aria-modal="true" aria-labelledby="mh-prefs-h" data-modal="prefs" hidden data-astro-cid-2effgw6e> <div class="mh-modal-backdrop" data-action="cancel" data-astro-cid-2effgw6e></div> <div class="mh-modal-card" role="document" data-astro-cid-2effgw6e> <header class="mh-modal-head" data-astro-cid-2effgw6e> <h2 id="mh-prefs-h" data-astro-cid-2effgw6e>Cookie preferences</h2> </header> <p class="mh-modal-intro" data-astro-cid-2effgw6e>Choose which categories of cookies and similar technologies you allow us to use on this site. You can change these choices at any time via the Cookie preferences link in the footer.</p> <ul class="mh-cat-list" data-astro-cid-2effgw6e> <li class="mh-cat" data-astro-cid-2effgw6e> <div class="mh-cat-text" data-astro-cid-2effgw6e> <strong data-astro-cid-2effgw6e>Strictly necessary</strong> <p data-astro-cid-2effgw6e>Required for the site to work — the anonymous session cookie that lets us measure aggregate traffic. Always on.</p> </div> <label class="mh-toggle" data-category="essential" data-astro-cid-2effgw6e> <input type="checkbox" checked disabled aria-label="Strictly necessary" data-astro-cid-2effgw6e> <span class="mh-toggle-track" aria-hidden="true" data-astro-cid-2effgw6e></span> </label> </li><li class="mh-cat" data-astro-cid-2effgw6e> <div class="mh-cat-text" data-astro-cid-2effgw6e> <strong data-astro-cid-2effgw6e>Analytics</strong> <p data-astro-cid-2effgw6e>Anonymous usage measurement (PostHog server-side). Helps us understand which pages are useful.</p> </div> <label class="mh-toggle" data-category="analytics" data-astro-cid-2effgw6e> <input type="checkbox" aria-label="Analytics" data-astro-cid-2effgw6e> <span class="mh-toggle-track" aria-hidden="true" data-astro-cid-2effgw6e></span> </label> </li><li class="mh-cat" data-astro-cid-2effgw6e> <div class="mh-cat-text" data-astro-cid-2effgw6e> <strong data-astro-cid-2effgw6e>Marketing measurement</strong> <p data-astro-cid-2effgw6e>Click-ID attribution to ad platforms (Google, X, LinkedIn) and identified events so we can measure ad performance.</p> </div> <label class="mh-toggle" data-category="marketing" data-astro-cid-2effgw6e> <input type="checkbox" aria-label="Marketing measurement" data-astro-cid-2effgw6e> <span class="mh-toggle-track" aria-hidden="true" data-astro-cid-2effgw6e></span> </label> </li> </ul> <footer class="mh-modal-actions" data-astro-cid-2effgw6e> <button type="button" class="mh-btn mh-btn-ghost" data-action="cancel" data-astro-cid-2effgw6e>Cancel</button> <button type="button" class="mh-btn mh-btn-primary" data-action="save" data-astro-cid-2effgw6e>Save preferences</button> </footer> </div> </div>  <div class="mh-modal" role="dialog" aria-modal="true" aria-labelledby="mh-optout-h" data-modal="optout" hidden data-astro-cid-2effgw6e> <div class="mh-modal-backdrop" data-action="cancel" data-astro-cid-2effgw6e></div> <div class="mh-modal-card" role="document" data-astro-cid-2effgw6e> <header class="mh-modal-head" data-astro-cid-2effgw6e> <h2 id="mh-optout-h" data-astro-cid-2effgw6e>Your Privacy Choices</h2> </header> <p class="mh-modal-body" data-astro-cid-2effgw6e> California, Virginia, Colorado, Connecticut, Utah, and other US state privacy laws give you the right to opt out of the “sale” or “sharing” of your personal information for cross-context behavioral advertising. We don’t sell your information for money, but we do share identifiers with our advertising partners to measure ad performance. You can opt out here. </p> <p class="mh-modal-fineprint" data-astro-cid-2effgw6e>
+See our <a href="/privacy-policy" data-astro-cid-2effgw6e>Privacy Notice</a> and  <a href="/cookie-policy" data-astro-cid-2effgw6e>Cookie Policy</a> for full detail.
+</p> <footer class="mh-modal-actions" data-astro-cid-2effgw6e> <button type="button" class="mh-btn mh-btn-ghost" data-action="cancel" data-astro-cid-2effgw6e>Keep current settings</button> <button type="button" class="mh-btn mh-btn-primary" data-action="optout" data-astro-cid-2effgw6e>Opt out of personalized ads</button> </footer> </div> </div>  <div class="mh-toast" role="status" aria-live="polite" hidden data-astro-cid-2effgw6e></div> </div> <script>
+  // ConsentBanner controller — runs once on every page load.
+  //
+  // Responsibilities:
+  //   1. Mirror localStorage `mh-consent` into a same-name cookie so the
+  //      Worker can read it on the next request. Runs synchronously
+  //      before AnalyticsBeacon emits — its fetch will pick up the
+  //      cookie this script just wrote.
+  //   2. Show the first-visit banner if (a) we're in an opt-in
+  //      jurisdiction and (b) no stored choice exists.
+  //   3. Wire up the Manage-preferences modal and (US-only) opt-out
+  //      modal so they can be opened later by the footer link via the
+  //      `mh:consent:open` custom event.
+  (function () {
+    var root = document.getElementById('mh-consent-root');
+    if (!root) return;
+    var STORAGE_KEY = root.dataset.storageKey || 'mh-consent';
+    var COOKIE_MAX_AGE = parseInt(root.dataset.cookieMaxAge || '0', 10) || 60 * 60 * 24 * 365;
+    var optIn = root.dataset.optIn === '1';
+
+    function readState() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        var p = JSON.parse(raw);
+        if (!p || typeof p !== 'object') return null;
+        return {
+          analytics: p.analytics === true,
+          marketing: p.marketing === true,
+          decidedAt: typeof p.decidedAt === 'number' ? p.decidedAt : null,
+          optedOut: p.optedOut === true,
+        };
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // Convert state → server-readable cookie value.
+    function cookieFor(state) {
+      if (!state) return 'none';
+      if (state.optedOut) return 'optout';
+      if (state.analytics && state.marketing) return 'full';
+      if (state.analytics) return 'analytics';
+      return 'rejected';
+    }
+
+    function writeCookie(value) {
+      var parts = [
+        STORAGE_KEY + '=' + encodeURIComponent(value),
+        'Path=/',
+        'Max-Age=' + COOKIE_MAX_AGE,
+        'SameSite=Lax',
+      ];
+      if (location.protocol === 'https:') parts.push('Secure');
+      document.cookie = parts.join('; ');
+    }
+
+    function persist(state) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        // Quota / private mode — fall back to cookie-only.
+      }
+      writeCookie(cookieFor(state));
+    }
+
+    // ────────────────────────────────────────────────────────────
+    // 1. Mirror existing state into cookie so the next /api/track
+    //    (and the next pageview) sees it.
+    var current = readState();
+    writeCookie(cookieFor(current));
+
+    // ────────────────────────────────────────────────────────────
+    // 2. UI helpers
+    var banner = root.querySelector('.mh-banner');
+    var prefsModal = root.querySelector('[data-modal="prefs"]');
+    var optoutModal = root.querySelector('[data-modal="optout"]');
+    var toast = root.querySelector('.mh-toast');
+    var lastFocused = null;
+
+    function show(el) {
+      if (!el) return;
+      el.hidden = false;
+      root.hidden = false;
+    }
+    function hide(el) {
+      if (!el) return;
+      el.hidden = true;
+    }
+    function showToast(text) {
+      if (!toast) return;
+      toast.textContent = text;
+      toast.hidden = false;
+      setTimeout(function () { toast.hidden = true; }, 2500);
+    }
+
+    function openPrefs() {
+      if (!prefsModal) return;
+      lastFocused = document.activeElement;
+      // Dismiss the first-visit banner if it's still showing — the modal
+      // is a strictly-more-detailed surface for the same choice.
+      hide(banner);
+      // Pre-fill toggles from current state.
+      var s = readState();
+      prefsModal.querySelectorAll('.mh-toggle').forEach(function (t) {
+        var cat = t.getAttribute('data-category');
+        var cb = t.querySelector('input');
+        if (!cb || cb.disabled) return;
+        if (cat === 'analytics') cb.checked = !!(s && s.analytics);
+        if (cat === 'marketing') cb.checked = !!(s && s.marketing);
+      });
+      show(prefsModal);
+      var firstBtn = prefsModal.querySelector('button.mh-btn-primary');
+      if (firstBtn) firstBtn.focus();
+    }
+    function closePrefs() {
+      hide(prefsModal);
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+
+    function openOptOut() {
+      if (!optoutModal) return;
+      lastFocused = document.activeElement;
+      hide(banner); // belt-and-suspenders; banner shouldn't render in opt-out countries anyway
+      show(optoutModal);
+      var btn = optoutModal.querySelector('button.mh-btn-primary');
+      if (btn) btn.focus();
+    }
+    function closeOptOut() {
+      hide(optoutModal);
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+
+    // ────────────────────────────────────────────────────────────
+    // 3. Decide whether to show the first-visit banner.
+    if (optIn && !current) {
+      show(banner);
+    }
+
+    // ────────────────────────────────────────────────────────────
+    // 4. Button wiring (delegated)
+    root.addEventListener('click', function (ev) {
+      var t = ev.target;
+      if (!(t instanceof Element)) return;
+      var actionEl = t.closest('[data-action]');
+      if (!actionEl) return;
+      var action = actionEl.getAttribute('data-action');
+
+      // Banner / modal close-on-backdrop both use data-action="cancel".
+      if (action === 'cancel') {
+        if (prefsModal && !prefsModal.hidden) closePrefs();
+        if (optoutModal && !optoutModal.hidden) closeOptOut();
+        return;
+      }
+      if (action === 'manage') {
+        hide(banner);
+        openPrefs();
+        return;
+      }
+      if (action === 'accept') {
+        persist({ analytics: true, marketing: true, decidedAt: Date.now() });
+        hide(banner);
+        showToast('Preferences saved');
+        // Reload so the next render reflects identified mode server-side.
+        setTimeout(function () { location.reload(); }, 250);
+        return;
+      }
+      if (action === 'reject') {
+        persist({ analytics: false, marketing: false, decidedAt: Date.now() });
+        hide(banner);
+        showToast('Preferences saved');
+        setTimeout(function () { location.reload(); }, 250);
+        return;
+      }
+      if (action === 'save') {
+        var analytics = !!prefsModal.querySelector('.mh-toggle[data-category="analytics"] input').checked;
+        var marketing = !!prefsModal.querySelector('.mh-toggle[data-category="marketing"] input').checked;
+        persist({ analytics: analytics, marketing: marketing, decidedAt: Date.now() });
+        closePrefs();
+        showToast('Preferences saved');
+        setTimeout(function () { location.reload(); }, 250);
+        return;
+      }
+      if (action === 'optout') {
+        persist({ analytics: true, marketing: false, optedOut: true, decidedAt: Date.now() });
+        closeOptOut();
+        showToast(root.dataset.optoutToast || 'Opted out.');
+        setTimeout(function () { location.reload(); }, 250);
+        return;
+      }
+    });
+
+    // ────────────────────────────────────────────────────────────
+    // 5. Footer link dispatches `mh:consent:open` — we listen and open
+    //    the modal appropriate for the visitor's jurisdiction.
+    window.addEventListener('mh:consent:open', function () {
+      if (optIn) openPrefs();
+      else openOptOut();
+    });
+
+    // Escape closes any open modal.
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        if (prefsModal && !prefsModal.hidden) closePrefs();
+        else if (optoutModal && !optoutModal.hidden) closeOptOut();
+      }
+    });
+  })();
+</script>  <script>
+  (function () {
+    var ENDPOINT = '/api/track';
+    // For $pageleave: when this page view started, and whether we've already
+    // sent its leave event (so visibilitychange + pagehide don't double-fire).
+    var pageStart = Date.now();
+    var leftSent = false;
+
+    function emit(name, props) {
+      if (typeof name !== 'string' || name.length === 0) return;
+      try {
+        var payload = {
+          event: name,
+          url: location.href,
+          path: location.pathname,
+          referrer: document.referrer || undefined,
+        };
+        if (props && typeof props === 'object') payload.props = props;
+        // `keepalive: true` lets the POST finish even if the page is
+        // unloading (link clicks, navigation). 64 KB body cap is way
+        // more than we need.
+        fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true,
+          credentials: 'same-origin',
+        }).catch(function () {
+          /* swallow — analytics never breaks the page */
+        });
+      } catch (e) {
+        /* swallow */
+      }
+    }
+
+    // $pageleave — bounds session duration in PostHog. Uses navigator.sendBeacon
+    // (fire-and-forget, survives unload without blocking it); falls back to a
+    // keepalive fetch. Fired once per page view; the guard stops the
+    // visibilitychange + pagehide pair from double-counting the same exit.
+    function emitLeave() {
+      if (leftSent) return;
+      leftSent = true;
+      try {
+        var body = JSON.stringify({
+          event: 'pageleave',
+          url: location.href,
+          path: location.pathname,
+          referrer: document.referrer || undefined,
+          props: { duration_ms: Date.now() - pageStart },
+        });
+        if (navigator.sendBeacon) {
+          var blob = new Blob([body], { type: 'application/json' });
+          if (navigator.sendBeacon(ENDPOINT, blob)) return;
+        }
+        fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: body,
+          keepalive: true,
+          credentials: 'same-origin',
+        }).catch(function () {});
+      } catch (e) {
+        /* swallow */
+      }
+    }
+
+    // Initial pageview.
+    emit('pageview');
+
+    // Page exit. visibilitychange→hidden is the reliable signal (esp. mobile,
+    // where pagehide/unload often don't fire); pagehide complements it for
+    // desktop close / cross-document nav. The guard dedupes the pair.
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') emitLeave();
+    });
+    window.addEventListener('pagehide', emitLeave);
+
+    // Astro view-transition swaps replace the DOM without a full reload.
+    // Close out the leaving page (so its dwell + session bound are recorded),
+    // then start a fresh page view on the incoming one.
+    document.addEventListener('astro:before-swap', emitLeave);
+    document.addEventListener('astro:after-swap', function () {
+      leftSent = false;
+      pageStart = Date.now();
+      emit('pageview');
+    });
+
+    // Auto-instrument CTA clicks. Fires `website_cta_click` on:
+    //   - any element with [data-mh-event] (explicit instrumentation; the
+    //     attribute value, if present, overrides the event name)
+    //   - any <a> or <button> whose class contains the token "btn"
+    //     (covers .btn / .btn-primary / .btn-secondary / .btn-on-accent /
+    //     .btn-link site-wide — the marketing CTA convention)
+    //
+    // We deliberately do NOT auto-fire for plain header / footer nav
+    // links — those navigations show up as the resulting pageview.
+    function matchesCta(el) {
+      if (!el || el.nodeType !== 1) return null;
+      if (el.hasAttribute('data-mh-event')) return el;
+      var tag = el.tagName;
+      if (tag !== 'A' && tag !== 'BUTTON') return null;
+      // className may be SVGAnimatedString on inline SVG roots; coerce.
+      var cls = typeof el.className === 'string' ? el.className : (el.className && el.className.baseVal) || '';
+      if (cls.split(/\s+/).indexOf('btn') !== -1) return el;
+      // Common modifier classes — match any class starting with "btn-".
+      if (cls.split(/\s+/).some(function (c) { return c.indexOf('btn-') === 0; })) return el;
+      return null;
+    }
+
+    function gatherProps(el) {
+      var props = {};
+      var label = (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 80);
+      if (label) props.label = label;
+      if (el.tagName === 'A') {
+        var href = el.getAttribute('href');
+        if (href) props.href = href.slice(0, 200);
+      }
+      // Any data-mh-* attributes beyond data-mh-event become props.
+      for (var i = 0; i < el.attributes.length; i++) {
+        var attr = el.attributes[i];
+        if (attr.name.indexOf('data-mh-') === 0 && attr.name !== 'data-mh-event') {
+          var key = attr.name.slice('data-mh-'.length);
+          if (key && attr.value) props[key] = attr.value.slice(0, 200);
+        }
+      }
+      return props;
+    }
+
+    document.addEventListener('click', function (ev) {
+      var path = typeof ev.composedPath === 'function' ? ev.composedPath() : [];
+      var cta = null;
+      for (var i = 0; i < path.length; i++) {
+        cta = matchesCta(path[i]);
+        if (cta) break;
+      }
+      // Fallback for environments without composedPath() — walk up from target.
+      if (!cta) {
+        var t = ev.target;
+        while (t && t !== document.body) {
+          cta = matchesCta(t);
+          if (cta) break;
+          t = t.parentNode;
+        }
+      }
+      if (!cta) return;
+      var name = cta.getAttribute('data-mh-event') || 'website_cta_click';
+      emit(name, gatherProps(cta));
+    }, true); // capture phase so we see the click even if nested handlers stopPropagation
+
+    // Public hook for page-level code — call with any event name from the
+    // `EventName` union in src/lib/analytics/types.ts.  Today the schema
+    // accepts only `pageview` and `website_cta_click`, both auto-emitted;
+    // this hook is here for explicit future events (always `website_`-
+    // prefixed by convention).
+    window.__mh_track = emit;
+  })();
+</script> </body></html> 

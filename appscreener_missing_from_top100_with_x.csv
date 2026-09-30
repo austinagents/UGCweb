@@ -1,0 +1,63 @@
+tool_name,official_domain,official_x_handle,official_x_url,website_source_url
+Google Gemini,gemini.google.com,@GeminiApp,https://x.com/GeminiApp,https://gemini.google.com/
+Microsoft Copilot,copilot.microsoft.com,@MSFTCopilot,https://x.com/MSFTCopilot,https://copilot.microsoft.com/
+DeepSeek,deepseek.com,@deepseek_ai,https://x.com/deepseek_ai,https://www.deepseek.com/
+Meta AI,ai.meta.com,@AIatMeta,https://x.com/AIatMeta,https://ai.meta.com/
+Canva,canva.com,@canva,https://x.com/canva,https://www.canva.com/
+Grammarly,grammarly.com,@Grammarly,https://x.com/Grammarly,https://www.grammarly.com/
+DALL-E,openai.com/dall-e,@OpenAI,https://x.com/OpenAI,https://openai.com/dall-e
+Stable Diffusion,stability.ai,@StabilityAI,https://x.com/StabilityAI,https://stability.ai/
+Hugging Face,huggingface.co,@huggingface,https://x.com/huggingface,https://huggingface.co/
+OpenAI Platform,platform.openai.com,@OpenAIDevs,https://x.com/OpenAIDevs,https://platform.openai.com/
+Anthropic Console,console.anthropic.com,@AnthropicAI,https://x.com/AnthropicAI,https://console.anthropic.com/
+LangChain,langchain.com,@LangChainAI,https://x.com/LangChainAI,https://www.langchain.com/
+LlamaIndex,llamaindex.ai,@llama_index,https://x.com/llama_index,https://www.llamaindex.ai/
+Mistral AI,mistral.ai,@MistralAI,https://x.com/MistralAI,https://mistral.ai/
+Vertex AI,cloud.google.com/vertex-ai,@GoogleCloud,https://x.com/GoogleCloud,https://cloud.google.com/vertex-ai
+Amazon Bedrock,aws.amazon.com/bedrock,@awscloud,https://x.com/awscloud,https://aws.amazon.com/bedrock/
+Azure AI Foundry,ai.azure.com,@Azure,https://x.com/Azure,https://ai.azure.com/
+Databricks Mosaic AI,databricks.com/product/machine-learning,@databricks,https://x.com/databricks,https://www.databricks.com/product/machine-learning
+Cohere,cohere.com,@cohere,https://x.com/cohere,https://cohere.com/
+IBM watsonx,ibm.com/watsonx,@IBMwatsonx,https://x.com/IBMwatsonx,https://www.ibm.com/watsonx
+Pinecone,pinecone.io,@pinecone,https://x.com/pinecone,https://www.pinecone.io/
+Replicate,replicate.com,@replicate,https://x.com/replicate,https://replicate.com/
+Together AI,together.ai,@togethercompute,https://x.com/togethercompute,https://www.together.ai/
+Groq,groq.com,@GroqInc,https://x.com/GroqInc,https://groq.com/
+Fireworks AI,fireworks.ai,@FireworksAI_HQ,https://x.com/FireworksAI_HQ,https://fireworks.ai/
+OpenRouter,openrouter.ai,@OpenRouterAI,https://x.com/OpenRouterAI,https://openrouter.ai/
+Claude Code,anthropic.com/claude-code,@AnthropicAI,https://x.com/AnthropicAI,https://www.anthropic.com/claude-code
+OpenAI Codex,openai.com/codex,@OpenAIDevs,https://x.com/OpenAIDevs,https://openai.com/codex
+Devin,cognition.ai,@cognition_labs,https://x.com/cognition_labs,https://www.cognition.ai/
+Codeium,codeium.com,@codeiumdev,https://x.com/codeiumdev,https://codeium.com/
+Sourcegraph Cody,sourcegraph.com/cody,@sourcegraph,https://x.com/sourcegraph,https://sourcegraph.com/cody
+Phind,phind.com,@phindsearch,https://x.com/phindsearch,https://www.phind.com/
+Blackbox AI,blackbox.ai,@blackbox_ai,https://x.com/blackbox_ai,https://www.blackbox.ai/
+Weaviate,weaviate.io,@weaviate_io,https://x.com/weaviate_io,https://weaviate.io/
+Chroma,trychroma.com,@trychroma,https://x.com/trychroma,https://www.trychroma.com/
+LangSmith,smith.langchain.com,@LangChainAI,https://x.com/LangChainAI,https://smith.langchain.com/
+Modal,modal.com,@modal_labs,https://x.com/modal_labs,https://modal.com/
+AutoGen,microsoft.github.io/autogen,@MSFTResearch,https://x.com/MSFTResearch,https://www.microsoft.com/en-us/research/
+Zapier AI,zapier.com/ai,@zapier,https://x.com/zapier,https://zapier.com/ai
+Relevance AI,relevanceai.com,@RelevanceAI_,https://x.com/RelevanceAI_,https://relevanceai.com/
+Hebbia,hebbia.ai,@HebbiaAI,https://x.com/HebbiaAI,https://www.hebbia.ai/
+Harvey,harvey.ai,@harvey__ai,https://x.com/harvey__ai,https://www.harvey.ai/
+Sierra,sierra.ai,@SierraPlatform,https://x.com/SierraPlatform,https://sierra.ai/
+Intercom Fin,intercom.com/fin,@intercom,https://x.com/intercom,https://www.intercom.com/fin
+Zendesk AI,zendesk.com/ai,@zendesk,https://x.com/zendesk,https://www.zendesk.com/ai/
+Writer,writer.com,@Get_Writer,https://x.com/Get_Writer,https://writer.com/
+Copy.ai,copy.ai,@copy_ai,https://x.com/copy_ai,https://www.copy.ai/
+Wordtune,wordtune.com,@wordtune,https://x.com/wordtune,https://www.wordtune.com/
+Tome,tome.app,@magicaltome,https://x.com/magicaltome,https://tome.app/
+Figma AI,figma.com/ai,@figma,https://x.com/figma,https://www.figma.com/ai/
+Webflow AI,webflow.com/ai,@webflow,https://x.com/webflow,https://webflow.com/ai
+Luma AI,lumalabs.ai,@LumaLabsAI,https://x.com/LumaLabsAI,https://lumalabs.ai/
+Kling AI,klingai.com,@Kling_ai,https://x.com/Kling_ai,https://klingai.com/
+Otter.ai,otter.ai,@otter_ai,https://x.com/otter_ai,https://otter.ai/
+Fireflies.ai,fireflies.ai,@firefliesai,https://x.com/firefliesai,https://fireflies.ai/
+Fathom,fathom.video,@FathomVideo,https://x.com/FathomVideo,https://fathom.video/
+Superhuman AI,superhuman.com,@Superhuman,https://x.com/Superhuman,https://superhuman.com/
+Reclaim AI,reclaim.ai,@reclaimai,https://x.com/reclaimai,https://reclaim.ai/
+Motion,usemotion.com,@UseMotion,https://x.com/UseMotion,https://www.usemotion.com/
+Clay,clay.com,@ClayHQ,https://x.com/ClayHQ,https://www.clay.com/
+Poe,poe.com,@poe_platform,https://x.com/poe_platform,https://poe.com/
+You.com,you.com,@YouSearchEngine,https://x.com/YouSearchEngine,https://you.com/

@@ -1,0 +1,228 @@
+name,slug,category,websiteUrl
+ChatGPT,chatgpt,AI Agents,https://chat.openai.com
+Claude,claude,AI Agents,https://claude.ai
+Perplexity,perplexity,AI Research,https://www.perplexity.ai
+Cursor,cursor,AI Coding,https://cursor.com
+Windsurf,windsurf,AI Coding,https://windsurf.com
+Lovable,lovable,AI Coding,https://lovable.dev
+Replit,replit,AI Coding,https://replit.com
+Runway,runway,AI Video,https://runwayml.com
+Kling,kling,AI Video,https://klingai.com
+Pika,pika,AI Video,https://pika.art
+ElevenLabs,elevenlabs,AI Voice,https://elevenlabs.io
+Midjourney,midjourney,AI Design,https://www.midjourney.com
+Ideogram,ideogram,AI Design,https://ideogram.ai
+HeyGen,heygen,AI Video,https://www.heygen.com
+Synthesia,synthesia,AI Video,https://www.synthesia.io
+Granola,granola,AI Workflow,https://www.granola.ai
+Notion AI,notion-ai,AI Workflow,https://www.notion.so/product/ai
+Zapier,zapier,AI Automation,https://zapier.com
+Lindy,lindy,AI Automation,https://www.lindy.ai
+Gamma,gamma,AI Design,https://gamma.app
+Manus,manus,AI Agents,https://manus.im
+V0,v0,AI Coding,https://v0.dev
+Bolt,bolt,AI Coding,https://bolt.new
+Linear,linear,AI Workflow,https://linear.app
+CapCut,capcut,AI Video,https://www.capcut.com
+Descript,descript,AI Voice,https://www.descript.com
+Suno,suno,AI Voice,https://suno.com
+Udio,udio,AI Voice,https://udio.com
+NotebookLM,notebooklm,AI Research,https://notebooklm.google
+Grok,grok,AI Agents,https://x.ai/grok
+Tome,tome,AI Marketing,https://tome.app
+Clay,clay,AI Marketing,https://www.clay.com
+Jasper,jasper,AI Marketing,https://www.jasper.ai
+Glean,glean,AI Research,https://www.glean.com
+Make,make,AI Automation,https://www.make.com
+Framer AI,framer-ai,AI Design,https://www.framer.com/ai
+Vercel,vercel,AI Coding,https://vercel.com
+n8n,n8n,AI Automation,https://n8n.io
+Apollo,apollo,AI Marketing,https://www.apollo.io
+Framer,framer,AI Design,https://www.framer.com
+Typefully,typefully,AI Marketing,https://typefully.com
+Slack,slack,AI Workflow,https://slack.com
+HubSpot,hubspot,AI Marketing,https://www.hubspot.com
+Instantly,instantly,AI Marketing,https://instantly.ai
+Taplio,taplio,AI Marketing,https://taplio.com
+LinkedIn,linkedin,AI Marketing,https://www.linkedin.com
+Google Maps,google-maps,AI Research,https://www.google.com/maps
+Adapt,adapt,AI Agents,https://adapt.com
+Vtuber Assistant,vtuber-assistant,AI Avatars,https://store.steampowered.com/app/4464930/Vtuber_Assistant
+Resumedit,resumedit,AI Writing,https://www.resumedit.com
+Thrive Financial,thrive-financial,AI Coding,https://thrivefinancial.app
+MyCustodyCoach,mycustodycoach,AI Agents,https://mycustodycoach.com
+FastiAds,fastiads,AI Marketing,https://www.fastiads.com
+UFate,ufate,AI Productivity,https://www.ufate.ai
+PNGMaker,pngmaker,AI Image,https://png-maker.com
+ApiPosture,apiposture,AI Coding,https://www.apiposture.com
+BuddyPro,buddypro,AI Productivity,https://buddypro.ai
+PlotStudio AI,plotstudio-ai,AI Agents,https://www.plotstudio.ai
+General Compute,general-compute,AI Design,https://www.generalcompute.com
+Franki,franki,AI Voice,https://www.chat-to-franki.com
+TeachQuill,teachquill,AI Education,https://teachquill.com
+WearMind,wearmind,AI Video,https://aishirt.app
+OpenBudget,openbudget,AI Marketing,https://openbudget.sh
+ImagineGo,imaginego,AI Video,https://imaginego.ai/text-to-video
+EduSolver,edusolver,AI Education,https://edusolver.io
+BeyondComments,beyondcomments,AI Video,https://beyondcomments.io
+BookCoversLab,bookcoverslab,AI Productivity,https://bookcoverslab.com
+NDORFlow,ndorflow,AI Productivity,https://ndorflow.app
+Melody Genie,melody-genie,AI Music,https://melodygenie.app
+AI Inspo,ai-inspo,AI Video,https://www.ai-inspo.com/video/image-to-video
+MakeForm,makeform,AI Writing,https://www.makeform.ai
+Link To Text,link-to-text,AI Video,https://linktotext.co
+Aiter.io,aiter-io,AI Audio,https://aiter.io
+Dokie,dokie,AI Agents,https://dokie.ai
+CatDoes,catdoes,AI Agents,https://catdoes.com
+WebZum,webzum,AI Meeting,https://webzum.com
+FliesReplies,fliesreplies,AI Voice,https://www.fliesreplies.com
+Vismint,vismint,AI Image,https://vismint.com
+Gamelabs Studio,gamelabs-studio,AI Productivity,https://gamelabstudio.co
+ShortsMate,shortsmate,AI Video,https://shortsmate.ai
+Asteroid AI,asteroid-ai,AI Agents,https://asteroid.ai
+Adrian,adrian,AI Agents,https://github.com/secureagentics/Adrian
+CEOfriend,ceofriend,AI Productivity,https://www.ceofriend.ai
+Distill.cv,distill-cv,AI Writing,https://distill.cv
+Elevoi,elevoi,AI Productivity,https://elevoi.ca
+Image3D AI,image3d-ai,AI Image,https://www.aiimageto3d.com
+LyricMV,lyricmv,AI Video,https://lyricmv.com
+Matrix Coder,matrix-coder,AI Coding,https://matrixcoder.io
+Notis,notis,AI Agents,https://notis.ai
+Thumbs AI,thumbs-ai,AI Video,https://www.thumbs.ai
+HomeRestyle AI,homerestyle-ai,AI Design,https://www.homerestyle.ai
+VideoSwap.app,videoswap-app,AI Video,https://www.videoswap.app
+SocialClip Studio,socialclip-studio,AI Video,https://socialclipstudio.com
+AppDeploy,appdeploy,AI Productivity,https://appdeploy.ai
+Coursebox,coursebox,AI Productivity,https://www.coursebox.ai
+remio,remio,AI Research,https://www.remio.ai
+Baby Magic,baby-magic,AI Video,https://www.babymagic.app/ai-baby-image
+BetterSpace,betterspace,AI Video,https://www.betterspace.ai
+GeekLink,geeklink,AI Video,https://geeklink.dev
+HitPublish,hitpublish,AI Productivity,https://www.hitpublish.ai
+Audio Transcriber AI,audio-transcriber-ai,AI Voice,https://audiotranscriber.io
+GlobalPayEX,globalpayex,AI Automation,https://globalpayex.com
+Ask Bishop,ask-bishop,AI Agents,https://askbishop.app
+Quorlyx Pro,quorlyx-pro,AI Agents,https://quorlyx.dev
+Scavio AI,scavio-ai,AI Coding,https://scavio.dev
+Rift,rift,AI Coding,https://rift-code.com
+DineCraft,dinecraft,AI Design,https://www.dinecraft.app
+Teneks,teneks,AI Sales,https://www.teneks.ai
+WebCrawler API,webcrawler-api,AI Coding,https://webcrawlerapi.com
+Team Pulse,team-pulse,AI Design,https://goteampulse.io
+Browserbeam,browserbeam,AI Coding,https://browserbeam.com
+AuthentaLink,authentalink,AI Productivity,https://authentalink.com
+Unframe AI,unframe-ai,AI Productivity,https://www.unframe.ai
+Introvrs,introvrs,AI Productivity,https://www.introvrs.com
+ModelAtlas,modelatlas,AI Infrastructure,https://modelatlas.net
+TextSongAI.com,textsongai-com,AI Music,https://www.textsongai.com
+Nomie,nomie,AI Productivity,https://apps.apple.com/us/app/nomie-doomscrolling-break/id6757396354
+Clocsy,clocsy,AI Marketing,https://clocsy.com
+Pounce,pounce,AI Marketing,https://www.pounce.so
+FaceHub AI,facehub-ai,AI Image,https://www.facehub.ai
+CloudContact AI,cloudcontact-ai,AI Automation,https://cloudcontactai.com
+UGO,ugo,AI Writing,https://try-ugo.com
+AI Product Photography.app,ai-product-photography-app,AI Image,https://aiproductphotography.app
+MusVideo,musvideo,AI Video,https://musvideo.ai
+PatentFig AI,patentfig-ai,AI Image,https://patentfig.ai
+Silky AI,silky-ai,AI Productivity,https://www.aihair.life
+InstantTranscriber,instanttranscriber,AI Video,https://instanttranscriber.com
+MagicReels,magicreels,AI Image,https://magicreels.media
+Vidlogi,vidlogi,AI Video,https://www.vidlogi.com/en
+Sunny by Sunburnt AI,sunny-by-sunburnt-ai,AI Agents,https://sunburntai.com.au/sunny-agentic-ai-operating-system
+Floot,floot,AI Coding,https://floot.com
+AI Landscape Design by Yuzu,ai-landscape-design-by-yuzu,AI Writing,https://yuzudesign.ai/landscape-design-ai
+Koinonos,koinonos,AI Agents,https://www.koinonos.app
+DebaterX,debaterx,AI Video,https://www.debaterx.app
+Subquadratic,subquadratic,AI Productivity,https://subq.ai
+Ozigi,ozigi,AI Audio,https://ozigi.app
+Rundown,rundown,AI Video,https://getrundown.xyz
+Whisper Web,whisper-web,AI Voice,https://whisperweb.tech
+Prosed,prosed,AI Writing,https://tryprosed.com
+Ask the Record,ask-the-record,AI Agents,https://www.asktherecord.com
+AstroCarto,astrocarto,AI Productivity,https://astrocarto.net
+OptiHedge,optihedge,AI Productivity,https://optihedge.ai
+SongMuse AI,songmuse-ai,AI Music,https://songmuse.art
+AI Image 2 Video,ai-image-2-video,AI Video,https://aiimage2video.pro
+SpeedPainter,speedpainter,AI Video,https://www.speedpainter.org/en
+RFP.ai,rfp-ai,AI Coding,https://rfp.ai
+Live Like The River,live-like-the-river,AI Productivity,https://www.liveliketheriver.com
+Solyo,solyo,AI Productivity,https://solyo.ai
+GroundScholar,groundscholar,AI Productivity,https://groundscholar.com
+AirMusic,airmusic,AI Video,https://airmusic.ai/ai-music-video-generator
+Paraspeech,paraspeech,AI Voice,https://paraspeech.com
+Babelbeez,babelbeez,AI Voice,https://www.babelbeez.com
+Vertech Academy,vertech-academy,AI Research,https://www.vertechacademy.ca
+Vireel AI Image to Video Generator,vireel-ai-image-to-video-generator,AI Video,https://vireels.ai/ai-image-to-video
+AI Aware,ai-aware,AI Video,https://aiaware.io
+MadeFine AI,madefine-ai,AI Automation,https://madefine.ai
+Lyric Remix Studio,lyric-remix-studio,AI Voice,https://lyricremixgemini.iacolettisoftware.com
+NestTrack,nesttrack,AI Productivity,https://www.nesttrack.xyz
+DashJob AI,dashjob-ai,AI Search,https://dashjob.ai
+LobbyStack,lobbystack,AI Productivity,https://lobbystack.com
+VibeBot,vibebot,AI Coding,https://www.vibebot.gg
+Saveto AI,saveto-ai,AI Video,https://saveto.ai/instagram-transcript-generator
+DescribeThat,describethat,AI Image,https://describethatclaude.iacolettisoftware.com
+ColorJibe,colorjibe,AI Productivity,https://colorjibe.com
+Vdoo AI,vdoo-ai,AI Video,https://vdoo.ai/image-to-video
+Kairval,kairval,AI Video,https://kairval.com/ai/text-to-video
+Himedia,himedia,AI Video,https://himedia.ai/image-to-video
+Vidnix,vidnix,AI Video,https://vidnix.ai/image-to-video
+AI Photo Editor,ai-photo-editor,AI Image,https://aiphotoeditor.io
+Epochal,epochal,AI Video,https://epochal.app
+Viyou AI Motion Control,viyou-ai-motion-control,AI Video,https://viyou.ai/ai-motion-control
+PAI,pai,AI Video,https://www.utopaistudios.com/waitlist
+Creen AI,creen-ai,AI Video,https://www.creen.ai
+AI Kiss,ai-kiss,AI Video,https://aikiss.art
+Vidflux,vidflux,AI Video,https://vidflux.ai/video-effect/ai-bikini-video-generator
+VoooAI,voooai,AI Customer Support,https://voooai.com
+Music Video Generator,music-video-generator,AI Video,https://musicvideogenerator.app
+CleanVideoAI Watermark Removal,cleanvideoai-watermark-removal,AI Video,https://www.videowatermarkremove.com
+Tendem,tendem,AI Agents,https://tendem.ai
+Rusheslab,rusheslab,AI Meeting,https://rusheslab.ai
+Fineshare Sora Watermark Remover,fineshare-sora-watermark-remover,AI Video,https://www.fineshare.net/ai-video/sora-watermark-remover
+Verdent,verdent,AI Coding,https://www.verdent.ai/?ots=theresanaiforthat
+MixMaster Pro,mixmaster-pro,AI Audio,https://mixmasterpro.io
+Slidely AI (backed by YC),slidely-ai-backed-by-yc,AI Marketing,https://slidely.ai
+GeoInfer,geoinfer,AI Image,https://geoinfer.com/en
+Rocket,rocket,AI Coding,https://www.rocket.new
+Base44,base44,AI Coding,https://base44.pxf.io/c/6410050/2477538/25619?trafcat=hp
+biela.dev,biela-dev,AI Coding,https://biela.dev
+Unblur Image by Uluch,unblur-image-by-uluch,AI Image,https://uluch.com
+VoxDeck,voxdeck,AI Productivity,https://www.voxdeck.ai
+EzSolve,ezsolve,AI Education,https://plou.eu/product/mobile/ezsolve
+Singify AI Vocal Remover,singify-ai-vocal-remover,AI Music,https://singify.co/vocal-remover
+V03 AI Video Generator,v03-ai-video-generator,AI Video,https://v03ai.com
+Redesignr Ai,redesignr-ai,AI Writing,https://redesignr.ai
+PrometAI,prometai,AI Productivity,https://prometai.app/business-plan-templates
+Archie,archie,AI Coding,https://www.archie.com
+Marblism,marblism,AI Productivity,https://www.marblism.com
+PixieBrix,pixiebrix,AI Productivity,https://www.pixiebrix.com
+Osum,osum,AI Search,https://osum.com
+Venturekit,venturekit,AI Productivity,https://www.venturekit.ai
+Photo AI,photo-ai,AI Video,https://photoai.com
+MyReport,myreport,AI Analytics,https://myreport.alaba.ai
+ResolveAI,resolveai,AI Agents,https://resolveai.co
+Eightify,eightify,AI Video,https://www.eightify.app
+KeywordSearch,keywordsearch,AI Video,https://www.keywordsearch.com
+Stockimg AI,stockimg-ai,AI Image,https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral
+GetLogit,getlogit,AI Writing,https://getlogit.com
+Veriff,veriff,AI Productivity,https://www.veriff.com/plans/self-serve?promo=taaft15
+lxi.ai,lxi-ai,AI Research,https://lxi.ai
+Pfpmaker,pfpmaker,AI Image,https://pfpmaker.com
+QuillBot,quillbot,AI Agents,https://quillbot.com
+Raplyrics,raplyrics,AI Music,https://raplyrics.eu
+Fetcher,fetcher,AI Sales,https://fetcher.ai
+Watermelon,watermelon,AI Agents,https://www.watermelon.ai
+Inbenta,inbenta,AI Search,https://www.inbenta.com
+DigitalGenius,digitalgenius,AI Customer Support,https://digitalgenius.com
+B12 AI Website Builder,b12-ai-website-builder,AI Design,https://www.b12.io/free-draft
+remove.bg,remove-bg,AI Image,https://www.remove.bg
+Skillroads,skillroads,AI Search,https://skillroads.com
+Kavout,kavout,AI Search,https://www.kavout.com/?fpr=whatshuang
+AssemblyAI,assemblyai,AI Voice,https://www.assemblyai.com
+Riskified,riskified,AI Marketing,https://www.riskified.com
+DataRobot,datarobot,AI Productivity,https://www.datarobot.com
+H2O.ai,h2o-ai,AI Infrastructure,https://h2o.ai
+Deep Beat,deep-beat,AI Music,https://deepbeat.org
+AI,ai,AI Writing,https://ai-writer.com
+Deepdreamgenerator,deepdreamgenerator,AI Image,https://deepdreamgenerator.com/generate

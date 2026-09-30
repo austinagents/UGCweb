@@ -1,0 +1,2070 @@
+{
+  "summary": {
+    "generated_at": "2026-06-04T09:34:30.886Z",
+    "total_tools_checked": 233,
+    "tools_with_existing_x_handles": 106,
+    "tools_missing_x_handles": 127,
+    "source_counts": {
+      "missing": 127,
+      "source_metadata": 2,
+      "official_website": 85,
+      "taaft": 19
+    },
+    "found_source_counts": {
+      "source_metadata": 2,
+      "official_website": 85,
+      "taaft": 19
+    },
+    "best_source_for_handle_recovery": "official_website links recovered by existing appscreener_company_x_enriched.csv",
+    "notes": [
+      "No network calls were made.",
+      "Highest-confidence local source is appscreener_company_x_enriched.csv because it records source provenance and confidence.",
+      "source_metadata rows are lower-confidence profile-shaped X URLs from existing evidence/source files, not verified official accounts."
+    ]
+  },
+  "records": [
+    {
+      "tool": "ChatGPT",
+      "slug": "chatgpt",
+      "source": "missing",
+      "websiteUrl": "https://chat.openai.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Claude",
+      "slug": "claude",
+      "source": "source_metadata",
+      "websiteUrl": "https://claude.ai",
+      "existing_x_handle_if_present": "@claudeai",
+      "source_confidence": 60,
+      "notes": "Profile-shaped X source in data/tool-evidence-sources.json; evidence_url=https://twitter.com/claudeai; lower confidence, not verified official."
+    },
+    {
+      "tool": "Perplexity",
+      "slug": "perplexity",
+      "source": "missing",
+      "websiteUrl": "https://www.perplexity.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Cursor",
+      "slug": "cursor",
+      "source": "official_website",
+      "websiteUrl": "https://cursor.com",
+      "existing_x_handle_if_present": "@cursor_ai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://cursor.com"
+    },
+    {
+      "tool": "Windsurf",
+      "slug": "windsurf",
+      "source": "official_website",
+      "websiteUrl": "https://windsurf.com",
+      "existing_x_handle_if_present": "@windsurf",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://windsurf.com"
+    },
+    {
+      "tool": "Lovable",
+      "slug": "lovable",
+      "source": "official_website",
+      "websiteUrl": "https://lovable.dev",
+      "existing_x_handle_if_present": "@Lovable",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://lovable.dev"
+    },
+    {
+      "tool": "Replit",
+      "slug": "replit",
+      "source": "official_website",
+      "websiteUrl": "https://replit.com",
+      "existing_x_handle_if_present": "@replit",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://replit.com"
+    },
+    {
+      "tool": "Runway",
+      "slug": "runway",
+      "source": "official_website",
+      "websiteUrl": "https://runwayml.com",
+      "existing_x_handle_if_present": "@runwayml",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://runwayml.com"
+    },
+    {
+      "tool": "Kling",
+      "slug": "kling",
+      "source": "taaft",
+      "websiteUrl": "https://klingai.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Kling/"
+    },
+    {
+      "tool": "Pika",
+      "slug": "pika",
+      "source": "official_website",
+      "websiteUrl": "https://pika.art",
+      "existing_x_handle_if_present": "@pika_labs",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://pika.art"
+    },
+    {
+      "tool": "ElevenLabs",
+      "slug": "elevenlabs",
+      "source": "source_metadata",
+      "websiteUrl": "https://elevenlabs.io",
+      "existing_x_handle_if_present": "@ElevenLabs",
+      "source_confidence": 60,
+      "notes": "Profile-shaped X source in data/tool-evidence-sources.json; evidence_url=https://x.com/ElevenLabs; lower confidence, not verified official."
+    },
+    {
+      "tool": "Midjourney",
+      "slug": "midjourney",
+      "source": "missing",
+      "websiteUrl": "https://www.midjourney.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Ideogram",
+      "slug": "ideogram",
+      "source": "missing",
+      "websiteUrl": "https://ideogram.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "HeyGen",
+      "slug": "heygen",
+      "source": "official_website",
+      "websiteUrl": "https://www.heygen.com",
+      "existing_x_handle_if_present": "@HeyGen",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.heygen.com"
+    },
+    {
+      "tool": "Synthesia",
+      "slug": "synthesia",
+      "source": "official_website",
+      "websiteUrl": "https://www.synthesia.io",
+      "existing_x_handle_if_present": "@synthesiaio",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.synthesia.io"
+    },
+    {
+      "tool": "Granola",
+      "slug": "granola",
+      "source": "official_website",
+      "websiteUrl": "https://www.granola.ai",
+      "existing_x_handle_if_present": "@meetgranola",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.granola.ai"
+    },
+    {
+      "tool": "Notion AI",
+      "slug": "notion-ai",
+      "source": "official_website",
+      "websiteUrl": "https://www.notion.so/product/ai",
+      "existing_x_handle_if_present": "@NotionHQ",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.notion.so/product/ai"
+    },
+    {
+      "tool": "Zapier",
+      "slug": "zapier",
+      "source": "official_website",
+      "websiteUrl": "https://zapier.com",
+      "existing_x_handle_if_present": "@zapier",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://zapier.com"
+    },
+    {
+      "tool": "Lindy",
+      "slug": "lindy",
+      "source": "official_website",
+      "websiteUrl": "https://www.lindy.ai",
+      "existing_x_handle_if_present": "@getlindy",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.lindy.ai"
+    },
+    {
+      "tool": "Gamma",
+      "slug": "gamma",
+      "source": "missing",
+      "websiteUrl": "https://gamma.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Manus",
+      "slug": "manus",
+      "source": "official_website",
+      "websiteUrl": "https://manus.im",
+      "existing_x_handle_if_present": "@manusai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://manus.im"
+    },
+    {
+      "tool": "V0",
+      "slug": "v0",
+      "source": "official_website",
+      "websiteUrl": "https://v0.dev",
+      "existing_x_handle_if_present": "@v0",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://v0.dev"
+    },
+    {
+      "tool": "Bolt",
+      "slug": "bolt",
+      "source": "official_website",
+      "websiteUrl": "https://bolt.new",
+      "existing_x_handle_if_present": "@boltdotnew",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://bolt.new"
+    },
+    {
+      "tool": "Linear",
+      "slug": "linear",
+      "source": "official_website",
+      "websiteUrl": "https://linear.app",
+      "existing_x_handle_if_present": "@linear",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://linear.app"
+    },
+    {
+      "tool": "CapCut",
+      "slug": "capcut",
+      "source": "missing",
+      "websiteUrl": "https://www.capcut.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Descript",
+      "slug": "descript",
+      "source": "missing",
+      "websiteUrl": "https://www.descript.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Suno",
+      "slug": "suno",
+      "source": "official_website",
+      "websiteUrl": "https://suno.com",
+      "existing_x_handle_if_present": "@suno",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://suno.com"
+    },
+    {
+      "tool": "Udio",
+      "slug": "udio",
+      "source": "missing",
+      "websiteUrl": "https://udio.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "NotebookLM",
+      "slug": "notebooklm",
+      "source": "missing",
+      "websiteUrl": "https://notebooklm.google",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Grok",
+      "slug": "grok",
+      "source": "taaft",
+      "websiteUrl": "https://x.ai/grok",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Grok/"
+    },
+    {
+      "tool": "Tome",
+      "slug": "tome",
+      "source": "taaft",
+      "websiteUrl": "https://tome.app",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Tome/"
+    },
+    {
+      "tool": "Clay",
+      "slug": "clay",
+      "source": "official_website",
+      "websiteUrl": "https://www.clay.com",
+      "existing_x_handle_if_present": "@clay",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.clay.com"
+    },
+    {
+      "tool": "Jasper",
+      "slug": "jasper",
+      "source": "official_website",
+      "websiteUrl": "https://www.jasper.ai",
+      "existing_x_handle_if_present": "@heyjasperai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.jasper.ai"
+    },
+    {
+      "tool": "Glean",
+      "slug": "glean",
+      "source": "official_website",
+      "websiteUrl": "https://www.glean.com",
+      "existing_x_handle_if_present": "@glean",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.glean.com"
+    },
+    {
+      "tool": "Make",
+      "slug": "make",
+      "source": "missing",
+      "websiteUrl": "https://www.make.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Framer AI",
+      "slug": "framer-ai",
+      "source": "official_website",
+      "websiteUrl": "https://www.framer.com/ai",
+      "existing_x_handle_if_present": "@framer",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.framer.com/ai"
+    },
+    {
+      "tool": "Vercel",
+      "slug": "vercel",
+      "source": "official_website",
+      "websiteUrl": "https://vercel.com",
+      "existing_x_handle_if_present": "@vercel",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://vercel.com"
+    },
+    {
+      "tool": "n8n",
+      "slug": "n8n",
+      "source": "official_website",
+      "websiteUrl": "https://n8n.io",
+      "existing_x_handle_if_present": "@n8n_io",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://n8n.io"
+    },
+    {
+      "tool": "Apollo",
+      "slug": "apollo",
+      "source": "official_website",
+      "websiteUrl": "https://www.apollo.io",
+      "existing_x_handle_if_present": "@useapolloio",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.apollo.io"
+    },
+    {
+      "tool": "Framer",
+      "slug": "framer",
+      "source": "official_website",
+      "websiteUrl": "https://www.framer.com",
+      "existing_x_handle_if_present": "@framer",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.framer.com"
+    },
+    {
+      "tool": "Typefully",
+      "slug": "typefully",
+      "source": "missing",
+      "websiteUrl": "https://typefully.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Slack",
+      "slug": "slack",
+      "source": "official_website",
+      "websiteUrl": "https://slack.com",
+      "existing_x_handle_if_present": "@slackhq",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://slack.com"
+    },
+    {
+      "tool": "HubSpot",
+      "slug": "hubspot",
+      "source": "official_website",
+      "websiteUrl": "https://www.hubspot.com",
+      "existing_x_handle_if_present": "@HubSpot",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.hubspot.com"
+    },
+    {
+      "tool": "Instantly",
+      "slug": "instantly",
+      "source": "official_website",
+      "websiteUrl": "https://instantly.ai",
+      "existing_x_handle_if_present": "@InstantlyAI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://instantly.ai"
+    },
+    {
+      "tool": "Taplio",
+      "slug": "taplio",
+      "source": "missing",
+      "websiteUrl": "https://taplio.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "LinkedIn",
+      "slug": "linkedin",
+      "source": "missing",
+      "websiteUrl": "https://www.linkedin.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Google Maps",
+      "slug": "google-maps",
+      "source": "missing",
+      "websiteUrl": "https://www.google.com/maps",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Adapt",
+      "slug": "adapt",
+      "source": "official_website",
+      "websiteUrl": "https://adapt.com",
+      "existing_x_handle_if_present": "@adapt",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://adapt.com"
+    },
+    {
+      "tool": "Vtuber Assistant",
+      "slug": "vtuber-assistant",
+      "source": "missing",
+      "websiteUrl": "https://store.steampowered.com/app/4464930/Vtuber_Assistant",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Resumedit",
+      "slug": "resumedit",
+      "source": "taaft",
+      "websiteUrl": "https://www.resumedit.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Resumedit/"
+    },
+    {
+      "tool": "Thrive Financial",
+      "slug": "thrive-financial",
+      "source": "missing",
+      "websiteUrl": "https://thrivefinancial.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "MyCustodyCoach",
+      "slug": "mycustodycoach",
+      "source": "taaft",
+      "websiteUrl": "https://mycustodycoach.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/MyCustodyCoach/"
+    },
+    {
+      "tool": "FastiAds",
+      "slug": "fastiads",
+      "source": "missing",
+      "websiteUrl": "https://www.fastiads.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "UFate",
+      "slug": "ufate",
+      "source": "missing",
+      "websiteUrl": "https://www.ufate.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "PNGMaker",
+      "slug": "pngmaker",
+      "source": "official_website",
+      "websiteUrl": "https://png-maker.com",
+      "existing_x_handle_if_present": "@PNGMaker",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://png-maker.com"
+    },
+    {
+      "tool": "ApiPosture",
+      "slug": "apiposture",
+      "source": "missing",
+      "websiteUrl": "https://www.apiposture.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "BuddyPro",
+      "slug": "buddypro",
+      "source": "missing",
+      "websiteUrl": "https://buddypro.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "PlotStudio AI",
+      "slug": "plotstudio-ai",
+      "source": "missing",
+      "websiteUrl": "https://www.plotstudio.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "General Compute",
+      "slug": "general-compute",
+      "source": "missing",
+      "websiteUrl": "https://www.generalcompute.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Franki",
+      "slug": "franki",
+      "source": "missing",
+      "websiteUrl": "https://www.chat-to-franki.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "TeachQuill",
+      "slug": "teachquill",
+      "source": "missing",
+      "websiteUrl": "https://teachquill.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "WearMind",
+      "slug": "wearmind",
+      "source": "taaft",
+      "websiteUrl": "https://aishirt.app",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/WearMind/"
+    },
+    {
+      "tool": "OpenBudget",
+      "slug": "openbudget",
+      "source": "missing",
+      "websiteUrl": "https://openbudget.sh",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "ImagineGo",
+      "slug": "imaginego",
+      "source": "taaft",
+      "websiteUrl": "https://imaginego.ai/text-to-video",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/ImagineGo/"
+    },
+    {
+      "tool": "EduSolver",
+      "slug": "edusolver",
+      "source": "missing",
+      "websiteUrl": "https://edusolver.io",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "BeyondComments",
+      "slug": "beyondcomments",
+      "source": "official_website",
+      "websiteUrl": "https://beyondcomments.io",
+      "existing_x_handle_if_present": "@programmerByDay",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://beyondcomments.io"
+    },
+    {
+      "tool": "BookCoversLab",
+      "slug": "bookcoverslab",
+      "source": "official_website",
+      "websiteUrl": "https://bookcoverslab.com",
+      "existing_x_handle_if_present": "@BookCoversLab",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://bookcoverslab.com"
+    },
+    {
+      "tool": "NDORFlow",
+      "slug": "ndorflow",
+      "source": "missing",
+      "websiteUrl": "https://ndorflow.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Melody Genie",
+      "slug": "melody-genie",
+      "source": "missing",
+      "websiteUrl": "https://melodygenie.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AI Inspo",
+      "slug": "ai-inspo",
+      "source": "official_website",
+      "websiteUrl": "https://www.ai-inspo.com/video/image-to-video",
+      "existing_x_handle_if_present": "@AIInspoOfficial",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.ai-inspo.com/video/image-to-video"
+    },
+    {
+      "tool": "MakeForm",
+      "slug": "makeform",
+      "source": "official_website",
+      "websiteUrl": "https://www.makeform.ai",
+      "existing_x_handle_if_present": "@_nilni",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.makeform.ai"
+    },
+    {
+      "tool": "Link To Text",
+      "slug": "link-to-text",
+      "source": "missing",
+      "websiteUrl": "https://linktotext.co",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Aiter.io",
+      "slug": "aiter-io",
+      "source": "official_website",
+      "websiteUrl": "https://aiter.io",
+      "existing_x_handle_if_present": "@aiter_io",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://aiter.io"
+    },
+    {
+      "tool": "Dokie",
+      "slug": "dokie",
+      "source": "missing",
+      "websiteUrl": "https://dokie.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "CatDoes",
+      "slug": "catdoes",
+      "source": "official_website",
+      "websiteUrl": "https://catdoes.com",
+      "existing_x_handle_if_present": "@catdoeshq",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://catdoes.com"
+    },
+    {
+      "tool": "WebZum",
+      "slug": "webzum",
+      "source": "missing",
+      "websiteUrl": "https://webzum.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "FliesReplies",
+      "slug": "fliesreplies",
+      "source": "official_website",
+      "websiteUrl": "https://www.fliesreplies.com",
+      "existing_x_handle_if_present": "@fliesreplies",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.fliesreplies.com"
+    },
+    {
+      "tool": "Vismint",
+      "slug": "vismint",
+      "source": "taaft",
+      "websiteUrl": "https://vismint.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Vismint/"
+    },
+    {
+      "tool": "Gamelabs Studio",
+      "slug": "gamelabs-studio",
+      "source": "missing",
+      "websiteUrl": "https://gamelabstudio.co",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "ShortsMate",
+      "slug": "shortsmate",
+      "source": "missing",
+      "websiteUrl": "https://shortsmate.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Asteroid AI",
+      "slug": "asteroid-ai",
+      "source": "official_website",
+      "websiteUrl": "https://asteroid.ai",
+      "existing_x_handle_if_present": "@asteroid_inc",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://asteroid.ai"
+    },
+    {
+      "tool": "Adrian",
+      "slug": "adrian",
+      "source": "missing",
+      "websiteUrl": "https://github.com/secureagentics/Adrian",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "CEOfriend",
+      "slug": "ceofriend",
+      "source": "missing",
+      "websiteUrl": "https://www.ceofriend.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Distill.cv",
+      "slug": "distill-cv",
+      "source": "missing",
+      "websiteUrl": "https://distill.cv",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Elevoi",
+      "slug": "elevoi",
+      "source": "taaft",
+      "websiteUrl": "https://elevoi.ca",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Elevoi/"
+    },
+    {
+      "tool": "Image3D AI",
+      "slug": "image3d-ai",
+      "source": "missing",
+      "websiteUrl": "https://www.aiimageto3d.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "LyricMV",
+      "slug": "lyricmv",
+      "source": "official_website",
+      "websiteUrl": "https://lyricmv.com",
+      "existing_x_handle_if_present": "@lyricmvofficia",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://lyricmv.com"
+    },
+    {
+      "tool": "Matrix Coder",
+      "slug": "matrix-coder",
+      "source": "missing",
+      "websiteUrl": "https://matrixcoder.io",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Notis",
+      "slug": "notis",
+      "source": "official_website",
+      "websiteUrl": "https://notis.ai",
+      "existing_x_handle_if_present": "@mindtheflo",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://notis.ai"
+    },
+    {
+      "tool": "Thumbs AI",
+      "slug": "thumbs-ai",
+      "source": "missing",
+      "websiteUrl": "https://www.thumbs.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "HomeRestyle AI",
+      "slug": "homerestyle-ai",
+      "source": "official_website",
+      "websiteUrl": "https://www.homerestyle.ai",
+      "existing_x_handle_if_present": "@HomeRestyle_ai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.homerestyle.ai"
+    },
+    {
+      "tool": "VideoSwap.app",
+      "slug": "videoswap-app",
+      "source": "missing",
+      "websiteUrl": "https://www.videoswap.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "SocialClip Studio",
+      "slug": "socialclip-studio",
+      "source": "missing",
+      "websiteUrl": "https://socialclipstudio.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AppDeploy",
+      "slug": "appdeploy",
+      "source": "official_website",
+      "websiteUrl": "https://appdeploy.ai",
+      "existing_x_handle_if_present": "@appdeployai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://appdeploy.ai"
+    },
+    {
+      "tool": "Coursebox",
+      "slug": "coursebox",
+      "source": "taaft",
+      "websiteUrl": "https://www.coursebox.ai",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/ai/coursebox/"
+    },
+    {
+      "tool": "remio",
+      "slug": "remio",
+      "source": "official_website",
+      "websiteUrl": "https://www.remio.ai",
+      "existing_x_handle_if_present": "@remio_ai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.remio.ai"
+    },
+    {
+      "tool": "Baby Magic",
+      "slug": "baby-magic",
+      "source": "missing",
+      "websiteUrl": "https://www.babymagic.app/ai-baby-image",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "BetterSpace",
+      "slug": "betterspace",
+      "source": "official_website",
+      "websiteUrl": "https://www.betterspace.ai",
+      "existing_x_handle_if_present": "@betterspaceai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.betterspace.ai"
+    },
+    {
+      "tool": "GeekLink",
+      "slug": "geeklink",
+      "source": "official_website",
+      "websiteUrl": "https://geeklink.dev",
+      "existing_x_handle_if_present": "@florawang_1",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://geeklink.dev"
+    },
+    {
+      "tool": "HitPublish",
+      "slug": "hitpublish",
+      "source": "missing",
+      "websiteUrl": "https://www.hitpublish.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Audio Transcriber AI",
+      "slug": "audio-transcriber-ai",
+      "source": "official_website",
+      "websiteUrl": "https://audiotranscriber.io",
+      "existing_x_handle_if_present": "@AudiotoTextAI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://audiotranscriber.io"
+    },
+    {
+      "tool": "GlobalPayEX",
+      "slug": "globalpayex",
+      "source": "official_website",
+      "websiteUrl": "https://globalpayex.com",
+      "existing_x_handle_if_present": "@GlobalPayEX",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://globalpayex.com"
+    },
+    {
+      "tool": "Ask Bishop",
+      "slug": "ask-bishop",
+      "source": "missing",
+      "websiteUrl": "https://askbishop.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Quorlyx Pro",
+      "slug": "quorlyx-pro",
+      "source": "missing",
+      "websiteUrl": "https://quorlyx.dev",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Scavio AI",
+      "slug": "scavio-ai",
+      "source": "missing",
+      "websiteUrl": "https://scavio.dev",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Rift",
+      "slug": "rift",
+      "source": "missing",
+      "websiteUrl": "https://rift-code.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "DineCraft",
+      "slug": "dinecraft",
+      "source": "missing",
+      "websiteUrl": "https://www.dinecraft.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Teneks",
+      "slug": "teneks",
+      "source": "missing",
+      "websiteUrl": "https://www.teneks.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "WebCrawler API",
+      "slug": "webcrawler-api",
+      "source": "official_website",
+      "websiteUrl": "https://webcrawlerapi.com",
+      "existing_x_handle_if_present": "@Webcrawlerapihq",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://webcrawlerapi.com"
+    },
+    {
+      "tool": "Team Pulse",
+      "slug": "team-pulse",
+      "source": "missing",
+      "websiteUrl": "https://goteampulse.io",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Browserbeam",
+      "slug": "browserbeam",
+      "source": "missing",
+      "websiteUrl": "https://browserbeam.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AuthentaLink",
+      "slug": "authentalink",
+      "source": "missing",
+      "websiteUrl": "https://authentalink.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Unframe AI",
+      "slug": "unframe-ai",
+      "source": "official_website",
+      "websiteUrl": "https://www.unframe.ai",
+      "existing_x_handle_if_present": "@UnframeAI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.unframe.ai"
+    },
+    {
+      "tool": "Introvrs",
+      "slug": "introvrs",
+      "source": "missing",
+      "websiteUrl": "https://www.introvrs.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "ModelAtlas",
+      "slug": "modelatlas",
+      "source": "taaft",
+      "websiteUrl": "https://modelatlas.net",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/ModelAtlas/"
+    },
+    {
+      "tool": "TextSongAI.com",
+      "slug": "textsongai-com",
+      "source": "missing",
+      "websiteUrl": "https://www.textsongai.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Nomie",
+      "slug": "nomie",
+      "source": "missing",
+      "websiteUrl": "https://apps.apple.com/us/app/nomie-doomscrolling-break/id6757396354",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Clocsy",
+      "slug": "clocsy",
+      "source": "missing",
+      "websiteUrl": "https://clocsy.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Pounce",
+      "slug": "pounce",
+      "source": "missing",
+      "websiteUrl": "https://www.pounce.so",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "FaceHub AI",
+      "slug": "facehub-ai",
+      "source": "missing",
+      "websiteUrl": "https://www.facehub.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "CloudContact AI",
+      "slug": "cloudcontact-ai",
+      "source": "official_website",
+      "websiteUrl": "https://cloudcontactai.com",
+      "existing_x_handle_if_present": "@cloudcontactai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://cloudcontactai.com"
+    },
+    {
+      "tool": "UGO",
+      "slug": "ugo",
+      "source": "taaft",
+      "websiteUrl": "https://try-ugo.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/UGO/"
+    },
+    {
+      "tool": "AI Product Photography.app",
+      "slug": "ai-product-photography-app",
+      "source": "missing",
+      "websiteUrl": "https://aiproductphotography.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "MusVideo",
+      "slug": "musvideo",
+      "source": "missing",
+      "websiteUrl": "https://musvideo.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "PatentFig AI",
+      "slug": "patentfig-ai",
+      "source": "official_website",
+      "websiteUrl": "https://patentfig.ai",
+      "existing_x_handle_if_present": "@ChenDavie_AI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://patentfig.ai"
+    },
+    {
+      "tool": "Silky AI",
+      "slug": "silky-ai",
+      "source": "missing",
+      "websiteUrl": "https://www.aihair.life",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "InstantTranscriber",
+      "slug": "instanttranscriber",
+      "source": "missing",
+      "websiteUrl": "https://instanttranscriber.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "MagicReels",
+      "slug": "magicreels",
+      "source": "missing",
+      "websiteUrl": "https://magicreels.media",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Vidlogi",
+      "slug": "vidlogi",
+      "source": "missing",
+      "websiteUrl": "https://www.vidlogi.com/en",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Sunny by Sunburnt AI",
+      "slug": "sunny-by-sunburnt-ai",
+      "source": "missing",
+      "websiteUrl": "https://sunburntai.com.au/sunny-agentic-ai-operating-system",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Floot",
+      "slug": "floot",
+      "source": "official_website",
+      "websiteUrl": "https://floot.com",
+      "existing_x_handle_if_present": "@floothq",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://floot.com"
+    },
+    {
+      "tool": "AI Landscape Design by Yuzu",
+      "slug": "ai-landscape-design-by-yuzu",
+      "source": "missing",
+      "websiteUrl": "https://yuzudesign.ai/landscape-design-ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Koinonos",
+      "slug": "koinonos",
+      "source": "missing",
+      "websiteUrl": "https://www.koinonos.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "DebaterX",
+      "slug": "debaterx",
+      "source": "missing",
+      "websiteUrl": "https://www.debaterx.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Subquadratic",
+      "slug": "subquadratic",
+      "source": "official_website",
+      "websiteUrl": "https://subq.ai",
+      "existing_x_handle_if_present": "@subquadratic",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://subq.ai"
+    },
+    {
+      "tool": "Ozigi",
+      "slug": "ozigi",
+      "source": "missing",
+      "websiteUrl": "https://ozigi.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Rundown",
+      "slug": "rundown",
+      "source": "missing",
+      "websiteUrl": "https://getrundown.xyz",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Whisper Web",
+      "slug": "whisper-web",
+      "source": "missing",
+      "websiteUrl": "https://whisperweb.tech",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Prosed",
+      "slug": "prosed",
+      "source": "missing",
+      "websiteUrl": "https://tryprosed.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Ask the Record",
+      "slug": "ask-the-record",
+      "source": "missing",
+      "websiteUrl": "https://www.asktherecord.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AstroCarto",
+      "slug": "astrocarto",
+      "source": "missing",
+      "websiteUrl": "https://astrocarto.net",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "OptiHedge",
+      "slug": "optihedge",
+      "source": "missing",
+      "websiteUrl": "https://optihedge.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "SongMuse AI",
+      "slug": "songmuse-ai",
+      "source": "missing",
+      "websiteUrl": "https://songmuse.art",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AI Image 2 Video",
+      "slug": "ai-image-2-video",
+      "source": "missing",
+      "websiteUrl": "https://aiimage2video.pro",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "SpeedPainter",
+      "slug": "speedpainter",
+      "source": "missing",
+      "websiteUrl": "https://www.speedpainter.org/en",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "RFP.ai",
+      "slug": "rfp-ai",
+      "source": "missing",
+      "websiteUrl": "https://rfp.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Live Like The River",
+      "slug": "live-like-the-river",
+      "source": "missing",
+      "websiteUrl": "https://www.liveliketheriver.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Solyo",
+      "slug": "solyo",
+      "source": "official_website",
+      "websiteUrl": "https://solyo.ai",
+      "existing_x_handle_if_present": "@solyo_official",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://solyo.ai"
+    },
+    {
+      "tool": "GroundScholar",
+      "slug": "groundscholar",
+      "source": "taaft",
+      "websiteUrl": "https://groundscholar.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/GroundScholar/"
+    },
+    {
+      "tool": "AirMusic",
+      "slug": "airmusic",
+      "source": "taaft",
+      "websiteUrl": "https://airmusic.ai/ai-music-video-generator",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/AirMusic/"
+    },
+    {
+      "tool": "Paraspeech",
+      "slug": "paraspeech",
+      "source": "missing",
+      "websiteUrl": "https://paraspeech.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Babelbeez",
+      "slug": "babelbeez",
+      "source": "official_website",
+      "websiteUrl": "https://www.babelbeez.com",
+      "existing_x_handle_if_present": "@babelbeez",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.babelbeez.com"
+    },
+    {
+      "tool": "Vertech Academy",
+      "slug": "vertech-academy",
+      "source": "missing",
+      "websiteUrl": "https://www.vertechacademy.ca",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Vireel AI Image to Video Generator",
+      "slug": "vireel-ai-image-to-video-generator",
+      "source": "missing",
+      "websiteUrl": "https://vireels.ai/ai-image-to-video",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AI Aware",
+      "slug": "ai-aware",
+      "source": "missing",
+      "websiteUrl": "https://aiaware.io",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "MadeFine AI",
+      "slug": "madefine-ai",
+      "source": "missing",
+      "websiteUrl": "https://madefine.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Lyric Remix Studio",
+      "slug": "lyric-remix-studio",
+      "source": "missing",
+      "websiteUrl": "https://lyricremixgemini.iacolettisoftware.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "NestTrack",
+      "slug": "nesttrack",
+      "source": "taaft",
+      "websiteUrl": "https://www.nesttrack.xyz",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/NestTrack/"
+    },
+    {
+      "tool": "DashJob AI",
+      "slug": "dashjob-ai",
+      "source": "missing",
+      "websiteUrl": "https://dashjob.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "LobbyStack",
+      "slug": "lobbystack",
+      "source": "taaft",
+      "websiteUrl": "https://lobbystack.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/LobbyStack/"
+    },
+    {
+      "tool": "VibeBot",
+      "slug": "vibebot",
+      "source": "official_website",
+      "websiteUrl": "https://www.vibebot.gg",
+      "existing_x_handle_if_present": "@vibebot_gg",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.vibebot.gg"
+    },
+    {
+      "tool": "Saveto AI",
+      "slug": "saveto-ai",
+      "source": "official_website",
+      "websiteUrl": "https://saveto.ai/instagram-transcript-generator",
+      "existing_x_handle_if_present": "@saveto_ai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://saveto.ai/instagram-transcript-generator"
+    },
+    {
+      "tool": "DescribeThat",
+      "slug": "describethat",
+      "source": "missing",
+      "websiteUrl": "https://describethatclaude.iacolettisoftware.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "ColorJibe",
+      "slug": "colorjibe",
+      "source": "taaft",
+      "websiteUrl": "https://colorjibe.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/ColorJibe/"
+    },
+    {
+      "tool": "Vdoo AI",
+      "slug": "vdoo-ai",
+      "source": "missing",
+      "websiteUrl": "https://vdoo.ai/image-to-video",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Kairval",
+      "slug": "kairval",
+      "source": "official_website",
+      "websiteUrl": "https://kairval.com/ai/text-to-video",
+      "existing_x_handle_if_present": "@kairval",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://kairval.com/ai/text-to-video"
+    },
+    {
+      "tool": "Himedia",
+      "slug": "himedia",
+      "source": "missing",
+      "websiteUrl": "https://himedia.ai/image-to-video",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Vidnix",
+      "slug": "vidnix",
+      "source": "missing",
+      "websiteUrl": "https://vidnix.ai/image-to-video",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AI Photo Editor",
+      "slug": "ai-photo-editor",
+      "source": "missing",
+      "websiteUrl": "https://aiphotoeditor.io",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Epochal",
+      "slug": "epochal",
+      "source": "official_website",
+      "websiteUrl": "https://epochal.app",
+      "existing_x_handle_if_present": "@epochal_app",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://epochal.app"
+    },
+    {
+      "tool": "Viyou AI Motion Control",
+      "slug": "viyou-ai-motion-control",
+      "source": "official_website",
+      "websiteUrl": "https://viyou.ai/ai-motion-control",
+      "existing_x_handle_if_present": "@viyouAI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://viyou.ai/ai-motion-control"
+    },
+    {
+      "tool": "PAI",
+      "slug": "pai",
+      "source": "missing",
+      "websiteUrl": "https://www.utopaistudios.com/waitlist",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Creen AI",
+      "slug": "creen-ai",
+      "source": "missing",
+      "websiteUrl": "https://www.creen.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AI Kiss",
+      "slug": "ai-kiss",
+      "source": "missing",
+      "websiteUrl": "https://aikiss.art",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Vidflux",
+      "slug": "vidflux",
+      "source": "missing",
+      "websiteUrl": "https://vidflux.ai/video-effect/ai-bikini-video-generator",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "VoooAI",
+      "slug": "voooai",
+      "source": "missing",
+      "websiteUrl": "https://voooai.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Music Video Generator",
+      "slug": "music-video-generator",
+      "source": "missing",
+      "websiteUrl": "https://musicvideogenerator.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "CleanVideoAI Watermark Removal",
+      "slug": "cleanvideoai-watermark-removal",
+      "source": "missing",
+      "websiteUrl": "https://www.videowatermarkremove.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Tendem",
+      "slug": "tendem",
+      "source": "official_website",
+      "websiteUrl": "https://tendem.ai",
+      "existing_x_handle_if_present": "@Tendem_AI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://tendem.ai"
+    },
+    {
+      "tool": "Rusheslab",
+      "slug": "rusheslab",
+      "source": "missing",
+      "websiteUrl": "https://rusheslab.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Fineshare Sora Watermark Remover",
+      "slug": "fineshare-sora-watermark-remover",
+      "source": "missing",
+      "websiteUrl": "https://www.fineshare.net/ai-video/sora-watermark-remover",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Verdent",
+      "slug": "verdent",
+      "source": "official_website",
+      "websiteUrl": "https://www.verdent.ai/?ots=theresanaiforthat",
+      "existing_x_handle_if_present": "@verdent_ai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.verdent.ai/?ots=theresanaiforthat"
+    },
+    {
+      "tool": "MixMaster Pro",
+      "slug": "mixmaster-pro",
+      "source": "missing",
+      "websiteUrl": "https://mixmasterpro.io",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Slidely AI (backed by YC)",
+      "slug": "slidely-ai-backed-by-yc",
+      "source": "missing",
+      "websiteUrl": "https://slidely.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "GeoInfer",
+      "slug": "geoinfer",
+      "source": "official_website",
+      "websiteUrl": "https://geoinfer.com/en",
+      "existing_x_handle_if_present": "@geoinfer",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://geoinfer.com/en"
+    },
+    {
+      "tool": "Rocket",
+      "slug": "rocket",
+      "source": "official_website",
+      "websiteUrl": "https://www.rocket.new",
+      "existing_x_handle_if_present": "@rocketdotnew",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.rocket.new"
+    },
+    {
+      "tool": "Base44",
+      "slug": "base44",
+      "source": "missing",
+      "websiteUrl": "https://base44.pxf.io/c/6410050/2477538/25619?trafcat=hp",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "biela.dev",
+      "slug": "biela-dev",
+      "source": "missing",
+      "websiteUrl": "https://biela.dev",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Unblur Image by Uluch",
+      "slug": "unblur-image-by-uluch",
+      "source": "missing",
+      "websiteUrl": "https://uluch.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "VoxDeck",
+      "slug": "voxdeck",
+      "source": "official_website",
+      "websiteUrl": "https://www.voxdeck.ai",
+      "existing_x_handle_if_present": "@voxdeckai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.voxdeck.ai"
+    },
+    {
+      "tool": "EzSolve",
+      "slug": "ezsolve",
+      "source": "official_website",
+      "websiteUrl": "https://plou.eu/product/mobile/ezsolve",
+      "existing_x_handle_if_present": "@puresoftlabs",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://plou.eu/product/mobile/ezsolve"
+    },
+    {
+      "tool": "Singify AI Vocal Remover",
+      "slug": "singify-ai-vocal-remover",
+      "source": "missing",
+      "websiteUrl": "https://singify.co/vocal-remover",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "V03 AI Video Generator",
+      "slug": "v03-ai-video-generator",
+      "source": "missing",
+      "websiteUrl": "https://v03ai.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Redesignr Ai",
+      "slug": "redesignr-ai",
+      "source": "missing",
+      "websiteUrl": "https://redesignr.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "PrometAI",
+      "slug": "prometai",
+      "source": "missing",
+      "websiteUrl": "https://prometai.app/business-plan-templates",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Archie",
+      "slug": "archie",
+      "source": "missing",
+      "websiteUrl": "https://www.archie.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Marblism",
+      "slug": "marblism",
+      "source": "missing",
+      "websiteUrl": "https://www.marblism.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "PixieBrix",
+      "slug": "pixiebrix",
+      "source": "official_website",
+      "websiteUrl": "https://www.pixiebrix.com",
+      "existing_x_handle_if_present": "@pixiebrix",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.pixiebrix.com"
+    },
+    {
+      "tool": "Osum",
+      "slug": "osum",
+      "source": "missing",
+      "websiteUrl": "https://osum.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Venturekit",
+      "slug": "venturekit",
+      "source": "missing",
+      "websiteUrl": "https://www.venturekit.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Photo AI",
+      "slug": "photo-ai",
+      "source": "official_website",
+      "websiteUrl": "https://photoai.com",
+      "existing_x_handle_if_present": "@levelsio",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://photoai.com"
+    },
+    {
+      "tool": "MyReport",
+      "slug": "myreport",
+      "source": "missing",
+      "websiteUrl": "https://myreport.alaba.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "ResolveAI",
+      "slug": "resolveai",
+      "source": "missing",
+      "websiteUrl": "https://resolveai.co",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Eightify",
+      "slug": "eightify",
+      "source": "missing",
+      "websiteUrl": "https://www.eightify.app",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "KeywordSearch",
+      "slug": "keywordsearch",
+      "source": "missing",
+      "websiteUrl": "https://www.keywordsearch.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Stockimg AI",
+      "slug": "stockimg-ai",
+      "source": "official_website",
+      "websiteUrl": "https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral",
+      "existing_x_handle_if_present": "@stockimgAI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral"
+    },
+    {
+      "tool": "GetLogit",
+      "slug": "getlogit",
+      "source": "missing",
+      "websiteUrl": "https://getlogit.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Veriff",
+      "slug": "veriff",
+      "source": "official_website",
+      "websiteUrl": "https://www.veriff.com/plans/self-serve?promo=taaft15",
+      "existing_x_handle_if_present": "@Veriff",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.veriff.com/plans/self-serve?promo=taaft15"
+    },
+    {
+      "tool": "lxi.ai",
+      "slug": "lxi-ai",
+      "source": "missing",
+      "websiteUrl": "https://lxi.ai",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Pfpmaker",
+      "slug": "pfpmaker",
+      "source": "official_website",
+      "websiteUrl": "https://pfpmaker.com",
+      "existing_x_handle_if_present": "@pfpmakerapp",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://pfpmaker.com"
+    },
+    {
+      "tool": "QuillBot",
+      "slug": "quillbot",
+      "source": "official_website",
+      "websiteUrl": "https://quillbot.com",
+      "existing_x_handle_if_present": "@thequillbot",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://quillbot.com"
+    },
+    {
+      "tool": "Raplyrics",
+      "slug": "raplyrics",
+      "source": "taaft",
+      "websiteUrl": "https://raplyrics.eu",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Raplyrics/"
+    },
+    {
+      "tool": "Fetcher",
+      "slug": "fetcher",
+      "source": "official_website",
+      "websiteUrl": "https://fetcher.ai",
+      "existing_x_handle_if_present": "@fetcherai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://fetcher.ai"
+    },
+    {
+      "tool": "Watermelon",
+      "slug": "watermelon",
+      "source": "official_website",
+      "websiteUrl": "https://www.watermelon.ai",
+      "existing_x_handle_if_present": "@watermelonhq",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.watermelon.ai"
+    },
+    {
+      "tool": "Inbenta",
+      "slug": "inbenta",
+      "source": "official_website",
+      "websiteUrl": "https://www.inbenta.com",
+      "existing_x_handle_if_present": "@inbenta",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.inbenta.com"
+    },
+    {
+      "tool": "DigitalGenius",
+      "slug": "digitalgenius",
+      "source": "official_website",
+      "websiteUrl": "https://digitalgenius.com",
+      "existing_x_handle_if_present": "@DigitalGeniusAI",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://digitalgenius.com"
+    },
+    {
+      "tool": "B12 AI Website Builder",
+      "slug": "b12-ai-website-builder",
+      "source": "missing",
+      "websiteUrl": "https://www.b12.io/free-draft",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "remove.bg",
+      "slug": "remove-bg",
+      "source": "official_website",
+      "websiteUrl": "https://www.remove.bg",
+      "existing_x_handle_if_present": "@remove_bg",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://www.remove.bg"
+    },
+    {
+      "tool": "Skillroads",
+      "slug": "skillroads",
+      "source": "official_website",
+      "websiteUrl": "https://skillroads.com",
+      "existing_x_handle_if_present": "@skillroads",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://skillroads.com"
+    },
+    {
+      "tool": "Kavout",
+      "slug": "kavout",
+      "source": "missing",
+      "websiteUrl": "https://www.kavout.com/?fpr=whatshuang",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AssemblyAI",
+      "slug": "assemblyai",
+      "source": "missing",
+      "websiteUrl": "https://www.assemblyai.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Riskified",
+      "slug": "riskified",
+      "source": "taaft",
+      "websiteUrl": "https://www.riskified.com",
+      "existing_x_handle_if_present": "@theresanaiforit",
+      "source_confidence": 80,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://theresanaiforthat.com/s/Riskified/"
+    },
+    {
+      "tool": "DataRobot",
+      "slug": "datarobot",
+      "source": "missing",
+      "websiteUrl": "https://www.datarobot.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "H2O.ai",
+      "slug": "h2o-ai",
+      "source": "official_website",
+      "websiteUrl": "https://h2o.ai",
+      "existing_x_handle_if_present": "@h2oai",
+      "source_confidence": 100,
+      "notes": "Found in appscreener_company_x_enriched.csv; evidence_url=https://h2o.ai"
+    },
+    {
+      "tool": "Deep Beat",
+      "slug": "deep-beat",
+      "source": "missing",
+      "websiteUrl": "https://deepbeat.org",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "AI",
+      "slug": "ai",
+      "source": "missing",
+      "websiteUrl": "https://ai-writer.com",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    },
+    {
+      "tool": "Deepdreamgenerator",
+      "slug": "deepdreamgenerator",
+      "source": "missing",
+      "websiteUrl": "https://deepdreamgenerator.com/generate",
+      "existing_x_handle_if_present": "",
+      "source_confidence": 0,
+      "notes": "No clear company X account found."
+    }
+  ]
+}

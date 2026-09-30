@@ -1,0 +1,67 @@
+{
+  "toolsInput": 30,
+  "importSummary": "__SUMMARY__,inserted:30,updated:0,skipped:0,input:30",
+  "catalogCount": 314,
+  "x": {
+    "records": 30,
+    "covered": 21,
+    "usefulProof": 307,
+    "zero": [
+      "Ava Studio",
+      "Clipline",
+      "Co-Invest",
+      "Dune Keypad",
+      "Krater",
+      "MCP Bridge | Appfactor",
+      "Mina Meeting Assistant",
+      "Rezonant",
+      "Tokenwise"
+    ]
+  },
+  "youtube": {
+    "records": 90,
+    "covered": 30,
+    "missing": 0
+  },
+  "github": {
+    "records": 83,
+    "covered": 28,
+    "missing": 2
+  },
+  "article": {
+    "records": 23,
+    "covered": 10,
+    "missing": 20
+  },
+  "official": {
+    "records": 30,
+    "covered": 30,
+    "missing": 0
+  },
+  "h24": {
+    "count": 100,
+    "discoveryTools": 30,
+    "catalogOnlyTools": 70,
+    "thirtyDayBackfillTools": 0,
+    "duplicateCount": 0,
+    "missingDiscovery": []
+  },
+  "all": {
+    "count": 100,
+    "duplicateCount": 0,
+    "missing": []
+  },
+  "d30": {
+    "count": 100,
+    "duplicateCount": 0,
+    "missing": [
+      "wan-video",
+      "andi"
+    ]
+  },
+  "proofIntegrity": {
+    "duplicateProofUrls": 0,
+    "emptyShells": 0,
+    "orphans": 0
+  }
+}

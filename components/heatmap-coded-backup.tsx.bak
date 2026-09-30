@@ -1,0 +1,241 @@
+import Link from "next/link";
+import type { CSSProperties } from "react";
+import {
+  Bot,
+  Box,
+  BriefcaseBusiness,
+  Bug,
+  ChartNoAxesCombined,
+  CircleDollarSign,
+  Code2,
+  FileText,
+  Globe2,
+  Mail,
+  Megaphone,
+  MessageSquare,
+  MousePointer2,
+  Pickaxe,
+  Search,
+  Send,
+  Sparkles,
+  UserPlus,
+  Users,
+  Video,
+  type LucideIcon
+} from "lucide-react";
+import { ecosystemColorStyle } from "@/lib/ecosystem-colors";
+import { displayCategory } from "@/lib/format";
+import type { AttentionSubCategory, Category } from "@/lib/types";
+import { MovementBadge } from "./movement-badge";
+
+export function CategoryHeatmap({ categories }: { categories: Category[] }) {
+  return (
+    <div className="heatmapGrid">
+      {categories.map((category) => (
+        <Link href={`/categories/${category.slug}`} className="heatTile" key={category.id} style={{ "--heat": `${Math.min(category.momentumScore, 90)}%`, ...ecosystemColorStyle(category.name) } as CSSProperties}>
+          <div className="heatTileTop"><span>{displayCategory(category.name)}</span><em>sector rotation</em></div>
+          <strong>{category.momentumScore}<small> score</small></strong>
+          <div className="heatTileFlow">
+            <MovementBadge value={category.growth24h} />
+            <small>7d <MovementBadge value={category.growth7d} /></small>
+          </div>
+          <div className="heatIntensity"><i style={{ width: `${Math.min(100, category.momentumScore + category.growth24h)}%` }} /></div>
+          <small>{category.toolsTracked} tools tracked</small>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+export function AttentionHeatmap({ items }: { items: AttentionSubCategory[] }) {
+  void items;
+
+  return (
+    <div className="attentionTopology" aria-label="Attention pocket pressure map">
+      {attentionClusters.map((cluster) => (
+        <section
+          className={`attentionCluster ${cluster.id}`}
+          key={cluster.id}
+          style={{
+            "--cluster-color": cluster.color,
+            "--cluster-top": `${cluster.geometry.top}%`,
+            "--cluster-left": cluster.geometry.left != null ? `${cluster.geometry.left}%` : undefined,
+            "--cluster-right": cluster.geometry.right != null ? `${cluster.geometry.right}%` : undefined,
+            "--cluster-width": `${cluster.geometry.width}%`,
+            "--cluster-height": `${cluster.geometry.height}%`,
+            "--label-top": `${cluster.labelGeometry.top}%`,
+            "--label-left": `${cluster.labelGeometry.left}%`
+          } as CSSProperties}
+        >
+          <div className="attentionClusterLabel">
+            <cluster.icon size={13} />
+            <span>{cluster.title}</span>
+          </div>
+          <div className="attentionClusterBody">
+            {cluster.tags.map((tag) => {
+              return (
+                <article
+                  className={`attentionNode ${tag.size}`}
+                  key={tag.label}
+                  style={{
+                    "--tag-top": `${tag.geometry.top}%`,
+                    "--tag-left": `${tag.geometry.left}%`,
+                    "--tag-width": `${tag.geometry.width}%`,
+                    "--tag-height": `${tag.geometry.height}%`
+                  } as CSSProperties}
+                >
+                  <tag.icon size={tag.iconSize ?? 14} />
+                  <span>{tag.label}</span>
+                  {tag.badge ? <em>{tag.badge}</em> : null}
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+type AttentionTagConfig = {
+  label: string;
+  icon: LucideIcon;
+  size: "large" | "medium" | "small";
+  badge?: "High" | "Rising";
+  iconSize?: number;
+  geometry: {
+    top: number;
+    left: number;
+    width: number;
+    height: number;
+  };
+};
+
+type AttentionClusterConfig = {
+  id: string;
+  title: string;
+  color: string;
+  icon: LucideIcon;
+  geometry: {
+    top: number;
+    left?: number;
+    right?: number;
+    width: number;
+    height: number;
+  };
+  labelGeometry: {
+    top: number;
+    left: number;
+  };
+  tags: AttentionTagConfig[];
+};
+
+const fieldWidth = 780;
+const fieldHeight = 760;
+
+const attentionClusters: AttentionClusterConfig[] = [
+  {
+    id: "markets",
+    title: "Trading & Markets",
+    color: "#8fdc62",
+    icon: ChartNoAxesCombined,
+    geometry: clusterGeometry({ top: 20, left: 0, width: 360, height: 230 }),
+    labelGeometry: labelGeometry({ top: -34, left: 24 }, 360, 230),
+    tags: [
+      tagGeometry({ label: "Trading Bots", icon: Bot, size: "large", badge: "High", iconSize: 18 }, { top: 34, left: 32, width: 296, height: 58 }, 360, 230),
+      tagGeometry({ label: "Prediction Markets", icon: ChartNoAxesCombined, size: "medium" }, { top: 112, left: 78, width: 210, height: 44 }, 360, 230),
+      tagGeometry({ label: "Market Analysis", icon: CircleDollarSign, size: "small" }, { top: 172, left: 26, width: 150, height: 40 }, 360, 230),
+      tagGeometry({ label: "Whale Tracking", icon: Pickaxe, size: "small" }, { top: 172, left: 190, width: 150, height: 40 }, 360, 230)
+    ]
+  },
+  {
+    id: "growth",
+    title: "Growth & Outreach",
+    color: "#f2aa3d",
+    icon: Megaphone,
+    geometry: clusterGeometry({ top: 20, right: 0, width: 360, height: 230 }),
+    labelGeometry: labelGeometry({ top: -34, left: 24 }, 360, 230),
+    tags: [
+      tagGeometry({ label: "Mass Email", icon: Mail, size: "large", badge: "High", iconSize: 18 }, { top: 34, left: 32, width: 296, height: 58 }, 360, 230),
+      tagGeometry({ label: "Lead Generation", icon: UserPlus, size: "small" }, { top: 112, left: 26, width: 154, height: 44 }, 360, 230),
+      tagGeometry({ label: "Cold Outreach", icon: Send, size: "small" }, { top: 112, left: 190, width: 154, height: 44 }, 360, 230),
+      tagGeometry({ label: "Web Scraping", icon: Globe2, size: "medium" }, { top: 172, left: 86, width: 190, height: 40 }, 360, 230)
+    ]
+  },
+  {
+    id: "center",
+    title: "",
+    color: "#b7e86b",
+    icon: Sparkles,
+    geometry: clusterGeometry({ top: 300, left: 205, width: 370, height: 150 }),
+    labelGeometry: labelGeometry({ top: -34, left: 24 }, 370, 150),
+    tags: [
+      tagGeometry({ label: "TikTok Clips", icon: MousePointer2, size: "large", badge: "Rising", iconSize: 18 }, { top: 24, left: 36, width: 298, height: 58 }, 370, 150),
+      tagGeometry({ label: "Thumbnails", icon: FileText, size: "medium" }, { top: 96, left: 95, width: 180, height: 40 }, 370, 150)
+    ]
+  },
+  {
+    id: "builders",
+    title: "Builder Tools",
+    color: "#14b8a6",
+    icon: Code2,
+    geometry: clusterGeometry({ top: 520, left: 0, width: 350, height: 230 }),
+    labelGeometry: labelGeometry({ top: -34, left: 24 }, 350, 230),
+    tags: [
+      tagGeometry({ label: "Websites", icon: Globe2, size: "large", badge: "High", iconSize: 18 }, { top: 34, left: 32, width: 286, height: 58 }, 350, 230),
+      tagGeometry({ label: "Vibe Coding", icon: Code2, size: "small" }, { top: 118, left: 22, width: 145, height: 44 }, 350, 230),
+      tagGeometry({ label: "Debugging", icon: Bug, size: "small" }, { top: 118, left: 180, width: 145, height: 44 }, 350, 230),
+      tagGeometry({ label: "3D Assets", icon: Box, size: "medium" }, { top: 176, left: 85, width: 180, height: 40 }, 350, 230)
+    ]
+  },
+  {
+    id: "ops",
+    title: "Automation & Ops",
+    color: "#38bdf8",
+    icon: Search,
+    geometry: clusterGeometry({ top: 520, right: 0, width: 390, height: 250 }),
+    labelGeometry: labelGeometry({ top: -38, left: 28 }, 390, 250),
+    tags: [
+      tagGeometry({ label: "Research Agents", icon: Search, size: "large", badge: "Rising", iconSize: 18 }, { top: 34, left: 34, width: 322, height: 58 }, 390, 250),
+      tagGeometry({ label: "AI Employees", icon: Users, size: "small" }, { top: 112, left: 24, width: 158, height: 44 }, 390, 250),
+      tagGeometry({ label: "Document Analysis", icon: FileText, size: "small" }, { top: 112, left: 198, width: 168, height: 44 }, 390, 250),
+      tagGeometry({ label: "Customer Support", icon: MessageSquare, size: "small" }, { top: 172, left: 24, width: 168, height: 44 }, 390, 250),
+      tagGeometry({ label: "Video Editing", icon: Video, size: "small" }, { top: 172, left: 208, width: 158, height: 44 }, 390, 250),
+      tagGeometry({ label: "Automation", icon: BriefcaseBusiness, size: "medium" }, { top: 226, left: 105, width: 180, height: 40 }, 390, 250)
+    ]
+  }
+];
+
+function clusterGeometry(geometry: { top: number; left?: number; right?: number; width: number; height: number }) {
+  return {
+    top: (geometry.top / fieldHeight) * 100,
+    left: geometry.left == null ? undefined : (geometry.left / fieldWidth) * 100,
+    right: geometry.right == null ? undefined : (geometry.right / fieldWidth) * 100,
+    width: (geometry.width / fieldWidth) * 100,
+    height: (geometry.height / fieldHeight) * 100
+  };
+}
+
+function labelGeometry(geometry: { top: number; left: number }, clusterWidth: number, clusterHeight: number) {
+  return {
+    top: (geometry.top / clusterHeight) * 100,
+    left: (geometry.left / clusterWidth) * 100
+  };
+}
+
+function tagGeometry(
+  tag: Omit<AttentionTagConfig, "geometry">,
+  geometry: { top: number; left: number; width: number; height: number },
+  clusterWidth: number,
+  clusterHeight: number
+): AttentionTagConfig {
+  return {
+    ...tag,
+    geometry: {
+      top: (geometry.top / clusterHeight) * 100,
+      left: (geometry.left / clusterWidth) * 100,
+      width: (geometry.width / clusterWidth) * 100,
+      height: (geometry.height / clusterHeight) * 100
+    }
+  };
+}

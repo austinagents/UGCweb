@@ -1,0 +1,785 @@
+{
+  "generated_at": "2026-06-09T20:08:34.265Z",
+  "note": "Partial summary from completed local rows only. No TwitterAPI.io calls were made by this summary step.",
+  "completed_count": 12,
+  "not_completed_count": 88,
+  "total_api_calls_recorded_in_raw_files": 1042,
+  "top_15_completed_by_momentum_score": [
+    {
+      "rank": 1,
+      "tool_name": "Browserbase",
+      "x_handle": "@browserbase",
+      "momentum_score": 2.8712,
+      "posts_30d": 25,
+      "avg_engagement": 31.68
+    },
+    {
+      "rank": 2,
+      "tool_name": "Jina AI",
+      "x_handle": "@JinaAI_",
+      "momentum_score": 2.7761,
+      "posts_30d": 6,
+      "avg_engagement": 131.67
+    },
+    {
+      "rank": 3,
+      "tool_name": "Mastra",
+      "x_handle": "@mastra",
+      "momentum_score": 2.5224,
+      "posts_30d": 20,
+      "avg_engagement": 14.9
+    },
+    {
+      "rank": 4,
+      "tool_name": "Stagehand",
+      "x_handle": "@Stagehanddev",
+      "momentum_score": 2.3066,
+      "posts_30d": 12,
+      "avg_engagement": 12.17
+    },
+    {
+      "rank": 5,
+      "tool_name": "OpenHands",
+      "x_handle": "@OpenHandsDev",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    },
+    {
+      "rank": 6,
+      "tool_name": "Wordware",
+      "x_handle": "@wordware",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    },
+    {
+      "rank": 7,
+      "tool_name": "Voiceflow",
+      "x_handle": "@VoiceflowHQ",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    },
+    {
+      "rank": 8,
+      "tool_name": "Botpress",
+      "x_handle": "@getbotpress",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    },
+    {
+      "rank": 9,
+      "tool_name": "LangGraph",
+      "x_handle": "@LangChainAI",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    },
+    {
+      "rank": 10,
+      "tool_name": "Open WebUI",
+      "x_handle": "@OpenWebUI",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    },
+    {
+      "rank": 11,
+      "tool_name": "Firecrawl",
+      "x_handle": "@firecrawl_dev",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    },
+    {
+      "rank": 12,
+      "tool_name": "Crawl4AI",
+      "x_handle": "@crawl4ai",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0
+    }
+  ],
+  "bottom_15_completed_by_momentum_score": [
+    {
+      "rank": 1,
+      "tool_name": "OpenHands",
+      "x_handle": "@OpenHandsDev",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": "This operation was aborted"
+    },
+    {
+      "rank": 2,
+      "tool_name": "Wordware",
+      "x_handle": "@wordware",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "rank": 3,
+      "tool_name": "Voiceflow",
+      "x_handle": "@VoiceflowHQ",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "rank": 4,
+      "tool_name": "Botpress",
+      "x_handle": "@getbotpress",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "rank": 5,
+      "tool_name": "LangGraph",
+      "x_handle": "@LangChainAI",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "rank": 6,
+      "tool_name": "Open WebUI",
+      "x_handle": "@OpenWebUI",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "rank": 7,
+      "tool_name": "Firecrawl",
+      "x_handle": "@firecrawl_dev",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "rank": 8,
+      "tool_name": "Crawl4AI",
+      "x_handle": "@crawl4ai",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "rank": 9,
+      "tool_name": "Stagehand",
+      "x_handle": "@Stagehanddev",
+      "momentum_score": 2.3066,
+      "posts_30d": 12,
+      "avg_engagement": 12.17,
+      "error": ""
+    },
+    {
+      "rank": 10,
+      "tool_name": "Mastra",
+      "x_handle": "@mastra",
+      "momentum_score": 2.5224,
+      "posts_30d": 20,
+      "avg_engagement": 14.9,
+      "error": ""
+    },
+    {
+      "rank": 11,
+      "tool_name": "Jina AI",
+      "x_handle": "@JinaAI_",
+      "momentum_score": 2.7761,
+      "posts_30d": 6,
+      "avg_engagement": 131.67,
+      "error": ""
+    },
+    {
+      "rank": 12,
+      "tool_name": "Browserbase",
+      "x_handle": "@browserbase",
+      "momentum_score": 2.8712,
+      "posts_30d": 25,
+      "avg_engagement": 31.68,
+      "error": ""
+    }
+  ],
+  "handles_completed": [
+    {
+      "tool_name": "Browserbase",
+      "x_handle": "@browserbase",
+      "momentum_score": 2.8712
+    },
+    {
+      "tool_name": "Jina AI",
+      "x_handle": "@JinaAI_",
+      "momentum_score": 2.7761
+    },
+    {
+      "tool_name": "Mastra",
+      "x_handle": "@mastra",
+      "momentum_score": 2.5224
+    },
+    {
+      "tool_name": "Stagehand",
+      "x_handle": "@Stagehanddev",
+      "momentum_score": 2.3066
+    },
+    {
+      "tool_name": "OpenHands",
+      "x_handle": "@OpenHandsDev",
+      "momentum_score": 0
+    },
+    {
+      "tool_name": "Wordware",
+      "x_handle": "@wordware",
+      "momentum_score": 0
+    },
+    {
+      "tool_name": "Voiceflow",
+      "x_handle": "@VoiceflowHQ",
+      "momentum_score": 0
+    },
+    {
+      "tool_name": "Botpress",
+      "x_handle": "@getbotpress",
+      "momentum_score": 0
+    },
+    {
+      "tool_name": "LangGraph",
+      "x_handle": "@LangChainAI",
+      "momentum_score": 0
+    },
+    {
+      "tool_name": "Open WebUI",
+      "x_handle": "@OpenWebUI",
+      "momentum_score": 0
+    },
+    {
+      "tool_name": "Firecrawl",
+      "x_handle": "@firecrawl_dev",
+      "momentum_score": 0
+    },
+    {
+      "tool_name": "Crawl4AI",
+      "x_handle": "@crawl4ai",
+      "momentum_score": 0
+    }
+  ],
+  "handles_not_yet_completed": [
+    {
+      "tool_name": "LlamaParse",
+      "x_handle": "@llama_index",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Unstructured",
+      "x_handle": "@UnstructuredIO",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Steel.dev",
+      "x_handle": "@steeldotdev",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Tavily",
+      "x_handle": "@tavilyai",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Genspark",
+      "x_handle": "@genspark_ai",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Fellou",
+      "x_handle": "@FellouAI",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Comet",
+      "x_handle": "@comet",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Dia Browser",
+      "x_handle": "@diabrowser",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Kagi Assistant",
+      "x_handle": "@KagiHQ",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Andi",
+      "x_handle": "@andisearch",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Metaphor",
+      "x_handle": "@exaai",
+      "status": "Renamed/Parent"
+    },
+    {
+      "tool_name": "Khoj",
+      "x_handle": "@khoj_ai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Memex",
+      "x_handle": "@memexgarden",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Langfuse",
+      "x_handle": "@langfuse",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Weights & Biases",
+      "x_handle": "@wandb",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Fal.ai",
+      "x_handle": "@fal",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Baseten",
+      "x_handle": "@basetenco",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Arize Phoenix",
+      "x_handle": "@ArizeAI",
+      "status": "Likely/Parent"
+    },
+    {
+      "tool_name": "Helicone",
+      "x_handle": "@helicone_ai",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Humanloop",
+      "x_handle": "@humanloop",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Predibase",
+      "x_handle": "@predibase",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Anyscale",
+      "x_handle": "@anyscalecompute",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "MindsDB",
+      "x_handle": "@MindsDB",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "GraphRAG",
+      "x_handle": "@MSFTResearch",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Ragie",
+      "x_handle": "@ragieai",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Pathway",
+      "x_handle": "@pathway_com",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Neo4j Aura AI",
+      "x_handle": "@neo4j",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Mem0",
+      "x_handle": "@mem0ai",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Zep",
+      "x_handle": "@zep_ai",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Deepgram",
+      "x_handle": "@DeepgramAI",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Cartesia",
+      "x_handle": "@cartesia",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "PlayAI",
+      "x_handle": "@PlayAIOfficial",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Hume AI",
+      "x_handle": "@hume_ai",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Retell AI",
+      "x_handle": "@retellai",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Bland AI",
+      "x_handle": "@usebland",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Sesame",
+      "x_handle": "@sesame",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Rime",
+      "x_handle": "@rimelabs",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "AssemblyAI",
+      "x_handle": "@AssemblyAI",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "11x",
+      "x_handle": "@11x_official",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Regie.ai",
+      "x_handle": "@regieai",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Common Room",
+      "x_handle": "@CommonRoomHQ",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Warmly",
+      "x_handle": "@warmly_ai",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Attention",
+      "x_handle": "@tryattention",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Day.ai",
+      "x_handle": "@Day_ai_app",
+      "status": "Verified"
+    },
+    {
+      "tool_name": "Default",
+      "x_handle": "@defaultdotcom",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Octave",
+      "x_handle": "@octavehq",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Artisan",
+      "x_handle": "@tryartisan",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "RevSure",
+      "x_handle": "@RevSureAI",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Higgsfield",
+      "x_handle": "@higgsfield_ai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Wan Video",
+      "x_handle": "@Alibaba_Qwen",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Dreamina",
+      "x_handle": "@DreaminaAI",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Haiper",
+      "x_handle": "@HaiperGenAI",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Hailuo",
+      "x_handle": "@Hailuo_AI",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "SkyReels",
+      "x_handle": "@SkyReelsAI",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Akool",
+      "x_handle": "@akoolai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "D-ID",
+      "x_handle": "@D_ID_",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "LivePortrait",
+      "x_handle": "@KwaiResearch",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Pika Labs Pro",
+      "x_handle": "@pika_labs",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Screen Studio",
+      "x_handle": "@screenstudio",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Guidde",
+      "x_handle": "@guiddeco",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Storylane",
+      "x_handle": "@StorylaneIO",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Supademo",
+      "x_handle": "@supademohq",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Napkin AI",
+      "x_handle": "@napkin_ai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Beautiful.ai",
+      "x_handle": "@BeautifulAI",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Pitch",
+      "x_handle": "@Pitch",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Gamma Enterprise",
+      "x_handle": "@MeetGamma",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Tella",
+      "x_handle": "@TellaHQ",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Arcade",
+      "x_handle": "@ArcadeSoftware",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "World Labs",
+      "x_handle": "@theworldlabs",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Wonder Dynamics",
+      "x_handle": "@WonderDynamics",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Move AI",
+      "x_handle": "@move_ai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Convai",
+      "x_handle": "@convai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Kinetix",
+      "x_handle": "@KinetixTech",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Meshcapade",
+      "x_handle": "@meshcapade",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Plask",
+      "x_handle": "@plask_ai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Masterpiece Studio",
+      "x_handle": "@MasterpieceVR",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Avaturn",
+      "x_handle": "@avaturn_me",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Anything World",
+      "x_handle": "@AnythingWorld",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "OpenAdapt",
+      "x_handle": "@OpenAdaptAI",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Goose",
+      "x_handle": "@block_goose",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Sweep",
+      "x_handle": "@sweep__ai",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Continue.dev",
+      "x_handle": "@continuedev",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Void Editor",
+      "x_handle": "@voideditor",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Zed AI",
+      "x_handle": "@zeddotdev",
+      "status": "Parent/Product"
+    },
+    {
+      "tool_name": "Factory",
+      "x_handle": "@FactoryAI",
+      "status": "VERIFY"
+    },
+    {
+      "tool_name": "Trigger.dev",
+      "x_handle": "@triggerdotdev",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Temporal",
+      "x_handle": "@temporalio",
+      "status": "Likely"
+    },
+    {
+      "tool_name": "Agno",
+      "x_handle": "@agnoagi",
+      "status": "VERIFY"
+    }
+  ],
+  "obvious_low_signal_accounts": [
+    {
+      "tool_name": "OpenHands",
+      "x_handle": "@OpenHandsDev",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": "This operation was aborted"
+    },
+    {
+      "tool_name": "Wordware",
+      "x_handle": "@wordware",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "tool_name": "Voiceflow",
+      "x_handle": "@VoiceflowHQ",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "tool_name": "Botpress",
+      "x_handle": "@getbotpress",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "tool_name": "LangGraph",
+      "x_handle": "@LangChainAI",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "tool_name": "Open WebUI",
+      "x_handle": "@OpenWebUI",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "tool_name": "Firecrawl",
+      "x_handle": "@firecrawl_dev",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    },
+    {
+      "tool_name": "Crawl4AI",
+      "x_handle": "@crawl4ai",
+      "momentum_score": 0,
+      "posts_30d": 0,
+      "avg_engagement": 0,
+      "error": ""
+    }
+  ]
+}

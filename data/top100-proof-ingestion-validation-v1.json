@@ -1,0 +1,64 @@
+{
+  "targeted": 63,
+  "sources": {
+    "youtube": {
+      "records": 187,
+      "covered": 63,
+      "missing": [],
+      "duplicate_urls": 0,
+      "empty_shells": 0
+    },
+    "github": {
+      "records": 189,
+      "covered": 63,
+      "missing": [],
+      "duplicate_urls": 0,
+      "empty_shells": 0
+    },
+    "article": {
+      "records": 171,
+      "covered": 58,
+      "missing": [
+        "Anthropic Console",
+        "Intercom Fin",
+        "OpenAI Platform",
+        "Sourcegraph Cody",
+        "Webflow AI"
+      ],
+      "duplicate_urls": 0,
+      "empty_shells": 0
+    },
+    "x": {
+      "records": 61,
+      "covered": 61,
+      "missing": [
+        "Aider",
+        "Fathom"
+      ],
+      "duplicate_slugs": 0,
+      "empty_shells": 0
+    }
+  },
+  "integrity": {
+    "evidence_orphans": 0,
+    "x_orphans": 0,
+    "all_proof_records_map_to_valid_slugs": true,
+    "global_duplicate_evidence_urls": [
+      [
+        "youtube",
+        0
+      ],
+      [
+        "github",
+        0
+      ],
+      [
+        "article",
+        0
+      ]
+    ],
+    "global_duplicate_x_slugs": 0,
+    "global_empty_evidence_shells": 0,
+    "global_empty_x_shells": 0
+  }
+}

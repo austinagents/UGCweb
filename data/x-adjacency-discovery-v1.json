@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-06-04T07:46:34.232Z",
+  "tool_name": "Lovable",
+  "search_provider": "none",
+  "requested_mentions": 100,
+  "returned_mentions": 0,
+  "runtime_ms": 3,
+  "records": [],
+  "summary": {
+    "adjacent_tools_found": 0,
+    "total_co_mentions": 0,
+    "status": "missing_search_provider"
+  }
+}

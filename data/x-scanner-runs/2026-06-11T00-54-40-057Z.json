@@ -1,0 +1,169 @@
+{
+  "run_timestamp": "2026-06-11T00:54:40.057Z",
+  "provider": "public_x_pages_playwright",
+  "collection_mechanism": "playwright_chromium_rendered_dom",
+  "metadata": {
+    "total_catalog_tools_loaded": 282,
+    "tools_available_with_official_handles": 268,
+    "tools_scanned": 5,
+    "pages_visited": 10,
+    "events_inserted": 0,
+    "errors": 0,
+    "default_limit": 20,
+    "all": false,
+    "headless": false,
+    "recent_post_limit": 10,
+    "mention_limit": 20
+  },
+  "outputs": {
+    "run": "data/x-scanner-runs/2026-06-11T00-54-40-057Z.json",
+    "account_snapshots": "data/x-account-snapshots.json",
+    "tool_events": "data/x-tool-events.json",
+    "summary_csv": "data/x-scanner-summary.csv"
+  },
+  "tools_scanned": [
+    {
+      "toolId": "manual_30d_11x",
+      "toolSlug": "11x",
+      "toolName": "11x",
+      "officialHandle": "11x_official"
+    },
+    {
+      "toolId": "tool_69",
+      "toolSlug": "activepieces",
+      "toolName": "Activepieces",
+      "officialHandle": "activepieces"
+    },
+    {
+      "toolId": "taaft_1",
+      "toolSlug": "adapt",
+      "toolName": "Adapt",
+      "officialHandle": "adapt"
+    },
+    {
+      "toolId": "tool_76",
+      "toolSlug": "adobe-firefly",
+      "toolName": "Adobe Firefly",
+      "officialHandle": "AdobeFirefly"
+    },
+    {
+      "toolId": "manual_24h_discovery_agent-a-ahrefs",
+      "toolSlug": "agent-a-ahrefs",
+      "toolName": "Agent A | Ahrefs",
+      "officialHandle": "ahrefs"
+    }
+  ],
+  "raw_pages": [
+    {
+      "toolSlug": "11x",
+      "pageType": "official_profile",
+      "url": "https://x.com/11x_official",
+      "raw": {
+        "loginWall": true,
+        "name": "",
+        "followersText": "2,539Followers",
+        "followingText": "3Following",
+        "bodyText": "11x\n71 posts\n11x\n@11x_official\nBuilding digital workers to automate GTM at scale. Backed by @a16z and @benchmark.\n11x.ai\nJoined August 2024\n3\nFollowing\n2,539\nFollowers\nPosts\nReplies\nMedia\nPinned\n11x\n@11x_official\nFeb 24\n💬 Launch Sequence 11: Alice ABM Plays\nYour sales motion doesn't start with a person. It starts with an account.\n\nUntil now, 11x worked at the lead level. So we changed that.\n\nUpload a CSV of your top accounts, pull from your CRM, or layer in Live Web Search with account-level Show more\n00:54\n11x\n@11x_official\nMay 21\n💬 Five SDRs. Half the day lost to research. And the research still wasn't right.\n\nEvery GTM team selling into a vertical knows this version of the problem. BuildWitt, a SaaS platform for the construction industry, fixed it in under 3 months with 11x. \n\nStandard tools couldn't Show more\nGIF\n11x\n@11x_official\nMay 21\n👷🏼‍♂️ Read more about their transformation in just 90 days here: 11x.ai/case-study/bui…\n11x\n@11x_official\nApr 30\n💭 Hours of research behind every email. A two-person team selling a new category to enterprise HR, with leads coming in faster than the team could follow up.\n\n@workera is an AI intelligence platform helping enterprises measure and develop workforce skills. They're building a Show more\nGIF\n11x\n@11x_official\nApr 30\n👉🏼 Read more about their transformation with 11x's Alice here: 11x.ai/case-study/wor…\n11x\n@11x_official\nApr 29\n11x just wrapped up an incredible few days at The Millennium Alliance Transformational CRO Assembly in Houston, Texas. 🤠\n\nWe had a great time hosting a packed roundtable on the pipeline coverage crisis and how CROs are closing the gap between targets and capacity in the age of Show more\n11x\n@11x_official\nApr 16\n📬 $250K/year on an agency. Manual emails that took 10 minutes each. No bandwidth beyond inbound.\n\n@LeicaBio  is part of @DanaherCorp , a $24B global science and technology company.  With inbound qualification maxed out for the team, engagement, nurture, outbound into new Show more\nGIF\n11x\n@11x_official\nApr 16\n📣 Read how Leica built a full-funnel GTM motion with 11x's Alice: 11x.ai/case-study/lei…\n11x\n@11x_official\nApr 6\n📩 Launch Sequence Episode 14: Smart Replies\n\nGetting replies is the easy part. Responding fast enough? That's where deals die.\n\nMost AI tools stop at the reply. Then your team manually picks up every engaged prospect. Speed-to-lead drops. Prospects go cold.\n\nSmart Replies closes Show more\n01:11\n11x\n@11x_official\nApr 6\n📊 See how Alice can respond to your prospects' interests instantly here: \nRequest Demo - 11x Digital Workers\nFrom 11x.ai\n11x\n@11x_official\nApr 2\n@cofenster  sells to HR and internal comms teams, an audience that doesn't show up in ads or intent signals. Outbound was the only way in.\n\nBut they don't have a BDR team. One RevOps lead runs it all.\n\nAlice changed that.\n✅ 12-15 campaigns running in parallel across DACH region Show more\nGIF\n11x\n@11x_official\nApr 2\nSee how cofenster turned outbound into their most predictable pipeline source → 11x.ai/case-study/cof…\nNew to X?\n\nSign up now to get your own personalized timeline!\n\nSign up with Google\nSign up with Google\nSign up with Apple\nCreate account\n\nBy signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.\n\nTerms of Service\n|\nPrivacy Policy\n|\nCookie Policy\n|\nAccessibility\n|\nAds info\n|\nMore\n© 2026 X Corp.\nDon't miss what's happening\nPeople on X are the first to know.\nLog in\nSign up",
+        "url": "https://x.com/11x_official",
+        "handle": "11x_official"
+      }
+    },
+    {
+      "toolSlug": "11x",
+      "pageType": "handle_mentions",
+      "url": "https://x.com/search?q=%4011x_official&src=typed_query&f=live",
+      "raw": {
+        "tweets": []
+      }
+    },
+    {
+      "toolSlug": "activepieces",
+      "pageType": "official_profile",
+      "url": "https://x.com/activepieces",
+      "raw": {
+        "loginWall": true,
+        "name": "",
+        "followersText": "681Followers",
+        "followingText": "108Following",
+        "bodyText": "Activepieces\n953 posts\nActivepieces\n@activepieces\nAutomation software that's AI-first, no-code & open-source\n\n🔗 activepieces.com\n🖥️ github.com/activepieces/a…\nJoined July 2022\n108\nFollowing\n681\nFollowers\nPosts\nReplies\nMedia\n@activepieces hasn’t posted\nWhen they do, their posts will show up here.\nNew to X?\n\nSign up now to get your own personalized timeline!\n\nSign up with Google\nSign up with Google\nSign up with Apple\nCreate account\n\nBy signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.\n\nTerms of Service\n|\nPrivacy Policy\n|\nCookie Policy\n|\nAccessibility\n|\nAds info\n|\nMore\n© 2026 X Corp.\nDon't miss what's happening\nPeople on X are the first to know.\nLog in\nSign up",
+        "url": "https://x.com/activepieces",
+        "handle": "activepieces"
+      }
+    },
+    {
+      "toolSlug": "activepieces",
+      "pageType": "handle_mentions",
+      "url": "https://x.com/search?q=%40activepieces&src=typed_query&f=live",
+      "raw": {
+        "tweets": []
+      }
+    },
+    {
+      "toolSlug": "adapt",
+      "pageType": "official_profile",
+      "url": "https://x.com/adapt",
+      "raw": {
+        "loginWall": true,
+        "name": "",
+        "followersText": "5,240Followers",
+        "followingText": "181Following",
+        "bodyText": "Adapt\n1,047 posts\nAdapt\n@Adapt\nYour company brain + the universal AI agent that runs on it\n\nAdapt connects across all of your apps, answers questions, and does work right from Slack.\nSan Francisco, California\nadapt.com\nJoined November 2008\n181\nFollowing\n5,240\nFollowers\nPosts\nAffiliates\nReplies\nMedia\nAdapt\n@Adapt\n5h\nFable 5 is now available on Adapt to supercharge your business. We're giving away 60 days of free, unlimited use for qualified business pilots!\n\nAdapt's agent connects across all of your company's apps, answers questions and does work all within Slack. We give your business a Show more\n00:11\nAdapt\n@Adapt\nJun 9\n👀\nPatrick B.\n@Jumballaya\nJun 9\nMessing around with browser extensions, I made it so @Adapt  can take over!\n00:47\nAdapt\n@Adapt\nJun 2\nAll teams who try to build their own company brain will discover the same thing: it's complicated.\n\nWe hear from companies that they're building a company brain themselves. Then they come back and become customers.\n\nWhy? Because few teams have the resources to solve the ongoing Show more\nDavid Cramer\n@zeeg\nMay 31\nthis Slack agent is certainly the most difficult engineering project I have touched in a long, long time\n\non the surface its somewhat straight forward, but the amount of moving parts and complexity combined with the fact that much of its not determnistic makes it very difficult\nAdapt reposted\nJim Benton\n@jim_benton\nMay 28\nJoin us tonight.  Everyone is welcome. \n\nAn easy 3 mile run from our porch at 103 Montgomery St in the Presidio (right next to the Disney Museum), out to the Golden Gate and back. \n\nCome around 6:15pm, we leave at 6:30pm sharp, and we'll hang out on the porch with refreshments Show more\nAdapt\n@Adapt\nMay 27\nAdapt has become meaningfully more capable over the last few months, and we're passing that on to our users. \n\nEvery $0.01 credit now does more work - more questions answered, more scheduled tasks run, more apps built.\n\nNew users who sign up with their work email start with $100 Show more\nAdapt\n@Adapt\nMay 25\nOur favorite of @danshipper's predictions for the future: \n\n\"Every company will have one super-agent inside their Slack that every employee will use.\"\n\nBuilt for that future now. \nLenny Rachitsky\n@lennysan\nMay 25\nMy biggest takeaways from @danshipper:\n\n1. The future of work will happen inside Codex or Claude Code. Instead of putting AI into your SaaS tool, you’ll use your SaaS tools inside your favorite AI agents' in-app browser. Dan spends all his time in Codex now—writing documents, Show more\nAdapt - The Company Brain\nFrom adapt.com\nAdapt\n@Adapt\nMay 25\nMake this time the last time you prep for a monthly business review.\n\n- Ask for the data you need across systems\n- Build an internal dashboard app w/ the data\n- Automate next month's updates and delivery\n\nTry it out for May's metrics with $100 free credits at signup.\n00:34\nNew to X?\n\nSign up now to get your own personalized timeline!\n\nSign up with Google\nSign up with Apple\nCreate account\n\nBy signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.\n\nTerms of Service\n|\nPrivacy Policy\n|\nCookie Policy\n|\nAccessibility\n|\nAds info\n|\nMore\n© 2026 X Corp.\nDon't miss what's happening\nPeople on X are the first to know.\nLog in\nSign up",
+        "url": "https://x.com/adapt",
+        "handle": "adapt"
+      }
+    },
+    {
+      "toolSlug": "adapt",
+      "pageType": "handle_mentions",
+      "url": "https://x.com/search?q=%40adapt&src=typed_query&f=live",
+      "raw": {
+        "tweets": []
+      }
+    },
+    {
+      "toolSlug": "adobe-firefly",
+      "pageType": "official_profile",
+      "url": "https://x.com/AdobeFirefly",
+      "raw": {
+        "loginWall": true,
+        "name": "",
+        "followersText": "2,283Followers",
+        "followingText": "39Following",
+        "bodyText": "Adobe Firefly\n658 posts\nAdobe Firefly\n@AdobeFirefly\nYour AI-powered creative space ✨\nGet a full year of 30% off + unlimited generations now.\n#MadeWithFirefly\nJoined April 2023\n39\nFollowing\n2,283\nFollowers\nPosts\nReplies\nMedia\nPinned\nAdobe Firefly\n@AdobeFirefly\nApr 27\nWe're live! The future of creativity is in your hands. Try it out: adobe.ly/3P4Nr9a\nAdobe Firefly\n@AdobeFirefly\nApr 15\nYour creative process is about to get supercharged .⚡\n\nSay hello to Firefly AI Assistant, a new conversational interface powering creativity across Adobe Creative Cloud apps. By orchestrating and executing complex, multi‑step workflows, this revolutionary innovation collapses Show more\nAdobe Firefly\n@AdobeFirefly\nOct 30, 2025\nWhat happens when 6 visionary filmmakers pair their storytelling skills with the power of generative AI?\n\nAnswer: the #AdobeMAX Generative AI Film Fest. Learn how these directors used Adobe Firefly to bring their ideas to life.\n\nRead more. ⬇️\n\nStorytelling reimagined: The Generative AI Film Festival at Adobe MAX 2025 | Adobe Blog\nFrom blog.adobe.com\nAdobe Firefly\n@AdobeFirefly\nOct 28, 2025\nComing soon to Adobe Firefly: Layered Image Editing. \n\nTurn any image into distinct, editable layers instantly!\n00:43\nAdobe Firefly\n@AdobeFirefly\nOct 28, 2025\nEvery great video needs the right soundtrack, and now you can create one instantly with Adobe Firefly’s Generate Soundtrack!\n\nStart creating the perfect audio accompaniment today. adobe.ly/47rH0Cf\n00:30\nAdobe Firefly\n@AdobeFirefly\nNov 6, 2025\nPresenting \"Kyra,” directed by @MetaPuppet - a story of a subway artist who follows the woman he loves onto a NYC train and begins the ride of his life. \n\n“Kyra” premiered at the Generative AI Short Film Festival at Adobe MAX. Watch the full length video: adobe.ly/3LpruiZ\n01:00\nAdobe Firefly\n@AdobeFirefly\nOct 28, 2025\nMeet your new, personal creative partner: Introducing Project Moonlight.\n\nSign up for the waitlist: \nsurvey.adobe.com/jfe/form/SV_0v…\n00:48\nAdobe Firefly\n@AdobeFirefly\nNov 7, 2025\nAn eccentric trillionaire leads his ragtag crew of employees to settle a new world: Beta Earth. Director Nik Kleverov and Writer Ryan Walls take us behind the scenes of the making of “Beta Earth\".\n\nWatch the full length film and behind the scenes: adobe.ly/4qMZXIr\n01:00\nAdobe Firefly\n@AdobeFirefly\nOct 28, 2025\nIntroducing the all new Firefly: a unified hub that connects ideation → creation → share without breaking flow. \n\nStart creating today in Firefly. adobe.ly/3L9K7aB\n00:54\nNew to X?\n\nSign up now to get your own personalized timeline!\n\nSign up with Google\nSign up with Apple\nCreate account\n\nBy signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.\n\nTerms of Service\n|\nPrivacy Policy\n|\nCookie Policy\n|\nAccessibility\n|\nAds info\n|\nMore\n© 2026 X Corp.\nDon't miss what's happening\nPeople on X are the first to know.\nLog in\nSign up",
+        "url": "https://x.com/AdobeFirefly",
+        "handle": "AdobeFirefly"
+      }
+    },
+    {
+      "toolSlug": "adobe-firefly",
+      "pageType": "handle_mentions",
+      "url": "https://x.com/search?q=%40AdobeFirefly&src=typed_query&f=live",
+      "raw": {
+        "tweets": []
+      }
+    },
+    {
+      "toolSlug": "agent-a-ahrefs",
+      "pageType": "official_profile",
+      "url": "https://x.com/ahrefs",
+      "raw": {
+        "loginWall": true,
+        "name": "",
+        "followersText": "171.5KFollowers",
+        "followingText": "145Following",
+        "bodyText": "Ahrefs\n11.7K posts\nAhrefs\n@ahrefs\nThe marketing platform for discoverability in search, AI, and the web. Explore your brand 👉 ahrefs.com/brand-radar\nahrefs.com\nBorn July 9\nJoined February 2011\n145\nFollowing\n171.5K\nFollowers\nPosts\nAffiliates\nReplies\nMedia\nPinned\nAhrefs\n@ahrefs\nMay 5\nAgent A: your top 1% marketer 🧠 \n\nRely on the only AI marketing agent with unrestricted access to Ahrefs data and pre-built marketing skills to act on it.  \n\nConnect your business apps and let it do the marketing for you.  \n\nahrefs.com/agent-a\n00:49\nAhrefs\n@ahrefs\n17h\nNEW in GSC Insights: Portfolio support, Average Position, and Keyword list report 🎊\n\n• View data across multiple GSC properties in one portfolio.\n• Monitor the average position of your highest-ranking URL per keyword. This is useful for branded queries where many URLs rank.\n• Show more\nAhrefs\n@ahrefs\nJun 8\n🎊 NEW in Site Explorer:\n\n• Add more competitors to track per project for all plans starting from Lite:\n\n- Lite, Standard and Advanced: 10 → 20\n - Enterprise: 10 → 100\n\n• Add project-linked competitors directly in the Overview chart, and custom URLs in the new Custom tab.\n\n• Show more\nAhrefs\n@ahrefs\nJun 5\nNew in Brand Radar: Found in, but not cited and Average position 🚀\n\n• Citations now show pages as one of two kinds: Cited in AI response, or Found in, but not cited by AI.\n• New metric: Average Position - a page's average position cited in an AI response.\n• View top cited Show more\nAhrefs\n@ahrefs\nJun 4\nNEW in Ahrefs MCP: Interactive Widgets 📊\n\nGet scorecards, time-series charts, and table reports rendered in chat by Claude or ChatGPT. Every widget links to the matching Ahrefs report so you can dig deeper.\nAhrefs\n@ahrefs\nJun 3\nNEW in Brand Radar 📷:\n\n• Track brand mentions in Grok's responses\n• AI Overviews and AI Mode prompt indexes are live. They support custom prompts and match the way people ask AI more closely (keyword indexes are still available)\n• See more unified AI visibility reports with Show more\nAhrefs\n@ahrefs\nJun 3\nCheck out Brand Radar: \nAhrefs Brand Radar: See ANY brand's AI visibility\nFrom ahrefs.com\nAhrefs\n@ahrefs\nJun 3\nYour stack didn't get simpler. Your workflow can. Agent A connects to the tools you already pay for and runs the work across all of them from a single chat.\nGIF\nAhrefs\n@ahrefs\nJun 3\nSign up for Agent A: \nAgent A by Ahrefs — The AI Marketing Agent Powered by Ahrefs Data\nFrom ahrefs.com\nNew to X?\n\nSign up now to get your own personalized timeline!\n\nSign up with Google\nSign up with Google\nSign up with Apple\nCreate account\n\nBy signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.\n\nTerms of Service\n|\nPrivacy Policy\n|\nCookie Policy\n|\nAccessibility\n|\nAds info\n|\nMore\n© 2026 X Corp.\nDon't miss what's happening\nPeople on X are the first to know.\nLog in\nSign up",
+        "url": "https://x.com/ahrefs",
+        "handle": "ahrefs"
+      }
+    },
+    {
+      "toolSlug": "agent-a-ahrefs",
+      "pageType": "handle_mentions",
+      "url": "https://x.com/search?q=%40ahrefs&src=typed_query&f=live",
+      "raw": {
+        "tweets": []
+      }
+    }
+  ],
+  "errors": []
+}

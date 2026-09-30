@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background circle in ink color -->
+  <circle cx="32" cy="32" r="32" fill="#1a1611"/>
+  <!-- Typo the Bookworm — round glasses with dot eyes, brows, and smile -->
+  <g transform="translate(10, 16)" fill="none" stroke="#faf8f4" stroke-linecap="round">
+    <!-- temples -->
+    <line x1="0" y1="12" x2="5.5" y2="12" stroke-width="2.2"/>
+    <line x1="38.5" y1="12" x2="44" y2="12" stroke-width="2.2"/>
+    <!-- bridge -->
+    <path d="M18 12 Q22 9 26 12" stroke-width="2.2" fill="none"/>
+    <!-- left lens -->
+    <circle cx="12" cy="13" r="7" stroke-width="2.2"/>
+    <!-- right lens -->
+    <circle cx="32" cy="13" r="7" stroke-width="2.2"/>
+    <!-- left dot eye -->
+    <circle cx="12" cy="13" r="1.5" fill="#faf8f4" stroke="none"/>
+    <!-- right dot eye -->
+    <circle cx="32" cy="13" r="1.5" fill="#faf8f4" stroke="none"/>
+    <!-- left brow -->
+    <path d="M8 4.5 Q12 2.5 16 5" stroke-width="1.8" fill="none"/>
+    <!-- right brow -->
+    <path d="M28 5 Q32 2.5 36 4.5" stroke-width="1.8" fill="none"/>
+    <!-- small smile -->
+    <path d="M19 26 Q22 29 25 26" stroke-width="1.8" fill="none"/>
+  </g>
+</svg>

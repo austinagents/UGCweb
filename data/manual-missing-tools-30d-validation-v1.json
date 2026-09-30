@@ -1,0 +1,100 @@
+{
+  "inputRows": 52,
+  "catalogTools": 284,
+  "duplicateCatalogSlugs": 0,
+  "proof": {
+    "youtube": {
+      "records": 152,
+      "covered": 52
+    },
+    "github": {
+      "records": 153,
+      "covered": 51
+    },
+    "article": {
+      "records": 0,
+      "covered": 0
+    },
+    "official": {
+      "records": 52,
+      "covered": 52
+    },
+    "x": {
+      "records": 52,
+      "covered": 49,
+      "qualified3": 48,
+      "usefulProof": 837
+    }
+  },
+  "missingByType": {
+    "youtube": [],
+    "github": [
+      "Weights & Biases"
+    ],
+    "article": [
+      "OpenHands",
+      "Browserbase",
+      "Stagehand",
+      "Deepgram",
+      "Cartesia",
+      "LangGraph",
+      "Wordware",
+      "Higgsfield",
+      "Genspark",
+      "Retell AI",
+      "Hume AI",
+      "PlayAI",
+      "Tavily",
+      "Jina AI",
+      "Voiceflow",
+      "Botpress",
+      "Continue.dev",
+      "Firecrawl",
+      "Crawl4AI",
+      "Open WebUI",
+      "Baseten",
+      "Langfuse",
+      "11x",
+      "World Labs",
+      "Mem0",
+      "Helicone",
+      "Comet",
+      "D-ID",
+      "Dreamina",
+      "Haiper",
+      "Hailuo",
+      "SkyReels",
+      "Bland AI",
+      "Sesame",
+      "AssemblyAI",
+      "Smallest AI",
+      "Kagi Assistant",
+      "Dia Browser",
+      "Zed",
+      "Trigger.dev",
+      "Temporal",
+      "MindsDB",
+      "Arize Phoenix",
+      "Weights & Biases",
+      "Unstructured",
+      "LlamaParse",
+      "Fellou",
+      "Screen Studio",
+      "Predibase",
+      "Convai",
+      "Avaturn",
+      "Masterpiece Studio"
+    ],
+    "official": [],
+    "x": [
+      "Convai",
+      "Dreamina",
+      "SkyReels"
+    ]
+  },
+  "duplicateProofUrls": 0,
+  "orphanProofRecords": 0,
+  "emptyShellProofRecords": 0,
+  "logoEntries": 52,
+  "logoMissing": []
+}

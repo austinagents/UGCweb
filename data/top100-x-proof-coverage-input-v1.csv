@@ -1,0 +1,64 @@
+tool,slug,has_proof_source,proof_post_count
+Aider,aider,false,0
+Amazon Bedrock,amazon-bedrock,false,0
+Anthropic Console,anthropic-console,false,0
+AnythingLLM,anythingllm,false,0
+AutoGen,autogen,false,0
+Azure AI Foundry,azure-ai-foundry,false,0
+Blackbox AI,blackbox-ai,false,0
+Chroma,chroma,false,0
+Claude Code,claude-code,false,0
+Clay,clay,false,0
+Codeium,codeium,false,0
+Cohere,cohere,false,0
+ComfyUI,comfyui,false,0
+Copy.ai,copy-ai,false,0
+DALL-E,dall-e,false,0
+Databricks Mosaic AI,databricks-mosaic-ai,false,0
+DeepSeek,deepseek,false,0
+Devin,devin,false,0
+Fathom,fathom,false,0
+Figma AI,figma-ai,false,0
+Fireflies.ai,fireflies-ai,false,0
+Fireworks AI,fireworks-ai,false,0
+Google Gemini,google-gemini,false,0
+Grammarly,grammarly,false,0
+Groq,groq,false,0
+Harvey,harvey,false,0
+Hebbia,hebbia,false,0
+Hugging Face,hugging-face,false,0
+IBM watsonx,ibm-watsonx,false,0
+Intercom Fin,intercom-fin,false,0
+LangChain,langchain,false,0
+LangSmith,langsmith,false,0
+LlamaIndex,llamaindex,false,0
+LM Studio,lm-studio,false,0
+Meta AI,meta-ai,false,0
+Microsoft Copilot,microsoft-copilot,false,0
+Mistral AI,mistral-ai,false,0
+Modal,modal,false,0
+Motion,motion,false,0
+Ollama,ollama,false,0
+OpenAI Codex,openai-codex,false,0
+OpenAI Platform,openai-platform,false,0
+OpenRouter,openrouter,false,0
+Otter.ai,otter-ai,false,0
+Phind,phind,false,0
+Pinecone,pinecone,false,0
+Poe,poe,false,0
+Reclaim AI,reclaim-ai,false,0
+Relevance AI,relevance-ai,false,0
+Replicate,replicate,false,0
+Sierra,sierra,false,0
+Sourcegraph Cody,sourcegraph-cody,false,0
+Stable Diffusion,stable-diffusion,false,0
+Superhuman AI,superhuman-ai,false,0
+Together AI,together-ai,false,0
+Tome,tome,false,0
+Vertex AI,vertex-ai,false,0
+Weaviate,weaviate,false,0
+Webflow AI,webflow-ai,false,0
+Wordtune,wordtune,false,0
+Writer,writer,false,0
+You.com,you-com,false,0
+Zendesk AI,zendesk-ai,false,0

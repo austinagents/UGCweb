@@ -1,0 +1,359 @@
+{
+  "summary": {
+    "generated_at": "2026-06-04T10:27:37.985Z",
+    "source": "data/x-proof-sources-v1.json",
+    "tools_scored": 25,
+    "average_proof_quality_score": 32,
+    "common_failure_reasons": {
+      "company_post_not_clear_proof": 45,
+      "company_promo_only": 8,
+      "empty_mention": 5,
+      "no_top_tweets_returned": 5,
+      "spam_listicle_support_or_empty_mention": 3
+    },
+    "recommendation": "Adjust before scaling: handle timeline queries return many company promos/support/empty mentions, and some handles have no recent tweets. Prefer product-name discussion queries and exclude from:official_handle for proof, while keeping official handles for account discovery.",
+    "cleaned_for_current_catalog_at": "2026-06-04T18:52:12.971Z",
+    "records_after_catalog_cleanup": 7
+  },
+  "records": [
+    {
+      "tool": "Adapt",
+      "slug": "adapt",
+      "x_handle": "@adapt",
+      "tweets_returned": 19,
+      "useful_count": 0,
+      "bad_count": 5,
+      "proof_quality_score": 0,
+      "best_3_tweet_urls": "",
+      "notes": "company_promo_only:2; company_post_not_clear_proof:2; empty_mention:1",
+      "scored_tweets": [
+        {
+          "url": "https://x.com/Adapt/status/2044479422947070090",
+          "text": "Introducing Adapt, your company’s AI computer. Now available to everyone. → Ask questions across every system → Build internal apps with live data → Automate mundane to complex tasks → Multi-player by design https://t.co/SMF8wNVnyR",
+          "useful": false,
+          "reasons": [
+            "company_promo_only"
+          ]
+        },
+        {
+          "url": "https://x.com/Adapt/status/2016931119678296151",
+          "text": "Today we’re announcing our $10M seed round co-led by @ActivantCapital and @HeadlineVC. We're building the AI computer that can reason, act, and operate inside real business workflows, so that companies can become truly AI-native by default. https://t.co/Wz3svWNBfp",
+          "useful": false,
+          "reasons": [
+            "company_promo_only"
+          ]
+        },
+        {
+          "url": "https://x.com/Adapt/status/2046795736969515258",
+          "text": "Scaling products is fun :) https://t.co/ev5wjCCVns",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/Adapt/status/2057543469665776030",
+          "text": "We're honored to play an important role in @wander's growth story, where every department runs on Adapt. https://t.co/enU539leSM",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/Adapt/status/2009792215900655864",
+          "text": "https://t.co/eVwoxUQuoK",
+          "useful": false,
+          "reasons": [
+            "empty_mention"
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Apollo",
+      "slug": "apollo",
+      "x_handle": "@useapolloio",
+      "tweets_returned": 20,
+      "useful_count": 3,
+      "bad_count": 2,
+      "proof_quality_score": 60,
+      "best_3_tweet_urls": "https://x.com/useapolloio/status/2061798795789078573 | https://x.com/useapolloio/status/2061874643301253549 | https://x.com/useapolloio/status/2061798798989410676",
+      "notes": "company_post_not_clear_proof:2",
+      "scored_tweets": [
+        {
+          "url": "https://x.com/useapolloio/status/2061798795789078573",
+          "text": "About 1/3 of new Apollo MCP users never open the Apollo platform. They run GTM from inside Claude and ChatGPT instead.",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/useapolloio/status/2061874643301253549",
+          "text": "Big news: Apollo is part of @OpenAI's launch of new role-specific plug ins in Codex 🎉 You can now do prospect research, account planning, meeting prep, reporting, and more all inside ChatGPT. Connect it now: https://t.co/4efqrcxf79 https://t.co/y21AkqHcGe",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/useapolloio/status/2062280789451325598",
+          "text": "Turn lurkers into customers 👀⤵️ https://t.co/jbNV2Hbu4B",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/useapolloio/status/2061798803695337648",
+          "text": "Apollo runs in Claude, ChatGPT, Chrome, HubSpot, Salesforce, and the terminal. Wherever the work happens, the data shows up.",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/useapolloio/status/2061798798989410676",
+          "text": "Headcount research by function. \"How big is Acme's engineering team?\" answered in the chat window. Email reveal when you already know who you want. CRM account scaffolding before outreach starts.",
+          "useful": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "tool": "Bolt",
+      "slug": "bolt",
+      "x_handle": "@boltdotnew",
+      "tweets_returned": 20,
+      "useful_count": 4,
+      "bad_count": 1,
+      "proof_quality_score": 80,
+      "best_3_tweet_urls": "https://x.com/boltdotnew/status/2061912505006391728 | https://x.com/boltdotnew/status/2061912502733086735 | https://x.com/boltdotnew/status/2061912506210082917",
+      "notes": "company_post_not_clear_proof:1",
+      "scored_tweets": [
+        {
+          "url": "https://x.com/boltdotnew/status/2061912502020010274",
+          "text": "5 winners. One weekend. Each one rebuilt a tool they were tired of paying for. The sorry SaaS challenge results 🧵",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/boltdotnew/status/2061912505006391728",
+          "text": "@conormartinai @JOYSTON980366 MySign by @RealNovaSpark. Sorry, DocuSign. Upload a doc, drop signature fields, sign, download. Clean, fast, free. Built in a weekend with Bolt. https://t.co/FJ3TgiEtON",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/boltdotnew/status/2061912502733086735",
+          "text": "A Gumroad alternative by @conormartinai. Sell your digital products without renting the storefront. Own the flow. Built in a weekend with Bolt. https://t.co/0JSqit9zkj",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/boltdotnew/status/2061912506210082917",
+          "text": "@conormartinai @JOYSTON980366 @RealNovaSpark A Canva alternative by @maurice_lippy. Designs, marketing material, and more. Custom-built to fit one niche perfectly. Built in a weekend with Bolt. https://t.co/GyvaX4fPmR",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/boltdotnew/status/2061912503836082387",
+          "text": "@conormartinai Fileify by @JOYSTON980366. Too many useful tools sit behind signups, limits, and paywalls. One free platform replaces the whole stack. Built in a weekend with Bolt. https://t.co/rrx5fHuAkd",
+          "useful": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "tool": "CatDoes",
+      "slug": "catdoes",
+      "x_handle": "@catdoeshq",
+      "tweets_returned": 20,
+      "useful_count": 3,
+      "bad_count": 2,
+      "proof_quality_score": 60,
+      "best_3_tweet_urls": "https://x.com/catdoeshq/status/2061856718133276748 | https://x.com/catdoeshq/status/2043981654977323214 | https://x.com/catdoeshq/status/2043983489855340967",
+      "notes": "spam_listicle_support_or_empty_mention:1; company_post_not_clear_proof:1",
+      "scored_tweets": [
+        {
+          "url": "https://x.com/catdoeshq/status/2043985245922312530",
+          "text": "I love what you guys are building. who want's a discount code? reply CatDoes below👇🏻",
+          "useful": false,
+          "reasons": [
+            "spam_listicle_support_or_empty_mention"
+          ]
+        },
+        {
+          "url": "https://x.com/catdoeshq/status/2061856718133276748",
+          "text": "@OpenAI or you can just use catdoes... before they \"expand more broadly\". also, cute catdoes dupe you got there in your video. https://t.co/LrsKj53Yh9",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/catdoeshq/status/2043981654977323214",
+          "text": "Don’t sit on your idea, start building it with CatDoes",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/catdoeshq/status/2043983489855340967",
+          "text": "Building apps has never been easier. Just describe it, and CatDoes will build it for you.",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/catdoeshq/status/2043982896646557930",
+          "text": "@Rana_kamran43 yeah, that's me",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Claude",
+      "slug": "claude",
+      "x_handle": "@claudeai",
+      "tweets_returned": 20,
+      "useful_count": 2,
+      "bad_count": 3,
+      "proof_quality_score": 40,
+      "best_3_tweet_urls": "https://x.com/claudeai/status/2060074627032838438 | https://x.com/claudeai/status/2060042709209928018",
+      "notes": "company_promo_only:2; company_post_not_clear_proof:1",
+      "scored_tweets": [
+        {
+          "url": "https://x.com/claudeai/status/2060042702150930686",
+          "text": "Introducing Claude Opus 4.8: it builds on Opus 4.7 with sharper judgment, more honesty about its own progress, and the ability to work independently for longer than its predecessors. Available today at the same price. https://t.co/EufxL7T1kb",
+          "useful": false,
+          "reasons": [
+            "company_promo_only"
+          ]
+        },
+        {
+          "url": "https://x.com/claudeai/status/2060074627032838438",
+          "text": "Before we ship a new model, these teams try to break it. They build with it, push it to its limits, and tell us where it falls short. What they find makes the final model better. https://t.co/Q4LD01zIIc",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/claudeai/status/2060042709209928018",
+          "text": "In Claude Code, Opus 4.8 makes calls like an experienced engineer without needing constant check-ins. It stays on track across long-running sessions and follows work through in your repo, so you can hand off a feature or a bug sweep while you focus on what's next. https://t.co/9zkNzwPepO",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/claudeai/status/2060042706844315866",
+          "text": "Fast mode is available for Opus 4.8. It's the same model at roughly 2.5x the speed, and we've made it three times cheaper than before. Turn it on with /fast in Claude Code. On the API, contact your account manager to request access or join the waitlist: https://t.co/5SLFF77Whn",
+          "useful": false,
+          "reasons": [
+            "company_promo_only"
+          ]
+        },
+        {
+          "url": "https://x.com/claudeai/status/2059662933924123044",
+          "text": "New in the Claude Marketplace: @augmentcode, @boltdotnew, @coderabbitai, @hebbia, and @WeAreLegora. Apply your existing Anthropic spend commitment toward their Claude-powered products. Learn more: https://t.co/J3Sdsg2lU6 https://t.co/gN0npDM468",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Cursor",
+      "slug": "cursor",
+      "x_handle": "@cursor_ai",
+      "tweets_returned": 20,
+      "useful_count": 1,
+      "bad_count": 4,
+      "proof_quality_score": 20,
+      "best_3_tweet_urls": "https://x.com/cursor_ai/status/2056803731367456993",
+      "notes": "company_post_not_clear_proof:2; company_promo_only:2",
+      "scored_tweets": [
+        {
+          "url": "https://x.com/cursor_ai/status/2060044920237469872",
+          "text": "Claude Opus 4.8 is now available in Cursor. On CursorBench, it's able to work much more efficiently than Opus 4.7. We've also found it to be more persistent on harder tasks.",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/cursor_ai/status/2057913121558413770",
+          "text": "With the Cursor SDK, you can build your own agents with Composer 2.5. It's now available in Python and TypeScript. This long weekend, Composer usage is 90% off in the SDK. We're excited to see what you build! https://t.co/8grHpJQtOu",
+          "useful": false,
+          "reasons": [
+            "company_promo_only"
+          ]
+        },
+        {
+          "url": "https://x.com/cursor_ai/status/2056803731367456993",
+          "text": "Cursor is now available in Jira. Assign Cursor to work items, or mention @​Cursor in a comment to kick off a cloud agent. Cursor uses the title, description, comments, and your team's repository settings to create a merge-ready PR. https://t.co/cK2ElMu0eZ",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/cursor_ai/status/2060406013098897765",
+          "text": "Auto-review mode is now available in Cursor. It allows agents to run tool calls with fewer approval prompts and safer execution. https://t.co/GZQX89mgmq",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/cursor_ai/status/2061550723503194426",
+          "text": "We’re increasing usage limits for every Teams user. Inspired by the success of our Ultra plan, we're also introducing a Premium team seat that includes 5x usage at only 3x the cost.",
+          "useful": false,
+          "reasons": [
+            "company_promo_only"
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Descript",
+      "slug": "descript",
+      "x_handle": "@descript",
+      "tweets_returned": 20,
+      "useful_count": 3,
+      "bad_count": 2,
+      "proof_quality_score": 60,
+      "best_3_tweet_urls": "https://x.com/descript/status/2060465054378819850 | https://x.com/descript/status/2062290588473696762 | https://x.com/descript/status/2060814132757021069",
+      "notes": "company_post_not_clear_proof:2",
+      "scored_tweets": [
+        {
+          "url": "https://x.com/descript/status/2060465054378819850",
+          "text": "new API feature: **`export-transcript` is now public** refresh MCP/connector if it's not showing up for you @jethrojones https://t.co/ifUkLOapYU",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/descript/status/2062290588473696762",
+          "text": "\"But I'm not a developer, why do I need an API for my video editing software?\" -@theaaron \"Hold my Claude...\"- Descript's Teddy, Senior QA Engineer and API evangelist https://t.co/Uc2K23MgKx",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/descript/status/2060814132757021069",
+          "text": "Every webinar, someone asks Marcello how he uses Underlord. Every webinar, his eye twitches a little harder. So we hit record while he answered this time. Here's exact 6-step prompt he runs through Underlord on every video, before he touches a single thing himself: 1. Studio Sound @ 80% intensity — dialed in for his recording room (100% scrubs too much life out) 2. Remove filler words but KEEP \"like\" — he spot-checks those himself because half the time he means them 3. Remove retakes — \"if there's a retake, I don't need it\" 4. Apply Eye Contact — he reads a teleprompter every time, so this fixes the off-camera gaze 5. Split into chapters 6. Apply his custom \"Marcello\" layout pack — instant on-brand All six bundled into one saved prompt, run on Underlord with Opus 4.7, the moment media is imported. Then he does the creative \"last 20%\" by hand.",
+          "useful": true,
+          "reasons": []
+        },
+        {
+          "url": "https://x.com/descript/status/2061927473777127673",
+          "text": "Tired of re-explaining your editing style to an AI every single time? Same. That's why we gave Underlord custom instructions — so it actually learns your preferences as you work. Tell it you like faster cuts, a specific transition style, or any other quirk of how you edit, and it'll remember. No more starting from scratch every session.",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        },
+        {
+          "url": "https://x.com/descript/status/2062239620524618206",
+          "text": "JoVo is the Head of Design 🐐",
+          "useful": false,
+          "reasons": [
+            "company_post_not_clear_proof"
+          ]
+        }
+      ]
+    }
+  ]
+}

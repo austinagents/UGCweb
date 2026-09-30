@@ -1,0 +1,127 @@
+tool,slug,has_proof_source,proof_post_count
+ChatGPT,chatgpt,true,43
+Claude,claude,true,130
+Perplexity,perplexity,true,10
+Cursor,cursor,true,117
+Windsurf,windsurf,true,10
+Lovable,lovable,true,10
+Replit,replit,true,10
+Runway,runway,true,10
+Kling,kling,true,10
+Pika,pika,true,10
+ElevenLabs,elevenlabs,true,127
+Midjourney,midjourney,true,10
+Ideogram,ideogram,true,10
+HeyGen,heygen,true,125
+Synthesia,synthesia,true,10
+Granola,granola,true,10
+Notion AI,notion-ai,true,10
+Zapier,zapier,true,10
+Lindy,lindy,true,10
+Gamma,gamma,true,10
+Manus,manus,true,10
+v0,v0,true,10
+Bolt,bolt,true,10
+Linear,linear,true,10
+CapCut,capcut,true,10
+Descript,descript,true,10
+Suno,suno,true,10
+Udio,udio,true,10
+NotebookLM,notebooklm,true,10
+Grok,grok,true,10
+Jasper,jasper,true,10
+Glean,glean,true,10
+Make,make,true,10
+Framer AI,framer-ai,true,10
+Vercel,vercel,true,119
+n8n,n8n,true,118
+Apollo,apollo,true,10
+Framer,framer,true,10
+Typefully,typefully,true,10
+Slack,slack,true,10
+HubSpot,hubspot,true,10
+Instantly,instantly,true,10
+GitHub Copilot,github-copilot,true,10
+CodeRabbit,coderabbit,true,10
+Sourcegraph,sourcegraph,true,10
+Cline,cline,true,10
+Augment Code,augment-code,true,10
+Qodo,qodo,true,10
+Tabnine,tabnine,true,10
+Polymarket,polymarket,true,10
+Kalshi,kalshi,true,10
+TradingView,tradingview,true,10
+TrendSpider,trendspider,true,6
+Option Alpha,option-alpha,true,10
+QuantConnect,quantconnect,true,10
+Arkham,arkham,true,4
+Glassnode,glassnode,true,10
+Nansen,nansen,true,8
+DefiLlama,defillama,true,8
+Messari,messari,true,10
+Santiment,santiment,true,2
+CrewAI,crewai,true,10
+Gumloop,gumloop,true,10
+Langflow,langflow,true,10
+Flowise,flowise,true,10
+AgentOps,agentops,true,10
+Dify,dify,true,10
+Pipedream,pipedream,true,10
+Activepieces,activepieces,true,10
+Workato,workato,true,10
+Rows,rows,true,10
+Flux (Black Forest Labs),flux-black-forest-labs,true,10
+Recraft,recraft,true,10
+Leonardo AI,leonardo-ai,true,1
+Canva AI,canva-ai,true,10
+Adobe Firefly,adobe-firefly,true,10
+Magnific,magnific,true,10
+Krea,krea,true,10
+Freepik AI,freepik-ai,true,10
+Playground AI,playground-ai,true,10
+Photoroom,photoroom,true,10
+OpenArt,openart,true,10
+Luma,luma,true,10
+Veed,veed,true,10
+Hedra,hedra,true,10
+Tavus,tavus,true,10
+Vidu,vidu,true,10
+PixVerse,pixverse,true,10
+Exa,exa,true,2
+Elicit,elicit,true,10
+Consensus,consensus,true,10
+Scite,scite,true,10
+Research Rabbit,research-rabbit,true,1
+Connected Papers,connected-papers,true,8
+Semantic Scholar,semantic-scholar,true,3
+Inworld,inworld,true,10
+Scenario,scenario,true,10
+Layer AI,layer-ai,true,10
+Ready Player Me,ready-player-me,true,10
+Rosebud AI,rosebud-ai,true,10
+Ludo AI,ludo-ai,true,10
+Meshy,meshy,true,10
+Tripo,tripo,true,10
+Spline,spline,true,10
+Kaedim,kaedim,true,10
+Polycam,polycam,true,10
+Character.AI,character-ai,true,10
+DeepBrain AI,deepbrain-ai,true,7
+Hour One,hour-one,true,10
+Adapt,adapt,true,36
+CatDoes,catdoes,true,10
+remio,remio,true,8
+Floot,floot,true,10
+Subquadratic,subquadratic,true,10
+Saveto AI,saveto-ai,true,1
+Tendem,tendem,true,2
+Rocket,rocket,true,10
+VoxDeck,voxdeck,true,5
+PixieBrix,pixiebrix,true,10
+Stockimg AI,stockimg-ai,true,6
+Veriff,veriff,true,10
+QuillBot,quillbot,true,10
+Fetcher,fetcher,true,5
+Inbenta,inbenta,true,2
+remove.bg,remove-bg,true,10
+H2O.ai,h2o-ai,true,10

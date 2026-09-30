@@ -1,0 +1,228 @@
+tool,slug,category,websiteUrl,x_handle,x_handle_status,confidence,source,notes
+ChatGPT,chatgpt,AI Agents,https://chat.openai.com,,missing,0,,No local X handle candidate found.
+Claude,claude,AI Agents,https://claude.ai,@claudeai,likely_official_account,60,source_metadata,"Profile-shaped X source in data/tool-evidence-sources.json; evidence_url=https://twitter.com/claudeai; lower confidence, not verified official."
+Perplexity,perplexity,AI Research,https://www.perplexity.ai,,missing,0,,No local X handle candidate found.
+Cursor,cursor,AI Coding,https://cursor.com,@cursor_ai,verified_official_account,100,official_website,evidence_url=https://cursor.com
+Windsurf,windsurf,AI Coding,https://windsurf.com,@windsurf,verified_official_account,100,official_website,evidence_url=https://windsurf.com
+Lovable,lovable,AI Coding,https://lovable.dev,@Lovable,verified_official_account,100,official_website,evidence_url=https://lovable.dev
+Replit,replit,AI Coding,https://replit.com,@replit,verified_official_account,100,official_website,evidence_url=https://replit.com
+Runway,runway,AI Video,https://runwayml.com,@runwayml,verified_official_account,100,official_website,evidence_url=https://runwayml.com
+Kling,kling,AI Video,https://klingai.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Kling/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Pika,pika,AI Video,https://pika.art,@pika_labs,verified_official_account,100,official_website,evidence_url=https://pika.art
+ElevenLabs,elevenlabs,AI Voice,https://elevenlabs.io,@ElevenLabs,likely_official_account,60,source_metadata,"Profile-shaped X source in data/tool-evidence-sources.json; evidence_url=https://x.com/ElevenLabs; lower confidence, not verified official."
+Midjourney,midjourney,AI Design,https://www.midjourney.com,,missing,0,,No local X handle candidate found.
+Ideogram,ideogram,AI Design,https://ideogram.ai,,missing,0,,No local X handle candidate found.
+HeyGen,heygen,AI Video,https://www.heygen.com,@HeyGen,verified_official_account,100,official_website,evidence_url=https://www.heygen.com
+Synthesia,synthesia,AI Video,https://www.synthesia.io,@synthesiaio,verified_official_account,100,official_website,evidence_url=https://www.synthesia.io
+Granola,granola,AI Workflow,https://www.granola.ai,@meetgranola,verified_official_account,100,official_website,evidence_url=https://www.granola.ai
+Notion AI,notion-ai,AI Workflow,https://www.notion.so/product/ai,@NotionHQ,verified_official_account,100,official_website,evidence_url=https://www.notion.so/product/ai
+Zapier,zapier,AI Automation,https://zapier.com,@zapier,verified_official_account,100,official_website,evidence_url=https://zapier.com
+Lindy,lindy,AI Automation,https://www.lindy.ai,@getlindy,verified_official_account,100,official_website,evidence_url=https://www.lindy.ai
+Gamma,gamma,AI Design,https://gamma.app,,missing,0,,No local X handle candidate found.
+Manus,manus,AI Agents,https://manus.im,@manusai,verified_official_account,100,official_website,evidence_url=https://manus.im
+V0,v0,AI Coding,https://v0.dev,@v0,verified_official_account,100,official_website,evidence_url=https://v0.dev
+Bolt,bolt,AI Coding,https://bolt.new,@boltdotnew,verified_official_account,100,official_website,evidence_url=https://bolt.new
+Linear,linear,AI Workflow,https://linear.app,@linear,verified_official_account,100,official_website,evidence_url=https://linear.app
+CapCut,capcut,AI Video,https://www.capcut.com,,missing,0,,No local X handle candidate found.
+Descript,descript,AI Voice,https://www.descript.com,@descript,verified_official_account,100,official_website_recovery,source_url=https://www.descript.com
+Suno,suno,AI Voice,https://suno.com,@suno,verified_official_account,100,official_website,evidence_url=https://suno.com
+Udio,udio,AI Voice,https://udio.com,,missing,0,,No local X handle candidate found.
+NotebookLM,notebooklm,AI Research,https://notebooklm.google,,missing,0,,No local X handle candidate found.
+Grok,grok,AI Agents,https://x.ai/grok,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Grok/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Tome,tome,AI Marketing,https://tome.app,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Tome/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Clay,clay,AI Marketing,https://www.clay.com,@clay,verified_official_account,100,official_website,evidence_url=https://www.clay.com
+Jasper,jasper,AI Marketing,https://www.jasper.ai,@heyjasperai,verified_official_account,100,official_website,evidence_url=https://www.jasper.ai
+Glean,glean,AI Research,https://www.glean.com,@glean,verified_official_account,100,official_website,evidence_url=https://www.glean.com
+Make,make,AI Automation,https://www.make.com,@make_hq,verified_official_account,95,official_website_recovery,source_url=https://www.make.com
+Framer AI,framer-ai,AI Design,https://www.framer.com/ai,@framer,verified_official_account,100,official_website,evidence_url=https://www.framer.com/ai
+Vercel,vercel,AI Coding,https://vercel.com,@vercel,verified_official_account,100,official_website,evidence_url=https://vercel.com
+n8n,n8n,AI Automation,https://n8n.io,@n8n_io,verified_official_account,100,official_website,evidence_url=https://n8n.io
+Apollo,apollo,AI Marketing,https://www.apollo.io,@useapolloio,verified_official_account,100,official_website,evidence_url=https://www.apollo.io
+Framer,framer,AI Design,https://www.framer.com,@framer,verified_official_account,100,official_website,evidence_url=https://www.framer.com
+Typefully,typefully,AI Marketing,https://typefully.com,,missing,0,,No local X handle candidate found.
+Slack,slack,AI Workflow,https://slack.com,@slackhq,verified_official_account,100,official_website,evidence_url=https://slack.com
+HubSpot,hubspot,AI Marketing,https://www.hubspot.com,@HubSpot,verified_official_account,100,official_website,evidence_url=https://www.hubspot.com
+Instantly,instantly,AI Marketing,https://instantly.ai,@InstantlyAI,verified_official_account,100,official_website,evidence_url=https://instantly.ai
+Taplio,taplio,AI Marketing,https://taplio.com,,missing,0,,No local X handle candidate found.
+LinkedIn,linkedin,AI Marketing,https://www.linkedin.com,,missing,0,,No local X handle candidate found.
+Google Maps,google-maps,AI Research,https://www.google.com/maps,,missing,0,,No local X handle candidate found.
+Adapt,adapt,AI Agents,https://adapt.com,@adapt,verified_official_account,100,official_website,evidence_url=https://adapt.com
+Vtuber Assistant,vtuber-assistant,AI Avatars,https://store.steampowered.com/app/4464930/Vtuber_Assistant,,missing,0,,No local X handle candidate found.
+Resumedit,resumedit,AI Writing,https://www.resumedit.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Resumedit/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Thrive Financial,thrive-financial,AI Coding,https://thrivefinancial.app,,missing,0,,No local X handle candidate found.
+MyCustodyCoach,mycustodycoach,AI Agents,https://mycustodycoach.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/MyCustodyCoach/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+FastiAds,fastiads,AI Marketing,https://www.fastiads.com,,missing,0,,No local X handle candidate found.
+UFate,ufate,AI Productivity,https://www.ufate.ai,,missing,0,,No local X handle candidate found.
+PNGMaker,pngmaker,AI Image,https://png-maker.com,@PNGMaker,verified_official_account,100,official_website,evidence_url=https://png-maker.com
+ApiPosture,apiposture,AI Coding,https://www.apiposture.com,,missing,0,,No local X handle candidate found.
+BuddyPro,buddypro,AI Productivity,https://buddypro.ai,,missing,0,,No local X handle candidate found.
+PlotStudio AI,plotstudio-ai,AI Agents,https://www.plotstudio.ai,,missing,0,,No local X handle candidate found.
+General Compute,general-compute,AI Design,https://www.generalcompute.com,,missing,0,,No local X handle candidate found.
+Franki,franki,AI Voice,https://www.chat-to-franki.com,,missing,0,,No local X handle candidate found.
+TeachQuill,teachquill,AI Education,https://teachquill.com,,missing,0,,No local X handle candidate found.
+WearMind,wearmind,AI Video,https://aishirt.app,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/WearMind/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+OpenBudget,openbudget,AI Marketing,https://openbudget.sh,,missing,0,,No local X handle candidate found.
+ImagineGo,imaginego,AI Video,https://imaginego.ai/text-to-video,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/ImagineGo/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+EduSolver,edusolver,AI Education,https://edusolver.io,,missing,0,,No local X handle candidate found.
+BeyondComments,beyondcomments,AI Video,https://beyondcomments.io,@programmerByDay,verified_official_account,100,official_website,evidence_url=https://beyondcomments.io
+BookCoversLab,bookcoverslab,AI Productivity,https://bookcoverslab.com,@BookCoversLab,verified_official_account,100,official_website,evidence_url=https://bookcoverslab.com
+NDORFlow,ndorflow,AI Productivity,https://ndorflow.app,,missing,0,,No local X handle candidate found.
+Melody Genie,melody-genie,AI Music,https://melodygenie.app,,missing,0,,No local X handle candidate found.
+AI Inspo,ai-inspo,AI Video,https://www.ai-inspo.com/video/image-to-video,@AIInspoOfficial,verified_official_account,100,official_website,evidence_url=https://www.ai-inspo.com/video/image-to-video
+MakeForm,makeform,AI Writing,https://www.makeform.ai,@_nilni,verified_official_account,100,official_website,evidence_url=https://www.makeform.ai
+Link To Text,link-to-text,AI Video,https://linktotext.co,,missing,0,,No local X handle candidate found.
+Aiter.io,aiter-io,AI Audio,https://aiter.io,@aiter_io,verified_official_account,100,official_website,evidence_url=https://aiter.io
+Dokie,dokie,AI Agents,https://dokie.ai,,missing,0,,No local X handle candidate found.
+CatDoes,catdoes,AI Agents,https://catdoes.com,@catdoeshq,verified_official_account,100,official_website,evidence_url=https://catdoes.com
+WebZum,webzum,AI Meeting,https://webzum.com,,missing,0,,No local X handle candidate found.
+FliesReplies,fliesreplies,AI Voice,https://www.fliesreplies.com,@fliesreplies,verified_official_account,100,official_website,evidence_url=https://www.fliesreplies.com
+Vismint,vismint,AI Image,https://vismint.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Vismint/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Gamelabs Studio,gamelabs-studio,AI Productivity,https://gamelabstudio.co,,missing,0,,No local X handle candidate found.
+ShortsMate,shortsmate,AI Video,https://shortsmate.ai,,missing,0,,No local X handle candidate found.
+Asteroid AI,asteroid-ai,AI Agents,https://asteroid.ai,@asteroid_inc,verified_official_account,100,official_website,evidence_url=https://asteroid.ai
+Adrian,adrian,AI Agents,https://github.com/secureagentics/Adrian,,missing,0,,No local X handle candidate found.
+CEOfriend,ceofriend,AI Productivity,https://www.ceofriend.ai,,missing,0,,No local X handle candidate found.
+Distill.cv,distill-cv,AI Writing,https://distill.cv,,missing,0,,No local X handle candidate found.
+Elevoi,elevoi,AI Productivity,https://elevoi.ca,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Elevoi/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Image3D AI,image3d-ai,AI Image,https://www.aiimageto3d.com,,missing,0,,No local X handle candidate found.
+LyricMV,lyricmv,AI Video,https://lyricmv.com,@lyricmvofficia,verified_official_account,100,official_website,evidence_url=https://lyricmv.com
+Matrix Coder,matrix-coder,AI Coding,https://matrixcoder.io,,missing,0,,No local X handle candidate found.
+Notis,notis,AI Agents,https://notis.ai,@mindtheflo,verified_official_account,100,official_website,evidence_url=https://notis.ai
+Thumbs AI,thumbs-ai,AI Video,https://www.thumbs.ai,,missing,0,,No local X handle candidate found.
+HomeRestyle AI,homerestyle-ai,AI Design,https://www.homerestyle.ai,@HomeRestyle_ai,verified_official_account,100,official_website,evidence_url=https://www.homerestyle.ai
+VideoSwap.app,videoswap-app,AI Video,https://www.videoswap.app,,missing,0,,No local X handle candidate found.
+SocialClip Studio,socialclip-studio,AI Video,https://socialclipstudio.com,,missing,0,,No local X handle candidate found.
+AppDeploy,appdeploy,AI Productivity,https://appdeploy.ai,@appdeployai,verified_official_account,100,official_website,evidence_url=https://appdeploy.ai
+Coursebox,coursebox,AI Productivity,https://www.coursebox.ai,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/ai/coursebox/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+remio,remio,AI Research,https://www.remio.ai,@remio_ai,verified_official_account,100,official_website,evidence_url=https://www.remio.ai
+Baby Magic,baby-magic,AI Video,https://www.babymagic.app/ai-baby-image,,missing,0,,No local X handle candidate found.
+BetterSpace,betterspace,AI Video,https://www.betterspace.ai,@betterspaceai,verified_official_account,100,official_website,evidence_url=https://www.betterspace.ai
+GeekLink,geeklink,AI Video,https://geeklink.dev,@florawang_1,verified_official_account,100,official_website,evidence_url=https://geeklink.dev
+HitPublish,hitpublish,AI Productivity,https://www.hitpublish.ai,,missing,0,,No local X handle candidate found.
+Audio Transcriber AI,audio-transcriber-ai,AI Voice,https://audiotranscriber.io,@AudiotoTextAI,verified_official_account,100,official_website,evidence_url=https://audiotranscriber.io
+GlobalPayEX,globalpayex,AI Automation,https://globalpayex.com,@GlobalPayEX,verified_official_account,100,official_website,evidence_url=https://globalpayex.com
+Ask Bishop,ask-bishop,AI Agents,https://askbishop.app,,missing,0,,No local X handle candidate found.
+Quorlyx Pro,quorlyx-pro,AI Agents,https://quorlyx.dev,,missing,0,,No local X handle candidate found.
+Scavio AI,scavio-ai,AI Coding,https://scavio.dev,,missing,0,,No local X handle candidate found.
+Rift,rift,AI Coding,https://rift-code.com,,missing,0,,No local X handle candidate found.
+DineCraft,dinecraft,AI Design,https://www.dinecraft.app,,missing,0,,No local X handle candidate found.
+Teneks,teneks,AI Sales,https://www.teneks.ai,,missing,0,,No local X handle candidate found.
+WebCrawler API,webcrawler-api,AI Coding,https://webcrawlerapi.com,@Webcrawlerapihq,verified_official_account,100,official_website,evidence_url=https://webcrawlerapi.com
+Team Pulse,team-pulse,AI Design,https://goteampulse.io,,missing,0,,No local X handle candidate found.
+Browserbeam,browserbeam,AI Coding,https://browserbeam.com,,missing,0,,No local X handle candidate found.
+AuthentaLink,authentalink,AI Productivity,https://authentalink.com,,missing,0,,No local X handle candidate found.
+Unframe AI,unframe-ai,AI Productivity,https://www.unframe.ai,@UnframeAI,verified_official_account,100,official_website,evidence_url=https://www.unframe.ai
+Introvrs,introvrs,AI Productivity,https://www.introvrs.com,,missing,0,,No local X handle candidate found.
+ModelAtlas,modelatlas,AI Infrastructure,https://modelatlas.net,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/ModelAtlas/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+TextSongAI.com,textsongai-com,AI Music,https://www.textsongai.com,,missing,0,,No local X handle candidate found.
+Nomie,nomie,AI Productivity,https://apps.apple.com/us/app/nomie-doomscrolling-break/id6757396354,,missing,0,,No local X handle candidate found.
+Clocsy,clocsy,AI Marketing,https://clocsy.com,,missing,0,,No local X handle candidate found.
+Pounce,pounce,AI Marketing,https://www.pounce.so,,missing,0,,No local X handle candidate found.
+FaceHub AI,facehub-ai,AI Image,https://www.facehub.ai,,missing,0,,No local X handle candidate found.
+CloudContact AI,cloudcontact-ai,AI Automation,https://cloudcontactai.com,@cloudcontactai,verified_official_account,100,official_website,evidence_url=https://cloudcontactai.com
+UGO,ugo,AI Writing,https://try-ugo.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/UGO/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+AI Product Photography.app,ai-product-photography-app,AI Image,https://aiproductphotography.app,,missing,0,,No local X handle candidate found.
+MusVideo,musvideo,AI Video,https://musvideo.ai,,missing,0,,No local X handle candidate found.
+PatentFig AI,patentfig-ai,AI Image,https://patentfig.ai,@ChenDavie_AI,verified_official_account,100,official_website,evidence_url=https://patentfig.ai
+Silky AI,silky-ai,AI Productivity,https://www.aihair.life,,missing,0,,No local X handle candidate found.
+InstantTranscriber,instanttranscriber,AI Video,https://instanttranscriber.com,,missing,0,,No local X handle candidate found.
+MagicReels,magicreels,AI Image,https://magicreels.media,,missing,0,,No local X handle candidate found.
+Vidlogi,vidlogi,AI Video,https://www.vidlogi.com/en,,missing,0,,No local X handle candidate found.
+Sunny by Sunburnt AI,sunny-by-sunburnt-ai,AI Agents,https://sunburntai.com.au/sunny-agentic-ai-operating-system,,missing,0,,No local X handle candidate found.
+Floot,floot,AI Coding,https://floot.com,@floothq,verified_official_account,100,official_website,evidence_url=https://floot.com
+AI Landscape Design by Yuzu,ai-landscape-design-by-yuzu,AI Writing,https://yuzudesign.ai/landscape-design-ai,,missing,0,,No local X handle candidate found.
+Koinonos,koinonos,AI Agents,https://www.koinonos.app,,missing,0,,No local X handle candidate found.
+DebaterX,debaterx,AI Video,https://www.debaterx.app,,missing,0,,No local X handle candidate found.
+Subquadratic,subquadratic,AI Productivity,https://subq.ai,@subquadratic,verified_official_account,100,official_website,evidence_url=https://subq.ai
+Ozigi,ozigi,AI Audio,https://ozigi.app,,missing,0,,No local X handle candidate found.
+Rundown,rundown,AI Video,https://getrundown.xyz,,missing,0,,No local X handle candidate found.
+Whisper Web,whisper-web,AI Voice,https://whisperweb.tech,,missing,0,,No local X handle candidate found.
+Prosed,prosed,AI Writing,https://tryprosed.com,,missing,0,,No local X handle candidate found.
+Ask the Record,ask-the-record,AI Agents,https://www.asktherecord.com,,missing,0,,No local X handle candidate found.
+AstroCarto,astrocarto,AI Productivity,https://astrocarto.net,,missing,0,,No local X handle candidate found.
+OptiHedge,optihedge,AI Productivity,https://optihedge.ai,,missing,0,,No local X handle candidate found.
+SongMuse AI,songmuse-ai,AI Music,https://songmuse.art,,missing,0,,No local X handle candidate found.
+AI Image 2 Video,ai-image-2-video,AI Video,https://aiimage2video.pro,,missing,0,,No local X handle candidate found.
+SpeedPainter,speedpainter,AI Video,https://www.speedpainter.org/en,,missing,0,,No local X handle candidate found.
+RFP.ai,rfp-ai,AI Coding,https://rfp.ai,,missing,0,,No local X handle candidate found.
+Live Like The River,live-like-the-river,AI Productivity,https://www.liveliketheriver.com,,missing,0,,No local X handle candidate found.
+Solyo,solyo,AI Productivity,https://solyo.ai,@solyo_official,verified_official_account,100,official_website,evidence_url=https://solyo.ai
+GroundScholar,groundscholar,AI Productivity,https://groundscholar.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/GroundScholar/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+AirMusic,airmusic,AI Video,https://airmusic.ai/ai-music-video-generator,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/AirMusic/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Paraspeech,paraspeech,AI Voice,https://paraspeech.com,,missing,0,,No local X handle candidate found.
+Babelbeez,babelbeez,AI Voice,https://www.babelbeez.com,@babelbeez,verified_official_account,100,official_website,evidence_url=https://www.babelbeez.com
+Vertech Academy,vertech-academy,AI Research,https://www.vertechacademy.ca,,missing,0,,No local X handle candidate found.
+Vireel AI Image to Video Generator,vireel-ai-image-to-video-generator,AI Video,https://vireels.ai/ai-image-to-video,,missing,0,,No local X handle candidate found.
+AI Aware,ai-aware,AI Video,https://aiaware.io,,missing,0,,No local X handle candidate found.
+MadeFine AI,madefine-ai,AI Automation,https://madefine.ai,,missing,0,,No local X handle candidate found.
+Lyric Remix Studio,lyric-remix-studio,AI Voice,https://lyricremixgemini.iacolettisoftware.com,,missing,0,,No local X handle candidate found.
+NestTrack,nesttrack,AI Productivity,https://www.nesttrack.xyz,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/NestTrack/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+DashJob AI,dashjob-ai,AI Search,https://dashjob.ai,,missing,0,,No local X handle candidate found.
+LobbyStack,lobbystack,AI Productivity,https://lobbystack.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/LobbyStack/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+VibeBot,vibebot,AI Coding,https://www.vibebot.gg,@vibebot_gg,verified_official_account,100,official_website,evidence_url=https://www.vibebot.gg
+Saveto AI,saveto-ai,AI Video,https://saveto.ai/instagram-transcript-generator,@saveto_ai,verified_official_account,100,official_website,evidence_url=https://saveto.ai/instagram-transcript-generator
+DescribeThat,describethat,AI Image,https://describethatclaude.iacolettisoftware.com,,missing,0,,No local X handle candidate found.
+ColorJibe,colorjibe,AI Productivity,https://colorjibe.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/ColorJibe/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Vdoo AI,vdoo-ai,AI Video,https://vdoo.ai/image-to-video,,missing,0,,No local X handle candidate found.
+Kairval,kairval,AI Video,https://kairval.com/ai/text-to-video,@kairval,verified_official_account,100,official_website,evidence_url=https://kairval.com/ai/text-to-video
+Himedia,himedia,AI Video,https://himedia.ai/image-to-video,,missing,0,,No local X handle candidate found.
+Vidnix,vidnix,AI Video,https://vidnix.ai/image-to-video,,missing,0,,No local X handle candidate found.
+AI Photo Editor,ai-photo-editor,AI Image,https://aiphotoeditor.io,,missing,0,,No local X handle candidate found.
+Epochal,epochal,AI Video,https://epochal.app,@epochal_app,verified_official_account,100,official_website,evidence_url=https://epochal.app
+Viyou AI Motion Control,viyou-ai-motion-control,AI Video,https://viyou.ai/ai-motion-control,@viyouAI,verified_official_account,100,official_website,evidence_url=https://viyou.ai/ai-motion-control
+PAI,pai,AI Video,https://www.utopaistudios.com/waitlist,,missing,0,,No local X handle candidate found.
+Creen AI,creen-ai,AI Video,https://www.creen.ai,,missing,0,,No local X handle candidate found.
+AI Kiss,ai-kiss,AI Video,https://aikiss.art,,missing,0,,No local X handle candidate found.
+Vidflux,vidflux,AI Video,https://vidflux.ai/video-effect/ai-bikini-video-generator,,missing,0,,No local X handle candidate found.
+VoooAI,voooai,AI Customer Support,https://voooai.com,,missing,0,,No local X handle candidate found.
+Music Video Generator,music-video-generator,AI Video,https://musicvideogenerator.app,,missing,0,,No local X handle candidate found.
+CleanVideoAI Watermark Removal,cleanvideoai-watermark-removal,AI Video,https://www.videowatermarkremove.com,,missing,0,,No local X handle candidate found.
+Tendem,tendem,AI Agents,https://tendem.ai,@Tendem_AI,verified_official_account,100,official_website,evidence_url=https://tendem.ai
+Rusheslab,rusheslab,AI Meeting,https://rusheslab.ai,,missing,0,,No local X handle candidate found.
+Fineshare Sora Watermark Remover,fineshare-sora-watermark-remover,AI Video,https://www.fineshare.net/ai-video/sora-watermark-remover,,missing,0,,No local X handle candidate found.
+Verdent,verdent,AI Coding,https://www.verdent.ai/?ots=theresanaiforthat,@verdent_ai,verified_official_account,100,official_website,evidence_url=https://www.verdent.ai/?ots=theresanaiforthat
+MixMaster Pro,mixmaster-pro,AI Audio,https://mixmasterpro.io,,missing,0,,No local X handle candidate found.
+Slidely AI (backed by YC),slidely-ai-backed-by-yc,AI Marketing,https://slidely.ai,,missing,0,,No local X handle candidate found.
+GeoInfer,geoinfer,AI Image,https://geoinfer.com/en,@geoinfer,verified_official_account,100,official_website,evidence_url=https://geoinfer.com/en
+Rocket,rocket,AI Coding,https://www.rocket.new,@rocketdotnew,verified_official_account,100,official_website,evidence_url=https://www.rocket.new
+Base44,base44,AI Coding,https://base44.pxf.io/c/6410050/2477538/25619?trafcat=hp,,missing,0,,No local X handle candidate found.
+biela.dev,biela-dev,AI Coding,https://biela.dev,,missing,0,,No local X handle candidate found.
+Unblur Image by Uluch,unblur-image-by-uluch,AI Image,https://uluch.com,,missing,0,,No local X handle candidate found.
+VoxDeck,voxdeck,AI Productivity,https://www.voxdeck.ai,@voxdeckai,verified_official_account,100,official_website,evidence_url=https://www.voxdeck.ai
+EzSolve,ezsolve,AI Education,https://plou.eu/product/mobile/ezsolve,@puresoftlabs,verified_official_account,100,official_website,evidence_url=https://plou.eu/product/mobile/ezsolve
+Singify AI Vocal Remover,singify-ai-vocal-remover,AI Music,https://singify.co/vocal-remover,,missing,0,,No local X handle candidate found.
+V03 AI Video Generator,v03-ai-video-generator,AI Video,https://v03ai.com,,missing,0,,No local X handle candidate found.
+Redesignr Ai,redesignr-ai,AI Writing,https://redesignr.ai,,missing,0,,No local X handle candidate found.
+PrometAI,prometai,AI Productivity,https://prometai.app/business-plan-templates,,missing,0,,No local X handle candidate found.
+Archie,archie,AI Coding,https://www.archie.com,,missing,0,,No local X handle candidate found.
+Marblism,marblism,AI Productivity,https://www.marblism.com,,missing,0,,No local X handle candidate found.
+PixieBrix,pixiebrix,AI Productivity,https://www.pixiebrix.com,@pixiebrix,verified_official_account,100,official_website,evidence_url=https://www.pixiebrix.com
+Osum,osum,AI Search,https://osum.com,,missing,0,,No local X handle candidate found.
+Venturekit,venturekit,AI Productivity,https://www.venturekit.ai,,missing,0,,No local X handle candidate found.
+Photo AI,photo-ai,AI Video,https://photoai.com,@levelsio,verified_official_account,100,official_website,evidence_url=https://photoai.com
+MyReport,myreport,AI Analytics,https://myreport.alaba.ai,,missing,0,,No local X handle candidate found.
+ResolveAI,resolveai,AI Agents,https://resolveai.co,,missing,0,,No local X handle candidate found.
+Eightify,eightify,AI Video,https://www.eightify.app,,missing,0,,No local X handle candidate found.
+KeywordSearch,keywordsearch,AI Video,https://www.keywordsearch.com,,missing,0,,No local X handle candidate found.
+Stockimg AI,stockimg-ai,AI Image,https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral,@stockimgAI,verified_official_account,100,official_website,evidence_url=https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral
+GetLogit,getlogit,AI Writing,https://getlogit.com,,missing,0,,No local X handle candidate found.
+Veriff,veriff,AI Productivity,https://www.veriff.com/plans/self-serve?promo=taaft15,@Veriff,verified_official_account,100,official_website,evidence_url=https://www.veriff.com/plans/self-serve?promo=taaft15
+lxi.ai,lxi-ai,AI Research,https://lxi.ai,,missing,0,,No local X handle candidate found.
+Pfpmaker,pfpmaker,AI Image,https://pfpmaker.com,@pfpmakerapp,verified_official_account,100,official_website,evidence_url=https://pfpmaker.com
+QuillBot,quillbot,AI Agents,https://quillbot.com,@thequillbot,verified_official_account,100,official_website,evidence_url=https://quillbot.com
+Raplyrics,raplyrics,AI Music,https://raplyrics.eu,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Raplyrics/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+Fetcher,fetcher,AI Sales,https://fetcher.ai,@fetcherai,verified_official_account,100,official_website,evidence_url=https://fetcher.ai
+Watermelon,watermelon,AI Agents,https://www.watermelon.ai,@watermelonhq,verified_official_account,100,official_website,evidence_url=https://www.watermelon.ai
+Inbenta,inbenta,AI Search,https://www.inbenta.com,@inbenta,verified_official_account,100,official_website,evidence_url=https://www.inbenta.com
+DigitalGenius,digitalgenius,AI Customer Support,https://digitalgenius.com,@DigitalGeniusAI,verified_official_account,100,official_website,evidence_url=https://digitalgenius.com
+B12 AI Website Builder,b12-ai-website-builder,AI Design,https://www.b12.io/free-draft,,missing,0,,No local X handle candidate found.
+remove.bg,remove-bg,AI Image,https://www.remove.bg,@remove_bg,verified_official_account,100,official_website,evidence_url=https://www.remove.bg
+Skillroads,skillroads,AI Search,https://skillroads.com,@skillroads,verified_official_account,100,official_website,evidence_url=https://skillroads.com
+Kavout,kavout,AI Search,https://www.kavout.com/?fpr=whatshuang,,missing,0,,No local X handle candidate found.
+AssemblyAI,assemblyai,AI Voice,https://www.assemblyai.com,,missing,0,,No local X handle candidate found.
+Riskified,riskified,AI Marketing,https://www.riskified.com,@theresanaiforit,shared_source_account_excluded,80,taaft,evidence_url=https://theresanaiforthat.com/s/Riskified/ Handle is reused across multiple tools and marked excluded by shared-x-handles audit.
+DataRobot,datarobot,AI Productivity,https://www.datarobot.com,,missing,0,,No local X handle candidate found.
+H2O.ai,h2o-ai,AI Infrastructure,https://h2o.ai,@h2oai,verified_official_account,100,official_website,evidence_url=https://h2o.ai
+Deep Beat,deep-beat,AI Music,https://deepbeat.org,,missing,0,,No local X handle candidate found.
+AI,ai,AI Writing,https://ai-writer.com,,missing,0,,No local X handle candidate found.
+Deepdreamgenerator,deepdreamgenerator,AI Image,https://deepdreamgenerator.com/generate,,missing,0,,No local X handle candidate found.

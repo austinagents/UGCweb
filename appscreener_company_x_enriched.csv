@@ -1,0 +1,228 @@
+name,slug,category,websiteUrl,company_x_handle,company_x_url,source,evidence_url,confidence,notes
+ChatGPT,chatgpt,AI Agents,https://chat.openai.com,,,,,0,No clear company X account found.
+Claude,claude,AI Agents,https://claude.ai,,,,,0,No clear company X account found.
+Perplexity,perplexity,AI Research,https://www.perplexity.ai,,,,,0,No clear company X account found.
+Cursor,cursor,AI Coding,https://cursor.com,cursor_ai,https://x.com/cursor_ai,official_website,https://cursor.com,100,
+Windsurf,windsurf,AI Coding,https://windsurf.com,windsurf,https://x.com/windsurf,official_website,https://windsurf.com,100,
+Lovable,lovable,AI Coding,https://lovable.dev,Lovable,https://x.com/Lovable,official_website,https://lovable.dev,100,
+Replit,replit,AI Coding,https://replit.com,replit,https://x.com/replit,official_website,https://replit.com,100,
+Runway,runway,AI Video,https://runwayml.com,runwayml,https://x.com/runwayml,official_website,https://runwayml.com,100,
+Kling,kling,AI Video,https://klingai.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Kling/,80,
+Pika,pika,AI Video,https://pika.art,pika_labs,https://x.com/pika_labs,official_website,https://pika.art,100,
+ElevenLabs,elevenlabs,AI Voice,https://elevenlabs.io,,,,,0,No clear company X account found.
+Midjourney,midjourney,AI Design,https://www.midjourney.com,,,,,0,No clear company X account found.
+Ideogram,ideogram,AI Design,https://ideogram.ai,,,,,0,No clear company X account found.
+HeyGen,heygen,AI Video,https://www.heygen.com,HeyGen,https://x.com/HeyGen,official_website,https://www.heygen.com,100,
+Synthesia,synthesia,AI Video,https://www.synthesia.io,synthesiaio,https://x.com/synthesiaio,official_website,https://www.synthesia.io,100,
+Granola,granola,AI Workflow,https://www.granola.ai,meetgranola,https://x.com/meetgranola,official_website,https://www.granola.ai,100,
+Notion AI,notion-ai,AI Workflow,https://www.notion.so/product/ai,NotionHQ,https://x.com/NotionHQ,official_website,https://www.notion.so/product/ai,100,
+Zapier,zapier,AI Automation,https://zapier.com,zapier,https://x.com/zapier,official_website,https://zapier.com,100,
+Lindy,lindy,AI Automation,https://www.lindy.ai,getlindy,https://x.com/getlindy,official_website,https://www.lindy.ai,100,
+Gamma,gamma,AI Design,https://gamma.app,,,,,0,No clear company X account found.
+Manus,manus,AI Agents,https://manus.im,manusai,https://x.com/manusai,official_website,https://manus.im,100,
+V0,v0,AI Coding,https://v0.dev,v0,https://x.com/v0,official_website,https://v0.dev,100,
+Bolt,bolt,AI Coding,https://bolt.new,boltdotnew,https://x.com/boltdotnew,official_website,https://bolt.new,100,
+Linear,linear,AI Workflow,https://linear.app,linear,https://x.com/linear,official_website,https://linear.app,100,
+CapCut,capcut,AI Video,https://www.capcut.com,,,,,0,No clear company X account found.
+Descript,descript,AI Voice,https://www.descript.com,,,,,0,No clear company X account found.
+Suno,suno,AI Voice,https://suno.com,suno,https://x.com/suno,official_website,https://suno.com,100,
+Udio,udio,AI Voice,https://udio.com,,,,,0,No clear company X account found.
+NotebookLM,notebooklm,AI Research,https://notebooklm.google,,,,,0,No clear company X account found.
+Grok,grok,AI Agents,https://x.ai/grok,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Grok/,80,
+Tome,tome,AI Marketing,https://tome.app,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Tome/,80,
+Clay,clay,AI Marketing,https://www.clay.com,clay,https://x.com/clay,official_website,https://www.clay.com,100,
+Jasper,jasper,AI Marketing,https://www.jasper.ai,heyjasperai,https://x.com/heyjasperai,official_website,https://www.jasper.ai,100,
+Glean,glean,AI Research,https://www.glean.com,glean,https://x.com/glean,official_website,https://www.glean.com,100,
+Make,make,AI Automation,https://www.make.com,,,,,0,No clear company X account found.
+Framer AI,framer-ai,AI Design,https://www.framer.com/ai,framer,https://x.com/framer,official_website,https://www.framer.com/ai,100,
+Vercel,vercel,AI Coding,https://vercel.com,vercel,https://x.com/vercel,official_website,https://vercel.com,100,
+n8n,n8n,AI Automation,https://n8n.io,n8n_io,https://x.com/n8n_io,official_website,https://n8n.io,100,
+Apollo,apollo,AI Marketing,https://www.apollo.io,useapolloio,https://x.com/useapolloio,official_website,https://www.apollo.io,100,
+Framer,framer,AI Design,https://www.framer.com,framer,https://x.com/framer,official_website,https://www.framer.com,100,
+Typefully,typefully,AI Marketing,https://typefully.com,,,,,0,No clear company X account found.
+Slack,slack,AI Workflow,https://slack.com,slackhq,https://x.com/slackhq,official_website,https://slack.com,100,
+HubSpot,hubspot,AI Marketing,https://www.hubspot.com,HubSpot,https://x.com/HubSpot,official_website,https://www.hubspot.com,100,
+Instantly,instantly,AI Marketing,https://instantly.ai,InstantlyAI,https://x.com/InstantlyAI,official_website,https://instantly.ai,100,
+Taplio,taplio,AI Marketing,https://taplio.com,,,,,0,No clear company X account found.
+LinkedIn,linkedin,AI Marketing,https://www.linkedin.com,,,,,0,No clear company X account found.
+Google Maps,google-maps,AI Research,https://www.google.com/maps,,,,,0,No clear company X account found.
+Adapt,adapt,AI Agents,https://adapt.com,adapt,https://x.com/adapt,official_website,https://adapt.com,100,
+Vtuber Assistant,vtuber-assistant,AI Avatars,https://store.steampowered.com/app/4464930/Vtuber_Assistant,,,,,0,No clear company X account found.
+Resumedit,resumedit,AI Writing,https://www.resumedit.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Resumedit/,80,
+Thrive Financial,thrive-financial,AI Coding,https://thrivefinancial.app,,,,,0,No clear company X account found.
+MyCustodyCoach,mycustodycoach,AI Agents,https://mycustodycoach.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/MyCustodyCoach/,80,
+FastiAds,fastiads,AI Marketing,https://www.fastiads.com,,,,,0,No clear company X account found.
+UFate,ufate,AI Productivity,https://www.ufate.ai,,,,,0,No clear company X account found.
+PNGMaker,pngmaker,AI Image,https://png-maker.com,PNGMaker,https://x.com/PNGMaker,official_website,https://png-maker.com,100,
+ApiPosture,apiposture,AI Coding,https://www.apiposture.com,,,,,0,No clear company X account found.
+BuddyPro,buddypro,AI Productivity,https://buddypro.ai,,,,,0,No clear company X account found.
+PlotStudio AI,plotstudio-ai,AI Agents,https://www.plotstudio.ai,,,,,0,No clear company X account found.
+General Compute,general-compute,AI Design,https://www.generalcompute.com,,,,,0,No clear company X account found.
+Franki,franki,AI Voice,https://www.chat-to-franki.com,,,,,0,No clear company X account found.
+TeachQuill,teachquill,AI Education,https://teachquill.com,,,,,0,No clear company X account found.
+WearMind,wearmind,AI Video,https://aishirt.app,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/WearMind/,80,
+OpenBudget,openbudget,AI Marketing,https://openbudget.sh,,,,,0,No clear company X account found.
+ImagineGo,imaginego,AI Video,https://imaginego.ai/text-to-video,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/ImagineGo/,80,
+EduSolver,edusolver,AI Education,https://edusolver.io,,,,,0,No clear company X account found.
+BeyondComments,beyondcomments,AI Video,https://beyondcomments.io,programmerByDay,https://x.com/programmerByDay,official_website,https://beyondcomments.io,100,
+BookCoversLab,bookcoverslab,AI Productivity,https://bookcoverslab.com,BookCoversLab,https://x.com/BookCoversLab,official_website,https://bookcoverslab.com,100,
+NDORFlow,ndorflow,AI Productivity,https://ndorflow.app,,,,,0,No clear company X account found.
+Melody Genie,melody-genie,AI Music,https://melodygenie.app,,,,,0,No clear company X account found.
+AI Inspo,ai-inspo,AI Video,https://www.ai-inspo.com/video/image-to-video,AIInspoOfficial,https://x.com/AIInspoOfficial,official_website,https://www.ai-inspo.com/video/image-to-video,100,
+MakeForm,makeform,AI Writing,https://www.makeform.ai,_nilni,https://x.com/_nilni,official_website,https://www.makeform.ai,100,
+Link To Text,link-to-text,AI Video,https://linktotext.co,,,,,0,No clear company X account found.
+Aiter.io,aiter-io,AI Audio,https://aiter.io,aiter_io,https://x.com/aiter_io,official_website,https://aiter.io,100,
+Dokie,dokie,AI Agents,https://dokie.ai,,,,,0,No clear company X account found.
+CatDoes,catdoes,AI Agents,https://catdoes.com,catdoeshq,https://x.com/catdoeshq,official_website,https://catdoes.com,100,
+WebZum,webzum,AI Meeting,https://webzum.com,,,,,0,No clear company X account found.
+FliesReplies,fliesreplies,AI Voice,https://www.fliesreplies.com,fliesreplies,https://x.com/fliesreplies,official_website,https://www.fliesreplies.com,100,
+Vismint,vismint,AI Image,https://vismint.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Vismint/,80,
+Gamelabs Studio,gamelabs-studio,AI Productivity,https://gamelabstudio.co,,,,,0,No clear company X account found.
+ShortsMate,shortsmate,AI Video,https://shortsmate.ai,,,,,0,No clear company X account found.
+Asteroid AI,asteroid-ai,AI Agents,https://asteroid.ai,asteroid_inc,https://x.com/asteroid_inc,official_website,https://asteroid.ai,100,
+Adrian,adrian,AI Agents,https://github.com/secureagentics/Adrian,,,,,0,No clear company X account found.
+CEOfriend,ceofriend,AI Productivity,https://www.ceofriend.ai,,,,,0,No clear company X account found.
+Distill.cv,distill-cv,AI Writing,https://distill.cv,,,,,0,No clear company X account found.
+Elevoi,elevoi,AI Productivity,https://elevoi.ca,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Elevoi/,80,
+Image3D AI,image3d-ai,AI Image,https://www.aiimageto3d.com,,,,,0,No clear company X account found.
+LyricMV,lyricmv,AI Video,https://lyricmv.com,lyricmvofficia,https://x.com/lyricmvofficia,official_website,https://lyricmv.com,100,
+Matrix Coder,matrix-coder,AI Coding,https://matrixcoder.io,,,,,0,No clear company X account found.
+Notis,notis,AI Agents,https://notis.ai,mindtheflo,https://x.com/mindtheflo,official_website,https://notis.ai,100,
+Thumbs AI,thumbs-ai,AI Video,https://www.thumbs.ai,,,,,0,No clear company X account found.
+HomeRestyle AI,homerestyle-ai,AI Design,https://www.homerestyle.ai,HomeRestyle_ai,https://x.com/HomeRestyle_ai,official_website,https://www.homerestyle.ai,100,
+VideoSwap.app,videoswap-app,AI Video,https://www.videoswap.app,,,,,0,No clear company X account found.
+SocialClip Studio,socialclip-studio,AI Video,https://socialclipstudio.com,,,,,0,No clear company X account found.
+AppDeploy,appdeploy,AI Productivity,https://appdeploy.ai,appdeployai,https://x.com/appdeployai,official_website,https://appdeploy.ai,100,
+Coursebox,coursebox,AI Productivity,https://www.coursebox.ai,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/ai/coursebox/,80,
+remio,remio,AI Research,https://www.remio.ai,remio_ai,https://x.com/remio_ai,official_website,https://www.remio.ai,100,
+Baby Magic,baby-magic,AI Video,https://www.babymagic.app/ai-baby-image,,,,,0,No clear company X account found.
+BetterSpace,betterspace,AI Video,https://www.betterspace.ai,betterspaceai,https://x.com/betterspaceai,official_website,https://www.betterspace.ai,100,
+GeekLink,geeklink,AI Video,https://geeklink.dev,florawang_1,https://x.com/florawang_1,official_website,https://geeklink.dev,100,
+HitPublish,hitpublish,AI Productivity,https://www.hitpublish.ai,,,,,0,No clear company X account found.
+Audio Transcriber AI,audio-transcriber-ai,AI Voice,https://audiotranscriber.io,AudiotoTextAI,https://x.com/AudiotoTextAI,official_website,https://audiotranscriber.io,100,
+GlobalPayEX,globalpayex,AI Automation,https://globalpayex.com,GlobalPayEX,https://x.com/GlobalPayEX,official_website,https://globalpayex.com,100,
+Ask Bishop,ask-bishop,AI Agents,https://askbishop.app,,,,,0,No clear company X account found.
+Quorlyx Pro,quorlyx-pro,AI Agents,https://quorlyx.dev,,,,,0,No clear company X account found.
+Scavio AI,scavio-ai,AI Coding,https://scavio.dev,,,,,0,No clear company X account found.
+Rift,rift,AI Coding,https://rift-code.com,,,,,0,No clear company X account found.
+DineCraft,dinecraft,AI Design,https://www.dinecraft.app,,,,,0,No clear company X account found.
+Teneks,teneks,AI Sales,https://www.teneks.ai,,,,,0,No clear company X account found.
+WebCrawler API,webcrawler-api,AI Coding,https://webcrawlerapi.com,Webcrawlerapihq,https://x.com/Webcrawlerapihq,official_website,https://webcrawlerapi.com,100,
+Team Pulse,team-pulse,AI Design,https://goteampulse.io,,,,,0,No clear company X account found.
+Browserbeam,browserbeam,AI Coding,https://browserbeam.com,,,,,0,No clear company X account found.
+AuthentaLink,authentalink,AI Productivity,https://authentalink.com,,,,,0,No clear company X account found.
+Unframe AI,unframe-ai,AI Productivity,https://www.unframe.ai,UnframeAI,https://x.com/UnframeAI,official_website,https://www.unframe.ai,100,
+Introvrs,introvrs,AI Productivity,https://www.introvrs.com,,,,,0,No clear company X account found.
+ModelAtlas,modelatlas,AI Infrastructure,https://modelatlas.net,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/ModelAtlas/,80,
+TextSongAI.com,textsongai-com,AI Music,https://www.textsongai.com,,,,,0,No clear company X account found.
+Nomie,nomie,AI Productivity,https://apps.apple.com/us/app/nomie-doomscrolling-break/id6757396354,,,,,0,No clear company X account found.
+Clocsy,clocsy,AI Marketing,https://clocsy.com,,,,,0,No clear company X account found.
+Pounce,pounce,AI Marketing,https://www.pounce.so,,,,,0,No clear company X account found.
+FaceHub AI,facehub-ai,AI Image,https://www.facehub.ai,,,,,0,No clear company X account found.
+CloudContact AI,cloudcontact-ai,AI Automation,https://cloudcontactai.com,cloudcontactai,https://x.com/cloudcontactai,official_website,https://cloudcontactai.com,100,
+UGO,ugo,AI Writing,https://try-ugo.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/UGO/,80,
+AI Product Photography.app,ai-product-photography-app,AI Image,https://aiproductphotography.app,,,,,0,No clear company X account found.
+MusVideo,musvideo,AI Video,https://musvideo.ai,,,,,0,No clear company X account found.
+PatentFig AI,patentfig-ai,AI Image,https://patentfig.ai,ChenDavie_AI,https://x.com/ChenDavie_AI,official_website,https://patentfig.ai,100,
+Silky AI,silky-ai,AI Productivity,https://www.aihair.life,,,,,0,No clear company X account found.
+InstantTranscriber,instanttranscriber,AI Video,https://instanttranscriber.com,,,,,0,No clear company X account found.
+MagicReels,magicreels,AI Image,https://magicreels.media,,,,,0,No clear company X account found.
+Vidlogi,vidlogi,AI Video,https://www.vidlogi.com/en,,,,,0,No clear company X account found.
+Sunny by Sunburnt AI,sunny-by-sunburnt-ai,AI Agents,https://sunburntai.com.au/sunny-agentic-ai-operating-system,,,,,0,No clear company X account found.
+Floot,floot,AI Coding,https://floot.com,floothq,https://x.com/floothq,official_website,https://floot.com,100,
+AI Landscape Design by Yuzu,ai-landscape-design-by-yuzu,AI Writing,https://yuzudesign.ai/landscape-design-ai,,,,,0,No clear company X account found.
+Koinonos,koinonos,AI Agents,https://www.koinonos.app,,,,,0,No clear company X account found.
+DebaterX,debaterx,AI Video,https://www.debaterx.app,,,,,0,No clear company X account found.
+Subquadratic,subquadratic,AI Productivity,https://subq.ai,subquadratic,https://x.com/subquadratic,official_website,https://subq.ai,100,
+Ozigi,ozigi,AI Audio,https://ozigi.app,,,,,0,No clear company X account found.
+Rundown,rundown,AI Video,https://getrundown.xyz,,,,,0,No clear company X account found.
+Whisper Web,whisper-web,AI Voice,https://whisperweb.tech,,,,,0,No clear company X account found.
+Prosed,prosed,AI Writing,https://tryprosed.com,,,,,0,No clear company X account found.
+Ask the Record,ask-the-record,AI Agents,https://www.asktherecord.com,,,,,0,No clear company X account found.
+AstroCarto,astrocarto,AI Productivity,https://astrocarto.net,,,,,0,No clear company X account found.
+OptiHedge,optihedge,AI Productivity,https://optihedge.ai,,,,,0,No clear company X account found.
+SongMuse AI,songmuse-ai,AI Music,https://songmuse.art,,,,,0,No clear company X account found.
+AI Image 2 Video,ai-image-2-video,AI Video,https://aiimage2video.pro,,,,,0,No clear company X account found.
+SpeedPainter,speedpainter,AI Video,https://www.speedpainter.org/en,,,,,0,No clear company X account found.
+RFP.ai,rfp-ai,AI Coding,https://rfp.ai,,,,,0,No clear company X account found.
+Live Like The River,live-like-the-river,AI Productivity,https://www.liveliketheriver.com,,,,,0,No clear company X account found.
+Solyo,solyo,AI Productivity,https://solyo.ai,solyo_official,https://x.com/solyo_official,official_website,https://solyo.ai,100,
+GroundScholar,groundscholar,AI Productivity,https://groundscholar.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/GroundScholar/,80,
+AirMusic,airmusic,AI Video,https://airmusic.ai/ai-music-video-generator,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/AirMusic/,80,
+Paraspeech,paraspeech,AI Voice,https://paraspeech.com,,,,,0,No clear company X account found.
+Babelbeez,babelbeez,AI Voice,https://www.babelbeez.com,babelbeez,https://x.com/babelbeez,official_website,https://www.babelbeez.com,100,
+Vertech Academy,vertech-academy,AI Research,https://www.vertechacademy.ca,,,,,0,No clear company X account found.
+Vireel AI Image to Video Generator,vireel-ai-image-to-video-generator,AI Video,https://vireels.ai/ai-image-to-video,,,,,0,No clear company X account found.
+AI Aware,ai-aware,AI Video,https://aiaware.io,,,,,0,No clear company X account found.
+MadeFine AI,madefine-ai,AI Automation,https://madefine.ai,,,,,0,No clear company X account found.
+Lyric Remix Studio,lyric-remix-studio,AI Voice,https://lyricremixgemini.iacolettisoftware.com,,,,,0,No clear company X account found.
+NestTrack,nesttrack,AI Productivity,https://www.nesttrack.xyz,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/NestTrack/,80,
+DashJob AI,dashjob-ai,AI Search,https://dashjob.ai,,,,,0,No clear company X account found.
+LobbyStack,lobbystack,AI Productivity,https://lobbystack.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/LobbyStack/,80,
+VibeBot,vibebot,AI Coding,https://www.vibebot.gg,vibebot_gg,https://x.com/vibebot_gg,official_website,https://www.vibebot.gg,100,
+Saveto AI,saveto-ai,AI Video,https://saveto.ai/instagram-transcript-generator,saveto_ai,https://x.com/saveto_ai,official_website,https://saveto.ai/instagram-transcript-generator,100,
+DescribeThat,describethat,AI Image,https://describethatclaude.iacolettisoftware.com,,,,,0,No clear company X account found.
+ColorJibe,colorjibe,AI Productivity,https://colorjibe.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/ColorJibe/,80,
+Vdoo AI,vdoo-ai,AI Video,https://vdoo.ai/image-to-video,,,,,0,No clear company X account found.
+Kairval,kairval,AI Video,https://kairval.com/ai/text-to-video,kairval,https://x.com/kairval,official_website,https://kairval.com/ai/text-to-video,100,
+Himedia,himedia,AI Video,https://himedia.ai/image-to-video,,,,,0,No clear company X account found.
+Vidnix,vidnix,AI Video,https://vidnix.ai/image-to-video,,,,,0,No clear company X account found.
+AI Photo Editor,ai-photo-editor,AI Image,https://aiphotoeditor.io,,,,,0,No clear company X account found.
+Epochal,epochal,AI Video,https://epochal.app,epochal_app,https://x.com/epochal_app,official_website,https://epochal.app,100,
+Viyou AI Motion Control,viyou-ai-motion-control,AI Video,https://viyou.ai/ai-motion-control,viyouAI,https://x.com/viyouAI,official_website,https://viyou.ai/ai-motion-control,100,
+PAI,pai,AI Video,https://www.utopaistudios.com/waitlist,,,,,0,No clear company X account found.
+Creen AI,creen-ai,AI Video,https://www.creen.ai,,,,,0,No clear company X account found.
+AI Kiss,ai-kiss,AI Video,https://aikiss.art,,,,,0,No clear company X account found.
+Vidflux,vidflux,AI Video,https://vidflux.ai/video-effect/ai-bikini-video-generator,,,,,0,No clear company X account found.
+VoooAI,voooai,AI Customer Support,https://voooai.com,,,,,0,No clear company X account found.
+Music Video Generator,music-video-generator,AI Video,https://musicvideogenerator.app,,,,,0,No clear company X account found.
+CleanVideoAI Watermark Removal,cleanvideoai-watermark-removal,AI Video,https://www.videowatermarkremove.com,,,,,0,No clear company X account found.
+Tendem,tendem,AI Agents,https://tendem.ai,Tendem_AI,https://x.com/Tendem_AI,official_website,https://tendem.ai,100,
+Rusheslab,rusheslab,AI Meeting,https://rusheslab.ai,,,,,0,No clear company X account found.
+Fineshare Sora Watermark Remover,fineshare-sora-watermark-remover,AI Video,https://www.fineshare.net/ai-video/sora-watermark-remover,,,,,0,No clear company X account found.
+Verdent,verdent,AI Coding,https://www.verdent.ai/?ots=theresanaiforthat,verdent_ai,https://x.com/verdent_ai,official_website,https://www.verdent.ai/?ots=theresanaiforthat,100,
+MixMaster Pro,mixmaster-pro,AI Audio,https://mixmasterpro.io,,,,,0,No clear company X account found.
+Slidely AI (backed by YC),slidely-ai-backed-by-yc,AI Marketing,https://slidely.ai,,,,,0,No clear company X account found.
+GeoInfer,geoinfer,AI Image,https://geoinfer.com/en,geoinfer,https://x.com/geoinfer,official_website,https://geoinfer.com/en,100,
+Rocket,rocket,AI Coding,https://www.rocket.new,rocketdotnew,https://x.com/rocketdotnew,official_website,https://www.rocket.new,100,
+Base44,base44,AI Coding,https://base44.pxf.io/c/6410050/2477538/25619?trafcat=hp,,,,,0,No clear company X account found.
+biela.dev,biela-dev,AI Coding,https://biela.dev,,,,,0,No clear company X account found.
+Unblur Image by Uluch,unblur-image-by-uluch,AI Image,https://uluch.com,,,,,0,No clear company X account found.
+VoxDeck,voxdeck,AI Productivity,https://www.voxdeck.ai,voxdeckai,https://x.com/voxdeckai,official_website,https://www.voxdeck.ai,100,
+EzSolve,ezsolve,AI Education,https://plou.eu/product/mobile/ezsolve,puresoftlabs,https://x.com/puresoftlabs,official_website,https://plou.eu/product/mobile/ezsolve,100,
+Singify AI Vocal Remover,singify-ai-vocal-remover,AI Music,https://singify.co/vocal-remover,,,,,0,No clear company X account found.
+V03 AI Video Generator,v03-ai-video-generator,AI Video,https://v03ai.com,,,,,0,No clear company X account found.
+Redesignr Ai,redesignr-ai,AI Writing,https://redesignr.ai,,,,,0,No clear company X account found.
+PrometAI,prometai,AI Productivity,https://prometai.app/business-plan-templates,,,,,0,No clear company X account found.
+Archie,archie,AI Coding,https://www.archie.com,,,,,0,No clear company X account found.
+Marblism,marblism,AI Productivity,https://www.marblism.com,,,,,0,No clear company X account found.
+PixieBrix,pixiebrix,AI Productivity,https://www.pixiebrix.com,pixiebrix,https://x.com/pixiebrix,official_website,https://www.pixiebrix.com,100,
+Osum,osum,AI Search,https://osum.com,,,,,0,No clear company X account found.
+Venturekit,venturekit,AI Productivity,https://www.venturekit.ai,,,,,0,No clear company X account found.
+Photo AI,photo-ai,AI Video,https://photoai.com,levelsio,https://x.com/levelsio,official_website,https://photoai.com,100,
+MyReport,myreport,AI Analytics,https://myreport.alaba.ai,,,,,0,No clear company X account found.
+ResolveAI,resolveai,AI Agents,https://resolveai.co,,,,,0,No clear company X account found.
+Eightify,eightify,AI Video,https://www.eightify.app,,,,,0,No clear company X account found.
+KeywordSearch,keywordsearch,AI Video,https://www.keywordsearch.com,,,,,0,No clear company X account found.
+Stockimg AI,stockimg-ai,AI Image,https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral,stockimgAI,https://x.com/stockimgAI,official_website,https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral,100,
+GetLogit,getlogit,AI Writing,https://getlogit.com,,,,,0,No clear company X account found.
+Veriff,veriff,AI Productivity,https://www.veriff.com/plans/self-serve?promo=taaft15,Veriff,https://x.com/Veriff,official_website,https://www.veriff.com/plans/self-serve?promo=taaft15,100,
+lxi.ai,lxi-ai,AI Research,https://lxi.ai,,,,,0,No clear company X account found.
+Pfpmaker,pfpmaker,AI Image,https://pfpmaker.com,pfpmakerapp,https://x.com/pfpmakerapp,official_website,https://pfpmaker.com,100,
+QuillBot,quillbot,AI Agents,https://quillbot.com,thequillbot,https://x.com/thequillbot,official_website,https://quillbot.com,100,
+Raplyrics,raplyrics,AI Music,https://raplyrics.eu,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Raplyrics/,80,
+Fetcher,fetcher,AI Sales,https://fetcher.ai,fetcherai,https://x.com/fetcherai,official_website,https://fetcher.ai,100,
+Watermelon,watermelon,AI Agents,https://www.watermelon.ai,watermelonhq,https://x.com/watermelonhq,official_website,https://www.watermelon.ai,100,
+Inbenta,inbenta,AI Search,https://www.inbenta.com,inbenta,https://x.com/inbenta,official_website,https://www.inbenta.com,100,
+DigitalGenius,digitalgenius,AI Customer Support,https://digitalgenius.com,DigitalGeniusAI,https://x.com/DigitalGeniusAI,official_website,https://digitalgenius.com,100,
+B12 AI Website Builder,b12-ai-website-builder,AI Design,https://www.b12.io/free-draft,,,,,0,No clear company X account found.
+remove.bg,remove-bg,AI Image,https://www.remove.bg,remove_bg,https://x.com/remove_bg,official_website,https://www.remove.bg,100,
+Skillroads,skillroads,AI Search,https://skillroads.com,skillroads,https://x.com/skillroads,official_website,https://skillroads.com,100,
+Kavout,kavout,AI Search,https://www.kavout.com/?fpr=whatshuang,,,,,0,No clear company X account found.
+AssemblyAI,assemblyai,AI Voice,https://www.assemblyai.com,,,,,0,No clear company X account found.
+Riskified,riskified,AI Marketing,https://www.riskified.com,theresanaiforit,https://x.com/theresanaiforit,taaft,https://theresanaiforthat.com/s/Riskified/,80,
+DataRobot,datarobot,AI Productivity,https://www.datarobot.com,,,,,0,No clear company X account found.
+H2O.ai,h2o-ai,AI Infrastructure,https://h2o.ai,h2oai,https://x.com/h2oai,official_website,https://h2o.ai,100,
+Deep Beat,deep-beat,AI Music,https://deepbeat.org,,,,,0,No clear company X account found.
+AI,ai,AI Writing,https://ai-writer.com,,,,,0,No clear company X account found.
+Deepdreamgenerator,deepdreamgenerator,AI Image,https://deepdreamgenerator.com/generate,,,,,0,No clear company X account found.

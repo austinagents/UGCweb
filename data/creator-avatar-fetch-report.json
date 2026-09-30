@@ -1,0 +1,52 @@
+{
+  "attemptedAt": "2026-06-06T14:42:50.763Z",
+  "source": "twitterapi.io_author_profile_image",
+  "storagePath": "data/pdf-x-creators.json",
+  "attemptedHandles": 100,
+  "updated": 90,
+  "missingHandle": 0,
+  "retainedExistingAvatar": 0,
+  "failedLookups": [
+    {
+      "handle": "@rubenhssd",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@wesrothmoney",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@leeerob",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@lewistunstall",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@freddyaboulton",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@lucidrains",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@demi_guo",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@colemedin",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@liamottley",
+      "reason": "avatar_not_found"
+    },
+    {
+      "handle": "@sander_schulhoff",
+      "reason": "avatar_not_found"
+    }
+  ],
+  "notes": []
+}

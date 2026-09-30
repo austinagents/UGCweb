@@ -1,0 +1,182 @@
+{
+  "targetCount": 500,
+  "source": "TAAFT",
+  "sourceUrl": "https://theresanaiforthat.com/",
+  "importedAt": "2026-05-23T22:30:47.126Z",
+  "fetchedPages": [
+    {
+      "url": "https://theresanaiforthat.com/",
+      "status": 200,
+      "productCards": 189
+    }
+  ],
+  "blockedPages": [
+    {
+      "url": "https://theresanaiforthat.com/popular/",
+      "status": 403,
+      "reason": "Cloudflare challenge"
+    },
+    {
+      "url": "https://theresanaiforthat.com/leaderboard/",
+      "status": 403,
+      "reason": "Cloudflare challenge"
+    },
+    {
+      "url": "https://theresanaiforthat.com/tools/",
+      "status": 403,
+      "reason": "Cloudflare challenge"
+    }
+  ],
+  "discovered": 189,
+  "imported": 186,
+  "accepted": 186,
+  "pendingReview": 0,
+  "duplicateMergeCount": 3,
+  "logosDownloaded": 185,
+  "fallbackLogos": 1,
+  "logoErrors": [
+    {
+      "slug": "ai-aware",
+      "name": "AI Aware",
+      "error": "HTTP 500"
+    }
+  ],
+  "failedImports": [],
+  "topCategories": [
+    {
+      "category": "AI Video",
+      "count": 42
+    },
+    {
+      "category": "AI Productivity",
+      "count": 32
+    },
+    {
+      "category": "AI Agents",
+      "count": 18
+    },
+    {
+      "category": "AI Image",
+      "count": 16
+    },
+    {
+      "category": "AI Coding",
+      "count": 15
+    },
+    {
+      "category": "AI Writing",
+      "count": 9
+    },
+    {
+      "category": "AI Voice",
+      "count": 8
+    },
+    {
+      "category": "AI Marketing",
+      "count": 6
+    },
+    {
+      "category": "AI Music",
+      "count": 6
+    },
+    {
+      "category": "AI Design",
+      "count": 5
+    }
+  ],
+  "notes": [
+    "Imported 186/500. TAAFT homepage exposed 189 product cards; ranked/listing expansion pages returned Cloudflare challenges from this environment."
+  ],
+  "normalizedNameCount": 22,
+  "normalizedNameRule": "Remove |, :, or - and everything to the right, then trim whitespace.",
+  "normalizedSlugUpdates": [
+    {
+      "oldSlug": "ai-inspo-image-to-video-generator",
+      "newSlug": "ai-inspo"
+    },
+    {
+      "oldSlug": "link-to-text-video-to-text",
+      "newSlug": "link-to-text"
+    },
+    {
+      "oldSlug": "aiter-io-paste-a-url-ship-a-campaign-that-sounds-like-your-brand",
+      "newSlug": "aiter-io"
+    },
+    {
+      "oldSlug": "dokie-ai-presentation-maker",
+      "newSlug": "dokie"
+    },
+    {
+      "oldSlug": "elevoi-canadian-businesses",
+      "newSlug": "elevoi"
+    },
+    {
+      "oldSlug": "remio-your-personal-chatgpt",
+      "newSlug": "remio"
+    },
+    {
+      "oldSlug": "ai-effect-art-image-generator",
+      "newSlug": "ai-effect-art"
+    },
+    {
+      "oldSlug": "solyo-ai-college-counselor",
+      "newSlug": "solyo"
+    },
+    {
+      "oldSlug": "saveto-ai-instagram-transcript-generator",
+      "newSlug": "saveto-ai"
+    },
+    {
+      "oldSlug": "vdoo-ai-image-to-video-generator",
+      "newSlug": "vdoo-ai"
+    },
+    {
+      "oldSlug": "vidnix-ai-image-to-video-generator",
+      "newSlug": "vidnix"
+    },
+    {
+      "oldSlug": "pai-utopai-studios",
+      "newSlug": "pai"
+    },
+    {
+      "oldSlug": "ezsolve-ai-homework-helper",
+      "newSlug": "ezsolve"
+    },
+    {
+      "oldSlug": "quillbot-ai-writing-companion",
+      "newSlug": "quillbot"
+    },
+    {
+      "oldSlug": "vismint-ai-image-to-3d-model-generator",
+      "newSlug": "vismint"
+    },
+    {
+      "oldSlug": "rift-code",
+      "newSlug": "rift"
+    },
+    {
+      "oldSlug": "airmusic-ai-music-video-generator",
+      "newSlug": "airmusic"
+    },
+    {
+      "oldSlug": "epochal-ai-video-generator",
+      "newSlug": "epochal"
+    },
+    {
+      "oldSlug": "vidflux-bikini-video-generator",
+      "newSlug": "vidflux"
+    },
+    {
+      "oldSlug": "redesignr-ai-website-redesign-and-landing-page-builder",
+      "newSlug": "redesignr-ai"
+    },
+    {
+      "oldSlug": "veriff-identity-verification-and-kyc",
+      "newSlug": "veriff"
+    },
+    {
+      "oldSlug": "ai-writer",
+      "newSlug": "ai"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+"tool","slug","category","best_query","searchability","signal_score","noise_score","tweets_returned"
+"ChatGPT","chatgpt","AI Agents","""ChatGPT""","HIGH_SEARCHABILITY","100","0","20"
+"Claude","claude","AI Agents","""Claude"" AI","HIGH_SEARCHABILITY","100","0","20"
+"Perplexity","perplexity","AI Research","@perplexity_ai","HIGH_SEARCHABILITY","95","5","20"
+"Cursor","cursor","AI Coding","@cursor_ai","HIGH_SEARCHABILITY","100","0","20"

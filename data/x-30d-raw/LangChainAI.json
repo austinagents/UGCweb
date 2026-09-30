@@ -1,0 +1,22 @@
+{
+  "provider": "twitterapi.io",
+  "endpoint": "https://api.twitterapi.io/twitter/tweet/advanced_search",
+  "handle": "@LangChainAI",
+  "since": "2026-05-11",
+  "until": "2026-06-10",
+  "fetched_at": "2026-06-09T19:55:32.156Z",
+  "pages": [
+    {
+      "request": {
+        "query": "from:LangChainAI since:2026-05-11 until:2026-06-10",
+        "queryType": "Latest",
+        "next_cursor": ""
+      },
+      "response": {
+        "tweets": [],
+        "has_next_page": false,
+        "next_cursor": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "x_handle": "@theresanaiforit",
+    "tools_using_handle": "AirMusic (airmusic); ColorJibe (colorjibe); Coursebox (coursebox); Elevoi (elevoi); Grok (grok); GroundScholar (groundscholar); ImagineGo (imaginego); Kling (kling); LobbyStack (lobbystack); ModelAtlas (modelatlas); MyCustodyCoach (mycustodycoach); NestTrack (nesttrack); Raplyrics (raplyrics); Resumedit (resumedit); Riskified (riskified); Tome (tome); UGO (ugo); Vismint (vismint); WearMind (wearmind)",
+    "count": 19,
+    "should_exclude_from_proof": true
+  },
+  {
+    "x_handle": "@framer",
+    "tools_using_handle": "Framer (framer); Framer AI (framer-ai)",
+    "count": 2,
+    "should_exclude_from_proof": false
+  }
+]

@@ -1,0 +1,101 @@
+tool_slug,tool_name,handle,official_posts_count,official_engagement_total,mention_posts_count,mention_authors_count,mention_engagement_total,combined_score
+trendspider,TrendSpider,TrendSpider,20,5386,1,1,4,1086
+framer-ai,Framer AI,framer,2,62,20,18,364,334.4
+dall-e,DALL-E,OpenAI,0,0,20,18,252,232
+agent-a-ahrefs,Agent A | Ahrefs,ahrefs,1,8,5,5,259,217
+higgsfield,Higgsfield,higgsfield_ai,1,115,6,5,203,194.4
+step-3-7-flash,Step 3.7 Flash,StepFun_ai,0,0,6,5,222,186.4
+ideogram,Ideogram,ideogram_ai,2,23,4,4,211,180.2
+inworld,Inworld,inworld_ai,14,603,0,0,0,123.4
+hubspot,HubSpot,HubSpot,0,0,3,3,135,112.8
+messari,Messari,MessariCrypto,0,0,2,2,64,54.4
+wingbits-ai,Wingbits AI,Wingbits,0,0,2,1,46,39.2
+willow-scribe,Willow Scribe,WillowVoiceAI,1,3,2,2,23,22.4
+lindy,Lindy,getlindy,0,0,2,2,24,22.4
+browserbase,Browserbase,browserbase,3,61,1,1,8,20.8
+fireflies-ai,Fireflies.ai,firefliesai,0,0,1,1,23,20
+recraft,Recraft,recraftai,2,45,1,1,10,19
+hedra,Hedra,hedra_labs,2,88,0,0,0,18
+scenario,Scenario,scenario_gg,2,18,1,1,12,15.2
+knock-agent-for-slack,Knock Agent for Slack,knocklabs,1,16,1,1,8,11.4
+rosebud-ai,Rosebud AI,rosebud_ai,5,52,0,0,0,11.4
+manus,Manus,manusai,0,0,1,1,6,6.4
+otter-ai,Otter.ai,otter_ai,0,0,1,1,5,5.6
+instantly,Instantly,InstantlyAI,5,20,0,0,0,5
+genspark,Genspark,genspark_ai,1,22,0,0,0,4.6
+adapt,Adapt,adapt,1,15,0,0,0,3.2
+floot,Floot,floothq,1,15,0,0,0,3.2
+ludo-ai,Ludo AI,ludo_ai,2,5,0,0,0,1.4
+writer,Writer,Get_Writer,1,5,0,0,0,1.2
+remio,remio,remio_ai,3,2,0,0,0,1
+deepgram,Deepgram,DeepgramAI,1,4,0,0,0,1
+rodeo-by-twelvelabs,Rodeo by TwelveLabs,twelve_labs,1,1,0,0,0,0.4
+fundraisly,Fundraisly,Fundraisely,0,0,0,0,0,0
+paste-app,Paste App,paste_app,0,0,0,0,0,0
+branda,Branda,brandacooks,0,0,0,0,0,0
+mina-meeting-assistant,Mina Meeting Assistant,HeyMinaAI,0,0,0,0,0,0
+databox-mcp,Databox MCP,databoxHQ,0,0,0,0,0,0
+dune-keypad,Dune Keypad,projectmirageai,0,0,0,0,0,0
+folk,folk,FolkHQ,0,0,0,0,0,0
+typeahead,Typeahead,typeaheadAI,0,0,0,0,0,0
+tokenwise,Tokenwise,tokenwise_ai,0,0,0,0,0,0
+openstatus-health,Openstatus Health,openstatusHQ,0,0,0,0,0,0
+ava-studio,Ava Studio,avastudio_ai,0,0,0,0,0,0
+integuru,Integuru,InteguruAI,0,0,0,0,0,0
+basedash,Basedash,Basedash,0,0,0,0,0,0
+clipline,Clipline,clipline_ai,0,0,0,0,0,0
+buffer-api,Buffer API,buffer,0,0,0,0,0,0
+zero-xyz,zero.xyz,zeroxyz,0,0,0,0,0,0
+coworker-ai,Coworker AI,coworkerapp,0,0,0,0,0,0
+octolane,Octolane,octolane,0,0,0,0,0,0
+krater,Krater,krater_ai,0,0,0,0,0,0
+dodoform,DodoForm,dofolabs,0,0,0,0,0,0
+parsewise-api,Parsewise API,parsewise,0,0,0,0,0,0
+rezonant,Rezonant,rezonant_ai,0,0,0,0,0,0
+co-invest,Co-Invest,coinvest_ai,0,0,0,0,0,0
+mcp-bridge-appfactor,MCP Bridge | Appfactor,appfactor,0,0,0,0,0,0
+subquadratic,Subquadratic,subquadratic,0,0,0,0,0,0
+catdoes,CatDoes,catdoeshq,0,0,0,0,0,0
+saveto-ai,Saveto AI,saveto_ai,0,0,0,0,0,0
+pixiebrix,PixieBrix,pixiebrix,0,0,0,0,0,0
+voxdeck,VoxDeck,voxdeckai,0,0,0,0,0,0
+rocket,Rocket,rocketdotnew,0,0,0,0,0,0
+codeium,Codeium,codeiumdev,0,0,0,0,0,0
+sourcegraph-cody,Sourcegraph Cody,sourcegraph,0,0,0,0,0,0
+phind,Phind,phindsearch,0,0,0,0,0,0
+blackbox-ai,Blackbox AI,blackbox_ai,0,0,0,0,0,0
+you-com,You.com,YouSearchEngine,0,0,0,0,0,0
+autogen,AutoGen,MSFTResearch,0,0,0,0,0,0
+relevance-ai,Relevance AI,RelevanceAI_,0,0,0,0,0,0
+copy-ai,Copy.ai,copy_ai,0,0,0,0,0,0
+wordtune,Wordtune,wordtune,0,0,0,0,0,0
+fathom,Fathom,FathomVideo,0,0,0,0,0,0
+reclaim-ai,Reclaim AI,reclaimai,0,0,0,0,0,0
+motion,Motion,UseMotion,0,0,0,0,0,0
+ibm-watsonx,IBM watsonx,IBMwatsonx,0,0,0,0,0,0
+modal,Modal,modal_labs,0,0,0,0,0,0
+crewai,CrewAI,crewAIInc,0,0,0,0,0,0
+flowise,Flowise,FlowiseAI,0,0,0,0,0,0
+gumloop,Gumloop,gumloop,0,0,0,0,0,0
+h2o-ai,H2O.ai,h2oai,0,0,0,0,0,0
+quillbot,QuillBot,thequillbot,0,0,0,0,0,0
+inbenta,Inbenta,inbenta,0,0,0,0,0,0
+tendem,Tendem,Tendem_AI,0,0,0,0,0,0
+pipedream,Pipedream,PipedreamHQ,0,0,0,0,0,0
+playground-ai,Playground AI,playground_ai,0,0,0,0,0,0
+connected-papers,Connected Papers,ConnectedPapers,0,0,0,0,0,0
+layer-ai,Layer AI,Layer_AI,0,0,0,0,0,0
+ready-player-me,Ready Player Me,readyplayerme,0,0,0,0,0,0
+spline,Spline,splinetool,0,0,0,0,0,0
+character-ai,Character.AI,character_ai,0,0,0,0,0,0
+hour-one,Hour One,HourOneAI,0,0,0,0,0,0
+anythingllm,AnythingLLM,mintplexlabs,0,0,0,0,0,0
+openhands,OpenHands,OpenHandsDev,0,0,0,0,0,0
+flux-black-forest-labs,Flux,bfl_ml,0,0,0,0,0,0
+stagehand,Stagehand,Stagehanddev,0,0,0,0,0,0
+wordware,Wordware,wordware,0,0,0,0,0,0
+zendesk-ai,Zendesk AI,zendesk,0,0,0,0,0,0
+tome,Tome,magicaltome,0,0,0,0,0,0
+stockimg-ai,Stockimg AI,stockimgAI,0,0,0,0,0,0
+tabnine,Tabnine,tabnine,0,0,0,0,0,0
+intercom-fin,Intercom Fin,intercom,0,0,0,0,0,0

@@ -1,0 +1,62 @@
+{
+  "bluechip_tools_checked": 14,
+  "rejected_by_author_crypto_filter": 6,
+  "tools_with_author_crypto_rejections": 6,
+  "sample_rejected_handles": [
+    {
+      "tool": "CapCut",
+      "slug": "capcut",
+      "handle": "@sty_defi",
+      "authorName": "STYRΞNΞ ✂️",
+      "matched_terms": [
+        "defi"
+      ]
+    },
+    {
+      "tool": "ChatGPT",
+      "slug": "chatgpt",
+      "handle": "@Cryptic_Web3",
+      "authorName": "Cryptic",
+      "matched_terms": [
+        "web3"
+      ]
+    },
+    {
+      "tool": "Claude",
+      "slug": "claude",
+      "handle": "@Cryptic_Web3",
+      "authorName": "Cryptic",
+      "matched_terms": [
+        "web3"
+      ]
+    },
+    {
+      "tool": "ElevenLabs",
+      "slug": "elevenlabs",
+      "handle": "@HooCrypto",
+      "authorName": "Juampi",
+      "matched_terms": [
+        "crypto"
+      ]
+    },
+    {
+      "tool": "HeyGen",
+      "slug": "heygen",
+      "handle": "@SiriOnchainX",
+      "authorName": "Siri | AI x Prediction arc",
+      "matched_terms": [
+        "onchain"
+      ]
+    },
+    {
+      "tool": "Perplexity",
+      "slug": "perplexity",
+      "handle": "@iamveektoria_",
+      "authorName": "Iamveektoria.base.eth 🙂‍↔️🌳 ✠",
+      "matched_terms": [
+        "eth"
+      ]
+    }
+  ],
+  "csv": "data/x-proof-bluechip-author-filter-report-v1.csv"
+}

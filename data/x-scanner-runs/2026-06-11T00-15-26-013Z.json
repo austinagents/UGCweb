@@ -1,0 +1,42 @@
+{
+  "run_timestamp": "2026-06-11T00:15:26.013Z",
+  "dry_run": true,
+  "provider": "x_api_v2",
+  "metadata": {
+    "tools_available_with_official_handles": 268,
+    "tools_scanned": 3,
+    "requests_made": 0,
+    "events_inserted": 0,
+    "errors": 0,
+    "official_post_limit": 10,
+    "mention_limit": 25
+  },
+  "outputs": {
+    "run": "data/x-scanner-runs/2026-06-11T00-15-26-013Z.json",
+    "account_snapshots": "data/x-account-snapshots.json",
+    "tool_events": "data/x-tool-events.json",
+    "summary_csv": "data/x-scanner-summary.csv"
+  },
+  "tools_scanned": [
+    {
+      "toolId": "manual_30d_11x",
+      "toolSlug": "11x",
+      "toolName": "11x",
+      "officialHandle": "11x_official"
+    },
+    {
+      "toolId": "tool_69",
+      "toolSlug": "activepieces",
+      "toolName": "Activepieces",
+      "officialHandle": "activepieces"
+    },
+    {
+      "toolId": "taaft_1",
+      "toolSlug": "adapt",
+      "toolName": "Adapt",
+      "officialHandle": "adapt"
+    }
+  ],
+  "raw_responses": [],
+  "errors": []
+}

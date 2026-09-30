@@ -1,0 +1,242 @@
+name,slug,website,x_handle
+ChatGPT,chatgpt,https://chat.openai.com,@ChatGPTapp
+Claude,claude,https://claude.ai,@claudeai
+Perplexity,perplexity,https://www.perplexity.ai,@perplexity_ai
+Cursor,cursor,https://cursor.com,@cursor_ai
+Windsurf,windsurf,https://windsurf.com,@windsurf
+Lovable,lovable,https://lovable.dev,@Lovable
+Replit,replit,https://replit.com,@replit
+Runway,runway,https://runwayml.com,@runwayml
+Kling,kling,https://klingai.com,@Kling_ai
+Pika,pika,https://pika.art,@pika_labs
+ElevenLabs,elevenlabs,https://elevenlabs.io,@ElevenLabs
+Midjourney,midjourney,https://www.midjourney.com,@midjourney
+Ideogram,ideogram,https://ideogram.ai,@ideogram_ai
+HeyGen,heygen,https://www.heygen.com,@HeyGen
+Synthesia,synthesia,https://www.synthesia.io,@synthesiaio
+Granola,granola,https://www.granola.ai,@meetgranola
+Notion AI,notion-ai,https://www.notion.so/product/ai,@NotionHQ
+Zapier,zapier,https://zapier.com,@zapier
+Lindy,lindy,https://www.lindy.ai,@getlindy
+Gamma,gamma,https://gamma.app,@GammaApp
+Manus,manus,https://manus.im,@manusai
+v0,v0,https://v0.dev,@v0
+Bolt,bolt,https://bolt.new,@boltdotnew
+Linear,linear,https://linear.app,@linear
+CapCut,capcut,https://www.capcut.com,@capcutapp
+Descript,descript,https://www.descript.com,@descript
+Suno,suno,https://suno.com,@suno
+Udio,udio,https://udio.com,@udiomusic
+NotebookLM,notebooklm,https://notebooklm.google,@NotebookLM
+Grok,grok,https://x.ai/grok,@grok
+Jasper,jasper,https://www.jasper.ai,@heyjasperai
+Glean,glean,https://www.glean.com,@glean
+Make,make,https://www.make.com,@make_hq
+Framer AI,framer-ai,https://www.framer.com/ai,@framer
+Vercel,vercel,https://vercel.com,@vercel
+n8n,n8n,https://n8n.io,@n8n_io
+Apollo,apollo,https://www.apollo.io,@useapolloio
+Framer,framer,https://www.framer.com,@framer
+Typefully,typefully,https://typefully.com,@typefully
+Slack,slack,https://slack.com,@slackhq
+HubSpot,hubspot,https://www.hubspot.com,@HubSpot
+Instantly,instantly,https://instantly.ai,@InstantlyAI
+GitHub Copilot,github-copilot,https://github.com/features/copilot,@github
+CodeRabbit,coderabbit,https://coderabbit.ai,@coderabbitai
+Sourcegraph,sourcegraph,https://sourcegraph.com,@sourcegraph
+Cline,cline,https://cline.bot,@cline
+Augment Code,augment-code,https://augmentcode.com,@augmentcode
+Qodo,qodo,https://qodo.ai,@QodoAI
+Tabnine,tabnine,https://tabnine.com,@tabnine
+Polymarket,polymarket,https://polymarket.com,@Polymarket
+Kalshi,kalshi,https://kalshi.com,@Kalshi
+TradingView,tradingview,https://tradingview.com,@tradingview
+TrendSpider,trendspider,https://trendspider.com,@TrendSpider
+Option Alpha,option-alpha,https://optionalpha.com,@OptionAlpha
+QuantConnect,quantconnect,https://quantconnect.com,@QuantConnect
+Arkham,arkham,https://arkhamintelligence.com,@ArkhamIntel
+Glassnode,glassnode,https://glassnode.com,@glassnode
+Nansen,nansen,https://nansen.ai,@nansen_ai
+DefiLlama,defillama,https://defillama.com,@DefiLlama
+Messari,messari,https://messari.io,@MessariCrypto
+Santiment,santiment,https://santiment.net,@santimentfeed
+CrewAI,crewai,https://crewai.com,@crewAIInc
+Gumloop,gumloop,https://gumloop.com,@gumloop
+Langflow,langflow,https://langflow.org,@langflow_ai
+Flowise,flowise,https://flowiseai.com,@FlowiseAI
+AgentOps,agentops,https://agentops.ai,@AgentOpsAI
+Dify,dify,https://dify.ai,@dify_ai
+Pipedream,pipedream,https://pipedream.com,@PipedreamHQ
+Activepieces,activepieces,https://activepieces.com,@activepieces
+Workato,workato,https://workato.com,@Workato
+Rows,rows,https://rows.com,@rowshq
+Flux (Black Forest Labs),flux-black-forest-labs,https://blackforestlabs.ai,@bfl_ml
+Recraft,recraft,https://recraft.ai,@recraftai
+Leonardo AI,leonardo-ai,https://leonardo.ai,@LeonardoAi_
+Canva AI,canva-ai,https://canva.com,@canva
+Adobe Firefly,adobe-firefly,https://firefly.adobe.com,@AdobeFirefly
+Magnific,magnific,https://magnific.ai,@Magnific_AI
+Krea,krea,https://krea.ai,@krea_ai
+Freepik AI,freepik-ai,https://freepik.com/ai,@freepik
+Playground AI,playground-ai,https://playground.com,@playground_ai
+Photoroom,photoroom,https://photoroom.com,@photoroom_app
+OpenArt,openart,https://openart.ai,@openart_ai
+Luma,luma,https://lumalabs.ai,@LumaLabsAI
+Veed,veed,https://veed.io,@veedstudio
+Hedra,hedra,https://hedra.com,@hedra_labs
+Tavus,tavus,https://tavus.io,@heytavus
+Vidu,vidu,https://vidu.com,@ViduAI_official
+PixVerse,pixverse,https://pixverse.ai,@PixVerse_
+Exa,exa,https://exa.ai,@exa_ai
+Elicit,elicit,https://elicit.com,@elicitorg
+Consensus,consensus,https://consensus.app,@ConsensusNLP
+Scite,scite,https://scite.ai,@scite
+Research Rabbit,research-rabbit,https://researchrabbit.ai,@researchrabbit
+Connected Papers,connected-papers,https://connectedpapers.com,@ConnectedPapers
+Semantic Scholar,semantic-scholar,https://semanticscholar.org,@SemanticScholar
+Inworld,inworld,https://inworld.ai,@inworld_ai
+Scenario,scenario,https://scenario.com,@scenario_gg
+Layer AI,layer-ai,https://layer.ai,@Layer_AI
+Ready Player Me,ready-player-me,https://readyplayer.me,@readyplayerme
+Rosebud AI,rosebud-ai,https://rosebud.ai,@rosebud_ai
+Ludo AI,ludo-ai,https://ludo.ai,@ludo_ai
+Meshy,meshy,https://meshy.ai,@MeshyAI
+Tripo,tripo,https://tripo3d.ai,@TripoAI
+Spline,spline,https://spline.design,@splinetool
+Kaedim,kaedim,https://kaedim3d.com,@Kaedim3D
+Polycam,polycam,https://polycam.ai,@Polycam3D
+Character.AI,character-ai,https://character.ai,@character_ai
+DeepBrain AI,deepbrain-ai,https://deepbrain.io,@DeepBrainAI
+Hour One,hour-one,https://hourone.ai,@HourOneAI
+Google Gemini,google-gemini,https://gemini.google.com/,@GeminiApp
+Microsoft Copilot,microsoft-copilot,https://copilot.microsoft.com/,@MSFTCopilot
+DeepSeek,deepseek,https://www.deepseek.com/,@deepseek_ai
+Meta AI,meta-ai,https://ai.meta.com/,@AIatMeta
+Grammarly,grammarly,https://www.grammarly.com/,@Grammarly
+DALL-E,dall-e,https://openai.com/dall-e,@OpenAI
+Stable Diffusion,stable-diffusion,https://stability.ai/,@StabilityAI
+Hugging Face,hugging-face,https://huggingface.co/,@huggingface
+OpenAI Platform,openai-platform,https://platform.openai.com/,@OpenAIDevs
+Anthropic Console,anthropic-console,https://console.anthropic.com/,@AnthropicAI
+LangChain,langchain,https://www.langchain.com/,@LangChainAI
+LlamaIndex,llamaindex,https://www.llamaindex.ai/,@llama_index
+Mistral AI,mistral-ai,https://mistral.ai/,@MistralAI
+Vertex AI,vertex-ai,https://cloud.google.com/vertex-ai,@GoogleCloud
+Amazon Bedrock,amazon-bedrock,https://aws.amazon.com/bedrock/,@awscloud
+Azure AI Foundry,azure-ai-foundry,https://ai.azure.com/,@Azure
+Databricks Mosaic AI,databricks-mosaic-ai,https://www.databricks.com/product/machine-learning,@databricks
+Cohere,cohere,https://cohere.com/,@cohere
+IBM watsonx,ibm-watsonx,https://www.ibm.com/watsonx,@IBMwatsonx
+Pinecone,pinecone,https://www.pinecone.io/,@pinecone
+Replicate,replicate,https://replicate.com/,@replicate
+Together AI,together-ai,https://www.together.ai/,@togethercompute
+Groq,groq,https://groq.com/,@GroqInc
+Fireworks AI,fireworks-ai,https://fireworks.ai/,@FireworksAI_HQ
+OpenRouter,openrouter,https://openrouter.ai/,@OpenRouterAI
+Claude Code,claude-code,https://www.anthropic.com/claude-code,@AnthropicAI
+OpenAI Codex,openai-codex,https://openai.com/codex,@OpenAIDevs
+Devin,devin,https://www.cognition.ai/,@cognition_labs
+Codeium,codeium,https://codeium.com/,@codeiumdev
+Sourcegraph Cody,sourcegraph-cody,https://sourcegraph.com/cody,@sourcegraph
+Phind,phind,https://www.phind.com/,@phindsearch
+Blackbox AI,blackbox-ai,https://www.blackbox.ai/,@blackbox_ai
+Weaviate,weaviate,https://weaviate.io/,@weaviate_io
+Chroma,chroma,https://www.trychroma.com/,@trychroma
+LangSmith,langsmith,https://smith.langchain.com/,@LangChainAI
+Modal,modal,https://modal.com/,@modal_labs
+AutoGen,autogen,https://www.microsoft.com/en-us/research/,@MSFTResearch
+Relevance AI,relevance-ai,https://relevanceai.com/,@RelevanceAI_
+Hebbia,hebbia,https://www.hebbia.ai/,@HebbiaAI
+Harvey,harvey,https://www.harvey.ai/,@harvey__ai
+Sierra,sierra,https://sierra.ai/,@SierraPlatform
+Intercom Fin,intercom-fin,https://www.intercom.com/fin,@intercom
+Zendesk AI,zendesk-ai,https://www.zendesk.com/ai/,@zendesk
+Writer,writer,https://writer.com/,@Get_Writer
+Copy.ai,copy-ai,https://www.copy.ai/,@copy_ai
+Wordtune,wordtune,https://www.wordtune.com/,@wordtune
+Tome,tome,https://tome.app/,@magicaltome
+Figma AI,figma-ai,https://www.figma.com/ai/,@figma
+Webflow AI,webflow-ai,https://webflow.com/ai,@webflow
+Otter.ai,otter-ai,https://otter.ai/,@otter_ai
+Fireflies.ai,fireflies-ai,https://fireflies.ai/,@firefliesai
+Fathom,fathom,https://fathom.video/,@FathomVideo
+Superhuman AI,superhuman-ai,https://superhuman.com/,@Superhuman
+Reclaim AI,reclaim-ai,https://reclaim.ai/,@reclaimai
+Motion,motion,https://www.usemotion.com/,@UseMotion
+Clay,clay,https://www.clay.com/,@ClayHQ
+Poe,poe,https://poe.com/,@poe_platform
+You.com,you-com,https://you.com/,@YouSearchEngine
+Ollama,ollama,https://ollama.com,@ollama
+LM Studio,lm-studio,https://lmstudio.ai,@lmstudio
+ComfyUI,comfyui,https://www.comfy.org,@ComfyUI
+AnythingLLM,anythingllm,https://anythingllm.com,@mintplexlabs
+Aider,aider,https://aider.chat,@Aider_AI
+Adapt,adapt,https://adapt.com,@adapt
+CatDoes,catdoes,https://catdoes.com,@catdoeshq
+remio,remio,https://www.remio.ai,@remio_ai
+Floot,floot,https://floot.com,@floothq
+Subquadratic,subquadratic,https://subq.ai,@subquadratic
+Saveto AI,saveto-ai,https://saveto.ai/instagram-transcript-generator,@saveto_ai
+Tendem,tendem,https://tendem.ai,@Tendem_AI
+Rocket,rocket,https://www.rocket.new,@rocketdotnew
+VoxDeck,voxdeck,https://www.voxdeck.ai,@voxdeckai
+PixieBrix,pixiebrix,https://www.pixiebrix.com,@pixiebrix
+Stockimg AI,stockimg-ai,https://stockimg.ai/#?ref=taaft&utm_source=taaft&utm_medium=referral,@stockimgAI
+Veriff,veriff,https://www.veriff.com/plans/self-serve?promo=taaft15,@Veriff
+QuillBot,quillbot,https://quillbot.com,@thequillbot
+Fetcher,fetcher,https://fetcher.ai,@fetcherai
+Inbenta,inbenta,https://www.inbenta.com,@inbenta
+remove.bg,remove-bg,https://www.remove.bg,@remove_bg
+H2O.ai,h2o-ai,https://h2o.ai,@h2oai
+OpenHands,openhands,https://www.all-hands.dev,@OpenHandsDev
+Browserbase,browserbase,https://www.browserbase.com,@browserbase
+Stagehand,stagehand,https://www.stagehand.dev,@Stagehanddev
+Deepgram,deepgram,https://deepgram.com,@DeepgramAI
+Cartesia,cartesia,https://cartesia.ai,@cartesia
+LangGraph,langgraph,https://www.langchain.com/langgraph,@LangChainAI
+Wordware,wordware,https://www.wordware.ai,@wordware
+Higgsfield,higgsfield,https://higgsfield.ai,@higgsfield_ai
+Genspark,genspark,https://www.genspark.ai,@genspark_ai
+Retell AI,retell-ai,https://www.retellai.com,@retellai
+Hume AI,hume-ai,https://www.hume.ai,@hume_ai
+PlayAI,playai,https://play.ai,@PlayAIOfficial
+Tavily,tavily,https://tavily.com,@tavilyai
+Jina AI,jina-ai,https://jina.ai,@JinaAI_
+Voiceflow,voiceflow,https://www.voiceflow.com,@VoiceflowHQ
+Botpress,botpress,https://botpress.com,@getbotpress
+Continue.dev,continue-dev,https://continue.dev,@continuedev
+Firecrawl,firecrawl,https://firecrawl.dev,@firecrawl_dev
+Crawl4AI,crawl4ai,https://crawl4ai.com,@crawl4ai
+Open WebUI,open-webui,https://openwebui.com,@OpenWebUI
+Baseten,baseten,https://www.baseten.co,@basetenco
+Langfuse,langfuse,https://langfuse.com,@langfuse
+11x,11x,https://11x.ai,@11x_official
+World Labs,world-labs,https://www.worldlabs.ai,@theworldlabs
+Mem0,mem0,https://mem0.ai,@mem0ai
+Helicone,helicone,https://helicone.ai,@helicone_ai
+Comet,comet,https://comet.com,@comet
+D-ID,d-id,https://www.d-id.com,@D_ID_
+Dreamina,dreamina,https://dreamina.capcut.com,@DreaminaAI
+Haiper,haiper,https://haiper.ai,@HaiperGenAI
+Hailuo,hailuo,https://hailuoai.video,@Hailuo_AI
+SkyReels,skyreels,https://skyreels.ai,@SkyReelsAI
+Bland AI,bland-ai,https://www.bland.ai,@usebland
+Sesame,sesame,https://www.sesame.com,@sesame
+AssemblyAI,assemblyai,https://www.assemblyai.com,@AssemblyAI
+Smallest AI,smallest-ai,https://smallest.ai,@smallest_ai
+Kagi Assistant,kagi-assistant,https://kagi.com,@KagiHQ
+Dia Browser,dia-browser,https://www.diabrowser.com,@diabrowser
+Zed,zed,https://zed.dev,@zeddotdev
+Trigger.dev,trigger-dev,https://trigger.dev,@triggerdotdev
+Temporal,temporal,https://temporal.io,@temporalio
+MindsDB,mindsdb,https://mindsdb.com,@MindsDB
+Arize Phoenix,arize-phoenix,https://phoenix.arize.com,@ArizeAI
+Weights & Biases,weights-biases,https://wandb.ai,@wandb
+Unstructured,unstructured,https://unstructured.io,@UnstructuredIO
+LlamaParse,llamaparse,https://www.llamaindex.ai/llamaparse,@llama_index
+Fellou,fellou,https://fellou.ai,@FellouAI
+Screen Studio,screen-studio,https://screen.studio,@screenstudio
+Predibase,predibase,https://predibase.com,@predibase
+Convai,convai,https://convai.com,@convai
+Avaturn,avaturn,https://avaturn.me,@avaturn_me
+Masterpiece Studio,masterpiece-studio,https://masterpiecestudio.com,@MasterpieceVR

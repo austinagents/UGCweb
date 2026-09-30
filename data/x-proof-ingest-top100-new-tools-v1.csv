@@ -1,0 +1,64 @@
+tool,slug,x_handle,tweets_returned,useful_proof_count,proof_quality_score,status
+Aider,aider,@Aider_AI,0,0,0,no_useful_proof
+Amazon Bedrock,amazon-bedrock,@awscloud,20,14,100,qualified_3_plus
+Anthropic Console,anthropic-console,@AnthropicAI,20,16,100,qualified_3_plus
+AnythingLLM,anythingllm,@mintplexlabs,10,8,80,qualified_3_plus
+AutoGen,autogen,@MSFTResearch,20,20,100,qualified_3_plus
+Azure AI Foundry,azure-ai-foundry,@Azure,20,18,100,qualified_3_plus
+Blackbox AI,blackbox-ai,@blackbox_ai,2,2,20,partial_1_plus
+Chroma,chroma,@trychroma,20,19,100,qualified_3_plus
+Claude Code,claude-code,@AnthropicAI,20,16,100,qualified_3_plus
+Clay,clay,@ClayHQ,20,3,30,qualified_3_plus
+Codeium,codeium,@codeiumdev,20,18,100,qualified_3_plus
+Cohere,cohere,@cohere,20,17,100,qualified_3_plus
+ComfyUI,comfyui,@ComfyUI,20,17,100,qualified_3_plus
+Copy.ai,copy-ai,@copy_ai,20,17,100,qualified_3_plus
+DALL-E,dall-e,@OpenAI,20,11,100,qualified_3_plus
+Databricks Mosaic AI,databricks-mosaic-ai,@databricks,20,19,100,qualified_3_plus
+DeepSeek,deepseek,@deepseek_ai,20,14,100,qualified_3_plus
+Devin,devin,@cognition_labs,20,17,100,qualified_3_plus
+Fathom,fathom,@FathomVideo,0,0,0,no_useful_proof
+Figma AI,figma-ai,@figma,20,16,100,qualified_3_plus
+Fireflies.ai,fireflies-ai,@firefliesai,20,17,100,qualified_3_plus
+Fireworks AI,fireworks-ai,@FireworksAI_HQ,20,18,100,qualified_3_plus
+Google Gemini,google-gemini,@GeminiApp,19,15,100,qualified_3_plus
+Grammarly,grammarly,@Grammarly,20,18,100,qualified_3_plus
+Groq,groq,@GroqInc,20,15,100,qualified_3_plus
+Harvey,harvey,@harvey__ai,20,13,100,qualified_3_plus
+Hebbia,hebbia,@HebbiaAI,20,20,100,qualified_3_plus
+Hugging Face,hugging-face,@huggingface,20,18,100,qualified_3_plus
+IBM watsonx,ibm-watsonx,@IBMwatsonx,20,13,100,qualified_3_plus
+Intercom Fin,intercom-fin,@intercom,20,17,100,qualified_3_plus
+LangChain,langchain,@LangChainAI,20,20,100,qualified_3_plus
+LangSmith,langsmith,@LangChainAI,20,1,10,partial_1_plus
+LlamaIndex,llamaindex,@llama_index,20,19,100,qualified_3_plus
+LM Studio,lm-studio,@lmstudio,20,14,100,qualified_3_plus
+Meta AI,meta-ai,@AIatMeta,20,19,100,qualified_3_plus
+Microsoft Copilot,microsoft-copilot,@MSFTCopilot,20,14,100,qualified_3_plus
+Mistral AI,mistral-ai,@MistralAI,20,15,100,qualified_3_plus
+Modal,modal,@modal_labs,20,18,100,qualified_3_plus
+Motion,motion,@UseMotion,20,14,100,qualified_3_plus
+Ollama,ollama,@ollama,20,13,100,qualified_3_plus
+OpenAI Codex,openai-codex,@OpenAIDevs,20,17,100,qualified_3_plus
+OpenAI Platform,openai-platform,@OpenAIDevs,20,17,100,qualified_3_plus
+OpenRouter,openrouter,@OpenRouterAI,20,16,100,qualified_3_plus
+Otter.ai,otter-ai,@otter_ai,20,15,100,qualified_3_plus
+Phind,phind,@phindsearch,20,18,100,qualified_3_plus
+Pinecone,pinecone,@pinecone,20,19,100,qualified_3_plus
+Poe,poe,@poe_platform,20,16,100,qualified_3_plus
+Reclaim AI,reclaim-ai,@reclaimai,20,16,100,qualified_3_plus
+Relevance AI,relevance-ai,@RelevanceAI_,20,19,100,qualified_3_plus
+Replicate,replicate,@replicate,20,18,100,qualified_3_plus
+Sierra,sierra,@SierraPlatform,20,17,100,qualified_3_plus
+Sourcegraph Cody,sourcegraph-cody,@sourcegraph,20,20,100,qualified_3_plus
+Stable Diffusion,stable-diffusion,@StabilityAI,20,16,100,qualified_3_plus
+Superhuman AI,superhuman-ai,@Superhuman,20,17,100,qualified_3_plus
+Together AI,together-ai,@togethercompute,20,16,100,qualified_3_plus
+Tome,tome,@magicaltome,20,20,100,qualified_3_plus
+Vertex AI,vertex-ai,@GoogleCloud,20,17,100,qualified_3_plus
+Weaviate,weaviate,@weaviate_io,20,19,100,qualified_3_plus
+Webflow AI,webflow-ai,@webflow,20,19,100,qualified_3_plus
+Wordtune,wordtune,@wordtune,20,17,100,qualified_3_plus
+Writer,writer,@Get_Writer,20,19,100,qualified_3_plus
+You.com,you-com,@YouSearchEngine,20,15,100,qualified_3_plus
+Zendesk AI,zendesk-ai,@zendesk,20,18,100,qualified_3_plus

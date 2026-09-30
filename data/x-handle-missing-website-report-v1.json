@@ -1,0 +1,646 @@
+{
+  "summary": {
+    "generated_at": "2026-06-04T09:37:30.986Z",
+    "source_report": "data/x-handle-source-audit-v1.json",
+    "total_missing_handles": 127,
+    "missing_handles_with_website": 127,
+    "missing_handles_without_website": 0
+  },
+  "records": [
+    {
+      "tool": "ChatGPT",
+      "websiteUrl": "https://chat.openai.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Perplexity",
+      "websiteUrl": "https://www.perplexity.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Midjourney",
+      "websiteUrl": "https://www.midjourney.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Ideogram",
+      "websiteUrl": "https://ideogram.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Gamma",
+      "websiteUrl": "https://gamma.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "CapCut",
+      "websiteUrl": "https://www.capcut.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Descript",
+      "websiteUrl": "https://www.descript.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Udio",
+      "websiteUrl": "https://udio.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "NotebookLM",
+      "websiteUrl": "https://notebooklm.google",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Make",
+      "websiteUrl": "https://www.make.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Typefully",
+      "websiteUrl": "https://typefully.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Taplio",
+      "websiteUrl": "https://taplio.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "LinkedIn",
+      "websiteUrl": "https://www.linkedin.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Google Maps",
+      "websiteUrl": "https://www.google.com/maps",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Vtuber Assistant",
+      "websiteUrl": "https://store.steampowered.com/app/4464930/Vtuber_Assistant",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Thrive Financial",
+      "websiteUrl": "https://thrivefinancial.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "FastiAds",
+      "websiteUrl": "https://www.fastiads.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "UFate",
+      "websiteUrl": "https://www.ufate.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "ApiPosture",
+      "websiteUrl": "https://www.apiposture.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "BuddyPro",
+      "websiteUrl": "https://buddypro.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "PlotStudio AI",
+      "websiteUrl": "https://www.plotstudio.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "General Compute",
+      "websiteUrl": "https://www.generalcompute.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Franki",
+      "websiteUrl": "https://www.chat-to-franki.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "TeachQuill",
+      "websiteUrl": "https://teachquill.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "OpenBudget",
+      "websiteUrl": "https://openbudget.sh",
+      "hasWebsite": true
+    },
+    {
+      "tool": "EduSolver",
+      "websiteUrl": "https://edusolver.io",
+      "hasWebsite": true
+    },
+    {
+      "tool": "NDORFlow",
+      "websiteUrl": "https://ndorflow.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Melody Genie",
+      "websiteUrl": "https://melodygenie.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Link To Text",
+      "websiteUrl": "https://linktotext.co",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Dokie",
+      "websiteUrl": "https://dokie.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "WebZum",
+      "websiteUrl": "https://webzum.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Gamelabs Studio",
+      "websiteUrl": "https://gamelabstudio.co",
+      "hasWebsite": true
+    },
+    {
+      "tool": "ShortsMate",
+      "websiteUrl": "https://shortsmate.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Adrian",
+      "websiteUrl": "https://github.com/secureagentics/Adrian",
+      "hasWebsite": true
+    },
+    {
+      "tool": "CEOfriend",
+      "websiteUrl": "https://www.ceofriend.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Distill.cv",
+      "websiteUrl": "https://distill.cv",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Image3D AI",
+      "websiteUrl": "https://www.aiimageto3d.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Matrix Coder",
+      "websiteUrl": "https://matrixcoder.io",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Thumbs AI",
+      "websiteUrl": "https://www.thumbs.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "VideoSwap.app",
+      "websiteUrl": "https://www.videoswap.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "SocialClip Studio",
+      "websiteUrl": "https://socialclipstudio.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Baby Magic",
+      "websiteUrl": "https://www.babymagic.app/ai-baby-image",
+      "hasWebsite": true
+    },
+    {
+      "tool": "HitPublish",
+      "websiteUrl": "https://www.hitpublish.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Ask Bishop",
+      "websiteUrl": "https://askbishop.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Quorlyx Pro",
+      "websiteUrl": "https://quorlyx.dev",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Scavio AI",
+      "websiteUrl": "https://scavio.dev",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Rift",
+      "websiteUrl": "https://rift-code.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "DineCraft",
+      "websiteUrl": "https://www.dinecraft.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Teneks",
+      "websiteUrl": "https://www.teneks.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Team Pulse",
+      "websiteUrl": "https://goteampulse.io",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Browserbeam",
+      "websiteUrl": "https://browserbeam.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AuthentaLink",
+      "websiteUrl": "https://authentalink.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Introvrs",
+      "websiteUrl": "https://www.introvrs.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "TextSongAI.com",
+      "websiteUrl": "https://www.textsongai.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Nomie",
+      "websiteUrl": "https://apps.apple.com/us/app/nomie-doomscrolling-break/id6757396354",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Clocsy",
+      "websiteUrl": "https://clocsy.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Pounce",
+      "websiteUrl": "https://www.pounce.so",
+      "hasWebsite": true
+    },
+    {
+      "tool": "FaceHub AI",
+      "websiteUrl": "https://www.facehub.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AI Product Photography.app",
+      "websiteUrl": "https://aiproductphotography.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "MusVideo",
+      "websiteUrl": "https://musvideo.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Silky AI",
+      "websiteUrl": "https://www.aihair.life",
+      "hasWebsite": true
+    },
+    {
+      "tool": "InstantTranscriber",
+      "websiteUrl": "https://instanttranscriber.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "MagicReels",
+      "websiteUrl": "https://magicreels.media",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Vidlogi",
+      "websiteUrl": "https://www.vidlogi.com/en",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Sunny by Sunburnt AI",
+      "websiteUrl": "https://sunburntai.com.au/sunny-agentic-ai-operating-system",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AI Landscape Design by Yuzu",
+      "websiteUrl": "https://yuzudesign.ai/landscape-design-ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Koinonos",
+      "websiteUrl": "https://www.koinonos.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "DebaterX",
+      "websiteUrl": "https://www.debaterx.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Ozigi",
+      "websiteUrl": "https://ozigi.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Rundown",
+      "websiteUrl": "https://getrundown.xyz",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Whisper Web",
+      "websiteUrl": "https://whisperweb.tech",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Prosed",
+      "websiteUrl": "https://tryprosed.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Ask the Record",
+      "websiteUrl": "https://www.asktherecord.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AstroCarto",
+      "websiteUrl": "https://astrocarto.net",
+      "hasWebsite": true
+    },
+    {
+      "tool": "OptiHedge",
+      "websiteUrl": "https://optihedge.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "SongMuse AI",
+      "websiteUrl": "https://songmuse.art",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AI Image 2 Video",
+      "websiteUrl": "https://aiimage2video.pro",
+      "hasWebsite": true
+    },
+    {
+      "tool": "SpeedPainter",
+      "websiteUrl": "https://www.speedpainter.org/en",
+      "hasWebsite": true
+    },
+    {
+      "tool": "RFP.ai",
+      "websiteUrl": "https://rfp.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Live Like The River",
+      "websiteUrl": "https://www.liveliketheriver.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Paraspeech",
+      "websiteUrl": "https://paraspeech.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Vertech Academy",
+      "websiteUrl": "https://www.vertechacademy.ca",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Vireel AI Image to Video Generator",
+      "websiteUrl": "https://vireels.ai/ai-image-to-video",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AI Aware",
+      "websiteUrl": "https://aiaware.io",
+      "hasWebsite": true
+    },
+    {
+      "tool": "MadeFine AI",
+      "websiteUrl": "https://madefine.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Lyric Remix Studio",
+      "websiteUrl": "https://lyricremixgemini.iacolettisoftware.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "DashJob AI",
+      "websiteUrl": "https://dashjob.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "DescribeThat",
+      "websiteUrl": "https://describethatclaude.iacolettisoftware.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Vdoo AI",
+      "websiteUrl": "https://vdoo.ai/image-to-video",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Himedia",
+      "websiteUrl": "https://himedia.ai/image-to-video",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Vidnix",
+      "websiteUrl": "https://vidnix.ai/image-to-video",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AI Photo Editor",
+      "websiteUrl": "https://aiphotoeditor.io",
+      "hasWebsite": true
+    },
+    {
+      "tool": "PAI",
+      "websiteUrl": "https://www.utopaistudios.com/waitlist",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Creen AI",
+      "websiteUrl": "https://www.creen.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AI Kiss",
+      "websiteUrl": "https://aikiss.art",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Vidflux",
+      "websiteUrl": "https://vidflux.ai/video-effect/ai-bikini-video-generator",
+      "hasWebsite": true
+    },
+    {
+      "tool": "VoooAI",
+      "websiteUrl": "https://voooai.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Music Video Generator",
+      "websiteUrl": "https://musicvideogenerator.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "CleanVideoAI Watermark Removal",
+      "websiteUrl": "https://www.videowatermarkremove.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Rusheslab",
+      "websiteUrl": "https://rusheslab.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Fineshare Sora Watermark Remover",
+      "websiteUrl": "https://www.fineshare.net/ai-video/sora-watermark-remover",
+      "hasWebsite": true
+    },
+    {
+      "tool": "MixMaster Pro",
+      "websiteUrl": "https://mixmasterpro.io",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Slidely AI (backed by YC)",
+      "websiteUrl": "https://slidely.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Base44",
+      "websiteUrl": "https://base44.pxf.io/c/6410050/2477538/25619?trafcat=hp",
+      "hasWebsite": true
+    },
+    {
+      "tool": "biela.dev",
+      "websiteUrl": "https://biela.dev",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Unblur Image by Uluch",
+      "websiteUrl": "https://uluch.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Singify AI Vocal Remover",
+      "websiteUrl": "https://singify.co/vocal-remover",
+      "hasWebsite": true
+    },
+    {
+      "tool": "V03 AI Video Generator",
+      "websiteUrl": "https://v03ai.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Redesignr Ai",
+      "websiteUrl": "https://redesignr.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "PrometAI",
+      "websiteUrl": "https://prometai.app/business-plan-templates",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Archie",
+      "websiteUrl": "https://www.archie.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Marblism",
+      "websiteUrl": "https://www.marblism.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Osum",
+      "websiteUrl": "https://osum.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Venturekit",
+      "websiteUrl": "https://www.venturekit.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "MyReport",
+      "websiteUrl": "https://myreport.alaba.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "ResolveAI",
+      "websiteUrl": "https://resolveai.co",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Eightify",
+      "websiteUrl": "https://www.eightify.app",
+      "hasWebsite": true
+    },
+    {
+      "tool": "KeywordSearch",
+      "websiteUrl": "https://www.keywordsearch.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "GetLogit",
+      "websiteUrl": "https://getlogit.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "lxi.ai",
+      "websiteUrl": "https://lxi.ai",
+      "hasWebsite": true
+    },
+    {
+      "tool": "B12 AI Website Builder",
+      "websiteUrl": "https://www.b12.io/free-draft",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Kavout",
+      "websiteUrl": "https://www.kavout.com/?fpr=whatshuang",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AssemblyAI",
+      "websiteUrl": "https://www.assemblyai.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "DataRobot",
+      "websiteUrl": "https://www.datarobot.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Deep Beat",
+      "websiteUrl": "https://deepbeat.org",
+      "hasWebsite": true
+    },
+    {
+      "tool": "AI",
+      "websiteUrl": "https://ai-writer.com",
+      "hasWebsite": true
+    },
+    {
+      "tool": "Deepdreamgenerator",
+      "websiteUrl": "https://deepdreamgenerator.com/generate",
+      "hasWebsite": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#0d1117"/>
+  <!-- Chat bubble shifted down 36px so circle portion centers on icon -->
+  <path d="M255 51
+    C368 51 460 143 460 256
+    C460 326 425 388 371 425
+    L400 486
+    L343 441
+    C317 454 287 461 255 461
+    C142 461 50 369 50 256
+    C50 143 142 51 255 51Z"
+    fill="rgba(210,153,34,0.14)" stroke="#d29922" stroke-width="20"
+    stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Latin cross — vertical bar -->
+  <rect x="228" y="76" width="54" height="348" rx="14" fill="#d29922"/>
+  <!-- Latin cross — horizontal bar (1/3 from top) -->
+  <rect x="138" y="166" width="238" height="54" rx="14" fill="#d29922"/>
+</svg>

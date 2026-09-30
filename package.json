@@ -1,0 +1,54 @@
+{
+  "name": "appscreener",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NEXT_DIST_DIR=.next-dev next dev",
+    "start": "NEXT_DIST_DIR=.next-dev next dev",
+    "build": "NEXT_DIST_DIR=.next-prod next build",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "import:taaft": "node scripts/import-taaft.mjs",
+    "import:creators": "node scripts/import-favikon-creators.mjs",
+    "graph:audit": "node scripts/graph-audit.mjs",
+    "ingest:evidence": "node scripts/ingest-evidence.mjs",
+    "ingest:sources:v1": "node scripts/ingest-source-v1.mjs",
+    "discover:discussions:v1": "node scripts/discover-discussions-v1.mjs",
+    "benchmark:x-recoverability:v1": "node scripts/x-recoverability-benchmark-v1.mjs",
+    "benchmark:searchability:v1": "node scripts/searchability-benchmark-v1.mjs",
+    "benchmark:30d:x": "node scripts/benchmark-30d-x-momentum.mjs",
+    "discover:x-adjacency:v1": "node scripts/x-adjacency-discovery-v1.mjs",
+    "poc:twitterapi": "node scripts/twitterapi-io-poc.mjs",
+    "ingest:x-proof:v1": "node scripts/ingest-x-proof-sources-v1.mjs",
+    "scan:x": "node scripts/x-scanner-v1.mjs",
+    "signals:x": "node scripts/x-signals-v1.mjs",
+    "enrich:evidence": "node scripts/enrich-evidence.mjs",
+    "creators:avatars": "node scripts/fetch-creator-avatars.mjs",
+    "logos:fetch": "node scripts/fetch-logos.mjs",
+    "logos:validate": "node scripts/validate-logos.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "lucide-react": "^0.468.0",
+    "next": "^14.2.18",
+    "playwright": "^1.60.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.9",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.18",
+    "typescript": "^5.6.3"
+  },
+  "description": "AppScreener is a live AI ecosystem screener. The product is moving beyond a directory into an intelligence layer for tracking tools, creators, workflows, categories, attention pockets, and ecosystem relationships.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

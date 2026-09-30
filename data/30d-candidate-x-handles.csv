@@ -1,0 +1,101 @@
+Tool,X Handle,Status
+OpenHands,@OpenHandsDev,Verified
+Wordware,@wordware,Verified
+Voiceflow,@VoiceflowHQ,Likely
+Botpress,@getbotpress,Verified
+LangGraph,@LangChainAI,Parent/Product
+Mastra,@mastra,Verified
+Open WebUI,@OpenWebUI,Verified
+Browserbase,@browserbase,Verified
+Stagehand,@Stagehanddev,Verified
+Firecrawl,@firecrawl_dev,Likely
+Crawl4AI,@crawl4ai,Verified
+Jina AI,@JinaAI_,Verified
+LlamaParse,@llama_index,Parent/Product
+Unstructured,@UnstructuredIO,Verified
+Steel.dev,@steeldotdev,Verified
+Tavily,@tavilyai,Verified
+Genspark,@genspark_ai,VERIFY
+Fellou,@FellouAI,Verified
+Comet,@comet,Verified
+Dia Browser,@diabrowser,Verified
+Kagi Assistant,@KagiHQ,Likely
+Andi,@andisearch,Likely
+Metaphor,@exaai,Renamed/Parent
+Khoj,@khoj_ai,Likely
+Memex,@memexgarden,VERIFY
+Langfuse,@langfuse,Verified
+Weights & Biases,@wandb,Verified
+Fal.ai,@fal,Verified
+Baseten,@basetenco,Verified
+Arize Phoenix,@ArizeAI,Likely/Parent
+Helicone,@helicone_ai,Verified
+Humanloop,@humanloop,Verified
+Predibase,@predibase,Verified
+Anyscale,@anyscalecompute,Verified
+MindsDB,@MindsDB,Verified
+GraphRAG,@MSFTResearch,Parent/Product
+Ragie,@ragieai,VERIFY
+Pathway,@pathway_com,Verified
+Neo4j Aura AI,@neo4j,Parent/Product
+Mem0,@mem0ai,Verified
+Zep,@zep_ai,Verified
+Deepgram,@DeepgramAI,Verified
+Cartesia,@cartesia,Verified
+PlayAI,@PlayAIOfficial,Verified
+Hume AI,@hume_ai,Verified
+Retell AI,@retellai,Verified
+Bland AI,@usebland,Verified
+Sesame,@sesame,Verified
+Rime,@rimelabs,Verified
+AssemblyAI,@AssemblyAI,Likely
+11x,@11x_official,Verified
+Regie.ai,@regieai,Verified
+Common Room,@CommonRoomHQ,Verified
+Warmly,@warmly_ai,VERIFY
+Attention,@tryattention,Verified
+Day.ai,@Day_ai_app,Verified
+Default,@defaultdotcom,VERIFY
+Octave,@octavehq,Likely
+Artisan,@tryartisan,Likely
+RevSure,@RevSureAI,VERIFY
+Higgsfield,@higgsfield_ai,Likely
+Wan Video,@Alibaba_Qwen,Parent/Product
+Dreamina,@DreaminaAI,VERIFY
+Haiper,@HaiperGenAI,Likely
+Hailuo,@Hailuo_AI,VERIFY
+SkyReels,@SkyReelsAI,VERIFY
+Akool,@akoolai,Likely
+D-ID,@D_ID_,Likely
+LivePortrait,@KwaiResearch,Parent/Product
+Pika Labs Pro,@pika_labs,Parent/Product
+Screen Studio,@screenstudio,Likely
+Guidde,@guiddeco,Likely
+Storylane,@StorylaneIO,Likely
+Supademo,@supademohq,Likely
+Napkin AI,@napkin_ai,Likely
+Beautiful.ai,@BeautifulAI,Likely
+Pitch,@Pitch,Likely
+Gamma Enterprise,@MeetGamma,Parent/Product
+Tella,@TellaHQ,Likely
+Arcade,@ArcadeSoftware,Likely
+World Labs,@theworldlabs,Likely
+Wonder Dynamics,@WonderDynamics,Likely
+Move AI,@move_ai,Likely
+Convai,@convai,Likely
+Kinetix,@KinetixTech,Likely
+Meshcapade,@meshcapade,Likely
+Plask,@plask_ai,Likely
+Masterpiece Studio,@MasterpieceVR,VERIFY
+Avaturn,@avaturn_me,Likely
+Anything World,@AnythingWorld,Likely
+OpenAdapt,@OpenAdaptAI,VERIFY
+Goose,@block_goose,VERIFY
+Sweep,@sweep__ai,Likely
+Continue.dev,@continuedev,Likely
+Void Editor,@voideditor,VERIFY
+Zed AI,@zeddotdev,Parent/Product
+Factory,@FactoryAI,VERIFY
+Trigger.dev,@triggerdotdev,Likely
+Temporal,@temporalio,Likely
+Agno,@agnoagi,VERIFY

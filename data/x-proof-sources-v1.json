@@ -1,0 +1,787 @@
+{
+  "generated_at": "2026-06-04T10:22:46.627Z",
+  "provider": "twitterapi.io",
+  "endpoint": "GET /twitter/tweet/advanced_search",
+  "input": "data/tool-x-master.csv",
+  "scope": "first 25 handles",
+  "summary": {
+    "tools_requested": 25,
+    "tools_ingested": 25,
+    "tools_failed": 0,
+    "total_tweets_returned": 387,
+    "cleaned_for_current_catalog_at": "2026-06-04T18:52:12.973Z",
+    "records_after_catalog_cleanup": 7
+  },
+  "records": [
+    {
+      "tool": "Adapt",
+      "slug": "adapt",
+      "x_handle": "@adapt",
+      "confidence": 100,
+      "query": "from:adapt",
+      "tweets_returned": 19,
+      "authors": [
+        "Adapt"
+      ],
+      "urls": [
+        "https://x.com/Adapt/status/2061831835727143318",
+        "https://x.com/Adapt/status/2059706193032171691",
+        "https://x.com/Adapt/status/2059046359416877258",
+        "https://x.com/Adapt/status/2059001242123379014",
+        "https://x.com/Adapt/status/2057543469665776030",
+        "https://x.com/Adapt/status/2056482464101749094",
+        "https://x.com/Adapt/status/2056461889866199111",
+        "https://x.com/Adapt/status/2047769113335042266",
+        "https://x.com/Adapt/status/2047381705951248636",
+        "https://x.com/Adapt/status/2047042119047754115",
+        "https://x.com/Adapt/status/2046795736969515258",
+        "https://x.com/Adapt/status/2046298531808641059",
+        "https://x.com/Adapt/status/2044479424683511934",
+        "https://x.com/Adapt/status/2044479422947070090",
+        "https://x.com/Adapt/status/2044452561735032860",
+        "https://x.com/Adapt/status/2016941702876188769",
+        "https://x.com/Adapt/status/2016933686810497354",
+        "https://x.com/Adapt/status/2016931119678296151",
+        "https://x.com/Adapt/status/2009792215900655864"
+      ],
+      "top_tweets": [
+        {
+          "id": "2044479422947070090",
+          "author": "Adapt",
+          "authorName": "Adapt",
+          "text": "Introducing Adapt, your company’s AI computer. Now available to everyone. → Ask questions across every system → Build internal apps with live data → Automate mundane to complex tasks → Multi-player by design https://t.co/SMF8wNVnyR",
+          "url": "https://x.com/Adapt/status/2044479422947070090",
+          "createdAt": "Wed Apr 15 18:14:13 +0000 2026",
+          "engagement": {
+            "likes": 250,
+            "reposts": 29,
+            "replies": 25,
+            "views": 8076058,
+            "total": 304
+          }
+        },
+        {
+          "id": "2016931119678296151",
+          "author": "Adapt",
+          "authorName": "Adapt",
+          "text": "Today we’re announcing our $10M seed round co-led by @ActivantCapital and @HeadlineVC. We're building the AI computer that can reason, act, and operate inside real business workflows, so that companies can become truly AI-native by default. https://t.co/Wz3svWNBfp",
+          "url": "https://x.com/Adapt/status/2016931119678296151",
+          "createdAt": "Thu Jan 29 17:47:06 +0000 2026",
+          "engagement": {
+            "likes": 75,
+            "reposts": 17,
+            "replies": 11,
+            "views": 170530,
+            "total": 103
+          }
+        },
+        {
+          "id": "2046795736969515258",
+          "author": "Adapt",
+          "authorName": "Adapt",
+          "text": "Scaling products is fun :) https://t.co/ev5wjCCVns",
+          "url": "https://x.com/Adapt/status/2046795736969515258",
+          "createdAt": "Wed Apr 22 03:38:25 +0000 2026",
+          "engagement": {
+            "likes": 75,
+            "reposts": 2,
+            "replies": 2,
+            "views": 910114,
+            "total": 79
+          }
+        },
+        {
+          "id": "2057543469665776030",
+          "author": "Adapt",
+          "authorName": "Adapt",
+          "text": "We're honored to play an important role in @wander's growth story, where every department runs on Adapt. https://t.co/enU539leSM",
+          "url": "https://x.com/Adapt/status/2057543469665776030",
+          "createdAt": "Thu May 21 19:26:05 +0000 2026",
+          "engagement": {
+            "likes": 35,
+            "reposts": 1,
+            "replies": 2,
+            "views": 369398,
+            "total": 38
+          }
+        },
+        {
+          "id": "2009792215900655864",
+          "author": "Adapt",
+          "authorName": "Adapt",
+          "text": "https://t.co/eVwoxUQuoK",
+          "url": "https://x.com/Adapt/status/2009792215900655864",
+          "createdAt": "Sat Jan 10 00:59:39 +0000 2026",
+          "engagement": {
+            "likes": 15,
+            "reposts": 0,
+            "replies": 2,
+            "views": 2015,
+            "total": 17
+          }
+        }
+      ]
+    },
+    {
+      "tool": "Apollo",
+      "slug": "apollo",
+      "x_handle": "@useapolloio",
+      "confidence": 100,
+      "query": "from:useapolloio",
+      "tweets_returned": 20,
+      "authors": [
+        "useapolloio"
+      ],
+      "urls": [
+        "https://x.com/useapolloio/status/2062280791036670356",
+        "https://x.com/useapolloio/status/2062280789451325598",
+        "https://x.com/useapolloio/status/2062233608312836531",
+        "https://x.com/useapolloio/status/2061874643301253549",
+        "https://x.com/useapolloio/status/2061798901447893376",
+        "https://x.com/useapolloio/status/2061798805134078355",
+        "https://x.com/useapolloio/status/2061798803695337648",
+        "https://x.com/useapolloio/status/2061798802189643976",
+        "https://x.com/useapolloio/status/2061798800537141520",
+        "https://x.com/useapolloio/status/2061798798989410676",
+        "https://x.com/useapolloio/status/2061798797131366809",
+        "https://x.com/useapolloio/status/2061798795789078573",
+        "https://x.com/useapolloio/status/2061441985987195151",
+        "https://x.com/useapolloio/status/2061441869683335522",
+        "https://x.com/useapolloio/status/2061441868500476202",
+        "https://x.com/useapolloio/status/2061441867279901170",
+        "https://x.com/useapolloio/status/2061441865761665177",
+        "https://x.com/useapolloio/status/2061441864532701670",
+        "https://x.com/useapolloio/status/2061441863245054030",
+        "https://x.com/useapolloio/status/2061441861936370026"
+      ],
+      "top_tweets": [
+        {
+          "id": "2061798795789078573",
+          "author": "useapolloio",
+          "authorName": "Apollo.io",
+          "text": "About 1/3 of new Apollo MCP users never open the Apollo platform. They run GTM from inside Claude and ChatGPT instead.",
+          "url": "https://x.com/useapolloio/status/2061798795789078573",
+          "createdAt": "Tue Jun 02 13:15:13 +0000 2026",
+          "engagement": {
+            "likes": 4,
+            "reposts": 1,
+            "replies": 4,
+            "views": 367,
+            "total": 9
+          }
+        },
+        {
+          "id": "2061874643301253549",
+          "author": "useapolloio",
+          "authorName": "Apollo.io",
+          "text": "Big news: Apollo is part of @OpenAI's launch of new role-specific plug ins in Codex 🎉 You can now do prospect research, account planning, meeting prep, reporting, and more all inside ChatGPT. Connect it now: https://t.co/4efqrcxf79 https://t.co/y21AkqHcGe",
+          "url": "https://x.com/useapolloio/status/2061874643301253549",
+          "createdAt": "Tue Jun 02 18:16:37 +0000 2026",
+          "engagement": {
+            "likes": 5,
+            "reposts": 0,
+            "replies": 0,
+            "views": 209,
+            "total": 5
+          }
+        },
+        {
+          "id": "2062280789451325598",
+          "author": "useapolloio",
+          "authorName": "Apollo.io",
+          "text": "Turn lurkers into customers 👀⤵️ https://t.co/jbNV2Hbu4B",
+          "url": "https://x.com/useapolloio/status/2062280789451325598",
+          "createdAt": "Wed Jun 03 21:10:30 +0000 2026",
+          "engagement": {
+            "likes": 2,
+            "reposts": 1,
+            "replies": 1,
+            "views": 106,
+            "total": 4
+          }
+        },
+        {
+          "id": "2061798803695337648",
+          "author": "useapolloio",
+          "authorName": "Apollo.io",
+          "text": "Apollo runs in Claude, ChatGPT, Chrome, HubSpot, Salesforce, and the terminal. Wherever the work happens, the data shows up.",
+          "url": "https://x.com/useapolloio/status/2061798803695337648",
+          "createdAt": "Tue Jun 02 13:15:15 +0000 2026",
+          "engagement": {
+            "likes": 1,
+            "reposts": 0,
+            "replies": 1,
+            "views": 99,
+            "total": 2
+          }
+        },
+        {
+          "id": "2061798798989410676",
+          "author": "useapolloio",
+          "authorName": "Apollo.io",
+          "text": "Headcount research by function. \"How big is Acme's engineering team?\" answered in the chat window. Email reveal when you already know who you want. CRM account scaffolding before outreach starts.",
+          "url": "https://x.com/useapolloio/status/2061798798989410676",
+          "createdAt": "Tue Jun 02 13:15:14 +0000 2026",
+          "engagement": {
+            "likes": 1,
+            "reposts": 0,
+            "replies": 1,
+            "views": 97,
+            "total": 2
+          }
+        }
+      ]
+    },
+    {
+      "tool": "Bolt",
+      "slug": "bolt",
+      "x_handle": "@boltdotnew",
+      "confidence": 100,
+      "query": "from:boltdotnew",
+      "tweets_returned": 20,
+      "authors": [
+        "boltdotnew"
+      ],
+      "urls": [
+        "https://x.com/boltdotnew/status/2062234848064934373",
+        "https://x.com/boltdotnew/status/2062232791778042168",
+        "https://x.com/boltdotnew/status/2062232693551645093",
+        "https://x.com/boltdotnew/status/2062217354130378934",
+        "https://x.com/boltdotnew/status/2062215611258691880",
+        "https://x.com/boltdotnew/status/2062213512684785835",
+        "https://x.com/boltdotnew/status/2062213475238068628",
+        "https://x.com/boltdotnew/status/2062211600119910881",
+        "https://x.com/boltdotnew/status/2062211153711821146",
+        "https://x.com/boltdotnew/status/2062208716192010517",
+        "https://x.com/boltdotnew/status/2062204369110532229",
+        "https://x.com/boltdotnew/status/2062200921325527282",
+        "https://x.com/boltdotnew/status/2062200655268250075",
+        "https://x.com/boltdotnew/status/2061912507573309899",
+        "https://x.com/boltdotnew/status/2061912506210082917",
+        "https://x.com/boltdotnew/status/2061912505006391728",
+        "https://x.com/boltdotnew/status/2061912503836082387",
+        "https://x.com/boltdotnew/status/2061912502733086735",
+        "https://x.com/boltdotnew/status/2061912502020010274",
+        "https://x.com/boltdotnew/status/2061865244800995390"
+      ],
+      "top_tweets": [
+        {
+          "id": "2061912502020010274",
+          "author": "boltdotnew",
+          "authorName": "bolt.new",
+          "text": "5 winners. One weekend. Each one rebuilt a tool they were tired of paying for. The sorry SaaS challenge results 🧵",
+          "url": "https://x.com/boltdotnew/status/2061912502020010274",
+          "createdAt": "Tue Jun 02 20:47:03 +0000 2026",
+          "engagement": {
+            "likes": 48,
+            "reposts": 1,
+            "replies": 8,
+            "views": 5938,
+            "total": 57
+          }
+        },
+        {
+          "id": "2061912505006391728",
+          "author": "boltdotnew",
+          "authorName": "bolt.new",
+          "text": "@conormartinai @JOYSTON980366 MySign by @RealNovaSpark. Sorry, DocuSign. Upload a doc, drop signature fields, sign, download. Clean, fast, free. Built in a weekend with Bolt. https://t.co/FJ3TgiEtON",
+          "url": "https://x.com/boltdotnew/status/2061912505006391728",
+          "createdAt": "Tue Jun 02 20:47:04 +0000 2026",
+          "engagement": {
+            "likes": 6,
+            "reposts": 1,
+            "replies": 1,
+            "views": 373,
+            "total": 8
+          }
+        },
+        {
+          "id": "2061912502733086735",
+          "author": "boltdotnew",
+          "authorName": "bolt.new",
+          "text": "A Gumroad alternative by @conormartinai. Sell your digital products without renting the storefront. Own the flow. Built in a weekend with Bolt. https://t.co/0JSqit9zkj",
+          "url": "https://x.com/boltdotnew/status/2061912502733086735",
+          "createdAt": "Tue Jun 02 20:47:03 +0000 2026",
+          "engagement": {
+            "likes": 6,
+            "reposts": 1,
+            "replies": 1,
+            "views": 3179,
+            "total": 8
+          }
+        },
+        {
+          "id": "2061912506210082917",
+          "author": "boltdotnew",
+          "authorName": "bolt.new",
+          "text": "@conormartinai @JOYSTON980366 @RealNovaSpark A Canva alternative by @maurice_lippy. Designs, marketing material, and more. Custom-built to fit one niche perfectly. Built in a weekend with Bolt. https://t.co/GyvaX4fPmR",
+          "url": "https://x.com/boltdotnew/status/2061912506210082917",
+          "createdAt": "Tue Jun 02 20:47:04 +0000 2026",
+          "engagement": {
+            "likes": 4,
+            "reposts": 0,
+            "replies": 3,
+            "views": 1678,
+            "total": 7
+          }
+        },
+        {
+          "id": "2061912503836082387",
+          "author": "boltdotnew",
+          "authorName": "bolt.new",
+          "text": "@conormartinai Fileify by @JOYSTON980366. Too many useful tools sit behind signups, limits, and paywalls. One free platform replaces the whole stack. Built in a weekend with Bolt. https://t.co/rrx5fHuAkd",
+          "url": "https://x.com/boltdotnew/status/2061912503836082387",
+          "createdAt": "Tue Jun 02 20:47:04 +0000 2026",
+          "engagement": {
+            "likes": 6,
+            "reposts": 0,
+            "replies": 1,
+            "views": 1558,
+            "total": 7
+          }
+        }
+      ]
+    },
+    {
+      "tool": "CatDoes",
+      "slug": "catdoes",
+      "x_handle": "@catdoeshq",
+      "confidence": 100,
+      "query": "from:catdoeshq",
+      "tweets_returned": 20,
+      "authors": [
+        "catdoeshq"
+      ],
+      "urls": [
+        "https://x.com/catdoeshq/status/2061856718133276748",
+        "https://x.com/catdoeshq/status/2047951339271885096",
+        "https://x.com/catdoeshq/status/2045109238842687877",
+        "https://x.com/catdoeshq/status/2045103569859194964",
+        "https://x.com/catdoeshq/status/2044782937674051659",
+        "https://x.com/catdoeshq/status/2044421435112800266",
+        "https://x.com/catdoeshq/status/2044089451073142939",
+        "https://x.com/catdoeshq/status/2044040193552851328",
+        "https://x.com/catdoeshq/status/2044023741814825205",
+        "https://x.com/catdoeshq/status/2044006592975171994",
+        "https://x.com/catdoeshq/status/2044004317372260568",
+        "https://x.com/catdoeshq/status/2044004170215125033",
+        "https://x.com/catdoeshq/status/2043988253246713973",
+        "https://x.com/catdoeshq/status/2043985794734436427",
+        "https://x.com/catdoeshq/status/2043985245922312530",
+        "https://x.com/catdoeshq/status/2043984266376225197",
+        "https://x.com/catdoeshq/status/2043983892365873642",
+        "https://x.com/catdoeshq/status/2043983489855340967",
+        "https://x.com/catdoeshq/status/2043982896646557930",
+        "https://x.com/catdoeshq/status/2043981654977323214"
+      ],
+      "top_tweets": [
+        {
+          "id": "2043985245922312530",
+          "author": "catdoeshq",
+          "authorName": "CatDoes",
+          "text": "I love what you guys are building. who want's a discount code? reply CatDoes below👇🏻",
+          "url": "https://x.com/catdoeshq/status/2043985245922312530",
+          "createdAt": "Tue Apr 14 09:30:32 +0000 2026",
+          "engagement": {
+            "likes": 8,
+            "reposts": 2,
+            "replies": 4,
+            "views": 348,
+            "total": 14
+          }
+        },
+        {
+          "id": "2061856718133276748",
+          "author": "catdoeshq",
+          "authorName": "CatDoes",
+          "text": "@OpenAI or you can just use catdoes... before they \"expand more broadly\". also, cute catdoes dupe you got there in your video. https://t.co/LrsKj53Yh9",
+          "url": "https://x.com/catdoeshq/status/2061856718133276748",
+          "createdAt": "Tue Jun 02 17:05:23 +0000 2026",
+          "engagement": {
+            "likes": 6,
+            "reposts": 2,
+            "replies": 1,
+            "views": 73,
+            "total": 9
+          }
+        },
+        {
+          "id": "2043981654977323214",
+          "author": "catdoeshq",
+          "authorName": "CatDoes",
+          "text": "Don’t sit on your idea, start building it with CatDoes",
+          "url": "https://x.com/catdoeshq/status/2043981654977323214",
+          "createdAt": "Tue Apr 14 09:16:16 +0000 2026",
+          "engagement": {
+            "likes": 7,
+            "reposts": 0,
+            "replies": 2,
+            "views": 105,
+            "total": 9
+          }
+        },
+        {
+          "id": "2043983489855340967",
+          "author": "catdoeshq",
+          "authorName": "CatDoes",
+          "text": "Building apps has never been easier. Just describe it, and CatDoes will build it for you.",
+          "url": "https://x.com/catdoeshq/status/2043983489855340967",
+          "createdAt": "Tue Apr 14 09:23:34 +0000 2026",
+          "engagement": {
+            "likes": 5,
+            "reposts": 1,
+            "replies": 1,
+            "views": 72,
+            "total": 7
+          }
+        },
+        {
+          "id": "2043982896646557930",
+          "author": "catdoeshq",
+          "authorName": "CatDoes",
+          "text": "@Rana_kamran43 yeah, that's me",
+          "url": "https://x.com/catdoeshq/status/2043982896646557930",
+          "createdAt": "Tue Apr 14 09:21:12 +0000 2026",
+          "engagement": {
+            "likes": 4,
+            "reposts": 0,
+            "replies": 0,
+            "views": 21,
+            "total": 4
+          }
+        }
+      ]
+    },
+    {
+      "tool": "Claude",
+      "slug": "claude",
+      "x_handle": "@claudeai",
+      "confidence": 60,
+      "query": "from:claudeai",
+      "tweets_returned": 20,
+      "authors": [
+        "claudeai"
+      ],
+      "urls": [
+        "https://x.com/claudeai/status/2062220051587952973",
+        "https://x.com/claudeai/status/2062220049146876347",
+        "https://x.com/claudeai/status/2062220045984346276",
+        "https://x.com/claudeai/status/2062220043413246146",
+        "https://x.com/claudeai/status/2062220040934449596",
+        "https://x.com/claudeai/status/2061829560505655316",
+        "https://x.com/claudeai/status/2061829558999912680",
+        "https://x.com/claudeai/status/2060074627032838438",
+        "https://x.com/claudeai/status/2060045358445576332",
+        "https://x.com/claudeai/status/2060042710753382816",
+        "https://x.com/claudeai/status/2060042709209928018",
+        "https://x.com/claudeai/status/2060042706844315866",
+        "https://x.com/claudeai/status/2060042702150930686",
+        "https://x.com/claudeai/status/2059682190279966841",
+        "https://x.com/claudeai/status/2059682187947946009",
+        "https://x.com/claudeai/status/2059662933924123044",
+        "https://x.com/claudeai/status/2059292347678986251",
+        "https://x.com/claudeai/status/2059292345800048714",
+        "https://x.com/claudeai/status/2059292343723819160",
+        "https://x.com/claudeai/status/2059292341970579619"
+      ],
+      "top_tweets": [
+        {
+          "id": "2060042702150930686",
+          "author": "claudeai",
+          "authorName": "Claude",
+          "text": "Introducing Claude Opus 4.8: it builds on Opus 4.7 with sharper judgment, more honesty about its own progress, and the ability to work independently for longer than its predecessors. Available today at the same price. https://t.co/EufxL7T1kb",
+          "url": "https://x.com/claudeai/status/2060042702150930686",
+          "createdAt": "Thu May 28 16:57:08 +0000 2026",
+          "engagement": {
+            "likes": 67206,
+            "reposts": 8696,
+            "replies": 3651,
+            "views": 14947923,
+            "total": 79553
+          }
+        },
+        {
+          "id": "2060074627032838438",
+          "author": "claudeai",
+          "authorName": "Claude",
+          "text": "Before we ship a new model, these teams try to break it. They build with it, push it to its limits, and tell us where it falls short. What they find makes the final model better. https://t.co/Q4LD01zIIc",
+          "url": "https://x.com/claudeai/status/2060074627032838438",
+          "createdAt": "Thu May 28 19:04:00 +0000 2026",
+          "engagement": {
+            "likes": 4936,
+            "reposts": 332,
+            "replies": 462,
+            "views": 532598,
+            "total": 5730
+          }
+        },
+        {
+          "id": "2060042709209928018",
+          "author": "claudeai",
+          "authorName": "Claude",
+          "text": "In Claude Code, Opus 4.8 makes calls like an experienced engineer without needing constant check-ins. It stays on track across long-running sessions and follows work through in your repo, so you can hand off a feature or a bug sweep while you focus on what's next. https://t.co/9zkNzwPepO",
+          "url": "https://x.com/claudeai/status/2060042709209928018",
+          "createdAt": "Thu May 28 16:57:10 +0000 2026",
+          "engagement": {
+            "likes": 3580,
+            "reposts": 168,
+            "replies": 51,
+            "views": 480443,
+            "total": 3799
+          }
+        },
+        {
+          "id": "2060042706844315866",
+          "author": "claudeai",
+          "authorName": "Claude",
+          "text": "Fast mode is available for Opus 4.8. It's the same model at roughly 2.5x the speed, and we've made it three times cheaper than before. Turn it on with /fast in Claude Code. On the API, contact your account manager to request access or join the waitlist: https://t.co/5SLFF77Whn",
+          "url": "https://x.com/claudeai/status/2060042706844315866",
+          "createdAt": "Thu May 28 16:57:09 +0000 2026",
+          "engagement": {
+            "likes": 3535,
+            "reposts": 138,
+            "replies": 74,
+            "views": 588997,
+            "total": 3747
+          }
+        },
+        {
+          "id": "2059662933924123044",
+          "author": "claudeai",
+          "authorName": "Claude",
+          "text": "New in the Claude Marketplace: @augmentcode, @boltdotnew, @coderabbitai, @hebbia, and @WeAreLegora. Apply your existing Anthropic spend commitment toward their Claude-powered products. Learn more: https://t.co/J3Sdsg2lU6 https://t.co/gN0npDM468",
+          "url": "https://x.com/claudeai/status/2059662933924123044",
+          "createdAt": "Wed May 27 15:48:04 +0000 2026",
+          "engagement": {
+            "likes": 3103,
+            "reposts": 244,
+            "replies": 189,
+            "views": 523074,
+            "total": 3536
+          }
+        }
+      ]
+    },
+    {
+      "tool": "Cursor",
+      "slug": "cursor",
+      "x_handle": "@cursor_ai",
+      "confidence": 100,
+      "query": "from:cursor_ai",
+      "tweets_returned": 20,
+      "authors": [
+        "cursor_ai"
+      ],
+      "urls": [
+        "https://x.com/cursor_ai/status/2061878340265656620",
+        "https://x.com/cursor_ai/status/2061550723503194426",
+        "https://x.com/cursor_ai/status/2060406014478831842",
+        "https://x.com/cursor_ai/status/2060406013098897765",
+        "https://x.com/cursor_ai/status/2060044920237469872",
+        "https://x.com/cursor_ai/status/2060025076947521984",
+        "https://x.com/cursor_ai/status/2060025074330243238",
+        "https://x.com/cursor_ai/status/2060025070425395562",
+        "https://x.com/cursor_ai/status/2060025067061563595",
+        "https://x.com/cursor_ai/status/2060025065455202675",
+        "https://x.com/cursor_ai/status/2060025063899058458",
+        "https://x.com/cursor_ai/status/2059673762728116442",
+        "https://x.com/cursor_ai/status/2057913123194155070",
+        "https://x.com/cursor_ai/status/2057913121558413770",
+        "https://x.com/cursor_ai/status/2057167364161208506",
+        "https://x.com/cursor_ai/status/2057167362781261887",
+        "https://x.com/cursor_ai/status/2057167361170698448",
+        "https://x.com/cursor_ai/status/2057167359593603471",
+        "https://x.com/cursor_ai/status/2056803732650897580",
+        "https://x.com/cursor_ai/status/2056803731367456993"
+      ],
+      "top_tweets": [
+        {
+          "id": "2060044920237469872",
+          "author": "cursor_ai",
+          "authorName": "Cursor",
+          "text": "Claude Opus 4.8 is now available in Cursor. On CursorBench, it's able to work much more efficiently than Opus 4.7. We've also found it to be more persistent on harder tasks.",
+          "url": "https://x.com/cursor_ai/status/2060044920237469872",
+          "createdAt": "Thu May 28 17:05:57 +0000 2026",
+          "engagement": {
+            "likes": 3931,
+            "reposts": 159,
+            "replies": 165,
+            "views": 293853,
+            "total": 4255
+          }
+        },
+        {
+          "id": "2057913121558413770",
+          "author": "cursor_ai",
+          "authorName": "Cursor",
+          "text": "With the Cursor SDK, you can build your own agents with Composer 2.5. It's now available in Python and TypeScript. This long weekend, Composer usage is 90% off in the SDK. We're excited to see what you build! https://t.co/8grHpJQtOu",
+          "url": "https://x.com/cursor_ai/status/2057913121558413770",
+          "createdAt": "Fri May 22 19:54:57 +0000 2026",
+          "engagement": {
+            "likes": 2776,
+            "reposts": 202,
+            "replies": 167,
+            "views": 577429,
+            "total": 3145
+          }
+        },
+        {
+          "id": "2056803731367456993",
+          "author": "cursor_ai",
+          "authorName": "Cursor",
+          "text": "Cursor is now available in Jira. Assign Cursor to work items, or mention @​Cursor in a comment to kick off a cloud agent. Cursor uses the title, description, comments, and your team's repository settings to create a merge-ready PR. https://t.co/cK2ElMu0eZ",
+          "url": "https://x.com/cursor_ai/status/2056803731367456993",
+          "createdAt": "Tue May 19 18:26:37 +0000 2026",
+          "engagement": {
+            "likes": 2069,
+            "reposts": 143,
+            "replies": 109,
+            "views": 253490,
+            "total": 2321
+          }
+        },
+        {
+          "id": "2060406013098897765",
+          "author": "cursor_ai",
+          "authorName": "Cursor",
+          "text": "Auto-review mode is now available in Cursor. It allows agents to run tool calls with fewer approval prompts and safer execution. https://t.co/GZQX89mgmq",
+          "url": "https://x.com/cursor_ai/status/2060406013098897765",
+          "createdAt": "Fri May 29 17:00:48 +0000 2026",
+          "engagement": {
+            "likes": 2016,
+            "reposts": 134,
+            "replies": 89,
+            "views": 255619,
+            "total": 2239
+          }
+        },
+        {
+          "id": "2061550723503194426",
+          "author": "cursor_ai",
+          "authorName": "Cursor",
+          "text": "We’re increasing usage limits for every Teams user. Inspired by the success of our Ultra plan, we're also introducing a Premium team seat that includes 5x usage at only 3x the cost.",
+          "url": "https://x.com/cursor_ai/status/2061550723503194426",
+          "createdAt": "Mon Jun 01 20:49:28 +0000 2026",
+          "engagement": {
+            "likes": 1911,
+            "reposts": 81,
+            "replies": 84,
+            "views": 179075,
+            "total": 2076
+          }
+        }
+      ]
+    },
+    {
+      "tool": "Descript",
+      "slug": "descript",
+      "x_handle": "@descript",
+      "confidence": 100,
+      "query": "from:descript",
+      "tweets_returned": 20,
+      "authors": [
+        "descript"
+      ],
+      "urls": [
+        "https://x.com/descript/status/2062290879642255563",
+        "https://x.com/descript/status/2062290588473696762",
+        "https://x.com/descript/status/2062263271097557382",
+        "https://x.com/descript/status/2062239829518319997",
+        "https://x.com/descript/status/2062239620524618206",
+        "https://x.com/descript/status/2062239311832261052",
+        "https://x.com/descript/status/2062018844395544763",
+        "https://x.com/descript/status/2062001714988036488",
+        "https://x.com/descript/status/2061929042165796962",
+        "https://x.com/descript/status/2061927475341677010",
+        "https://x.com/descript/status/2061927473777127673",
+        "https://x.com/descript/status/2061926285983838589",
+        "https://x.com/descript/status/2061925645958238474",
+        "https://x.com/descript/status/2061880533462974539",
+        "https://x.com/descript/status/2061880364172509513",
+        "https://x.com/descript/status/2061480411990053019",
+        "https://x.com/descript/status/2061118158677688352",
+        "https://x.com/descript/status/2060814132757021069",
+        "https://x.com/descript/status/2060543135629844526",
+        "https://x.com/descript/status/2060465054378819850"
+      ],
+      "top_tweets": [
+        {
+          "id": "2060465054378819850",
+          "author": "descript",
+          "authorName": "Descript",
+          "text": "new API feature: **`export-transcript` is now public** refresh MCP/connector if it's not showing up for you @jethrojones https://t.co/ifUkLOapYU",
+          "url": "https://x.com/descript/status/2060465054378819850",
+          "createdAt": "Fri May 29 20:55:25 +0000 2026",
+          "engagement": {
+            "likes": 9,
+            "reposts": 0,
+            "replies": 1,
+            "views": 892,
+            "total": 10
+          }
+        },
+        {
+          "id": "2062290588473696762",
+          "author": "descript",
+          "authorName": "Descript",
+          "text": "\"But I'm not a developer, why do I need an API for my video editing software?\" -@theaaron \"Hold my Claude...\"- Descript's Teddy, Senior QA Engineer and API evangelist https://t.co/Uc2K23MgKx",
+          "url": "https://x.com/descript/status/2062290588473696762",
+          "createdAt": "Wed Jun 03 21:49:26 +0000 2026",
+          "engagement": {
+            "likes": 4,
+            "reposts": 1,
+            "replies": 1,
+            "views": 341,
+            "total": 6
+          }
+        },
+        {
+          "id": "2060814132757021069",
+          "author": "descript",
+          "authorName": "Descript",
+          "text": "Every webinar, someone asks Marcello how he uses Underlord. Every webinar, his eye twitches a little harder. So we hit record while he answered this time. Here's exact 6-step prompt he runs through Underlord on every video, before he touches a single thing himself: 1. Studio Sound @ 80% intensity — dialed in for his recording room (100% scrubs too much life out) 2. Remove filler words but KEEP \"like\" — he spot-checks those himself because half the time he means them 3. Remove retakes — \"if there's a retake, I don't need it\" 4. Apply Eye Contact — he reads a teleprompter every time, so this fixes the off-camera gaze 5. Split into chapters 6. Apply his custom \"Marcello\" layout pack — instant on-brand All six bundled into one saved prompt, run on Underlord with Opus 4.7, the moment media is imported. Then he does the creative \"last 20%\" by hand.",
+          "url": "https://x.com/descript/status/2060814132757021069",
+          "createdAt": "Sat May 30 20:02:31 +0000 2026",
+          "engagement": {
+            "likes": 3,
+            "reposts": 1,
+            "replies": 1,
+            "views": 596,
+            "total": 5
+          }
+        },
+        {
+          "id": "2061927473777127673",
+          "author": "descript",
+          "authorName": "Descript",
+          "text": "Tired of re-explaining your editing style to an AI every single time? Same. That's why we gave Underlord custom instructions — so it actually learns your preferences as you work. Tell it you like faster cuts, a specific transition style, or any other quirk of how you edit, and it'll remember. No more starting from scratch every session.",
+          "url": "https://x.com/descript/status/2061927473777127673",
+          "createdAt": "Tue Jun 02 21:46:33 +0000 2026",
+          "engagement": {
+            "likes": 2,
+            "reposts": 1,
+            "replies": 1,
+            "views": 697,
+            "total": 4
+          }
+        },
+        {
+          "id": "2062239620524618206",
+          "author": "descript",
+          "authorName": "Descript",
+          "text": "JoVo is the Head of Design 🐐",
+          "url": "https://x.com/descript/status/2062239620524618206",
+          "createdAt": "Wed Jun 03 18:26:54 +0000 2026",
+          "engagement": {
+            "likes": 3,
+            "reposts": 0,
+            "replies": 0,
+            "views": 435,
+            "total": 3
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

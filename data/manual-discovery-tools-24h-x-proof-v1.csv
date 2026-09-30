@@ -1,0 +1,31 @@
+tool,slug,x_handle,tweets_returned,useful_proof_count,proof_quality_score,status
+Agent A | Ahrefs,agent-a-ahrefs,@ahrefs,20,14,100,qualified_3_plus
+Ava Studio,ava-studio,@avastudio_ai,0,0,0,no_useful_proof
+Basedash,basedash,@Basedash,20,19,100,qualified_3_plus
+Branda,branda,@brandacooks,2,2,20,partial_1_plus
+Buffer API,buffer-api,@buffer,20,17,100,qualified_3_plus
+Clipline,clipline,@clipline_ai,0,0,0,no_useful_proof
+Co-Invest,co-invest,@coinvest_ai,0,0,0,no_useful_proof
+Coworker AI,coworker-ai,@coworkerapp,20,20,100,qualified_3_plus
+Databox MCP,databox-mcp,@databoxHQ,10,10,100,qualified_3_plus
+DodoForm,dodoform,@dofolabs,1,1,10,partial_1_plus
+Dune Keypad,dune-keypad,@projectmirageai,0,0,0,no_useful_proof
+folk,folk,@FolkHQ,20,17,100,qualified_3_plus
+Fundraisly,fundraisly,@Fundraisely,17,16,100,qualified_3_plus
+Integuru,integuru,@InteguruAI,17,17,100,qualified_3_plus
+Knock Agent for Slack,knock-agent-for-slack,@knocklabs,20,20,100,qualified_3_plus
+Krater,krater,@krater_ai,0,0,0,no_useful_proof
+MCP Bridge | Appfactor,mcp-bridge-appfactor,@appfactor,0,0,0,no_useful_proof
+Mina Meeting Assistant,mina-meeting-assistant,@HeyMinaAI,1,0,0,no_useful_proof
+Octolane,octolane,@octolane,20,20,100,qualified_3_plus
+Openstatus Health,openstatus-health,@openstatusHQ,20,18,100,qualified_3_plus
+Parsewise API,parsewise-api,@parsewise,3,3,30,qualified_3_plus
+Paste App,paste-app,@paste_app,20,16,100,qualified_3_plus
+Rezonant,rezonant,@rezonant_ai,0,0,0,no_useful_proof
+Rodeo by TwelveLabs,rodeo-by-twelvelabs,@twelve_labs,20,20,100,qualified_3_plus
+Step 3.7 Flash,step-3-7-flash,@StepFun_ai,19,18,100,qualified_3_plus
+Tokenwise,tokenwise,@tokenwise_ai,0,0,0,no_useful_proof
+Typeahead,typeahead,@typeaheadAI,3,3,30,qualified_3_plus
+Willow Scribe,willow-scribe,@WillowVoiceAI,20,18,100,qualified_3_plus
+Wingbits AI,wingbits-ai,@Wingbits,20,20,100,qualified_3_plus
+zero.xyz,zero-xyz,@zeroxyz,20,18,100,qualified_3_plus

@@ -1,0 +1,69 @@
+tool,slug,x_handle,tweets_returned,useful_proof_count,proof_quality_score,status
+GitHub Copilot,github-copilot,@github,20,17,100,qualified_3_plus
+CodeRabbit,coderabbit,@coderabbitai,20,20,100,qualified_3_plus
+Sourcegraph,sourcegraph,@sourcegraph,20,20,100,qualified_3_plus
+Cline,cline,@cline,20,19,100,qualified_3_plus
+Augment Code,augment-code,@augmentcode,20,19,100,qualified_3_plus
+Qodo,qodo,@QodoAI,20,19,100,qualified_3_plus
+Tabnine,tabnine,@tabnine,20,18,100,qualified_3_plus
+Polymarket,polymarket,@Polymarket,20,11,100,qualified_3_plus
+Kalshi,kalshi,@Kalshi,20,17,100,qualified_3_plus
+TradingView,tradingview,@tradingview,20,11,100,qualified_3_plus
+TrendSpider,trendspider,@TrendSpider,20,6,60,qualified_3_plus
+Option Alpha,option-alpha,@OptionAlpha,20,16,100,qualified_3_plus
+QuantConnect,quantconnect,@QuantConnect,20,18,100,qualified_3_plus
+Arkham,arkham,@ArkhamIntel,20,4,40,qualified_3_plus
+Glassnode,glassnode,@glassnode,20,13,100,qualified_3_plus
+Nansen,nansen,@nansen_ai,20,8,80,qualified_3_plus
+DefiLlama,defillama,@DefiLlama,20,8,80,qualified_3_plus
+Messari,messari,@MessariCrypto,20,15,100,qualified_3_plus
+Santiment,santiment,@santimentfeed,20,2,20,partial_1_plus
+CrewAI,crewai,@crewAIInc,20,18,100,qualified_3_plus
+Gumloop,gumloop,@gumloop,20,18,100,qualified_3_plus
+Langflow,langflow,@langflow_ai,20,20,100,qualified_3_plus
+Flowise,flowise,@FlowiseAI,20,17,100,qualified_3_plus
+AgentOps,agentops,@AgentOpsAI,20,19,100,qualified_3_plus
+Dify,dify,@dify_ai,20,15,100,qualified_3_plus
+Pipedream,pipedream,@PipedreamHQ,20,20,100,qualified_3_plus
+Activepieces,activepieces,@activepieces,20,19,100,qualified_3_plus
+Workato,workato,@Workato,20,19,100,qualified_3_plus
+Rows,rows,@rowshq,20,18,100,qualified_3_plus
+Flux (Black Forest Labs),flux-black-forest-labs,@bfl_ml,20,20,100,qualified_3_plus
+Recraft,recraft,@recraftai,20,17,100,qualified_3_plus
+Leonardo AI,leonardo-ai,@LeonardoAi_,20,1,10,partial_1_plus
+Canva AI,canva-ai,@canva,20,19,100,qualified_3_plus
+Adobe Firefly,adobe-firefly,@AdobeFirefly,20,20,100,qualified_3_plus
+Magnific,magnific,@Magnific_AI,20,16,100,qualified_3_plus
+Krea,krea,@krea_ai,20,12,100,qualified_3_plus
+Freepik AI,freepik-ai,@freepik,20,19,100,qualified_3_plus
+Playground AI,playground-ai,@playground_ai,20,11,100,qualified_3_plus
+Photoroom,photoroom,@photoroom_app,20,19,100,qualified_3_plus
+OpenArt,openart,@openart_ai,20,19,100,qualified_3_plus
+Luma,luma,@LumaLabsAI,20,17,100,qualified_3_plus
+Veed,veed,@veedstudio,20,18,100,qualified_3_plus
+Hedra,hedra,@hedra_labs,20,18,100,qualified_3_plus
+Tavus,tavus,@heytavus,20,19,100,qualified_3_plus
+D-ID,d-id,@D_ID_,20,13,100,qualified_3_plus
+Vidu,vidu,@ViduAI_official,20,15,100,qualified_3_plus
+PixVerse,pixverse,@PixVerse_,20,13,100,qualified_3_plus
+Exa,exa,@exa_ai,3,2,20,partial_1_plus
+Elicit,elicit,@elicitorg,20,19,100,qualified_3_plus
+Consensus,consensus,@ConsensusNLP,20,13,100,qualified_3_plus
+Scite,scite,@scite,20,17,100,qualified_3_plus
+Research Rabbit,research-rabbit,@researchrabbit,1,1,10,partial_1_plus
+Connected Papers,connected-papers,@ConnectedPapers,8,8,80,qualified_3_plus
+Semantic Scholar,semantic-scholar,@SemanticScholar,3,3,30,qualified_3_plus
+Inworld,inworld,@inworld_ai,20,19,100,qualified_3_plus
+Scenario,scenario,@scenario_gg,20,18,100,qualified_3_plus
+Layer AI,layer-ai,@Layer_AI,20,19,100,qualified_3_plus
+Ready Player Me,ready-player-me,@readyplayerme,20,18,100,qualified_3_plus
+Rosebud AI,rosebud-ai,@rosebud_ai,20,16,100,qualified_3_plus
+Ludo AI,ludo-ai,@ludo_ai,20,19,100,qualified_3_plus
+Meshy,meshy,@MeshyAI,20,13,100,qualified_3_plus
+Tripo,tripo,@TripoAI,20,15,100,qualified_3_plus
+Spline,spline,@splinetool,20,19,100,qualified_3_plus
+Kaedim,kaedim,@Kaedim3D,20,16,100,qualified_3_plus
+Polycam,polycam,@Polycam3D,20,19,100,qualified_3_plus
+Character.AI,character-ai,@character_ai,20,19,100,qualified_3_plus
+DeepBrain AI,deepbrain-ai,@DeepBrainAI,7,7,70,qualified_3_plus
+Hour One,hour-one,@HourOneAI,20,19,100,qualified_3_plus

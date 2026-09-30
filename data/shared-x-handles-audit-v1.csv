@@ -1,0 +1,3 @@
+x_handle,tools_using_handle,count,should_exclude_from_proof
+@theresanaiforit,AirMusic (airmusic); ColorJibe (colorjibe); Coursebox (coursebox); Elevoi (elevoi); Grok (grok); GroundScholar (groundscholar); ImagineGo (imaginego); Kling (kling); LobbyStack (lobbystack); ModelAtlas (modelatlas); MyCustodyCoach (mycustodycoach); NestTrack (nesttrack); Raplyrics (raplyrics); Resumedit (resumedit); Riskified (riskified); Tome (tome); UGO (ugo); Vismint (vismint); WearMind (wearmind),19,true
+@framer,Framer (framer); Framer AI (framer-ai),2,false

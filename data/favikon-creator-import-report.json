@@ -1,0 +1,37 @@
+{
+  "targetCount": 100,
+  "source": "Favikon",
+  "importedAt": "2026-05-24T05:14:50.380Z",
+  "fetchedPages": [],
+  "blockedPages": [
+    {
+      "url": "https://www.favikon.com/blog/top-ai-artists-social-media",
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "url": "https://www.favikon.com/blog/top-ai-experts",
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "url": "https://www.favikon.com/rankings",
+      "status": 0,
+      "reason": "fetch failed"
+    }
+  ],
+  "usedPublicSnapshot": true,
+  "discovered": 20,
+  "imported": 20,
+  "accepted": 0,
+  "pendingReview": 20,
+  "xLinks": 0,
+  "youtubeLinks": 0,
+  "linkedinLinks": 0,
+  "avatars": 0,
+  "duplicateMergeCount": 0,
+  "notes": [
+    "Live Favikon fetch was blocked in this environment, so the importer used a cached public snapshot from Favikon's Top 20 AI Artists public ranking page.",
+    "No creators were auto-accepted because the accessible sample lacks creator avatars and direct social/profile links. They are imported as pending_review and can be promoted after live Favikon profile/social data is available."
+  ]
+}

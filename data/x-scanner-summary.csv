@@ -1,0 +1,6 @@
+scan_timestamp,tool_slug,tool_name,official_handle,x_user_id,followers_count,tweet_count,official_posts_collected,handle_mentions_collected,profile_page_status,search_page_status,official_posts_visible,handle_mentions_visible,errors
+2026-06-11T01:09:31.249Z,11x,11x,11x_official,11x_official,2539,71,0,0,no_public_posts_visible_signup_prompt,no_public_posts_visible,false,false,
+2026-06-11T01:09:31.249Z,activepieces,Activepieces,activepieces,activepieces,681,953,0,0,no_public_posts_visible_signup_prompt,no_public_posts_visible,false,false,
+2026-06-11T01:09:31.249Z,adapt,Adapt,adapt,adapt,5240,1047,0,0,no_public_posts_visible_signup_prompt,no_public_posts_visible,false,false,
+2026-06-11T01:09:31.249Z,adobe-firefly,Adobe Firefly,AdobeFirefly,AdobeFirefly,2283,658,0,0,no_public_posts_visible_signup_prompt,no_public_posts_visible,false,false,
+2026-06-11T01:09:31.249Z,agent-a-ahrefs,Agent A | Ahrefs,ahrefs,ahrefs,171500,0,0,0,no_public_posts_visible_signup_prompt,no_public_posts_visible,false,false,

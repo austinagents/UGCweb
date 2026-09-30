@@ -1,0 +1,28 @@
+{
+  "source": "AppScreener PDF Creator Handle Mapping",
+  "pdfPath": "/Users/austintaylor/Downloads/Appscreener Ai Creator Tags Mapping.pdf",
+  "pagesReviewed": 5,
+  "handlesProcessed": 100,
+  "accepted": 100,
+  "pendingReview": 0,
+  "withXUrls": 100,
+  "withTrustedAvatars": 0,
+  "withSpecializationTags": 100,
+  "approvedTags": [
+    "AI Coding",
+    "AI Agents",
+    "AI Automation",
+    "AI Workflows",
+    "AI Productivity",
+    "AI Design",
+    "AI Image",
+    "AI Video",
+    "AI Marketing",
+    "AI Research",
+    "AI Infrastructure",
+    "AI Voice",
+    "AI Search",
+    "Open Source AI"
+  ],
+  "unreadablePages": []
+}

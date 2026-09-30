@@ -1,0 +1,64 @@
+tool,slug,source
+Aider,aider,lib/data.ts top100_all_fix
+Amazon Bedrock,amazon-bedrock,data/top100-ingest-v1.csv
+Anthropic Console,anthropic-console,data/top100-ingest-v1.csv
+AnythingLLM,anythingllm,lib/data.ts top100_all_fix
+AutoGen,autogen,data/top100-ingest-v1.csv
+Azure AI Foundry,azure-ai-foundry,data/top100-ingest-v1.csv
+Blackbox AI,blackbox-ai,data/top100-ingest-v1.csv
+Chroma,chroma,data/top100-ingest-v1.csv
+Claude Code,claude-code,data/top100-ingest-v1.csv
+Clay,clay,data/top100-ingest-v1.csv
+Codeium,codeium,data/top100-ingest-v1.csv
+Cohere,cohere,data/top100-ingest-v1.csv
+ComfyUI,comfyui,lib/data.ts top100_all_fix
+Copy.ai,copy-ai,data/top100-ingest-v1.csv
+DALL-E,dall-e,data/top100-ingest-v1.csv
+Databricks Mosaic AI,databricks-mosaic-ai,data/top100-ingest-v1.csv
+DeepSeek,deepseek,data/top100-ingest-v1.csv
+Devin,devin,data/top100-ingest-v1.csv
+Fathom,fathom,data/top100-ingest-v1.csv
+Figma AI,figma-ai,data/top100-ingest-v1.csv
+Fireflies.ai,fireflies-ai,data/top100-ingest-v1.csv
+Fireworks AI,fireworks-ai,data/top100-ingest-v1.csv
+Google Gemini,google-gemini,data/top100-ingest-v1.csv
+Grammarly,grammarly,data/top100-ingest-v1.csv
+Groq,groq,data/top100-ingest-v1.csv
+Harvey,harvey,data/top100-ingest-v1.csv
+Hebbia,hebbia,data/top100-ingest-v1.csv
+Hugging Face,hugging-face,data/top100-ingest-v1.csv
+IBM watsonx,ibm-watsonx,data/top100-ingest-v1.csv
+Intercom Fin,intercom-fin,data/top100-ingest-v1.csv
+LangChain,langchain,data/top100-ingest-v1.csv
+LangSmith,langsmith,data/top100-ingest-v1.csv
+LlamaIndex,llamaindex,data/top100-ingest-v1.csv
+LM Studio,lm-studio,lib/data.ts top100_all_fix
+Meta AI,meta-ai,data/top100-ingest-v1.csv
+Microsoft Copilot,microsoft-copilot,data/top100-ingest-v1.csv
+Mistral AI,mistral-ai,data/top100-ingest-v1.csv
+Modal,modal,data/top100-ingest-v1.csv
+Motion,motion,data/top100-ingest-v1.csv
+Ollama,ollama,lib/data.ts top100_all_fix
+OpenAI Codex,openai-codex,data/top100-ingest-v1.csv
+OpenAI Platform,openai-platform,data/top100-ingest-v1.csv
+OpenRouter,openrouter,data/top100-ingest-v1.csv
+Otter.ai,otter-ai,data/top100-ingest-v1.csv
+Phind,phind,data/top100-ingest-v1.csv
+Pinecone,pinecone,data/top100-ingest-v1.csv
+Poe,poe,data/top100-ingest-v1.csv
+Reclaim AI,reclaim-ai,data/top100-ingest-v1.csv
+Relevance AI,relevance-ai,data/top100-ingest-v1.csv
+Replicate,replicate,data/top100-ingest-v1.csv
+Sierra,sierra,data/top100-ingest-v1.csv
+Sourcegraph Cody,sourcegraph-cody,data/top100-ingest-v1.csv
+Stable Diffusion,stable-diffusion,data/top100-ingest-v1.csv
+Superhuman AI,superhuman-ai,data/top100-ingest-v1.csv
+Together AI,together-ai,data/top100-ingest-v1.csv
+Tome,tome,data/top100-ingest-v1.csv
+Vertex AI,vertex-ai,data/top100-ingest-v1.csv
+Weaviate,weaviate,data/top100-ingest-v1.csv
+Webflow AI,webflow-ai,data/top100-ingest-v1.csv
+Wordtune,wordtune,data/top100-ingest-v1.csv
+Writer,writer,data/top100-ingest-v1.csv
+You.com,you-com,data/top100-ingest-v1.csv
+Zendesk AI,zendesk-ai,data/top100-ingest-v1.csv

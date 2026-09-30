@@ -1,0 +1,15 @@
+tool,slug,x_handle,tweets_returned,useful_proof_count,proof_quality_score,status
+CapCut,capcut,@capcutapp,20,10,100,qualified_3_plus
+ChatGPT,chatgpt,@ChatGPTapp,20,10,100,qualified_3_plus
+Claude,claude,@claudeai,20,10,100,qualified_3_plus
+Cursor,cursor,@cursor_ai,20,10,100,qualified_3_plus
+ElevenLabs,elevenlabs,@ElevenLabs,20,10,100,qualified_3_plus
+HeyGen,heygen,@HeyGen,20,10,100,qualified_3_plus
+Kling,kling,@Kling_ai,20,10,100,qualified_3_plus
+Midjourney,midjourney,@midjourney,20,10,100,qualified_3_plus
+NotebookLM,notebooklm,@NotebookLM,20,10,100,qualified_3_plus
+Perplexity,perplexity,@perplexity_ai,20,10,100,qualified_3_plus
+Pika,pika,@pika_labs,20,10,100,qualified_3_plus
+Runway,runway,@runwayml,20,10,100,qualified_3_plus
+Synthesia,synthesia,@synthesiaio,20,10,100,qualified_3_plus
+Vercel,vercel,@vercel,20,10,100,qualified_3_plus

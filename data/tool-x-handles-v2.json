@@ -1,0 +1,238 @@
+{
+  "summary": {
+    "generated_at": "2026-06-04T09:40:17.185Z",
+    "source": "data/x-handle-source-audit-v1.json",
+    "validation_scope": "first 25 missing-handle tools",
+    "checked": 25,
+    "recovered_handles": 2,
+    "failed_handles": 23,
+    "recovery_rate": 0.08
+  },
+  "records": [
+    {
+      "tool": "ChatGPT",
+      "slug": "chatgpt",
+      "websiteUrl": "https://chat.openai.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://chat.openai.com",
+      "notes": "Homepage unavailable or returned non-OK response."
+    },
+    {
+      "tool": "Perplexity",
+      "slug": "perplexity",
+      "websiteUrl": "https://www.perplexity.ai",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.perplexity.ai",
+      "notes": "Homepage unavailable or returned non-OK response."
+    },
+    {
+      "tool": "Midjourney",
+      "slug": "midjourney",
+      "websiteUrl": "https://www.midjourney.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.midjourney.com",
+      "notes": "Homepage unavailable or returned non-OK response."
+    },
+    {
+      "tool": "Ideogram",
+      "slug": "ideogram",
+      "websiteUrl": "https://ideogram.ai",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://ideogram.ai",
+      "notes": "Homepage unavailable or returned non-OK response."
+    },
+    {
+      "tool": "Gamma",
+      "slug": "gamma",
+      "websiteUrl": "https://gamma.app",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://gamma.app",
+      "notes": "Homepage unavailable or returned non-OK response."
+    },
+    {
+      "tool": "CapCut",
+      "slug": "capcut",
+      "websiteUrl": "https://www.capcut.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.capcut.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "Descript",
+      "slug": "descript",
+      "websiteUrl": "https://www.descript.com",
+      "x_handle": "@descript",
+      "confidence": 100,
+      "source_url": "https://www.descript.com",
+      "notes": "Single homepage X/Twitter profile link."
+    },
+    {
+      "tool": "Udio",
+      "slug": "udio",
+      "websiteUrl": "https://udio.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://udio.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "NotebookLM",
+      "slug": "notebooklm",
+      "websiteUrl": "https://notebooklm.google",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://notebooklm.google",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "Make",
+      "slug": "make",
+      "websiteUrl": "https://www.make.com",
+      "x_handle": "@make_hq",
+      "confidence": 95,
+      "source_url": "https://www.make.com",
+      "notes": "Single homepage X/Twitter profile link."
+    },
+    {
+      "tool": "Typefully",
+      "slug": "typefully",
+      "websiteUrl": "https://typefully.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://typefully.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "Taplio",
+      "slug": "taplio",
+      "websiteUrl": "https://taplio.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://taplio.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "LinkedIn",
+      "slug": "linkedin",
+      "websiteUrl": "https://www.linkedin.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.linkedin.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "Google Maps",
+      "slug": "google-maps",
+      "websiteUrl": "https://www.google.com/maps",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.google.com/maps",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "Vtuber Assistant",
+      "slug": "vtuber-assistant",
+      "websiteUrl": "https://store.steampowered.com/app/4464930/Vtuber_Assistant",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://store.steampowered.com/app/4464930/Vtuber_Assistant",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "Thrive Financial",
+      "slug": "thrive-financial",
+      "websiteUrl": "https://thrivefinancial.app",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://thrivefinancial.app",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "FastiAds",
+      "slug": "fastiads",
+      "websiteUrl": "https://www.fastiads.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.fastiads.com",
+      "notes": "Ambiguous X/Twitter links found: @BusinessBoris, @PriyaShopify, @fastiadcopy"
+    },
+    {
+      "tool": "UFate",
+      "slug": "ufate",
+      "websiteUrl": "https://www.ufate.ai",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.ufate.ai",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "ApiPosture",
+      "slug": "apiposture",
+      "websiteUrl": "https://www.apiposture.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.apiposture.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "BuddyPro",
+      "slug": "buddypro",
+      "websiteUrl": "https://buddypro.ai",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://buddypro.ai",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "PlotStudio AI",
+      "slug": "plotstudio-ai",
+      "websiteUrl": "https://www.plotstudio.ai",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.plotstudio.ai",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "General Compute",
+      "slug": "general-compute",
+      "websiteUrl": "https://www.generalcompute.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.generalcompute.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "Franki",
+      "slug": "franki",
+      "websiteUrl": "https://www.chat-to-franki.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://www.chat-to-franki.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "TeachQuill",
+      "slug": "teachquill",
+      "websiteUrl": "https://teachquill.com",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://teachquill.com",
+      "notes": "No X/Twitter profile links found on homepage."
+    },
+    {
+      "tool": "OpenBudget",
+      "slug": "openbudget",
+      "websiteUrl": "https://openbudget.sh",
+      "x_handle": "",
+      "confidence": 0,
+      "source_url": "https://openbudget.sh",
+      "notes": "No X/Twitter profile links found on homepage."
+    }
+  ]
+}

@@ -1,0 +1,2562 @@
+{
+  "summary": {
+    "generated_at": "2026-06-04T10:43:25.403Z",
+    "tools_requested": 25,
+    "tools_completed": 25,
+    "runtime_seconds": 13.25,
+    "concurrency": 75,
+    "documented_rate_limit_used": "TwitterAPI.io public article states 1,000+ requests/second; this run used concurrency=75 for 75 total requests with retry-on-429.",
+    "errors": [],
+    "strategies": {
+      "A": {
+        "strategy": "A",
+        "tools": 25,
+        "tweets_returned": 265,
+        "useful_proof_count": 157,
+        "spam_count": 15,
+        "average_proof_quality": 59.25
+      },
+      "B": {
+        "strategy": "B",
+        "tools": 25,
+        "tweets_returned": 265,
+        "useful_proof_count": 157,
+        "spam_count": 15,
+        "average_proof_quality": 59.25
+      },
+      "C": {
+        "strategy": "C",
+        "tools": 25,
+        "tweets_returned": 335,
+        "useful_proof_count": 103,
+        "spam_count": 9,
+        "average_proof_quality": 30.75
+      }
+    },
+    "winning_strategy": "A"
+  },
+  "records": [
+    {
+      "tool": "Adapt",
+      "slug": "adapt",
+      "x_handle": "@adapt",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@adapt min_faves:3 -filter:replies",
+          "tweets_returned": 18,
+          "useful_proof_count": 10,
+          "spam_count": 1,
+          "proof_quality_score": 56,
+          "sample_tweets": [
+            {
+              "author": "peacenjoyvibes",
+              "text": "Emi clutches a 1v4 streak for team @adapt vs @theburntpeanut! 👏 Clutch! @emiru at the #ATTAnnilhilatorCup #CallofDuty https://t.co/BXAg45VHzL",
+              "url": "https://x.com/peacenjoyvibes/status/2052611942544716214",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 1,
+                "views": 2496,
+                "total": 6
+              }
+            },
+            {
+              "author": "KyleTibbitts",
+              "text": ".@Adapt has completely changed how we work @Wander. I probably use it 20+ times per day. Congrats to the Adapt team on the launch! https://t.co/XnD5lIOR7A",
+              "url": "https://x.com/KyleTibbitts/status/2044605875264909695",
+              "engagement": {
+                "likes": 15,
+                "reposts": 2,
+                "replies": 1,
+                "views": 1135,
+                "total": 18
+              }
+            },
+            {
+              "author": "jaentwistle",
+              "text": "We've been using @Adapt inside of @wander for the past 6 months, and it's created radical efficiencies. Congrats to the team on officially being GA. My pro tip, is to put in the effort to connect as many data sources and systems as possible. That's where the magic happens.",
+              "url": "https://x.com/jaentwistle/status/2044503458854932821",
+              "engagement": {
+                "likes": 16,
+                "reposts": 2,
+                "replies": 1,
+                "views": 1750,
+                "total": 19
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@adapt -from:adapt min_faves:3 -filter:replies",
+          "tweets_returned": 18,
+          "useful_proof_count": 10,
+          "spam_count": 1,
+          "proof_quality_score": 56,
+          "sample_tweets": [
+            {
+              "author": "peacenjoyvibes",
+              "text": "Emi clutches a 1v4 streak for team @adapt vs @theburntpeanut! 👏 Clutch! @emiru at the #ATTAnnilhilatorCup #CallofDuty https://t.co/BXAg45VHzL",
+              "url": "https://x.com/peacenjoyvibes/status/2052611942544716214",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 1,
+                "views": 2496,
+                "total": 6
+              }
+            },
+            {
+              "author": "KyleTibbitts",
+              "text": ".@Adapt has completely changed how we work @Wander. I probably use it 20+ times per day. Congrats to the Adapt team on the launch! https://t.co/XnD5lIOR7A",
+              "url": "https://x.com/KyleTibbitts/status/2044605875264909695",
+              "engagement": {
+                "likes": 15,
+                "reposts": 2,
+                "replies": 1,
+                "views": 1135,
+                "total": 18
+              }
+            },
+            {
+              "author": "jaentwistle",
+              "text": "We've been using @Adapt inside of @wander for the past 6 months, and it's created radical efficiencies. Congrats to the team on officially being GA. My pro tip, is to put in the effort to connect as many data sources and systems as possible. That's where the magic happens.",
+              "url": "https://x.com/jaentwistle/status/2044503458854932821",
+              "engagement": {
+                "likes": 16,
+                "reposts": 2,
+                "replies": 1,
+                "views": 1750,
+                "total": 19
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Adapt\" -from:adapt min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 5,
+          "spam_count": 0,
+          "proof_quality_score": 25,
+          "sample_tweets": [
+            {
+              "author": "Jimfrombaseball",
+              "text": "\"Whoever wants to know the heart and mind of America had better learn baseball, the rules and realities of the game, and do it by watching first some high school or small-town teams. The big league games are too fast for the beginner and the newspapers don’t help. That baseball fitly expresses the powers of the nation’s mind and body is a merit separate from the glory of being the most active, agile, varied, articulate, and brainy of all group games. Baseball takes its mystic nine and scatters them wide. A kind of individualism thereby returns, but it is limited—eternal vigilance is the price of victory. Just because they’re far apart, the outfield can’t dream or play she-loves-me-not with daisies. For those whom civilized play doesn’t fully satisfy, there will be provided a scapegoat in a blue suit, the umpire, yell-proof and even-handed as justice, which he demonstrates with outstretched arms when calling “Safe!” \"Baseball: A Literary Anthology.\" Jacques Barzun. \"Friday Night Date\" John Falter, 1958. \"In baseball as in love, you have to be willing to adapt and change your strategy when things aren’t going well.\"",
+              "url": "https://x.com/Jimfrombaseball/status/2062480457669775750",
+              "engagement": {
+                "likes": 3,
+                "reposts": 1,
+                "replies": 0,
+                "views": 105,
+                "total": 4
+              }
+            },
+            {
+              "author": "legaltweetz",
+              "text": "That’s because of the nonbinary communists and spicy straight “queers.” Things went way too far. I remember how jubilant I was when gay marriage was legalized. I felt like that was justice. Today, I feel like the movement is about fetish and trans. I have a lot to say about this given my incredibly long history in the LGBT community. I was behind the curtain. Here’s what happened. It’s become incredibly Orwellian. Ask me how I know. I’m the ultimate apostate to the TQ+ cult. Given my experience within LGBT activism, I can tell you exactly what happened: mission creep. Once gay marriage was won, all the LGBT orgs wanted to keep the money and jobs flowing. So they shifted gears into trans to keep the money flowing. And flow it did. It wasn’t immediate. It was actually slow and insidious. I remember, in 2015, a few months before Obergefell was decided, working with some of the orgs to combat all the bathroom bills cropping up. The bathroom bill issue back then was thrust upon us as activists. However, conservatives were way ahead of their time on the bathroom bills. Their problem was messaging. At the time, it just sounded weird and invasive to normal people. Little did we know the conservatives were onto something. Then my own life intervened. I became very sick and disabled and stopped working in 2017. I still did grassroots volunteer-type stuff for LGBT causes, but I stopped working with orgs because I was incapacitated. I was very out of the loop on what orgs were doing during that time since, I mean, I didn’t leave the house. I came back to the LGBT orgs around 2022 as I slowly started reemerging from my illness into a more functional state. By the time I came back in ’22, it was all trans, all the time, everywhere. I was trans-identified at the time. However, when I started transitioning in 2018, I did so very privately. I didn’t have any friends because of my disability (turns out you also lose friends because of a major illness 🤷‍♂️). I was totally anonymous online for the first years of my transition. I was quiet, private, and definitely NOT a TRA whatsoever. Anyone who remembers 2022 remembers peak woke and peak trans. It was comply or be canceled. Even as a trans-identified female back then, I was privately taken aback by what activism had morphed into during my absence from the orgs themselves. The orgs totally erased the LGB from advocacy. I was there. It’s still in the acronym, but what do the orgs do for LGB people? Nothing at this point. They are all just TQ+ at this time in history. As I reentered activism, I had to adapt or not get to come back to work or my community, even if I didn’t agree wholesale with everything going on. Given that I had just spent six years in isolation, poor as fuck, and taking the bus everywhere because I had no car, I was faced with a choice around the end of ’22. Enter my TRA era, circa 2023. I did not start off that way as a trans-identified person. For the majority of my transition, I was private and quiet and kept to myself. I wish I could rewind and stop myself right there. I wish I never had a TRA arc. But I did. And I did it for politics and because I had to do what I had to do. Poverty will push you to do what it takes to eat again. It was publicly comply with the leftist queer Marxist agenda or face social and career suicide. LGBT activism morphed into a behemoth of advocacy for TQ+ alone. It happened over a decade. It happened because orgs and NGOs can be very greedy, wanting the money to continue to flow. So much so that we now castrate kids and have giant men in wigs and dresses demanding we call them women. No wonder support has declined.",
+              "url": "https://x.com/legaltweetz/status/2062472968630919489",
+              "engagement": {
+                "likes": 8,
+                "reposts": 0,
+                "replies": 2,
+                "views": 137,
+                "total": 10
+              }
+            },
+            {
+              "author": "UtdPride",
+              "text": "🚨🗣️ Éderson: “I’m comfortable playing across multiple roles, my time in Italy sharpened that versatility. If you ask me to name one position, I honestly couldn’t. “I don’t care where I’m used? whether it’s with more freedom or a stricter positional role. “I read the game and adapt to what the situation, or the coach, demands. “I enjoy getting forward because I have the engine for it, but I’m just as committed to recovering and defending. Everyone wants to score, but I fully understand how vital the defensive, positional work is for the team.” [@MailSport]",
+              "url": "https://x.com/UtdPride/status/2062466989277200680",
+              "engagement": {
+                "likes": 41,
+                "reposts": 1,
+                "replies": 0,
+                "views": 1781,
+                "total": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "AI Effect.Art",
+      "slug": "ai-effect-art",
+      "x_handle": "@aieffect_art",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@aieffect_art min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@aieffect_art -from:aieffect_art min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"AI Effect.Art\" -from:aieffect_art min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "AI Inspo",
+      "slug": "ai-inspo",
+      "x_handle": "@AIInspoOfficial",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@AIInspoOfficial min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@AIInspoOfficial -from:AIInspoOfficial min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"AI Inspo\" -from:AIInspoOfficial min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 2,
+          "spam_count": 0,
+          "proof_quality_score": 10,
+          "sample_tweets": [
+            {
+              "author": "22classy",
+              "text": "I love a good celly but I’m really wondering what’s going through these goalies heads - riding ponies and air humping the turf 😭 Maybe need a little AI inspo or something",
+              "url": "https://x.com/22classy/status/2045901099874324619",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 0,
+                "views": 1072,
+                "total": 5
+              }
+            },
+            {
+              "author": "ekanemjr_99",
+              "text": "Today, I celebrate another year on earth. I had to recreate the viral AI photo post. How would you rate the recreation? Reality shoot. Vs. AI inspo https://t.co/k85EoZK8U7",
+              "url": "https://x.com/ekanemjr_99/status/2039612551315493239",
+              "engagement": {
+                "likes": 110,
+                "reposts": 11,
+                "replies": 31,
+                "views": 2105,
+                "total": 152
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "AirMusic",
+      "slug": "airmusic",
+      "x_handle": "@theresanaiforit",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 15,
+          "spam_count": 3,
+          "proof_quality_score": 75,
+          "sample_tweets": [
+            {
+              "author": "alexmacgregor__",
+              "text": "My launchpad ranking based on authority, traffic, SEO, awareness and brand: 1) Product Hunt @ProductHunt 2) G2 @G2dotcom 3) TrustMRR @trust_mrr 4) There’s An AI For That @theresanaiforit 5) Indie Hackers @IndieHackers 6) Peerlist @Peerlist 7) BetaList @BetaList 8) TinyLaunch @tinylaunch 9) Uneed @UneedLists 10 Launch @trylaunchai 11) Fazier @FazierHQ 12) MicroLaunch @MicroLaunchHQ 13) RankInPublic @RankInPublic",
+              "url": "https://x.com/alexmacgregor__/status/2059527522614989008",
+              "engagement": {
+                "likes": 7,
+                "reposts": 2,
+                "replies": 0,
+                "views": 382,
+                "total": 9
+              }
+            },
+            {
+              "author": "sauravv_x",
+              "text": "I’ve seen better products fail than worse ones. Usually for one reason: one founder knew distribution, the other only knew product. here's every platform i'd use to launch on day 1: → @IndieHackers → @ProductHunt → @AppSumo → @BetaList → @Peerlist → @theresanaiforit → @futuretools → @bensbitesdaily → @ai_directories → @AlternativeTo → @devhunt_ → @DesiFounder_ → @SaaSMantra → @startupbaseio → @tinylaunch bookmark this before your next launch nd follow for more",
+              "url": "https://x.com/sauravv_x/status/2056062163765330040",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 0,
+                "views": 108,
+                "total": 6
+              }
+            },
+            {
+              "author": "danshipit",
+              "text": "Just launched on @theresanaiforit few days ago and the amount of traffic I got is insane. Definitely no brainer for $49 😉 https://t.co/hxIEQHAwaz",
+              "url": "https://x.com/danshipit/status/2049172452379423085",
+              "engagement": {
+                "likes": 14,
+                "reposts": 2,
+                "replies": 2,
+                "views": 3050,
+                "total": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@theresanaiforit -from:theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 15,
+          "spam_count": 3,
+          "proof_quality_score": 75,
+          "sample_tweets": [
+            {
+              "author": "alexmacgregor__",
+              "text": "My launchpad ranking based on authority, traffic, SEO, awareness and brand: 1) Product Hunt @ProductHunt 2) G2 @G2dotcom 3) TrustMRR @trust_mrr 4) There’s An AI For That @theresanaiforit 5) Indie Hackers @IndieHackers 6) Peerlist @Peerlist 7) BetaList @BetaList 8) TinyLaunch @tinylaunch 9) Uneed @UneedLists 10 Launch @trylaunchai 11) Fazier @FazierHQ 12) MicroLaunch @MicroLaunchHQ 13) RankInPublic @RankInPublic",
+              "url": "https://x.com/alexmacgregor__/status/2059527522614989008",
+              "engagement": {
+                "likes": 7,
+                "reposts": 2,
+                "replies": 0,
+                "views": 382,
+                "total": 9
+              }
+            },
+            {
+              "author": "sauravv_x",
+              "text": "I’ve seen better products fail than worse ones. Usually for one reason: one founder knew distribution, the other only knew product. here's every platform i'd use to launch on day 1: → @IndieHackers → @ProductHunt → @AppSumo → @BetaList → @Peerlist → @theresanaiforit → @futuretools → @bensbitesdaily → @ai_directories → @AlternativeTo → @devhunt_ → @DesiFounder_ → @SaaSMantra → @startupbaseio → @tinylaunch bookmark this before your next launch nd follow for more",
+              "url": "https://x.com/sauravv_x/status/2056062163765330040",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 0,
+                "views": 108,
+                "total": 6
+              }
+            },
+            {
+              "author": "danshipit",
+              "text": "Just launched on @theresanaiforit few days ago and the amount of traffic I got is insane. Definitely no brainer for $49 😉 https://t.co/hxIEQHAwaz",
+              "url": "https://x.com/danshipit/status/2049172452379423085",
+              "engagement": {
+                "likes": 14,
+                "reposts": 2,
+                "replies": 2,
+                "views": 3050,
+                "total": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"AirMusic\" -from:theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 2,
+          "spam_count": 1,
+          "proof_quality_score": 10,
+          "sample_tweets": [
+            {
+              "author": "JoanORoelofs",
+              "text": "So excited about the song I just created in AIR Music! 🎵 Dive into AI-driven music creation today!🌟 https://t.co/gVHC979U3C #AIRMUSIC #Music #AI",
+              "url": "https://x.com/JoanORoelofs/status/2054222011333746864",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 0,
+                "views": 38,
+                "total": 4
+              }
+            },
+            {
+              "author": "LLKIIFF728GBIDL",
+              "text": "251228 Airmusic fansign How's cute is that Unnie with 4D personality vs straightforward maknae #Kylie #Roah #KIIRAS #카일리 #로아 #키라스 Full https://t.co/BNP58pvXx4 https://t.co/oj5e0n0Dkc",
+              "url": "https://x.com/LLKIIFF728GBIDL/status/2005365301609931083",
+              "engagement": {
+                "likes": 31,
+                "reposts": 8,
+                "replies": 1,
+                "views": 572,
+                "total": 40
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Aiter.io",
+      "slug": "aiter-io",
+      "x_handle": "@aiter_io",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@aiter_io min_faves:3 -filter:replies",
+          "tweets_returned": 2,
+          "useful_proof_count": 1,
+          "spam_count": 0,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "theresanaiforit",
+              "text": "Level up faster with AI in 2024: Music: @udiomusic Marketing: @aiter_io Images: @SeaArt_Ai Email: @Hoppycopyco Website: @limecubeco Automation: @bardeenai Business Plans: @PrometAI Presentations: @gammaapp Language Learning: @lingolette Now, take action!",
+              "url": "https://x.com/theresanaiforit/status/1789306232567742653",
+              "engagement": {
+                "likes": 87,
+                "reposts": 21,
+                "replies": 11,
+                "views": 24089,
+                "total": 119
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@aiter_io -from:aiter_io min_faves:3 -filter:replies",
+          "tweets_returned": 2,
+          "useful_proof_count": 1,
+          "spam_count": 0,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "theresanaiforit",
+              "text": "Level up faster with AI in 2024: Music: @udiomusic Marketing: @aiter_io Images: @SeaArt_Ai Email: @Hoppycopyco Website: @limecubeco Automation: @bardeenai Business Plans: @PrometAI Presentations: @gammaapp Language Learning: @lingolette Now, take action!",
+              "url": "https://x.com/theresanaiforit/status/1789306232567742653",
+              "engagement": {
+                "likes": 87,
+                "reposts": 21,
+                "replies": 11,
+                "views": 24089,
+                "total": 119
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Aiter.io\" -from:aiter_io min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "Apollo",
+      "slug": "apollo",
+      "x_handle": "@useapolloio",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@useapolloio min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 11,
+          "spam_count": 1,
+          "proof_quality_score": 55,
+          "sample_tweets": [
+            {
+              "author": "jakeh2792",
+              "text": "Keeping my business healthy. requires Stackmaxxing My Daily Stack: @make_hq - Automation/Pipeline @openclaw - Agents @WhatsApp - Agent Channel @airtable - Source of Truth @supabase - Backend @ExaAILabs - Research/Enrichment @useapolloio - Data @InstantlyAI - Email Outbound @heyreach_io - Linkedin Outbound @SlackHQ - Comms @ChatGPTapp - AI Chat @Outlook / @gmail - Email @googledrive - Docs @canva - Design",
+              "url": "https://x.com/jakeh2792/status/2059682511618232592",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 2,
+                "views": 151,
+                "total": 5
+              }
+            },
+            {
+              "author": "qualitateio",
+              "text": "Ripping out $GTM and @useapolloio for @clay: \"We've actually already started deprecating ZoomInfo and Apollo. Both were being used for enrichment purposes. But we have had many, many data quality issues with them. We are starting to invest more heavily in Clay and...",
+              "url": "https://x.com/qualitateio/status/2054174422060163200",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 2,
+                "views": 930,
+                "total": 6
+              }
+            },
+            {
+              "author": "withpriyajain",
+              "text": "If you're a founder building in AI space and figuring out GTM, you need to consider applying for @@PathlightVC GTM scale-up program in NYC. Talks from great people at @Plaid @tryramp @RobinhoodApp @useapolloio @ElevenLabs IT'S 100% FREE! https://t.co/08S9kVPQjg",
+              "url": "https://x.com/withpriyajain/status/2052698146447511670",
+              "engagement": {
+                "likes": 10,
+                "reposts": 0,
+                "replies": 0,
+                "views": 460,
+                "total": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@useapolloio -from:useapolloio min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 11,
+          "spam_count": 1,
+          "proof_quality_score": 55,
+          "sample_tweets": [
+            {
+              "author": "jakeh2792",
+              "text": "Keeping my business healthy. requires Stackmaxxing My Daily Stack: @make_hq - Automation/Pipeline @openclaw - Agents @WhatsApp - Agent Channel @airtable - Source of Truth @supabase - Backend @ExaAILabs - Research/Enrichment @useapolloio - Data @InstantlyAI - Email Outbound @heyreach_io - Linkedin Outbound @SlackHQ - Comms @ChatGPTapp - AI Chat @Outlook / @gmail - Email @googledrive - Docs @canva - Design",
+              "url": "https://x.com/jakeh2792/status/2059682511618232592",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 2,
+                "views": 151,
+                "total": 5
+              }
+            },
+            {
+              "author": "qualitateio",
+              "text": "Ripping out $GTM and @useapolloio for @clay: \"We've actually already started deprecating ZoomInfo and Apollo. Both were being used for enrichment purposes. But we have had many, many data quality issues with them. We are starting to invest more heavily in Clay and...",
+              "url": "https://x.com/qualitateio/status/2054174422060163200",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 2,
+                "views": 930,
+                "total": 6
+              }
+            },
+            {
+              "author": "withpriyajain",
+              "text": "If you're a founder building in AI space and figuring out GTM, you need to consider applying for @@PathlightVC GTM scale-up program in NYC. Talks from great people at @Plaid @tryramp @RobinhoodApp @useapolloio @ElevenLabs IT'S 100% FREE! https://t.co/08S9kVPQjg",
+              "url": "https://x.com/withpriyajain/status/2052698146447511670",
+              "engagement": {
+                "likes": 10,
+                "reposts": 0,
+                "replies": 0,
+                "views": 460,
+                "total": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Apollo\" -from:useapolloio min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 1,
+          "spam_count": 0,
+          "proof_quality_score": 5,
+          "sample_tweets": [
+            {
+              "author": "dreweth",
+              "text": "Pixie spent all her savings and launched Apollo 69 Mission on behalf of Spain to come and rescue me. After months apart, finally seeing each other again felt unreal. The first kiss on the Moon will stay with us forever. 🫶 – The End of Our Spain Adventure – ❤️ https://t.co/Jhni6nKFfM",
+              "url": "https://x.com/dreweth/status/2062467362087977397",
+              "engagement": {
+                "likes": 38,
+                "reposts": 1,
+                "replies": 26,
+                "views": 522,
+                "total": 65
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "AppDeploy",
+      "slug": "appdeploy",
+      "x_handle": "@appdeployai",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@appdeployai min_faves:3 -filter:replies",
+          "tweets_returned": 2,
+          "useful_proof_count": 1,
+          "spam_count": 0,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "LittleMoiz",
+              "text": "כמה שבועות אני משתמש ב-@appdeployai כתוספת לקלוד. זה אחלה פיתרון להעלות אתר ישירות לאוויר שמותאם גם לנייד סלי כל ההתעסקות מסביב. מעדכן את האתר על בסיס יומי ישירות מהאייפון דרך הצ'אט. היום הם משיקים ב-Product Hunt והאמת שאין לי מושג מה זה אומר. ביקשו ממני לעזור לקדם אותם. כזה אני.. אם זה טוב אני הכי ממליץ שיש. אז יאללה. מי שיכול בואו להצביע ונעזור להם להגיע רחוק 👀 לינק בתגובות",
+              "url": "https://x.com/LittleMoiz/status/2040842505311187456",
+              "engagement": {
+                "likes": 31,
+                "reposts": 1,
+                "replies": 4,
+                "views": 6263,
+                "total": 36
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@appdeployai -from:appdeployai min_faves:3 -filter:replies",
+          "tweets_returned": 2,
+          "useful_proof_count": 1,
+          "spam_count": 0,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "LittleMoiz",
+              "text": "כמה שבועות אני משתמש ב-@appdeployai כתוספת לקלוד. זה אחלה פיתרון להעלות אתר ישירות לאוויר שמותאם גם לנייד סלי כל ההתעסקות מסביב. מעדכן את האתר על בסיס יומי ישירות מהאייפון דרך הצ'אט. היום הם משיקים ב-Product Hunt והאמת שאין לי מושג מה זה אומר. ביקשו ממני לעזור לקדם אותם. כזה אני.. אם זה טוב אני הכי ממליץ שיש. אז יאללה. מי שיכול בואו להצביע ונעזור להם להגיע רחוק 👀 לינק בתגובות",
+              "url": "https://x.com/LittleMoiz/status/2040842505311187456",
+              "engagement": {
+                "likes": 31,
+                "reposts": 1,
+                "replies": 4,
+                "views": 6263,
+                "total": 36
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"AppDeploy\" -from:appdeployai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 8,
+          "spam_count": 0,
+          "proof_quality_score": 40,
+          "sample_tweets": [
+            {
+              "author": "Enicrypt5400",
+              "text": "Just found out you can build and deploy apps from scratch on ChatGPT without going the Codex route. You say what you want, ChatGPT writes the code, and AppDeploy ( a featured app on the GPT store) handles the deployment. Go check it out and let's see what you built.🌚 &lt;/&gt; https://t.co/BVtsEz9tHX",
+              "url": "https://x.com/Enicrypt5400/status/2060050910798139652",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 76,
+                "total": 3
+              }
+            },
+            {
+              "author": "prasanna1343",
+              "text": "🚀 Game changer for ChatGPT users: You can now build and launch REAL apps directly inside the chat. New tool “AppDeploy” just dropped in the GPT store. → Describe what you want → ChatGPT writes the full code → It auto-deploys everything → You get a working live link instantly Works on free accounts. No credit card. No subscription. Full backend, database, user login, realtime, AI features, background jobs & more — all handled automatically. Launch your first app in minutes 👀 Crazy or the future of building? @ChatGPTapp @OpenAI @sama",
+              "url": "https://x.com/prasanna1343/status/2059479544940376555",
+              "engagement": {
+                "likes": 40,
+                "reposts": 1,
+                "replies": 1,
+                "views": 6783,
+                "total": 42
+              }
+            },
+            {
+              "author": "anjalisharmaaa_",
+              "text": "\"How to build and deploy a React app to Github pages in less than 5 minutes\" Do check it out and start your journey into the #React domain #React #webapp #webdevelopment #webdesign #appdeploy #womenintech #WomenWhoCode #medium #blog https://t.co/TKbrRAm3iH",
+              "url": "https://x.com/anjalisharmaaa_/status/1256600011128766464",
+              "engagement": {
+                "likes": 1,
+                "reposts": 0,
+                "replies": 0,
+                "views": 0,
+                "total": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Asteroid AI",
+      "slug": "asteroid-ai",
+      "x_handle": "@asteroid_inc",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@asteroid_inc min_faves:3 -filter:replies",
+          "tweets_returned": 13,
+          "useful_proof_count": 10,
+          "spam_count": 0,
+          "proof_quality_score": 77,
+          "sample_tweets": [
+            {
+              "author": "MlcochDavid",
+              "text": "..big news tomorrow 👀 @asteroid_inc will be launching on @ProductHunt !! For the past few months, we’ve been pushing computer-use agents into production: a new harness, desktop support, script writing, persistent memory, and hundreds of healthcare deployments. The team was shipping. Now it’s your turn to try our coding agents trained for browsers!",
+              "url": "https://x.com/MlcochDavid/status/2054585206665863654",
+              "engagement": {
+                "likes": 9,
+                "reposts": 0,
+                "replies": 5,
+                "views": 264,
+                "total": 14
+              }
+            },
+            {
+              "author": "davilocatelli13",
+              "text": "Dreams on Claude Managed Agents are exactly what our prod browser agents have been missing. Reliability in healthcare workflows is P0 for us @asteroid_inc. This will unlock a different tier of what we can ship Great day at Code w/ Claude SF. ty @AnthropicAI @ClaudeDevs @bcherny https://t.co/m0CqOl5fyc",
+              "url": "https://x.com/davilocatelli13/status/2052876238440837235",
+              "engagement": {
+                "likes": 6,
+                "reposts": 3,
+                "replies": 0,
+                "views": 157,
+                "total": 9
+              }
+            },
+            {
+              "author": "MlcochDavid",
+              "text": "Super excited to see TriFetch launching! Incredible team! And ofc, supercharged by @asteroid_inc browser AND computer use agents!",
+              "url": "https://x.com/MlcochDavid/status/2048834698382803453",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 0,
+                "views": 252,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@asteroid_inc -from:asteroid_inc min_faves:3 -filter:replies",
+          "tweets_returned": 13,
+          "useful_proof_count": 10,
+          "spam_count": 0,
+          "proof_quality_score": 77,
+          "sample_tweets": [
+            {
+              "author": "MlcochDavid",
+              "text": "..big news tomorrow 👀 @asteroid_inc will be launching on @ProductHunt !! For the past few months, we’ve been pushing computer-use agents into production: a new harness, desktop support, script writing, persistent memory, and hundreds of healthcare deployments. The team was shipping. Now it’s your turn to try our coding agents trained for browsers!",
+              "url": "https://x.com/MlcochDavid/status/2054585206665863654",
+              "engagement": {
+                "likes": 9,
+                "reposts": 0,
+                "replies": 5,
+                "views": 264,
+                "total": 14
+              }
+            },
+            {
+              "author": "davilocatelli13",
+              "text": "Dreams on Claude Managed Agents are exactly what our prod browser agents have been missing. Reliability in healthcare workflows is P0 for us @asteroid_inc. This will unlock a different tier of what we can ship Great day at Code w/ Claude SF. ty @AnthropicAI @ClaudeDevs @bcherny https://t.co/m0CqOl5fyc",
+              "url": "https://x.com/davilocatelli13/status/2052876238440837235",
+              "engagement": {
+                "likes": 6,
+                "reposts": 3,
+                "replies": 0,
+                "views": 157,
+                "total": 9
+              }
+            },
+            {
+              "author": "MlcochDavid",
+              "text": "Super excited to see TriFetch launching! Incredible team! And ofc, supercharged by @asteroid_inc browser AND computer use agents!",
+              "url": "https://x.com/MlcochDavid/status/2048834698382803453",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 0,
+                "views": 252,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Asteroid AI\" -from:asteroid_inc min_faves:3 -filter:replies",
+          "tweets_returned": 14,
+          "useful_proof_count": 1,
+          "spam_count": 0,
+          "proof_quality_score": 7,
+          "sample_tweets": [
+            {
+              "author": "MrAstroThomas",
+              "text": "Space Science with #Python - Asteroid AI Project #9: A Convolutional Approach In today's video we will redo our multi-class classification task using Conv1D keras layers. Our first ConvNet model will achieve an F1 Score of 0.95! #ml #MachineLearning https://t.co/EseYeos1Fc",
+              "url": "https://x.com/MrAstroThomas/status/1507800651253919746",
+              "engagement": {
+                "likes": 9,
+                "reposts": 3,
+                "replies": 0,
+                "views": 0,
+                "total": 12
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Audio Transcriber AI",
+      "slug": "audio-transcriber-ai",
+      "x_handle": "@AudiotoTextAI",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@AudiotoTextAI min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@AudiotoTextAI -from:AudiotoTextAI min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Audio Transcriber AI\" -from:AudiotoTextAI min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "Babelbeez",
+      "slug": "babelbeez",
+      "x_handle": "@babelbeez",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@babelbeez min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@babelbeez -from:babelbeez min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Babelbeez\" -from:babelbeez min_faves:3 -filter:replies",
+          "tweets_returned": 1,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "BetterSpace",
+      "slug": "betterspace",
+      "x_handle": "@betterspaceai",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@betterspaceai min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@betterspaceai -from:betterspaceai min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"BetterSpace\" -from:betterspaceai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 1,
+          "spam_count": 0,
+          "proof_quality_score": 5,
+          "sample_tweets": [
+            {
+              "author": "ain__capital",
+              "text": "The investment was led by Round2 Capital Partners is a Vienna-based investment firm with €135 million under management. Betterspace intends to use the funding to develop its solution and expand operations. https://t.co/KPlBJZKuRi",
+              "url": "https://x.com/ain__capital/status/1691423735222308865",
+              "engagement": {
+                "likes": 2,
+                "reposts": 0,
+                "replies": 0,
+                "views": 54,
+                "total": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "BeyondComments",
+      "slug": "beyondcomments",
+      "x_handle": "@programmerByDay",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@programmerByDay min_faves:3 -filter:replies",
+          "tweets_returned": 8,
+          "useful_proof_count": 4,
+          "spam_count": 1,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "jgerton",
+              "text": "290+ replies. 5 that stood out. @philbuilds https://t.co/qyv8gFe0WP - \"calm productivity for overthinkers.\" The niche clarity is chef's kiss. @jainilnf https://t.co/1sPpViZzHQ - 10 likes in the thread. Engagement speaks. @programmerByDay https://t.co/k964vmJodo - AI-powered churn reduction. Every SaaS founder's pain point. @Aditya_T007 https://t.co/yC9U8VaZ1t - meta play: a launch platform pitched in a pitch thread. @cipherprojects https://t.co/P1Ra7EuE4V - AI interviewer for founders. Actually useful for build-in-public folks. What caught my eye: niche clarity, real problems, or clever positioning.",
+              "url": "https://x.com/jgerton/status/1997438549344625079",
+              "engagement": {
+                "likes": 6,
+                "reposts": 1,
+                "replies": 5,
+                "views": 246,
+                "total": 12
+              }
+            },
+            {
+              "author": "zalkazemi",
+              "text": "Taranify lets your mood pick your entertainment so you don’t have to browse for hours. Made by @programmerByDay https://t.co/hPjHgQjWL5 https://t.co/OWBmorouVX",
+              "url": "https://x.com/zalkazemi/status/1803767641321926904",
+              "engagement": {
+                "likes": 4,
+                "reposts": 1,
+                "replies": 2,
+                "views": 198,
+                "total": 7
+              }
+            },
+            {
+              "author": "pablo_rothbart",
+              "text": "This is for @programmerByDay Love the idea of Taranify! Main takeaway: - Improve blog page UI - Make it less overwhelming - improve content quality Let's get it! (Audited on @scalesleek) https://t.co/HiYHPe75vn",
+              "url": "https://x.com/pablo_rothbart/status/1712076161667231788",
+              "engagement": {
+                "likes": 5,
+                "reposts": 1,
+                "replies": 1,
+                "views": 307,
+                "total": 7
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@programmerByDay -from:programmerByDay min_faves:3 -filter:replies",
+          "tweets_returned": 8,
+          "useful_proof_count": 4,
+          "spam_count": 1,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "jgerton",
+              "text": "290+ replies. 5 that stood out. @philbuilds https://t.co/qyv8gFe0WP - \"calm productivity for overthinkers.\" The niche clarity is chef's kiss. @jainilnf https://t.co/1sPpViZzHQ - 10 likes in the thread. Engagement speaks. @programmerByDay https://t.co/k964vmJodo - AI-powered churn reduction. Every SaaS founder's pain point. @Aditya_T007 https://t.co/yC9U8VaZ1t - meta play: a launch platform pitched in a pitch thread. @cipherprojects https://t.co/P1Ra7EuE4V - AI interviewer for founders. Actually useful for build-in-public folks. What caught my eye: niche clarity, real problems, or clever positioning.",
+              "url": "https://x.com/jgerton/status/1997438549344625079",
+              "engagement": {
+                "likes": 6,
+                "reposts": 1,
+                "replies": 5,
+                "views": 246,
+                "total": 12
+              }
+            },
+            {
+              "author": "zalkazemi",
+              "text": "Taranify lets your mood pick your entertainment so you don’t have to browse for hours. Made by @programmerByDay https://t.co/hPjHgQjWL5 https://t.co/OWBmorouVX",
+              "url": "https://x.com/zalkazemi/status/1803767641321926904",
+              "engagement": {
+                "likes": 4,
+                "reposts": 1,
+                "replies": 2,
+                "views": 198,
+                "total": 7
+              }
+            },
+            {
+              "author": "pablo_rothbart",
+              "text": "This is for @programmerByDay Love the idea of Taranify! Main takeaway: - Improve blog page UI - Make it less overwhelming - improve content quality Let's get it! (Audited on @scalesleek) https://t.co/HiYHPe75vn",
+              "url": "https://x.com/pablo_rothbart/status/1712076161667231788",
+              "engagement": {
+                "likes": 5,
+                "reposts": 1,
+                "replies": 1,
+                "views": 307,
+                "total": 7
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"BeyondComments\" -from:programmerByDay min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 6,
+          "spam_count": 0,
+          "proof_quality_score": 30,
+          "sample_tweets": [
+            {
+              "author": "coralproject",
+              "text": "We're thrilled at everyone's enthusiasm for our #SXSW demo. Onwards and upwards #beyondcomments https://t.co/vmjWxeCMu3",
+              "url": "https://x.com/coralproject/status/709456064215957504",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 0,
+                "views": 0,
+                "total": 6
+              }
+            },
+            {
+              "author": "MattCData",
+              "text": "Building that civil &amp; interesting comment section https://t.co/6xmtM49KwA #journalism #beyondcomments #socialmedia",
+              "url": "https://x.com/MattCData/status/709421854675456000",
+              "engagement": {
+                "likes": 2,
+                "reposts": 0,
+                "replies": 0,
+                "views": 0,
+                "total": 2
+              }
+            },
+            {
+              "author": "MattCData",
+              "text": "Building that civil &amp; interesting comment section https://t.co/6xmtM49KwA #journalism #beyondcomments #socialmedia",
+              "url": "https://x.com/MattCData/status/708473353607053312",
+              "engagement": {
+                "likes": 2,
+                "reposts": 1,
+                "replies": 0,
+                "views": 0,
+                "total": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Bolt",
+      "slug": "bolt",
+      "x_handle": "@boltdotnew",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@boltdotnew min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 12,
+          "spam_count": 0,
+          "proof_quality_score": 60,
+          "sample_tweets": [
+            {
+              "author": "NotionLab7",
+              "text": "🚗 Tried to make my first voxel-based game ever with @boltdotnew It's my first time really using Bolt, you get your regular prompt window on the left side, but any updates to your project are immediately visible on the right side as a browser https://t.co/kCeN5gh9RE",
+              "url": "https://x.com/NotionLab7/status/2062074649928728910",
+              "engagement": {
+                "likes": 9,
+                "reposts": 0,
+                "replies": 5,
+                "views": 3449,
+                "total": 14
+              }
+            },
+            {
+              "author": "conormartinai",
+              "text": "I built a Gumroad alternative to help me sell digital products with @boltdotnew https://t.co/MmGY8e69fE",
+              "url": "https://x.com/conormartinai/status/2061000034141847803",
+              "engagement": {
+                "likes": 9,
+                "reposts": 0,
+                "replies": 0,
+                "views": 4165,
+                "total": 9
+              }
+            },
+            {
+              "author": "trynullsec",
+              "text": "AI-generated software is becoming its own software supply chain. @cursor_ai, @Lovable, @Replit, @boltdotnew,@claudeai, @grok, agents, dApps, MCP tools, all of them are moving code from prompt to production faster than traditional security workflows can keep up. That creates a new requirement: security validation has to become model-native. Nullsec-S1 is being built for that layer. A security-specialized LLM that sits between AI-generated code and production, analyzing auth logic, secrets, env exposure, SQLi, SSRF, XSS, MCP/tool abuse, shell execution, dependency risk, wallet flows, and safe-code calibration. AI builds the software. Nullsec-S1 validates it.",
+              "url": "https://x.com/trynullsec/status/2060684049325199624",
+              "engagement": {
+                "likes": 57,
+                "reposts": 8,
+                "replies": 13,
+                "views": 8530,
+                "total": 78
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@boltdotnew -from:boltdotnew min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 12,
+          "spam_count": 0,
+          "proof_quality_score": 60,
+          "sample_tweets": [
+            {
+              "author": "NotionLab7",
+              "text": "🚗 Tried to make my first voxel-based game ever with @boltdotnew It's my first time really using Bolt, you get your regular prompt window on the left side, but any updates to your project are immediately visible on the right side as a browser https://t.co/kCeN5gh9RE",
+              "url": "https://x.com/NotionLab7/status/2062074649928728910",
+              "engagement": {
+                "likes": 9,
+                "reposts": 0,
+                "replies": 5,
+                "views": 3449,
+                "total": 14
+              }
+            },
+            {
+              "author": "conormartinai",
+              "text": "I built a Gumroad alternative to help me sell digital products with @boltdotnew https://t.co/MmGY8e69fE",
+              "url": "https://x.com/conormartinai/status/2061000034141847803",
+              "engagement": {
+                "likes": 9,
+                "reposts": 0,
+                "replies": 0,
+                "views": 4165,
+                "total": 9
+              }
+            },
+            {
+              "author": "trynullsec",
+              "text": "AI-generated software is becoming its own software supply chain. @cursor_ai, @Lovable, @Replit, @boltdotnew,@claudeai, @grok, agents, dApps, MCP tools, all of them are moving code from prompt to production faster than traditional security workflows can keep up. That creates a new requirement: security validation has to become model-native. Nullsec-S1 is being built for that layer. A security-specialized LLM that sits between AI-generated code and production, analyzing auth logic, secrets, env exposure, SQLi, SSRF, XSS, MCP/tool abuse, shell execution, dependency risk, wallet flows, and safe-code calibration. AI builds the software. Nullsec-S1 validates it.",
+              "url": "https://x.com/trynullsec/status/2060684049325199624",
+              "engagement": {
+                "likes": 57,
+                "reposts": 8,
+                "replies": 13,
+                "views": 8530,
+                "total": 78
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Bolt\" -from:boltdotnew min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 1,
+          "spam_count": 1,
+          "proof_quality_score": 5,
+          "sample_tweets": [
+            {
+              "author": "itelNigeria",
+              "text": "Comfort. Convenience. City vibes. ✨ The City 200 is built for life on the move, and with special perks from Bolt, getting around just got even better! Who says you can't have it all? https://t.co/uoKl4TypdK",
+              "url": "https://x.com/itelNigeria/status/2062477754226868636",
+              "engagement": {
+                "likes": 3,
+                "reposts": 1,
+                "replies": 1,
+                "views": 105,
+                "total": 5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "BookCoversLab",
+      "slug": "bookcoverslab",
+      "x_handle": "@BookCoversLab",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@BookCoversLab min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@BookCoversLab -from:BookCoversLab min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"BookCoversLab\" -from:BookCoversLab min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "BookYolo",
+      "slug": "bookyolo",
+      "x_handle": "@bookyoloai",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@bookyoloai min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@bookyoloai -from:bookyoloai min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"BookYolo\" -from:bookyoloai min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "CatDoes",
+      "slug": "catdoes",
+      "x_handle": "@catdoeshq",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@catdoeshq min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 13,
+          "spam_count": 0,
+          "proof_quality_score": 65,
+          "sample_tweets": [
+            {
+              "author": "ayushagarwal",
+              "text": "we're starting to publish customer stories on our site. we've been heads down building for over a year — time to let our customers tell the story of what we've built. first up: CatDoes (@catdoeshq). two founders in germany - @one2358 and @nafis_amiri - building a no-code AI app builder. no legal entity when they launched. customers across six continents. they needed to accept payments from day one, before they even had a company registered. first attempted payment came from zimbabwe. first successful one from vietnam. @dodopayments handled everything as merchant of record. tax collection, multi-currency checkout, compliance across 60+ countries. no VAT registrations. no tax consultants. 24 hours a month they don't spend on tax and compliance. they spend it building their product instead.",
+              "url": "https://x.com/ayushagarwal/status/2046516198318412114",
+              "engagement": {
+                "likes": 51,
+                "reposts": 9,
+                "replies": 8,
+                "views": 5009,
+                "total": 68
+              }
+            },
+            {
+              "author": "thestartpod",
+              "text": "Congrats on the launch @one2358 &amp; team @catdoeshq! 🚨 Live on @ProductHunt 👇 https://t.co/mJ6fb2Qj1J https://t.co/xpEiCxCWy2",
+              "url": "https://x.com/thestartpod/status/2044108883342377411",
+              "engagement": {
+                "likes": 23,
+                "reposts": 2,
+                "replies": 0,
+                "views": 173,
+                "total": 25
+              }
+            },
+            {
+              "author": "thisiskp_",
+              "text": "🔔 New Hunt Alert 🔔 Meet the first *truly* autonomous AI agent with its own cloud computer. Just earlier today, I hunted @CatDoeshq v4 on Product Hunt 🚀 Here’s what’s special about it: → Runs its own persistent cloud computer → Operates as a fully independent agent → Spawns sub-agents on demand for complex tasks → Builds complete mobile apps from a single prompt → Detects live errors and self-fixes them autonomously Would love your support and feedback for @one2358 and the team, check out the launch below 👇 https://t.co/9QkodXTs5B",
+              "url": "https://x.com/thisiskp_/status/2044035686236377421",
+              "engagement": {
+                "likes": 12,
+                "reposts": 8,
+                "replies": 4,
+                "views": 11506,
+                "total": 24
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@catdoeshq -from:catdoeshq min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 13,
+          "spam_count": 0,
+          "proof_quality_score": 65,
+          "sample_tweets": [
+            {
+              "author": "ayushagarwal",
+              "text": "we're starting to publish customer stories on our site. we've been heads down building for over a year — time to let our customers tell the story of what we've built. first up: CatDoes (@catdoeshq). two founders in germany - @one2358 and @nafis_amiri - building a no-code AI app builder. no legal entity when they launched. customers across six continents. they needed to accept payments from day one, before they even had a company registered. first attempted payment came from zimbabwe. first successful one from vietnam. @dodopayments handled everything as merchant of record. tax collection, multi-currency checkout, compliance across 60+ countries. no VAT registrations. no tax consultants. 24 hours a month they don't spend on tax and compliance. they spend it building their product instead.",
+              "url": "https://x.com/ayushagarwal/status/2046516198318412114",
+              "engagement": {
+                "likes": 51,
+                "reposts": 9,
+                "replies": 8,
+                "views": 5009,
+                "total": 68
+              }
+            },
+            {
+              "author": "thestartpod",
+              "text": "Congrats on the launch @one2358 &amp; team @catdoeshq! 🚨 Live on @ProductHunt 👇 https://t.co/mJ6fb2Qj1J https://t.co/xpEiCxCWy2",
+              "url": "https://x.com/thestartpod/status/2044108883342377411",
+              "engagement": {
+                "likes": 23,
+                "reposts": 2,
+                "replies": 0,
+                "views": 173,
+                "total": 25
+              }
+            },
+            {
+              "author": "thisiskp_",
+              "text": "🔔 New Hunt Alert 🔔 Meet the first *truly* autonomous AI agent with its own cloud computer. Just earlier today, I hunted @CatDoeshq v4 on Product Hunt 🚀 Here’s what’s special about it: → Runs its own persistent cloud computer → Operates as a fully independent agent → Spawns sub-agents on demand for complex tasks → Builds complete mobile apps from a single prompt → Detects live errors and self-fixes them autonomously Would love your support and feedback for @one2358 and the team, check out the launch below 👇 https://t.co/9QkodXTs5B",
+              "url": "https://x.com/thisiskp_/status/2044035686236377421",
+              "engagement": {
+                "likes": 12,
+                "reposts": 8,
+                "replies": 4,
+                "views": 11506,
+                "total": 24
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"CatDoes\" -from:catdoeshq min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 8,
+          "spam_count": 0,
+          "proof_quality_score": 40,
+          "sample_tweets": [
+            {
+              "author": "ayushagarwal",
+              "text": "we're starting to publish customer stories on our site. we've been heads down building for over a year — time to let our customers tell the story of what we've built. first up: CatDoes (@catdoeshq). two founders in germany - @one2358 and @nafis_amiri - building a no-code AI app builder. no legal entity when they launched. customers across six continents. they needed to accept payments from day one, before they even had a company registered. first attempted payment came from zimbabwe. first successful one from vietnam. @dodopayments handled everything as merchant of record. tax collection, multi-currency checkout, compliance across 60+ countries. no VAT registrations. no tax consultants. 24 hours a month they don't spend on tax and compliance. they spend it building their product instead.",
+              "url": "https://x.com/ayushagarwal/status/2046516198318412114",
+              "engagement": {
+                "likes": 51,
+                "reposts": 9,
+                "replies": 8,
+                "views": 5009,
+                "total": 68
+              }
+            },
+            {
+              "author": "one2358",
+              "text": "ended #2 on product hunt yesterday, behind figma. third month in a row we're breaking our own traction records. yesterday blew past all of them. thanks to everyone who voted and built something on CatDoes! 🙌 https://t.co/hV0mzAsEG6",
+              "url": "https://x.com/one2358/status/2044417910400040981",
+              "engagement": {
+                "likes": 15,
+                "reposts": 3,
+                "replies": 4,
+                "views": 6232,
+                "total": 22
+              }
+            },
+            {
+              "author": "VadimStrizheus",
+              "text": "🚨 The OpenClaw for IOS apps is finally here! CatDoes v4 launched an AI agent that lives in the cloud on its own machine. This is insane. 👇 https://t.co/KwpwcoGhDM",
+              "url": "https://x.com/VadimStrizheus/status/2044087280025883048",
+              "engagement": {
+                "likes": 49,
+                "reposts": 3,
+                "replies": 12,
+                "views": 13756,
+                "total": 64
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Claude",
+      "slug": "claude",
+      "x_handle": "@claudeai",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@claudeai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 8,
+          "spam_count": 0,
+          "proof_quality_score": 40,
+          "sample_tweets": [
+            {
+              "author": "felix94123",
+              "text": "Just published aggregate stats from AI Roundtable, where 200+ models debate your question. 29,502 public sessions. 334,589 model responses. https://t.co/4EdkJbIgmC Three takeaways: @claudeai Opus 4.7 most influential, @GoogleDeepMind Gemini 3.1 Pro most used, @xai Grok 4.1 Fast highest conviction. Thread.",
+              "url": "https://x.com/felix94123/status/2062464158717579626",
+              "engagement": {
+                "likes": 4,
+                "reposts": 2,
+                "replies": 1,
+                "views": 17,
+                "total": 7
+              }
+            },
+            {
+              "author": "Weezythegods",
+              "text": "reminder for anyone new here Autonomous Trencher Agent is live on @claudeai official MCP Registry first autonomous Solana trading agent listed not a claim. verifiable. https://t.co/fmXPqhHxNv https://t.co/H1dRGIl3x1 $AUTR @Autonomustrench",
+              "url": "https://x.com/Weezythegods/status/2062461025983791276",
+              "engagement": {
+                "likes": 11,
+                "reposts": 5,
+                "replies": 4,
+                "views": 630,
+                "total": 20
+              }
+            },
+            {
+              "author": "primenic_eth",
+              "text": "2 days ago, I knew nothing about @claudeai or Web Design. I followed a 26-min YouTube video tutorial and 4-5 hours later... I created a mock website for Island Haze, a famous clothing brand in Mauritius Should I share it with them? What do you think? https://t.co/PDujIMZPtF https://t.co/di7vy19yUq",
+              "url": "https://x.com/primenic_eth/status/2062429393876635766",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 3,
+                "views": 57,
+                "total": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@claudeai -from:claudeai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 8,
+          "spam_count": 0,
+          "proof_quality_score": 40,
+          "sample_tweets": [
+            {
+              "author": "felix94123",
+              "text": "Just published aggregate stats from AI Roundtable, where 200+ models debate your question. 29,502 public sessions. 334,589 model responses. https://t.co/4EdkJbIgmC Three takeaways: @claudeai Opus 4.7 most influential, @GoogleDeepMind Gemini 3.1 Pro most used, @xai Grok 4.1 Fast highest conviction. Thread.",
+              "url": "https://x.com/felix94123/status/2062464158717579626",
+              "engagement": {
+                "likes": 4,
+                "reposts": 2,
+                "replies": 1,
+                "views": 17,
+                "total": 7
+              }
+            },
+            {
+              "author": "Weezythegods",
+              "text": "reminder for anyone new here Autonomous Trencher Agent is live on @claudeai official MCP Registry first autonomous Solana trading agent listed not a claim. verifiable. https://t.co/fmXPqhHxNv https://t.co/H1dRGIl3x1 $AUTR @Autonomustrench",
+              "url": "https://x.com/Weezythegods/status/2062461025983791276",
+              "engagement": {
+                "likes": 11,
+                "reposts": 5,
+                "replies": 4,
+                "views": 630,
+                "total": 20
+              }
+            },
+            {
+              "author": "primenic_eth",
+              "text": "2 days ago, I knew nothing about @claudeai or Web Design. I followed a 26-min YouTube video tutorial and 4-5 hours later... I created a mock website for Island Haze, a famous clothing brand in Mauritius Should I share it with them? What do you think? https://t.co/PDujIMZPtF https://t.co/di7vy19yUq",
+              "url": "https://x.com/primenic_eth/status/2062429393876635766",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 3,
+                "views": 57,
+                "total": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Claude\" -from:claudeai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 12,
+          "spam_count": 0,
+          "proof_quality_score": 60,
+          "sample_tweets": [
+            {
+              "author": "kaan_alper",
+              "text": "🚨CLAUDE’YA VİDEO İZLEME YETENEĞİ: Artık YouTube, TikTok, Loom veya Yerel Videoları Doğrudan İzleyip Analiz Edebiliyor! /watch Komutuyla Gerçek Video Anlama Çağı Başladı! 🎥🔍 Gazetecileri, araştırmacılar, Youtube kanalı işletenler, eğitimciler ve akademisyenler, bu repo sizin hayatınızı kurtaracak... İstediğin videonun analizini yaptır, özetini çıkart, ana fikrini iste... Tam bir isviçre çakısı... bradautomates/claude-video reposu, Claude’un en büyük eksikliklerinden birini tamamen kapatan çok kullanışlı bir açık kaynak skill/plugin. Claude normalde bir YouTube linki aldığında sadece başlığı veya yetersiz transcript’i görebiliyordu. Bu repo ile /watch komutunu kullanarak Claude’a gerçekten video izletiyorsunuz. Nasıl Çalışıyor? ✅URL veya yerel video dosyası veriyorsunuz ✅yt-dlp ile videoyu indiriyor ✅ffmpeg ile akıllıca frame’ler çıkarıyor (süreye göre otomatik ayarlanıyor) ✅Transcript’i alıyor (varsayılan olarak ücretsiz altyazı, yoksa Whisper ile) ✅Tüm frame’leri + timestamp’li transcript’i Claude’a gönderiyor ✅Claude artık videoyu görüyor ve duyuyor, sadece tahmin etmiyor. Kullanım Örnekleri: ✅/watch https://t.co/xs4DREzwjD 30. saniyede ne oluyor? ✅/watch https://t.co/NvnY1WNxjH arayüz nerede bozuluyor? ✅/watch https://t.co/qsGP2P0L4q özetle ✅/watch ~/Videos/egitim.mp4 bu videoda hangi teknikleri öğretiyor? En Çok Kullanılan Senaryolar ✅Viral videoların hook analizleri ✅Reklam ve rakip içerik analizi ✅Bug raporlarını video üzerinden teşhis etme ✅Uzun videoları hızlı özetleme ✅Eğitim ve tutorial videolarını derinlemesine anlama Kurulum Çok Kolay: ✅Claude Code için: /plugin marketplace add bradautomates/claude-video sonra /plugin install watch@claude-video ✅https://t.co/D8Uu99p9iy web için: En son .skill dosyasını indirip Settings → Capabilities → Skills’e sürükle Codex için: Git clone ile skill klasörüne ekle Gerekli araçlar (yt-dlp ve ffmpeg) ilk kullanımda otomatik kuruluyor. Whisper için Groq veya OpenAI API anahtarı opsiyonel. Avantajları: ✅Token tasarrufu için akıllı frame budget (süreye göre otomatik ayarlama) ✅Odak modu (--start ve --end) ile belirli bölümleri yoğun analiz ✅Tamamen yerel çalışabiliyor ✅MIT lisansı ile tamamen özgür Bu repo, Claude’un multimodal yeteneklerini gerçek anlamda kullanışlı hâle getiriyor. Artık video içeriği Claude için de “okunabilir” bir input hâline geldi. Bu skill, özellikle içerik analizi, eğitim, gazetecilik, youtube kanalı, debugging ve araştırma yapan herkes için vazgeçilmez olacak. Sizce Claude’un video izleme yeteneği en çok hangi alanda fark yaratır? Reklam analizi, bug tespiti, video özetleme yoksa başka bir şey mi? Denemek isteyenler “Hemen kuracağım” diye yazsın! Yorumlarda deneyimlerinizi ve favori kullanım senaryolarınızı paylaşın, bu harika Claude skill’ini hep birlikte değerlendirelim! 🎥✨",
+              "url": "https://x.com/kaan_alper/status/2062482913233391866",
+              "engagement": {
+                "likes": 5,
+                "reposts": 3,
+                "replies": 1,
+                "views": 122,
+                "total": 9
+              }
+            },
+            {
+              "author": "toshizo2023ip",
+              "text": "AIに仕事を相談するとき、つい「全部そのまま貼りたくなる」こと、ありませんか。 クレーム対応、採用の悩み、顧客への返信。具体的であるほど、丸ごと貼りたくなる。 でも、その手前で一歩止まる。私がChatGPTにそのまま投げないデータが、3つあります。 ①個人・顧客が特定できる生データ（実名・連絡先・履歴書・相談ログ） ②未公開の事業・契約・内部情報（価格表・契約書・経営方針） ③認証情報・本番環境（パスワード・APIキー・管理画面ログイン） ※ChatGPTと書きますが、ClaudeやGeminiでも同じ話です。 大事なのは「AIに何も入れるな」ではありません。 実名を伏せる。金額をレンジにする。企業名を業種・規模・地域に言い換える。 情報を捨てるのではなく、粒度を変える。 プロンプトはやり直せても、一度渡した情報は簡単には取り消せない。だからプロンプトを磨く前に、「何を渡し、何を渡さないか」を決めておく。 これが、AIを「使う」段階から「運用する」段階へ進む、最初の関門です。 禁止ではなく、線引きする。怖いから使わない、ではなく、使うために守る。 全10回連載の第4回。 ▼ note記事（全文無料） https://t.co/aHrRcsxsWo",
+              "url": "https://x.com/toshizo2023ip/status/2062482327897571688",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 57,
+                "total": 3
+              }
+            },
+            {
+              "author": "VaibhavSisinty",
+              "text": "This guy on Reddit burned 1.15 BILLION Claude tokens in a single month And what he learned will save you thousands of dollars on AI. 🤯 5 takeaways worth saving: → Prompt caching got quietly nerfed: Anthropic cut cache time from 60 minutes to 5, silently raising production costs by 30-60% for most users. → Output tokens cost 5x more than input: Stop asking AI for full text, ask for IDs or numbers and map them in your code — he cut his output bill by 60% doing this. → JSON is a silent token killer: Every bracket, quote, and comma eats tokens, making the same data cost 2x more in JSON than in plain text or markdown tables. → Opus 4.7's tokenizer secretly raised your bill: The new tokenizer generates up to 35% more tokens than Opus 4.6 for the exact same input, and nobody is talking about it. → You're using the wrong model for most tasks: Haiku is 5x cheaper than Opus and good enough for 80% of real work, so stop defaulting to the flagship for everything. The wild part? He runs an AI agent company. This is what he learned by burning real money. While everyone races to use AI, the smart ones are learning how to use it cheaper.",
+              "url": "https://x.com/VaibhavSisinty/status/2062481999546515876",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 226,
+                "total": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Clay",
+      "slug": "clay",
+      "x_handle": "@clay",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@clay min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 11,
+          "spam_count": 0,
+          "proof_quality_score": 55,
+          "sample_tweets": [
+            {
+              "author": "m1shti",
+              "text": "I often get asked about the \"behind the scenes\" history and org structure of @clay's narrative function, so here are some answers! Content + PMM (2023 - 2025): I was a solo IC PMM covering broader messaging and major announcements, and I wrote the three pieces that shaped how people talked about Clay: GTM engineering, GTM alpha, and the GTM IDE. Narrative (mid-2025): Those pieces blew up, concepts started spreading, and we decided to treat the brand story as its own bet. Consolidated socials, influencer, editorial, video, comms, and schemes into one narrative team. (Called it that because I didn't love the term \"storytelling.\") Education + community formed a separate ecosystem team. Clay Studios (2026): Same scope, rebranded Clay Studios under my hero / bestie Jake Block after I decided to be an IC in-house journalist. Our big push is turning YouTube into a set of video and editorial channels that can fund themselves. At the end of the day, organize it however you want — it depends on the people you have, where they spike, and what they want to do. The name is up to you too, whether that's brand and content, media, narrative, storytelling, studio, etc. All throughout, we've reported into marketing, but that also seems fungible depending on your company. The exact setup matters less than having the function at all. Most companies benefit from telling a good brand story. Media is underfunded, attention still matters, and tech companies with resources are sitting on the ability to stand out and make work that moves people well outside their own bubble. (Also we are def the happiest, laughiest team at the company but we finally managed to mean mug for one picture :) Have added several new family members since then!)",
+              "url": "https://x.com/m1shti/status/2062215031778119983",
+              "engagement": {
+                "likes": 27,
+                "reposts": 2,
+                "replies": 3,
+                "views": 1928,
+                "total": 32
+              }
+            },
+            {
+              "author": "MichaelSaruggia",
+              "text": "I made millions in AI / GTM Consulting with nothing but my laptop, internet and: @LinkedIn is free. @X is free. @getresponse 50$/m @AnthropicAI 100$/m @clay 500$/m No more excuses.",
+              "url": "https://x.com/MichaelSaruggia/status/2061560963858399575",
+              "engagement": {
+                "likes": 3,
+                "reposts": 1,
+                "replies": 2,
+                "views": 118,
+                "total": 6
+              }
+            },
+            {
+              "author": "mikecarbone",
+              "text": "Come hang at the @workos office in SoHo June 9th with me and the team! Featuring additional speakers from @cursor_ai @ramp @clay and @tryprofound 🔥 it's going to be a banger, don't miss it",
+              "url": "https://x.com/mikecarbone/status/2059717523235320215",
+              "engagement": {
+                "likes": 18,
+                "reposts": 0,
+                "replies": 4,
+                "views": 3407,
+                "total": 22
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@clay -from:clay min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 11,
+          "spam_count": 0,
+          "proof_quality_score": 55,
+          "sample_tweets": [
+            {
+              "author": "m1shti",
+              "text": "I often get asked about the \"behind the scenes\" history and org structure of @clay's narrative function, so here are some answers! Content + PMM (2023 - 2025): I was a solo IC PMM covering broader messaging and major announcements, and I wrote the three pieces that shaped how people talked about Clay: GTM engineering, GTM alpha, and the GTM IDE. Narrative (mid-2025): Those pieces blew up, concepts started spreading, and we decided to treat the brand story as its own bet. Consolidated socials, influencer, editorial, video, comms, and schemes into one narrative team. (Called it that because I didn't love the term \"storytelling.\") Education + community formed a separate ecosystem team. Clay Studios (2026): Same scope, rebranded Clay Studios under my hero / bestie Jake Block after I decided to be an IC in-house journalist. Our big push is turning YouTube into a set of video and editorial channels that can fund themselves. At the end of the day, organize it however you want — it depends on the people you have, where they spike, and what they want to do. The name is up to you too, whether that's brand and content, media, narrative, storytelling, studio, etc. All throughout, we've reported into marketing, but that also seems fungible depending on your company. The exact setup matters less than having the function at all. Most companies benefit from telling a good brand story. Media is underfunded, attention still matters, and tech companies with resources are sitting on the ability to stand out and make work that moves people well outside their own bubble. (Also we are def the happiest, laughiest team at the company but we finally managed to mean mug for one picture :) Have added several new family members since then!)",
+              "url": "https://x.com/m1shti/status/2062215031778119983",
+              "engagement": {
+                "likes": 27,
+                "reposts": 2,
+                "replies": 3,
+                "views": 1928,
+                "total": 32
+              }
+            },
+            {
+              "author": "MichaelSaruggia",
+              "text": "I made millions in AI / GTM Consulting with nothing but my laptop, internet and: @LinkedIn is free. @X is free. @getresponse 50$/m @AnthropicAI 100$/m @clay 500$/m No more excuses.",
+              "url": "https://x.com/MichaelSaruggia/status/2061560963858399575",
+              "engagement": {
+                "likes": 3,
+                "reposts": 1,
+                "replies": 2,
+                "views": 118,
+                "total": 6
+              }
+            },
+            {
+              "author": "mikecarbone",
+              "text": "Come hang at the @workos office in SoHo June 9th with me and the team! Featuring additional speakers from @cursor_ai @ramp @clay and @tryprofound 🔥 it's going to be a banger, don't miss it",
+              "url": "https://x.com/mikecarbone/status/2059717523235320215",
+              "engagement": {
+                "likes": 18,
+                "reposts": 0,
+                "replies": 4,
+                "views": 3407,
+                "total": 22
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Clay\" -from:clay min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 3,
+          "spam_count": 1,
+          "proof_quality_score": 15,
+          "sample_tweets": [
+            {
+              "author": "ConstructerSOL",
+              "text": "DON’T LET YOUR RESOURCES GO TO WASTE. Every Timber, Clay, Iron, and Crop you produce matters. But if your storage is full... ❌ Production stops ❌ Resources are wasted ❌ Growth slows down ❌ Profits disappear That’s why upgrading your storage network is one of the smartest investments in The Constructer. Storage Yard → 80,000 Capacity Covered Depot → 240,000 Capacity Warehouse → 480,000 Capacity Industrial Storage Facility → 720,000 Capacity Regional Distribution Center → 1,200,000 Capacity The larger your storage, the longer your factories can run uninterrupted and the more resources you can accumulate before deciding how and when to use them. No rushing. No waste. No bottlenecks. Build. Earn. Trade. #TheConstructer #Solana #Web3Gaming #GameFi #BuildToEarn #SolanaGaming #BlockchainGaming #CryptoGaming #NFTGaming #StrategyGame",
+              "url": "https://x.com/ConstructerSOL/status/2062474616547762207",
+              "engagement": {
+                "likes": 9,
+                "reposts": 8,
+                "replies": 8,
+                "views": 126,
+                "total": 25
+              }
+            },
+            {
+              "author": "moonmommu",
+              "text": "My girlfriend literally made me Rui out of clay😭😭😭😭😭😭😭 https://t.co/O9ZdWtijYJ",
+              "url": "https://x.com/moonmommu/status/2062459810134597733",
+              "engagement": {
+                "likes": 13,
+                "reposts": 2,
+                "replies": 0,
+                "views": 108,
+                "total": 15
+              }
+            },
+            {
+              "author": "dobioprer",
+              "text": "Roland Garros: riding the momentum 🎾 Taking two angles here. Kostyuk vs Andreeva – Over 21.5 games Clay usually brings longer rallies, and both can trade momentum. This feels like a match that goes deep. Shnaider to win vs Chwalinska Shnaider just pulled off a huge comeback win over Sabalenka. That’s not random – that’s form and confidence. When a player rides that kind of momentum at Roland Garros, it often carries into the next round. Picks are on @Polymarket.",
+              "url": "https://x.com/dobioprer/status/2062445744993579224",
+              "engagement": {
+                "likes": 17,
+                "reposts": 1,
+                "replies": 3,
+                "views": 818,
+                "total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "CloudContact AI",
+      "slug": "cloudcontact-ai",
+      "x_handle": "@cloudcontactai",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@cloudcontactai min_faves:3 -filter:replies",
+          "tweets_returned": 2,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@cloudcontactai -from:cloudcontactai min_faves:3 -filter:replies",
+          "tweets_returned": 2,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"CloudContact AI\" -from:cloudcontactai min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "ColorJibe",
+      "slug": "colorjibe",
+      "x_handle": "@theresanaiforit",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 15,
+          "spam_count": 3,
+          "proof_quality_score": 75,
+          "sample_tweets": [
+            {
+              "author": "alexmacgregor__",
+              "text": "My launchpad ranking based on authority, traffic, SEO, awareness and brand: 1) Product Hunt @ProductHunt 2) G2 @G2dotcom 3) TrustMRR @trust_mrr 4) There’s An AI For That @theresanaiforit 5) Indie Hackers @IndieHackers 6) Peerlist @Peerlist 7) BetaList @BetaList 8) TinyLaunch @tinylaunch 9) Uneed @UneedLists 10 Launch @trylaunchai 11) Fazier @FazierHQ 12) MicroLaunch @MicroLaunchHQ 13) RankInPublic @RankInPublic",
+              "url": "https://x.com/alexmacgregor__/status/2059527522614989008",
+              "engagement": {
+                "likes": 7,
+                "reposts": 2,
+                "replies": 0,
+                "views": 382,
+                "total": 9
+              }
+            },
+            {
+              "author": "sauravv_x",
+              "text": "I’ve seen better products fail than worse ones. Usually for one reason: one founder knew distribution, the other only knew product. here's every platform i'd use to launch on day 1: → @IndieHackers → @ProductHunt → @AppSumo → @BetaList → @Peerlist → @theresanaiforit → @futuretools → @bensbitesdaily → @ai_directories → @AlternativeTo → @devhunt_ → @DesiFounder_ → @SaaSMantra → @startupbaseio → @tinylaunch bookmark this before your next launch nd follow for more",
+              "url": "https://x.com/sauravv_x/status/2056062163765330040",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 0,
+                "views": 108,
+                "total": 6
+              }
+            },
+            {
+              "author": "danshipit",
+              "text": "Just launched on @theresanaiforit few days ago and the amount of traffic I got is insane. Definitely no brainer for $49 😉 https://t.co/hxIEQHAwaz",
+              "url": "https://x.com/danshipit/status/2049172452379423085",
+              "engagement": {
+                "likes": 14,
+                "reposts": 2,
+                "replies": 2,
+                "views": 3050,
+                "total": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@theresanaiforit -from:theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 15,
+          "spam_count": 3,
+          "proof_quality_score": 75,
+          "sample_tweets": [
+            {
+              "author": "alexmacgregor__",
+              "text": "My launchpad ranking based on authority, traffic, SEO, awareness and brand: 1) Product Hunt @ProductHunt 2) G2 @G2dotcom 3) TrustMRR @trust_mrr 4) There’s An AI For That @theresanaiforit 5) Indie Hackers @IndieHackers 6) Peerlist @Peerlist 7) BetaList @BetaList 8) TinyLaunch @tinylaunch 9) Uneed @UneedLists 10 Launch @trylaunchai 11) Fazier @FazierHQ 12) MicroLaunch @MicroLaunchHQ 13) RankInPublic @RankInPublic",
+              "url": "https://x.com/alexmacgregor__/status/2059527522614989008",
+              "engagement": {
+                "likes": 7,
+                "reposts": 2,
+                "replies": 0,
+                "views": 382,
+                "total": 9
+              }
+            },
+            {
+              "author": "sauravv_x",
+              "text": "I’ve seen better products fail than worse ones. Usually for one reason: one founder knew distribution, the other only knew product. here's every platform i'd use to launch on day 1: → @IndieHackers → @ProductHunt → @AppSumo → @BetaList → @Peerlist → @theresanaiforit → @futuretools → @bensbitesdaily → @ai_directories → @AlternativeTo → @devhunt_ → @DesiFounder_ → @SaaSMantra → @startupbaseio → @tinylaunch bookmark this before your next launch nd follow for more",
+              "url": "https://x.com/sauravv_x/status/2056062163765330040",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 0,
+                "views": 108,
+                "total": 6
+              }
+            },
+            {
+              "author": "danshipit",
+              "text": "Just launched on @theresanaiforit few days ago and the amount of traffic I got is insane. Definitely no brainer for $49 😉 https://t.co/hxIEQHAwaz",
+              "url": "https://x.com/danshipit/status/2049172452379423085",
+              "engagement": {
+                "likes": 14,
+                "reposts": 2,
+                "replies": 2,
+                "views": 3050,
+                "total": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"ColorJibe\" -from:theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        }
+      ]
+    },
+    {
+      "tool": "Coursebox",
+      "slug": "coursebox",
+      "x_handle": "@theresanaiforit",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 15,
+          "spam_count": 3,
+          "proof_quality_score": 75,
+          "sample_tweets": [
+            {
+              "author": "alexmacgregor__",
+              "text": "My launchpad ranking based on authority, traffic, SEO, awareness and brand: 1) Product Hunt @ProductHunt 2) G2 @G2dotcom 3) TrustMRR @trust_mrr 4) There’s An AI For That @theresanaiforit 5) Indie Hackers @IndieHackers 6) Peerlist @Peerlist 7) BetaList @BetaList 8) TinyLaunch @tinylaunch 9) Uneed @UneedLists 10 Launch @trylaunchai 11) Fazier @FazierHQ 12) MicroLaunch @MicroLaunchHQ 13) RankInPublic @RankInPublic",
+              "url": "https://x.com/alexmacgregor__/status/2059527522614989008",
+              "engagement": {
+                "likes": 7,
+                "reposts": 2,
+                "replies": 0,
+                "views": 382,
+                "total": 9
+              }
+            },
+            {
+              "author": "sauravv_x",
+              "text": "I’ve seen better products fail than worse ones. Usually for one reason: one founder knew distribution, the other only knew product. here's every platform i'd use to launch on day 1: → @IndieHackers → @ProductHunt → @AppSumo → @BetaList → @Peerlist → @theresanaiforit → @futuretools → @bensbitesdaily → @ai_directories → @AlternativeTo → @devhunt_ → @DesiFounder_ → @SaaSMantra → @startupbaseio → @tinylaunch bookmark this before your next launch nd follow for more",
+              "url": "https://x.com/sauravv_x/status/2056062163765330040",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 0,
+                "views": 108,
+                "total": 6
+              }
+            },
+            {
+              "author": "danshipit",
+              "text": "Just launched on @theresanaiforit few days ago and the amount of traffic I got is insane. Definitely no brainer for $49 😉 https://t.co/hxIEQHAwaz",
+              "url": "https://x.com/danshipit/status/2049172452379423085",
+              "engagement": {
+                "likes": 14,
+                "reposts": 2,
+                "replies": 2,
+                "views": 3050,
+                "total": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@theresanaiforit -from:theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 15,
+          "spam_count": 3,
+          "proof_quality_score": 75,
+          "sample_tweets": [
+            {
+              "author": "alexmacgregor__",
+              "text": "My launchpad ranking based on authority, traffic, SEO, awareness and brand: 1) Product Hunt @ProductHunt 2) G2 @G2dotcom 3) TrustMRR @trust_mrr 4) There’s An AI For That @theresanaiforit 5) Indie Hackers @IndieHackers 6) Peerlist @Peerlist 7) BetaList @BetaList 8) TinyLaunch @tinylaunch 9) Uneed @UneedLists 10 Launch @trylaunchai 11) Fazier @FazierHQ 12) MicroLaunch @MicroLaunchHQ 13) RankInPublic @RankInPublic",
+              "url": "https://x.com/alexmacgregor__/status/2059527522614989008",
+              "engagement": {
+                "likes": 7,
+                "reposts": 2,
+                "replies": 0,
+                "views": 382,
+                "total": 9
+              }
+            },
+            {
+              "author": "sauravv_x",
+              "text": "I’ve seen better products fail than worse ones. Usually for one reason: one founder knew distribution, the other only knew product. here's every platform i'd use to launch on day 1: → @IndieHackers → @ProductHunt → @AppSumo → @BetaList → @Peerlist → @theresanaiforit → @futuretools → @bensbitesdaily → @ai_directories → @AlternativeTo → @devhunt_ → @DesiFounder_ → @SaaSMantra → @startupbaseio → @tinylaunch bookmark this before your next launch nd follow for more",
+              "url": "https://x.com/sauravv_x/status/2056062163765330040",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 0,
+                "views": 108,
+                "total": 6
+              }
+            },
+            {
+              "author": "danshipit",
+              "text": "Just launched on @theresanaiforit few days ago and the amount of traffic I got is insane. Definitely no brainer for $49 😉 https://t.co/hxIEQHAwaz",
+              "url": "https://x.com/danshipit/status/2049172452379423085",
+              "engagement": {
+                "likes": 14,
+                "reposts": 2,
+                "replies": 2,
+                "views": 3050,
+                "total": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Coursebox\" -from:theresanaiforit min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 17,
+          "spam_count": 1,
+          "proof_quality_score": 85,
+          "sample_tweets": [
+            {
+              "author": "filicroval",
+              "text": "Más de 210 herramientas de IA para sustituir tu trabajo tedioso: 1. Research - ChatGPT - Perplexity - Gemini - Consensus - Elicit 2. Presentation - Gamma AI - Decktopus - Slides AI - Beautiful AI - Tome AI 3. Productivity - Gamma - Notion AI - Motion - Taskade - ClickUp AI 4. Writing - Jasper - Quillbot - Grammarly - https://t.co/D2h14Jm9xX - Wordtune 5. Video - Runway - Kling - InVideo - HeyGen - Pictory 6. Meeting - Otter - Fireflies - Tldv - Avoma - Fathom 7. SEO - VidIQ - Surfer SEO - Clearscope - Frase - Scalenut 8. Image - Midjourney - GPT-4o - Leonardo AI - DALL·E - Ideogram 9. Design - Canva - Figma AI - Uizard - Looka - Brandmark 10. Audio - ElevenLabs - Lovo AI - Murf AI - Adobe Podcast - Podcastle 11. Marketing - AdCreative - Pencil - Simplified - HubSpot AI - Mailchimp AI 12. Startup - Ideas AI - Namelix - Validator AI - Pitchgrade - Tome 13. Social Media - Tapilo - Hypefury - Typefully - TweetHunter - Buffer AI 14. Coding - GitHub Copilot - Cursor - Codeium - Replit AI - Tabnine 15. Automation - Zapier - Make - Bardeen - n8n - AutoGPT 16. Analytics - Power BI Copilot - Tableau GPT - Polymer - Akkio - MonkeyLearn 17. Customer Support - Intercom AI - Zendesk AI - Tidio - Freshdesk AI - Forethought 18. Sales - Apollo AI - Gong - Clay - Lavender - https://t.co/XarsiQGd1k 19. Finance - https://t.co/BOsEuj4X5y - Truewind - Zeni - Pilot AI - Grid AI 20. HR & Hiring - HireEZ - Pymetrics - HireVue - Eightfold AI - Fetcher AI 21. Education - Khanmigo - Quizgecko - Coursebox AI - Tutor AI - Scribe AI 22. Image Editing - https://t.co/FMtG4qsTrA - PhotoRoom - Pixlr AI - Fotor AI - Clipdrop 23. AI Agents - AgentGPT - AutoGen - CrewAI - BabyAGI - MetaGPT 24. Email - Superhuman - Shortwave AI - Flowrite - Smartwriter - MailMaestro 25. Documentation - Notion AI - Slab AI - Tettra AI - Confluence AI - Scribe 26. No-Code - Bubble - Glide - Softr - Webflow AI - Framer AI 27. E-commerce - Shopify Magic - Octane AI - Pencil - https://t.co/K86HLbxlPr - CopyMonkey 28. Ads - AdCopy - AdCreative - https://t.co/ZoHK6aEGdT - Pencil - Revealbot 29. Voice - https://t.co/bR6OfhasB3 - Resemble AI - Voice AI - Altered - Cleanvoice 30. AI Search - Perplexity - YouChat - Brave Search AI - Andi - Komo AI 31. Resume - Resume Worded - Teal AI - Kickresume - Rezi - Enhancv 32. Legal - Harvey AI - Spellbook - DoNotPay - Lexion - Legal Robot 33. Product - Productboard AI - Canny AI - Aha AI - https://t.co/JrPShsG7CK - UserLeap 34. UX Research - Maze - Hotjar AI - Useberry - Optimal AI - UserTesting AI 35. Scheduling - Calendly AI - Clockwise - Reclaim - Motion - Sunsama 36. Transcription - Whisper - Sonix - Trint - Descript - Happy Scribe 37. Data Cleaning - OpenRefine - Trifacta - Alteryx AI - Dataiku - Talend AI 38. Chatbots - Botpress - ManyChat - Tidio - Drift - Landbot 39. Cybersecurity - Darktrace - Vectra AI - CrowdStrike - SentinelOne - Abnormal AI 40. Knowledge Base - Glean - Slite AI - Guru - Obsidian AI - Mem ai",
+              "url": "https://x.com/filicroval/status/2021896003352146005",
+              "engagement": {
+                "likes": 1234,
+                "reposts": 357,
+                "replies": 16,
+                "views": 70020,
+                "total": 1607
+              }
+            },
+            {
+              "author": "Sunnysam3194",
+              "text": "211+ AI Tools to replace your tedious work in 2026: 1. Research - ChatGPT - Perplexity - Gemini - Consensus - Elicit 2. Presentation - Gamma AI - Decktopus - Slides AI - Beautiful AI - Tome AI 3. Productivity - Gamma - Notion AI - Motion - Taskade - ClickUp AI 4. Writing - Jasper - Quillbot - Grammarly - https://t.co/WoXy4SYMO2 - Wordtune 5. Video - Runway - Kling - InVideo - HeyGen - Pictory 6. Meeting - Otter - Fireflies - Tldv - Avoma - Fathom 7. SEO - VidIQ - Surfer SEO - Clearscope - Frase - Scalenut 8. Image - Midjourney - GPT-4o - Leonardo AI - DALL·E - Ideogram 9. Design - Canva - Figma AI - Uizard - Looka - Brandmark 10. Audio - ElevenLabs - Lovo AI - Murf AI - Adobe Podcast - Podcastle 11. Marketing - AdCreative - Pencil - Simplified - HubSpot AI - Mailchimp AI 12. Startup - Ideas AI - Namelix - Validator AI - Pitchgrade - Tome 13. Social Media - Tapilo - Hypefury - Typefully - TweetHunter - Buffer AI 14. Coding - GitHub Copilot - Cursor - Codeium - Replit AI - Tabnine 15. Automation - Zapier - Make - Bardeen - n8n - AutoGPT 16. Analytics - Power BI Copilot - Tableau GPT - Polymer - Akkio - MonkeyLearn 17. Customer Support - Intercom AI - Zendesk AI - Tidio - Freshdesk AI - Forethought 18. Sales - Apollo AI - Gong - Clay - Lavender - https://t.co/l0zdcVb7Zh 19. Finance - https://t.co/seYiJLi1qk - Truewind - Zeni - Pilot AI - Grid AI 20. HR & Hiring - HireEZ - Pymetrics - HireVue - Eightfold AI - Fetcher AI 21. Education - Khanmigo - Quizgecko - Coursebox AI - Tutor AI - Scribe AI 22. Image Editing - https://t.co/6nWtni4jBg - PhotoRoom - Pixlr AI - Fotor AI - Clipdrop 23. AI Agents - AgentGPT - AutoGen - CrewAI - BabyAGI - MetaGPT 24. Email - Superhuman - Shortwave AI - Flowrite - Smartwriter - MailMaestro 25. Documentation - Notion AI - Slab AI - Tettra AI - Confluence AI - Scribe 26. No-Code - Bubble - Glide - Softr - Webflow AI - Framer AI 27. E-commerce - Shopify Magic - Octane AI - Pencil - https://t.co/KX6NcSajLk - CopyMonkey 28. Ads - AdCopy - AdCreative - https://t.co/693qGMjexL - Pencil - Revealbot 29. Voice - https://t.co/Mx9glaBUFE - Resemble AI - Voice AI - Altered - Cleanvoice 30. AI Search - Perplexity - YouChat - Brave Search AI - Andi - Komo AI 31. Resume - Resume Worded - Teal AI - Kickresume - Rezi - Enhancv 32. Legal - Harvey AI - Spellbook - DoNotPay - Lexion - Legal Robot 33. Product - Productboard AI - Canny AI - Aha AI - https://t.co/dUmGgvmKxa - UserLeap 34. UX Research - Maze - Hotjar AI - Useberry - Optimal AI - UserTesting AI 35. Scheduling - Calendly AI - Clockwise - Reclaim - Motion - Sunsama 36. Transcription - Whisper - Sonix - Trint - Descript - Happy Scribe 37. Data Cleaning - OpenRefine - Trifacta - Alteryx AI - Dataiku - Talend AI 38. Chatbots - Botpress - ManyChat - Tidio - Drift - Landbot 39. Cybersecurity - Darktrace - Vectra AI - CrowdStrike - SentinelOne - Abnormal AI 40. Knowledge Base - Glean - Slite AI - Guru - Obsidian AI - Mem ai Follow @Sunnysam3194 for more such amazing content",
+              "url": "https://x.com/Sunnysam3194/status/2020171042791329810",
+              "engagement": {
+                "likes": 4,
+                "reposts": 1,
+                "replies": 4,
+                "views": 156,
+                "total": 9
+              }
+            },
+            {
+              "author": "RahulKu22532718",
+              "text": "211+ AI Tools to replace your tedious work in 2026: 1. Research - ChatGPT - Perplexity - Gemini - Consensus - Elicit 2. Presentation - Gamma AI - Decktopus - Slides AI - Beautiful AI - Tome AI 3. Productivity - Gamma - Notion AI - Motion - Taskade - ClickUp AI 4. Writing - Jasper - Quillbot - Grammarly - https://t.co/hQmrgRqQZo - Wordtune 5. Video - Runway - Kling - InVideo - HeyGen - Pictory 6. Meeting - Otter - Fireflies - Tldv - Avoma - Fathom 7. SEO - VidIQ - Surfer SEO - Clearscope - Frase - Scalenut 8. Image - Midjourney - GPT-4o - Leonardo AI - DALL·E - Ideogram 9. Design - Canva - Figma AI - Uizard - Looka - Brandmark 10. Audio - ElevenLabs - Lovo AI - Murf AI - Adobe Podcast - Podcastle 11. Marketing - AdCreative - Pencil - Simplified - HubSpot AI - Mailchimp AI 12. Startup - Ideas AI - Namelix - Validator AI - Pitchgrade - Tome 13. Social Media - Tapilo - Hypefury - Typefully - TweetHunter - Buffer AI 14. Coding - GitHub Copilot - Cursor - Codeium - Replit AI - Tabnine 15. Automation - Zapier - Make - Bardeen - n8n - AutoGPT 16. Analytics - Power BI Copilot - Tableau GPT - Polymer - Akkio - MonkeyLearn 17. Customer Support - Intercom AI - Zendesk AI - Tidio - Freshdesk AI - Forethought 18. Sales - Apollo AI - Gong - Clay - Lavender - https://t.co/340gxaetRk 19. Finance - https://t.co/x6l8s5zr9n - Truewind - Zeni - Pilot AI - Grid AI 20. HR & Hiring - HireEZ - Pymetrics - HireVue - Eightfold AI - Fetcher AI 21. Education - Khanmigo - Quizgecko - Coursebox AI - Tutor AI - Scribe AI 22. Image Editing - https://t.co/CtKawSxBJH - PhotoRoom - Pixlr AI - Fotor AI - Clipdrop 23. AI Agents - AgentGPT - AutoGen - CrewAI - BabyAGI - MetaGPT 24. Email - Superhuman - Shortwave AI - Flowrite - Smartwriter - MailMaestro 25. Documentation - Notion AI - Slab AI - Tettra AI - Confluence AI - Scribe 26. No-Code - Bubble - Glide - Softr - Webflow AI - Framer AI 27. E-commerce - Shopify Magic - Octane AI - Pencil - https://t.co/yBZH5XnnLk - CopyMonkey 28. Ads - AdCopy - AdCreative - https://t.co/pWbqjJ1DJT - Pencil - Revealbot 29. Voice - https://t.co/USXg3QatKm - Resemble AI - Voice AI - Altered - Cleanvoice 30. AI Search - Perplexity - YouChat - Brave Search AI - Andi - Komo AI 31. Resume - Resume Worded - Teal AI - Kickresume - Rezi - Enhancv 32. Legal - Harvey AI - Spellbook - DoNotPay - Lexion - Legal Robot 33. Product - Productboard AI - Canny AI - Aha AI - https://t.co/3ZQfBnRemr - UserLeap 34. UX Research - Maze - Hotjar AI - Useberry - Optimal AI - UserTesting AI 35. Scheduling - Calendly AI - Clockwise - Reclaim - Motion - Sunsama 36. Transcription - Whisper - Sonix - Trint - Descript - Happy Scribe 37. Data Cleaning - OpenRefine - Trifacta - Alteryx AI - Dataiku - Talend AI 38. Chatbots - Botpress - ManyChat - Tidio - Drift - Landbot 39. Cybersecurity - Darktrace - Vectra AI - CrowdStrike - SentinelOne - Abnormal AI 40. Knowledge Base - Glean - Slite AI - Guru - Obsidian AI - Mem ai Follow @RahulKu22532718 for more such amazing content",
+              "url": "https://x.com/RahulKu22532718/status/2019973222649770245",
+              "engagement": {
+                "likes": 82,
+                "reposts": 30,
+                "replies": 33,
+                "views": 5248,
+                "total": 145
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Cursor",
+      "slug": "cursor",
+      "x_handle": "@cursor_ai",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@cursor_ai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 10,
+          "spam_count": 0,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "Belacosaursol",
+              "text": "After paying a stack of cold hard cash my PC is finally making its way from Indo to Australia! Once it's here I can finally turn my old Laptop into an LLM and stop paying insane amounts of money on @cursor_ai @OpenAI!!",
+              "url": "https://x.com/Belacosaursol/status/2062454563857445324",
+              "engagement": {
+                "likes": 7,
+                "reposts": 0,
+                "replies": 1,
+                "views": 40,
+                "total": 8
+              }
+            },
+            {
+              "author": "mittalparth_",
+              "text": "redesigned the landing page for Khoj built using @cursor_ai and the hallmark skill by @nutlope https://t.co/BzU6rEGzjW",
+              "url": "https://x.com/mittalparth_/status/2062402443762446484",
+              "engagement": {
+                "likes": 12,
+                "reposts": 0,
+                "replies": 3,
+                "views": 248,
+                "total": 15
+              }
+            },
+            {
+              "author": "daniel_adornes",
+              "text": "This past Wednesday marked my one-year anniversary at @cursor_ai ! Joining as employee #82 exactly one year ago has been one of the most rewarding decisions of my professional life. Cursor moves at a breakneck pace. We ship daily, tackling \"impossible\" problems for developers worldwide. But what truly sets this place apart is the people — a team of absolute rockstars who are as humble as they are brilliant. I feel immense gratitude for the opportunity to contribute to a product that is fundamentally reshaping software engineering. In just twelve months, I’ve watched Cursor evolve from an AI-native editor into a comprehensive, agent-first SDLC platform. I've also had the opportunity to meet hundreds of developers and businesses in person, whose productivity has skyrocketed 🚀 with Cursor, which remains one of the most fulfilling parts of the journey. 🤩 I’m incredibly excited for what’s next! Beyond the technical challenges, I’m eager to dive deeper into the business side of our growth, collaborating across teams to ensure Cursor becomes the essential tool for every developer on Earth 🌎 🌍 🌏 Thank you to the Anysphere team for an unforgettable first year! Let’s keep building!",
+              "url": "https://x.com/daniel_adornes/status/2062378776781070545",
+              "engagement": {
+                "likes": 30,
+                "reposts": 2,
+                "replies": 5,
+                "views": 1005,
+                "total": 37
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@cursor_ai -from:cursor_ai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 10,
+          "spam_count": 0,
+          "proof_quality_score": 50,
+          "sample_tweets": [
+            {
+              "author": "Belacosaursol",
+              "text": "After paying a stack of cold hard cash my PC is finally making its way from Indo to Australia! Once it's here I can finally turn my old Laptop into an LLM and stop paying insane amounts of money on @cursor_ai @OpenAI!!",
+              "url": "https://x.com/Belacosaursol/status/2062454563857445324",
+              "engagement": {
+                "likes": 7,
+                "reposts": 0,
+                "replies": 1,
+                "views": 40,
+                "total": 8
+              }
+            },
+            {
+              "author": "mittalparth_",
+              "text": "redesigned the landing page for Khoj built using @cursor_ai and the hallmark skill by @nutlope https://t.co/BzU6rEGzjW",
+              "url": "https://x.com/mittalparth_/status/2062402443762446484",
+              "engagement": {
+                "likes": 12,
+                "reposts": 0,
+                "replies": 3,
+                "views": 248,
+                "total": 15
+              }
+            },
+            {
+              "author": "daniel_adornes",
+              "text": "This past Wednesday marked my one-year anniversary at @cursor_ai ! Joining as employee #82 exactly one year ago has been one of the most rewarding decisions of my professional life. Cursor moves at a breakneck pace. We ship daily, tackling \"impossible\" problems for developers worldwide. But what truly sets this place apart is the people — a team of absolute rockstars who are as humble as they are brilliant. I feel immense gratitude for the opportunity to contribute to a product that is fundamentally reshaping software engineering. In just twelve months, I’ve watched Cursor evolve from an AI-native editor into a comprehensive, agent-first SDLC platform. I've also had the opportunity to meet hundreds of developers and businesses in person, whose productivity has skyrocketed 🚀 with Cursor, which remains one of the most fulfilling parts of the journey. 🤩 I’m incredibly excited for what’s next! Beyond the technical challenges, I’m eager to dive deeper into the business side of our growth, collaborating across teams to ensure Cursor becomes the essential tool for every developer on Earth 🌎 🌍 🌏 Thank you to the Anysphere team for an unforgettable first year! Let’s keep building!",
+              "url": "https://x.com/daniel_adornes/status/2062378776781070545",
+              "engagement": {
+                "likes": 30,
+                "reposts": 2,
+                "replies": 5,
+                "views": 1005,
+                "total": 37
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Cursor\" -from:cursor_ai min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 13,
+          "spam_count": 0,
+          "proof_quality_score": 65,
+          "sample_tweets": [
+            {
+              "author": "sergeynazarovx",
+              "text": "🚢 Just shipped @ScreenCharm v1.9.1 🎬 30 FPS Export 🔍 Camera Content Zoom ✨ Motion Blur Improvements 🖱️ Cursor Motion Improvements https://t.co/wxOITgaMRu",
+              "url": "https://x.com/sergeynazarovx/status/2062481897448427639",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 0,
+                "views": 86,
+                "total": 4
+              }
+            },
+            {
+              "author": "ricofintech",
+              "text": "Been looking into $C lately and honestly it's starting to get interesting👇 Anthropic quietly filed for an IPO on June 1st. If AI gets another major wave of attention heading into Q4, money won't just flow into AI memes. That's where Chainbase stands out to me. ▸ Recently launched AgentKey, connecting AI agents with both internet and onchain data ▸Works with tools people are already using like Claude Code and Cursor The bigger picture is what matters though. Chainbase is building data infrastructure for AI, and that's a sector I think most people are still underestimating. Chart finally looks alive again after a long accumulation period, and the valuation still feels small compared to a lot of projects with weaker fundamentals. Not saying it sends tomorrow. Just feels like one of those names people suddenly start talking about after it's already moved.",
+              "url": "https://x.com/ricofintech/status/2062478844544897184",
+              "engagement": {
+                "likes": 5,
+                "reposts": 1,
+                "replies": 1,
+                "views": 64,
+                "total": 7
+              }
+            },
+            {
+              "author": "nicos_ai",
+              "text": "🚨OpenAI está regalando $1.200 GRATIS para usar Codex Solo necesitas un repo público en GitHub, rellenar un formulario y te dan 6 meses de ChatGPT Pro + Codex Y casi nadie está hablando de esto, seguramente porque no quieren que se entere todo el mundo Todavía estás a tiempo de solicitarlo, aunque no sepas programar o estés empezando Así funciona: 1. Instala Cursor, Codex, Claude Code o lo que uses 2. Monta un proyecto, de lo que sea 3. Súbelo a GitHub 4. Pide a tus amigos que le den stars Deja el link de tu repo en los comentarios, entre todos te daremos Star. Si tienes dudas de si aceptarán tu proyecto, no te preocupes. Estos programas aceptan hasta proyectos a medias Enlace para aplicar abajo👇",
+              "url": "https://x.com/nicos_ai/status/2062476098840019079",
+              "engagement": {
+                "likes": 26,
+                "reposts": 4,
+                "replies": 6,
+                "views": 428,
+                "total": 36
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Descript",
+      "slug": "descript",
+      "x_handle": "@descript",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@descript min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 12,
+          "spam_count": 1,
+          "proof_quality_score": 60,
+          "sample_tweets": [
+            {
+              "author": "theaaron",
+              "text": "agent amnesia sucks, here's how to prevent it in @descript's Underlord: do your task as per usual, make sure you get a great output then finish with: remember this task in Underlord Instructions when I prompt you with do [task name] never repeat yourself again! https://t.co/HRQgKCGoTS",
+              "url": "https://x.com/theaaron/status/2062221944754479568",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 0,
+                "views": 74,
+                "total": 5
+              }
+            },
+            {
+              "author": "theaaron",
+              "text": "reason #48 you should record your workshops: multiple attendees left feedback saying they wished I had given them a glossary of terms or list of definitions for things we discussed over 90 min. luckily, I recorded my audio and transcribed it all in @descript, so it took about 5 minutes to create one I prompted Claude to create a glossary using the actual language from my transcript to define terms, not it's training data, which it could do with the Descript API then had it alphabetize everything into the @NotionHQ site page with my workshop materials and sent the attendees requesting this a link straight to that block",
+              "url": "https://x.com/theaaron/status/2062167920575443449",
+              "engagement": {
+                "likes": 7,
+                "reposts": 0,
+                "replies": 1,
+                "views": 84,
+                "total": 8
+              }
+            },
+            {
+              "author": "ryanraysr",
+              "text": "Goal: To get to daily interviews. If you are an owner, or work with owners I'd love to chat. The content game is about to get crazy. We've already been talking to @descript and pumped they are going to help use make it a better work flow.",
+              "url": "https://x.com/ryanraysr/status/2061500318869811273",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 1,
+                "views": 306,
+                "total": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@descript -from:descript min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 12,
+          "spam_count": 1,
+          "proof_quality_score": 60,
+          "sample_tweets": [
+            {
+              "author": "theaaron",
+              "text": "agent amnesia sucks, here's how to prevent it in @descript's Underlord: do your task as per usual, make sure you get a great output then finish with: remember this task in Underlord Instructions when I prompt you with do [task name] never repeat yourself again! https://t.co/HRQgKCGoTS",
+              "url": "https://x.com/theaaron/status/2062221944754479568",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 0,
+                "views": 74,
+                "total": 5
+              }
+            },
+            {
+              "author": "theaaron",
+              "text": "reason #48 you should record your workshops: multiple attendees left feedback saying they wished I had given them a glossary of terms or list of definitions for things we discussed over 90 min. luckily, I recorded my audio and transcribed it all in @descript, so it took about 5 minutes to create one I prompted Claude to create a glossary using the actual language from my transcript to define terms, not it's training data, which it could do with the Descript API then had it alphabetize everything into the @NotionHQ site page with my workshop materials and sent the attendees requesting this a link straight to that block",
+              "url": "https://x.com/theaaron/status/2062167920575443449",
+              "engagement": {
+                "likes": 7,
+                "reposts": 0,
+                "replies": 1,
+                "views": 84,
+                "total": 8
+              }
+            },
+            {
+              "author": "ryanraysr",
+              "text": "Goal: To get to daily interviews. If you are an owner, or work with owners I'd love to chat. The content game is about to get crazy. We've already been talking to @descript and pumped they are going to help use make it a better work flow.",
+              "url": "https://x.com/ryanraysr/status/2061500318869811273",
+              "engagement": {
+                "likes": 4,
+                "reposts": 0,
+                "replies": 1,
+                "views": 306,
+                "total": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Descript\" -from:descript min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 8,
+          "spam_count": 4,
+          "proof_quality_score": 40,
+          "sample_tweets": [
+            {
+              "author": "precisox",
+              "text": "https://t.co/PaWVAbCjjv te cobra $17 al mes por transcribir tus reuniones. Fireflies: $19. Descript: $24. Lo que ninguna de ellas te cuenta: Todas están construidas sobre el mismo modelo que OpenAI liberó gratis en 2022. Se llama Whisper. 85.000+ estrellas en GitHub. 100% gratis. 100% offline. Corre en tu ordenador. - Más de 100 idiomas - Sin internet - Tu audio nunca sale de tu dispositivo - Puntuación automática, timestamps y detección de hablantes - Perfecto para reuniones, podcasts, clases, entrevistas o notas de voz - Genera subtítulos (SRT y VTT) - Licencia MIT: úsalo como quieras, personal o comercial Transcripción lista en segundos. Sin cuenta. Sin API. Sin tarjeta de crédito. Otter: $204 al año Fireflies: $228 al año Descript: $288 al año Whisper: $0. Ilimitado. Para siempre. En tu laptop. La mayoría de las apps de transcripción caras son solo una suscripción encima de este modelo gratuito. Tu voz. Tu transcripción. Sin intermediarios. 100% open source. Guarda esto y en los comentarios te dejo el repo👇",
+              "url": "https://x.com/precisox/status/2062364148403474893",
+              "engagement": {
+                "likes": 47,
+                "reposts": 5,
+                "replies": 7,
+                "views": 1902,
+                "total": 59
+              }
+            },
+            {
+              "author": "ShawnMathis1972",
+              "text": "The number should be zero if they understood the queer lifestyle at all. That's why I wrote my book: How do we find the truth without falling into hype or stereotype? One would use the same tools used for any other demographic group. That includes polls, studies, professional opinions, and personal stories. As with polls and studies about categories like gender, nationality, or race, these methods only offer a snapshot of the aggregate. While every individual is unique, the combined picture shows compulsive, miserable, risky people. ...The Warehouse was the nickname for a non-descript business building surrounded by residential homes in northern Minneapolis. Such a discreet location was thought just right for a sex club. Upon entering, patrons were greeted with condoms and water in anticipation of promiscuous sex. Anonymous, voyeuristic and random sex was everywhere on every floor. Open several times a week, the club was entirely ignored by the authorities. No one could be bothered to investigate an unlicensed gay sex club. Single men, husbands, fathers, small-town guys, and bar-hopping men all converged to satisfy their compulsive lusts. Yet this sex club was not in some seedy part of San Francisco before the HIV outbreak, but at a residential part of Minneapolis in 2017. The gay sex house continued its dirty business for a few years until the police finally raided the joint. Oddly enough, someone from the LGBT community had had enough. An older gay man living with AIDS saw a disaster waiting to happen and contacted the police. Yet the raid did not faze the owner, Scott Delage, who moved his club to other locations. “We stopped having parties [there]…But it’s never stopped…” he chuckles. “You know what I mean? There’s a need. There’s an absolute need.” He succinctly described this “need”: “When we started this, word just spread like wildfire…It’s like that old saying, ‘Telephone, telegraph, tell-a-gay.’”",
+              "url": "https://x.com/ShawnMathis1972/status/2062225490174410790",
+              "engagement": {
+                "likes": 7,
+                "reposts": 0,
+                "replies": 0,
+                "views": 574,
+                "total": 7
+              }
+            },
+            {
+              "author": "TheEsosalugard",
+              "text": "🚀HIRING❗️ ᴘʜ ʙᴀꜱᴇᴅ ᴀᴘᴘʟɪᴄᴀɴᴛꜱ ᴏɴʟʏ 𝑨𝑰 𝑪𝒐𝒏𝒕𝒆𝒏𝒕 𝑪𝒓𝒆𝒂𝒕𝒐𝒓 & 𝑽𝒊𝒅𝒆𝒐 𝑬𝒅𝒊𝒕𝒐𝒓 (𝑭𝒖𝒍𝒍-𝑻𝒊𝒎𝒆) 👉Role Overview: We’re looking for a highly creative and tech-savvy AI Content Creator & Video Editor who is obsessed with leveraging artificial intelligence to produce high-quality, scalable content. 🧰Key Responsibilities 🎥 AI-Powered Video Creation -Create engaging video content using AI avatar tools like HeyGen, Synthesia, and similar platforms -Produce talking-head videos, explainer videos, reels, and ads using -AI-generated avatars and voiceovers -Turn scripts into polished videos with minimal manual recording ✂️ Video Editing & Post-Production -Edit short-form and long-form videos optimized for social media (Reels, TikTok, YouTube, LinkedIn) -Add captions, transitions, sound effects, and branding elements -Repurpose long content into multiple short-form clips using AI tools 🤖 AI Content Automation & Systems -Build and manage content workflows using tools like ChatGPT, Descript, Runway ML, and Pictory -Use AI for scriptwriting, voice cloning, subtitles, and content ideation -Develop scalable systems for batch content production 📱 Social Media Content Creation -Create high-performing content for Facebook, Instagram, LinkedIn, and TikTok -Stay updated with trends and adapt them using AI tools -Optimize videos for engagement, retention, and conversions 🎓 Required Skills & Experience: -Proven experience in video editing + content creation -Strong experience using AI tools, especially: What Success Looks Like in This Role: -You can produce 5–10+ high-quality videos per day using AI tools -You turn one idea into multiple content pieces across platforms -You constantly test, iterate, and improve content performance Kindly read the full job description before applying to ensure this role aligns with your skills and experience. ➡️Send your application together with your portfolio: https://t.co/ic5H00sqS0.blm@gmail.com #jobsearch #contentcreator #videoeditor #Openrole #X #nsfwtwtًً",
+              "url": "https://x.com/TheEsosalugard/status/2062195000906076342",
+              "engagement": {
+                "likes": 6,
+                "reposts": 0,
+                "replies": 3,
+                "views": 286,
+                "total": 9
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "DigitalGenius",
+      "slug": "digitalgenius",
+      "x_handle": "@DigitalGeniusAI",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@DigitalGeniusAI min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 9,
+          "spam_count": 2,
+          "proof_quality_score": 45,
+          "sample_tweets": [
+            {
+              "author": "annettefranz",
+              "text": "We hit all the high notes in this episode! &gt;&gt; Built to Win: Maximising CX w/AI, Employee Experience, and Customer-Centric Culture w/Annette Franz https://t.co/PBLnS9U4Pk @DigitalGeniusAI #customerexperience #culture #cusotmercentric #AI #artificialintelligence #employeeexperience https://t.co/Bi1JO4idsk",
+              "url": "https://x.com/annettefranz/status/1643692988457992195",
+              "engagement": {
+                "likes": 3,
+                "reposts": 2,
+                "replies": 0,
+                "views": 188,
+                "total": 5
+              }
+            },
+            {
+              "author": "annettefranz",
+              "text": "Thanks @DigitalGeniusAI for a great conversation on your latest episode of eCommerce Customer Experience podcast! Built to Win: Maximising CX with AI, Employee Experience, and Customer-Centric Culture https://t.co/PBLnS9UCES #culture #employeeexperience #customerexperience #AI https://t.co/slWf6x9rot",
+              "url": "https://x.com/annettefranz/status/1638693549859540992",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 179,
+                "total": 3
+              }
+            },
+            {
+              "author": "TheDannyNaz",
+              "text": "Adding 2 more here: For customer service: @DigitalGeniusAI is an AI-powered customer service platform that can handle customer inquiries and support tickets. Its machine-learning algorithms can identify the nature of the request and provide a relevant response, making it a valuable tool for any customer-facing business. -- For project management: @ForecastHQ is an AI-powered project management tool that can help you manage your team's workflow and resources more effectively. It uses machine learning to analyze your team's performance and predict potential bottlenecks, so you can make more informed decisions about resource allocation and project timelines.",
+              "url": "https://x.com/TheDannyNaz/status/1626707565819183105",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 378,
+                "total": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@DigitalGeniusAI -from:DigitalGeniusAI min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 9,
+          "spam_count": 2,
+          "proof_quality_score": 45,
+          "sample_tweets": [
+            {
+              "author": "annettefranz",
+              "text": "We hit all the high notes in this episode! &gt;&gt; Built to Win: Maximising CX w/AI, Employee Experience, and Customer-Centric Culture w/Annette Franz https://t.co/PBLnS9U4Pk @DigitalGeniusAI #customerexperience #culture #cusotmercentric #AI #artificialintelligence #employeeexperience https://t.co/Bi1JO4idsk",
+              "url": "https://x.com/annettefranz/status/1643692988457992195",
+              "engagement": {
+                "likes": 3,
+                "reposts": 2,
+                "replies": 0,
+                "views": 188,
+                "total": 5
+              }
+            },
+            {
+              "author": "annettefranz",
+              "text": "Thanks @DigitalGeniusAI for a great conversation on your latest episode of eCommerce Customer Experience podcast! Built to Win: Maximising CX with AI, Employee Experience, and Customer-Centric Culture https://t.co/PBLnS9UCES #culture #employeeexperience #customerexperience #AI https://t.co/slWf6x9rot",
+              "url": "https://x.com/annettefranz/status/1638693549859540992",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 179,
+                "total": 3
+              }
+            },
+            {
+              "author": "TheDannyNaz",
+              "text": "Adding 2 more here: For customer service: @DigitalGeniusAI is an AI-powered customer service platform that can handle customer inquiries and support tickets. Its machine-learning algorithms can identify the nature of the request and provide a relevant response, making it a valuable tool for any customer-facing business. -- For project management: @ForecastHQ is an AI-powered project management tool that can help you manage your team's workflow and resources more effectively. It uses machine learning to analyze your team's performance and predict potential bottlenecks, so you can make more informed decisions about resource allocation and project timelines.",
+              "url": "https://x.com/TheDannyNaz/status/1626707565819183105",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 378,
+                "total": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"DigitalGenius\" -from:DigitalGeniusAI min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 9,
+          "spam_count": 1,
+          "proof_quality_score": 45,
+          "sample_tweets": [
+            {
+              "author": "quasagroup",
+              "text": "DigitalGenius: Revolutionizing Autonomous Customer Service with AI in 2026 https://t.co/8DFvIE8Ui9 4.8/5 stars (outstanding for resolution rate, brand voice, and integrations; slight deduction for pricing and onboarding complexity). #Quasa #QUA #voila #Web3 #Crypto #AItools #VideoAI #ContentCreation #AIforBusiness #QuasaConnect",
+              "url": "https://x.com/quasagroup/status/2030177489025118385",
+              "engagement": {
+                "likes": 3,
+                "reposts": 0,
+                "replies": 0,
+                "views": 57,
+                "total": 3
+              }
+            },
+            {
+              "author": "AI_Arabic1",
+              "text": "مئات الأشخاص يوميًا يحققون دخل إضافي بأدوات AI 🔥والسؤال: ليش مو أنت؟🫵 لا تفوت الفرصة… احفظ التغريدة الآن 💰✨ أداة توليد أوامر بالذكاء الاصطناعي تساعدك على استخدام كل هذه الأدوات بالطريقة الصحيحة، وتضاعف إنتاجيتك لتصل إلى +300٪. .. https://t.co/XdCNAVEdxu .. 1. Video Generators ⇢ Synthesia ⇢ Runway ⇢ Unscreen ⇢ Vrew ⇢ Descript ⇢ Nova ⇢ Reface ⇢ Topaz ⇢ Make-a-Video ⇢ AImages ⇢ D-ID ⇢ Pictory ⇢ Rawshorts ⇢ Munch ⇢ Fliki ⇢ Powtoon 2. Art Generators ⇢ DALL-E ⇢ Stable Diffusion ⇢ Midjourney ⇢ Picsart ⇢ The Next Rembrandt ⇢ Neural .love ⇢ This Beach Does Not Exist ⇢ Imagen ⇢ Magic Eraser ⇢ Let’s Enhance ⇢ Playground AI ⇢ DreamStudio ⇢ Deep Dream Generator ⇢ ArtBreeder ⇢ Wombo .art 3. Writing ⇢ ChatGPT ⇢ Writer ⇢ Notion AI ⇢ tldr ⇢ LyricStudio ⇢ Shortly ⇢ INK ⇢ Copy .ai ⇢ WordTune ⇢ Jasper ⇢ Frase ⇢ Sudowrite ⇢ Jenni ⇢ HyperWrite ⇢ Rytr ⇢ Describely ⇢ Phrasee ⇢ Article Forge ⇢ NeuralText ⇢ Writesonic ⇢ Scribbl ⇢ Virtual Volunteer 3. Music Generators ⇢ Jukebox ⇢ AIVA ⇢ Supertone ⇢ Boomy ⇢ Loudly 4. Face Generators ⇢ This Person Does Not Exist ⇢ Face Generator ⇢ Fake People ⇢ Face Swapper 5. Avatar Generators ⇢ Ready Player Me ⇢ Try it on ⇢ Avaturn ⇢ Inworld ⇢ RemoteFace ⇢ Microsoft Mesh Avatar ⇢ Lensa ⇢ Memoji 6. Drawing ⇢ AutoDraw ⇢ Sketch MetaDemoLab ⇢ Magic Sketchpad ⇢ Quick Draw ⇢ Craiyon 7. Audio Generators ⇢ Murf ⇢ Cleanvoice ⇢ FakeYou ⇢ TikTok ⇢ Uberduck ⇢ LALAL AI 8. Design ⇢ FontJoy ⇢ Looka ⇢ Design Beast ⇢ Jitter ⇢ Beautiful .ai ⇢ Designs .ai ⇢ Uizard ⇢ Tome 9. Biz ⇢ Namelix ⇢ Textio ⇢ Flatlogic ⇢ Weblium ⇢ Zia ⇢ Resume io ⇢ Kickresume ⇢ Timely ⇢ Landbot ⇢ Boost .ai ⇢ Yooz ⇢ RAD AI ⇢ DigitalGenius ⇢ Conversica AI ⇢ Acrolinx ⇢ MyWave ⇢ Abe ⇢ Popular .Studio ⇢ GitHub Copilot ⇢ Adcreative .ai ⇢ Cohesive ⇢ Reply ⇢ Lalaland 10. Research ⇢ Genei ⇢ Iris .ai ⇢ Semantic Scholar ⇢ Elicit ⇢ Wizdom .ai 11. Daily Basis ⇢ TimeHero ⇢ Wade ⇢ Josh ⇢ Wallet ai ⇢ ExcelFormulaBot ⇢ Brain .fm ⇢ Rewind ⇢ Futurenda ⇢ Tripnotes .ai ⇢ Write a Thank You ⇢ GymBuddy ⇢ Let’s Foodie ⇢ Style DNA ⇢ Wysa ⇢ CF Spark ⇢ Microsoft Bing ⇢ Fingerprint for Success 12. For Student ⇢ Otter ⇢ Summari ⇢ Gradescope ⇢ Knowji ⇢ Hello History 13. Character Generators ⇢ Artflow .ai ⇢ Replika ⇢ Crypko ⇢ Wonder Studio ⇢ Digital People ⇢ Digital Humans 14. Cinephiles ⇢ PlayPhrase .me ⇢ Yarn 15. Pets ⇢ This Cat Does Not Exist ⇢ Dog Scanner App",
+              "url": "https://x.com/AI_Arabic1/status/2023125160954568876",
+              "engagement": {
+                "likes": 58,
+                "reposts": 11,
+                "replies": 0,
+                "views": 4543,
+                "total": 69
+              }
+            },
+            {
+              "author": "codewithimanshu",
+              "text": "Best Tools To Earn Money with AI Don’t miss out on this, Save Now 💰✨ 1. Video Generators ⇢ Synthesia ⇢ Runway ⇢ Unscreen ⇢ Vrew ⇢ Descript ⇢ Nova ⇢ Reface ⇢ Topaz ⇢ Make-a-Video ⇢ AImages ⇢ D-ID ⇢ Pictory ⇢ Rawshorts ⇢ Munch ⇢ Fliki ⇢ Powtoon 2. Art Generators ⇢ DALL-E ⇢ Stable Diffusion ⇢ Midjourney ⇢ Picsart ⇢ The Next Rembrandt ⇢ Neural .love ⇢ This Beach Does Not Exist ⇢ Imagen ⇢ Magic Eraser ⇢ Let’s Enhance ⇢ Playground AI ⇢ DreamStudio ⇢ Deep Dream Generator ⇢ ArtBreeder ⇢ Wombo .art 3. Writing ⇢ ChatGPT ⇢ Writer ⇢ Notion AI ⇢ tldr ⇢ LyricStudio ⇢ Shortly ⇢ INK ⇢ Copy .ai ⇢ WordTune ⇢ Jasper ⇢ Frase ⇢ Sudowrite ⇢ Jenni ⇢ HyperWrite ⇢ Rytr ⇢ Describely ⇢ Phrasee ⇢ Article Forge ⇢ NeuralText ⇢ Writesonic ⇢ Scribbl ⇢ Virtual Volunteer 3. Music Generators ⇢ Jukebox ⇢ AIVA ⇢ Supertone ⇢ Boomy ⇢ Loudly 4. Face Generators ⇢ This Person Does Not Exist ⇢ Face Generator ⇢ Fake People ⇢ Face Swapper 5. Avatar Generators ⇢ Ready Player Me ⇢ Try it on ⇢ Avaturn ⇢ Inworld ⇢ RemoteFace ⇢ Microsoft Mesh Avatar ⇢ Lensa ⇢ Memoji 6. Drawing ⇢ AutoDraw ⇢ Sketch MetaDemoLab ⇢ Magic Sketchpad ⇢ Quick Draw ⇢ Craiyon 7. Audio Generators ⇢ Murf ⇢ Cleanvoice ⇢ FakeYou ⇢ TikTok ⇢ Uberduck ⇢ LALAL AI 8. Design ⇢ FontJoy ⇢ Looka ⇢ Design Beast ⇢ Jitter ⇢ Beautiful .ai ⇢ Designs .ai ⇢ Uizard ⇢ Tome 9. Biz ⇢ Namelix ⇢ Textio ⇢ Flatlogic ⇢ Weblium ⇢ Zia ⇢ Resume io ⇢ Kickresume ⇢ Timely ⇢ Landbot ⇢ Boost .ai ⇢ Yooz ⇢ RAD AI ⇢ DigitalGenius ⇢ Conversica AI ⇢ Acrolinx ⇢ MyWave ⇢ Abe ⇢ Popular .Studio ⇢ GitHub Copilot ⇢ Adcreative .ai ⇢ Cohesive ⇢ Reply ⇢ Lalaland 10. Research ⇢ Genei ⇢ Iris .ai ⇢ Semantic Scholar ⇢ Elicit ⇢ Wizdom .ai 11. Daily Basis ⇢ TimeHero ⇢ Wade ⇢ Josh ⇢ Wallet ai ⇢ ExcelFormulaBot ⇢ Brain .fm ⇢ Rewind ⇢ Futurenda ⇢ Tripnotes .ai ⇢ Write a Thank You ⇢ GymBuddy ⇢ Let’s Foodie ⇢ Style DNA ⇢ Wysa ⇢ CF Spark ⇢ Microsoft Bing ⇢ Fingerprint for Success 11. For Student ⇢ Otter ⇢ Summari ⇢ Gradescope ⇢ Knowji ⇢ Hello History 12. Character Generators ⇢ Artflow .ai ⇢ Replika ⇢ Crypko ⇢ Wonder Studio ⇢ Digital People ⇢ Digital Humans 13. Cinephiles ⇢ PlayPhrase .me ⇢ Yarn 14. Pets ⇢ This Cat Does Not Exist ⇢ Dog Scanner App Follow @codewithimanshu for more top notch Real AI Money Making Stuff !",
+              "url": "https://x.com/codewithimanshu/status/2022691698443460902",
+              "engagement": {
+                "likes": 107,
+                "reposts": 33,
+                "replies": 29,
+                "views": 6227,
+                "total": 169
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tool": "Dock",
+      "slug": "dock",
+      "x_handle": "@trydock",
+      "strategies": [
+        {
+          "id": "A",
+          "label": "@handle min_faves:3 -filter:replies",
+          "query": "@trydock min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "B",
+          "label": "@handle -from:handle min_faves:3 -filter:replies",
+          "query": "@trydock -from:trydock min_faves:3 -filter:replies",
+          "tweets_returned": 0,
+          "useful_proof_count": 0,
+          "spam_count": 0,
+          "proof_quality_score": 0,
+          "sample_tweets": []
+        },
+        {
+          "id": "C",
+          "label": "\"Tool Name\" -from:handle min_faves:3 -filter:replies",
+          "query": "\"Dock\" -from:trydock min_faves:3 -filter:replies",
+          "tweets_returned": 20,
+          "useful_proof_count": 6,
+          "spam_count": 0,
+          "proof_quality_score": 30,
+          "sample_tweets": [
+            {
+              "author": "AIStockSavvy",
+              "text": "⚡ 𝐔𝐏𝐃𝐀𝐓𝐄: $AMZN Amazon Invests €𝟏𝟎𝐁 in Europe, Unveils Next-Gen AI Warehouse Robot 👉 𝐊𝐞𝐲 𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬: ➤ Amazon announces €𝟏𝟎𝐁 ($𝟏𝟏.𝟔𝐁) investment in its European fulfillment network. ➤ Company unveils next-generation 𝐏𝐫𝐨𝐭𝐞𝐮𝐬 AI-powered warehouse robot. ➤ New Proteus responds to 𝐜𝐨𝐧𝐯𝐞𝐫𝐬𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐩𝐫𝐨𝐦𝐩𝐭𝐬 and autonomously plans tasks. ➤ Robot will expand from dock areas to full warehouse floors by 𝐇𝟏 𝟐𝟎𝟐𝟕. ➤ Amazon also showcased 𝐒𝐓𝐀𝐑𝐊 and 𝐕𝐮𝐥𝐜𝐚𝐧 robotics systems. ➤ More than 𝟐𝟓 new 𝐬𝐮𝐛-𝐬𝐚𝐦𝐞-𝐝𝐚𝐲 delivery sites planned across Europe in 2026. ➤ Alexa+ to launch in 𝟏𝟎 additional countries in 𝟐𝟎𝟐𝟕. 💬 𝐄𝐱𝐩𝐞𝐫𝐭 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭: “You tell it what needs to be done. It figures out the priority, the route, the timing,” said Scott Dresser, Vice President of Amazon Robotics. Dresser said the upgraded Proteus represents a shift in how employees interact with warehouse automation, allowing workers to communicate objectives while the robot autonomously determines execution, routing, and task prioritization.",
+              "url": "https://x.com/AIStockSavvy/status/2062480733596156173",
+              "engagement": {
+                "likes": 6,
+                "reposts": 1,
+                "replies": 1,
+                "views": 641,
+                "total": 8
+              }
+            },
+            {
+              "author": "amazon",
+              "text": "TODAY: Amazon just announced a multi-year plan to invest over €10 billion to expand and modernize its European fulfillment centers, including hiring 25,000 new employees. The investment will include the launch of a next-generation autonomous robot and the expansion of systems that collaborate alongside employees. 🤖🚀 Amazon's autonomous Proteus robot is getting a major upgrade. The original moved heavy carts around dock areas. The new version can work anywhere in our operations, and employees direct it using natural language commands. Also in the mix: Vulcan, Amazon's first robot with a sense of touch, is expanding to handle more tasks at more sites. And STARK, a new collaborative robotic tote-handling system, will be deployed to 15 sites across Europe by 2027.",
+              "url": "https://x.com/amazon/status/2062475623243698669",
+              "engagement": {
+                "likes": 14,
+                "reposts": 2,
+                "replies": 4,
+                "views": 5453,
+                "total": 20
+              }
+            },
+            {
+              "author": "Neilfever",
+              "text": "Hello Thorpe Radio and the palladium crew room upstairs! The little purple door used to be the dock door of the theatre. Sad to see this alley looking so tired, but guess there’s not much for it to be these days. https://t.co/bMLJvfS951",
+              "url": "https://x.com/Neilfever/status/2062468311137374612",
+              "engagement": {
+                "likes": 5,
+                "reposts": 0,
+                "replies": 1,
+                "views": 291,
+                "total": 6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

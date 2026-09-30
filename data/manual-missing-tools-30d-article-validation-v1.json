@@ -1,0 +1,16 @@
+{
+  "targetTools": 52,
+  "articleRecordsCreated": 133,
+  "toolsCovered": 47,
+  "coveragePercent": 90.38,
+  "missingTools": [
+    "continue-dev",
+    "kagi-assistant",
+    "arize-phoenix",
+    "llamaparse",
+    "screen-studio"
+  ],
+  "duplicateArticleUrls": 0,
+  "orphanArticleRecords": 0,
+  "emptyArticleRecords": 0
+}

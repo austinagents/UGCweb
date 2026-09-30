@@ -1,0 +1,379 @@
+source,tool,slug,searched,valid_candidate_count,stored_item_count,displayable_item_count,has_displayable_proof,best_3_urls,rejected_official_count,rejected_duplicate_count,rejected_low_intent_count,rejected_unrelated_count,notes
+youtube,Activepieces,activepieces,false,0,0,0,false,,0,0,0,0,
+github,Activepieces,activepieces,true,1,1,1,true,https://github.com/activepieces/activepieces,0,0,0,10,wipe_rebuild
+article,Activepieces,activepieces,true,3,3,3,true,https://www.linkedin.com/company/activepieces | https://www.ycombinator.com/companies/activepieces | https://www.reddit.com/r/selfhosted/comments/10pxkao/we_built_activepieces_open_source_alternative_to/,2,0,0,0,wipe_rebuild
+youtube,Adapt,adapt,false,0,0,0,false,,0,0,0,0,
+github,Adapt,adapt,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Adapt,adapt,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Adobe Firefly,adobe-firefly,false,0,0,0,false,,0,0,0,0,
+github,Adobe Firefly,adobe-firefly,true,0,0,0,false,,0,0,0,14,wipe_rebuild
+article,Adobe Firefly,adobe-firefly,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,AgentOps,agentops,false,0,0,0,false,,0,0,0,0,
+github,AgentOps,agentops,true,1,1,1,true,https://github.com/AgentOps-AI/agentops,0,0,0,14,wipe_rebuild
+article,AgentOps,agentops,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Apollo,apollo,false,0,0,0,false,,0,0,0,0,
+github,Apollo,apollo,true,2,2,2,true,https://github.com/chrislgarry/Apollo-11 | https://github.com/apolloconfig/apollo,0,0,0,13,wipe_rebuild
+article,Apollo,apollo,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Arkham,arkham,false,0,0,0,false,,0,0,0,0,
+github,Arkham,arkham,true,0,0,0,false,,0,0,0,20,wipe_rebuild
+article,Arkham,arkham,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Augment Code,augment-code,false,0,0,0,false,,0,0,0,0,
+github,Augment Code,augment-code,true,0,0,0,false,,0,0,1,16,wipe_rebuild
+article,Augment Code,augment-code,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Bolt,bolt,false,0,0,0,false,,0,0,0,0,
+github,Bolt,bolt,true,0,0,0,false,,0,0,0,13,wipe_rebuild
+article,Bolt,bolt,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Canva AI,canva-ai,false,0,0,0,false,,0,0,0,0,
+github,Canva AI,canva-ai,true,0,0,0,false,,0,0,0,19,wipe_rebuild
+article,Canva AI,canva-ai,true,4,3,3,true,https://sikhadenge.in/blog/workflow-automation-with-canva-ai-for-working-professionals | https://www.contentgrip.com/canva-ai-2-0-agentic-workflows/ | https://zapier.com/blog/canva-ai/,5,0,0,2,wipe_rebuild
+youtube,CapCut,capcut,false,0,0,0,false,,0,0,0,0,
+github,CapCut,capcut,true,3,3,3,true,https://github.com/Augani/openreel-video | https://github.com/OpenCut-app/OpenCut | https://github.com/GuanYixuan/pyJianYingDraft,0,0,0,15,wipe_rebuild
+article,CapCut,capcut,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,CatDoes,catdoes,false,0,0,0,false,,0,0,0,0,
+github,CatDoes,catdoes,true,1,1,1,true,https://github.com/Pheavypenh/catdoescode,0,0,4,5,wipe_rebuild
+article,CatDoes,catdoes,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Character.AI,character-ai,false,0,0,0,false,,0,0,0,0,
+github,Character.AI,character-ai,true,0,0,0,false,,0,0,0,28,wipe_rebuild
+article,Character.AI,character-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,ChatGPT,chatgpt,false,0,0,0,false,,0,0,0,0,
+github,ChatGPT,chatgpt,true,2,2,2,true,https://github.com/f/prompts.chat | https://github.com/rasbt/LLMs-from-scratch,0,0,0,15,wipe_rebuild
+article,ChatGPT,chatgpt,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Claude,claude,false,0,0,0,false,,0,0,0,0,
+github,Claude,claude,true,2,2,2,true,https://github.com/affaan-m/ECC | https://github.com/garrytan/gstack,0,0,1,13,wipe_rebuild
+article,Claude,claude,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Cline,cline,false,0,0,0,false,,0,0,0,0,
+github,Cline,cline,true,1,1,1,true,https://github.com/cline/cline,0,0,0,15,wipe_rebuild
+article,Cline,cline,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,CodeRabbit,coderabbit,false,0,0,0,false,,0,0,0,0,
+github,CodeRabbit,coderabbit,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,CodeRabbit,coderabbit,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Connected Papers,connected-papers,false,0,0,0,false,,0,0,0,0,
+github,Connected Papers,connected-papers,true,0,0,0,false,,0,0,0,20,wipe_rebuild
+article,Connected Papers,connected-papers,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Consensus,consensus,false,0,0,0,false,,0,0,0,0,
+github,Consensus,consensus,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Consensus,consensus,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,CrewAI,crewai,false,0,0,0,false,,0,0,0,0,
+github,CrewAI,crewai,true,1,1,1,true,https://github.com/crewAIInc/crewAI,0,0,0,11,wipe_rebuild
+article,CrewAI,crewai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Cursor,cursor,false,0,0,0,false,,0,0,0,0,
+github,Cursor,cursor,true,1,1,1,true,https://github.com/affaan-m/ECC,0,0,1,17,wipe_rebuild
+article,Cursor,cursor,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,DeepBrain AI,deepbrain-ai,false,0,0,0,false,,0,0,0,0,
+github,DeepBrain AI,deepbrain-ai,true,2,2,2,true,https://github.com/deepbrainai-research/float | https://github.com/DeepBrain-AI/docs,0,0,0,19,wipe_rebuild
+article,DeepBrain AI,deepbrain-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,DefiLlama,defillama,false,0,0,0,false,,0,0,0,0,
+github,DefiLlama,defillama,true,2,2,2,true,https://github.com/DefiLlama/chainlist | https://github.com/DefiLlama/DefiLlama-Adapters,0,0,0,21,wipe_rebuild
+article,DefiLlama,defillama,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Descript,descript,false,0,0,0,false,,0,0,0,0,
+github,Descript,descript,true,1,1,1,true,https://github.com/iDescriptor/iDescriptor,0,0,1,23,wipe_rebuild
+article,Descript,descript,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Dify,dify,false,0,0,0,false,,0,0,0,0,
+github,Dify,dify,true,1,1,1,true,https://github.com/langgenius/dify,0,0,0,15,wipe_rebuild
+article,Dify,dify,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,ElevenLabs,elevenlabs,false,0,0,0,false,,0,0,0,0,
+github,ElevenLabs,elevenlabs,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,ElevenLabs,elevenlabs,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Elicit,elicit,false,0,0,0,false,,0,0,0,0,
+github,Elicit,elicit,true,0,0,0,false,,0,0,0,16,wipe_rebuild
+article,Elicit,elicit,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Exa,exa,false,0,0,0,false,,0,0,0,0,
+github,Exa,exa,true,3,3,3,true,https://github.com/serverless/examples | https://github.com/aymericdamien/TensorFlow-Examples | https://github.com/K-Dense-AI/scientific-agent-skills,0,0,0,15,wipe_rebuild
+article,Exa,exa,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Fetcher,fetcher,false,0,0,0,false,,0,0,0,0,
+github,Fetcher,fetcher,true,0,0,0,false,,0,0,0,19,wipe_rebuild
+article,Fetcher,fetcher,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Floot,floot,false,0,0,0,false,,0,0,0,0,
+github,Floot,floot,true,1,1,1,true,https://github.com/mynulyt/Flooting-Container,0,0,4,21,wipe_rebuild
+article,Floot,floot,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Flowise,flowise,false,0,0,0,false,,0,0,0,0,
+github,Flowise,flowise,true,1,1,1,true,https://github.com/FlowiseAI/Flowise,0,0,0,12,wipe_rebuild
+article,Flowise,flowise,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Flux (Black Forest Labs),flux-black-forest-labs,false,0,0,0,false,,0,0,0,0,
+github,Flux (Black Forest Labs),flux-black-forest-labs,true,0,0,0,false,,0,0,0,20,wipe_rebuild
+article,Flux (Black Forest Labs),flux-black-forest-labs,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Framer,framer,false,0,0,0,false,,0,0,0,0,
+github,Framer,framer,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Framer,framer,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Framer AI,framer-ai,false,0,0,0,false,,0,0,0,0,
+github,Framer AI,framer-ai,true,0,0,0,false,,0,0,0,15,wipe_rebuild
+article,Framer AI,framer-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Freepik AI,freepik-ai,false,0,0,0,false,,0,0,0,0,
+github,Freepik AI,freepik-ai,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Freepik AI,freepik-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Gamma,gamma,false,0,0,0,false,,0,0,0,0,
+github,Gamma,gamma,true,0,0,0,false,,0,0,0,22,wipe_rebuild
+article,Gamma,gamma,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,GitHub Copilot,github-copilot,false,0,0,0,false,,0,0,0,0,
+github,GitHub Copilot,github-copilot,true,0,0,0,false,,0,0,0,16,wipe_rebuild
+article,GitHub Copilot,github-copilot,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Glassnode,glassnode,false,0,0,0,false,,0,0,0,0,
+github,Glassnode,glassnode,true,0,0,0,false,,0,0,0,19,wipe_rebuild
+article,Glassnode,glassnode,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Glean,glean,false,0,0,0,false,,0,0,0,0,
+github,Glean,glean,true,0,0,0,false,,0,0,0,24,wipe_rebuild
+article,Glean,glean,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Granola,granola,false,0,0,0,false,,0,0,0,0,
+github,Granola,granola,true,1,1,1,true,https://github.com/fastrepl/anarlog,0,0,0,16,wipe_rebuild
+article,Granola,granola,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Grok,grok,false,0,0,0,false,,0,0,0,0,
+github,Grok,grok,true,3,3,3,true,https://github.com/router-for-me/CLIProxyAPI | https://github.com/moeru-ai/airi | https://github.com/xai-org/grok-1,0,0,1,13,wipe_rebuild
+article,Grok,grok,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Gumloop,gumloop,false,0,0,0,false,,0,0,0,0,
+github,Gumloop,gumloop,true,1,1,1,true,https://github.com/ComposioHQ/open-gumloop,0,0,0,13,wipe_rebuild
+article,Gumloop,gumloop,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,H2O.ai,h2o-ai,false,0,0,0,false,,0,0,0,0,
+github,H2O.ai,h2o-ai,true,3,3,3,true,https://github.com/h2oai/h2o-3 | https://github.com/h2oai/h2o-llmstudio | https://github.com/h2oai/wave,0,0,1,24,wipe_rebuild
+article,H2O.ai,h2o-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Hedra,hedra,false,0,0,0,false,,0,0,0,0,
+github,Hedra,hedra,true,3,3,3,true,https://github.com/acloudcenter/livekit-hedra-weyland-curator-demo | https://github.com/Hedra-Nabil/movie_app | https://github.com/Hedra-Nabil/Coptic-Liturgy-App,0,0,0,17,wipe_rebuild
+article,Hedra,hedra,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,HeyGen,heygen,false,0,0,0,false,,0,0,0,0,
+github,HeyGen,heygen,true,1,1,1,true,https://github.com/heygen-com/hyperframes,0,0,0,15,wipe_rebuild
+article,HeyGen,heygen,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Hour One,hour-one,false,0,0,0,false,,0,0,0,0,
+github,Hour One,hour-one,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Hour One,hour-one,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,HubSpot,hubspot,false,0,0,0,false,,0,0,0,0,
+github,HubSpot,hubspot,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,HubSpot,hubspot,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Ideogram,ideogram,false,0,0,0,false,,0,0,0,0,
+github,Ideogram,ideogram,true,1,1,1,true,https://github.com/Dooy/chatgpt-web-midjourney-proxy,0,0,0,15,wipe_rebuild
+article,Ideogram,ideogram,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Inbenta,inbenta,false,0,0,0,false,,0,0,0,0,
+github,Inbenta,inbenta,true,0,0,0,false,,0,0,6,13,wipe_rebuild
+article,Inbenta,inbenta,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Instantly,instantly,false,0,0,0,false,,0,0,0,0,
+github,Instantly,instantly,true,0,0,0,false,,0,0,0,14,wipe_rebuild
+article,Instantly,instantly,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Inworld,inworld,false,0,0,0,false,,0,0,0,0,
+github,Inworld,inworld,true,1,1,1,true,https://github.com/prajwalshettydev/UnrealGenAISupport,0,0,0,16,wipe_rebuild
+article,Inworld,inworld,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Jasper,jasper,false,0,0,0,false,,0,0,0,0,
+github,Jasper,jasper,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Jasper,jasper,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Kaedim,kaedim,false,0,0,0,false,,0,0,0,0,
+github,Kaedim,kaedim,true,0,0,0,false,,0,0,0,0,"https://api.github.com/search/repositories?q=Kaedim+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=10 returned 403: {""message"":""API rate limit exceeded for user ID 283796537. If you reach out to GitHub Support for help, please include the request ID 0E46:2F004E:3FA60C:46FE6E:6A223CB6 and timestamp 2026-06-05 03:04:22 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Se"
+article,Kaedim,kaedim,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Kalshi,kalshi,false,0,0,0,false,,0,0,0,0,
+github,Kalshi,kalshi,true,2,2,2,true,https://github.com/pmxt-dev/pmxt | https://github.com/Jon-Becker/prediction-market-analysis,0,0,0,12,wipe_rebuild
+article,Kalshi,kalshi,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Kling,kling,false,0,0,0,false,,0,0,0,0,
+github,Kling,kling,true,1,1,1,true,https://github.com/Anil-matcha/Open-Generative-AI,0,0,0,16,wipe_rebuild
+article,Kling,kling,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Krea,krea,false,0,0,0,false,,0,0,0,0,
+github,Krea,krea,true,0,0,0,false,,0,0,0,0,"https://api.github.com/search/repositories?q=Krea+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=10 returned 403: {""message"":""API rate limit exceeded for user ID 283796537. If you reach out to GitHub Support for help, please include the request ID 5FAE:2C53EA:3FF1AC:4751CE:6A223CED and timestamp 2026-06-05 03:05:17 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Se"
+article,Krea,krea,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Langflow,langflow,false,0,0,0,false,,0,0,0,0,
+github,Langflow,langflow,true,2,2,2,true,https://github.com/langbot-app/LangBot | https://github.com/langflow-ai/langflow,0,0,0,13,wipe_rebuild
+article,Langflow,langflow,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Layer AI,layer-ai,false,0,0,0,false,,0,0,0,0,
+github,Layer AI,layer-ai,true,0,0,0,false,,0,0,0,16,wipe_rebuild
+article,Layer AI,layer-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Leonardo AI,leonardo-ai,false,0,0,0,false,,0,0,0,0,
+github,Leonardo AI,leonardo-ai,true,0,0,0,false,,0,0,0,0,"https://api.github.com/search/repositories?q=Leonardo+AI+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=10 returned 403: {""message"":""API rate limit exceeded for user ID 283796537. If you reach out to GitHub Support for help, please include the request ID F364:19C015:42E8AC:4A4EF1:6A223D1F and timestamp 2026-06-05 03:06:07 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Se"
+article,Leonardo AI,leonardo-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Lindy,lindy,false,0,0,0,false,,0,0,0,0,
+github,Lindy,lindy,true,0,0,0,false,,0,0,0,0,"https://api.github.com/search/repositories?q=Lindy+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=10 returned 403: {""message"":""API rate limit exceeded for user ID 283796537. If you reach out to GitHub Support for help, please include the request ID F364:19C015:42EBA8:4A5259:6A223D1F and timestamp 2026-06-05 03:06:10 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Se"
+article,Lindy,lindy,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Linear,linear,false,0,0,0,false,,0,0,0,0,
+github,Linear,linear,true,0,0,0,false,,0,0,0,0,"https://api.github.com/search/repositories?q=Linear+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=10 returned 403: {""message"":""API rate limit exceeded for user ID 283796537. If you reach out to GitHub Support for help, please include the request ID 0FFE:2C53EA:4025BD:478D0D:6A223D2D and timestamp 2026-06-05 03:06:21 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Se"
+article,Linear,linear,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Lovable,lovable,false,0,0,0,false,,0,0,0,0,
+github,Lovable,lovable,true,3,3,3,true,https://github.com/refly-ai/refly | https://github.com/eyaltoledano/claude-task-master | https://github.com/firecrawl/open-lovable,0,0,2,13,wipe_rebuild
+article,Lovable,lovable,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Ludo AI,ludo-ai,false,0,0,0,false,,0,0,0,0,
+github,Ludo AI,ludo-ai,true,0,0,0,false,,0,0,0,21,wipe_rebuild
+article,Ludo AI,ludo-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Luma,luma,false,0,0,0,false,,0,0,0,0,
+github,Luma,luma,true,0,0,0,false,,0,0,0,0,"https://api.github.com/search/repositories?q=Luma+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=10 returned 403: {""message"":""API rate limit exceeded for user ID 283796537. If you reach out to GitHub Support for help, please include the request ID 3944:2C53EA:405934:47C711:6A223D68 and timestamp 2026-06-05 03:07:20 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Se"
+article,Luma,luma,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Magnific,magnific,false,0,0,0,false,,0,0,0,0,
+github,Magnific,magnific,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Magnific,magnific,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Make,make,false,0,0,0,false,,0,0,0,0,
+github,Make,make,true,1,1,1,true,https://github.com/flutter/flutter,0,0,0,18,wipe_rebuild
+article,Make,make,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Manus,manus,false,0,0,0,false,,0,0,0,0,
+github,Manus,manus,true,0,0,0,false,,0,0,0,0,"https://api.github.com/search/repositories?q=Manus+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=10 returned 403: {""message"":""API rate limit exceeded for user ID 283796537. If you reach out to GitHub Support for help, please include the request ID 0AA0:1658BB:420FBB:49841E:6A223DA3 and timestamp 2026-06-05 03:08:19 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Se"
+article,Manus,manus,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Meshy,meshy,false,0,0,0,false,,0,0,0,0,
+github,Meshy,meshy,true,1,1,1,true,https://github.com/prajwalshettydev/UnrealGenAISupport,0,0,0,17,wipe_rebuild
+article,Meshy,meshy,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Messari,messari,false,0,0,0,false,,0,0,0,0,
+github,Messari,messari,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Messari,messari,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Midjourney,midjourney,false,0,0,0,false,,0,0,0,0,
+github,Midjourney,midjourney,true,1,1,1,true,https://github.com/Anil-matcha/Open-Generative-AI,0,0,0,25,wipe_rebuild
+article,Midjourney,midjourney,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,n8n,n8n,false,0,0,0,false,,0,0,0,0,
+github,n8n,n8n,true,2,2,2,true,https://github.com/n8n-io/n8n | https://github.com/Zie619/n8n-workflows,0,0,0,14,wipe_rebuild
+article,n8n,n8n,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Nansen,nansen,false,0,0,0,false,,0,0,0,0,
+github,Nansen,nansen,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Nansen,nansen,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,NotebookLM,notebooklm,false,0,0,0,false,,0,0,0,0,
+github,NotebookLM,notebooklm,true,2,2,2,true,https://github.com/teng-lin/notebooklm-py | https://github.com/MODSetter/SurfSense,0,0,0,18,wipe_rebuild
+article,NotebookLM,notebooklm,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Notion AI,notion-ai,false,0,0,0,false,,0,0,0,0,
+github,Notion AI,notion-ai,true,0,0,0,false,,0,0,0,15,wipe_rebuild
+article,Notion AI,notion-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,OpenArt,openart,false,0,0,0,false,,0,0,0,0,
+github,OpenArt,openart,true,0,0,0,false,,0,0,0,24,wipe_rebuild
+article,OpenArt,openart,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Option Alpha,option-alpha,false,0,0,0,false,,0,0,0,0,
+github,Option Alpha,option-alpha,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Option Alpha,option-alpha,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Perplexity,perplexity,false,0,0,0,false,,0,0,0,0,
+github,Perplexity,perplexity,true,0,0,0,false,,0,0,1,16,wipe_rebuild
+article,Perplexity,perplexity,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Photoroom,photoroom,false,0,0,0,false,,0,0,0,0,
+github,Photoroom,photoroom,true,0,0,0,false,,0,0,0,16,wipe_rebuild
+article,Photoroom,photoroom,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Pika,pika,false,0,0,0,false,,0,0,0,0,
+github,Pika,pika,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Pika,pika,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Pipedream,pipedream,false,0,0,0,false,,0,0,0,0,
+github,Pipedream,pipedream,true,1,1,1,true,https://github.com/PipedreamHQ/pipedream,0,0,0,14,wipe_rebuild
+article,Pipedream,pipedream,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,PixieBrix,pixiebrix,false,0,0,0,false,,0,0,0,0,
+github,PixieBrix,pixiebrix,true,2,2,2,true,https://github.com/pixiebrix/webext-messenger | https://github.com/pixiebrix/agent-browser-shield,0,0,1,14,wipe_rebuild
+article,PixieBrix,pixiebrix,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,PixVerse,pixverse,false,0,0,0,false,,0,0,0,0,
+github,PixVerse,pixverse,true,0,0,0,false,,0,0,0,23,wipe_rebuild
+article,PixVerse,pixverse,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Playground AI,playground-ai,false,0,0,0,false,,0,0,0,0,
+github,Playground AI,playground-ai,true,0,0,0,false,,0,0,0,15,wipe_rebuild
+article,Playground AI,playground-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Polycam,polycam,false,0,0,0,false,,0,0,0,0,
+github,Polycam,polycam,true,0,0,0,false,,0,0,0,21,wipe_rebuild
+article,Polycam,polycam,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Polymarket,polymarket,false,0,0,0,false,,0,0,0,0,
+github,Polymarket,polymarket,true,1,1,1,true,https://github.com/mvanhorn/last30days-skill,0,0,0,15,wipe_rebuild
+article,Polymarket,polymarket,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Qodo,qodo,false,0,0,0,false,,0,0,0,0,
+github,Qodo,qodo,true,2,2,2,true,https://github.com/The-PR-Agent/pr-agent | https://github.com/qodo-ai/qodo-cover,0,0,0,12,wipe_rebuild
+article,Qodo,qodo,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,QuantConnect,quantconnect,false,0,0,0,false,,0,0,0,0,
+github,QuantConnect,quantconnect,true,1,1,1,true,https://github.com/QuantConnect/Lean,0,0,0,13,wipe_rebuild
+article,QuantConnect,quantconnect,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,QuillBot,quillbot,false,0,0,0,false,,0,0,0,0,
+github,QuillBot,quillbot,true,0,0,0,false,,0,0,0,22,wipe_rebuild
+article,QuillBot,quillbot,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Ready Player Me,ready-player-me,false,0,0,0,false,,0,0,0,0,
+github,Ready Player Me,ready-player-me,true,0,0,0,false,,0,0,0,15,wipe_rebuild
+article,Ready Player Me,ready-player-me,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Recraft,recraft,false,0,0,0,false,,0,0,0,0,
+github,Recraft,recraft,true,1,1,1,true,https://github.com/bytedance/InfiniteYou,0,0,0,16,wipe_rebuild
+article,Recraft,recraft,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,remio,remio,false,0,0,0,false,,0,0,0,0,
+github,remio,remio,true,4,3,3,true,https://github.com/kasuie/remio-home | https://github.com/GeekMai90/remio-mcp | https://github.com/nitrometbis/remio,0,0,2,16,wipe_rebuild
+article,remio,remio,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,remove.bg,remove-bg,false,0,0,0,false,,0,0,0,0,
+github,remove.bg,remove-bg,true,0,0,0,false,,0,0,0,24,wipe_rebuild
+article,remove.bg,remove-bg,true,0,0,0,false,,4,0,0,1,wipe_rebuild
+youtube,Replit,replit,false,0,0,0,false,,0,0,0,0,
+github,Replit,replit,true,1,1,1,true,https://github.com/dyad-sh/dyad,0,0,1,21,wipe_rebuild
+article,Replit,replit,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Research Rabbit,research-rabbit,false,0,0,0,false,,0,0,0,0,
+github,Research Rabbit,research-rabbit,true,0,0,0,false,,0,0,0,23,wipe_rebuild
+article,Research Rabbit,research-rabbit,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Rocket,rocket,false,0,0,0,false,,0,0,0,0,
+github,Rocket,rocket,true,1,1,1,true,https://github.com/RocketChat/Rocket.Chat,0,0,0,20,wipe_rebuild
+article,Rocket,rocket,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Rosebud AI,rosebud-ai,false,0,0,0,false,,0,0,0,0,
+github,Rosebud AI,rosebud-ai,true,0,0,0,false,,0,0,0,12,wipe_rebuild
+article,Rosebud AI,rosebud-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Rows,rows,false,0,0,0,false,,0,0,0,0,
+github,Rows,rows,true,0,0,0,false,,0,0,0,16,wipe_rebuild
+article,Rows,rows,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Runway,runway,false,0,0,0,false,,0,0,0,0,
+github,Runway,runway,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Runway,runway,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Santiment,santiment,false,0,0,0,false,,0,0,0,0,
+github,Santiment,santiment,true,2,2,2,true,https://github.com/santiment/sanpy | https://github.com/santiment/san-sdk,0,0,0,18,wipe_rebuild
+article,Santiment,santiment,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Saveto AI,saveto-ai,false,0,0,0,false,,0,0,0,0,
+github,Saveto AI,saveto-ai,true,0,0,0,false,,0,0,0,19,wipe_rebuild
+article,Saveto AI,saveto-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Scenario,scenario,false,0,0,0,false,,0,0,0,0,
+github,Scenario,scenario,true,0,0,0,false,,0,0,0,21,wipe_rebuild
+article,Scenario,scenario,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Scite,scite,false,0,0,0,false,,0,0,0,0,
+github,Scite,scite,true,0,0,0,false,,0,0,4,14,wipe_rebuild
+article,Scite,scite,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Semantic Scholar,semantic-scholar,false,0,0,0,false,,0,0,0,0,
+github,Semantic Scholar,semantic-scholar,true,0,0,0,false,,0,0,0,16,wipe_rebuild
+article,Semantic Scholar,semantic-scholar,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Slack,slack,false,0,0,0,false,,0,0,0,0,
+github,Slack,slack,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Slack,slack,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Sourcegraph,sourcegraph,false,0,0,0,false,,0,0,0,0,
+github,Sourcegraph,sourcegraph,true,0,0,0,false,,0,0,0,21,wipe_rebuild
+article,Sourcegraph,sourcegraph,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Spline,spline,false,0,0,0,false,,0,0,0,0,
+github,Spline,spline,true,0,0,0,false,,0,0,0,19,wipe_rebuild
+article,Spline,spline,true,5,3,3,true,https://en.wikipedia.org/wiki/Spline_(mathematics) | https://www.merriam-webster.com/dictionary/spline | https://www.dictionary.com/browse/spline,0,0,0,0,wipe_rebuild
+youtube,Stockimg AI,stockimg-ai,false,0,0,0,false,,0,0,0,0,
+github,Stockimg AI,stockimg-ai,true,0,0,0,false,,0,0,0,18,wipe_rebuild
+article,Stockimg AI,stockimg-ai,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Subquadratic,subquadratic,false,0,0,0,false,,0,0,0,0,
+github,Subquadratic,subquadratic,true,0,0,0,false,,0,0,0,27,wipe_rebuild
+article,Subquadratic,subquadratic,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Suno,suno,false,0,0,0,false,,0,0,0,0,
+github,Suno,suno,true,1,1,1,true,https://github.com/suno-ai/bark,0,0,0,22,wipe_rebuild
+article,Suno,suno,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Synthesia,synthesia,false,0,0,0,false,,0,0,0,0,
+github,Synthesia,synthesia,true,1,1,1,true,https://github.com/PolyMeilex/Neothesia,0,0,0,18,wipe_rebuild
+article,Synthesia,synthesia,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Tabnine,tabnine,false,0,0,0,false,,0,0,0,0,
+github,Tabnine,tabnine,true,0,0,0,false,,0,0,1,17,wipe_rebuild
+article,Tabnine,tabnine,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Tavus,tavus,false,0,0,0,false,,0,0,0,0,
+github,Tavus,tavus,true,0,0,0,false,,0,0,0,19,wipe_rebuild
+article,Tavus,tavus,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Tendem,tendem,false,0,0,0,false,,0,0,0,0,
+github,Tendem,tendem,true,1,1,1,true,https://github.com/Toloka/tendem-mcp,0,0,0,29,wipe_rebuild
+article,Tendem,tendem,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,TradingView,tradingview,false,0,0,0,false,,0,0,0,0,
+github,TradingView,tradingview,true,2,2,2,true,https://github.com/tradingview/lightweight-charts | https://github.com/Drakkar-Software/OctoBot,0,0,0,17,wipe_rebuild
+article,TradingView,tradingview,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,TrendSpider,trendspider,false,0,0,0,false,,0,0,0,0,
+github,TrendSpider,trendspider,true,1,1,1,true,https://github.com/bondjames12/trend-spider-indicators,0,0,2,19,wipe_rebuild
+article,TrendSpider,trendspider,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Tripo,tripo,false,0,0,0,false,,0,0,0,0,
+github,Tripo,tripo,true,6,3,3,true,https://github.com/VAST-AI-Research/TripoSR | https://github.com/prajwalshettydev/UnrealGenAISupport | https://github.com/VAST-AI-Research/tripo-python-sdk,0,0,0,15,wipe_rebuild
+article,Tripo,tripo,true,0,0,0,false,,0,0,0,0,fetch failed
+youtube,Typefully,typefully,false,0,0,0,false,,0,0,0,0,
+github,Typefully,typefully,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Typefully,typefully,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Udio,udio,false,0,0,0,false,,0,0,0,0,
+github,Udio,udio,true,1,1,1,true,https://github.com/Dooy/chatgpt-web-midjourney-proxy,0,0,0,13,wipe_rebuild
+article,Udio,udio,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,v0,v0,false,0,0,0,false,,0,0,0,0,
+github,v0,v0,true,0,0,0,false,,0,0,1,20,wipe_rebuild
+article,v0,v0,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Veed,veed,false,0,0,0,false,,0,0,0,0,
+github,Veed,veed,true,1,1,1,true,https://github.com/vargHQ/sdk,0,0,0,19,wipe_rebuild
+article,Veed,veed,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Vercel,vercel,false,0,0,0,false,,0,0,0,0,
+github,Vercel,vercel,true,1,1,1,true,https://github.com/vercel/next.js,0,0,0,18,wipe_rebuild
+article,Vercel,vercel,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Veriff,veriff,false,0,0,0,false,,0,0,0,0,
+github,Veriff,veriff,true,4,3,3,true,https://github.com/Veriff/veriff-js-sdk | https://github.com/Veriff/js-integration-demo | https://github.com/CertiRocq/VeriFFI,0,0,3,14,wipe_rebuild
+article,Veriff,veriff,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Vidu,vidu,false,0,0,0,false,,0,0,0,0,
+github,Vidu,vidu,true,1,1,1,true,https://github.com/profilecity/vidur,0,0,0,24,wipe_rebuild
+article,Vidu,vidu,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,VoxDeck,voxdeck,false,0,0,0,false,,0,0,0,0,
+github,VoxDeck,voxdeck,true,2,2,2,true,https://github.com/Wendxy/VoxDeckUI | https://github.com/jaixbhatia/VoxDeck,0,0,0,6,wipe_rebuild
+article,VoxDeck,voxdeck,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Windsurf,windsurf,false,0,0,0,false,,0,0,0,0,
+github,Windsurf,windsurf,true,0,0,0,false,,0,0,1,19,wipe_rebuild
+article,Windsurf,windsurf,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Workato,workato,false,0,0,0,false,,0,0,0,0,
+github,Workato,workato,true,0,0,0,false,,0,0,0,17,wipe_rebuild
+article,Workato,workato,true,0,0,0,false,,0,0,0,0,wipe_rebuild
+youtube,Zapier,zapier,false,0,0,0,false,,0,0,0,0,
+github,Zapier,zapier,true,0,0,0,false,,0,0,0,16,wipe_rebuild
+article,Zapier,zapier,true,0,0,0,false,,0,0,0,0,wipe_rebuild

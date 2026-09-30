@@ -1,0 +1,9 @@
+metric,value
+x_proof_items_checked,735
+x_proof_items_already_had_avatar,733
+x_proof_items_missing_avatar_before,2
+x_proof_items_enriched,2
+x_proof_items_fallback,0
+unique_authors_checked,2
+dry_run,false
+author_lookup_errors,0

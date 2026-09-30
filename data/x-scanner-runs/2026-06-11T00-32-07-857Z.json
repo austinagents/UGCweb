@@ -1,0 +1,26 @@
+{
+  "run_timestamp": "2026-06-11T00:32:07.857Z",
+  "provider": "public_x_pages_playwright",
+  "collection_mechanism": "playwright_chromium_rendered_dom",
+  "metadata": {
+    "tools_available_with_official_handles": 268,
+    "tools_scanned": 0,
+    "pages_visited": 0,
+    "events_inserted": 0,
+    "errors": 0,
+    "default_limit": 20,
+    "all": false,
+    "headless": true,
+    "recent_post_limit": 10,
+    "mention_limit": 20
+  },
+  "outputs": {
+    "run": "data/x-scanner-runs/2026-06-11T00-32-07-857Z.json",
+    "account_snapshots": "data/x-account-snapshots.json",
+    "tool_events": "data/x-tool-events.json",
+    "summary_csv": "data/x-scanner-summary.csv"
+  },
+  "tools_scanned": [],
+  "raw_pages": [],
+  "errors": []
+}

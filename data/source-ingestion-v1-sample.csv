@@ -1,0 +1,909 @@
+tool_name,source_type,source_url,title,creator,published_at,confidence
+ChatGPT,github,https://github.com/sindresorhus/awesome,sindresorhus/awesome,sindresorhus,2014-07-11T13:42:37Z,85
+ChatGPT,github,https://github.com/openclaw/openclaw,openclaw/openclaw,openclaw,2025-11-24T10:16:47Z,85
+ChatGPT,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+ChatGPT,github,https://github.com/avelino/awesome-go,avelino/awesome-go,avelino,2014-07-06T13:42:15Z,85
+ChatGPT,github,https://github.com/ollama/ollama,ollama/ollama,ollama,2023-06-26T19:39:32Z,85
+ChatGPT,youtube,https://www.youtube.com/watch?v=zJL9K3xscRo,ChatGPT Tutorial 2025 for Seniors and Beginners Learning AI,Smart Tech For Any Age,2025-08-24T13:01:56Z,85
+ChatGPT,youtube,https://www.youtube.com/watch?v=Gaf_jCnA6mc,ChatGPT Tutorial: How to Use Chat GPT For Beginners,Charlie Chang,2023-04-04T18:09:53Z,85
+ChatGPT,youtube,https://www.youtube.com/watch?v=7zPQV1BSH_k,23 Ways to Use ChatGPT So Well it Feels Like Cheating,Dan Martell,2025-10-17T16:00:15Z,85
+ChatGPT,youtube,https://www.youtube.com/watch?v=hptchvNnsoI,"ChatGPT, Show Me Rice",teddywang86,2025-05-28T03:03:33Z,85
+ChatGPT,youtube,https://www.youtube.com/watch?v=lQQu5_uE5uU,How to Use ChatGPT 5.5 Better Than 99% of People,Parker Prompts,2026-05-21T13:18:51Z,85
+ChatGPT,rss,https://openai.com/index/mufg,MUFG aims to become AI-native with OpenAI,OpenAI Blog,"Thu, 28 May 2026 00:00:00 GMT",75
+ChatGPT,rss,https://openai.com/index/grupo-folha-grupo-uol-partnership,"OpenAI, Grupo Folha and Grupo UOL announce strategic content partnership",OpenAI Blog,"Mon, 25 May 2026 00:00:00 GMT",75
+ChatGPT,rss,https://openai.com/index/adventhealth,AdventHealth advances whole-person care with OpenAI,OpenAI Blog,"Thu, 21 May 2026 12:00:00 GMT",75
+ChatGPT,rss,https://openai.com/index/malta-chatgpt-plus-partnership,OpenAI and Malta partner to bring ChatGPT Plus to all citizens,OpenAI Blog,"Sat, 16 May 2026 00:00:00 GMT",75
+ChatGPT,rss,https://openai.com/index/personal-finance-chatgpt,A new personal finance experience in ChatGPT,OpenAI Blog,"Fri, 15 May 2026 00:00:00 GMT",75
+ChatGPT,hackernews,https://www.engraved.blog/building-a-virtual-machine-inside/,Building a Virtual Machine Inside ChatGPT,317070,2022-12-03T21:19:45Z,70
+ChatGPT,hackernews,https://openai.com/blog/chatgpt-plugins,ChatGPT Plugins,bryanh,2023-03-23T16:57:28Z,70
+ChatGPT,hackernews,https://github.com/karpathy/nanochat,NanoChat – The best ChatGPT that $100 can buy,huseyinkeles,2025-10-13T15:22:47Z,70
+ChatGPT,hackernews,https://openai.com/index/introducing-chatgpt-search/,ChatGPT Search,thm,2024-10-31T16:41:22Z,70
+ChatGPT,hackernews,https://openai.com/blog/introducing-chatgpt-and-whisper-apis,Introducing ChatGPT and Whisper APIs,minimaxir,2023-03-01T18:01:48Z,70
+Claude,github,https://github.com/sindresorhus/awesome,sindresorhus/awesome,sindresorhus,2014-07-11T13:42:37Z,85
+Claude,github,https://github.com/nilbuild/developer-roadmap,nilbuild/developer-roadmap,nilbuild,2017-03-15T13:45:52Z,85
+Claude,github,https://github.com/jwasham/coding-interview-university,jwasham/coding-interview-university,jwasham,2016-06-06T02:34:12Z,85
+Claude,github,https://github.com/vinta/awesome-python,vinta/awesome-python,vinta,2014-06-27T21:00:06Z,85
+Claude,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Claude,youtube,https://www.youtube.com/watch?v=wZeOwqmSw84,Learn 97% of Claude in Under 16 Minutes,Dan Martell,2026-05-21T13:01:30Z,85
+Claude,youtube,https://www.youtube.com/watch?v=WSPChlfxJyA,Full Claude Tutorial: Beginner to Advanced in 19 Minutes,Futurepedia,2026-04-08T13:53:01Z,85
+Claude,youtube,https://www.youtube.com/watch?v=r2vYObllqJU,Claude AI Tutorial for Beginners (Step-by-Step),Kevin Stratvert,2026-04-30T07:00:55Z,85
+Claude,youtube,https://www.youtube.com/watch?v=j-oiGiIEcws,Claude Opus 4.8 actually blew my mind...,Alex Finn,2026-05-28T18:41:13Z,85
+Claude,youtube,https://www.youtube.com/watch?v=Uc18mso08Ro,I Accidentally Turned Claude Into a Hacker...,NetworkChuck,2025-09-26T17:49:35Z,85
+Claude,rss,https://vercel.com/changelog/run-claude-managed-agents-with-vercel-sandbox,Run Claude Managed Agents with Vercel Sandbox,Vercel Blog,2026-05-18T23:01:00.000Z,75
+Claude,rss,https://vercel.com/changelog/opus-4.7-on-ai-gateway,Claude Opus 4.7 on AI Gateway,Vercel Blog,2026-04-16T07:00:00.000Z,75
+Claude,rss,https://vercel.com/changelog/claude-sonnet-4-6-is-live-on-ai-gateway,Claude Sonnet 4.6 is live on AI Gateway,Vercel Blog,2026-02-17T13:00:00.000Z,75
+Claude,rss,https://vercel.com/changelog/claude-opus-4.6-on-ai-gateway,Use Claude Opus 4.6 on AI Gateway,Vercel Blog,2026-02-05T13:00:00.000Z,75
+Claude,rss,https://vercel.com/changelog/claude-code-max-via-ai-gateway-available-now-for-claude-code,"Claude Code Max via AI Gateway, available now for Claude Code",Vercel Blog,2026-01-26T13:00:00.000Z,75
+Claude,hackernews,https://www.anthropic.com/news/claude-opus-4-6,Claude Opus 4.6,HellsMaddy,2026-02-05T17:38:53Z,70
+Claude,hackernews,https://www.anthropic.com/news/claude-3-7-sonnet,Claude 3.7 Sonnet and Claude Code,bakugo,2025-02-24T18:28:59Z,70
+Claude,x_proof,https://twitter.com/Fried_rice/status/2038894956459290963,Claude Code's source code has been leaked via a map file in their NPM registry,treexs,2026-03-31T09:00:40Z,95
+Claude,hackernews,https://www.anthropic.com/news/claude-4,Claude 4,meetpateltech,2025-05-22T16:34:42Z,70
+Claude,hackernews,https://www.anthropic.com/news/claude-opus-4-7,Claude Opus 4.7,meetpateltech,2026-04-16T14:23:50Z,70
+Perplexity,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Perplexity,github,https://github.com/ollama/ollama,ollama/ollama,ollama,2023-06-26T19:39:32Z,85
+Perplexity,github,https://github.com/open-webui/open-webui,open-webui/open-webui,open-webui,2023-10-06T22:08:27Z,85
+Perplexity,github,https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol,2025-03-05T16:38:29Z,85
+Perplexity,github,https://github.com/ggml-org/llama.cpp,ggml-org/llama.cpp,ggml-org,2023-03-10T18:58:00Z,85
+Perplexity,youtube,https://www.youtube.com/watch?v=ByNmf_y_Hrs,"Perplexity Is &#39;Chip Agnostic,&#39; Says CEO",Bloomberg Technology,2026-06-02T19:19:05Z,85
+Perplexity,youtube,https://www.youtube.com/watch?v=O8D19RRqVos,Perplexity CEO: AI spending will become more efficient very soon,CNBC Television,2026-05-29T20:50:25Z,85
+Perplexity,youtube,https://www.youtube.com/watch?v=YoWdogtZRw8,Learn 80% of Perplexity in under 10 minutes!,Jeff Su,2024-09-17T13:00:39Z,85
+Perplexity,youtube,https://www.youtube.com/watch?v=EHpAQwXmseQ,Perplexity Computer for Beginners: Everything You Need to Know,Teacher's Tech,2026-03-04T12:00:32Z,85
+Perplexity,youtube,https://www.youtube.com/watch?v=Z5EjbBPri-c,Everything Perplexity In 34 Minutes,Tina Huang,2025-09-09T18:15:04Z,85
+Perplexity,rss,https://vercel.com/blog/use-perplexity-web-search-with-vercel-ai-gateway,Use Perplexity Web Search with Vercel AI Gateway,Vercel Blog,2026-01-14T13:00:00.000Z,75
+Perplexity,rss,https://vercel.com/changelog/access-perplexity-web-search-on-vercel-ai-gateway-with-any-model,Access Perplexity Web Search on Vercel AI Gateway with any model,Vercel Blog,2026-01-14T13:00:00.000Z,75
+Perplexity,hackernews,https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/,"Perplexity is using stealth, undeclared crawlers to evade no-crawl directives",rrampage,2025-08-04T13:39:30Z,70
+Perplexity,hackernews,https://github.com/nilsherzig/LLocalSearch,Show HN: I've built a locally running Perplexity clone,nilsherzig,2024-04-03T21:27:46Z,70
+Perplexity,hackernews,https://rknight.me/blog/perplexity-ai-is-lying-about-its-user-agent/,Perplexity AI is lying about their user agent,cdme,2024-06-15T16:48:13Z,70
+Perplexity,hackernews,https://github.com/ItzCrazyKns/Perplexica,Perplexica: Open-source Perplexity alternative,sean_pedersen,2024-05-24T02:49:44Z,70
+Perplexity,hackernews,https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research,Perplexity Deep Research,vinni2,2025-02-15T20:07:39Z,70
+Cursor,github,https://github.com/jwasham/coding-interview-university,jwasham/coding-interview-university,jwasham,2016-06-06T02:34:12Z,85
+Cursor,github,https://github.com/vinta/awesome-python,vinta/awesome-python,vinta,2014-06-27T21:00:06Z,85
+Cursor,github,https://github.com/obra/superpowers,obra/superpowers,obra,2025-10-09T19:45:18Z,85
+Cursor,github,https://github.com/affaan-m/ECC,affaan-m/ECC,affaan-m,2026-01-18T00:51:51Z,85
+Cursor,github,https://github.com/ohmyzsh/ohmyzsh,ohmyzsh/ohmyzsh,ohmyzsh,2009-08-28T18:15:37Z,85
+Cursor,youtube,https://www.youtube.com/watch?v=undefined,Cursor,Cursor,2024-02-28T06:13:35Z,85
+Cursor,youtube,https://www.youtube.com/watch?v=XOCVdPIhAHg,Cursor just crushed Claude Code,Tech With Tim,2026-06-02T11:58:44Z,85
+Cursor,youtube,https://www.youtube.com/watch?v=UxbULt_hCdA,Introducing Cursor 3,Cursor,2026-04-02T18:26:03Z,85
+Cursor,youtube,https://www.youtube.com/watch?v=ocMOZpuAMw4,Cursor Tutorial for Beginners (AI Code Editor),Tech With Tim,2024-10-17T14:00:53Z,85
+Cursor,youtube,https://www.youtube.com/watch?v=JSuS-zXMVwE,"Cursor ditches VS Code, but not everyone is happy...",Fireship,2026-04-06T18:37:57Z,85
+Cursor,rss,https://openai.com/index/gpt-5-cursor,How Cursor uses GPT-5,OpenAI Blog,"Thu, 07 Aug 2025 00:00:00 GMT",75
+Cursor,rss,https://vercel.com/changelog/cursor-now-supported-on-vercel-mcp,Cursor now supported on Vercel MCP,Vercel Blog,2025-08-09T13:00:00.000Z,75
+Cursor,rss,https://vercel.com/changelog/claude-code-and-cursor-agent-no-longer-require-a-team-seat,Claude Code and Cursor Agent no longer require a team seat,Vercel Blog,2025-06-06T13:00:00.000Z,75
+Cursor,hackernews,https://old.reddit.com/r/cursor/comments/1jyy5am/psa_cursor_now_restricts_logins_to_a_single/,"Cursor IDE support hallucinates lockout policy, causes user cancellations",scaredpelican,2025-04-14T16:24:28Z,70
+Cursor,hackernews,https://neal.fun/cursor-camp/,Cursor Camp,bpierre,2026-04-29T15:39:43Z,70
+Cursor,hackernews,https://retrocomputing.stackexchange.com/questions/11533/why-did-moving-the-mouse-cursor-cause-windows-95-to-run-more-quickly,Why did moving the mouse cursor cause Windows 95 to run more quickly?,folli,2019-07-03T12:35:54Z,70
+Cursor,hackernews,https://gist.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28,"We pwned X, Vercel, Cursor, and Discord through a supply-chain attack",hackermondev,2025-12-18T19:08:48Z,70
+Cursor,hackernews,http://cursors.io,Cursors,alloyed,2014-10-19T03:22:25Z,70
+Windsurf,github,https://github.com/f/prompts.chat,f/prompts.chat,f,2022-12-05T13:54:13Z,85
+Windsurf,github,https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol,2025-03-05T16:38:29Z,85
+Windsurf,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Windsurf,github,https://github.com/msitarzewski/agency-agents,msitarzewski/agency-agents,msitarzewski,2025-10-13T12:12:29Z,85
+Windsurf,github,https://github.com/jaywcjlove/awesome-mac,jaywcjlove/awesome-mac,jaywcjlove,2016-07-17T15:33:47Z,85
+Windsurf,youtube,https://www.youtube.com/watch?v=vCcaBzFGIQ4,Girls Windsurf TOO,WatersportsNomad,2023-03-09T15:00:41Z,85
+Windsurf,youtube,https://www.youtube.com/watch?v=8TcWGk1DJVs,Windsurf Tutorial for Beginners (AI Code Editor) - Better than Cursor??,Tech With Tim,2025-02-01T14:29:16Z,85
+Windsurf,youtube,https://www.youtube.com/watch?v=w3Pus5R6Cvs,Why I am Quitting Windsurf AI. (The New Pricing is trash),Tech By Samkul,2026-04-09T18:13:47Z,85
+Windsurf,youtube,https://www.youtube.com/watch?v=K8Q8pnrKOPo,How to get 6000 tokens per second for basically FREE using Windsurf,Terp Tech,2026-04-23T22:47:22Z,85
+Windsurf,youtube,https://www.youtube.com/watch?v=PCyw5nRVzYw,Full Windsurf AI Tutorial w/ Claude Desktop,CodingMenace,2025-05-29T19:00:31Z,85
+Windsurf,rss,https://vercel.com/changelog/devin-raycast-windsurf-and-goose-now-supported-on-vercel-mcp,"Devin, Raycast, Windsurf, and Goose now supported on Vercel MCP",Vercel Blog,2025-08-25T13:00:00.000Z,75
+Windsurf,hackernews,https://www.theverge.com/openai/705999/google-windsurf-ceo-openai,"OpenAI’s Windsurf deal is off, and Windsurf’s CEO is going to Google",rcchen,2025-07-11T21:35:31Z,70
+Windsurf,x_proof,https://twitter.com/premqnair/status/1948420769945682413,Windsurf employee #2: I was given a payout of only 1% what my shares where worth,rfurmani,2025-07-24T17:15:41Z,95
+Windsurf,hackernews,https://www.bloomberg.com/news/articles/2025-05-06/openai-reaches-agreement-to-buy-startup-windsurf-for-3-billion,OpenAI reaches agreement to buy Windsurf for $3B,swyx,2025-05-06T00:57:48Z,70
+Windsurf,hackernews,https://cognition.ai/blog/windsurf,Cognition (Devin AI) to Acquire Windsurf,alazsengul,2025-07-14T18:07:15Z,70
+Windsurf,hackernews,https://news.ycombinator.com/item?id=43959710,Ask HN: Cursor or Windsurf?,skarat,2025-05-12T04:41:50Z,70
+Lovable,github,https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol,2025-03-05T16:38:29Z,85
+Lovable,github,https://github.com/firecrawl/firecrawl,firecrawl/firecrawl,firecrawl,2024-04-15T21:02:29Z,85
+Lovable,github,https://github.com/VoltAgent/awesome-design-md,VoltAgent/awesome-design-md,VoltAgent,2026-03-31T16:37:01Z,85
+Lovable,github,https://github.com/ComposioHQ/awesome-claude-skills,ComposioHQ/awesome-claude-skills,ComposioHQ,2025-10-17T07:15:01Z,85
+Lovable,github,https://github.com/nexu-io/open-design,nexu-io/open-design,nexu-io,2026-04-28T04:25:20Z,85
+Lovable,youtube,https://www.youtube.com/watch?v=UtVMsvu4JfU,Lovable AI Website Builder Full Tutorial for Beginners,Mikey Website,2026-05-30T14:15:29Z,85
+Lovable,youtube,https://www.youtube.com/watch?v=rqvtLxwMklo,Master Lovable In 24 Minutes,Lovable,2025-12-29T15:01:44Z,85
+Lovable,youtube,https://www.youtube.com/watch?v=mOak_imYmqU,Master Lovable AI in 20 Minutes (NEW 2.0 UPDATE),Darrel Wilson,2025-07-28T16:14:34Z,85
+Lovable,youtube,https://www.youtube.com/watch?v=Ro9HytrIPJs,STOP Paying $25 a Month for Lovable (Use THIS Instead),Robin Ebers,2025-10-27T16:19:15Z,85
+Lovable,youtube,https://www.youtube.com/watch?v=kVGCc0eSxhc,Why I Switched From Lovable To Base44 (you should too),Mikey No Code,2026-05-15T14:15:04Z,85
+Lovable,hackernews,https://home.omg.lol,Omg.lol – A lovable web page and email address,cdme,2023-01-06T01:32:55Z,70
+Lovable,hackernews,https://github.com/mendableai/open-lovable,Open Lovable,iamflimflam1,2025-08-10T10:10:54Z,70
+Lovable,hackernews,https://userpilot.com/blog/build-minimum-lovable-mlp-product/,How to Build a Minimum Lovable Product,dundalk03,2022-03-25T05:57:13Z,70
+Lovable,hackernews,https://getlago.substack.com/p/lovable-makes-60m-in-6-monthsbut,Is Lovable getting monetization wrong?,FinnLobsien,2025-06-25T14:05:13Z,70
+Lovable,hackernews,https://www.theregister.com/2026/02/27/lovable_app_vulnerabilities/,Vibe coded Lovable-hosted app littered with basic flaws exposed 18K users,nottorp,2026-02-27T16:48:02Z,70
+Replit,github,https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol,2025-03-05T16:38:29Z,85
+Replit,github,https://github.com/excalidraw/excalidraw,excalidraw/excalidraw,excalidraw,2020-01-02T01:04:43Z,85
+Replit,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Replit,github,https://github.com/louislam/uptime-kuma,louislam/uptime-kuma,louislam,2021-07-03T01:02:42Z,85
+Replit,github,https://github.com/fighting41love/funNLP,fighting41love/funNLP,fighting41love,2018-08-21T11:20:39Z,85
+Replit,youtube,https://www.youtube.com/watch?v=undefined,Replit,Replit,2019-12-09T20:13:58Z,85
+Replit,youtube,https://www.youtube.com/watch?v=AFSFRRtm1Zw,Using Parallel Agents to Move Faster in Replit,Replit,2026-06-02T19:44:09Z,85
+Replit,youtube,https://www.youtube.com/watch?v=SwT4eg0nC3k,CEO Amjad Masad on How Replit Is Changing Who Gets to Build Software | StrictlyVC,TechCrunch,2026-05-01T20:15:00Z,85
+Replit,youtube,https://www.youtube.com/watch?v=_1e8Ww7I9kc,I Ran Codex on Replit — with a $80 Phone!,TechWithBenam,2025-05-20T13:09:39Z,85
+Replit,youtube,https://www.youtube.com/watch?v=kgxFl5zmmWU,Here&#39;s everything you need to know about Replit in 60 seconds ⭐️,Replit,2026-05-29T18:01:57Z,85
+Replit,hackernews,https://intuitiveexplanations.com/tech/replit/,Replit used legal threats to kill my open-source project,raxod502,2021-06-07T16:08:04Z,70
+Replit,hackernews,https://www.latent.space/p/reza-shabani#details,"Replit's new Code LLM: Open Source, 77% smaller than Codex, trained in 1 week",swyx,2023-05-03T15:19:20Z,70
+Replit,hackernews,https://blog.replit.com/mobile-app,Replit Mobile App,todsacerdoti,2022-10-19T15:14:43Z,70
+Replit,hackernews,https://intuitiveexplanations.com/tech/replit/#how-did-replit-respond-to-this-blog-post,How did Replit respond to this blog post?,mindB,2021-06-08T16:52:37Z,70
+Replit,hackernews,https://sfstandard.com/2026/01/07/called-terrorist-sympathizer-now-ai-company-valued-3b/,Replit founder Amjad Masad isn’t afraid of Silicon Valley,newusertoday,2026-01-08T18:05:02Z,70
+Runway,github,https://github.com/VoltAgent/awesome-design-md,VoltAgent/awesome-design-md,VoltAgent,2026-03-31T16:37:01Z,85
+Runway,github,https://github.com/fighting41love/funNLP,fighting41love/funNLP,fighting41love,2018-08-21T11:20:39Z,85
+Runway,github,https://github.com/CompVis/stable-diffusion,CompVis/stable-diffusion,CompVis,2022-08-10T14:36:44Z,85
+Runway,github,https://github.com/vsouza/awesome-ios,vsouza/awesome-ios,vsouza,2014-07-10T16:03:45Z,85
+Runway,github,https://github.com/1c7/chinese-independent-developer,1c7/chinese-independent-developer,1c7,2017-09-21T11:08:23Z,85
+Runway,youtube,https://www.youtube.com/watch?v=XXIX2WnfbpE,"Lady Gaga, Doechii - RUNWAY (Official Music Video)",LadyGagaVEVO,2026-04-27T19:00:23Z,85
+Runway,youtube,https://www.youtube.com/watch?v=uZfaqlnmi_g,RUNWAY,Lady Gaga - Topic,2026-04-10T22:27:27Z,85
+Runway,youtube,https://www.youtube.com/watch?v=eFPqILRfnjw,Seedance 2.0: Cheapest Ways to Access After Runway Cancelled Unlimited!,JSFILMZ,2026-06-02T08:51:24Z,85
+Runway,youtube,https://www.youtube.com/watch?v=Ll6kYJPLNxg,"Lady Gaga, Doechii - RUNWAY (Official Audio)",Interscope Records,2026-04-10T00:18:58Z,85
+Runway,youtube,https://www.youtube.com/watch?v=dCP1M32a5Dc,Carrying 50 lbs but making it look effortless💀 #supermodel #victoriasecret #shorts #runway,Nihad,2026-06-01T18:08:48Z,85
+Runway,rss,https://vercel.com/blog/runway-enables-next-generation-content-creation-with-ai-and-vercel,Runway enables next-generation content creation with AI and Vercel,Vercel Blog,2023-02-10T13:00:00.000Z,75
+Runway,hackernews,https://practical.engineering/blog/2026/1/20/the-hidden-engineering-of-runways,The hidden engineering of runways,crescit_eundo,2026-01-20T16:52:52Z,70
+Runway,hackernews,https://runwayml.com/,Runway – Create impossible video,smusamashah,2021-07-07T22:49:53Z,70
+Runway,hackernews,https://www.theguardian.com/us-news/2026/mar/24/laguardia-airplane-pilots-safety-concerns-crash,LaGuardia pilots raised safety alarms months before deadly runway crash,m_fayer,2026-03-24T15:19:19Z,70
+Runway,hackernews,http://www.themacro.com/articles/2016/01/advice-startups-running-out-of-money/,Advice for companies with less than 1 year of runway,loyalelectron,2016-01-22T20:26:27Z,70
+Runway,hackernews,https://www.dailytelegraph.com.au/news/world/runway-melts-at-london-luton-airport-has-temperatures-in-uk-near-40c/news-story/d7266194145cda7949f2af1c243e9065,Runway melts at London Luton airport as temperatures in UK near 40°C,russfink,2022-07-19T14:20:04Z,70
+Kling,github,https://github.com/punkpeye/awesome-mcp-servers,punkpeye/awesome-mcp-servers,punkpeye,2024-11-30T04:49:10Z,85
+Kling,github,https://github.com/nexu-io/open-design,nexu-io/open-design,nexu-io,2026-04-28T04:25:20Z,85
+Kling,github,https://github.com/1c7/chinese-independent-developer,1c7/chinese-independent-developer,1c7,2017-09-21T11:08:23Z,85
+Kling,github,https://github.com/SerenityOS/serenity,SerenityOS/serenity,SerenityOS,2018-12-02T19:28:41Z,85
+Kling,github,https://github.com/VoltAgent/awesome-agent-skills,VoltAgent/awesome-agent-skills,VoltAgent,2025-10-28T08:55:32Z,85
+Kling,youtube,https://www.youtube.com/watch?v=HTBfxEqDCdU,This Is How To Use Kling 3.0 Like A PRO (The Only Guide You Need),Sebastien Jefferies,2026-02-12T13:21:38Z,85
+Kling,youtube,https://www.youtube.com/watch?v=undefined,Kling AI,Kling AI,2024-06-08T04:32:10Z,85
+Kling,youtube,https://www.youtube.com/watch?v=11hU2AoRA8M,Kling 3.0 Make Insanely Realistic Ai Influencer Videos,Planet Ai,2026-02-13T13:45:00Z,85
+Kling,youtube,https://www.youtube.com/watch?v=SnWVLg1-e7U,I Created a Realistic AI Influencer with Kling Motion Control (100% FREE),Version 2.0,2026-06-01T08:07:10Z,85
+Kling,youtube,https://www.youtube.com/watch?v=anACVZDNw6o,How to Use Kling AI (Tutorial): Free High Quality AI Video Generator,Caffeinated Blogger,2024-12-19T16:54:00Z,85
+Kling,rss,https://openai.com/index/introducing-upgrades-to-codex,Introducing upgrades to Codex,OpenAI Blog,"Mon, 15 Sep 2025 10:00:00 GMT",75
+Kling,rss,https://openai.com/index/competitive-self-play,Competitive self-play,OpenAI Blog,"Wed, 11 Oct 2017 07:00:00 GMT",75
+Kling,rss,https://vercel.com/changelog/kling-video-models-on-ai-gateway,Kling video models on AI Gateway,Vercel Blog,2026-02-19T13:00:00.000Z,75
+Kling,hackernews,https://www.igalia.com/chats/ladybird,Chat with Andreas Kling about Ladybird and developing a browser engine,samwillis,2023-07-06T18:18:49Z,70
+Kling,hackernews,https://corecursive.com/serenity-os-with-andreas-kling/,Interview with Andreas Kling of Serenity OS (2022),tosh,2024-02-07T10:04:56Z,70
+Kling,hackernews,https://drive.google.com/file/d/0BzmetJxi-p0VM19nbUpyNXE0a28/view,Lawyer Submits Brief Partially in Klingon for Paramount Language Lawsuit,gortok,2016-04-28T12:00:46Z,70
+Kling,hackernews,http://www.dextronet.com/blog/2011/04/achieving-goals-like-a-mad-klingon/,Achieving Goals Like a Mad Klingon,jirinovotny,2011-04-29T11:22:19Z,70
+Kling,hackernews,https://www.wired.com/2017/04/conlang-analysis/,"The Art of Hollywood’s Made-Up Languages, from Dothraki to Klingon [video]",ohjeez,2017-04-12T14:08:12Z,70
+Pika,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Pika,github,https://github.com/jaywcjlove/awesome-mac,jaywcjlove/awesome-mac,jaywcjlove,2016-07-17T15:33:47Z,85
+Pika,github,https://github.com/bradtraversy/design-resources-for-developers,bradtraversy/design-resources-for-developers,bradtraversy,2020-05-06T14:40:35Z,85
+Pika,github,https://github.com/serhii-londar/open-source-mac-os-apps,serhii-londar/open-source-mac-os-apps,serhii-londar,2017-11-03T02:35:33Z,85
+Pika,github,https://github.com/nicolargo/glances,nicolargo/glances,nicolargo,2011-12-04T08:49:15Z,85
+Pika,youtube,https://www.youtube.com/watch?v=Q2ua2luJW00,Pika: The Tiny Mountain Bandit | Natural Born Rebels | BBC Earth,BBC Earth,2025-05-08T14:00:41Z,85
+Pika,youtube,https://www.youtube.com/watch?v=QL6bCyYRMdM,Pika - Tutorial for Beginners in 9 MINUTES! [ Pika Labs 2025 ],Skills Factory,2024-12-04T11:00:25Z,85
+Pika,youtube,https://www.youtube.com/watch?v=GjPIvvxIQME,Cute Pika Steals Food From Neighbours | 4K UHD | Mammals | BBC Earth,BBC Earth,2024-04-18T10:57:59Z,85
+Pika,youtube,https://www.youtube.com/watch?v=1ugUllz4wCs,PIKA AI Video Generator Unveils PikaSwap VFX Animation,How To In 5 Minutes,2025-02-21T20:07:15Z,85
+Pika,youtube,https://www.youtube.com/watch?v=4fX7WJtJLWo,The Pika is Quick and Elusive | America the Beautiful,Nat Geo Animals,2018-05-15T20:00:01Z,85
+Pika,hackernews,https://pikaday.dbushell.com,Pikaday: A friendly guide to front-end date pickers,mnemonet,2025-11-11T14:58:47Z,70
+Pika,hackernews,https://www.pika.dev/cdn,Pika CDN – A CDN for Modern JavaScript,vvoyer,2019-06-13T08:34:46Z,70
+Pika,hackernews,https://github.com/gorisanson/pikachu-volleyball,Pikachu Volleyball,planede,2024-03-06T09:49:02Z,70
+Pika,hackernews,https://www.pikapkg.com/blog/pika-web-a-future-without-webpack/#,Pika/web: Web Apps Without the Bundler,beefman,2019-03-19T17:46:10Z,70
+Pika,hackernews,http://www.pikazoapp.com/,Pikazo,peterjliu,2016-01-29T06:57:55Z,70
+ElevenLabs,github,https://github.com/openclaw/openclaw,openclaw/openclaw,openclaw,2025-11-24T10:16:47Z,85
+ElevenLabs,github,https://github.com/NousResearch/hermes-agent,NousResearch/hermes-agent,NousResearch,2025-07-22T22:22:28Z,85
+ElevenLabs,github,https://github.com/open-webui/open-webui,open-webui/open-webui,open-webui,2023-10-06T22:08:27Z,85
+ElevenLabs,github,https://github.com/punkpeye/awesome-mcp-servers,punkpeye/awesome-mcp-servers,punkpeye,2024-11-30T04:49:10Z,85
+ElevenLabs,github,https://github.com/VoltAgent/awesome-design-md,VoltAgent/awesome-design-md,VoltAgent,2026-03-31T16:37:01Z,85
+ElevenLabs,youtube,https://www.youtube.com/watch?v=undefined,ElevenLabs,ElevenLabs,2022-01-15T15:02:32Z,85
+ElevenLabs,youtube,https://www.youtube.com/watch?v=s7p6OLwV_50,How To Use Elevenlabs - Master This AI Voice Generator in 23 minutes!,Dan Kieft,2025-05-23T14:07:25Z,85
+ElevenLabs,youtube,https://www.youtube.com/watch?v=1h0X9aZ8Ww8,How to Use ElevenLabs: Create Ultra Realistic AI Voices (Text-to-Speech),AI Master,2026-03-09T12:11:41Z,85
+ElevenLabs,youtube,https://www.youtube.com/watch?v=lgvWO4tOBqs,What Is ElevenLabs? | ElevenLabs Explained For Dummies,Greg Preece,2025-08-08T15:30:36Z,85
+ElevenLabs,youtube,https://www.youtube.com/watch?v=BmMxkpm12vc,Generate Image &amp; Video with ElevenLabs (Full Tutorial),ElevenLabs,2025-11-18T15:00:42Z,85
+ElevenLabs,hackernews,https://github.com/yl4579/StyleTTS2,StyleTTS2 – open-source Eleven-Labs-quality Text To Speech,sandslides,2023-11-19T17:40:33Z,70
+ElevenLabs,hackernews,https://elevenlabs.io/blog/elevenlabs-launches-voice-translation-tool-to-break-down-language-barriers-for-content/,ElevenLabs Launches Voice Translation Tool to Break Down Language Barriers,beriboy,2023-10-10T14:18:31Z,70
+ElevenLabs,hackernews,https://blog.omnivore.app/p/omnivore-is-joining-elevenlabs,Omnivore Is Joining ElevenLabs,janpio,2024-10-29T15:37:47Z,70
+ElevenLabs,hackernews,https://github.com/AlexandreSajus/JARVIS,"Jarvis: A Voice Virtual Assistant in Python (OpenAI, ElevenLabs, Deepgram)",Alyx1337,2023-12-18T13:27:35Z,70
+ElevenLabs,x_proof,https://twitter.com/xyz3va/status/1805689140639408277,Rabbit R1s break after elevenlabs key revoked,jrflowers,2024-06-25T20:26:49Z,95
+Midjourney,github,https://github.com/msitarzewski/agency-agents,msitarzewski/agency-agents,msitarzewski,2025-10-13T12:12:29Z,85
+Midjourney,github,https://github.com/fighting41love/funNLP,fighting41love/funNLP,fighting41love,2018-08-21T11:20:39Z,85
+Midjourney,github,https://github.com/lobehub/lobehub,lobehub/lobehub,lobehub,2023-05-21T07:19:12Z,85
+Midjourney,github,https://github.com/PlexPt/awesome-chatgpt-prompts-zh,PlexPt/awesome-chatgpt-prompts-zh,PlexPt,2022-12-12T01:55:03Z,85
+Midjourney,github,https://github.com/lllyasviel/Fooocus,lllyasviel/Fooocus,lllyasviel,2023-08-09T18:43:40Z,85
+Midjourney,youtube,https://www.youtube.com/watch?v=89zICaU9ZLM,"Midjourney Update | May 2026: Conversation Mode, --no Parameter, V8.2 + What&#39;s Coming in June",Woollyfern,2026-06-01T13:03:13Z,85
+Midjourney,youtube,https://www.youtube.com/watch?v=xoZG5WQbgMw,How to Use Midjourney for Beginners in 2026,The AI Advantage,2025-10-14T13:25:43Z,85
+Midjourney,youtube,https://www.youtube.com/watch?v=vUj4VNXXC1c,The ULTIMATE Beginners Guide to Midjourney in 2025,Future Tech Pilot,2025-01-01T14:00:53Z,85
+Midjourney,youtube,https://www.youtube.com/watch?v=p_8nJzciokQ,Midjourney V8 is NOW LIVE!! Here&#39;s how to use it.,Wade McMaster - Creator Impact,2026-03-18T03:54:52Z,85
+Midjourney,youtube,https://www.youtube.com/watch?v=t_xIYKk2ERk,BIG Update | Midjourney 8.1 is Pretty Sick,Future Tech Pilot,2026-04-15T14:19:00Z,85
+Midjourney,hackernews,https://catandgirl.com/4000-of-my-closest-friends/,On being listed as an artist whose work was used to train Midjourney,earthboundkid,2024-01-16T17:58:00Z,70
+Midjourney,hackernews,https://old.reddit.com/r/blender/comments/121lhfq/i_lost_everything_that_made_me_love_my_job/,I lost everything that made me love my job through Midjourney,Fraterkes,2023-03-25T23:05:28Z,70
+Midjourney,hackernews,https://open-journey.github.io/,"OpenJourney: Midjourney, but Open Source",walterbell,2023-01-25T18:36:57Z,70
+Midjourney,hackernews,https://www.techdirt.com/2023/03/31/midjourney-ceo-says-political-satire-in-china-is-pretty-not-okay-but-apparently-silencing-satire-about-xi-jinping-is-pretty-okay/,Midjourney CEO Silencing Satire About Xi Jinping,remote_phone,2023-04-03T05:46:16Z,70
+Midjourney,hackernews,https://adventure-of-penelope.vercel.app/,Show HN: I “wrote” a kid's book with ChatGPT and Midjourney,danielcorin,2023-01-25T04:39:53Z,70
+Ideogram,github,https://github.com/Anil-matcha/Open-Generative-AI,Anil-matcha/Open-Generative-AI,Anil-matcha,2023-05-09T14:12:37Z,85
+Ideogram,github,https://github.com/owainlewis/awesome-artificial-intelligence,owainlewis/awesome-artificial-intelligence,owainlewis,2015-01-27T09:27:48Z,85
+Ideogram,github,https://github.com/steven2358/awesome-generative-ai,steven2358/awesome-generative-ai,steven2358,2022-10-20T11:18:17Z,85
+Ideogram,github,https://github.com/ai-boost/awesome-prompts,ai-boost/awesome-prompts,ai-boost,2024-01-19T15:15:10Z,85
+Ideogram,github,https://github.com/Dooy/chatgpt-web-midjourney-proxy,Dooy/chatgpt-web-midjourney-proxy,Dooy,2023-11-19T03:18:59Z,85
+Ideogram,youtube,https://www.youtube.com/watch?v=0v2eXIAwTTk,Ideogram AI Tutorial for Beginners (2026),Emma's Productivity Lab,2026-02-17T22:45:15Z,85
+Ideogram,youtube,https://www.youtube.com/watch?v=FeHuGAaoDRM,Everything You Need to Know About Ideogram AI!,AI Friend,2025-05-05T23:17:39Z,85
+Ideogram,youtube,https://www.youtube.com/watch?v=Cmm_n7ELXao,How to Use Ideogram AI to Generate Images &amp; Characters 2026 (Step-By-Step),Emma's Productivity Lab,2026-02-09T22:21:38Z,85
+Ideogram,youtube,https://www.youtube.com/watch?v=NENTuJ1y-J4,How to Use IDEOGRAM AI,Tech Ninja,2025-02-21T09:00:30Z,85
+Ideogram,youtube,https://www.youtube.com/watch?v=ncwXwv2fVz8,Quick Tutorial: Ideogram Character Consistency from One Image,Ideogram,2025-07-31T17:51:53Z,85
+Ideogram,hackernews,https://about.ideogram.ai/2.0,Ideogram 2.0 – Text to Image model,meetpateltech,2024-08-21T15:39:59Z,70
+Ideogram,hackernews,https://venturebeat.com/ai/watch-out-midjourney-ideogram-launches-ai-image-generator-with-impressive-typography/,Ideogram launches AI image generator with impressive typography,grogu88,2023-08-25T19:40:58Z,70
+Ideogram,hackernews,https://about.ideogram.ai/3.0,Ideogram 3.0,synthwave,2025-03-26T16:05:03Z,70
+Ideogram,hackernews,https://gametorch.app/commons/image_models/ideogram-v3-quality,"Retro Game Sprites Generated in One Attempt with Ideogram's ""V3 Quality"" Model",gametorch,2025-06-06T23:55:47Z,70
+Ideogram,hackernews,https://ideogram.ai/launch,Announcing Ideogram AI,Palmik,2023-08-23T10:22:17Z,70
+HeyGen,github,https://github.com/nexu-io/open-design,nexu-io/open-design,nexu-io,2026-04-28T04:25:20Z,85
+HeyGen,github,https://github.com/1c7/chinese-independent-developer,1c7/chinese-independent-developer,1c7,2017-09-21T11:08:23Z,85
+HeyGen,github,https://github.com/heygen-com/hyperframes,heygen-com/hyperframes,heygen-com,2026-03-10T01:51:06Z,85
+HeyGen,github,https://github.com/SimplifyJobs/New-Grad-Positions,SimplifyJobs/New-Grad-Positions,SimplifyJobs,2021-06-08T18:44:46Z,85
+HeyGen,github,https://github.com/pipecat-ai/pipecat,pipecat-ai/pipecat,pipecat-ai,2023-12-27T12:59:00Z,85
+HeyGen,youtube,https://www.youtube.com/watch?v=undefined,HeyGen,HeyGen,2021-03-05T02:48:09Z,85
+HeyGen,youtube,https://www.youtube.com/watch?v=eKo7mC1an58,HeyGen Overview - (2026) I Built an AI Avatar That Actually Looks Real,Daniel Davidson,2026-05-30T17:20:44Z,85
+HeyGen,youtube,https://www.youtube.com/watch?v=RTmlxuroR50,How to Use HeyGen in 2026 (Step-by-Step Beginner Tutorial),Simon Crowe,2026-03-05T15:43:01Z,85
+HeyGen,youtube,https://www.youtube.com/watch?v=EbJu9T30nfI,Claude + HeyGen Just Changed Content Creation Forever,Nate Herk | AI Automation,2026-04-15T13:50:42Z,85
+HeyGen,youtube,https://www.youtube.com/watch?v=oM_wcCJzhe4,HeyGen AI Tutorial: How to Use AI Avatars &amp; Video Generator,Kevin Stratvert,2026-04-29T07:00:44Z,85
+HeyGen,hackernews,https://github.com/duixcom/Duix.Heygem/blob/main/README.md,"Show HN: Heygem AI – An Open Source, Free Alternative to Heygen AI",heygem-ai-new,2025-05-15T13:23:32Z,70
+HeyGen,hackernews,https://github.com/GuijiAI/HeyGem.ai,Heygem AI: China's Open Source Heygen and Synthesia Alternative,naomiclarkson,2025-03-11T13:28:26Z,70
+HeyGen,hackernews,https://www.heygen.com/,HeyGen – AI Video Generator,night-rider,2023-11-13T16:48:37Z,70
+HeyGen,x_proof,https://twitter.com/aphysicist/status/1747868626948907325,"Javier Milei speech at Davos (translated, dubbed, lipsynced via AI model heygen)",pixelmonkey,2024-01-18T17:54:09Z,95
+HeyGen,hackernews,https://github.com/duixcom/Duix.Heygem,"Show HN: Heygem – An open-source, free alternative to Heygen",heygem-ai,2025-05-15T11:34:36Z,70
+Synthesia,github,https://github.com/yjs/yjs,yjs/yjs,yjs,2014-07-29T19:29:45Z,85
+Synthesia,github,https://github.com/steven2358/awesome-generative-ai,steven2358/awesome-generative-ai,steven2358,2022-10-20T11:18:17Z,85
+Synthesia,github,https://github.com/mahseema/awesome-ai-tools,mahseema/awesome-ai-tools,mahseema,2023-08-25T21:51:55Z,85
+Synthesia,github,https://github.com/filipecalegario/awesome-generative-ai,filipecalegario/awesome-generative-ai,filipecalegario,2021-07-19T15:11:51Z,85
+Synthesia,github,https://github.com/auctors/free-lunch,auctors/free-lunch,auctors,2022-04-26T12:55:39Z,85
+Synthesia,youtube,https://www.youtube.com/watch?v=zW8vSL7Y_r4,Synthesia vs HeyGen: Which AI Avatar Tool Feels More Human?,Sellables,2026-02-14T17:17:24Z,85
+Synthesia,youtube,https://www.youtube.com/watch?v=7k3N1bUURa4,AI Video in 4 Minutes with Synthesia,Synthesia,2025-04-04T12:11:34Z,85
+Synthesia,youtube,https://www.youtube.com/watch?v=tgf6Csx17Fw,The Only Synthesia AI Tutorial You Will Ever Need (FOR BEGINNERS),Simon Crowe,2025-04-22T20:02:25Z,85
+Synthesia,youtube,https://www.youtube.com/watch?v=undefined,Synthesia,Synthesia,2018-10-25T14:59:06Z,85
+Synthesia,youtube,https://www.youtube.com/watch?v=d0wrSX90vRk,How to Create an AI Clone of Yourself (100% Realistic),Synthesia,2026-04-23T13:01:20Z,85
+Synthesia,hackernews,https://github.com/GuijiAI/HeyGem.ai,Heygem AI: China's Open Source Heygen and Synthesia Alternative,naomiclarkson,2025-03-11T13:28:26Z,70
+Synthesia,hackernews,https://apps.apple.com/us/app/skillhub-code-with-ai-teacher/id1517651288,"Show HN: We made AI Teachers using Midjourney, Synthesia, Text-to-Speech, GPT",aslanyanhaik,2024-07-21T13:20:30Z,70
+Synthesia,hackernews,https://www.synthesia.io/,Synthesia: Create videos from plain text in minutes,pabo,2023-03-06T15:26:08Z,70
+Synthesia,hackernews,https://synthesiagame.com/,Synthesia – Guitar Hero for piano,TheSpiceIsLife,2018-10-17T09:10:38Z,70
+Synthesia,hackernews,http://www.synthesiagame.com/,Synthesia - guitar hero for piano,mike_esspe,2013-02-17T07:44:49Z,70
+Granola,github,https://github.com/garrytan/gbrain,garrytan/gbrain,garrytan,2026-04-05T14:40:56Z,85
+Granola,github,https://github.com/screenpipe/screenpipe,screenpipe/screenpipe,screenpipe,2024-06-19T13:23:56Z,85
+Granola,github,https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts,EvoLinkAI/awesome-gpt-image-2-API-and-Prompts,EvoLinkAI,2026-04-18T11:22:14Z,85
+Granola,github,https://github.com/fastrepl/anarlog,fastrepl/anarlog,fastrepl,2024-12-09T02:51:21Z,85
+Granola,github,https://github.com/bruin-data/ingestr,bruin-data/ingestr,bruin-data,2024-02-12T23:00:36Z,85
+Granola,youtube,https://www.youtube.com/watch?v=aptEeqUs2uU,Homemade granola is the best kinda granola #granola #recipe #baking #glutenfreebaking,Sophie’s Kitchen Love,2025-05-20T15:19:15Z,85
+Granola,youtube,https://www.youtube.com/watch?v=jJNYWaVvwRQ,The ONLY Granola Recipe You&#39;ll Ever Need (OIL- FREE &amp; No added SUGAR) The SECRET to Perfect Granola,Miyoko Schinner,2025-02-09T08:00:42Z,85
+Granola,youtube,https://www.youtube.com/watch?v=uwXlLbK5Hm8,Best Homemade Granola! / How to Make Crispy Granola / How to Make Granola for Yogurt Parfait,House Hacking Mom,2021-10-11T14:00:31Z,85
+Granola,youtube,https://www.youtube.com/watch?v=HxHLkxHWdN8,"The Best Homemade Granola! simple, big clusters, crazy good",Alice Wallberg,2025-04-25T20:00:09Z,85
+Granola,youtube,https://www.youtube.com/watch?v=6mDvZTjC3PA,Sugar Free Granola Recipe,Mary's Nest,2019-08-03T12:57:48Z,85
+Granola,hackernews,https://www.theguardian.com/us-news/2018/apr/30/fda-weedkiller-glyphosate-in-food-internal-emails,"Glyphosate found in granola, crackers and oatmeal",Trisell,2018-04-30T13:52:22Z,70
+Granola,hackernews,https://www.omi.me/pages/download,Open-source granola (meetings summary),kodjima33,2025-06-13T20:01:41Z,70
+Granola,hackernews,https://freedspeech.xyz,Show HN: Muesli – If Granola and Wisprflow had an open source on device baby,pHequals7,2026-05-04T16:41:54Z,70
+Granola,hackernews,https://www.nytimes.com/2026/01/29/business/snap-benefits-food-stamps-rules-health.html,Twix Is OK but Granola Isn't as States Deploy New Food Stamp Rules,ilamont,2026-01-30T02:19:27Z,70
+Granola,hackernews,https://www.theverge.com/ai-artificial-intelligence/906253/granola-note-links-ai-training-psa,Anyone with a link can view your Granola notes by default,Brajeshwar,2026-04-03T15:39:38Z,70
+Notion AI,github,https://github.com/public-apis/public-apis,public-apis/public-apis,public-apis,2016-03-20T23:49:42Z,85
+Notion AI,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Notion AI,github,https://github.com/ollama/ollama,ollama/ollama,ollama,2023-06-26T19:39:32Z,85
+Notion AI,github,https://github.com/anthropics/skills,anthropics/skills,anthropics,2025-09-22T15:53:31Z,85
+Notion AI,github,https://github.com/firecrawl/firecrawl,firecrawl/firecrawl,firecrawl,2024-04-15T21:02:29Z,85
+Notion AI,youtube,https://www.youtube.com/watch?v=Y5FvtQomPh8,Getting started with Notion AI,Notion,2025-03-17T18:37:58Z,85
+Notion AI,youtube,https://www.youtube.com/watch?v=E6wac3xsmxs,Notion Agent OS: Unlocking the Full Potential of Notion AI For Musicians,ThorneLabs,2025-10-11T07:49:52Z,85
+Notion AI,youtube,https://www.youtube.com/watch?v=VSKIS5D-gQg,How to Use Notion AI to Save HOURS Every Week,The AI Advantage,2025-12-01T20:44:59Z,85
+Notion AI,youtube,https://www.youtube.com/watch?v=8tMM2h_XGR0,Notion AI Agent — 7 Powerful Things It Can Do for You,Kevin Stratvert,2025-10-21T07:00:07Z,85
+Notion AI,youtube,https://www.youtube.com/watch?v=fcfbAAczSJg,Easy project management and reporting with Notion AI and Custom Agents (full tutorial),Notion,2026-05-26T15:48:09Z,85
+Notion AI,hackernews,https://www.notion.so/ai,Notion AI – waiting list signup,antouank,2022-11-16T14:11:57Z,70
+Notion AI,hackernews,https://lspace.swyx.io/p/reverse-prompt-eng,Reverse-engineering the source prompts of Notion AI,swyx,2022-12-28T20:29:02Z,70
+Notion AI,hackernews,https://www.promptarmor.com/resources/notion-ai-unpatched-data-exfiltration,Notion AI: Unpatched data exfiltration,takira,2026-01-07T19:49:54Z,70
+Notion AI,hackernews,https://news.ycombinator.com/item?id=46821097,"The preposterous notion of AI automating ""repetitive"" work",cadabrabra,2026-01-30T06:12:14Z,70
+Notion AI,hackernews,https://news.ycombinator.com/item?id=37605045,Tell HN: Enabling Notion AI locks you in to a bad deal,scrollaway,2023-09-21T22:05:04Z,70
+Zapier,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Zapier,github,https://github.com/firecrawl/firecrawl,firecrawl/firecrawl,firecrawl,2024-04-15T21:02:29Z,85
+Zapier,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Zapier,github,https://github.com/VoltAgent/awesome-design-md,VoltAgent/awesome-design-md,VoltAgent,2026-03-31T16:37:01Z,85
+Zapier,github,https://github.com/binhnguyennus/awesome-scalability,binhnguyennus/awesome-scalability,binhnguyennus,2017-12-27T03:46:40Z,85
+Zapier,youtube,https://www.youtube.com/watch?v=JtdUgJGI_Oo,Zapier AI Tutorial for Beginners: Automation Made Simple 🟧,Kevin Stratvert,2024-12-18T08:00:12Z,85
+Zapier,youtube,https://www.youtube.com/watch?v=fX4kdifyUbA,Top 19 Zapier ChatGPT Automations [Automate With AI],AI Andy,2023-06-23T14:21:44Z,85
+Zapier,youtube,https://www.youtube.com/watch?v=f9cJCK4CxIw,Zapier Beginner? Check This Out!,Zapier,2024-12-24T22:00:20Z,85
+Zapier,youtube,https://www.youtube.com/watch?v=lD8Llq2heis,Learn Zapier in 7 minutes: Business &amp; Personal Automation Tutorial For Beginners (2025),ItsKeaton,2025-02-26T18:50:05Z,85
+Zapier,youtube,https://www.youtube.com/watch?v=gr1HZb4lmCw,Zapier Review - Best Automation Software for 2026!,Be Productive,2026-01-29T13:30:56Z,85
+Zapier,rss,https://vercel.com/blog/how-zapier-scales-product-partnerships-with-v0,How Zapier scales product partnerships with v0,Vercel Blog,2025-08-08T13:00:00.000Z,75
+Zapier,hackernews,https://trigger.dev,Show HN: We built a developer-first open-source Zapier alternative,eallam,2023-02-01T14:15:53Z,70
+Zapier,hackernews,https://n8n.io/,N8n.io – Workflow automation alternative to Zapier,tablet,2019-10-08T12:53:04Z,70
+Zapier,hackernews,https://kamerontanseli.ghost.io/first-it-was-craiglist-next-its-zapier/,"First, it was Craigslist, next it's Zapier",kamerontanseli,2020-05-09T17:11:21Z,70
+Zapier,hackernews,https://www.forbes.com/sites/alexkonrad/2021/03/08/zapier-bootstraps-to-5-billion-valuation/,Zapier reached a $5B valuation with $1.3M of funding,gmays,2021-03-09T21:40:13Z,70
+Zapier,hackernews,https://automatisch.io,"Show HN: Automatisch – Open source workflow automation, an alternative to Zapier",farukaydin,2023-01-25T15:46:48Z,70
+Lindy,github,https://github.com/charlax/professional-programming,charlax/professional-programming,charlax,2015-11-07T05:07:52Z,85
+Lindy,github,https://github.com/santifer/career-ops,santifer/career-ops,santifer,2026-04-04T18:21:18Z,85
+Lindy,github,https://github.com/e2b-dev/awesome-ai-agents,e2b-dev/awesome-ai-agents,e2b-dev,2023-06-19T00:20:06Z,85
+Lindy,github,https://github.com/SimplifyJobs/New-Grad-Positions,SimplifyJobs/New-Grad-Positions,SimplifyJobs,2021-06-08T18:44:46Z,85
+Lindy,github,https://github.com/mvp/uhubctl,mvp/uhubctl,mvp,2015-01-08T00:56:39Z,85
+Lindy,youtube,https://www.youtube.com/watch?v=W4Jr5HW87Mk,MLB Picks for EVERY Game Tuesday 6/2 | Best MLB Bets &amp; Predictions | Lindy&#39;s Leans Likes &amp; Locks,OddsShopper Sports Betting,2026-06-02T05:57:56Z,85
+Lindy,youtube,https://www.youtube.com/watch?v=-Vlawv8GatA,"MLB Research + Data Deep Dive (6/2) | MLB Props, Bets &amp; Research | Live With Lindy",OddsShopper Sports Betting,2026-06-02T20:17:17Z,85
+Lindy,youtube,https://www.youtube.com/watch?v=YdR8BzXqtzI,Walmart Cakes Are a Complete Disaster… They Almost Ruined My Son’s Birthday,Lindey Glenn,2026-03-19T16:01:02Z,85
+Lindy,youtube,https://www.youtube.com/watch?v=-9mX4e5zqHQ,Lindy AI review | Best agentic AI platform there is?,Cybernews,2025-11-19T15:00:00Z,85
+Lindy,youtube,https://www.youtube.com/watch?v=wAeZCmXVgB0,Lindy AI Review: Best AI Assistant for Business Automation?,AI Academy,2026-02-02T15:48:33Z,85
+Lindy,hackernews,https://en.wikipedia.org/wiki/Lindy_effect,Lindy effect,bushido,2017-07-30T22:05:31Z,70
+Lindy,hackernews,https://arxiv.org/abs/2308.09045,The Lindy Effect,merename,2023-09-12T23:49:12Z,70
+Lindy,hackernews,https://www.nytimes.com/2018/08/10/arts/dance/lindy-hop-herrang-norma-miller.html,From Harlem to Herrang: An Original Lindy Hopper Blooms in Sweden,Tomte,2018-08-11T05:21:48Z,70
+Lindy,hackernews,https://www.nytimes.com/2021/06/17/style/lindy.html,The Lindy Way of Living,Ambolia,2021-06-17T07:58:20Z,70
+Gamma,github,https://github.com/dkhamsing/open-source-ios-apps,dkhamsing/open-source-ios-apps,dkhamsing,2015-01-26T23:32:34Z,85
+Gamma,github,https://github.com/GitHubDaily/GitHubDaily,GitHubDaily/GitHubDaily,GitHubDaily,2018-12-30T13:56:58Z,85
+Gamma,github,https://github.com/HKUDS/CLI-Anything,HKUDS/CLI-Anything,HKUDS,2026-03-08T13:52:57Z,85
+Gamma,github,https://github.com/MonitorControl/MonitorControl,MonitorControl/MonitorControl,MonitorControl,2017-09-16T21:13:40Z,85
+Gamma,github,https://github.com/lovell/sharp,lovell/sharp,lovell,2013-08-19T20:24:24Z,85
+Gamma,youtube,https://www.youtube.com/watch?v=TFe1xlIlvF8,How Gamma Exposure Looks Heading Into June,Geeks of Finance,2026-06-01T01:23:22Z,85
+Gamma,youtube,https://www.youtube.com/watch?v=UG76viRjWhM,"G.A.M.M.A ОДНА ЖИЗНЬ, НО В ЭТОТ РАЗ ПО СЕРЬЕЗНОМУ",JoinTheSystemm,2026-06-02T05:47:51Z,85
+Gamma,youtube,https://www.youtube.com/watch?v=x7QDBNKwGTc,So Yuta&#39;s REWORK is INSANE in jjs now...,Gamma,2026-05-23T20:04:05Z,85
+Gamma,youtube,https://www.youtube.com/watch?v=Z_LOBdcBBsU,I tried K2 Climbing Simulation... is it good?,Gamma,2026-05-26T21:14:33Z,85
+Gamma,youtube,https://www.youtube.com/watch?v=Ty-7E8-YRZQ,GAMMA 11&#39;S FOR EVERYBODY!!! RELEASE DAY SATURDAY!!!,MIKE RICH,2025-12-13T20:09:46Z,85
+Gamma,rss,https://vercel.com/blog/gamma-builds-design-first-agents-with-vercel,Gamma builds design-first agents with Vercel,Vercel Blog,2026-02-28T13:00:00.000Z,75
+Gamma,hackernews,http://blog.johnnovak.net/2016/09/21/what-every-coder-should-know-about-gamma/,What every coder should know about gamma,johnnovak,2016-09-21T20:49:43Z,70
+Gamma,hackernews,https://netzpolitik.org/2014/gamma-finfisher-hacked-40-gb-of-internal-documents-and-source-code-of-government-malware-published/,Gamma FinFisher hacked: 40 GB of internal documents and source code published,srslack,2014-08-06T16:15:29Z,70
+Gamma,hackernews,https://blogs.msdn.microsoft.com/oldnewthing/20181120-00/?p=100275,"For a brief period, the Windows kernel tried to deal with gamma rays",ingve,2018-11-20T15:50:14Z,70
+Gamma,hackernews,https://wwwnc.cdc.gov/eid/article/27/10/21-1427_article,SARS-CoV-2 Gamma variant infected 16 fully Pfizer vaccinated Guiana gold miners,kaczordon,2021-07-22T23:35:29Z,70
+Gamma,hackernews,https://www.nature.com/articles/s42004-022-00626-2.pdf,Stabilization of gamma sulfur enables 4000 cycle Li-S batteries [pdf],jbotz,2022-04-17T11:43:32Z,70
+Manus,github,https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol,2025-03-05T16:38:29Z,85
+Manus,github,https://github.com/punkpeye/awesome-mcp-servers,punkpeye/awesome-mcp-servers,punkpeye,2024-11-30T04:49:10Z,85
+Manus,github,https://github.com/FoundationAgents/OpenManus,FoundationAgents/OpenManus,FoundationAgents,2025-03-06T14:08:14Z,85
+Manus,github,https://github.com/shanraisshan/claude-code-best-practice,shanraisshan/claude-code-best-practice,shanraisshan,2025-10-31T14:15:28Z,85
+Manus,github,https://github.com/GitHubDaily/GitHubDaily,GitHubDaily/GitHubDaily,GitHubDaily,2018-12-30T13:56:58Z,85
+Manus,youtube,https://www.youtube.com/watch?v=K27diMbCsuw,Introducing Manus: The General AI Agent,Manus AI,2025-03-05T10:02:41Z,85
+Manus,youtube,https://www.youtube.com/watch?v=CdK046TgXgw,Manus AUTOMATIZA TUDO pra você (ASSIM É MOLEZA!!) - AULA 2,Negócios em Mente,2026-06-02T15:00:32Z,85
+Manus,youtube,https://www.youtube.com/watch?v=-5DylM1EdI4,7 Insane Use Cases For Manus AI (with Zero Code),Dan Martell,2026-03-26T13:00:00Z,85
+Manus,youtube,https://www.youtube.com/watch?v=a7OZwy7kOxM,Manus AI explained simply in 13 minutes (setup &amp; use cases),No Code MBA,2026-04-04T12:06:17Z,85
+Manus,youtube,https://www.youtube.com/watch?v=2-ZqK1GVQ5U,Manus AI – Complete Course for Developers,freeCodeCamp.org,2026-05-19T14:12:02Z,85
+Manus,hackernews,https://insidemedicine.substack.com/p/breaking-news-cdc-orders-mass-retraction,CDC: Unpublished manuscripts mentioning certain topics must be pulled or revised,KittenInABox,2025-02-02T04:52:28Z,70
+Manus,hackernews,https://theappendix.net/posts/2014/02/darwins-children-drew-vegetable-battles-on-the-origin-of-species,Darwin's children drew all over the “On the Origin of Species” manuscript (2014),arbesman,2025-04-16T14:28:36Z,70
+Manus,hackernews,http://www.openculture.com/2017/12/3500-occult-manuscripts-will-be-digitized-made-freely-available-online.html,"3,500 Occult Manuscripts Will Be Digitized and Made Freely Available Online",RmDen,2018-01-26T16:46:20Z,70
+Manus,hackernews,https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html,China blocks Meta's acquisition of AI startup Manus,yakkomajuri,2026-04-27T11:43:59Z,70
+Manus,hackernews,https://github.com/brianmg/voynich-nlp-analysis,Show HN: I modeled the Voynich Manuscript with SBERT to test for structure,brig90,2025-05-18T16:09:01Z,70
+V0,github,https://github.com/affaan-m/ECC,affaan-m/ECC,affaan-m,2026-01-18T00:51:51Z,85
+V0,github,https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol/system-prompts-and-models-of-ai-tools,x1xhlol,2025-03-05T16:38:29Z,85
+V0,github,https://github.com/microsoft/PowerToys,microsoft/PowerToys,microsoft,2019-05-01T17:44:02Z,85
+V0,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+V0,github,https://github.com/Comfy-Org/ComfyUI,Comfy-Org/ComfyUI,Comfy-Org,2023-01-17T03:15:56Z,85
+V0,youtube,https://www.youtube.com/watch?v=tFPGwS7Z0IA,Getting Started with v0: From Prompt to Production,Vercel,2026-05-05T17:11:43Z,85
+V0,youtube,https://www.youtube.com/watch?v=e-qxDNwhZi0,Important announcement from the v0 team,Vercel,2026-02-05T06:33:30Z,85
+V0,youtube,https://www.youtube.com/watch?v=41SR07p243Q,How To Use v0 by Vercel For Beginners,corbin,2024-10-16T15:00:04Z,85
+V0,youtube,https://www.youtube.com/watch?v=d4U_lnJLG_o,V0 Vercel AI Tutorial | Build A Web App Using AI for Beginners (Step by Step),Decoding Product with Maria,2025-09-13T15:58:41Z,85
+V0,youtube,https://www.youtube.com/watch?v=ey2XShILsx0,v0 for AI Apps | Demo,Vercel,2026-01-05T21:45:02Z,85
+V0,rss,https://vercel.com/blog/new-website-joins-forces-with-v0,new.website joins forces with v0,Vercel Blog,2026-03-23T04:00:00.000Z,75
+V0,rss,https://vercel.com/changelog/v0-now-includes-diff-view-to-review-code-changes,v0 now includes diff view to review code changes,Vercel Blog,2026-03-18T13:00:00.000Z,75
+V0,rss,https://vercel.com/changelog/v0-api-now-supports-custom-mcp-servers,v0 API now supports custom MCP servers,Vercel Blog,2026-03-06T13:00:00.000Z,75
+V0,rss,https://vercel.com/changelog/stripe-is-now-generally-available-on-the-marketplace-and-v0,Stripe is now generally available on the Marketplace and v0,Vercel Blog,2026-03-05T13:00:00.000Z,75
+V0,rss,https://vercel.com/changelog/create-private-blob-stores-with-a-single-click-in-v0,Create private blob stores with a single click in v0,Vercel Blog,2026-03-05T13:00:00.000Z,75
+V0,hackernews,https://www.scala-lang.org/blog/2017/03/14/scala-native-0.1-is-here.html,Scala Native v0.1,zepolud,2017-03-14T13:27:57Z,70
+V0,hackernews,https://github.com/servo/servo,Servo v0.0.1,undeveloper,2025-10-20T12:55:30Z,70
+V0,hackernews,https://seiya.me/blog/reading-linux-v0.01,Exploring the Internals of Linux v0.01,ingve,2023-08-12T16:06:00Z,70
+V0,hackernews,https://macoscontainers.org/,macOS Containers v0.0.1,CiTyBear,2023-09-26T07:01:45Z,70
+V0,hackernews,https://github.com/neovim/neovim/releases/tag/v0.5.0,Neovim v0.5,todsacerdoti,2021-07-02T16:10:37Z,70
+Bolt,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Bolt,github,https://github.com/avelino/awesome-go,avelino/awesome-go,avelino,2014-07-06T13:42:15Z,85
+Bolt,github,https://github.com/josephmisiti/awesome-machine-learning,josephmisiti/awesome-machine-learning,josephmisiti,2014-07-15T19:11:19Z,85
+Bolt,github,https://github.com/fffaraz/awesome-cpp,fffaraz/awesome-cpp,fffaraz,2014-07-17T08:51:11Z,85
+Bolt,github,https://github.com/bradtraversy/design-resources-for-developers,bradtraversy/design-resources-for-developers,bradtraversy,2020-05-06T14:40:35Z,85
+Bolt,youtube,https://www.youtube.com/watch?v=yIcPWP-fTr0,Andrew Bolt blames Labor&#39;s &#39;self-serving denial&#39; on immigration for One Nation&#39;s rise,Sky News Australia,2026-06-02T11:58:25Z,85
+Bolt,youtube,https://www.youtube.com/watch?v=yQenN4D1Lis,New Chevy Bolt LFP Cross Country Trip Only Using IONNA Chargers! Bolting Across The USA - pt 1,Out of Spec Motoring,2026-05-31T14:30:08Z,85
+Bolt,youtube,https://www.youtube.com/watch?v=v3edBPNKYXs,Bolt dismisses claims of Kenya exit,Citizen TV Kenya,2026-06-02T14:09:06Z,85
+Bolt,youtube,https://www.youtube.com/watch?v=Zj8Vk60VBKI,2027 Chevy Bolt EV Range Test! How Far Can it Go at 75 mph?,EV Motoring,2026-03-26T21:00:38Z,85
+Bolt,youtube,https://www.youtube.com/watch?v=Y6nmfOlb6q0,Bolt Tesla ZAROBKI,Emil koszty budowy,2026-05-31T18:49:17Z,85
+Bolt,rss,https://vercel.com/changelog/build-slack-agents-with-vercel-slack-bolt,Deploy Slack&apos;s Bolt.js to Vercel with @vercel/slack-bolt,Vercel Blog,2025-08-27T13:00:00.000Z,75
+Bolt,x_proof,https://twitter.com/theryanking/status/1485784823641755648,Bolt founder on Stripe/YC,pphysch,2022-01-25T02:03:36Z,95
+Bolt,hackernews,https://github.com/benwilber/boltstream,Show HN: Boltstream – Self-hosted full end-to-end live video streaming platform,benwilber0,2020-12-07T01:53:03Z,70
+Bolt,hackernews,https://theaircurrent.com/feed/dispatches/united-finds-loose-bolts-on-plug-doors-during-737-max-9-inspections/,United finds loose bolts on plug doors during 737 Max 9 inspections,etimberg,2024-01-08T20:43:37Z,70
+Bolt,hackernews,https://www.nbcnews.com/business/business-news/alaska-airlines-found-more-loose-bolts-boeing-737-max-9-ceo-says-rcna135316,Alaska CEO: We found many loose bolts on our Max planes,aurareturn,2024-01-24T10:53:03Z,70
+Bolt,hackernews,https://www.bolt.com/blog/message-from-bolt-ceo,Bolt announces layoffs,Lapz,2022-05-25T17:23:48Z,70
+Linear,github,https://github.com/jwasham/coding-interview-university,jwasham/coding-interview-university,jwasham,2016-06-06T02:34:12Z,85
+Linear,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Linear,github,https://github.com/practical-tutorials/project-based-learning,practical-tutorials/project-based-learning,practical-tutorials,2017-04-12T05:07:46Z,85
+Linear,github,https://github.com/ossu/computer-science,ossu/computer-science,ossu,2014-05-04T00:18:39Z,85
+Linear,github,https://github.com/affaan-m/ECC,affaan-m/ECC,affaan-m,2026-01-18T00:51:51Z,85
+Linear,youtube,https://www.youtube.com/watch?v=fNk_zzaMoSs,"Vectors | Chapter 1, Essence of linear algebra",3Blue1Brown,2016-08-06T00:05:49Z,85
+Linear,youtube,https://www.youtube.com/watch?v=YybKvh1WNdk,Linear - &quot;Sending All My Love&quot; - Official Music Video,LINEAR,2018-07-02T17:00:04Z,85
+Linear,youtube,https://www.youtube.com/watch?v=9Q5BoiIFBiY,Intro to Linear,Linear,2025-06-09T15:29:05Z,85
+Linear,youtube,https://www.youtube.com/watch?v=kYB8IZa5AuE,"Linear transformations and matrices | Chapter 3, Essence of linear algebra",3Blue1Brown,2016-08-07T21:39:19Z,85
+Linear,youtube,https://www.youtube.com/watch?v=lUUte2o2Sn8,Gil Strang&#39;s Final 18.06 Linear Algebra Lecture,MIT OpenCourseWare,2023-05-15T16:11:07Z,85
+Linear,rss,https://openai.com/index/nonlinear-computation-in-deep-linear-networks,Nonlinear computation in deep linear networks,OpenAI Blog,"Fri, 29 Sep 2017 07:00:00 GMT",75
+Linear,hackernews,http://immersivemath.com/ila/index.html,Immersive Linear Algebra (2016),reverse,2019-02-27T16:05:07Z,70
+Linear,hackernews,https://textbooks.math.gatech.edu/ila/,Interactive Linear Algebra,kondor,2019-11-25T14:39:18Z,70
+Linear,hackernews,http://vmls-book.stanford.edu/,"Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares",yarapavan,2018-12-14T03:48:32Z,70
+CapCut,github,https://github.com/OpenCut-app/OpenCut,OpenCut-app/OpenCut,OpenCut-app,2025-06-22T08:02:17Z,85
+CapCut,github,https://github.com/GitHubDaily/GitHubDaily,GitHubDaily/GitHubDaily,GitHubDaily,2018-12-30T13:56:58Z,85
+CapCut,github,https://github.com/KenneyNL/Adobe-Alternatives,KenneyNL/Adobe-Alternatives,KenneyNL,2023-06-12T09:29:55Z,85
+CapCut,github,https://github.com/ai-collection/ai-collection,ai-collection/ai-collection,ai-collection,2023-01-03T06:02:03Z,85
+CapCut,github,https://github.com/Axorax/awesome-free-apps,Axorax/awesome-free-apps,Axorax,2024-10-24T03:42:18Z,85
+CapCut,youtube,https://www.youtube.com/watch?v=j5_471mO14c,CapCut Tutorial for Beginners (2026) – Full Video Editing Guide,Metics Media,2025-06-06T13:01:20Z,85
+CapCut,youtube,https://www.youtube.com/watch?v=jye-E7mzads,Why CapCut is the WORST editing app EVER,rdylt09,2025-07-09T18:29:10Z,85
+CapCut,youtube,https://www.youtube.com/watch?v=9R1scH3yzns,CAPCUT OR AFTER EFFECTS?😶 #shorts,geniev12,2023-02-27T12:00:08Z,85
+CapCut,youtube,https://www.youtube.com/watch?v=NI1iEBGNDb0,Master Masking in CapCut Step-by-Step Editing Tutorial CapCut Explained Beginner to Pro Guide,BAKAR EDITORIAL,2025-05-28T10:07:44Z,85
+CapCut,youtube,https://www.youtube.com/watch?v=Zv9u0aLkfK0,CapCut Beginner Tutorial (2026) - Beginner to Pro,Matt Loui,2026-02-11T09:24:37Z,85
+CapCut,hackernews,https://github.com/OpenCut-app/OpenCut,OpenCut: The open-source CapCut alternative,nateb2022,2025-07-13T21:08:47Z,70
+CapCut,hackernews,https://www.techradar.com/computing/software/capcut-hit-by-us-ban-and-in-completely-unrelated-news-instagram-has-just-revealed-a-new-video-editing-app,"CapCut hit by US ban – in unrelated news, Instagram reveals video-editing app",this_weekend,2025-01-20T20:42:56Z,70
+CapCut,hackernews,https://meetcosmos.com/free-audio-transcription/,Show HN: I built a tool to replace capcut audio transcription,correa_brian,2025-08-05T18:20:23Z,70
+CapCut,hackernews,https://sph.brown.edu/news/2025-12-02/hospital-price-caps,Oregon's hospital price cap cut costs without comprising care,geox,2025-12-03T03:17:04Z,70
+CapCut,hackernews,https://www.theverge.com/2025/1/19/24347358/instagram-edits-capcut-video-app-tiktok-ban,Instagram announces a blatant CapCut clone,skreep,2025-01-21T14:14:15Z,70
+Descript,github,https://github.com/9001/copyparty,9001/copyparty,9001,2019-05-26T15:28:33Z,85
+Descript,github,https://github.com/nari-labs/dia,nari-labs/dia,nari-labs,2025-04-19T07:15:57Z,85
+Descript,github,https://github.com/huggingface/transformers.js,huggingface/transformers.js,huggingface,2023-02-13T13:51:45Z,85
+Descript,github,https://github.com/abus-aikorea/voice-pro,abus-aikorea/voice-pro,abus-aikorea,2024-07-29T10:02:31Z,85
+Descript,github,https://github.com/huggingface/parler-tts,huggingface/parler-tts,huggingface,2024-02-13T10:05:58Z,85
+Descript,youtube,https://www.youtube.com/watch?v=G8jcK-qzwsg,Descript AI Video Editor (8 Mind Blowing Features!),Done By Lunch,2024-11-28T13:15:01Z,85
+Descript,youtube,https://www.youtube.com/watch?v=WJTe19_06tc,Studio Sound: Transform Your Audio into Professional Gold I Descript,Descript,2024-10-22T15:45:04Z,85
+Descript,youtube,https://www.youtube.com/watch?v=L4lUwaI7NSI,ULTIMATE Descript Tutorial for Beginners in 2026 | How to Edit Fast Using AI,Danie Jay,2026-02-19T13:00:43Z,85
+Descript,youtube,https://www.youtube.com/watch?v=qHtqRWUKPfc,Descript For Beginners 2025 | Everything You NEED To KNOW!,Vince Opra,2025-03-01T07:34:36Z,85
+Descript,youtube,https://www.youtube.com/watch?v=Qiy5iZmSZHw,Beginner&#39;s Guide to Descript&#39;s Teleprompter,Learn Descript with Ross,2026-01-27T18:37:53Z,85
+Descript,rss,https://openai.com/index/descript,How Descript engineers multilingual video dubbing at scale,OpenAI Blog,"Fri, 06 Mar 2026 00:00:00 GMT",75
+Descript,hackernews,https://colors.lol/,Show HN: Colors.lol – Overly descriptive color palettes,picdit,2020-03-29T14:34:03Z,70
+Descript,hackernews,https://sifted.eu/articles/job-advert-salary-range/,Job descriptions should show a salary or salary range,mooreds,2021-04-25T14:30:43Z,70
+Descript,hackernews,https://github.com/gorhill/uBlock/blob/master/platform/mv3/description/en.md,uBlock Origin Lite: Description,bertman,2022-09-20T13:50:09Z,70
+Descript,hackernews,https://news.ycombinator.com/item?id=2879055,"For the love of God, YC companies-to-be stop posting ambiguous job description",startupcto,2011-08-12T20:17:48Z,70
+Descript,hackernews,https://ntietz.com/blog/name-your-projects-cutesy-things/,"Names should be cute, not descriptive",dmarto,2023-01-10T04:30:58Z,70
+Suno,github,https://github.com/public-apis/public-apis,public-apis/public-apis,public-apis,2016-03-20T23:49:42Z,85
+Suno,github,https://github.com/tldr-pages/tldr,tldr-pages/tldr,tldr-pages,2013-12-08T07:34:43Z,85
+Suno,github,https://github.com/nexu-io/open-design,nexu-io/open-design,nexu-io,2026-04-28T04:25:20Z,85
+Suno,github,https://github.com/1c7/chinese-independent-developer,1c7/chinese-independent-developer,1c7,2017-09-21T11:08:23Z,85
+Suno,github,https://github.com/GitHubDaily/GitHubDaily,GitHubDaily/GitHubDaily,GitHubDaily,2018-12-30T13:56:58Z,85
+Suno,youtube,https://www.youtube.com/watch?v=Vfai49qhluA,How to Use Suno: From Beginner to Pro Features Explained,Suno Music,2026-05-05T13:00:55Z,85
+Suno,youtube,https://www.youtube.com/watch?v=rmW8reUAGNs,Suno And Udio Just Took A Major Hit In Lawsuits,Top Music Attorney,2026-05-29T14:00:06Z,85
+Suno,youtube,https://www.youtube.com/watch?v=72R1NjNaUnE,Suno Ai Tutorial 2026 (For Complete Beginners),ChillPanic,2025-07-19T09:45:00Z,85
+Suno,youtube,https://www.youtube.com/watch?v=DrRRvM4oc4w,How to Use Suno AI Better than 99% of People,Isa does AI,2026-03-17T14:00:00Z,85
+Suno,youtube,https://www.youtube.com/watch?v=U8dcFhF0Dlk,"Suno, AI Music, and the Bad Future",Adam Neely,2026-02-02T18:35:34Z,85
+Suno,hackernews,https://suno.com/explore/,Suno v4.5,platers,2025-05-02T13:18:26Z,70
+Suno,hackernews,https://www.suno.ai/,Suno AI,elsewhen,2023-12-23T12:24:14Z,70
+Suno,hackernews,https://github.com/Arquivotheca/SunOS-4.1.3,Source Code for SunOS 4.1.3 (1992),classichasclass,2022-10-29T01:36:06Z,70
+Suno,hackernews,https://suno.com/studio-welcome,"Suno Studio, a Generative AI DAW",debrisapron,2025-09-26T17:17:54Z,70
+Suno,hackernews,https://www.rollingstone.com/music/music-features/suno-ai-chatgpt-for-music-1234982307/,"Suno, an AI music generator",herbertl,2024-03-18T15:52:02Z,70
+Udio,github,https://github.com/steven2358/awesome-generative-ai,steven2358/awesome-generative-ai,steven2358,2022-10-20T11:18:17Z,85
+Udio,github,https://github.com/ai-boost/awesome-prompts,ai-boost/awesome-prompts,ai-boost,2024-01-19T15:15:10Z,85
+Udio,github,https://github.com/yzfly/Awesome-MCP-ZH,yzfly/Awesome-MCP-ZH,yzfly,2025-04-03T00:38:51Z,85
+Udio,github,https://github.com/Dooy/chatgpt-web-midjourney-proxy,Dooy/chatgpt-web-midjourney-proxy,Dooy,2023-11-19T03:18:59Z,85
+Udio,github,https://github.com/ikaijua/Awesome-AITools,ikaijua/Awesome-AITools,ikaijua,2023-04-02T04:06:56Z,85
+Udio,youtube,https://www.youtube.com/watch?v=6IlItfVfOkQ,5-Minute AI Music Tutorial | How to Udio,Udio,2024-10-30T15:04:06Z,85
+Udio,youtube,https://www.youtube.com/watch?v=rmW8reUAGNs,Suno And Udio Just Took A Major Hit In Lawsuits,Top Music Attorney,2026-05-29T14:00:06Z,85
+Udio,youtube,https://www.youtube.com/watch?v=KBFEAypTol8,Suno vs Udio: The Best AI Music Maker Showdown of 2025!,AI With TechZnap,2025-07-29T13:32:00Z,85
+Udio,youtube,https://www.youtube.com/watch?v=FFyRSHdmiaQ,The AI Music Trap: Why You Don&#39;t Actually Own Your Suno/Udio Hits,Mattias Holmgren,2026-03-19T15:14:18Z,85
+Udio,youtube,https://www.youtube.com/watch?v=9MB0dm0vv2U,The END of AI Music? Udio Falls and Suno AI Might Be Next!,AI Automation Labs,2025-11-03T17:30:02Z,85
+Udio,rss,https://openai.com/index/sora-2-system-card,Sora 2 System Card,OpenAI Blog,"Tue, 30 Sep 2025 00:00:00 GMT",75
+Udio,rss,https://openai.com/index/introducing-our-next-generation-audio-models,Introducing next-generation audio models in the API,OpenAI Blog,"Thu, 20 Mar 2025 11:00:00 GMT",75
+Udio,rss,https://openai.com/index/consistency-models,Consistency Models,OpenAI Blog,"Thu, 20 Jun 2024 00:00:00 GMT",75
+Udio,rss,https://openai.com/index/canva,Creating an AI-powered Magic Studio,OpenAI Blog,"Thu, 16 May 2024 00:00:00 GMT",75
+Udio,rss,https://openai.com/index/hello-gpt-4o,Hello GPT-4o,OpenAI Blog,"Mon, 13 May 2024 10:05:00 GMT",75
+Udio,x_proof,https://twitter.com/udiomusic/status/1778045322654003448,Udio: Generate music in your favorite styles with a text prompt,gk1,2024-04-10T18:10:31Z,95
+Udio,hackernews,https://www.udio.com/,Udio – AI Music Generator,zingerlio,2024-06-02T23:33:50Z,70
+Udio,hackernews,https://www.udio.com/blog/introducing-v1-5,Udio – Introducing v1.5,jmarbert,2024-07-26T17:18:03Z,70
+Udio,hackernews,https://www.wsj.com/business/media/universal-music-settles-with-ai-firm-udio-c926ca39,Universal Music Settles with AI Firm Udio,aspenmayer,2025-10-30T06:52:56Z,70
+NotebookLM,github,https://github.com/ComposioHQ/awesome-claude-skills,ComposioHQ/awesome-claude-skills,ComposioHQ,2025-10-17T07:15:01Z,85
+NotebookLM,github,https://github.com/GitHubDaily/GitHubDaily,GitHubDaily/GitHubDaily,GitHubDaily,2018-12-30T13:56:58Z,85
+NotebookLM,github,https://github.com/HKUDS/CLI-Anything,HKUDS/CLI-Anything,HKUDS,2026-03-08T13:52:57Z,85
+NotebookLM,github,https://github.com/asgeirtj/system_prompts_leaks,asgeirtj/system_prompts_leaks,asgeirtj,2025-05-03T02:43:56Z,85
+NotebookLM,github,https://github.com/patchy631/ai-engineering-hub,patchy631/ai-engineering-hub,patchy631,2024-10-21T10:43:24Z,85
+NotebookLM,youtube,https://www.youtube.com/watch?v=7AzrCYc71TA,This Gemini/NotebookLM MASHUP Will Make You SO Smart It Feels Illegal,Andy Stapleton,2026-06-02T02:30:10Z,85
+NotebookLM,youtube,https://www.youtube.com/watch?v=2MgJeIZ0Ifc,NotebookLM Just Changed AI Forever! 🤯,Julian Goldie SEO,2026-06-02T04:00:38Z,85
+NotebookLM,youtube,https://www.youtube.com/watch?v=5ffx5N0UDkU,NotebookLM&#39;s New Use Cases Are INSANE!,Julian Goldie SEO,2026-06-02T18:00:31Z,85
+NotebookLM,youtube,https://www.youtube.com/watch?v=mTujsk4QhAc,NotebookLM Just Changed EVERYTHING 🤯 | 9 INSANE AI Features You Need to See (2026),Ai Podcast,2026-05-31T13:08:47Z,85
+NotebookLM,youtube,https://www.youtube.com/watch?v=uSVBfyHBiDU,How to Use Google NotebookLM (Full Tutorial),Kevin Stratvert,2026-05-11T07:00:47Z,85
+NotebookLM,hackernews,https://simonwillison.net/2024/Sep/29/notebooklm-audio-overview/,NotebookLM's automatically generated podcasts are surprisingly effective,simonw,2024-09-30T02:58:02Z,70
+NotebookLM,hackernews,https://blog.google/technology/ai/notebooklm-update-october-2024/,NotebookLM launches feature to customize and guide audio overviews,alphabetting,2024-10-17T16:42:04Z,70
+NotebookLM,hackernews,https://blog.google/technology/google-labs/notebooklm-audio-overviews-50-languages/,NotebookLM Audio Overviews are now available in over 50 languages,saikatsg,2025-04-30T17:28:38Z,70
+NotebookLM,hackernews,https://github.com/meta-llama/llama-recipes/tree/main/recipes/quickstart/NotebookLlama,NotebookLlama: An open source version of NotebookLM,bibinmohan,2024-10-27T19:31:02Z,70
+NotebookLM,hackernews,https://jasonspielman.com/notebooklm,Designing NotebookLM,vinhnx,2025-09-20T17:25:58Z,70
+Grok,github,https://github.com/affaan-m/ECC,affaan-m/ECC,affaan-m,2026-01-18T00:51:51Z,85
+Grok,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Grok,github,https://github.com/ggml-org/llama.cpp,ggml-org/llama.cpp,ggml-org,2023-03-10T18:58:00Z,85
+Grok,github,https://github.com/farion1231/cc-switch,farion1231/cc-switch,farion1231,2025-08-04T14:16:16Z,85
+Grok,github,https://github.com/punkpeye/awesome-mcp-servers,punkpeye/awesome-mcp-servers,punkpeye,2024-11-30T04:49:10Z,85
+Grok,youtube,https://www.youtube.com/watch?v=uab4dfI1ky0,Grok 5 is INSANE!,Julian Goldie SEO,2026-06-02T12:00:06Z,85
+Grok,youtube,https://www.youtube.com/watch?v=zexcKJYQooU,Elon Musk Just Shocked OpenAI With Grok 5,AI Revolution,2026-05-28T01:02:08Z,85
+Grok,youtube,https://www.youtube.com/watch?v=Mbx52hQDmsU,Grok AI Was Asked Why Aliens Haven&#39;t Contacted Us — Its Answer Shocked Scientists,Pyramid Discovery,2026-04-16T20:15:03Z,85
+Grok,youtube,https://www.youtube.com/watch?v=QlzLbWp92YE,Grok AI Stopped FREE Videos Generation | Here&#39;s What to do,Jacksons AI,2026-03-20T14:30:32Z,85
+Grok,youtube,https://www.youtube.com/watch?v=94vLKT4uzZo,They Ran the Book of Enoch Through GROK AI… What It Found Changes Everything,Quantumized,2026-03-27T18:13:00Z,85
+Grok,rss,https://www.latent.space/p/video-agents,"Why Video Agent models are next — Ethan He, xAI Grok Imagine",Latent Space,"Mon, 01 Jun 2026 15:41:48 GMT",75
+Grok,rss,https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway,Grok Build 0.1 now available on Vercel AI Gateway,Vercel Blog,2026-05-20T07:00:00.000Z,75
+Grok,rss,https://vercel.com/changelog/grok-4-3-on-ai-gateway,Grok 4.3 on AI Gateway,Vercel Blog,2026-04-30T07:00:00.000Z,75
+Grok,rss,https://vercel.com/changelog/grok-4-20-on-ai-gateway,Try Grok 4.20 on AI Gateway,Vercel Blog,2026-03-11T07:00:00.000Z,75
+Grok,rss,https://vercel.com/changelog/grok-imagine-video-on-ai-gateway,Grok Imagine Video on AI Gateway,Vercel Blog,2026-02-19T13:00:00.000Z,75
+Grok,hackernews,https://github.com/xai-org/grok,Grok,pierre,2024-03-17T19:33:37Z,70
+Grok,hackernews,https://simonwillison.net/2025/Jul/11/grok-musk/,"Grok: Searching X for ""From:Elonmusk (Israel or Palestine or Hamas or Gaza)""",simonw,2025-07-11T00:22:43Z,70
+Grok,hackernews,http://www.theguardian.com/technology/2013/aug/20/groklaw-shuts-nsa-surveillance,Groklaw legal site shuts over fears of NSA email snooping,tehmaco,2013-08-20T11:59:38Z,70
+Grok,x_proof,https://x.com/xai/status/1891699715298730482,Grok3 Launch [video],travelhead,2025-02-18T04:04:54Z,95
+Grok,hackernews,https://www.bbc.com/news/articles/ce3ex92557jo,X offices raided in France as UK opens fresh investigation into Grok,vikaveri,2026-02-03T10:08:52Z,70
+Jasper,github,https://github.com/josephmisiti/awesome-machine-learning,josephmisiti/awesome-machine-learning,josephmisiti,2014-07-15T19:11:19Z,85
+Jasper,github,https://github.com/akullpp/awesome-java,akullpp/awesome-java,akullpp,2014-07-09T10:12:43Z,85
+Jasper,github,https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes,Ebazhanov/linkedin-skill-assessments-quizzes,Ebazhanov,2019-07-13T19:52:56Z,85
+Jasper,github,https://github.com/neoclide/coc.nvim,neoclide/coc.nvim,neoclide,2018-05-01T22:39:02Z,85
+Jasper,github,https://github.com/AlDanial/cloc,AlDanial/cloc,AlDanial,2015-09-07T03:30:43Z,85
+Jasper,youtube,https://www.youtube.com/watch?v=pURfo4ey5y0,Love Scene - JASP.ER [ OFFICIAL MV ],RISER MUSIC,2026-05-08T12:00:06Z,85
+Jasper,youtube,https://www.youtube.com/watch?v=geJ8uJETtkI,I’ll get it right next time jasper 🥲 #cat #grwm #funny #cats #4urpage #fypシ,Alyforlife2,2025-10-06T04:02:57Z,85
+Jasper,youtube,https://www.youtube.com/watch?v=ntyxDcWv6qk,Jasper AI Tutorial | Full Walkthrough &amp; Comparison to ChatGPT,Sass and SEO with Soph,2025-06-05T01:00:48Z,85
+Jasper,youtube,https://www.youtube.com/watch?v=YpVjU4OJ4Ms,แรงอีกนิด (SADISTIC) - JASP.ER [ OFFICIAL MV ],RISER MUSIC,2024-12-19T12:00:08Z,85
+Jasper,youtube,https://www.youtube.com/watch?v=KO78TDSp_bo,ถอด (TAKE IT OFF) - JASP.ER [ OFFICIAL MV ],RISER MUSIC,2025-04-04T11:00:07Z,85
+Jasper,hackernews,https://www.al.com/news/2024/02/someone-stole-a-jasper-radio-stations-200-foot-tower-owner-says.html,"Someone stole a Jasper radio station’s 200-foot tower, owner says",HiroProtagonist,2024-02-08T14:06:49Z,70
+Jasper,hackernews,https://www.reddit.com/r/IAmA/comments/8eccqb/im_dane_jasper_cofounder_and_ceo_of_sonic/,"IAmA Dane Jasper, CEO of Sonic, Northern California's Largest Independent ISP",quantisan,2018-04-23T22:44:53Z,70
+Jasper,hackernews,https://theexitgame.substack.com/p/shortly-the-ai-powered-writing-assistant,How a med student made the best AI writing assistant and got acquired by Jasper,mujavid,2022-10-19T16:31:11Z,70
+Jasper,hackernews,http://jasperproject.github.io,Jasper – Control anything with your voice,todd8,2014-08-21T11:00:44Z,70
+Jasper,hackernews,https://github.com/jasperla/openbsd-wip/issues/86,Pale Moon Official Branding Violation – Issue #86 – Jasperla/openbsd-wip,protomyth,2018-02-06T19:32:23Z,70
+Glean,github,https://github.com/python/cpython,python/cpython,python,2017-02-10T19:23:51Z,85
+Glean,github,https://github.com/josephmisiti/awesome-machine-learning,josephmisiti/awesome-machine-learning,josephmisiti,2014-07-15T19:11:19Z,85
+Glean,github,https://github.com/santifer/career-ops,santifer/career-ops,santifer,2026-04-04T18:21:18Z,85
+Glean,github,https://github.com/lissy93/web-check,lissy93/web-check,lissy93,2023-06-25T14:32:11Z,85
+Glean,github,https://github.com/rockerBOO/awesome-neovim,rockerBOO/awesome-neovim,rockerBOO,2020-09-18T18:40:59Z,85
+Glean,youtube,https://www.youtube.com/watch?v=b7qojk3Ju9U,Introducing Glean: Work AI for all,Glean,2024-11-19T23:56:59Z,85
+Glean,youtube,https://www.youtube.com/watch?v=QYGEZGGwuKA,Glean: Work AI for all.,Glean,2025-06-18T18:05:07Z,85
+Glean,youtube,https://www.youtube.com/watch?v=xOTMVMqVK6Y,From Chatbot to Work Partner,Glean,2026-03-02T21:01:02Z,85
+Glean,youtube,https://www.youtube.com/watch?v=KE9bKIBffPE,Glean:LIVE December&#39;25: Building Autonomous Agents,Glean,2025-12-10T18:56:11Z,85
+Glean,youtube,https://www.youtube.com/watch?v=PhVCqnD78TY,Our CEO said it best → join us at Glean:LIVE,Glean,2025-09-22T16:22:02Z,85
+Glean,rss,https://openai.com/index/frontier-model-forum-updates,Frontier Model Forum updates,OpenAI Blog,"Wed, 25 Oct 2023 07:00:00 GMT",75
+Glean,rss,https://vercel.com/changelog/automatic-mitigation-of-crawler-delay-via-skew-protection,"Automatic mitigation of Google and Bing crawl delay, via Vercel’s Skew Protection",Vercel Blog,2025-04-08T13:00:00.000Z,75
+Glean,hackernews,https://glean.software/?open,"Glean – System for collecting, deriving and querying facts about source code",dons,2021-08-31T09:56:44Z,70
+Glean,hackernews,https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/,Indexing Code at Scale with Glean,GavCo,2025-01-01T19:25:32Z,70
+Glean,hackernews,https://github.com/benwr/glean,"Show HN: Glean, a tiny bitmap font for programming",benwr,2016-10-09T20:44:41Z,70
+Glean,hackernews,http://www.propublica.org/article/stay-far-far-away-and-other-things-gleaned-from-yelp-health-reviews,"‘Stay Far, Far Away’ and Other Things Gleaned from Yelp Health Reviews",danso,2015-08-06T12:19:34Z,70
+Glean,hackernews,https://www.glean.com/blog/glean-chat-launch-announcement,Glean Chat: first enterprise-grade ChatGPT for work,dd367,2023-06-08T17:19:36Z,70
+Make,github,https://github.com/codecrafters-io/build-your-own-x,codecrafters-io/build-your-own-x,codecrafters-io,2018-05-09T12:03:18Z,85
+Make,github,https://github.com/sindresorhus/awesome,sindresorhus/awesome,sindresorhus,2014-07-11T13:42:37Z,85
+Make,github,https://github.com/freeCodeCamp/freeCodeCamp,freeCodeCamp/freeCodeCamp,freeCodeCamp,2014-12-24T17:49:19Z,85
+Make,github,https://github.com/public-apis/public-apis,public-apis/public-apis,public-apis,2016-03-20T23:49:42Z,85
+Make,github,https://github.com/nilbuild/developer-roadmap,nilbuild/developer-roadmap,nilbuild,2017-03-15T13:45:52Z,85
+Make,youtube,https://www.youtube.com/watch?v=3-jY1JrtqeY,Drake - Make Them Pay,DrakeVEVO,2026-05-15T14:10:07Z,85
+Make,youtube,https://www.youtube.com/watch?v=yEKzQ_4wS00,Mega Power Star Ram Charan Body Making Video | Peddi | Buchi Babu | Janhvi Kapoor | Shreyas Media,Shreyas Media,2026-06-01T17:17:05Z,85
+Make,youtube,https://www.youtube.com/watch?v=JSA2oezQWOU,Make.com Automation Tutorial for Beginners,Kevin Stratvert,2024-05-28T07:00:11Z,85
+Make,youtube,https://www.youtube.com/watch?v=uxNuuys19XE,Make Them Cry,Drake - Topic,2026-05-15T04:00:12Z,85
+Make,youtube,https://www.youtube.com/watch?v=k36jiGpZ_Ns,Guardians make their own fate..,xHOUNDISHx,2026-06-01T11:53:51Z,85
+Make,rss,https://www.latent.space/p/the-fourth-law,"The Autonomous Drone Tech Stack & Economics of Drones — Yaroslav Azhnyuk, The Fourth Law & Guest Host Noah Smith, Noahpinion",Latent Space,"Mon, 18 May 2026 13:45:32 GMT",75
+Make,rss,https://openai.com/index/making-chatgpt-better-for-clinicians,Making ChatGPT better for clinicians,OpenAI Blog,"Wed, 22 Apr 2026 15:00:00 GMT",75
+Make,rss,https://openai.com/index/how-confessions-can-keep-language-models-honest,How confessions can keep language models honest,OpenAI Blog,"Wed, 03 Dec 2025 10:00:00 GMT",75
+Make,rss,https://openai.com/index/understanding-neural-networks-through-sparse-circuits,Understanding neural networks through sparse circuits,OpenAI Blog,"Thu, 13 Nov 2025 10:00:00 GMT",75
+Make,rss,https://openai.com/index/openai-acquires-software-applications-incorporated,"OpenAI acquires Software Applications Incorporated, maker of Sky",OpenAI Blog,"Thu, 23 Oct 2025 10:00:00 GMT",75
+Make,hackernews,https://www.bloomberg.com/news/articles/2022-04-14/elon-musk-launches-43-billion-hostile-takeover-of-twitter,Elon Musk makes $43B unsolicited bid to take Twitter private,zegl,2022-04-14T10:24:06Z,70
+Make,x_proof,https://twitter.com/senatecloakroom/status/1503797632745025542,US Senate votes unanimously to make daylight savings time permanent,enraged_camel,2022-03-15T18:29:09Z,95
+Make,hackernews,https://chadnauseam.com/coding/random/calculator-app,“A calculator app? Anyone could make that”,pie_flavor,2025-02-16T10:16:49Z,70
+Make,hackernews,https://sloanreview.mit.edu/article/learning-for-a-living/,"Learning at work is work, and we must make space for it",sarapeyton,2019-12-11T14:30:15Z,70
+Make,hackernews,https://naya.lol,My daughter (7 years old) used HTML to make a website,fintler,2024-07-18T06:24:51Z,70
+Framer AI,github,https://github.com/sindresorhus/awesome,sindresorhus/awesome,sindresorhus,2014-07-11T13:42:37Z,85
+Framer AI,github,https://github.com/vinta/awesome-python,vinta/awesome-python,vinta,2014-06-27T21:00:06Z,85
+Framer AI,github,https://github.com/trimstray/the-book-of-secret-knowledge,trimstray/the-book-of-secret-knowledge,trimstray,2018-06-23T10:43:14Z,85
+Framer AI,github,https://github.com/affaan-m/ECC,affaan-m/ECC,affaan-m,2026-01-18T00:51:51Z,85
+Framer AI,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Framer AI,youtube,https://www.youtube.com/watch?v=RngDte_sP-I,How To Build a Website with AI (Claude + Framer),Ramish,2026-06-01T07:21:35Z,85
+Framer AI,youtube,https://www.youtube.com/watch?v=O98BcnvmyoA,Generating layouts with AI using Wireframer,Framer,2025-06-12T19:41:12Z,85
+Framer AI,youtube,https://www.youtube.com/watch?v=J2ACY9wmDH4,Framer Ai Website Builder Tutorial,Tutorials by Joe & Lisa,2026-02-16T09:27:02Z,85
+Framer AI,youtube,https://www.youtube.com/watch?v=SPemggbhoeo,Workshop AI | Framer Code with AI,Jesse Showalter,2025-05-28T13:28:26Z,85
+Framer AI,youtube,https://www.youtube.com/watch?v=pbnzIaj3fRo,Build A Powerful Website With Framer | AI + CMS 2026 Guide,AI Tooltip,2026-04-11T12:17:06Z,85
+Framer AI,hackernews,https://www.framer.com/ai,Framer AI – Generate and publish your site with AI in seconds,ujnproduct,2023-06-13T20:27:27Z,70
+Framer AI,hackernews,https://news.ycombinator.com/item?id=36826522,Ask HN: Everyone wants my idea but no one is dying without it,Vishal19111999,2023-07-22T14:27:06Z,70
+Framer AI,hackernews,https://news.ycombinator.com/item?id=36788413,"Ask HN: If I build a product for my business, is it bound to succeed?",Vishal19111999,2023-07-19T15:51:50Z,70
+Framer AI,hackernews,https://news.ycombinator.com/item?id=36641688,Ask HN: Is Supabase RLS enough for my SaaS application?,Vishal19111999,2023-07-08T05:49:14Z,70
+Framer AI,hackernews,https://news.ycombinator.com/item?id=36664196,Ask HN: How to decide between 2 tempting markets for the same product?,Vishal19111999,2023-07-10T10:12:58Z,70
+Vercel,github,https://github.com/affaan-m/ECC,affaan-m/ECC,affaan-m,2026-01-18T00:51:51Z,85
+Vercel,github,https://github.com/avelino/awesome-go,avelino/awesome-go,avelino,2014-07-06T13:42:15Z,85
+Vercel,github,https://github.com/vercel/next.js,vercel/next.js,vercel,2016-10-05T23:32:51Z,85
+Vercel,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Vercel,github,https://github.com/oven-sh/bun,oven-sh/bun,oven-sh,2021-04-14T00:48:17Z,85
+Vercel,youtube,https://www.youtube.com/watch?v=undefined,Vercel,Vercel,2017-04-28T18:49:45Z,85
+Vercel,youtube,https://www.youtube.com/watch?v=sPmat30SE4k,Vercel Product Walkthrough,Vercel,2023-07-12T00:50:17Z,85
+Vercel,youtube,https://www.youtube.com/watch?v=5tzeYGe3P0Q,What Vercel actually do? #vercel #software #tech,Caleb King,2024-04-08T22:15:12Z,85
+Vercel,youtube,https://www.youtube.com/watch?v=zFXscjUoDDA,Vercel Product Walkthrough (2026),Vercel,2026-03-16T13:15:16Z,85
+Vercel,youtube,https://www.youtube.com/watch?v=d4U_lnJLG_o,V0 Vercel AI Tutorial | Build A Web App Using AI for Beginners (Step by Step),Decoding Product with Maria,2025-09-13T15:58:41Z,85
+Vercel,rss,https://vercel.com/changelog/edit-git-settings-for-all-projects-in-a-repo,Edit Git settings for all projects in a repo,Vercel Blog,2026-06-02T06:00:00.000Z,75
+Vercel,rss,https://vercel.com/changelog/signed-urls-are-now-available-for-vercel-blob,Signed URLs are now available for Vercel Blob,Vercel Blog,2026-06-02T00:00:00.000Z,75
+Vercel,rss,https://vercel.com/changelog/elastic-build-machines-now-protect-against-out-of-memory-builds,Elastic Build Machines now protect against out of memory builds,Vercel Blog,2026-06-01T18:30:00.000Z,75
+Vercel,rss,https://vercel.com/changelog/qwen-3-7-plus-now-available-on-ai-gateway,Qwen 3.7 Plus now available on AI Gateway,Vercel Blog,2026-06-01T07:00:00.000Z,75
+Vercel,rss,https://vercel.com/changelog/vercel-blob-now-supports-oidc-authentication,Vercel Blob now supports OIDC authentication,Vercel Blog,2026-06-01T00:00:00.000Z,75
+Vercel,hackernews,https://gist.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28,"We pwned X, Vercel, Cursor, and Discord through a supply-chain attack",hackermondev,2025-12-18T19:08:48Z,70
+Vercel,x_proof,https://twitter.com/Rich_Harris/status/1458822051263823875,Rich Harris joins Vercel to work on Svelte full time,leodriesch,2021-11-11T15:43:47Z,95
+Vercel,hackernews,https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/,Vercel April 2026 security incident,colesantiago,2026-04-19T14:14:38Z,70
+Vercel,hackernews,https://github.com/taubyte/tau,Tau: Open-source PaaS – A self-hosted Vercel / Netlify / Cloudflare alternative,thunderbong,2024-07-12T14:41:22Z,70
+Vercel,hackernews,https://coolify.io/,Coolify: Open-source and self-hostable Heroku / Netlify / Vercel alternative,vanschelven,2025-04-02T12:41:59Z,70
+n8n,github,https://github.com/n8n-io/n8n,n8n-io/n8n,n8n-io,2019-06-22T09:24:21Z,85
+n8n,github,https://github.com/firecrawl/firecrawl,firecrawl/firecrawl,firecrawl,2024-04-15T21:02:29Z,85
+n8n,github,https://github.com/msitarzewski/agency-agents,msitarzewski/agency-agents,msitarzewski,2025-10-13T12:12:29Z,85
+n8n,github,https://github.com/punkpeye/awesome-mcp-servers,punkpeye/awesome-mcp-servers,punkpeye,2024-11-30T04:49:10Z,85
+n8n,github,https://github.com/josephmisiti/awesome-machine-learning,josephmisiti/awesome-machine-learning,josephmisiti,2014-07-15T19:11:19Z,85
+n8n,youtube,https://www.youtube.com/watch?v=gEElEzKazYA,N8n AI Agents are INSANE!!,NetworkChuck,2025-09-22T16:40:27Z,85
+n8n,youtube,https://www.youtube.com/watch?v=2aC2ly7vKtM,I Built the Ultimate Team of Agents in n8n #artificialintelligence #n8n #agentgpt #techtok #coding,Nate Herk | AI Automation,2025-02-03T05:09:21Z,85
+n8n,youtube,https://www.youtube.com/watch?v=vcvRVlc_VFg,Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation,Ed Hill | AI Automation,2025-06-04T09:38:14Z,85
+n8n,youtube,https://www.youtube.com/watch?v=_Wf0NikMyAA,n8n Explained In 2 Minutes,CodeHead,2025-09-11T15:01:07Z,85
+n8n,youtube,https://www.youtube.com/watch?v=ONgECvZNI3o,"You NEED to Use n8n RIGHT NOW!! (Free, Local, Private)",NetworkChuck,2025-07-16T15:41:10Z,85
+n8n,hackernews,https://n8n.io/,N8n.io – Workflow automation alternative to Zapier,tablet,2019-10-08T12:53:04Z,70
+n8n,hackernews,https://github.com/simstudioai/sim,Show HN: Sim – Apache-2.0 n8n alternative,waleedlatif1,2025-12-11T17:20:11Z,70
+n8n,hackernews,https://n8n.io,n8n.io - A powerful workflow automation tool,sacrosanct,2023-08-26T16:06:42Z,70
+n8n,hackernews,https://blog.n8n.io/series-c/,N8n raises $180M,doppp,2025-10-09T09:19:18Z,70
+Apollo,github,https://github.com/practical-tutorials/project-based-learning,practical-tutorials/project-based-learning,practical-tutorials,2017-04-12T05:07:46Z,85
+Apollo,github,https://github.com/avelino/awesome-go,avelino/awesome-go,avelino,2014-07-06T13:42:15Z,85
+Apollo,github,https://github.com/vuejs/awesome-vue,vuejs/awesome-vue,vuejs,2015-10-20T00:16:14Z,85
+Apollo,github,https://github.com/enaqx/awesome-react,enaqx/awesome-react,enaqx,2014-08-06T05:31:44Z,85
+Apollo,github,https://github.com/hiyouga/LlamaFactory,hiyouga/LlamaFactory,hiyouga,2023-05-28T10:09:12Z,85
+Apollo,youtube,https://www.youtube.com/watch?v=Lo1diAwP07M,The Apollo | A Helping Hand | Ep 301,Mackwop TV,2026-05-31T03:23:08Z,85
+Apollo,youtube,https://www.youtube.com/watch?v=N7psBu0rgwE,DeCory wins Showtime at the Apollo with a stunning performance of R. Kelly&#39;s When a Woman Loves,DeCory Brown,2021-06-21T18:35:45Z,85
+Apollo,youtube,https://www.youtube.com/watch?v=SqTx73r21k0,Bryant Barnes - Apollo,BRYANT BARNES,2026-05-15T04:00:31Z,85
+Apollo,youtube,https://www.youtube.com/watch?v=PAa4qzqabOA,Apollo is the Antichrist and Anubis is the False Prophet? #fallenangel #apollo #anubis,The Confessionals,2025-07-12T02:32:45Z,85
+Apollo,youtube,https://www.youtube.com/watch?v=QnSW0B2oztg,How to Use Apollo.io (2026) – Full B2B Lead Generation Tutorial,Prospeo,2026-04-07T19:46:18Z,85
+Apollo,rss,https://openai.com/index/detecting-and-reducing-scheming-in-ai-models,Detecting and reducing scheming in AI models,OpenAI Blog,"Wed, 17 Sep 2025 00:00:00 GMT",75
+Apollo,hackernews,https://old.reddit.com/r/apolloapp/comments/144f6xm/apollo_will_close_down_on_june_30th_reddits/,Apollo will close down on June 30th,timf,2023-06-08T17:22:27Z,70
+Apollo,hackernews,https://www.npr.org/2021/04/28/509599284/forgotten-astronaut-michael-collins-dies,"Michael Collins, Apollo 11 astronaut, has died",edwinbalani,2021-04-28T16:19:35Z,70
+Apollo,hackernews,https://news.ycombinator.com/item?id=36543894,Apollo is dead. Long live Apollo,bears-n-beets,2023-06-30T23:15:25Z,70
+Apollo,hackernews,https://apolloinrealtime.org/11/,Apollo 11 in Real Time,rosser,2019-06-16T00:42:51Z,70
+Apollo,hackernews,https://techcrunch.com/2023/06/09/reddit-ceo-doubles-down-on-attack-on-apollo-developer-in-drama-filled-ama/,Reddit CEO doubles down on attack on Apollo developer in drama-filled AMA,coloneltcb,2023-06-09T21:12:46Z,70
+Framer,github,https://github.com/sindresorhus/awesome,sindresorhus/awesome,sindresorhus,2014-07-11T13:42:37Z,85
+Framer,github,https://github.com/vinta/awesome-python,vinta/awesome-python,vinta,2014-06-27T21:00:06Z,85
+Framer,github,https://github.com/trimstray/the-book-of-secret-knowledge,trimstray/the-book-of-secret-knowledge,trimstray,2018-06-23T10:43:14Z,85
+Framer,github,https://github.com/affaan-m/ECC,affaan-m/ECC,affaan-m,2026-01-18T00:51:51Z,85
+Framer,github,https://github.com/ultraworkers/claw-code,ultraworkers/claw-code,ultraworkers,2026-03-31T08:58:08Z,85
+Framer,youtube,https://www.youtube.com/watch?v=P5H7zs0RsUM,Learn Framer in 20 Minutes (Crash Course),Flux Academy,2023-03-28T13:00:16Z,85
+Framer,youtube,https://www.youtube.com/watch?v=6xJWQRVl9nw,"Framer: All Design, No Code, Real Websites",Framer,2024-05-16T15:53:17Z,85
+Framer,youtube,https://www.youtube.com/watch?v=1w6HIurOqjw,Framer Complete Course 2026,Average Design Dude,2025-10-13T07:00:02Z,85
+Framer,youtube,https://www.youtube.com/watch?v=izpblc6ppwk,Framer - Full Tutorial for Beginners 2026: How to Use Framer AI,Mikey Website,2026-02-17T13:49:27Z,85
+Framer,youtube,https://www.youtube.com/watch?v=mGyOz4tkJKw,Framer Tutorial: Build a Site That Actually Looks &quot;Pro&quot; (2026),Framer University,2026-01-09T11:01:34Z,85
+Framer,hackernews,https://www.nan.fyi/magic-motion,Framer's Magic Motion,bpierre,2022-12-06T01:19:50Z,70
+Framer,hackernews,https://www.framer.com/docs/three-introduction/,Framer Motion 3D,tilt,2021-12-13T15:05:42Z,70
+Framer,hackernews,http://joostdevblog.blogspot.com/2012/04/depth-of-field-blur-swiss-army-knife.html,Depth of field blur: the Swiss army knife that improved the framerate,exch,2012-04-09T14:01:01Z,70
+Framer,hackernews,https://purelyfunctional.tv/article/react-vs-re-frame/,Things Reacters do that Re-framers avoid,zonotope,2017-09-02T18:41:09Z,70
+Framer,hackernews,https://github.com/steve-m/Pico-100BASE-TX,Pico-100BASE-TX: Bit-Banged 100 MBit/s Ethernet and UDP Framer for RP2040/RP2350,_Microft,2025-10-31T05:23:52Z,70
+Typefully,github,https://github.com/josephmisiti/awesome-machine-learning,josephmisiti/awesome-machine-learning,josephmisiti,2014-07-15T19:11:19Z,85
+Typefully,github,https://github.com/vsouza/awesome-ios,vsouza/awesome-ios,vsouza,2014-07-10T16:03:45Z,85
+Typefully,github,https://github.com/VoltAgent/awesome-agent-skills,VoltAgent/awesome-agent-skills,VoltAgent,2025-10-28T08:55:32Z,85
+Typefully,github,https://github.com/bleedline/aimoneyhunter,bleedline/aimoneyhunter,bleedline,2023-12-14T05:35:10Z,85
+Typefully,github,https://github.com/swyxio/spark-joy,swyxio/spark-joy,swyxio,2019-05-02T04:21:03Z,85
+Typefully,youtube,https://www.youtube.com/watch?v=Pa4U-IkirbU,"Typefully Review: Best X/Twitter, Threads, LinkedIn Scheduler 2026",David Alex,2025-11-17T13:30:33Z,85
+Typefully,youtube,https://www.youtube.com/watch?v=Q0Lrdm-DEFE,Typefully Review (2026): Is This the Best Twitter &amp; LinkedIn Scheduler?,Click Guide,2025-07-07T14:15:24Z,85
+Typefully,youtube,https://www.youtube.com/watch?v=xSc_mctNBfU,Typefully vs Hypefury (2026) - Which One Is BETTER?,Paperclick,2025-08-20T07:40:43Z,85
+Typefully,youtube,https://www.youtube.com/watch?v=3nuEPCprN5Y,How to Use Typefully - Tutorial Demo and Review,Chris with Minn Media,2024-10-03T19:58:36Z,85
+Typefully,youtube,https://www.youtube.com/watch?v=3mHvptafVqo,Typefully Tutorial Best XTwitter Scheduling Tool 2025,Help Me Solve,2025-12-15T17:00:06Z,85
+Typefully,hackernews,https://typefully.com/NeoYokel/the-timely-mastodon-primer-vBMoyRY,The Timely Mastodon Primer (Typefully),davidblue,2022-11-09T04:59:39Z,70
+Typefully,hackernews,https://news.ycombinator.com/item?id=46742181,Show HN: 3 months cloning Typefully with Claude Code – here's what I learned,yeeyang,2026-01-24T09:25:44Z,70
+Typefully,hackernews,https://www.smashlanding.xyz,Show HN: Built a tool that turns your GitHub commits into build-in-public posts,TedOS,2026-03-01T08:47:30Z,70
+Typefully,hackernews,https://news.ycombinator.com/item?id=34375477,Mailbrew has a new home (and is now free),lylo,2023-01-13T23:43:04Z,70
+Typefully,hackernews,https://typefully.com/DanHollick/qr-codes-T7tLlNi,How a QR code works,todsacerdoti,2022-09-14T14:17:43Z,70
+Slack,github,https://github.com/codecrafters-io/build-your-own-x,codecrafters-io/build-your-own-x,codecrafters-io,2018-05-09T12:03:18Z,85
+Slack,github,https://github.com/sindresorhus/awesome,sindresorhus/awesome,sindresorhus,2014-07-11T13:42:37Z,85
+Slack,github,https://github.com/public-apis/public-apis,public-apis/public-apis,public-apis,2016-03-20T23:49:42Z,85
+Slack,github,https://github.com/openclaw/openclaw,openclaw/openclaw,openclaw,2025-11-24T10:16:47Z,85
+Slack,github,https://github.com/donnemartin/system-design-primer,donnemartin/system-design-primer,donnemartin,2017-02-26T16:15:28Z,85
+Slack,youtube,https://www.youtube.com/watch?v=undefined,Slack,Slack,2014-08-06T19:55:59Z,85
+Slack,youtube,https://www.youtube.com/watch?v=Yt66-u5UVOM,Slack for Beginners | How To Use Slack In Just 6 Minutes,Uvaro,2023-03-31T17:00:16Z,85
+Slack,youtube,https://www.youtube.com/watch?v=cR7s3ng9GZs,How To Use Slack (2026 Easy Guide),MARK_bro,2026-01-31T00:19:52Z,85
+Slack,youtube,https://www.youtube.com/watch?v=2CGppw8cHyU,How to Use Slack - Tutorial for Beginners,Howfinity,2025-02-17T18:56:30Z,85
+Slack,youtube,https://www.youtube.com/watch?v=EDATYbzYGiE,What is Slack? | Your Work OS | Slack,Slack,2024-10-24T16:32:45Z,85
+Slack,rss,https://openai.com/index/codex-now-generally-available,Codex is now generally available,OpenAI Blog,"Mon, 06 Oct 2025 10:50:00 GMT",75
+Slack,rss,https://openai.com/index/canva,Creating an AI-powered Magic Studio,OpenAI Blog,"Thu, 16 May 2024 00:00:00 GMT",75
+Slack,rss,https://vercel.com/changelog/chat-sdk-now-supports-scheduled-slack-messages,Chat SDK now supports scheduled Slack messages,Vercel Blog,2026-03-24T14:00:00.000Z,75
+Slack,rss,https://vercel.com/blog/building-slack-agents-can-be-easy,Building Slack agents can be easy,Vercel Blog,2026-03-03T13:00:00.000Z,75
+Slack,rss,https://vercel.com/changelog/slack-agent-skill-simplifies-building-slack-agents-with-coding-assistants,Slack Agent Skill simplifies building Slack agents with coding assistants,Vercel Blog,2026-02-24T13:00:00.000Z,75
+Slack,hackernews,https://mahadk.com/posts/slack,Slack has raised our charges by $195k per year,JustSkyfall,2025-09-18T01:37:11Z,70
+Slack,hackernews,https://quuxplusone.github.io/blog/2019/11/20/slack-rich-text-box/,Slack’s new WYSIWYG input box is terrible,ingve,2019-11-20T23:13:09Z,70
+Slack,hackernews,https://www.mooreds.com/wordpress/archives/3451,Use forums rather than Slack/Discord to support developer community,gk1,2021-11-08T21:01:14Z,70
+Slack,hackernews,https://news.ycombinator.com/item?id=21961560,Ask HN: I've been slacking off at Google for 6 years. How can I stop this?,futur321,2020-01-05T15:16:06Z,70
+Slack,hackernews,https://news.ycombinator.com/item?id=16539857,Tell HN: Slack decides to close down IRC and XMPP gateways,elektron,2018-03-07T21:01:51Z,70
+HubSpot,github,https://github.com/donnemartin/system-design-primer,donnemartin/system-design-primer,donnemartin,2017-02-26T16:15:28Z,85
+HubSpot,github,https://github.com/airbnb/javascript,airbnb/javascript,airbnb,2012-11-01T23:13:50Z,85
+HubSpot,github,https://github.com/punkpeye/awesome-mcp-servers,punkpeye/awesome-mcp-servers,punkpeye,2024-11-30T04:49:10Z,85
+HubSpot,github,https://github.com/bradtraversy/design-resources-for-developers,bradtraversy/design-resources-for-developers,bradtraversy,2020-05-06T14:40:35Z,85
+HubSpot,github,https://github.com/ComposioHQ/awesome-claude-skills,ComposioHQ/awesome-claude-skills,ComposioHQ,2025-10-17T07:15:01Z,85
+HubSpot,youtube,https://www.youtube.com/watch?v=eGjfmA4HTBc,HubSpot Sales Hub CRM Demo [2025],Luke Marthinusen,2024-11-20T14:23:32Z,85
+HubSpot,youtube,https://www.youtube.com/watch?v=t8QM5zunC44,HubSpot CRM Tutorial for Beginners 2026 (Step-by-Step),Metics Media,2025-07-18T13:01:45Z,85
+HubSpot,youtube,https://www.youtube.com/watch?v=1fGags-d-e4,HubSpot CRM Setup Guide 2026: The First 10 Things You MUST Do!,Neighbourhood Co.,2026-02-26T00:30:03Z,85
+HubSpot,youtube,https://www.youtube.com/watch?v=vLSEY3ieswY,What is HubSpot | The Ultimate Marketing &amp; Sales Tool,Marketing Explained,2022-05-30T15:00:35Z,85
+HubSpot,youtube,https://www.youtube.com/watch?v=GnIREMgz-SQ,What is HubSpot?,HubSpot,2024-09-12T15:39:20Z,85
+HubSpot,hackernews,https://www.hubspot.com/company-news/welcoming-clearbit-to-hubspot,HubSpot Acquires Clearbit,jcolman,2023-11-01T13:10:55Z,70
+HubSpot,hackernews,https://readthink.com/scale-up-leadership-lessons-i-ve-learned-over-9-years-as-hubspot-s-ceo-39521f5b7567,Scale-Up Leadership Lessons I've Learned Over 9 Years as HubSpot's CEO,BrianPHalligan,2016-01-11T22:49:56Z,70
+HubSpot,hackernews,https://network.hubspot.com/slides/the-hubspot-culture-code,The HubSpot Culture Code [slides],dshah,2020-11-20T14:34:17Z,70
+HubSpot,hackernews,https://www.linkedin.com/pulse/undisrupted-hubspots-reflections-disrupted-dan-lyons-dharmesh-shah,Undisrupted: HubSpot's Reflections on “Disrupted”,bognition,2016-04-12T20:46:01Z,70
+HubSpot,hackernews,https://product.hubspot.com/blog/context-is-key-how-hubspot-scaled-ai-adoption,How HubSpot scaled AI adoption,zek,2025-09-24T14:42:49Z,70
+Instantly,github,https://github.com/public-apis/public-apis,public-apis/public-apis,public-apis,2016-03-20T23:49:42Z,85
+Instantly,github,https://github.com/donnemartin/system-design-primer,donnemartin/system-design-primer,donnemartin,2017-02-26T16:15:28Z,85
+Instantly,github,https://github.com/vinta/awesome-python,vinta/awesome-python,vinta,2014-06-27T21:00:06Z,85
+Instantly,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Instantly,github,https://github.com/n8n-io/n8n,n8n-io/n8n,n8n-io,2019-06-22T09:24:21Z,85
+Instantly,youtube,https://www.youtube.com/watch?v=tVhslsVNOf4,Full Instantly.ai Tutorial 2025 (Best Cold Email Software),Instantly,2025-09-07T20:00:37Z,85
+Instantly,youtube,https://www.youtube.com/watch?v=rzywVy64AJU,Instantly.ai Full Beginner Tutorial (2026),Vincent Robin,2026-03-05T14:01:30Z,85
+Instantly,youtube,https://www.youtube.com/watch?v=kGZq0UnL-IM,Drego &amp; Beno Feat 40 GlockBoy &quot;Instantly&quot; (Official Music Video),Drego & Beno,2018-08-22T19:17:47Z,85
+Instantly,youtube,https://www.youtube.com/watch?v=Z78BL1OHC4M,speedrunning cold email from 0 to first booked call (i show everything),Instantly,2025-12-21T16:00:55Z,85
+Instantly,youtube,https://www.youtube.com/watch?v=l5CKzaPie58,FAST and AGGRESSIVE ASMR (for Charity),ASMR Summer,2026-06-02T18:00:04Z,85
+Instantly,rss,https://openai.com/index/start-using-chatgpt-instantly,Start using ChatGPT instantly,OpenAI Blog,"Mon, 01 Apr 2024 00:00:00 GMT",75
+Instantly,hackernews,http://launchaco.com/build/,"Launchaco – Instantly generate a responsive, free, website",marclave,2016-12-07T21:07:59Z,70
+Instantly,x_proof,https://twitter.com/jmmv/status/1671670996921896960,Windows NT on 600MHz machine opens apps instantly. What happened?,dceddia,2023-06-23T14:02:12Z,95
+Instantly,hackernews,https://github.com/blog/1081-instantly-beautiful-project-pages,Instantly create beautiful GitHub project pages,tanoku,2012-04-02T16:49:04Z,70
+Instantly,hackernews,https://www.blog.google/products/g-suite/visualize-data-instantly-machine-learning-google-sheets/,Visualize data instantly with machine learning in Google Sheets,pmcpinto,2017-06-02T13:22:22Z,70
+Instantly,hackernews,https://books-search.typesense.org/,Show HN: Instantly search 28M books from OpenLibrary,jabo,2020-12-14T07:22:09Z,70
+Adapt,github,https://github.com/codecrafters-io/build-your-own-x,codecrafters-io/build-your-own-x,codecrafters-io,2018-05-09T12:03:18Z,85
+Adapt,github,https://github.com/EbookFoundation/free-programming-books,EbookFoundation/free-programming-books,EbookFoundation,2013-10-11T06:50:37Z,85
+Adapt,github,https://github.com/donnemartin/system-design-primer,donnemartin/system-design-primer,donnemartin,2017-02-26T16:15:28Z,85
+Adapt,github,https://github.com/vinta/awesome-python,vinta/awesome-python,vinta,2014-06-27T21:00:06Z,85
+Adapt,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Adapt,youtube,https://www.youtube.com/watch?v=54KWF9jhMNY,Harvest of Chaos Arrives,Adapt 2030,2026-06-01T20:30:23Z,85
+Adapt,youtube,https://www.youtube.com/watch?v=Nc0CFroCTEQ,"MY MODIFIED $150,000 MERCEDES AMG GLE 63 S!",Adapt Live,2026-05-30T00:37:56Z,85
+Adapt,youtube,https://www.youtube.com/watch?v=vLj8HZ5caAA,I Gave Them HYPEBEAST Outfits From 2017...,Adapt Live,2026-05-26T23:05:04Z,85
+Adapt,youtube,https://www.youtube.com/watch?v=rI0C0Tzp4KQ,YourRAGE and Adapt realized they have the same shoulder tattoo😭😭,YourRAGE,2025-10-11T21:42:23Z,85
+Adapt,youtube,https://www.youtube.com/watch?v=MqseNO08dF0,Faze Adapt moments!! #faze #shorts #fazeclan #funny #adapt,Bannan,2025-07-22T10:25:09Z,85
+Adapt,rss,https://openai.com/index/our-approach-to-localization,"Making AI work for everyone, everywhere: our approach to localization",OpenAI Blog,"Fri, 06 Feb 2026 10:00:00 GMT",75
+Adapt,rss,https://openai.com/index/praktika,Inside Praktika's conversational approach to language learning,OpenAI Blog,"Thu, 22 Jan 2026 00:00:00 GMT",75
+Adapt,rss,https://openai.com/index/gpt-5-1-for-developers,Introducing GPT-5.1 for developers,OpenAI Blog,"Thu, 13 Nov 2025 00:00:00 GMT",75
+Adapt,rss,https://openai.com/index/notion,Notion’s GPT‑5 rebuild unlocks autonomous AI workflows,OpenAI Blog,"Fri, 07 Nov 2025 10:00:00 GMT",75
+Adapt,rss,https://openai.com/global-affairs/intellectual-freedom-by-design,Intellectual freedom by design,OpenAI Blog,"Tue, 15 Jul 2025 00:00:00 GMT",75
+Adapt,hackernews,https://workspaceupdates.googleblog.com/2024/05/google-meet-adaptive-audio.html,Google Meet rolls out multi-device adaptive audio merging,tfsh,2024-05-26T15:22:02Z,70
+Adapt,hackernews,https://www.jeffgeerling.com/blog/2026/new-10-gbe-usb-adapters-cooler-smaller-cheaper/,"New 10 GbE USB adapters are cooler, smaller, cheaper",calcifer,2026-04-25T05:56:12Z,70
+Adapt,hackernews,http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html,Macbook charger teardown: surprising complexity inside Apple's power adapter,robin_reala,2015-11-25T17:15:45Z,70
+Adapt,hackernews,https://hackaday.com/2022/12/27/all-about-usb-c-illegal-adapters/,All About USB-C: Illegal Adapters,zdw,2022-12-27T18:14:56Z,70
+Adapt,hackernews,https://fabiensanglard.net/ega/,Commander Keen's adaptive tile refresh,atan2,2023-07-27T19:18:42Z,70
+CatDoes,github,https://github.com/nowork-studio/awesome-ai-startups,nowork-studio/awesome-ai-startups,nowork-studio,2026-05-09T05:31:45Z,85
+CatDoes,github,https://github.com/Alplox/mis-recursos-webdev,Alplox/mis-recursos-webdev,Alplox,2021-04-22T03:36:10Z,85
+CatDoes,github,https://github.com/starryrbs/awesome-ai-tools,starryrbs/awesome-ai-tools,starryrbs,2025-09-10T09:02:14Z,85
+CatDoes,github,https://github.com/catdoes/CatDoes,catdoes/CatDoes,catdoes,2025-07-11T20:53:41Z,85
+CatDoes,github,https://github.com/poweredbyai-directory/best-ai-tools-poweredbyai,poweredbyai-directory/best-ai-tools-poweredbyai,poweredbyai-directory,2026-05-11T11:46:04Z,85
+CatDoes,hackernews,https://thiscatdoesnotexist.com/,This Cat Does Not Exist,ChrisArchitect,2019-02-20T15:22:18Z,70
+CatDoes,hackernews,http://www.huffingtonpost.com/entry/cats-mental-illness-toxoplasma_us_58adc06ae4b03d80af714072,"Having a Cat Does Not Cause Mental Illness, New Study Suggests",intergalactic,2017-02-22T21:08:33Z,70
+CatDoes,hackernews,https://catdoes.com/,CatDoes,nafisehamiri,2025-09-21T21:09:00Z,70
+CatDoes,hackernews,https://catdoes.com,CatDoes – Words to Native Apps,mahdinouri,2025-04-20T20:50:43Z,70
+remio,github,https://github.com/jaywcjlove/awesome-mac,jaywcjlove/awesome-mac,jaywcjlove,2016-07-17T15:33:47Z,85
+remio,github,https://github.com/deepseek-ai/awesome-deepseek-integration,deepseek-ai/awesome-deepseek-integration,deepseek-ai,2024-01-11T02:43:17Z,85
+remio,github,https://github.com/kasuie/remio-home,kasuie/remio-home,kasuie,2024-05-20T08:46:30Z,85
+remio,github,https://github.com/iamramanarora/TopAutomationTools,iamramanarora/TopAutomationTools,iamramanarora,2025-07-12T17:18:29Z,85
+remio,github,https://github.com/Correia-jpv/fucking-awesome-mac,Correia-jpv/fucking-awesome-mac,Correia-jpv,2022-01-31T12:32:59Z,85
+remio,hackernews,https://remio.io/,Remio Al Note Taker,zoudong376,2025-05-05T13:58:25Z,70
+remio,hackernews,https://news.ycombinator.com/item?id=26651495,Maintaining a great company culture as a distributed team with virtual reality,josvdwest,2021-03-31T18:59:42Z,70
+remio,hackernews,https://www.remio.ai,Show HN: AI second brain without headaches,AliceH0521,2026-01-14T10:16:45Z,70
+remio,hackernews,https://remiounadjela.substack.com/p/data-science-cutting-through-the-bullsht,"Data Science, cutting through the Bullshit",factorymoo,2023-03-08T17:01:41Z,70
+remio,hackernews,https://remiounadjela.substack.com/p/data-scientists-the-most-ambiguous-role,Data Scientists: the most ambiguous role of the 21st century,factorymoo,2023-03-29T16:00:26Z,70
+Dock,github,https://github.com/jaywcjlove/awesome-mac,jaywcjlove/awesome-mac,jaywcjlove,2016-07-17T15:33:47Z,85
+Dock,github,https://github.com/ocornut/imgui,ocornut/imgui,ocornut,2014-07-21T14:29:47Z,85
+Dock,github,https://github.com/Eugeny/tabby,Eugeny/tabby,Eugeny,2016-12-23T09:06:10Z,85
+Dock,github,https://github.com/tw93/Mole,tw93/Mole,tw93,2025-09-23T06:38:40Z,85
+Dock,github,https://github.com/sickcodes/Docker-OSX,sickcodes/Docker-OSX,sickcodes,2020-06-04T11:01:37Z,85
+Dock,rss,https://vercel.com/changelog/run-docker-containers-inside-vercel-sandbox,Run Docker containers inside Vercel Sandbox,Vercel Blog,2026-05-29T00:01:00.000Z,75
+Dock,hackernews,https://github.com/docker/docker.github.io/issues/6910,Docker cannot be downloaded without logging into Docker Store,dhuramas,2018-08-20T23:03:22Z,70
+Dock,hackernews,https://blog.alexellis.io/docker-is-deleting-open-source-images/,Docker is deleting Open Source organisations - what you need to know,alexellisuk,2023-03-15T10:57:11Z,70
+Dock,hackernews,https://arslan.io/2024/09/23/dieter-rams-inspired-iphone-dock/,I designed a Dieter Rams-inspired iPhone dock,farslan,2024-09-23T07:51:26Z,70
+Dock,hackernews,https://news.ycombinator.com/item?id=47738883,Tell HN: Docker pull fails in Spain due to football Cloudflare block,littlecranky67,2026-04-12T12:28:57Z,70
+Dock,hackernews,https://news.ycombinator.com/item?id=19763413,"Docker Hub Hacked – 190k accounts, GitHub tokens revoked, builds disabled",lugg,2019-04-27T02:36:01Z,70
+BookYolo,github,https://github.com/BookYoloTech/white-paper,BookYoloTech/white-paper,BookYoloTech,2026-02-08T14:12:52Z,85
+BookYolo,github,https://github.com/sherryomer/BookYoloBackend,sherryomer/BookYoloBackend,sherryomer,2025-08-25T19:00:04Z,85
+BookYolo,github,https://github.com/hamzagithubrit/BookYoloWeb,hamzagithubrit/BookYoloWeb,hamzagithubrit,2025-08-25T12:39:19Z,85
+BookYolo,github,https://github.com/hamzagithubrit/BookYoloApp,hamzagithubrit/BookYoloApp,hamzagithubrit,2025-08-25T12:28:53Z,85
+BookYolo,github,https://github.com/sherryomer/BookYoloWebFrontend,sherryomer/BookYoloWebFrontend,sherryomer,2025-08-25T20:03:29Z,85
+BookYolo,hackernews,http://twelvesouth.com/products/bookbook/,BookBook - a stealthy cover for MacBook,helwr,2010-01-26T06:00:15Z,70
+BookYolo,hackernews,http://time.com/3265308/ikea-catalog-2015/,IKEA Channels Apple in a Hilarious Ad for Its New Catalog ‘Bookbook’,klintcho,2014-09-04T14:19:49Z,70
+BookYolo,hackernews,http://www.bookbookgoose.com/,"Bookbookgoose: browse books, randomly",DanielRibeiro,2013-01-11T09:30:28Z,70
+BookYolo,hackernews,https://github.com/booklore-app/booklore,"BookLore: A self-hosted, multi-user digital library",thunderbong,2026-01-25T03:20:06Z,70
+BookYolo,hackernews,http://bedsider.org/bootylog,BootyLog: The Overshare App,keywonc,2012-12-12T05:01:52Z,70
+Flyne AI,github,https://github.com/tap4-ai/awesome-seedance-ai-tools,tap4-ai/awesome-seedance-ai-tools,tap4-ai,2026-04-11T16:27:47Z,85
+Flyne AI,github,https://github.com/kevinbpatel/FlyNext,kevinbpatel/FlyNext,kevinbpatel,2025-04-09T21:49:27Z,85
+Flyne AI,github,https://github.com/a2zinovation/flynet-ai-engine,a2zinovation/flynet-ai-engine,a2zinovation,2026-03-09T15:31:21Z,85
+Flyne AI,github,https://github.com/pray21wq/Roblox.lua,pray21wq/Roblox.lua,pray21wq,2023-04-30T07:32:57Z,85
+Flyne AI,hackernews,https://eng.lyft.com/orchestrating-data-pipelines-at-lyft-comparing-flyte-and-airflow-72c40d143aad?gi=76067277283d,Orchestrating Data Pipelines at Lyft: Comparing Flyte and Airflow,kumare3,2022-03-24T23:05:59Z,70
+Flyne AI,hackernews,https://www.theglobeandmail.com/business/international-business/article-british-airline-flybe-collapses-as-coronavirus-outbreak-takes-a-toll/,British airline Flybe collapses as coronavirus hits global carriers,finphil,2020-03-05T15:48:50Z,70
+Flyne AI,hackernews,https://eng.lyft.com/orchestrating-data-pipelines-at-lyft-comparing-flyte-and-airflow-72c40d143aad?gi=dc59382113b9,Data Pipelines at Lyft,cheeseblubber,2022-03-25T00:57:44Z,70
+Flyne AI,hackernews,http://www.writersdojo.org/Flynn+Aim+for+Chopping+Block,"Who will teach me to write/code? The page, the page, that eternal blankness...",sutro,2009-09-01T06:23:26Z,70
+Flyne AI,hackernews,https://eng.lyft.com/flyte-joins-lf-ai-data-48c9b4b60eec,Lyft: Flyte Joins LF AI and Data,kumare3,2021-03-18T20:16:13Z,70
+Floot,github,https://github.com/Floobits/flootty,Floobits/flootty,Floobits,2013-03-29T15:21:02Z,85
+Floot,github,https://github.com/flatlogic/awesome-ai-software-development-agents,flatlogic/awesome-ai-software-development-agents,flatlogic,2025-03-03T14:49:58Z,85
+Floot,github,https://github.com/davidshares/Lightning-Network,davidshares/Lightning-Network,davidshares,2021-03-29T13:26:12Z,85
+Floot,github,https://github.com/yuntian001/multi-process-queue,yuntian001/multi-process-queue,yuntian001,2021-04-20T01:48:55Z,85
+Floot,github,https://github.com/dagbrown/flooterbuck,dagbrown/flooterbuck,dagbrown,2008-03-10T06:11:37Z,85
+Floot,hackernews,https://news.ycombinator.com/item?id=45299786,Have you tried floot for vibe-coding? What was your experience?,ShayanSpiel,2025-09-19T09:48:47Z,70
+Floot,hackernews,https://itunes.apple.com/fr/app/project-flootsh/id561076618?mt=8,My gamish iPad app to make the flute cooler,kyoshiroo,2012-11-07T22:22:52Z,70
+Floot,hackernews,http://www.floota.com/desk_jockey.html,Desk Jockey: What Sitting All Day is Doing to Your Body,a_magical_me,2011-02-19T03:11:44Z,70
+Floot,hackernews,https://news.ycombinator.com/item?id=5748657,Ask HN: How it Works: what do the Dave Winer threads tell us about sexism in IT?,flootch,2013-05-22T03:16:47Z,70
+Floot,hackernews,https://www.youtube.com/watch?v=eMngIbm1OBE,Liberalisms' great trick has been to naturalize difficult political contests,flootch,2017-02-11T10:59:39Z,70
+Subquadratic,github,https://github.com/state-spaces/mamba,state-spaces/mamba,state-spaces,2023-12-01T01:17:39Z,85
+Subquadratic,github,https://github.com/fla-org/flash-linear-attention,fla-org/flash-linear-attention,fla-org,2023-12-20T06:50:18Z,85
+Subquadratic,github,https://github.com/ai-boost/awesome-ai-for-science,ai-boost/awesome-ai-for-science,ai-boost,2025-10-04T09:32:39Z,85
+Subquadratic,github,https://github.com/Event-AHU/Mamba_State_Space_Model_Paper_List,Event-AHU/Mamba_State_Space_Model_Paper_List,Event-AHU,2024-01-26T07:25:02Z,85
+Subquadratic,github,https://github.com/XiudingCai/Awesome-Mamba-Collection,XiudingCai/Awesome-Mamba-Collection,XiudingCai,2024-01-29T02:12:25Z,85
+Subquadratic,hackernews,https://subq.ai/introducing-subq,SubQ: a sub-quadratic LLM with 12M-token context,mitchwainer,2026-05-05T14:37:12Z,70
+Subquadratic,hackernews,https://thenewstack.io/subquadratic-12-million-context-window/,The context window has been shattered: Subquadratic debuts a 12M token window,gmays,2026-05-09T15:15:39Z,70
+Subquadratic,hackernews,https://subq.ai/,SubQ: Sub-quadratic LLM built for 12M-token context,gagan2020,2026-05-05T18:06:57Z,70
+AI Effect.Art,github,https://github.com/remance/Masendor,remance/Masendor,remance,2020-05-27T15:21:52Z,85
+AI Effect.Art,github,https://github.com/cn-vhql/StoryCraft,cn-vhql/StoryCraft,cn-vhql,2026-01-24T15:15:58Z,85
+AI Effect.Art,github,https://github.com/lelandg/ImageAI,lelandg/ImageAI,lelandg,2025-08-29T04:41:49Z,85
+AI Effect.Art,github,https://github.com/erickkkyt/awesome-gptimage2-prompts,erickkkyt/awesome-gptimage2-prompts,erickkkyt,2026-04-17T06:44:41Z,85
+AI Effect.Art,github,https://github.com/TyttiKatariina/High-Risk-Categorisations-in-GDPR-vs-AI-Act,TyttiKatariina/High-Risk-Categorisations-in-GDPR-vs-AI-Act,TyttiKatariina,2024-07-04T09:33:59Z,85
+AI Effect.Art,hackernews,https://news.ycombinator.com/item?id=39026304,Congress Is Trying to Stop AI Nudes and Deepfake Scams as Celebrities Are Mad,6R1M0R4CL3,2024-01-17T11:22:08Z,70
+AI Effect.Art,hackernews,https://news.ycombinator.com/item?id=35744510,Gpt4free repo given takedown notice by OpenAI,devmor,2023-04-28T17:34:34Z,70
+iDox.ai Guardrail,github,https://github.com/anomixer/openclaw-news,anomixer/openclaw-news,anomixer,2026-01-29T03:52:58Z,85
+iDox.ai Guardrail,github,https://github.com/idoxai-dev/guardrail,idoxai-dev/guardrail,idoxai-dev,2026-04-08T23:06:42Z,85
+SciDraw AI,github,https://github.com/crazyhottommy/biotech_resource,crazyhottommy/biotech_resource,crazyhottommy,2021-10-25T13:33:47Z,85
+SciDraw AI,github,https://github.com/JackaZhai/SCIdrawer,JackaZhai/SCIdrawer,JackaZhai,2026-02-26T07:19:44Z,85
+SciDraw AI,github,https://github.com/YNCris/PAPER,YNCris/PAPER,YNCris,2018-01-22T12:44:38Z,85
+SciDraw AI,github,https://github.com/pablogila/SciTools,pablogila/SciTools,pablogila,2023-05-10T16:20:14Z,85
+SciDraw AI,github,https://github.com/DemonDamon/AI-Doc-Illustrator,DemonDamon/AI-Doc-Illustrator,DemonDamon,2025-05-31T03:47:34Z,85
+SciDraw AI,hackernews,https://spidra.io,Show HN: Spidra – AI web scraper that adapts to any website,joelolawanle,2026-03-03T23:27:52Z,70
+SciDraw AI,hackernews,https://index.html.zone/ai/scira,Scira – Minimalistic AI-Powered Search Engine,ccbikai,2025-01-17T03:23:22Z,70
+SciDraw AI,hackernews,https://mcp.scira.ai/,Open-Source MCP Chat That Just Works,andes314,2025-04-28T05:05:56Z,70
+SciDraw AI,hackernews,https://scira.generaltranslation.app,Show HN: Scira-multilingual – Making AI search available in 14 languages,andrew-herndon,2025-05-13T14:16:13Z,70
+SciDraw AI,hackernews,https://github.com/zaidmukaddam/scira,Scira – a minimalistic AI-powered search engine,oldfuture,2025-07-08T16:46:10Z,70
+Saveto AI,github,https://github.com/SuperMonster003/AutoJs6,SuperMonster003/AutoJs6,SuperMonster003,2021-12-01T05:27:22Z,85
+Saveto AI,github,https://github.com/ghimiresunil/Top-AI-Tools,ghimiresunil/Top-AI-Tools,ghimiresunil,2023-01-28T11:57:17Z,85
+Saveto AI,github,https://github.com/bgkillas/kalc,bgkillas/kalc,bgkillas,2023-05-04T03:02:54Z,85
+Saveto AI,github,https://github.com/mozilla/firefox-devtools-mcp,mozilla/firefox-devtools-mcp,mozilla,2025-10-08T17:04:40Z,85
+Saveto AI,github,https://github.com/mahmoodlab/Patho-Bench,mahmoodlab/Patho-Bench,mahmoodlab,2025-01-29T06:38:20Z,85
+Saveto AI,hackernews,https://gitlab.com/LucLab1/chat-archiver,"Chat Archiver save to PC AI chats – with ChatGPT/others (PyQt5, open source)",Techcen,2026-03-23T15:20:51Z,70
+Saveto AI,hackernews,https://running-note-ai.web.app,Show HN: Tool analyzes your running automatically on Strava. Powered by AI,xookeee,2024-07-25T08:40:20Z,70
+Saveto AI,hackernews,https://github.com/KeisukeNagakawa/reprom,Show HN: ReProm – CLI to bundle code and structure into one Markdown for AI,ngkw,2025-01-18T06:45:31Z,70
+Saveto AI,hackernews,https://news.ycombinator.com/item?id=38160280,Show HN: Unlock the Power of AI with Allclues Extension for Seamless Learning,Inshpro,2023-11-06T09:06:38Z,70
+Saveto AI,hackernews,https://github.com/laiso/site2pdf,Show HN: Site2pdf,laiso,2024-07-16T06:22:40Z,70
+Tendem,github,https://github.com/vaamonde/ubuntu-2404,vaamonde/ubuntu-2404,vaamonde,2024-03-01T14:47:11Z,85
+Tendem,github,https://github.com/georgevbsantiago/qsacnpj,georgevbsantiago/qsacnpj,georgevbsantiago,2019-03-26T21:43:38Z,85
+Tendem,github,https://github.com/brunorrr/Anotacoes-AWS-Cloud-Practitioner-Certified,brunorrr/Anotacoes-AWS-Cloud-Practitioner-Certified,brunorrr,2021-07-31T03:23:13Z,85
+Tendem,github,https://github.com/CAECOMP/provas,CAECOMP/provas,CAECOMP,2016-03-29T18:38:41Z,85
+Tendem,github,https://github.com/Toloka/tendem-mcp,Toloka/tendem-mcp,Toloka,2026-01-29T14:11:27Z,85
+Tendem,hackernews,https://tendem.ai/,Tendem: Outsource Tasks to Hybrid AI and Human Workflow,MrBuddyCasino,2026-03-13T12:58:27Z,70
+Tendem,hackernews,https://ticotimes.net/2025/02/02/el-salvador-abandons-bitcoin-as-legal-tender-after-failed-experiment,El Salvador abandons Bitcoin as legal tender,smallerfish,2025-02-04T00:00:13Z,70
+Tendem,hackernews,https://www.bbc.com/news/world-latin-america-57398274,El Salvador makes Bitcoin legal tender,aazaa,2021-06-09T13:45:49Z,70
+Tendem,hackernews,https://www.cnbc.com/2021/06/05/el-salvador-becomes-the-first-country-to-adopt-bitcoin-as-legal-tender-.html,El Salvador to adopt Bitcoin as legal tender,ncpa-cpl,2021-06-05T21:43:27Z,70
+Tendem,hackernews,https://www.bbc.com/worklife/article/20220302-how-mindfulness-can-make-you-a-darker-person,Emerging evidence that mindfulness can sometimes increase selfish tendencies,_jxdz,2022-05-08T17:18:15Z,70
+Rocket,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Rocket,github,https://github.com/avelino/awesome-go,avelino/awesome-go,avelino,2014-07-06T13:42:15Z,85
+Rocket,github,https://github.com/ripienaar/free-for-dev,ripienaar/free-for-dev,ripienaar,2015-03-18T21:06:26Z,85
+Rocket,github,https://github.com/jaywcjlove/awesome-mac,jaywcjlove/awesome-mac,jaywcjlove,2016-07-17T15:33:47Z,85
+Rocket,github,https://github.com/anuraghazra/github-readme-stats,anuraghazra/github-readme-stats,anuraghazra,2020-07-09T10:34:22Z,85
+Rocket,hackernews,https://global.honda/en/topics/2025/c_2025-06-17ceng.html,Honda conducts successful launch and landing of experimental reusable rocket,LorenDB,2025-06-17T15:02:12Z,70
+Rocket,hackernews,https://techcrunch.com/2016/09/01/a-spacex-falcon-9-rocket-just-exploded-at-cape-canaveral/,A SpaceX Falcon 9 rocket has exploded at Cape Canaveral,mariusz79,2016-09-01T13:21:14Z,70
+Rocket,hackernews,https://apnews.com/article/spacex-starship-launch-elon-musk-d9989401e2e07cdfc9753f352e44f6e2,SpaceX Starship rocket explodes minutes after launch from Texas,fnordpiglet,2023-04-20T13:58:04Z,70
+Rocket,hackernews,https://coreos.com/blog/rocket/,"CoreOS is building a container runtime, Rocket",kelseyhightower,2014-12-01T17:57:54Z,70
+Rocket,hackernews,https://www.bbc.com/news/world-europe-45822845,Astronauts escape malfunctioning Soyuz rocket,farseer,2018-10-11T09:12:57Z,70
+VoxDeck,github,https://github.com/jaixbhatia/VoxDeck,jaixbhatia/VoxDeck,jaixbhatia,2025-05-05T08:24:31Z,85
+VoxDeck,github,https://github.com/taimoor-ai/webSocketPresentation,taimoor-ai/webSocketPresentation,taimoor-ai,2026-03-10T12:36:39Z,85
+VoxDeck,github,https://github.com/bladnman/stream_deck_stt_toggle,bladnman/stream_deck_stt_toggle,bladnman,2026-02-07T01:33:36Z,85
+VoxDeck,github,https://github.com/rossilorenzo83/SlideExporter,rossilorenzo83/SlideExporter,rossilorenzo83,2025-09-19T16:09:44Z,85
+VoxDeck,github,https://github.com/Umer1444/PurifyPdf_AI,Umer1444/PurifyPdf_AI,Umer1444,2025-11-02T07:43:03Z,85
+VoxDeck,hackernews,https://coderbits.com/posts/WJroMQ,Vimdeck - Vim as a presentation tool,scottksmith95,2013-09-20T15:50:23Z,70
+VoxDeck,hackernews,https://github.com/GaidamakUA/Voxenko,Voxenko – a voxel editor made with the Godot Engine (2020),app4soft,2023-01-19T19:03:21Z,70
+VoxDeck,hackernews,https://voxdemo.com/,Show HN: VoxDemo – Create demo videos with AI voiceovers,sam_coolstuff,2025-08-20T07:27:04Z,70
+VoxDeck,hackernews,http://blogs.wsj.com/riskandcompliance/2014/01/22/qa-david-vladeck-former-director-of-ftc-consumer-unit/,"Q&A David Vladeck, Former Director of FTC Consumer Unit",tvladeck,2014-01-23T03:14:58Z,70
+VoxDeck,hackernews,https://github.com/tybenz/vimdeck,"VimDeck, use vim as presentation tool",songzme,2013-09-20T21:17:16Z,70
+PixieBrix,github,https://github.com/timc1/kbar,timc1/kbar,timc1,2021-09-01T21:19:20Z,85
+PixieBrix,github,https://github.com/PipedreamHQ/awesome-mcp-servers,PipedreamHQ/awesome-mcp-servers,PipedreamHQ,2025-03-30T02:48:48Z,85
+PixieBrix,github,https://github.com/fregante/webext-storage,fregante/webext-storage,fregante,2023-10-28T09:07:15Z,85
+PixieBrix,github,https://github.com/fregante/webext-tools,fregante/webext-tools,fregante,2021-11-05T14:18:25Z,85
+PixieBrix,github,https://github.com/fregante/webext-content-scripts,fregante/webext-content-scripts,fregante,2021-07-11T19:28:34Z,85
+PixieBrix,hackernews,https://www.computerworld.com/article/3667319/pixiebrix-customize-any-website-low-code-tool.html,PixieBrix: A crafty tool that lets you tailor any website for your team,okpx,2022-07-26T13:48:29Z,70
+PixieBrix,hackernews,https://www.pixiebrix.com/marketplace/1083c853-545e-4761-aa7c-67ecd236749a/hacker-news-highlight/,Show HN: Quickly see trending HN posts with this browser extension,orliesaurus,2022-07-01T19:04:14Z,70
+PixieBrix,hackernews,https://www.pixiebrix.com/blog/a-brief-history-of-browser-extensibility/,A brief history of browser extensibility,pizza,2021-12-04T20:13:29Z,70
+PixieBrix,hackernews,https://news.ycombinator.com/item?id=36721043,Show HN: Retool Portals and Retool Embed,ITguyinNY,2023-07-14T08:34:46Z,70
+PixieBrix,hackernews,https://news.ycombinator.com/item?id=34394110,"For your next side project, make a browser extension",Benjammer,2023-01-15T22:09:01Z,70
+Stockimg AI,github,https://github.com/ai-collection/ai-collection,ai-collection/ai-collection,ai-collection,2023-01-03T06:02:03Z,85
+Stockimg AI,github,https://github.com/ghimiresunil/Top-AI-Tools,ghimiresunil/Top-AI-Tools,ghimiresunil,2023-01-28T11:57:17Z,85
+Stockimg AI,github,https://github.com/re50urces/Awesome-AI,re50urces/Awesome-AI,re50urces,2022-11-30T08:46:07Z,85
+Stockimg AI,github,https://github.com/dair-ai/AI-Product-Index,dair-ai/AI-Product-Index,dair-ai,2022-12-31T20:58:56Z,85
+Stockimg AI,github,https://github.com/meetpateltech/AI-Infinity,meetpateltech/AI-Infinity,meetpateltech,2023-01-22T14:58:32Z,85
+Stockimg AI,hackernews,https://stockimg.ai/text-to-book-cover,Show HN: Book Cover Does Not Exist,askintml,2022-11-07T08:33:05Z,70
+Stockimg AI,hackernews,https://techcrunch.com/2025/11/12/airbnbs-testing-a-kitchen-stocking-service-that-lets-guests-place-instacart-orders-before-their-stay/,Airbnb testing a 'kitchen stocking' service,jbredeche,2025-11-17T18:13:28Z,70
+Stockimg AI,hackernews,https://news.ycombinator.com/item?id=39486724,We open sourced the core of our SaaS. Did we make a mistake?,k11kirky,2024-02-23T22:05:20Z,70
+Stockimg AI,hackernews,https://mechanisticmind.substack.com/p/claude-code-vs-aider,Show HN: Claude Code vs. Aider – Comparing Two Command Line Coding Utilities,qemqemqem,2025-03-20T01:26:36Z,70
+Stockimg AI,hackernews,https://www.bloomberg.com/news/articles/2025-08-27/nvidia-gives-lackluster-forecast-stoking-fears-of-ai-slowdown,Nvidia Forecasts Decelerating Growth After Two-Year AI Boom,wslh,2025-08-28T15:10:07Z,70
+Veriff,github,https://github.com/remote-es/remotes,remote-es/remotes,remote-es,2020-01-30T11:45:11Z,85
+Veriff,github,https://github.com/jshchnz/claude-jobs,jshchnz/claude-jobs,jshchnz,2026-01-26T19:56:48Z,85
+Veriff,github,https://github.com/CertiRocq/VeriFFI,CertiRocq/VeriFFI,CertiRocq,2021-01-20T23:28:18Z,85
+Veriff,github,https://github.com/Veriff/veriff-js-sdk,Veriff/veriff-js-sdk,Veriff,2018-01-24T07:24:39Z,85
+Veriff,github,https://github.com/kycbypass/Android-Phone-Bypass-KYC-verification---No-root-required,kycbypass/Android-Phone-Bypass-KYC-verification---No-root-required,kycbypass,2024-08-04T08:21:43Z,85
+Veriff,hackernews,https://estonianworld.com/business/veriff-laying-off-55-people-in-estonia/,Veriff laying off 55 people in Estonia,workfromspace,2023-08-31T07:11:14Z,70
+Veriff,hackernews,https://www.producthunt.com/posts/veriff-station,Veriff Station: enterprise-level fraud prevention+ID verification for startups,kotkasg,2019-12-03T12:57:16Z,70
+Veriff,hackernews,https://didit.me/en,Show HN: Didit – Identity Verification Platform (Unlimited Free KYC),rosasalberto,2025-09-14T15:42:14Z,70
+Veriff,hackernews,https://9to5google.com/2025/08/25/android-apps-developer-verification/,Google will allow only apps from verified developers to be installed on Android,kotaKat,2025-08-25T18:18:18Z,70
+Veriff,hackernews,https://spectrum.ieee.org/age-verification,The Age Verification Trap: Verifying age undermines everyone's data protection,oldnetguy,2026-02-23T14:22:39Z,70
+QuillBot,github,https://github.com/steven2358/awesome-generative-ai,steven2358/awesome-generative-ai,steven2358,2022-10-20T11:18:17Z,85
+QuillBot,github,https://github.com/promptslab/Awesome-Prompt-Engineering,promptslab/Awesome-Prompt-Engineering,promptslab,2023-02-09T18:22:52Z,85
+QuillBot,github,https://github.com/mahseema/awesome-ai-tools,mahseema/awesome-ai-tools,mahseema,2023-08-25T21:51:55Z,85
+QuillBot,github,https://github.com/Jieyab89/OSINT-Cheat-sheet,Jieyab89/OSINT-Cheat-sheet,Jieyab89,2021-11-22T14:06:58Z,85
+QuillBot,github,https://github.com/epoko77-ai/im-not-ai,epoko77-ai/im-not-ai,epoko77-ai,2026-04-24T12:48:40Z,85
+QuillBot,hackernews,https://quillbot.com/app,QuillBot: Free Paraphrasing Tool,saternius,2019-02-20T17:50:20Z,70
+QuillBot,hackernews,https://leftwriteai.com/,Too many Grammarly and Quillbot clones,productmode,2024-11-13T17:03:43Z,70
+QuillBot,hackernews,https://quillbot.com/,QuillBot – Paraphrasing Tool – AI Article Rewriter,arayh,2018-10-12T18:30:12Z,70
+QuillBot,hackernews,https://quillbot.com/summarize,Show HN: Quillbot's Summarizer brings AI research to users,dsilin,2020-08-17T20:06:04Z,70
+Fetcher,github,https://github.com/public-apis/public-apis,public-apis/public-apis,public-apis,2016-03-20T23:49:42Z,85
+Fetcher,github,https://github.com/awesome-selfhosted/awesome-selfhosted,awesome-selfhosted/awesome-selfhosted,awesome-selfhosted,2015-06-01T02:33:17Z,85
+Fetcher,github,https://github.com/trimstray/the-book-of-secret-knowledge,trimstray/the-book-of-secret-knowledge,trimstray,2018-06-23T10:43:14Z,85
+Fetcher,github,https://github.com/obra/superpowers,obra/superpowers,obra,2025-10-09T19:45:18Z,85
+Fetcher,github,https://github.com/ohmyzsh/ohmyzsh,ohmyzsh/ohmyzsh,ohmyzsh,2009-08-28T18:15:37Z,85
+Fetcher,hackernews,https://www.theregister.com/2025/08/21/ai_crawler_traffic/,"AI crawlers, fetchers are blowing up websites; Meta, OpenAI are worst offenders",rntn,2025-08-21T11:35:22Z,70
+Fetcher,hackernews,https://github.com/jafarlihi/rssnix,Show HN: Rssnix – Unix-style filesystem-based RSS/Atom/JSON Feed fetcher/reader,jafarlihi,2022-11-19T22:13:01Z,70
+Fetcher,hackernews,https://react-etc.net/entry/rip-redux-dan-abramovich-announces-future-fetcher,RIP Redux: Dan Abramovich Announces Future-Fetcher,velmu,2018-03-01T12:03:58Z,70
+Fetcher,hackernews,https://utcc.utoronto.ca/~cks/space/blog/web/SyndicationFeedRetryHeaders,HTTP headers that tell syndication feed fetchers how soon to come back,fanf2,2026-02-23T21:42:04Z,70
+Fetcher,hackernews,https://github.com/gennaro-tedesco/archimede,"Show HN: Archimede, the unobtrusive directory information fetcher",evergreengt,2024-06-06T21:10:05Z,70
+Inbenta,github,https://github.com/hubtype/botonic,hubtype/botonic,hubtype,2018-03-25T21:19:51Z,85
+Inbenta,github,https://github.com/gmberton/awesome-machine-learning-startups,gmberton/awesome-machine-learning-startups,gmberton,2024-11-16T23:20:57Z,85
+Inbenta,github,https://github.com/RSS-Renaissance/awesome-AI-feeds,RSS-Renaissance/awesome-AI-feeds,RSS-Renaissance,2019-02-12T15:46:01Z,85
+Inbenta,github,https://github.com/xiaoqdu/allinchatgpt,xiaoqdu/allinchatgpt,xiaoqdu,2023-04-12T03:26:02Z,85
+Inbenta,github,https://github.com/a2tm7a/Artificial-Intelligence-startups-companies-list,a2tm7a/Artificial-Intelligence-startups-companies-list,a2tm7a,2019-07-12T05:42:26Z,85
+Inbenta,hackernews,https://www.zdnet.com/article/inbenta-blamed-for-ticketmaster-breach-says-other-sites-not-affected/,"Inbenta, blamed for Ticketmaster breach, admits it was hacked",rusk,2018-07-02T09:15:16Z,70
+Inbenta,hackernews,http://developerblog.redhat.com/2016/02/26/gcc-6-wmisleading-indentation-vs-goto-fail/,GCC 6: -Wmisleading-indentation vs. “goto fail;”,dmalcolm,2016-02-26T15:13:22Z,70
+Inbenta,hackernews,https://www.phoronix.com/scan.php?page=news_item&px=GCC6-Misleading-Indentation,GCC 6 Will Warn You About Misleading Code Indentations,frostmatthew,2016-01-10T14:51:35Z,70
+Inbenta,hackernews,https://aartaka.me/lisp-indent.html,All Lisp indentation schemes are ugly,birdculture,2025-01-19T21:30:09Z,70
+Inbenta,hackernews,http://programmers.stackexchange.com/questions/87077/how-can-a-code-editor-effectively-hint-at-code-nesting-level-without-using-inde,How can a code editor hint at code nesting level without indentation?,splattne,2011-06-28T15:40:59Z,70
+remove.bg,github,https://github.com/public-apis/public-apis,public-apis/public-apis,public-apis,2016-03-20T23:49:42Z,85
+remove.bg,github,https://github.com/jlevy/the-art-of-command-line,jlevy/the-art-of-command-line,jlevy,2015-05-20T15:11:03Z,85
+remove.bg,github,https://github.com/anuraghazra/github-readme-stats,anuraghazra/github-readme-stats,anuraghazra,2020-07-09T10:34:22Z,85
+remove.bg,github,https://github.com/bradtraversy/design-resources-for-developers,bradtraversy/design-resources-for-developers,bradtraversy,2020-05-06T14:40:35Z,85
+remove.bg,github,https://github.com/agalwood/Motrix,agalwood/Motrix,agalwood,2018-12-18T11:45:05Z,85
+remove.bg,hackernews,https://remove.bg,Remove.bg – A service to remove the background of any photo,August-Garcia,2019-03-18T02:18:26Z,70
+remove.bg,hackernews,https://www.remove.bg/,Remove.bg – Remove Image Background,westoque,2018-12-17T16:28:54Z,70
+remove.bg,hackernews,https://github.com/useknockout/api,"Useknockout – open-source background removal API, 40× cheaper than remove.bg",tlorents,2026-04-25T01:34:02Z,70
+remove.bg,hackernews,https://pixian.ai/remove-image-backgrounds,"Show HN: Remove.bg without price gouging: 90-120% quality, 0.1-10% price, PAYGO",jacobn,2023-05-10T15:50:46Z,70
+H2O.ai,github,https://github.com/sindresorhus/awesome,sindresorhus/awesome,sindresorhus,2014-07-11T13:42:37Z,85
+H2O.ai,github,https://github.com/vinta/awesome-python,vinta/awesome-python,vinta,2014-06-27T21:00:06Z,85
+H2O.ai,github,https://github.com/MunGell/awesome-for-beginners,MunGell/awesome-for-beginners,MunGell,2015-10-24T19:53:36Z,85
+H2O.ai,github,https://github.com/josephmisiti/awesome-machine-learning,josephmisiti/awesome-machine-learning,josephmisiti,2014-07-15T19:11:19Z,85
+H2O.ai,github,https://github.com/fffaraz/awesome-cpp,fffaraz/awesome-cpp,fffaraz,2014-07-17T08:51:11Z,85
+H2O.ai,hackernews,https://duckdb.org/2023/11/03/db-benchmark-update.html,Updates to the H2O.ai db-benchmark,vgt,2023-11-06T15:51:59Z,70
+H2O.ai,hackernews,http://techcrunch.com/2015/11/09/h2o-ai-raises-20m-for-its-open-source-machine-learning-platform/,H2O.ai Raises $20M for Its Open Source Machine Learning Platform,ChrisCinelli,2015-11-09T17:00:20Z,70
+H2O.ai,hackernews,https://www.linkedin.com/pulse/how-corporate-giants-invest-ai-kyle-kling/,"Most Popular AI Startups Are Kensho, CYNGN, Moneytree, Maana, Lemonade, H2O.ai",KLINGER44,2018-01-26T15:43:00Z,70
+H2O.ai,hackernews,http://blog.dominodatalab.com/deep-learning-with-h2o-ai/,Deep Learning with h2o.ai,gk1,2015-06-16T18:18:56Z,70
+H2O.ai,hackernews,http://www.businesswire.com/news/home/20170508005684/en,"Continuum Analytics,H2O.ai, MapD Launch the GPU Open Analytics Initiative",homarp,2017-05-08T15:08:43Z,70

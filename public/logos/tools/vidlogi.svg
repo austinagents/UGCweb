@@ -1,0 +1,10 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vidlogiIconGradient" x1="28" y1="20" x2="228" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3B82F6" />
+      <stop offset="1" stop-color="#22D3EE" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="64" fill="url(#vidlogiIconGradient)" />
+  <path d="M83 84H109.5L128.5 143.5L147.5 84H173L141.5 173H114.5L83 84Z" fill="white" />
+</svg>

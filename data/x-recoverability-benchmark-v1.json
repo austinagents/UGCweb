@@ -1,0 +1,662 @@
+{
+  "generated_at": "2026-06-04T06:31:58.134Z",
+  "schema": {
+    "tool_name": "string",
+    "method": "existing_evidence_x_urls | search_discovered_x_urls | article_newsletter_embedded_x_urls",
+    "unique_x_posts": "number",
+    "unique_x_accounts": "number",
+    "coverage_score": "number"
+  },
+  "rows": [
+    {
+      "tool_name": "ChatGPT",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:20;total_tool_records:20"
+    },
+    {
+      "tool_name": "ChatGPT",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:5;total_tool_records:20"
+    },
+    {
+      "tool_name": "ChatGPT",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Claude",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 1,
+      "unique_x_accounts": 1,
+      "coverage_score": 0.25,
+      "status": "records_scanned:20;total_tool_records:20"
+    },
+    {
+      "tool_name": "Claude",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:5;total_tool_records:20"
+    },
+    {
+      "tool_name": "Claude",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Perplexity",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:17;total_tool_records:17"
+    },
+    {
+      "tool_name": "Perplexity",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:2;total_tool_records:17"
+    },
+    {
+      "tool_name": "Perplexity",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Cursor",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:18;total_tool_records:18"
+    },
+    {
+      "tool_name": "Cursor",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:3;total_tool_records:18"
+    },
+    {
+      "tool_name": "Cursor",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Windsurf",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 1,
+      "unique_x_accounts": 1,
+      "coverage_score": 0.25,
+      "status": "records_scanned:16;total_tool_records:16"
+    },
+    {
+      "tool_name": "Windsurf",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:16"
+    },
+    {
+      "tool_name": "Windsurf",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Lovable",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Lovable",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:15"
+    },
+    {
+      "tool_name": "Lovable",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Replit",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Replit",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "Replit",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Runway",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:16;total_tool_records:16"
+    },
+    {
+      "tool_name": "Runway",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:16"
+    },
+    {
+      "tool_name": "Runway",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Kling",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:18;total_tool_records:18"
+    },
+    {
+      "tool_name": "Kling",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:4;total_tool_records:18"
+    },
+    {
+      "tool_name": "Kling",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Pika",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Pika",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "Pika",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "ElevenLabs",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 1,
+      "unique_x_accounts": 1,
+      "coverage_score": 0.25,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "ElevenLabs",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "ElevenLabs",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Midjourney",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Midjourney",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "Midjourney",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Ideogram",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Ideogram",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "Ideogram",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "HeyGen",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 1,
+      "unique_x_accounts": 1,
+      "coverage_score": 0.25,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "HeyGen",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "HeyGen",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Synthesia",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Synthesia",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "Synthesia",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Granola",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Granola",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "Granola",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Notion AI",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Notion AI",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "Notion AI",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Zapier",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:16;total_tool_records:16"
+    },
+    {
+      "tool_name": "Zapier",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:16"
+    },
+    {
+      "tool_name": "Zapier",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Lindy",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:14;total_tool_records:14"
+    },
+    {
+      "tool_name": "Lindy",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:14"
+    },
+    {
+      "tool_name": "Lindy",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Gamma",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:16;total_tool_records:16"
+    },
+    {
+      "tool_name": "Gamma",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:16"
+    },
+    {
+      "tool_name": "Gamma",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Manus",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "Manus",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:15"
+    },
+    {
+      "tool_name": "Manus",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "V0",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:20;total_tool_records:20"
+    },
+    {
+      "tool_name": "V0",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:5;total_tool_records:20"
+    },
+    {
+      "tool_name": "V0",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Bolt",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 1,
+      "unique_x_accounts": 1,
+      "coverage_score": 0.25,
+      "status": "records_scanned:16;total_tool_records:16"
+    },
+    {
+      "tool_name": "Bolt",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:16"
+    },
+    {
+      "tool_name": "Bolt",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "Linear",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:14;total_tool_records:14"
+    },
+    {
+      "tool_name": "Linear",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:1;total_tool_records:14"
+    },
+    {
+      "tool_name": "Linear",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    },
+    {
+      "tool_name": "CapCut",
+      "method": "existing_evidence_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:15;total_tool_records:15"
+    },
+    {
+      "tool_name": "CapCut",
+      "method": "article_newsletter_embedded_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "records_scanned:0;total_tool_records:15"
+    },
+    {
+      "tool_name": "CapCut",
+      "method": "search_discovered_x_urls",
+      "unique_x_posts": 0,
+      "unique_x_accounts": 0,
+      "coverage_score": 0,
+      "status": "missing_search_provider"
+    }
+  ],
+  "summary": {
+    "tools_processed": 25,
+    "runtime_ms": 12585,
+    "best_method": {
+      "method": "existing_evidence_x_urls",
+      "total_unique_x_posts": 5,
+      "total_unique_x_accounts": 5,
+      "tools_with_x_posts": 5,
+      "tools_with_x_accounts": 5,
+      "coverage_percent": 20,
+      "average_coverage_score": 0.05,
+      "cost_estimate": "$0 incremental; uses existing Source Ingestion V1 records",
+      "runtime_ms": 12585
+    },
+    "methods_ranked": [
+      {
+        "method": "existing_evidence_x_urls",
+        "total_unique_x_posts": 5,
+        "total_unique_x_accounts": 5,
+        "tools_with_x_posts": 5,
+        "tools_with_x_accounts": 5,
+        "coverage_percent": 20,
+        "average_coverage_score": 0.05,
+        "cost_estimate": "$0 incremental; uses existing Source Ingestion V1 records",
+        "runtime_ms": 12585
+      },
+      {
+        "method": "search_discovered_x_urls",
+        "total_unique_x_posts": 0,
+        "total_unique_x_accounts": 0,
+        "tools_with_x_posts": 0,
+        "tools_with_x_accounts": 0,
+        "coverage_percent": 0,
+        "average_coverage_score": 0,
+        "cost_estimate": "$0 run cost; skipped because no search provider key is configured",
+        "runtime_ms": 12585
+      },
+      {
+        "method": "article_newsletter_embedded_x_urls",
+        "total_unique_x_posts": 0,
+        "total_unique_x_accounts": 0,
+        "tools_with_x_posts": 0,
+        "tools_with_x_accounts": 0,
+        "coverage_percent": 0,
+        "average_coverage_score": 0,
+        "cost_estimate": "$0 incremental; uses existing article/RSS/newsletter records",
+        "runtime_ms": 12585
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+tool,slug,x_handle,tweets_returned,useful_count,bad_count,proof_quality_score,best_3_tweet_urls,notes
+Adapt,adapt,@adapt,19,0,5,0,,company_promo_only:2; company_post_not_clear_proof:2; empty_mention:1
+Apollo,apollo,@useapolloio,20,3,2,60,https://x.com/useapolloio/status/2061798795789078573 | https://x.com/useapolloio/status/2061874643301253549 | https://x.com/useapolloio/status/2061798798989410676,company_post_not_clear_proof:2
+Bolt,bolt,@boltdotnew,20,4,1,80,https://x.com/boltdotnew/status/2061912505006391728 | https://x.com/boltdotnew/status/2061912502733086735 | https://x.com/boltdotnew/status/2061912506210082917,company_post_not_clear_proof:1
+CatDoes,catdoes,@catdoeshq,20,3,2,60,https://x.com/catdoeshq/status/2061856718133276748 | https://x.com/catdoeshq/status/2043981654977323214 | https://x.com/catdoeshq/status/2043983489855340967,spam_listicle_support_or_empty_mention:1; company_post_not_clear_proof:1
+Claude,claude,@claudeai,20,2,3,40,https://x.com/claudeai/status/2060074627032838438 | https://x.com/claudeai/status/2060042709209928018,company_promo_only:2; company_post_not_clear_proof:1
+Cursor,cursor,@cursor_ai,20,1,4,20,https://x.com/cursor_ai/status/2056803731367456993,company_post_not_clear_proof:2; company_promo_only:2
+Descript,descript,@descript,20,3,2,60,https://x.com/descript/status/2060465054378819850 | https://x.com/descript/status/2062290588473696762 | https://x.com/descript/status/2060814132757021069,company_post_not_clear_proof:2

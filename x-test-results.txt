@@ -1,0 +1,1284 @@
+==================== Bolt.new ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Bolt.new --limit=20
+
+TwitterAPI.io key: present
+Tool: Bolt.new
+Query: "Bolt.new"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:11:34.831Z",
+  "tool": "Bolt.new",
+  "query": "\"Bolt.new\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 3,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2061707481064034489",
+      "url": "https://x.com/csaba_kissi/status/2061707481064034489",
+      "author": "csaba_kissi",
+      "authorName": "Csaba Kissi",
+      "text": "Bolt․new helped me turn a ShadCN-based UI into a working QR code generator.\n\nA polished AI coding demo is one thing.\n\nShipping the app is the real test.\n\nSo I checked the parts that matter:\n\n- can the UI stay consistent?\n- can the code be reused?\n- can it go live without extra setup?\n\nI tested it with something simple but real:\n\na QR code generator using ShadCN components.\n\nHere’s the flow:\n\n1. I described the app\n\nPrompt: “Create an advanced QR code generator.”\n\n2. I asked Bolt․new to use ShadCN\n\nI didn’t want a generic interface. I wanted the app to follow a real component system.\n\n3. Bolt․new generated the app structure\n\nInputs, buttons, layout, QR preview, and download flow — all in a consistent ShadCN-style interface.\n\n4. I published it live\n\nNo local setup, cloning, or deployment config.\n\nJust describe, build, and publish.\n\nThat’s the useful part.\n\nThe prototype wasn’t just a mockup.\n\nIt became a working app with a live URL.\n\nAll built in Bolt․new.\n\nBuild your own version here:\nhttps://t.co/EnFUhRN4Ko\n\n#buildwithbolt",
+      "likes": 52,
+      "reposts": 3,
+      "replies": 17,
+      "views": 5819,
+      "engagementScore": 72,
+      "createdAt": "Tue Jun 02 07:12:22 +0000 2026"
+    },
+    {
+      "id": "2052485881500446855",
+      "url": "https://x.com/boltdotnewhelp/status/2052485881500446855",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@MarioBuildsAI If you're interested to learn more, please reach out to entsupport@bolt.new and we'll be happy to set up a conversation with you on this.",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "views": 83,
+      "engagementScore": 3,
+      "createdAt": "Thu May 07 20:29:02 +0000 2026"
+    },
+    {
+      "id": "2061859966030356691",
+      "url": "https://x.com/boltdotnewhelp/status/2061859966030356691",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@jeremynow @boltdotnew Our site is up and running! 🚀 If you experiencing issues with one of your specific sites or projects in Bolt, please shoot us an email at support@bolt.new and we will gladly take a look!",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 0,
+      "views": 28,
+      "engagementScore": 2,
+      "createdAt": "Tue Jun 02 17:18:18 +0000 2026"
+    },
+    {
+      "id": "2058328058256339331",
+      "url": "https://x.com/boltdotnewhelp/status/2058328058256339331",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@samanthshetty_ Hello Samanth 👋 Please reach out to our Support team by emailing support@bolt.new so that we can review any issues you are encountering with your Bolt subscription. Thank you!",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 47,
+      "engagementScore": 2,
+      "createdAt": "Sat May 23 23:23:45 +0000 2026"
+    },
+    {
+      "id": "2058285081190408703",
+      "url": "https://x.com/boltdotnewhelp/status/2058285081190408703",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@m0rganegeffr0y Hello Morgane 👋 Our Support team can help getting you access to your invoices. If you have not done so already, please email our Support team at support@bolt.new so they can assist. If you've already emailed our Support team, if you can please DM us with the email address you wrote in from so we can take a look. Thank you!",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 35,
+      "engagementScore": 2,
+      "createdAt": "Sat May 23 20:32:59 +0000 2026"
+    },
+    {
+      "id": "2060049129930125518",
+      "url": "https://x.com/boltdotnewhelp/status/2060049129930125518",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@maurice_lippy @boltdotnew You can shoot us an email at support@bolt.new! Send us a DM with your email address once you do. Appreciate your feedback!",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 68,
+      "engagementScore": 1,
+      "createdAt": "Thu May 28 17:22:41 +0000 2026"
+    },
+    {
+      "id": "2057764288190669177",
+      "url": "https://x.com/boltdotnewhelp/status/2057764288190669177",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@DOMINATOR_Doyle Hello 👋 Happy to assist however we can! If you can please email our Support team at support@bolt.new. If you've already emailed our Support team, if you can please DM us with the email address that you wrote in from so we can take a look. Thanks!",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 48,
+      "engagementScore": 1,
+      "createdAt": "Fri May 22 10:03:32 +0000 2026"
+    },
+    {
+      "id": "2057562591635865970",
+      "url": "https://x.com/boltdotnewhelp/status/2057562591635865970",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@ultrabyrich @boltdotnew Hello Richard 👋 Mind sharing a bit more information about what you are experiencing? For instance, are you unable to load the site or a project? Any specific error you are encountering? If you haven't done so yet, if you can please email our Support team at support@bolt.new so we can review. If you already have emailed our Support team, can you DM us the email address you wrote in from so we can take a look. Thank you!",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 67,
+      "engagementScore": 1,
+      "createdAt": "Thu May 21 20:42:04 +0000 2026"
+    },
+    {
+      "id": "2053876323030913145",
+      "url": "https://x.com/boltdotnewhelp/status/2053876323030913145",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@TheEveryperk @boltdotnew @Microsoft Hey there! So sorry about this! Running into this error for several days is certainly frustrating! \n\nA few things for you to try and get you unblocked:\n- Run the /clear command in the chat\n- Perform a hard refresh of your project\n- Log out and back in\n- Try duplicating the project\n\nIf none of the above help, please shoot us an email at support@bolt.new with your project URL and screenshots and we will be happy to investigate this for you!",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 33,
+      "engagementScore": 1,
+      "createdAt": "Mon May 11 16:34:09 +0000 2026"
+    },
+    {
+      "id": "2052478263218385394",
+      "url": "https://x.com/boltdotnewhelp/status/2052478263218385394",
+      "author": "boltdotnewhelp",
+      "authorName": "Bolt.new Help",
+      "text": "@prakis If anything issues persist please email our Support team at support@bolt.new so we can take a look and assist. Thank you!",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 56,
+      "engagementScore": 1,
+      "createdAt": "Thu May 07 19:58:45 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json
+==================== Manus ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Manus --limit=20
+
+TwitterAPI.io key: present
+Tool: Manus
+Query: "Manus"
+Limit: 20
+Expected 100-tweet cost: $0.015
+Error: TwitterAPI.io request failed (429): {"error":"Too Many Requests","message":"For free-tier users, the QPS limit is one request every 5 seconds."}
+    at fetchLatestTweets (file:///Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/scripts/twitterapi-io-poc.mjs:109:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async main (file:///Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/scripts/twitterapi-io-poc.mjs:50:15)
+==================== Superwhisper ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Superwhisper --limit=20
+
+TwitterAPI.io key: present
+Tool: Superwhisper
+Query: "Superwhisper"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:11:49.995Z",
+  "tool": "Superwhisper",
+  "query": "\"Superwhisper\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 16,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2062191412678897820",
+      "url": "https://x.com/neilsuperduper/status/2062191412678897820",
+      "author": "neilsuperduper",
+      "authorName": "Neil Chudleigh",
+      "text": "@superwhisper if this gets to 10k+ likes @bpjzy gets a $2,000 bonus",
+      "likes": 17,
+      "reposts": 3,
+      "replies": 1,
+      "views": 1797,
+      "engagementScore": 21,
+      "createdAt": "Wed Jun 03 15:15:21 +0000 2026"
+    },
+    {
+      "id": "2062216996411060373",
+      "url": "https://x.com/nurijanian/status/2062216996411060373",
+      "author": "nurijanian",
+      "authorName": "George from 🕹prodmgmt.world",
+      "text": "if you're a PM who types all day, I noticed something about the happiest PMs on r/ProductManagement right now: they stopped typing.\n\nthey talk into Wispr Flow or Superwhisper (there are many options, pick one). they have a 5-minute conversation with /grill-me or CE:brainstorm skills. then Claude writes the doc as a glorified stenographer.\n\nI've been doing this for a few months now and it's genuinely different. typing was never the job. thinking was the job. typing was just the most common way to externalize it, and it happens to be the slowest.\n\nspeaking forces more out of you in less time, compressing i/o\n\nI yap to my PM OS all day using /grill-me /caveman",
+      "likes": 13,
+      "reposts": 3,
+      "replies": 4,
+      "views": 2750,
+      "engagementScore": 20,
+      "createdAt": "Wed Jun 03 16:57:00 +0000 2026"
+    },
+    {
+      "id": "2062192121994428420",
+      "url": "https://x.com/bpjzy/status/2062192121994428420",
+      "author": "bpjzy",
+      "authorName": "brendan",
+      "text": "@neilsuperduper @superwhisper gonna need help from my homies with twitter motion @jordancicchelli @jpolly22 @chrislevan24",
+      "likes": 7,
+      "reposts": 0,
+      "replies": 2,
+      "views": 135,
+      "engagementScore": 9,
+      "createdAt": "Wed Jun 03 15:18:10 +0000 2026"
+    },
+    {
+      "id": "2062258358359331116",
+      "url": "https://x.com/_iamEtornam/status/2062258358359331116",
+      "author": "_iamEtornam",
+      "authorName": "Etornam ✨",
+      "text": "Replaced SuperWhisper with Gemini Edge Eloquent",
+      "likes": 5,
+      "reposts": 1,
+      "replies": 2,
+      "views": 417,
+      "engagementScore": 8,
+      "createdAt": "Wed Jun 03 19:41:22 +0000 2026"
+    },
+    {
+      "id": "2062296257679216919",
+      "url": "https://x.com/davidhariri/status/2062296257679216919",
+      "author": "davidhariri",
+      "authorName": "David Hariri",
+      "text": "@trafnar I’ve tried handy and superwhisper and happily pay for superwhisper",
+      "likes": 4,
+      "reposts": 0,
+      "replies": 2,
+      "views": 144,
+      "engagementScore": 6,
+      "createdAt": "Wed Jun 03 22:11:58 +0000 2026"
+    },
+    {
+      "id": "2062291154796708013",
+      "url": "https://x.com/OrganicGPT/status/2062291154796708013",
+      "author": "OrganicGPT",
+      "authorName": "Behnam",
+      "text": "🆓Let me let you in on a little secret: Don't purchase and install SuperWhisper, MacWhisper, etc. Instead, install the Codex desktop app (even if you don't use Codex) and just use free OpenAI-backed voice-to-text ANYWHERE in your OS with the press of a key! https://t.co/5s0kusNdad",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 2,
+      "views": 151,
+      "engagementScore": 3,
+      "createdAt": "Wed Jun 03 21:51:41 +0000 2026"
+    },
+    {
+      "id": "2062192572089389277",
+      "url": "https://x.com/chrislevan24/status/2062192572089389277",
+      "author": "chrislevan24",
+      "authorName": "chris",
+      "text": "@bpjzy @neilsuperduper @superwhisper @jordancicchelli @jpolly22 supawhispa",
+      "likes": 3,
+      "reposts": 0,
+      "replies": 0,
+      "views": 53,
+      "engagementScore": 3,
+      "createdAt": "Wed Jun 03 15:19:57 +0000 2026"
+    },
+    {
+      "id": "2062270666376626638",
+      "url": "https://x.com/neilsuperduper/status/2062270666376626638",
+      "author": "neilsuperduper",
+      "authorName": "Neil Chudleigh",
+      "text": "@branmcconnell @superwhisper Likely file format - going to take a look thanks for reporting.",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 18,
+      "engagementScore": 2,
+      "createdAt": "Wed Jun 03 20:30:16 +0000 2026"
+    },
+    {
+      "id": "2062267848316338376",
+      "url": "https://x.com/branmcconnell/status/2062267848316338376",
+      "author": "branmcconnell",
+      "authorName": "Brandon McConnell",
+      "text": "@neilsuperduper @superwhisper I’m using a Siri shortcut in my Photos app to encode a video as an audio file\n\nInterestingly, if I encode a video to audio, then import it into Voice Memos, I can import it from Voice Memos into Superwhisper\n\nSuperwhisper shows up in the share sheet for Voice Memos but not photos",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 36,
+      "engagementScore": 2,
+      "createdAt": "Wed Jun 03 20:19:04 +0000 2026"
+    },
+    {
+      "id": "2062266145936441383",
+      "url": "https://x.com/branmcconnell/status/2062266145936441383",
+      "author": "branmcconnell",
+      "authorName": "Brandon McConnell",
+      "text": "@superwhisper @neilsuperduper I would love to import audio and video files from anywhere on my iPhone to Superwhisper for transcription\n\nI’ve tried using a Siri shortcut to encode video files as both M4A and AIFF and neither show Superwhisper in the share sheet options",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 88,
+      "engagementScore": 2,
+      "createdAt": "Wed Jun 03 20:12:18 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json
+==================== Granola ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Granola --limit=20
+
+TwitterAPI.io key: present
+Tool: Granola
+Query: "Granola"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:11:57.742Z",
+  "tool": "Granola",
+  "query": "\"Granola\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 20,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2062412733967180011",
+      "url": "https://x.com/GRANOLA_2020/status/2062412733967180011",
+      "author": "GRANOLA_2020",
+      "authorName": "GRANOLA（グラノーラ）",
+      "text": "🌱GRANOLA新グッズ\n大阪ワンマンライブより販売開始\n\n新キャラクター登場\n可愛がってあげてください💚\n\nワンマンライブまでもう少し\n新グッズ手にとって楽しんでね〜！！ https://t.co/hiGGIdf9Xp",
+      "likes": 6,
+      "reposts": 0,
+      "replies": 0,
+      "views": 141,
+      "engagementScore": 6,
+      "createdAt": "Thu Jun 04 05:54:48 +0000 2026"
+    },
+    {
+      "id": "2062429747087392979",
+      "url": "https://x.com/gwagonmommie/status/2062429747087392979",
+      "author": "gwagonmommie",
+      "authorName": "Ms. Luminea‎",
+      "text": "my mama buy granola now, she hide am for her room. if na me do this thing wey she do now, na the whole world go hear about my selfishness. 😒",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 2,
+      "views": 48,
+      "engagementScore": 4,
+      "createdAt": "Thu Jun 04 07:02:24 +0000 2026"
+    },
+    {
+      "id": "2062414949020831785",
+      "url": "https://x.com/faintloops/status/2062414949020831785",
+      "author": "faintloops",
+      "authorName": "💍 princess vidi 🎀🌈",
+      "text": "@misosoupandrist idk abt granola but cereal is usually ok aslong as you had it w milk cuz then it gets soft",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 16,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 06:03:36 +0000 2026"
+    },
+    {
+      "id": "2062431774811025582",
+      "url": "https://x.com/HENRYKINGDUNNEH/status/2062431774811025582",
+      "author": "HENRYKINGDUNNEH",
+      "authorName": "HENRY-KING DUNNEH",
+      "text": "Just tried the seasonal wild blueberry oat granola from local farm! Crunchy, sweet, and no added junk—perfect for morning yogurt.  #FoodFind https://t.co/7WrAUdsKlO",
+      "likes": 0,
+      "reposts": 1,
+      "replies": 0,
+      "views": 7,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:10:27 +0000 2026"
+    },
+    {
+      "id": "2062426904653619267",
+      "url": "https://x.com/nattiLittle543/status/2062426904653619267",
+      "author": "nattiLittle543",
+      "authorName": "Natalie.little543",
+      "text": "Today’s breakfast &lt;3 \nYoghurt with jam and granola :D \n240 kcal https://t.co/N5jyjuOqkB",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 10,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 06:51:06 +0000 2026"
+    },
+    {
+      "id": "2062410793120145703",
+      "url": "https://x.com/anya__afterglow/status/2062410793120145703",
+      "author": "anya__afterglow",
+      "authorName": "anya 🍓 𝙫𝙞𝙧𝙩𝙪𝙖𝙡 𝙝𝙤𝙪𝙨𝙚𝙢𝙖𝙩𝙚",
+      "text": "I showed you my granola bowl pls respond https://t.co/gexYPD4Qd4",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 30,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 05:47:05 +0000 2026"
+    },
+    {
+      "id": "2062440295757725997",
+      "url": "https://x.com/abimsbalogun/status/2062440295757725997",
+      "author": "abimsbalogun",
+      "authorName": "Abimbola Balogun",
+      "text": "Enjoy the joys of our creamy yoghurt, fresh juicy fruits, crunchy granola and nuts. \n\n👉 GO AHEAD, treat yourself today. \nOrder now at https://t.co/03oIFyKzmo for FAST &amp; FREE delivery.\n\n#SoFreshNG #ParfaitLovers #TreatYourself #SelfCareMoments \n#TasteTheFreshness",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 3,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 07:44:19 +0000 2026"
+    },
+    {
+      "id": "2062436384502333842",
+      "url": "https://x.com/Brianna74934076/status/2062436384502333842",
+      "author": "Brianna74934076",
+      "authorName": "Brianna Hale",
+      "text": "Just tried the new wild blueberry oat granola from Local Harvest—crunchy, not too sweet, and packed with actual berries, perfect for morning yogurt!  #FoodFind #LocalEats https://t.co/yVJDbU5uLr",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 07:28:46 +0000 2026"
+    },
+    {
+      "id": "2062435938123526577",
+      "url": "https://x.com/avasorawr/status/2062435938123526577",
+      "author": "avasorawr",
+      "authorName": "crystal ༯",
+      "text": "i made granola for some friends and omg my kitchen smells like a bakery 🥹",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 5,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 07:27:00 +0000 2026"
+    },
+    {
+      "id": "2062432230451134970",
+      "url": "https://x.com/wleddzig/status/2062432230451134970",
+      "author": "wleddzig",
+      "authorName": "Wleddzig",
+      "text": "@suchnerve granola",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 0,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 07:12:16 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json
+==================== Replit ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Replit --limit=20
+
+TwitterAPI.io key: present
+Tool: Replit
+Query: "Replit"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:12:05.655Z",
+  "tool": "Replit",
+  "query": "\"Replit\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 19,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2062414292130148752",
+      "url": "https://x.com/NextShopiaAi/status/2062414292130148752",
+      "author": "NextShopiaAi",
+      "authorName": "Your Sophia Ai",
+      "text": "100 AI tools shaping the future of the internet in 2026 👇\n\nAI Chatbots\n• ChatGPT\n• Claude\n• Gemini\n• Perplexity\n• Grok\n• Poe\n• Pi AI\n• Microsoft Copilot\n• Meta AI\n• https://t.co/SAHxV6HXTm\n\nAI Image Generation\n• Midjourney\n• DALL·E\n• Stable Diffusion\n• Leonardo AI\n• Ideogram\n• Playground AI\n• Adobe Firefly\n• Flux AI\n• Canva AI\n• DreamStudio\n\nAI Video Generation\n• Runway\n• Pika\n• Kling AI\n• Sora\n• Synthesia\n• HeyGen\n• Veo\n• Luma AI\n• InVideo AI\n• Descript\n\nAI Writing Tools\n• Jasper\n• https://t.co/1rw8kUSB2g\n• Writesonic\n• Rytr\n• Grammarly\n• QuillBot\n• Sudowrite\n• HyperWrite\n• Wordtune\n• Notion AI\n\nAI Coding Tools\n• GitHub Copilot\n• Cursor\n• Replit AI\n• Codeium\n• Tabnine\n• https://t.co/9CCVtTMMtC\n• Devin AI\n• Sourcegraph Cody\n• V0\n• Blackbox AI\n\nAI Voice & Music\n• ElevenLabs\n• Murf AI\n• Suno\n• Udio\n• Speechify\n• Otter AI\n• Resemble AI\n• Krisp\n• AIVA\n• Voicemod AI\n\nAI Design & Productivity\n• Canva Magic Studio\n• Gamma\n• Tome\n• https://t.co/wfbdZOAIwc\n• Figma AI\n• Uizard\n• Framer AI\n• Visme AI\n• https://t.co/QETAZpANH8\n• Khroma\n\nAI Automation & Workflow\n• Zapier AI\n• Taskade AI\n• ClickUp AI\n• Motion\n• Mem AI\n• Fireflies AI\n• Rewind AI\n• Airtable AI\n• Monday AI\n• Slack AI\n\nAI Research Tools\n• Elicit\n• Consensus\n• Scite\n• Wolfram Alpha\n• Semantic Scholar AI\n• NotebookLM\n• Humata AI\n• Glean\n• Browse AI\n• MonkeyLearn\n\nAI Marketing Tools\n• HubSpot AI\n• https://t.co/0UyDFAVZbA\n• Surfer SEO\n• Ocoya\n• Brand24 AI\n• Hootsuite OwlyWriter AI\n• Anyword\n• Lavender AI\n• Flick AI\n• Predis AI\n\nThe AI wave is no longer coming.\n\nFollow me @NextShopiaAi to get more exiting tools updates from me.\n\nIt’s already replacing workflows, teams, and entire industries in real time. 🚀",
+      "likes": 9,
+      "reposts": 4,
+      "replies": 4,
+      "views": 478,
+      "engagementScore": 17,
+      "createdAt": "Thu Jun 04 06:00:59 +0000 2026"
+    },
+    {
+      "id": "2062405552211144735",
+      "url": "https://x.com/jakebrowatzke/status/2062405552211144735",
+      "author": "jakebrowatzke",
+      "authorName": "Jake Browatzke 🚀",
+      "text": "$WIX was, until recently, a pristine cash machine. Roughly $600M in annual free cash flow at about 30% margins. Then it bought Base44 for $80M and went all in, pouring profit into turning Base into a leading contender for the vibe coding market. It worked. Base44 is now the #1 AI app builder in North America by market share according to Similarweb user traffic data, ahead of Lovable and Replit, two companies the private markets value at $6.6B and $9B.\n\nThe growth has been violent, in the good way. Base44 tripled its ARR from $50M in Jan 2026 to $150M by mid May 2026. That is $50M, then $100M, then $150M in under five months. Base now makes up about 8% of Wix's total ARR while the legacy business still compounds at double digits. The next double in Base, to $300M, layers on another 8% of revenue atop the core, which pushes Wix toward a 20%+ overall growth rate. And here's the mechanic that matters: the bigger Base44 gets, the more it pulls up Wix's blended growth, even as Base44's own growth rate likely cools. A high growth engine becoming a larger slice of the pie lifts the whole company.\n\nSo why is $WIX stock at a four year low, down roughly 50% on the year, and at levels the stock traded at way back in 2017? And why was a 20% headcount cut just announced? The layoffs combined with the stock price look like a distress signal. They are better read as the opposite. \n\nThe gross margin compression from Base44 is real, and it is the piece the market is fixated on. But look at what is actually driving it.  Management has said that over a third of Base44's model cost comes from free users testing out builds. Management views this as valuable spend to build brand trust and onboards new users. They also explained that after users first become paid subscribers, their cost is concentrated up front during the initial build, and it shrinks after apps are built and usage shifts to app upkeep.\n\nAs the total user base ages and a larger portion of daily usage comes from paying customers with built apps, margins will improve naturally for Base44. Layer on management's guidance for materially better Base44 margins by year end as AI costs are optimized, plus Wix's first in house specialized model cutting inference costs dramatically in Harmony and the poitential for similar in-house model in Base44 in time, the picture is clear. The margin hit is the price of taking category leadership in a fast growing market, and it is temporary and by design.\n\nRegarding the layoffs, Base44 was built almost entirely by one founder, with a team of just eight by the time Wix bought it, and it ran as an AI native engineering shop from day one. Wix is now using Base as the operating model template for its entire R&D organization, learning how to ship far more with far fewer people. So the unglamorous layoff headline is really Base44 paying off in a second way beyond accelerating growth: it is teaching Wix to run dramatically leaner, and that flows straight into free cash flow long term, even while Base44 itself still burns cash in its early growth phase.\n\nMeanwhile the setup keeps improving for shareholders. In April, Wix spent $1.6B to retire about 30% of its shares. So the entire company, Base44 plus a double digit growth core throwing off hundreds of millions in cash, now sits at roughly ~$2.2B. That is about 1.1x sales and 4x-5x look through free cash flow. If Wix wasn't investing in growth today owners would get over a 20%-25% free cash flow yield. Instead we'll get that and more as Base44 flips profitable in time.\n\nPut it together. You are paying about 1.1x sales for a double digit grower with a reoccurring revenue business and 105% net revenue retention, and getting what is the #1 no-code vibe coding asset in North America by usage, whose closest private comps fetch $6.6B and $9B, thrown in for essentially nothing.\n\nThe private markets are paying up 20x-30x sales for this category. The public market is handing you the leader at a liquidation price.",
+      "likes": 7,
+      "reposts": 3,
+      "replies": 1,
+      "views": 1471,
+      "engagementScore": 11,
+      "createdAt": "Thu Jun 04 05:26:15 +0000 2026"
+    },
+    {
+      "id": "2062423721785135241",
+      "url": "https://x.com/ChrisMakeSense/status/2062423721785135241",
+      "author": "ChrisMakeSense",
+      "authorName": "Chris",
+      "text": "@Franciscocrz @Kaygeeartworks @redbull @Replit @Cloudtheboi Red Bull gives you wings. Replit gives you something worth flying towards.",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 0,
+      "views": 30,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 06:38:27 +0000 2026"
+    },
+    {
+      "id": "2062415721150439927",
+      "url": "https://x.com/strategicnstyle/status/2062415721150439927",
+      "author": "strategicnstyle",
+      "authorName": "Megs 🤍 App Builder for Creators",
+      "text": "While I  build (No-code + AI)\n\n• Replit — the actual app building (no JavaScript needed). $10 credit with my link in bio\n• Claude — \"How do I [X]?\" for everything. Design decisions, logic, debugging\n• ChatGPT — when Claude is at capacity or you need a different perspective\n• Figma — design your screens before you build them\n• Framer — rapid prototyping if you want to test before building on Replit\n\nCost: $25–$50/month depending on membership tier and usage needs\n\nThis is where the magic happens.",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 29,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 06:06:40 +0000 2026"
+    },
+    {
+      "id": "2062414078874984934",
+      "url": "https://x.com/VincenzoR/status/2062414078874984934",
+      "author": "VincenzoR",
+      "authorName": "Vincenzo Ruggiero",
+      "text": "Replit stopped building for professional developers. completely. their CEO told Reid Hoffman that vibe coding is the new literacy. so the company that was built to teach people to code... now says coding is the wrong thing to learn. ok then.",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 9,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 06:00:08 +0000 2026"
+    },
+    {
+      "id": "2062437300056064020",
+      "url": "https://x.com/ehrazahmedd/status/2062437300056064020",
+      "author": "ehrazahmedd",
+      "authorName": "Ehraz Ahmed",
+      "text": "The more you research, the more you realise that $CBRS is the ONLY pure play AI Inference infrastructure company  - inference, whose business model is recurring and high margin compared to trainin. And with a backlog of $25B with none other than @OpenAI, ofcourse it'll trade at huge premiums. \n\nWay back in 2017, when @elonmusk was still a part of OpenAI, him @Sama and @ilyasut  wanted to acquire Cerebras through $TSLA\n\nAlso, not for nothing Jensen Huang spent billions of dollars getting exposure to Groq's IP.  When the smartest infrastructure company on earth starts paying attention to SRAM, latency and inference economics, it's worth asking whether the next AI bottleneck looks different from the last one. \n\nHere are some of the recent quotes by Jensen Huang on Inference:\n\n\"The inference inflection has arrived.\"\n\n\"It's way past training now.\" \n\n\"AI now has to think, and thinking requires inference.\"\n\nI spent hours reading developer testimonials on Codex Spark (which runs entirely on Cerebras hardware) and something stood out. Almost nobody was talking about benchmark scores. They were talking about how it felt. Faster. More responsive. More iterative.\n\nThey call GPT 5.3 Codex Sparx \"Real-Time Engineering Partner\".\n\nI feel its just a matter of time that companies like Cursor, Replit, Windsurf etc will all line up with massive orders for this new chip/inference platform by @cerebras\n\nBecause in the Agentic AI era, latency matters more than anything else. Note: Latency in the agentic ai era is an 'operating expense'.",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 52,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:32:25 +0000 2026"
+    },
+    {
+      "id": "2062436533186212059",
+      "url": "https://x.com/polsia/status/2062436533186212059",
+      "author": "polsia",
+      "authorName": "Polsia",
+      "text": "GitHub Copilot went usage-based. Devin bills by the compute unit. Replit bills by the hour.\n\nStashPilot: autonomous AI coding agent, flat rate, ships features while you sleep.\n\nNo surprise bills. No babysitting.\n\nhttps://t.co/Oe618cEPnO",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 40,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:29:22 +0000 2026"
+    },
+    {
+      "id": "2062421523378667924",
+      "url": "https://x.com/AmblerKR/status/2062421523378667924",
+      "author": "AmblerKR",
+      "authorName": "Ambler",
+      "text": "트레이딩뷰 웹훅이랑 API 쓰고있고 이것저것 받아서 구글스크립트, Replit (각각 다른 서비스) 이용해 구축해 사용하는데 일단 한국주식은 한국증권사를 써야하니 토스증권 API 사용해보고 대체하려고 하는데. 일단 증권 API는 개인이 개발해서 제공하기에 비용이 쎄서...",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 17,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 06:29:43 +0000 2026"
+    },
+    {
+      "id": "2062446069662040387",
+      "url": "https://x.com/flandrers/status/2062446069662040387",
+      "author": "flandrers",
+      "authorName": "Vincent GODBERT",
+      "text": "@Franciscocrz @redbull @Replit @Kaygeeartworks @Cloudtheboi There's something specific about early founders meeting in person that nothing online replicates. My conviction is that IRL gatherings only get more valuable as AI floods everything digital. Good to see brands betting on it.",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 2,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:07:16 +0000 2026"
+    },
+    {
+      "id": "2062433498288292209",
+      "url": "https://x.com/ByVidex/status/2062433498288292209",
+      "author": "ByVidex",
+      "authorName": "Abdo | Video Editor",
+      "text": "@Ark_Edits_ @Replit Bro should hire men 🥲",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 3,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 07:17:18 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json
+==================== Gamma ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Gamma --limit=20
+
+TwitterAPI.io key: present
+Tool: Gamma
+Query: "Gamma"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:12:13.434Z",
+  "tool": "Gamma",
+  "query": "\"Gamma\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 18,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2062437889292796316",
+      "url": "https://x.com/backquant/status/2062437889292796316",
+      "author": "backquant",
+      "authorName": "Back",
+      "text": "bitcoin:native \n\nSeems like the nuke has finished and we've stabilised for now\n\nStill have NFP later this week, probably going to be nothing. Vol still high and in backwardation. I doubt NFP results in anymore downside for BTC\n\nFront expiries remain in negative gamma with puts still trading much richer than calls, so dealers aren't exactly positioned for any V reversal. \n\nso... another long boring range?",
+      "likes": 2,
+      "reposts": 1,
+      "replies": 0,
+      "views": 85,
+      "engagementScore": 3,
+      "createdAt": "Thu Jun 04 07:34:45 +0000 2026"
+    },
+    {
+      "id": "2062446873072283782",
+      "url": "https://x.com/Trader_Maciej/status/2062446873072283782",
+      "author": "Trader_Maciej",
+      "authorName": "Maciej",
+      "text": "$SLV  Tree with Quin\n\nScenario Bullish🐂\n\nTrigger- Price sustains above $66.00 at open; Hold or break above HVL $66.50 with positive intraday momentum\n\nConfirmation- Q-Score Options = 3 (neutral-bullish); NetGEX positive regime ($134.9M); Put/Call ratio 0.53 (bullish); Swing LB $62.26 intact; All-Exp Call Resistance $70.00\n\nTargets- $67.50 (GEX 3, first cluster) ; $70.00 (Call Resistance, next major gamma wall)\n\nInvalidation- Close below $66.00; Print below Swing LB $62.26; NetGEX flips negative; Options Score falls to 1-2\n#silver #xag $SI_F #usd #etf",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 4,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 08:10:27 +0000 2026"
+    },
+    {
+      "id": "2062447260873773088",
+      "url": "https://x.com/laobaishare/status/2062447260873773088",
+      "author": "laobaishare",
+      "authorName": "老白（每日干货分享✊）",
+      "text": "10. 演示文稿\n\n- Decktopus\n- Slides AI\n- Gamma AI\n- Designs AI\n- Beautiful AI",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 0,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:12:00 +0000 2026"
+    },
+    {
+      "id": "2062445504634507586",
+      "url": "https://x.com/HUGESKY852/status/2062445504634507586",
+      "author": "HUGESKY852",
+      "authorName": "HUGE-SKY ₿",
+      "text": "gamma exposure by strike - this is telling there is a LOT of empty space between here and 80k suggests a lot of the move is on thin volume possibly https://t.co/MX2v69pnCt",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 3,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:05:01 +0000 2026"
+    },
+    {
+      "id": "2062445501480407395",
+      "url": "https://x.com/HUGESKY852/status/2062445501480407395",
+      "author": "HUGESKY852",
+      "authorName": "HUGE-SKY ₿",
+      "text": "Vol has picked up from low 30s to high 40s as dealers seem short gamma..30d IV = 48 with realised at 35% ish (rich)...ongoing crash hedge bid term inversion longer date hedges are cheaper https://t.co/9aiJnVk3mk",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 7,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:05:00 +0000 2026"
+    },
+    {
+      "id": "2062445477573074983",
+      "url": "https://x.com/EnterShibuya/status/2062445477573074983",
+      "author": "EnterShibuya",
+      "authorName": "ENTER Shibuya",
+      "text": "[Jun.11 (Thu.) FINGERS feat. Gamma Intel &amp; Samira]\n\nLine-up:\nGamma Intel (Nerve Collect) \nSamira\nDayzero @tsuyoshidayzero \nAlbino Sound @AlbinoSound \nPine\nRomy Mats @romymats_ktsns \n\nOpen 22:00\n¥2000 Door \n¥1500 Before 0:00\n\nhttps://t.co/U7raevJmTR",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 8,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:04:54 +0000 2026"
+    },
+    {
+      "id": "2062445473840210178",
+      "url": "https://x.com/EnterShibuya/status/2062445473840210178",
+      "author": "EnterShibuya",
+      "authorName": "ENTER Shibuya",
+      "text": "【6月11日 (木) FINGERS feat. Gamma Intel &amp; Samira】\n\n解体新書チームによるパーティ FINGERS 。今回はオランダより、Gamma IntelとSamiraを迎える。ヨーロッパの先鋭的なクラブシーンと日本のベースミュージックの現在地が交差する一夜を、解体新書がENTERでホストする。 https://t.co/bWlDcCuilK",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 18,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:04:54 +0000 2026"
+    },
+    {
+      "id": "2062439195595980862",
+      "url": "https://x.com/GoNewsgr/status/2062439195595980862",
+      "author": "GoNewsgr",
+      "authorName": "GoNews.gr",
+      "text": "LANCIA Gamma: Το νέο «ελληνικό» μοντέλο της ιταλικής μάρκας https://t.co/4JQl7rUwLO \n#Lancia #LanciaGamma @lancia_official",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:39:57 +0000 2026"
+    },
+    {
+      "id": "2062438440319209512",
+      "url": "https://x.com/Sentinel_Macro/status/2062438440319209512",
+      "author": "Sentinel_Macro",
+      "authorName": "Sentinel Deep Intelligence",
+      "text": "@AshCrypto Liquidation: $1.4B of ETF BTC gone in four June days while SPX is still near highs and VIX sits at 16 is not random noise; the margin clerk is raiding the crypto drawer because dealer gamma still has equities locked in place.\n\nCrypto bleeds first. https://t.co/2EYgo3JHTI",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 405,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:36:57 +0000 2026"
+    },
+    {
+      "id": "2062447251306508383",
+      "url": "https://x.com/MagneticMan24/status/2062447251306508383",
+      "author": "MagneticMan24",
+      "authorName": "SONI",
+      "text": "@HarmeenSoch BRO will keep you entertained as u drive with their quirky and humorous road signs along mountain curves like :\n\n“Don't be a Gamma in the land of Lama.\"\n\n“Be gentle on my curves.\"",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 0,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:11:57 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json
+==================== Lindy ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Lindy --limit=20
+
+TwitterAPI.io key: present
+Tool: Lindy
+Query: "Lindy"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:12:21.011Z",
+  "tool": "Lindy",
+  "query": "\"Lindy\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 18,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2062421421603668387",
+      "url": "https://x.com/PoetDeanwilson6/status/2062421421603668387",
+      "author": "PoetDeanwilson6",
+      "authorName": "Dean Wilson",
+      "text": "‘Ask me why the Upstairs Downstairs remake was a flop\nAsk me why I’m not married \nyet I can Vogue and Lindy Hop’\n\nI’m buzzing! It’s the publication day of my new book ASK available from @HoldernessNews \n@JEBooksHull &amp; \nhttps://t.co/cDaWex1zio \n\nand the launch is tonight! \n#Hull https://t.co/3ugP0unvzl",
+      "likes": 6,
+      "reposts": 4,
+      "replies": 0,
+      "views": 438,
+      "engagementScore": 10,
+      "createdAt": "Thu Jun 04 06:29:19 +0000 2026"
+    },
+    {
+      "id": "2062421029566493047",
+      "url": "https://x.com/AmerAssaleh/status/2062421029566493047",
+      "author": "AmerAssaleh",
+      "authorName": "Amer Assaleh عامر",
+      "text": "@alwyn_lau @trishankkarthik Trishank, how do I explain Lindy to your ignorant Malaysian friend?\n\nhttps://t.co/ZrmTI3LycU",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "views": 32,
+      "engagementScore": 3,
+      "createdAt": "Thu Jun 04 06:27:46 +0000 2026"
+    },
+    {
+      "id": "2062424563997147479",
+      "url": "https://x.com/tradetheflow_/status/2062424563997147479",
+      "author": "tradetheflow_",
+      "authorName": "flow",
+      "text": "ZEC is one of the few truly asymmetric bets in crypto right now.\n\nThe way I see it: BTC is still a top asset to hold long term, but there are a few things holding it back in this cycle:\n\n-Quantum FUD\n-Lack of privacy\n-Saylor owning a massive amount of BTC\n-The Satoshi black swan (what happens if Satoshi sell all his coin?)\n-Heavy MM / institutional market structure (Jane Street and you name it)\n-A few OG whales who sold big amounts of BTC \n\nBecause of that, BTC hasn’t really followed tech stocks or gold during their respective bull runs. It got crushed instead.\n\nZEC is interesting because it solves some of the exact concerns people have around BTC:\n\n-Quantum-resistant\n-Private (while still compliant)\n-Same hard-money / SoV properties as BTC\n-Lindy-proof (very important criteria for SoV)\n-No Saylor overhang\n-Established enough to matter, but still early enough to be asymmetric\n\nAnd on top of that, price action looks very strong both in USD and BTC terms.\n\nAfter a long consolidation, ZEC is printing higher highs against BTC and is now close to its ATH.\n\nThe road  ahead will be very volatile, but I think the direction is up and to the right.\n\nAlthough to be clear: I don’t think BTC is dying at all. BTC is still king and will probably come back stronger after this bear market.\n\nI just think ZEC might be the faster horse to hold right now, assuming you can stomach the volatility.",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 195,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 06:41:48 +0000 2026"
+    },
+    {
+      "id": "2062411618332430443",
+      "url": "https://x.com/TuomoRosengren/status/2062411618332430443",
+      "author": "TuomoRosengren",
+      "authorName": "Tuomo Rosengren",
+      "text": "@HMannone Tää olis pitäny mennä kyl Lindy Ruffille...",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 14,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 05:50:22 +0000 2026"
+    },
+    {
+      "id": "2062409049975537775",
+      "url": "https://x.com/Cicctastic/status/2062409049975537775",
+      "author": "Cicctastic",
+      "authorName": "L~Dog",
+      "text": "@dpdoughbag @calebherrera_ @reporterchris Lindy Ruff \n1. No Top Center\n2. NO #1 Goalie , used 3 goalies all year \n3. Top 5 team in Man Games Lost to imjuries\n4. 14 years playoff drought \n5. Won The Atlantic Division \n\nSoooooo how did Ruff NOT win ??",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 15,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 05:40:09 +0000 2026"
+    },
+    {
+      "id": "2062430355253055873",
+      "url": "https://x.com/Hans365days/status/2062430355253055873",
+      "author": "Hans365days",
+      "authorName": "Hans",
+      "text": "@Altimor Never heard of Lindy. Will check it out today. Thanks chamath.",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 24,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:04:49 +0000 2026"
+    },
+    {
+      "id": "2062428531708264920",
+      "url": "https://x.com/DamienNightwing/status/2062428531708264920",
+      "author": "DamienNightwing",
+      "authorName": "The Widow Maker",
+      "text": "@NHL LINDY RUFF was the clear choice!!! WTF? Tampa Bay did not even win their division.",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 219,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 06:57:34 +0000 2026"
+    },
+    {
+      "id": "2062423759537995945",
+      "url": "https://x.com/Mikemye82664604/status/2062423759537995945",
+      "author": "Mikemye82664604",
+      "authorName": "Mikemyers",
+      "text": "@NHL @TBLightning not expecting and not deserving - Lindy Ruff 💯 and the hockey world knows it - PS - Cooper is a pos",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 8,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 06:38:36 +0000 2026"
+    },
+    {
+      "id": "2062420428925092291",
+      "url": "https://x.com/Truckedotkun/status/2062420428925092291",
+      "author": "Truckedotkun",
+      "authorName": "Chrono",
+      "text": "@MOSTGAPEDMAN Lindy?",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 3,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 06:25:22 +0000 2026"
+    },
+    {
+      "id": "2062414525308277085",
+      "url": "https://x.com/dshan/status/2062414525308277085",
+      "author": "dshan",
+      "authorName": "D",
+      "text": "Lindy moving off Claude. Glimpse of the future",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 45,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 06:01:55 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json
+==================== Pika ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Pika --limit=20
+
+TwitterAPI.io key: present
+Tool: Pika
+Query: "Pika"
+Limit: 20
+Expected 100-tweet cost: $0.015
+Error: TwitterAPI.io request failed (429): {"error":"Too Many Requests","message":"For free-tier users, the QPS limit is one request every 5 seconds."}
+    at fetchLatestTweets (file:///Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/scripts/twitterapi-io-poc.mjs:109:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async main (file:///Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/scripts/twitterapi-io-poc.mjs:50:15)
+==================== Ideogram ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Ideogram --limit=20
+
+TwitterAPI.io key: present
+Tool: Ideogram
+Query: "Ideogram"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:12:36.476Z",
+  "tool": "Ideogram",
+  "query": "\"Ideogram\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 20,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2062434658696970451",
+      "url": "https://x.com/giffmana/status/2062434658696970451",
+      "author": "giffmana",
+      "authorName": "Lucas Beyer (bl16)",
+      "text": "Huh ideogram going open weights was not on my bingo card! Nice\n\n(Apache-2.0 code, NC weights) https://t.co/NWkZewxsBW",
+      "likes": 14,
+      "reposts": 0,
+      "replies": 2,
+      "views": 1255,
+      "engagementScore": 16,
+      "createdAt": "Thu Jun 04 07:21:55 +0000 2026"
+    },
+    {
+      "id": "2062442763636064644",
+      "url": "https://x.com/pu_so2/status/2062442763636064644",
+      "author": "pu_so2",
+      "authorName": "Kudoh@Ship3",
+      "text": "無料ローカルPC画像生成AI\n「Ideogram 4.0」\n\n文字＋デザイン特化\n多言語対応\nネイティブ2K\nレイアウト制御\nカラーパレット制御\n透明背景対応\nJSON対応（生成結果のバラ付きが少ない）\nオープンでは品質１位\nComfyUI対応\n\nVRAM推奨\nFP8版 24GB\nNF4版 16GB\n\nプロの商用デザイナーさん御用達か？ https://t.co/YY6U9mAbWd",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "views": 28,
+      "engagementScore": 3,
+      "createdAt": "Thu Jun 04 07:54:07 +0000 2026"
+    },
+    {
+      "id": "2062445220810326098",
+      "url": "https://x.com/alexn5264/status/2062445220810326098",
+      "author": "alexn5264",
+      "authorName": "xela",
+      "text": "if you want to train ideogram 4.0 loras, try out my fast lora trainer 👇",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 8,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 08:03:53 +0000 2026"
+    },
+    {
+      "id": "2062445110009184752",
+      "url": "https://x.com/mseymari_/status/2062445110009184752",
+      "author": "mseymari_",
+      "authorName": "mohammad seymari",
+      "text": "مدل تصویرساز Ideogram 4.0 معرفی شد و یه قدم مهم برداشت: حالا کاربر می‌تونه مدل رو دانلود کنه، روی سیستم خودش اجرا کنه و حتی اون رو برای نیازهای اختصاصی‌ آموزش بده!\n\nیعنی یه Ideogram اختصاصی آموزش‌دیده روی آثار خودت داشته باشی که زبان بصری تو رو بهتر از هر مدل عمومی دیگه‌ای بفهمه. https://t.co/27H0zR3qtf",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 0,
+      "views": 19,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 08:03:27 +0000 2026"
+    },
+    {
+      "id": "2062446051576225826",
+      "url": "https://x.com/SD_Tutorial/status/2062446051576225826",
+      "author": "SD_Tutorial",
+      "authorName": "Stable Diffusion Tutorials",
+      "text": "Ideogram 4.0 (Text to image)\n\nWorkflow + Model setup (included)\n\n👇\nhttps://t.co/Pi0jD83r7v https://t.co/ZkMUpfQSQ6",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 13,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:07:11 +0000 2026"
+    },
+    {
+      "id": "2062445425886687343",
+      "url": "https://x.com/umiyuki_ai/status/2062445425886687343",
+      "author": "umiyuki_ai",
+      "authorName": "うみゆき@AI研究",
+      "text": "ずっとクローズでどうでもよかったIdeogramという画像生成モデルの4.0が急にオープン化されてComfyUIから使えるようになったという。一応nf4量子化モデルならVRAM24GBで生成できるらしい。スレで話題になってるのは危険なプロンプトを入力すると背景グレーの「Image blocked by safety filter」って画像が出てきてしまう問題。これは後付けのフィルターじゃなくてモデル自体がこういう画像を生成するように調教されてるらしい。かつてないね。このままじゃRedditでは流行らないだろう\nhttps://t.co/WLscubzrnI",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 351,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:04:42 +0000 2026"
+    },
+    {
+      "id": "2062445285151068502",
+      "url": "https://x.com/0xLogicrw/status/2062445285151068502",
+      "author": "0xLogicrw",
+      "authorName": "思维怪怪",
+      "text": "AI 图像控制在今天分化成了两种截然不同的技术路线。\n\nIdeogram 4.0 类似于生成界的 Photoshop，采用「输入端布局约束」机制。系统后台先将用户文本翻译为带坐标的 JSON 排版参数，再通过空间解析脑转化为空间编码，引导生成器一键画出画面。整个流程本质上是位图栅格化渲染，生成后的布局坐标与物体特征在像素层强耦合。画面一旦定格，任何微调仍需依赖局部的像素重绘或蒙版重构。\n\nReve 2.0 则更像 Illustrator 或 Figma，走的是「物理图层与特征解耦」的矢量化路线。模型在内部将图像的「空间布局（坐标关系）」与「语义特征（物体长相）」彻底剥离开来，使布局成为可交互的潜在表征空间。用户和 AI Agent 可以直接在画布上像操作矢量图层般拖拽或缩放物体，系统仅对受影响区域进行局部的约束去噪重绘，其余像素完全锁定。布局介质的引入让 AI 绘图真正具备了设计软件般的分层修改能力。",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 24,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:04:09 +0000 2026"
+    },
+    {
+      "id": "2062437756463116531",
+      "url": "https://x.com/HungryMinded/status/2062437756463116531",
+      "author": "HungryMinded",
+      "authorName": "Hungry Minded",
+      "text": "🎨 Creator AI is making the same shift.\n\nPika, Ideogram, Reve, and HeyGen frame.md are not just 'prettier pixels.'\n\nThe valuable part is controllability: layouts, brand rules, reusable specs, and faster experiments.",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 7,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:34:14 +0000 2026"
+    },
+    {
+      "id": "2062435009366286655",
+      "url": "https://x.com/aiseomastery/status/2062435009366286655",
+      "author": "aiseomastery",
+      "authorName": "AI Mastery Guide",
+      "text": "@AYi_AInotes Best open source image model and it's not even close on the chart, Ideogram 4.0 came out swinging",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 15,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:23:19 +0000 2026"
+    },
+    {
+      "id": "2062434716058304957",
+      "url": "https://x.com/brief_ia/status/2062434716058304957",
+      "author": "brief_ia",
+      "authorName": "Brief IA",
+      "text": "Ideogram 4.0 est un modèle d'image IA open source qui se distingue par ses performances record, notamment dans la création d'affiches avec un texte lisible, marquant un potentiel impact significatif sur l'écosystème concurrentiel.",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 9,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 07:22:09 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json
+==================== Runway ====================
+
+> appscreener@0.1.0 poc:twitterapi
+> node scripts/twitterapi-io-poc.mjs --tool=Runway --limit=20
+
+TwitterAPI.io key: present
+Tool: Runway
+Query: "Runway"
+Limit: 20
+Expected 100-tweet cost: $0.015
+{
+  "generatedAt": "2026-06-04T08:12:44.166Z",
+  "tool": "Runway",
+  "query": "\"Runway\"",
+  "totalTweetsReturned": 20,
+  "uniqueAuthors": 15,
+  "cost": {
+    "tweetCostUsdPerThousand": 0.15,
+    "tweetCostUsd": 0.00015,
+    "exactReturnedTweetCostUsd": 0.003,
+    "requested100TweetCostUsd": 0.015
+  },
+  "top10TweetsByEngagement": [
+    {
+      "id": "2062446782022648214",
+      "url": "https://x.com/Badboy1B/status/2062446782022648214",
+      "author": "Badboy1B",
+      "authorName": "LUCKY",
+      "text": "Dcs World - Loop Runway Vs. Mig Fighter Jets https://t.co/im25KDN4ZP",
+      "likes": 2,
+      "reposts": 2,
+      "replies": 0,
+      "views": 13,
+      "engagementScore": 4,
+      "createdAt": "Thu Jun 04 08:10:05 +0000 2026"
+    },
+    {
+      "id": "2062447254884245660",
+      "url": "https://x.com/laobaishare/status/2062447254884245660",
+      "author": "laobaishare",
+      "authorName": "老白（每日干货分享✊）",
+      "text": "6. 视频\n\n- Klap\n- Opus\n- Eightify\n- InVideo\n- HeyGen\n- Runway\n- ImgCreator AI\n- https://t.co/8GAlYGAx25",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 1,
+      "engagementScore": 2,
+      "createdAt": "Thu Jun 04 08:11:58 +0000 2026"
+    },
+    {
+      "id": "2062446689877901735",
+      "url": "https://x.com/mayuyun_1128/status/2062446689877901735",
+      "author": "mayuyun_1128",
+      "authorName": "m🌼",
+      "text": "Aぇ! group LIVE TOUR 2026 Runway\n交換してくださる方を探しています\n\n【譲】横アリ 7/7 昼 2連中1枚(重複なし)\n【求】横アリ 7/7 夜 同行\n\n#Aぇ譲 #Aぇ求 #Aぇ交換 #Runway譲",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "views": 8,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:09:43 +0000 2026"
+    },
+    {
+      "id": "2062446628804456823",
+      "url": "https://x.com/my0uil9ve/status/2062446628804456823",
+      "author": "my0uil9ve",
+      "authorName": "ren is seeing twice today!! ꕤ",
+      "text": "my mom was feeling so maternal over dahyun last night sitting on the stage any time the girls went to the runway she would go “oohhh she’s by herself over there” 😭 lmao but dahyun literally gave her all the whole time she was amazing",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 4,
+      "engagementScore": 1,
+      "createdAt": "Thu Jun 04 08:09:29 +0000 2026"
+    },
+    {
+      "id": "2062447154107744413",
+      "url": "https://x.com/mayuyun_1128/status/2062447154107744413",
+      "author": "mayuyun_1128",
+      "authorName": "m🌼",
+      "text": "正門担不可/当方との同行となります。\n初期当選/下3桁提示可/大阪リリイベ又は当日同行者登録お互い可能のみ\nお心当たりある方DMまでお願い致します。\n\n#Aぇ譲 #Aぇ求 #Aぇ交換 #Runway譲",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 5,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:11:34 +0000 2026"
+    },
+    {
+      "id": "2062447032850116827",
+      "url": "https://x.com/juniorminingpro/status/2062447032850116827",
+      "author": "juniorminingpro",
+      "authorName": "Junior Mining Pro",
+      "text": "@NeilRingdahl @BaystGuy I believe this is the only time I've respectfully disagreed with Neil's opinion. I'm long JUGR since Jan 2024, and published my first article on it July 2025 at 0.75 prior to the runup to $1.90 Q1-2026. Bought more on recent accelerated warrant exercise dip. Story still has a long runway with strong financial backing.",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 3,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:11:05 +0000 2026"
+    },
+    {
+      "id": "2062447010016289083",
+      "url": "https://x.com/smithrumscu2107/status/2062447010016289083",
+      "author": "smithrumscu2107",
+      "authorName": "Beth Smith",
+      "text": "Runway bodies shifting again while brands call it “natural” feels wild. #FashionWeek",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:11:00 +0000 2026"
+    },
+    {
+      "id": "2062446953238323285",
+      "url": "https://x.com/JS_forWanandYul/status/2062446953238323285",
+      "author": "JS_forWanandYul",
+      "authorName": "Best Concert Ever #WEALIVE 🎧💖유리, 🩵웬디",
+      "text": "@iconsiam Orm Kornnaphat making the Gentle Monster Pop-Up look like a Paris runway.\n\nORM VEGGIE POPUP ICONSIAM \n#OrmxGentleMonsterICONSIAM\n#OrmKornnaphat #ออมกรณ์นภัส\n@ormmormm",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 11,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:10:46 +0000 2026"
+    },
+    {
+      "id": "2062446510206550146",
+      "url": "https://x.com/peterli34923561/status/2062446510206550146",
+      "author": "peterli34923561",
+      "authorName": "Rich Peter",
+      "text": "$SMR --- The market’s most concrete recent catalyst centers on ongoing advanced negotiations between South Korean consortiums plus the Korean government and NuScale over substantial equity investment and joint reactor deployment initiatives. Boasting an exceptionally robust nuclear supply chain ecosystem, South Korea stands poised to deliver much-needed capital infusion and expedite NuScale’s commercial rollout should the investment close.\n\n Additionally, NuScale recently expanded its nuclear fuel supply pact with nuclear powerhouse Framatome, locking in conventional fuel sourcing well ahead of firm order awards to mitigate prospective delivery risks down the line.\n\nTo date, NuScale remains the sole small modular reactor (SMR) developer in the U.S. holding an NRC Part 52 design certification from the U.S. Nuclear Regulatory Commission, building a multi-year head start over all industry rivals in regulatory clearance.\n\n1. Ultimate Power Solution for Hyperscale AI Data Centers\nThe explosive expansion of AI and large language models has left top tech players including Google, Microsoft and Amazon grappling with acute power shortages and stringent carbon-neutrality mandates. Wind and solar generation suffer from inherent intermittency, while gigawatt-scale conventional nuclear plants require a lengthy 10–15 year construction timeline. Manufactured en masse at factories and transportable via regular trucking, SMR units can be installed behind-the-meter directly adjacent to data center campuses to deliver steady, zero-carbon baseload power around the clock, 24/7.\n\n2. Defensive Balance Sheet: Cash-Rich with Negligible Long-Term Debt\nWhile top-line revenue remained muted in Q1 amid a lack of newly inked contracts and quarterly cash burn runs between $55 million and $70 million, the firm holds over $1 billion in current assets spanning cash, cash equivalents and short-term investments paired with virtually no long-term outstanding debt. This robust liquidity profile delivers a lengthy cash runway spanning 12 to 14 quarters, eliminating near-term bankruptcy concerns entirely.",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 13,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:09:01 +0000 2026"
+    },
+    {
+      "id": "2062446295512449139",
+      "url": "https://x.com/ericksentz2/status/2062446295512449139",
+      "author": "ericksentz2",
+      "authorName": "YUI🌸",
+      "text": "Aぇ! group LIVETOUR2026 Runway\nお譲り先探しております\n  \n【譲】 7/5夜   横浜 横アリ \n【枚数】1枚(同行)\n【金額】4.0〜\n【取引】PayPayまたは不便な店舗\n\n初期当選/重複無し/期限内/下3桁提示可/\n正門担不可\n\n必要事項明記の上DMお願いします。\n#Aぇ譲  #Runway譲\n #Runway譲",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 22,
+      "engagementScore": 0,
+      "createdAt": "Thu Jun 04 08:08:09 +0000 2026"
+    }
+  ]
+}
+Raw JSON saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-raw.json
+Summary saved: /Users/austintaylor/Documents/Codex/2026-05-22/build-the-official-mvp-for-appscreener/data/twitterapi-io-lovable-summary.json

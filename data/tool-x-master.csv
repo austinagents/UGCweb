@@ -1,0 +1,103 @@
+tool,slug,x_handle,confidence
+Adapt,adapt,@adapt,100
+AI Inspo,ai-inspo,@AIInspoOfficial,100
+AirMusic,airmusic,@theresanaiforit,80
+Aiter.io,aiter-io,@aiter_io,100
+Apollo,apollo,@useapolloio,100
+AppDeploy,appdeploy,@appdeployai,100
+Asteroid AI,asteroid-ai,@asteroid_inc,100
+Audio Transcriber AI,audio-transcriber-ai,@AudiotoTextAI,100
+Babelbeez,babelbeez,@babelbeez,100
+BetterSpace,betterspace,@betterspaceai,100
+BeyondComments,beyondcomments,@programmerByDay,100
+Bolt,bolt,@boltdotnew,100
+BookCoversLab,bookcoverslab,@BookCoversLab,100
+CatDoes,catdoes,@catdoeshq,100
+Claude,claude,@claudeai,60
+Clay,clay,@clay,100
+CloudContact AI,cloudcontact-ai,@cloudcontactai,100
+ColorJibe,colorjibe,@theresanaiforit,80
+Coursebox,coursebox,@theresanaiforit,80
+Cursor,cursor,@cursor_ai,100
+Descript,descript,@descript,100
+DigitalGenius,digitalgenius,@DigitalGeniusAI,100
+ElevenLabs,elevenlabs,@ElevenLabs,60
+Elevoi,elevoi,@theresanaiforit,80
+Epochal,epochal,@epochal_app,100
+EzSolve,ezsolve,@puresoftlabs,100
+Fetcher,fetcher,@fetcherai,100
+FliesReplies,fliesreplies,@fliesreplies,100
+Floot,floot,@floothq,100
+Framer,framer,@framer,100
+Framer AI,framer-ai,@framer,100
+GeekLink,geeklink,@florawang_1,100
+GeoInfer,geoinfer,@geoinfer,100
+Glean,glean,@glean,100
+GlobalPayEX,globalpayex,@GlobalPayEX,100
+Granola,granola,@meetgranola,100
+Grok,grok,@theresanaiforit,80
+GroundScholar,groundscholar,@theresanaiforit,80
+H2O.ai,h2o-ai,@h2oai,100
+HeyGen,heygen,@HeyGen,100
+HomeRestyle AI,homerestyle-ai,@HomeRestyle_ai,100
+HubSpot,hubspot,@HubSpot,100
+ImagineGo,imaginego,@theresanaiforit,80
+Inbenta,inbenta,@inbenta,100
+Instantly,instantly,@InstantlyAI,100
+Jasper,jasper,@heyjasperai,100
+Kairval,kairval,@kairval,100
+Kling,kling,@theresanaiforit,80
+Lindy,lindy,@getlindy,100
+Linear,linear,@linear,100
+LobbyStack,lobbystack,@theresanaiforit,80
+Lovable,lovable,@Lovable,100
+LyricMV,lyricmv,@lyricmvofficia,100
+Make,make,@make_hq,95
+MakeForm,makeform,@_nilni,100
+Manus,manus,@manusai,100
+ModelAtlas,modelatlas,@theresanaiforit,80
+MyCustodyCoach,mycustodycoach,@theresanaiforit,80
+n8n,n8n,@n8n_io,100
+NestTrack,nesttrack,@theresanaiforit,80
+Notion AI,notion-ai,@NotionHQ,100
+Notis,notis,@mindtheflo,100
+PatentFig AI,patentfig-ai,@ChenDavie_AI,100
+Pfpmaker,pfpmaker,@pfpmakerapp,100
+Photo AI,photo-ai,@levelsio,100
+Pika,pika,@pika_labs,100
+PixieBrix,pixiebrix,@pixiebrix,100
+PNGMaker,pngmaker,@PNGMaker,100
+QuillBot,quillbot,@thequillbot,100
+Raplyrics,raplyrics,@theresanaiforit,80
+remio,remio,@remio_ai,100
+remove.bg,remove-bg,@remove_bg,100
+Replit,replit,@replit,100
+Resumedit,resumedit,@theresanaiforit,80
+Riskified,riskified,@theresanaiforit,80
+Rocket,rocket,@rocketdotnew,100
+Runway,runway,@runwayml,100
+Saveto AI,saveto-ai,@saveto_ai,100
+Skillroads,skillroads,@skillroads,100
+Slack,slack,@slackhq,100
+Solyo,solyo,@solyo_official,100
+Stockimg AI,stockimg-ai,@stockimgAI,100
+Subquadratic,subquadratic,@subquadratic,100
+Suno,suno,@suno,100
+Synthesia,synthesia,@synthesiaio,100
+Tendem,tendem,@Tendem_AI,100
+Tome,tome,@theresanaiforit,80
+UGO,ugo,@theresanaiforit,80
+Unframe AI,unframe-ai,@UnframeAI,100
+V0,v0,@v0,100
+Vercel,vercel,@vercel,100
+Verdent,verdent,@verdent_ai,100
+Veriff,veriff,@Veriff,100
+VibeBot,vibebot,@vibebot_gg,100
+Vismint,vismint,@theresanaiforit,80
+Viyou AI Motion Control,viyou-ai-motion-control,@viyouAI,100
+VoxDeck,voxdeck,@voxdeckai,100
+Watermelon,watermelon,@watermelonhq,100
+WearMind,wearmind,@theresanaiforit,80
+WebCrawler API,webcrawler-api,@Webcrawlerapihq,100
+Windsurf,windsurf,@windsurf,100
+Zapier,zapier,@zapier,100
