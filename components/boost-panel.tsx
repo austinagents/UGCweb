@@ -143,24 +143,24 @@ export function BoostPanel({ tiers }: { tiers: BoostTier[] }) {
 
       <div className="boostZone boostMarketplaceZone">
         <div className="boostMarketplaceCard">
-          <span className="boostKicker"><PackagePlus size={14} /> Tools</span>
+          <span className="boostKicker"><PackagePlus size={14} /> Brands</span>
           <h2>List your product</h2>
           <ul>
-            <li>Product profile</li>
-            <li>Categorization & tagging</li>
-            <li>Launch & update</li>
-            <li>Performance insights</li>
+            <li>Reach top creators</li>
+            <li>Target by GMV</li>
+            <li>Offer free samples</li>
+            <li>Grow affiliate sales</li>
           </ul>
           <button type="button" onClick={() => router.push("/onboarding/product")}>List your product</button>
         </div>
         <div className="boostMarketplaceCard">
           <span className="boostKicker"><Users size={14} /> Creators</span>
-          <h2>Match with tools & brands</h2>
+          <h2>Match with brands</h2>
           <ul>
-            <li>Brand & tool matches</li>
-            <li>Sponsored opportunities</li>
-            <li>Revenue & payouts</li>
-            <li>Creator insights</li>
+            <li>Find products</li>
+            <li>Request samples</li>
+            <li>Earn commissions</li>
+            <li>Grow your GMV</li>
           </ul>
           <button type="button" onClick={() => router.push("/onboarding/creator")}>Match with brands</button>
         </div>

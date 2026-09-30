@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
+import { displayShopName } from "@/lib/shop-display-name";
 import type { TikTokShop, TikTokShopsResponse } from "@/lib/types";
 
 export function ShopTable({ category }: { category: string }) {
@@ -83,9 +84,9 @@ export function ShopTable({ category }: { category: string }) {
             {!error && shops.map((shop, index) => (
               <tr key={shop.seller_id}>
                 <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
-                <td data-label="Shop"><ShopIdentity shop={shop} /></td>
+                <td data-label="Shop"><ShopIdentity shop={shop} category={shopCategory(shop, category)} /></td>
                 <td data-label="Category">
-                  <span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{category}</span>
+                  <span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{shopCategory(shop, category)}</span>
                 </td>
                 <td data-label="7D GMV"><strong className="commerceMetric">{formatCurrency(shop.day7_total_gmv)}</strong></td>
                 <td data-label="Lifetime GMV">{formatCurrency(shop.total_gmv)}</td>
@@ -110,18 +111,23 @@ export function ShopTable({ category }: { category: string }) {
   );
 }
 
+function shopCategory(shop: TikTokShop, fallback: string) {
+  return (shop as TikTokShop & { category?: string }).category ?? fallback;
+}
+
 function ShopStateRow({ children, error }: { children: ReactNode; error?: string }) {
   return <tr className="shopStateRow"><td colSpan={8}><strong>{children}</strong>{error ? <small>{error}</small> : null}</td></tr>;
 }
 
-function ShopIdentity({ shop }: { shop: TikTokShop }) {
+function ShopIdentity({ shop, category }: { shop: TikTokShop; category: string }) {
+  const displayName = displayShopName(shop.name, category);
   const content = (
     <>
       <span className="shopAvatarFallback" aria-hidden="true">
         {initials(shop.name)}
         {shop.avatar_url ? <img src={shop.avatar_url} alt="" width={32} height={32} loading="lazy" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
       </span>
-      <span><strong>{shop.name ?? "Unknown Shop"}</strong>{shop.brand && shop.brand !== shop.name ? <small>{shop.brand}</small> : null}</span>
+      <span><strong title={shop.name ?? undefined}>{displayName}</strong>{shop.brand && shop.brand !== shop.name ? <small>{shop.brand}</small> : null}</span>
     </>
   );
 

@@ -3529,13 +3529,42 @@ body {
   height: 28px;
 }
 
+.railShopLogo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 7px;
+  color: var(--text-muted);
+  background: #0a1014;
+  font-size: 9px;
+  font-weight: 720;
+}
+
+.railShopLogo img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
 .railItem strong {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 128px;
   overflow: hidden;
   color: var(--text-primary);
   font-size: 12px;
   font-weight: 720;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.railLoadingItem {
+  visibility: hidden;
 }
 
 .railItem em {
@@ -4146,6 +4175,11 @@ body {
   margin: 8px 0 10px;
   padding: 0;
   list-style: none;
+}
+
+.boostZone .boostMarketplaceCard h2 {
+  font-size: 15px;
+  letter-spacing: -0.025em;
 }
 
 .boostMarketplaceCard li {
@@ -5917,6 +5951,10 @@ a:hover .toolLogo {
   table-layout: fixed;
 }
 
+.shopTableWrap {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
 .shopScreenerTable .shopRankColumn { width: 7%; }
 .shopScreenerTable .shopNameColumn { width: 24%; }
 .shopScreenerTable .shopCategoryColumn { width: 14%; }
@@ -5986,6 +6024,7 @@ a:hover .toolLogo {
   padding: 8px 10px;
   border: 1px solid var(--border-subtle);
   border-top: 0;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
   background: rgba(10, 15, 20, 0.94);
   color: var(--text-muted);
   font-size: 11px;

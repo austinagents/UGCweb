@@ -25,8 +25,8 @@ export function AppShell({ children }: { children: ReactNode }) {
         <Link href="/" className="brand" aria-label="AppScreener home">
           <span className="brandMark"><Image src="/logo.png" alt="" width={36} height={36} priority /></span>
           <span>
-            <strong>AppScreener</strong>
-            <small>The live screener for AI products.</small>
+            <strong>PartnerLinks</strong>
+            <small>By UGC NETWORK</small>
           </span>
         </Link>
         <CommandSearch />
