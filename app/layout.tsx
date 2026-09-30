@@ -13,7 +13,7 @@ const geistSans = localFont({
 
 export const metadata: Metadata = {
   title: "PartnerLinks",
-  description: "The live screener for AI products."
+  description: "TikTok Shop intelligence, marketplace, and brand partnerships."
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
