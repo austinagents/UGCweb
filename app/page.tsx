@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { CreatorAvatar } from "@/components/creator-avatar";
 import { BoostPanel } from "@/components/boost-panel";
 import { HomeTrendingFilter } from "@/components/home-trending-filter";
-import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ToolLogo } from "@/components/tool-logo";
 import { WorkflowStack } from "@/components/workflow-stack";
 import { attentionFeed, boostTiers, categories, creatorIntelligenceStatus, creators, movementEvents, tools, workflows } from "@/lib/data";
@@ -21,8 +20,6 @@ export default function DiscoverPage() {
 
   return (
     <div className="homeStack">
-      <PromotedMomentumRail />
-
       <HomeTrendingFilter />
 
       <section className="homeSecondary">

@@ -127,7 +127,7 @@ function ShopIdentity({ shop, category }: { shop: TikTokShop; category: string }
         {initials(shop.name)}
         {shop.avatar_url ? <img src={shop.avatar_url} alt="" width={32} height={32} loading="lazy" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
       </span>
-      <span><strong title={shop.name ?? undefined}>{displayName}</strong>{shop.brand && shop.brand !== shop.name ? <small>{shop.brand}</small> : null}</span>
+      <span><strong title={shop.name ?? undefined}>{displayName}</strong></span>
     </>
   );
 

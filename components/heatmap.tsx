@@ -31,7 +31,11 @@ import {
 import { ecosystemColorStyle } from "@/lib/ecosystem-colors";
 import { ecosystemTagSlug } from "@/lib/ecosystem-tags";
 import { displayCategory } from "@/lib/format";
-import { commerceCategoryGroups, type CommerceCategory } from "@/lib/commerce-categories";
+import {
+  commerceCategoryGroups,
+  type CommerceCategory,
+  type CommerceChildCategory,
+} from "@/lib/commerce-categories";
 import type { AttentionSubCategory, Category } from "@/lib/types";
 import { MovementBadge } from "./movement-badge";
 
@@ -90,15 +94,21 @@ const commerceCategoryIcons: Record<string, LucideIcon> = {
   "Pets & Hobbies": PawPrint
 };
 
+const creatorAmbiguousChildren = new Set<CommerceChildCategory>(
+  ["Dogs", "Cats"]
+);
+
 export function CommerceCategoryMap({
+  mode = "shops",
   activeCategory,
   onSelect
 }: {
-  activeCategory: CommerceCategory;
+  mode?: "shops" | "creators";
+  activeCategory: "All" | CommerceCategory;
   onSelect: (category: CommerceCategory) => void;
 }) {
   return (
-    <div className="commerceCategoryMap" aria-label="TikTok Shop category map">
+    <div className="commerceCategoryMap" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category map`}>
       {commerceCategoryGroups.map((group) => {
         const Icon = commerceCategoryIcons[group.name];
         const groupActive = activeCategory === group.name || group.children.some((category) => category === activeCategory);
@@ -116,6 +126,7 @@ export function CommerceCategoryMap({
                   type="button"
                   onClick={() => onSelect(category)}
                   key={category}
+                  title={mode === "creators" && creatorAmbiguousChildren.has(category) ? "Collected creator data cannot yet distinguish Dogs from Cats" : undefined}
                 >
                   {category}
                 </button>

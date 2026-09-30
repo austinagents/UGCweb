@@ -1,19 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { CreatorTable } from "@/components/creator-table";
 import { CommerceCategoryMap } from "@/components/heatmap";
+import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ShopTable } from "@/components/shop-table";
 import { commerceParentCategories, type CommerceCategory } from "@/lib/commerce-categories";
 
 type ScreenerCategory = "All" | CommerceCategory;
+type ScreenerMode = "shops" | "creators";
 
 export function HomeTrendingFilter() {
-  const [activeCategory, setActiveCategory] = useState<ScreenerCategory>("All");
+  const [mode, setMode] = useState<ScreenerMode>("shops");
+  const [shopCategory, setShopCategory] = useState<ScreenerCategory>("All");
+  const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>("All");
   const screenerCategories: ScreenerCategory[] = ["All", ...commerceParentCategories];
+  const activeCategory = mode === "shops" ? shopCategory : creatorCategory;
+  const setActiveCategory = mode === "shops" ? setShopCategory : setCreatorCategory;
 
   return (
     <>
-      <nav className="screenTabs" aria-label="TikTok Shop category filters">
+      <PromotedMomentumRail mode={mode} category={creatorCategory} />
+
+      <nav className="screenTabs" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category filters`}>
         {screenerCategories.map((category) => (
           <button
             className={activeCategory === category ? "active" : ""}
@@ -29,24 +38,28 @@ export function HomeTrendingFilter() {
       <section className="homePrimary">
         <div className="primaryTable">
           <div className="sectionHeader tightHeader commerceScreenerHeader">
-            <div>
-              <h1>Trending TikTok Shops</h1>
-              <p>{activeCategory === "All" ? "All categories" : activeCategory} · ranked by 7-day GMV</p>
-            </div>
-            <div className="timeframeToggle compact commerceTimeframe" aria-label="Shop performance timeframe">
+            <h1 className="entityModeHeading">
+              <span>Trending TikTok</span>
+              <span className="entityModeToggle" role="group" aria-label="Trending entity type">
+                <button className={mode === "shops" ? "active" : ""} type="button" aria-pressed={mode === "shops"} onClick={() => setMode("shops")}>Shops</button>
+                <button className={mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators"} onClick={() => setMode("creators")}>Creators</button>
+              </span>
+            </h1>
+            <div className="timeframeToggle compact commerceTimeframe" aria-label={`${mode === "shops" ? "Shop" : "Creator"} performance timeframe`}>
               <button type="button" disabled title="24-hour data is not available yet">24H</button>
-              <button className="active" type="button" aria-pressed="true">7D</button>
-              <button type="button" disabled title="30-day data is not available yet">30D</button>
+              <button className={mode === "shops" ? "active" : ""} type="button" aria-pressed={mode === "shops"} disabled={mode === "creators"}>7D</button>
+              <button className={mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators"} disabled={mode === "shops"} title={mode === "shops" ? "30-day shop data is not available yet" : "Creator GMV reporting timeframe"}>30D</button>
             </div>
           </div>
-          <ShopTable category={activeCategory} />
+          <div hidden={mode !== "shops"}><ShopTable category={shopCategory} /></div>
+          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} /></div>
         </div>
         <aside className="homeRail">
           <section className="previewPanel commerceCategoryPanel">
             <div className="panelHeader">
               <div><h2>Category Map</h2><small>TikTok Shop taxonomy</small></div>
             </div>
-            <CommerceCategoryMap activeCategory={activeCategory as CommerceCategory} onSelect={setActiveCategory} />
+            <CommerceCategoryMap mode={mode} activeCategory={activeCategory} onSelect={setActiveCategory} />
           </section>
         </aside>
       </section>
