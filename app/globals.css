@@ -5894,6 +5894,18 @@ a:hover .toolLogo {
   font-size: 11px;
 }
 
+.commerceTimeframe {
+  padding: 0;
+}
+
+.commerceTimeframe button:disabled {
+  border-color: rgba(42, 53, 59, 0.72);
+  background: rgba(7, 11, 14, 0.42);
+  color: #526168;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 .shopScreenerTable {
   min-width: 1040px;
   table-layout: fixed;
@@ -6011,23 +6023,32 @@ a:hover .toolLogo {
   gap: 2px;
 }
 
+.commerceCategoryPanel {
+  display: flex;
+  flex-direction: column;
+}
+
 .commerceCategoryMap {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 6px;
 }
 
 .commerceCategoryCluster {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
-  padding: 9px;
-  border: 1px solid rgba(42, 74, 82, 0.75);
-  border-radius: 12px;
+  padding: 7px;
+  border: 1px solid rgba(42, 74, 82, 0.72);
+  border-radius: 8px;
   background: #0c171e;
   transition: border-color 160ms ease, background 160ms ease;
 }
 
 .commerceCategoryCluster.active {
-  border-color: rgba(149, 184, 123, 0.55);
+  border-color: rgba(149, 184, 123, 0.48);
   background: rgba(149, 184, 123, 0.035);
 }
 
@@ -6036,41 +6057,56 @@ a:hover .toolLogo {
   align-items: center;
   gap: 6px;
   width: 100%;
-  min-height: 22px;
-  padding: 0 0 7px;
+  min-height: 25px;
+  padding: 0 1px 6px;
   border: 0;
   background: transparent;
   color: #6fa7a2;
   cursor: pointer;
   font-size: 9px;
-  font-weight: 760;
-  letter-spacing: 0.05em;
+  font-weight: 780;
+  letter-spacing: 0.045em;
+  line-height: 1.25;
   text-align: left;
   text-transform: uppercase;
 }
 
 .commerceCategoryLabel svg {
   flex: 0 0 auto;
+  color: #5c8583;
+}
+
+.commerceCategoryCluster.active .commerceCategoryLabel,
+.commerceCategoryLabel:hover {
+  color: var(--accent-primary);
+}
+
+.commerceCategoryCluster.active .commerceCategoryLabel svg {
+  color: var(--accent-primary);
 }
 
 .commerceCategoryNodes {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 5px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  min-width: 0;
+  min-height: 0;
 }
 
 .commerceCategoryNodes button {
   min-width: 0;
-  min-height: 27px;
-  padding: 5px 6px;
+  min-height: 24px;
+  padding: 4px 5px;
   overflow: hidden;
   border: 1px solid #22343f;
-  border-radius: 5px;
-  background: #0d151d;
+  border-radius: 3px;
+  background: rgba(9, 17, 23, 0.72);
   color: #a4d0cc;
   cursor: pointer;
-  font-size: 10px;
-  font-weight: 650;
+  font-size: 9px;
+  font-weight: 620;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -6078,8 +6114,12 @@ a:hover .toolLogo {
 .commerceCategoryNodes button:hover,
 .commerceCategoryNodes button.active {
   border-color: var(--border-active);
-  background: rgba(149, 184, 123, 0.065);
+  background: rgba(149, 184, 123, 0.055);
   color: var(--accent-primary);
+}
+
+.commerceCategoryNodes button.active {
+  box-shadow: inset 2px 0 0 rgba(149, 184, 123, 0.68);
 }
 
 @media (max-width: 760px) {
