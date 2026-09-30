@@ -8,14 +8,19 @@ import {
   ChartNoAxesCombined,
   CircleDollarSign,
   Code2,
+  Coffee,
+  Dumbbell,
   FileText,
   Globe2,
+  House,
   Mail,
   Megaphone,
   MousePointer2,
   Pickaxe,
+  PawPrint,
   Search,
   Send,
+  Shirt,
   Sparkles,
   Tags,
   UserPlus,
@@ -26,6 +31,7 @@ import {
 import { ecosystemColorStyle } from "@/lib/ecosystem-colors";
 import { ecosystemTagSlug } from "@/lib/ecosystem-tags";
 import { displayCategory } from "@/lib/format";
+import { commerceCategoryGroups, type CommerceCategory } from "@/lib/commerce-categories";
 import type { AttentionSubCategory, Category } from "@/lib/types";
 import { MovementBadge } from "./movement-badge";
 
@@ -71,6 +77,53 @@ export function CategoryHeatmap({ categories }: { categories: Category[] }) {
           <small>{category.toolsTracked} tools tracked</small>
         </Link>
       ))}
+    </div>
+  );
+}
+
+const commerceCategoryIcons: Record<string, LucideIcon> = {
+  "Sports & Outdoors": Dumbbell,
+  Fashion: Shirt,
+  "Beauty & Care": Sparkles,
+  "Food & Beverage": Coffee,
+  "Home & Living": House,
+  "Pets & Hobbies": PawPrint
+};
+
+export function CommerceCategoryMap({
+  activeCategory,
+  onSelect
+}: {
+  activeCategory: CommerceCategory;
+  onSelect: (category: CommerceCategory) => void;
+}) {
+  return (
+    <div className="commerceCategoryMap" aria-label="TikTok Shop category map">
+      {commerceCategoryGroups.map((group) => {
+        const Icon = commerceCategoryIcons[group.name];
+        const groupActive = activeCategory === group.name || group.children.some((category) => category === activeCategory);
+
+        return (
+          <section className={`commerceCategoryCluster ${groupActive ? "active" : ""}`} key={group.name}>
+            <button className="commerceCategoryLabel" type="button" onClick={() => onSelect(group.name)}>
+              <Icon size={13} />
+              <span>{group.name}</span>
+            </button>
+            <div className="commerceCategoryNodes">
+              {group.children.map((category) => (
+                <button
+                  className={activeCategory === category ? "active" : ""}
+                  type="button"
+                  onClick={() => onSelect(category)}
+                  key={category}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

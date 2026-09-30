@@ -1,7 +1,6 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { twentyFourHourDisplayPercentageForSlug } from "@/components/home-trending-filter";
 import { tools } from "@/lib/data";
 import { ToolLogo } from "./tool-logo";
 
@@ -138,7 +137,7 @@ export function PromotedMomentumRail() {
           {[...railItems, ...railItems].map((item, index) => {
             const itemRank = index % railItems.length;
             const itemClassName = `railItem${item.sponsored ? " sponsored" : ""}${itemRank < 3 ? " leader" : ""}`;
-            const growth24h = twentyFourHourDisplayPercentageForSlug(item.tool.slug) ?? item.tool.growth24h;
+            const growth24h = item.tool.growth24h;
             const content = (
               <>
                 <span className="railRank">#{itemRank + 1}</span>

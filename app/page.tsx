@@ -1,13 +1,12 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CreatorAvatar } from "@/components/creator-avatar";
-import { AttentionHeatmap } from "@/components/heatmap";
 import { BoostPanel } from "@/components/boost-panel";
 import { HomeTrendingFilter } from "@/components/home-trending-filter";
 import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ToolLogo } from "@/components/tool-logo";
 import { WorkflowStack } from "@/components/workflow-stack";
-import { attentionFeed, attentionSubCategories, boostTiers, categories, creatorIntelligenceStatus, creators, movementEvents, tools, workflows } from "@/lib/data";
+import { attentionFeed, boostTiers, categories, creatorIntelligenceStatus, creators, movementEvents, tools, workflows } from "@/lib/data";
 import { creatorTagDisplayLabel } from "@/lib/creator-tags";
 import { displayCategory } from "@/lib/format";
 
@@ -24,13 +23,7 @@ export default function DiscoverPage() {
     <div className="homeStack">
       <PromotedMomentumRail />
 
-      <HomeTrendingFilter tools={tools}>
-        <aside className="homeRail">
-          <PreviewPanel href="/heatmap" title="Attention Heatmap" meta="">
-            <AttentionHeatmap items={attentionSubCategories} />
-          </PreviewPanel>
-        </aside>
-      </HomeTrendingFilter>
+      <HomeTrendingFilter />
 
       <section className="homeSecondary">
         <div className="lowerDiscoveryRow">

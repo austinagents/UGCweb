@@ -148,6 +148,33 @@ export type Category = {
   sparkline: number[];
 };
 
+export type TikTokShop = {
+  seller_id: string;
+  name: string | null;
+  brand: string | null;
+  shop_rating: number | null;
+  total_units_sold: number | null;
+  total_gmv: number | null;
+  day7_units_sold: number | null;
+  day7_total_gmv: number | null;
+  on_sale_product_count: number | null;
+  affiliate_creator_count: number | null;
+  tiktok_unique_id: string | null;
+  avatar_url: string | null;
+};
+
+export type TikTokShopsResponse = {
+  category: string;
+  categories: string[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
+  count: number;
+  shops: TikTokShop[];
+  error?: string;
+};
+
 export type AttentionSubCategory = {
   id: string;
   slug: string;
