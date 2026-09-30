@@ -66,10 +66,10 @@ export function CreatorTable({
               <th>Creator</th>
               <th>Category</th>
               <th>30D GMV</th>
-              <th>Video GMV</th>
-              <th>Live GMV</th>
+              <th>Audience</th>
               <th>Units Sold</th>
               <th>Followers</th>
+              <th>Socials</th>
             </tr>
           </thead>
           <tbody>
@@ -87,10 +87,10 @@ export function CreatorTable({
                 <td data-label="Creator"><CreatorIdentity creator={creator} /></td>
                 <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{displayCreatorCategory(creator, category)}</span></td>
                 <td data-label="30D GMV"><strong className="commerceMetric">{formatCreatorGmv(creator)}</strong></td>
-                <td data-label="Video GMV">{formatCurrencyOrDash(creator.video_gmv)}</td>
-                <td data-label="Live GMV">{formatCurrencyOrDash(creator.live_gmv)}</td>
+                <td data-label="Audience"><span className="creatorAudience">{formatAudience(creator)}</span></td>
                 <td data-label="Units Sold">{creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatNumber(creator.followers)}</span></td>
+                <td data-label="Socials">{formatCurrencyOrDash(creator.live_gmv)}</td>
               </tr>
             ))}
           </tbody>
@@ -144,6 +144,11 @@ function formatCurrency(value: number) {
 
 function formatCurrencyOrDash(value: number | null) {
   return value === null ? "—" : formatCurrency(value);
+}
+
+function formatAudience(creator: CreatorScreenerRow) {
+  if (!creator.audience_gender) return "—";
+  return `${creator.audience_gender.gender} ${Math.round(creator.audience_gender.percentage)}%`;
 }
 
 function formatNumber(value: number | null) {

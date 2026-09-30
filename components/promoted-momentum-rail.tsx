@@ -101,11 +101,12 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
           {mode === "creators" ? creatorRailItems.length > 0 ? creatorRailItems.map((creator, index) => {
             const itemRank = index % creators.length;
             const handle = creator.handle.replace(/^@/, "");
+            const displayName = creator.nickname || `@${handle}`;
             return (
               <a className={`railItem creatorRailItem${itemRank < 3 ? " leader" : ""}`} href={`https://www.tiktok.com/@${handle}`} target="_blank" rel="noopener noreferrer" key={`${creator.creator_oecuid}-${index}`}>
                 <span className="railRank">#{itemRank + 1}</span>
                 <CreatorRailAvatar creator={creator} />
-                <strong title={`@${handle}`}>@{handle}</strong>
+                <strong title={displayName}>{displayName}</strong>
                 <small>{formatCreatorGmv(creator)}</small>
               </a>
             );

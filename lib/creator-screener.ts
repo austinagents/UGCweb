@@ -14,6 +14,10 @@ export type CreatorScreenerRow = {
   live_gmv: number | null;
   units_sold: number | null;
   units_sold_range: string | null;
+  audience_gender: {
+    gender: "Female" | "Male";
+    percentage: number;
+  } | null;
   snapshotTimestamp: string;
 };
 

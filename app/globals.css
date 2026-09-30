@@ -5993,15 +5993,21 @@ a:hover .toolLogo {
   border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
-.shopScreenerTable .shopRankColumn { width: 7%; }
-.shopScreenerTable .shopNameColumn { width: 24%; }
-.shopScreenerTable .shopCategoryColumn { width: 14%; }
+.shopScreenerTable .shopRankColumn { width: 5%; }
+.shopScreenerTable .shopNameColumn { width: 22%; }
+.shopScreenerTable .shopCategoryColumn { width: 18%; }
 .shopScreenerTable .shopMetricColumn { width: 12%; }
 .shopScreenerTable .shopNumberColumn { width: 9%; }
 .shopScreenerTable .shopCreatorColumn { width: 13%; }
 
 .creatorHandle {
   color: var(--text-primary);
+}
+
+.creatorAudience {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .creatorCell strong,

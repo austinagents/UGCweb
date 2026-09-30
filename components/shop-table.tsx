@@ -73,7 +73,7 @@ export function ShopTable({ category }: { category: string }) {
               <th>Lifetime GMV</th>
               <th>7D Units</th>
               <th>Products</th>
-              <th>Affiliate Creators</th>
+              <th>Socials</th>
             </tr>
           </thead>
           <tbody>
@@ -92,7 +92,7 @@ export function ShopTable({ category }: { category: string }) {
                 <td data-label="Lifetime GMV">{formatCurrency(shop.total_gmv)}</td>
                 <td data-label="7D Units">{formatNumber(shop.day7_units_sold)}</td>
                 <td data-label="Products">{formatNumber(shop.on_sale_product_count)}</td>
-                <td data-label="Affiliate Creators"><span className="signalCount">{formatNumber(shop.affiliate_creator_count)}</span></td>
+                <td data-label="Socials"><span className="signalCount">{formatNumber(shop.affiliate_creator_count)}</span></td>
               </tr>
             ))}
           </tbody>
