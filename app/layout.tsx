@@ -12,7 +12,7 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AppScreener",
+  title: "PartnerLinks",
   description: "The live screener for AI products."
 };
 
