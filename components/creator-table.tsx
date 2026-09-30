@@ -1,50 +1,68 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import { commerceParentCategories, type CommerceCategory } from "@/lib/commerce-categories";
-import type { CreatorScreenerResponse, CreatorScreenerRow } from "@/lib/creator-screener";
+import type { CreatorListRow, CreatorScreenerResponse } from "@/lib/creator-screener";
+
+type CreatorTableResult = {
+  category: "All" | CommerceCategory;
+  data: CreatorScreenerResponse;
+};
 
 export function CreatorTable({
   category,
+  active = true,
 }: {
   category: "All" | CommerceCategory;
+  active?: boolean;
 }) {
-  const [creators, setCreators] = useState<CreatorScreenerRow[]>([]);
-  const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(100);
-  const [total, setTotal] = useState(0);
-  const [totalPages, setTotalPages] = useState(1);
+  const [pagination, setPagination] = useState({ category, page: 1 });
+  const [result, setResult] = useState<CreatorTableResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => setPage(1), [category]);
+  const page = pagination.category === category ? pagination.page : 1;
 
   useEffect(() => {
-    const controller = new AbortController();
-    setIsLoading(true);
+    let cancelled = false;
+    const key = creatorQueryKey(category, page);
+    const url = creatorQueryUrl(category, page);
+    const cached = readCommerceQuery<CreatorScreenerResponse>(key, 300_000);
+    if (cached) {
+      setResult({ category, data: cached.data });
+      setIsLoading(false);
+    } else {
+      setIsLoading(true);
+    }
     setError(null);
-    fetch(`/api/creators?category=${encodeURIComponent(category)}&page=${page}`, { signal: controller.signal })
-      .then(async (response) => {
-        const data = await response.json() as CreatorScreenerResponse;
-        if (!response.ok) throw new Error("Failed to load creators.");
-        setCreators(data.creators);
-        setPage(data.page);
-        setPageSize(data.pageSize);
-        setTotal(data.total);
-        setTotalPages(data.totalPages);
+    loadCommerceQuery<CreatorScreenerResponse>(key, url, cached?.stale ?? false)
+      .then((data) => {
+        if (cancelled) return;
+        setResult({ category, data });
+        if (active && data.page < data.totalPages) {
+          const nextPage = data.page + 1;
+          prefetchCommerceQuery<CreatorScreenerResponse>(creatorQueryKey(category, nextPage), creatorQueryUrl(category, nextPage));
+        }
       })
       .catch((cause) => {
-        if (cause instanceof DOMException && cause.name === "AbortError") return;
-        setCreators([]);
+        if (cancelled) return;
         setError(cause instanceof Error ? cause.message : "Failed to load creators.");
       })
       .finally(() => {
-        if (!controller.signal.aborted) setIsLoading(false);
+        if (!cancelled) setIsLoading(false);
       });
-    return () => controller.abort();
-  }, [category, page]);
+    return () => { cancelled = true; };
+  }, [active, category, page]);
 
-  const firstRank = (page - 1) * pageSize;
+  const data = result?.data;
+  const creators = data?.creators ?? [];
+  const renderedCategory = result?.category ?? category;
+  const renderedPage = data?.page ?? page;
+  const pageSize = data?.pageSize ?? 100;
+  const total = data?.total ?? 0;
+  const totalPages = data?.totalPages ?? 1;
+  const firstRank = (renderedPage - 1) * pageSize;
+  const setPage = (nextPage: number) => setPagination({ category, page: nextPage });
 
   return (
     <>
@@ -85,7 +103,7 @@ export function CreatorTable({
               <tr key={creator.creator_oecuid}>
                 <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
                 <td data-label="Creator"><CreatorIdentity creator={creator} /></td>
-                <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{displayCreatorCategory(creator, category)}</span></td>
+                <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{displayCreatorCategory(creator, renderedCategory)}</span></td>
                 <td data-label="30D GMV"><strong className="commerceMetric">{formatCreatorGmv(creator)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience">{formatAudience(creator)}</span></td>
                 <td data-label="Units Sold">{creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold)}</td>
@@ -98,18 +116,26 @@ export function CreatorTable({
       </div>
 
       <div className="shopPagination creatorTableStatus" aria-label="Creator results status">
-        <span>{isLoading ? "Loading creators…" : `${total.toLocaleString()} creators · ranked by 30D GMV`}</span>
+        <span>{isLoading ? `Updating ${category} creators…` : `${total.toLocaleString()} creators · ranked by 30D GMV`}</span>
         <div>
-          <button type="button" disabled={isLoading || page <= 1} onClick={() => setPage((current) => Math.max(1, current - 1))}>← Previous</button>
-          <strong>Page {page} of {totalPages}</strong>
-          <button type="button" disabled={isLoading || page >= totalPages} onClick={() => setPage((current) => Math.min(totalPages, current + 1))}>Next →</button>
+          <button type="button" disabled={isLoading || renderedPage <= 1} onClick={() => setPage(Math.max(1, renderedPage - 1))}>← Previous</button>
+          <strong>Page {renderedPage} of {totalPages}</strong>
+          <button type="button" disabled={isLoading || renderedPage >= totalPages} onClick={() => setPage(Math.min(totalPages, renderedPage + 1))}>Next →</button>
         </div>
       </div>
     </>
   );
 }
 
-function CreatorIdentity({ creator }: { creator: CreatorScreenerRow }) {
+function creatorQueryKey(category: "All" | CommerceCategory, page: number) {
+  return `creators:${category}:${page}`;
+}
+
+function creatorQueryUrl(category: "All" | CommerceCategory, page: number) {
+  return `/api/creators?category=${encodeURIComponent(category)}&page=${page}`;
+}
+
+function CreatorIdentity({ creator }: { creator: CreatorListRow }) {
   const handle = creator.handle.replace(/^@/, "");
   return (
     <a className="toolCell shopCell creatorCell" href={`https://www.tiktok.com/@${handle}`} target="_blank" rel="noreferrer">
@@ -126,14 +152,14 @@ function CreatorStateRow({ children }: { children: ReactNode }) {
   return <tr className="shopStateRow creatorStateRow"><td colSpan={8}>{children}</td></tr>;
 }
 
-function displayCreatorCategory(creator: CreatorScreenerRow, selectedCategory: "All" | CommerceCategory) {
+function displayCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | CommerceCategory) {
   if (selectedCategory !== "All" && creator.categoryMemberships.includes(selectedCategory)) return selectedCategory;
   return creator.categoryMemberships.find((category) => !commerceParentCategories.some((parent) => parent === category))
     ?? creator.categoryMemberships[0]
     ?? "Unmapped";
 }
 
-function formatCreatorGmv(creator: CreatorScreenerRow) {
+function formatCreatorGmv(creator: CreatorListRow) {
   if (creator.med_gmv_revenue !== null) return formatCurrency(creator.med_gmv_revenue);
   return creator.med_gmv_revenue_range ?? "—";
 }
@@ -146,7 +172,7 @@ function formatCurrencyOrDash(value: number | null) {
   return value === null ? "—" : formatCurrency(value);
 }
 
-function formatAudience(creator: CreatorScreenerRow) {
+function formatAudience(creator: CreatorListRow) {
   if (!creator.audience_gender) return "—";
   return `${creator.audience_gender.gender} ${Math.round(creator.audience_gender.percentage)}%`;
 }

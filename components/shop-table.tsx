@@ -2,53 +2,61 @@
 
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
+import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import { displayShopName } from "@/lib/shop-display-name";
 import type { TikTokShop, TikTokShopsResponse } from "@/lib/types";
 
-export function ShopTable({ category }: { category: string }) {
-  const [shops, setShops] = useState<TikTokShop[]>([]);
-  const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(100);
-  const [total, setTotal] = useState(0);
-  const [totalPages, setTotalPages] = useState(1);
+type ShopTableResult = { category: string; data: TikTokShopsResponse };
+
+export function ShopTable({ category, active = true }: { category: string; active?: boolean }) {
+  const [pagination, setPagination] = useState({ category, page: 1 });
+  const [result, setResult] = useState<ShopTableResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const page = pagination.category === category ? pagination.page : 1;
 
   useEffect(() => {
-    setPage(1);
-  }, [category]);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    setIsLoading(true);
+    let cancelled = false;
+    const key = shopQueryKey(category, page);
+    const url = shopQueryUrl(category, page);
+    const cached = readCommerceQuery<TikTokShopsResponse>(key);
+    if (cached) {
+      setResult({ category, data: cached.data });
+      setIsLoading(false);
+    } else {
+      setIsLoading(true);
+    }
     setError(null);
 
-    fetch(`/api/shops?category=${encodeURIComponent(category)}&page=${page}`, { signal: controller.signal })
-      .then(async (response) => {
-        const data = (await response.json()) as Partial<TikTokShopsResponse>;
-        if (!response.ok) throw new Error(data.error ?? "Failed to load shops.");
-
-        setShops(data.shops ?? []);
-        setPage(data.page ?? page);
-        setPageSize(data.pageSize ?? 100);
-        setTotal(data.total ?? 0);
-        setTotalPages(data.totalPages ?? 1);
+    loadCommerceQuery<TikTokShopsResponse>(key, url, cached?.stale ?? false)
+      .then((data) => {
+        if (cancelled) return;
+        setResult({ category, data });
+        if (active && data.page < data.totalPages) {
+          const nextPage = data.page + 1;
+          prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(category, nextPage), shopQueryUrl(category, nextPage));
+        }
       })
       .catch((cause) => {
-        if (cause instanceof DOMException && cause.name === "AbortError") return;
-        setShops([]);
-        setTotal(0);
-        setTotalPages(1);
+        if (cancelled) return;
         setError(cause instanceof Error ? cause.message : "Failed to load shops.");
       })
       .finally(() => {
-        if (!controller.signal.aborted) setIsLoading(false);
+        if (!cancelled) setIsLoading(false);
       });
 
-    return () => controller.abort();
-  }, [category, page]);
+    return () => { cancelled = true; };
+  }, [active, category, page]);
 
-  const firstRank = (page - 1) * pageSize;
+  const data = result?.data;
+  const shops = data?.shops ?? [];
+  const renderedCategory = result?.category ?? category;
+  const renderedPage = data?.page ?? page;
+  const pageSize = data?.pageSize ?? 100;
+  const total = data?.total ?? 0;
+  const totalPages = data?.totalPages ?? 1;
+  const firstRank = (renderedPage - 1) * pageSize;
+  const setPage = (nextPage: number) => setPagination({ category, page: nextPage });
 
   return (
     <>
@@ -84,9 +92,9 @@ export function ShopTable({ category }: { category: string }) {
             {!error && shops.map((shop, index) => (
               <tr key={shop.seller_id}>
                 <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
-                <td data-label="Shop"><ShopIdentity shop={shop} category={shopCategory(shop, category)} /></td>
+                <td data-label="Shop"><ShopIdentity shop={shop} category={shopCategory(shop, renderedCategory)} /></td>
                 <td data-label="Category">
-                  <span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{shopCategory(shop, category)}</span>
+                  <span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{shopCategory(shop, renderedCategory)}</span>
                 </td>
                 <td data-label="7D GMV"><strong className="commerceMetric">{formatCurrency(shop.day7_total_gmv)}</strong></td>
                 <td data-label="Lifetime GMV">{formatCurrency(shop.total_gmv)}</td>
@@ -100,15 +108,23 @@ export function ShopTable({ category }: { category: string }) {
       </div>
 
       <div className="shopPagination" aria-label="Shop results pagination">
-        <span>{isLoading ? "Loading shops…" : `${total.toLocaleString()} shops · ranked by 7D GMV`}</span>
+        <span>{isLoading ? `Updating ${category} shops…` : `${total.toLocaleString()} shops · ranked by 7D GMV`}</span>
         <div>
-          <button type="button" disabled={isLoading || page <= 1} onClick={() => setPage((current) => Math.max(1, current - 1))}>← Previous</button>
-          <strong>Page {page} of {totalPages}</strong>
-          <button type="button" disabled={isLoading || page >= totalPages} onClick={() => setPage((current) => Math.min(totalPages, current + 1))}>Next →</button>
+          <button type="button" disabled={isLoading || renderedPage <= 1} onClick={() => setPage(Math.max(1, renderedPage - 1))}>← Previous</button>
+          <strong>Page {renderedPage} of {totalPages}</strong>
+          <button type="button" disabled={isLoading || renderedPage >= totalPages} onClick={() => setPage(Math.min(totalPages, renderedPage + 1))}>Next →</button>
         </div>
       </div>
     </>
   );
+}
+
+function shopQueryKey(category: string, page: number) {
+  return `shops:${category}:${page}`;
+}
+
+function shopQueryUrl(category: string, page: number) {
+  return `/api/shops?category=${encodeURIComponent(category)}&page=${page}`;
 }
 
 function shopCategory(shop: TikTokShop, fallback: string) {

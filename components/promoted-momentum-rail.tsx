@@ -2,16 +2,23 @@
 
 import { useEffect, useState, type CSSProperties } from "react";
 import { tools } from "@/lib/data";
+import { loadCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import { displayShopName } from "@/lib/shop-display-name";
-import type { TikTokShop, TikTokShopsResponse } from "@/lib/types";
 import type { CommerceCategory } from "@/lib/commerce-categories";
-import type { CreatorScreenerResponse, CreatorScreenerRow } from "@/lib/creator-screener";
+import type { CreatorTrendingResponse, CreatorTrendingRow } from "@/lib/creator-screener";
 
-const visibleRailSlots = 8;
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const safeSponsoredTextColor = "#789F99";
 const temporaryDiscoverySlotSlug = "clocsy";
-type RankedShop = TikTokShop & { category?: string };
+type RankedShop = {
+  seller_id: string;
+  name: string | null;
+  avatar_url: string | null;
+  tiktok_unique_id: string | null;
+  day7_total_gmv: number | null;
+  category?: string;
+};
+type TrendingShopsResponse = { shops: RankedShop[] };
 
 export const INDUSTRY_LEADER_EXCLUSIONS = [
   "chatgpt", "claude", "perplexity", "cursor", "windsurf", "lovable", "replit", "runway", "kling", "pika",
@@ -43,7 +50,7 @@ function DiscoverySlotName({ name }: { name: string }) {
 
 export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mode?: "shops" | "creators"; category?: "All" | CommerceCategory }) {
   const [shops, setShops] = useState<RankedShop[]>([]);
-  const [creators, setCreators] = useState<CreatorScreenerRow[]>([]);
+  const [creators, setCreators] = useState<CreatorTrendingRow[]>([]);
   const discoveryCandidate = tools.find((tool) => tool.slug === temporaryDiscoverySlotSlug) ?? discoveryCandidateForDay();
   const discoveryHref = discoveryCandidate?.websiteUrl || `/tools/${discoveryCandidate?.slug}`;
   const discoveryIsExternal = Boolean(discoveryCandidate?.websiteUrl);
@@ -51,34 +58,34 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
 
   useEffect(() => {
     if (mode !== "shops") return;
-    const controller = new AbortController();
-
-    fetch("/api/shops?category=All&page=1", { signal: controller.signal })
-      .then(async (response) => {
-        if (!response.ok) throw new Error("Failed to load trending shops.");
-        return response.json() as Promise<TikTokShopsResponse>;
-      })
-      .then((data) => setShops(data.shops.slice(0, visibleRailSlots)))
-      .catch((error) => {
-        if (!(error instanceof DOMException && error.name === "AbortError")) setShops([]);
+    let cancelled = false;
+    const key = "shops:trending";
+    const url = "/api/shops?view=trending";
+    const cached = readCommerceQuery<TrendingShopsResponse>(key);
+    if (cached) setShops(cached.data.shops);
+    loadCommerceQuery<TrendingShopsResponse>(key, url, cached?.stale ?? false)
+      .then((data) => { if (!cancelled) setShops(data.shops); })
+      .catch(() => {
+        if (!cancelled && !cached) setShops([]);
       });
-
-    return () => controller.abort();
+    return () => { cancelled = true; };
   }, [mode]);
 
   useEffect(() => {
-    const controller = new AbortController();
-    fetch(`/api/creators?category=${encodeURIComponent(category)}&page=1&pageSize=${visibleRailSlots}`, { signal: controller.signal })
-      .then(async (response) => {
-        if (!response.ok) throw new Error("Failed to load trending creators.");
-        return response.json() as Promise<CreatorScreenerResponse>;
-      })
-      .then((data) => setCreators(data.creators))
-      .catch((error) => {
-        if (!(error instanceof DOMException && error.name === "AbortError")) setCreators([]);
+    if (mode !== "creators") return;
+    let cancelled = false;
+    const key = `creators:trending:${category}`;
+    const url = `/api/creators?view=trending&category=${encodeURIComponent(category)}`;
+    const cached = readCommerceQuery<CreatorTrendingResponse>(key, 300_000);
+    if (cached) setCreators(cached.data.creators);
+    else setCreators([]);
+    loadCommerceQuery<CreatorTrendingResponse>(key, url, cached?.stale ?? false)
+      .then((data) => { if (!cancelled) setCreators(data.creators); })
+      .catch(() => {
+        if (!cancelled && !cached) setCreators([]);
       });
-    return () => controller.abort();
-  }, [category]);
+    return () => { cancelled = true; };
+  }, [category, mode]);
 
   const railItems = shops.length > 0 ? [...shops, ...shops] : [];
   const creatorRailItems = creators.length > 0 ? [...creators, ...creators] : [];
@@ -147,7 +154,7 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
   );
 }
 
-function CreatorRailAvatar({ creator }: { creator: CreatorScreenerRow }) {
+function CreatorRailAvatar({ creator }: { creator: CreatorTrendingRow }) {
   return (
     <span className="railShopLogo" aria-hidden="true">
       {initials(creator.nickname || creator.handle)}
@@ -156,7 +163,7 @@ function CreatorRailAvatar({ creator }: { creator: CreatorScreenerRow }) {
   );
 }
 
-function formatCreatorGmv(creator: CreatorScreenerRow) {
+function formatCreatorGmv(creator: CreatorTrendingRow) {
   if (creator.med_gmv_revenue !== null) {
     return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 }).format(creator.med_gmv_revenue);
   }

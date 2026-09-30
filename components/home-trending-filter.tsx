@@ -51,8 +51,8 @@ export function HomeTrendingFilter() {
               <button className={mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators"} disabled={mode === "shops"} title={mode === "shops" ? "30-day shop data is not available yet" : "Creator GMV reporting timeframe"}>30D</button>
             </div>
           </div>
-          <div hidden={mode !== "shops"}><ShopTable category={shopCategory} /></div>
-          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} /></div>
+          <div hidden={mode !== "shops"}><ShopTable category={shopCategory} active={mode === "shops"} /></div>
+          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} active={mode === "creators"} /></div>
         </div>
         <aside className="homeRail">
           <section className="previewPanel commerceCategoryPanel">

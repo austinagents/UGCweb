@@ -21,12 +21,41 @@ export type CreatorScreenerRow = {
   snapshotTimestamp: string;
 };
 
+export type CreatorListRow = Pick<CreatorScreenerRow,
+  | "creator_oecuid"
+  | "handle"
+  | "nickname"
+  | "avatar"
+  | "followers"
+  | "categoryMemberships"
+  | "med_gmv_revenue"
+  | "med_gmv_revenue_range"
+  | "live_gmv"
+  | "units_sold"
+  | "units_sold_range"
+  | "audience_gender"
+>;
+
+export type CreatorTrendingRow = Pick<CreatorListRow,
+  | "creator_oecuid"
+  | "handle"
+  | "nickname"
+  | "avatar"
+  | "med_gmv_revenue"
+  | "med_gmv_revenue_range"
+>;
+
 export type CreatorScreenerResponse = {
-  creators: CreatorScreenerRow[];
+  creators: CreatorListRow[];
   categoryCounts: Partial<Record<CommerceCategory, number>>;
   page: number;
   pageSize: number;
   total: number;
   totalPages: number;
+  snapshotTimestamp: string;
+};
+
+export type CreatorTrendingResponse = {
+  creators: CreatorTrendingRow[];
   snapshotTimestamp: string;
 };
