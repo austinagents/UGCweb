@@ -42,7 +42,7 @@ export function MarketplaceBrowser({ listings }: { listings: MarketplaceListing[
           {query ? <button type="button" aria-label="Clear search" onClick={() => setQuery("")}><X size={14} /></button> : null}
         </label>
         <div className="marketplaceResultContext">
-          <span>{filtered.length} {filtered.length === 1 ? "offer" : "offers"}</span>
+          <span>{filtered.length} {filtered.length === 1 ? "product" : "products"}</span>
           {hasFilters ? <button type="button" onClick={clearFilters}>Clear filters</button> : null}
         </div>
       </div>

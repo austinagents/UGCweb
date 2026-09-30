@@ -7,7 +7,6 @@ export default function MarketplacePage() {
   return (
     <div className="marketplacePage">
       <header className="marketplacePageHeader">
-        <span>UGC Network</span>
         <h1>Marketplace</h1>
         <p>Products available to creators through active brand opportunities.</p>
       </header>
