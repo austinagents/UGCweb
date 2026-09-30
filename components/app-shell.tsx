@@ -9,7 +9,7 @@ import { LOCAL_CREATORS_KEY, LOCAL_PRODUCTS_KEY } from "@/lib/local-graph";
 import { CommandSearch } from "./command-search";
 
 const tabs = [
-  { href: "/search", label: "Marketplace", icon: Store, className: "marketplaceNavTab" },
+  { href: "/marketplace", label: "Marketplace", icon: Store, className: "marketplaceNavTab" },
   { href: "/workflows", label: "Workflows", icon: Workflow },
   { href: "/creators", label: "Creators", icon: Palette },
   { href: "/heatmap", label: "Heatmap", icon: Grid2X2 },
