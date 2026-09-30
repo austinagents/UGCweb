@@ -92,6 +92,12 @@ kbd { padding: 2px 6px; border: 1px solid var(--line); color: var(--green); back
 }
 .navTabs a:hover, .iconTextButton:hover, .profilePill:hover, .pickerGrid .selected { border-color: var(--green); color: var(--green); }
 
+.navTabs a.marketplaceNavTab {
+  gap: 4px;
+  padding-inline: 7px;
+  white-space: nowrap;
+}
+
 .pageShell { width: min(1760px, 100%); margin: 0 auto; padding: 10px 14px 18px; min-width: 0; }
 .stack { display: grid; gap: 12px; min-width: 0; }
 .stack > *, .gridTwo > *, .gridThree > *, .adminGrid > * { min-width: 0; }
