@@ -142,7 +142,7 @@ function ShopIdentity({ shop }: { shop: TikTokShop }) {
   );
 
   if (!shop.shop_share_link) return <div className="toolCell shopCell">{content}</div>;
-  return <a className="toolCell shopCell" href={shop.shop_share_link} target="_blank" rel="noreferrer" title="Open TikTok Shop">{content}</a>;
+  return <a className="toolCell shopCell" href={"https:" + "//shop.tiktok.com/us/store/partnerlinks/" + shop.shop_id} target="_blank" rel="noreferrer" title="Open TikTok Shop">{content}</a>;
 }
 
 function ShopRank({ shop }: { shop: TikTokShop }) {
