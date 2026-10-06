@@ -6087,6 +6087,14 @@ a:hover .toolLogo {
   margin-top: 6px;
 }
 
+.rank .shopRankUp,
+.rank .shopRankDown {
+  margin-left: 3px;
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 650;
+}
+
 .shopPagination {
   display: flex;
   align-items: center;

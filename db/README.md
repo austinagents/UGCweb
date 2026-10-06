@@ -32,9 +32,19 @@ The runner takes a PostgreSQL advisory lock, records applied filenames in
 
 The migrations create three NOLOGIN group roles without credentials:
 
-- `partnerlinks_web_read`: read-only application access
-- `partnerlinks_ingest`: select/insert/update access for ingestion workers
+- `partnerlinks_web_read`: read-only access to explicitly granted application tables
+- `partnerlinks_ingest`: explicitly granted ingestion access to application data
 - `partnerlinks_migrate`: schema and object administration
+
+Application-table grants are explicit rather than schema-wide defaults. Neither
+the web nor ingestion role can read or modify `partnerlinks.schema_migrations`.
+New migrations must grant access to new application tables deliberately.
+
+The TikTok Shop ingestion tables grant `partnerlinks_ingest` only
+`SELECT`, `INSERT`, `UPDATE`, and `TRUNCATE`. `TRUNCATE` is table-specific to
+the three tables replaced atomically by the production importer; it is not a
+schema-wide privilege. The importer truncates all three tables in one statement
+so their foreign-key relationships remain valid without `CASCADE`.
 
 Create separate LOGIN users through the database host, use independently
 generated secrets, and grant each login only the matching group role. The

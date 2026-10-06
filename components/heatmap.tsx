@@ -33,7 +33,6 @@ import { ecosystemTagSlug } from "@/lib/ecosystem-tags";
 import { displayCategory } from "@/lib/format";
 import {
   commerceCategoryGroups,
-  type CommerceCategory,
   type CommerceChildCategory,
 } from "@/lib/commerce-categories";
 import type { AttentionSubCategory, Category } from "@/lib/types";
@@ -91,7 +90,7 @@ const commerceCategoryIcons: Record<string, LucideIcon> = {
   "Beauty & Care": Sparkles,
   "Food & Beverage": Coffee,
   "Home & Living": House,
-  "Pets & Hobbies": PawPrint
+  "Pets & Hobbies": PawPrint,
 };
 
 const creatorAmbiguousChildren = new Set<CommerceChildCategory>(
@@ -104,29 +103,31 @@ export function CommerceCategoryMap({
   onSelect
 }: {
   mode?: "shops" | "creators";
-  activeCategory: "All" | CommerceCategory;
-  onSelect: (category: CommerceCategory) => void;
+  activeCategory: string | null;
+  onSelect: (category: string) => void;
 }) {
+  const interactive = mode === "creators";
+
   return (
-    <div className="commerceCategoryMap" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category map`}>
+    <div className="commerceCategoryMap" aria-label="TikTok Creator category map">
       {commerceCategoryGroups.map((group) => {
         const Icon = commerceCategoryIcons[group.name];
-        const groupActive = activeCategory === group.name || group.children.some((category) => category === activeCategory);
+        const groupActive = interactive && (activeCategory === group.name || group.children.some((category) => category === activeCategory));
 
         return (
           <section className={`commerceCategoryCluster ${groupActive ? "active" : ""}`} key={group.name}>
-            <button className="commerceCategoryLabel" type="button" onClick={() => onSelect(group.name)}>
+            <button className="commerceCategoryLabel" type="button" onClick={interactive ? () => onSelect(group.name) : undefined}>
               <Icon size={13} />
               <span>{group.name}</span>
             </button>
             <div className="commerceCategoryNodes">
               {group.children.map((category) => (
                 <button
-                  className={activeCategory === category ? "active" : ""}
+                  className={interactive && activeCategory === category ? "active" : ""}
                   type="button"
-                  onClick={() => onSelect(category)}
+                  onClick={interactive ? () => onSelect(category) : undefined}
                   key={category}
-                  title={mode === "creators" && creatorAmbiguousChildren.has(category) ? "Collected creator data cannot yet distinguish Dogs from Cats" : undefined}
+                  title={creatorAmbiguousChildren.has(category) ? "Collected creator data cannot yet distinguish Dogs from Cats" : undefined}
                 >
                   {category}
                 </button>

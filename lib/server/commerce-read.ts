@@ -4,21 +4,17 @@ import { unstable_cache } from "next/cache";
 import creatorData from "@/data/creator-screener.json";
 import {
   commerceCategoryGroups,
-  commerceParentCategories,
+  tiktokShopCategories,
   type CommerceCategory,
 } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerRow, CreatorTrendingRow } from "@/lib/creator-screener";
-import type { TikTokShop, TikTokShopsResponse } from "@/lib/types";
+import { getDatabase } from "@/lib/server/database";
+import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
 
 type ScreenerCategory = "All" | CommerceCategory;
-type RankedShop = TikTokShop & { category?: string };
-
 const shopCacheSeconds = 60;
 const allShopPageSize = 100;
 const visibleRailSlots = 8;
-const shopsApiBaseUrl =
-  process.env.SHOPS_API_BASE_URL ??
-  "https://tiktok-shop-screener-api.austindtaylor7.workers.dev";
 
 const sourceCreators = creatorData.creators as CreatorScreenerRow[];
 const creatorCategoryIndex = new Map<ScreenerCategory, CreatorListRow[]>();
@@ -43,35 +39,26 @@ for (const creator of allCreatorRows) {
 
 const cachedShopPage = unstable_cache(
   loadShopPage,
-  ["partnerlinks-commerce-shop-page-v1"],
+  ["partnerlinks-official-tiktok-shop-rankings-v1"],
   { revalidate: shopCacheSeconds },
 );
 
-export async function getShopPage(category: string, page: number) {
+export async function getShopPage(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
   const safePage = Math.max(1, Math.floor(page) || 1);
-  const key = `${category}:${safePage}`;
+  const key = `${categoryId ?? "all"}:${window}:${metric}:${safePage}`;
   const pending = shopPageInflight.get(key);
   if (pending) return pending;
 
-  const request = cachedShopPage(category, safePage).finally(() => {
+  const request = cachedShopPage(categoryId, window, metric, safePage).finally(() => {
     shopPageInflight.delete(key);
   });
   shopPageInflight.set(key, request);
   return request;
 }
 
-export async function getTrendingShops() {
-  const page = await getShopPage("All", 1);
-  return {
-    shops: page.shops.slice(0, visibleRailSlots).map((shop) => ({
-      seller_id: shop.seller_id,
-      name: shop.name,
-      avatar_url: shop.avatar_url,
-      tiktok_unique_id: shop.tiktok_unique_id,
-      day7_total_gmv: shop.day7_total_gmv,
-      category: (shop as RankedShop).category,
-    })),
-  };
+export async function getTrendingShops(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric) {
+  const page = await getShopPage(categoryId, window, metric, 1);
+  return { shops: page.shops.slice(0, visibleRailSlots) };
 }
 
 export function getCreatorPage(category: ScreenerCategory, page: number, pageSize: number) {
@@ -102,7 +89,7 @@ export function getTrendingCreators(category: ScreenerCategory) {
 
 export function getCategoryAvailability(mode: "shops" | "creators") {
   if (mode === "shops") {
-    return commerceCategoryGroups.map((group) => ({ category: group.name, available: true }));
+    return tiktokShopCategories.map((category) => ({ category: category.name, available: true }));
   }
 
   return commerceCategoryGroups.flatMap((group) => [group.name, ...group.children]).map((category) => ({
@@ -112,43 +99,83 @@ export function getCategoryAvailability(mode: "shops" | "creators") {
   }));
 }
 
-async function loadShopPage(category: string, page: number): Promise<TikTokShopsResponse> {
-  if (category === "All") return aggregateAllCategories(page);
-
-  const workerUrl = new URL("/shops", shopsApiBaseUrl);
-  workerUrl.searchParams.set("category", category);
-  workerUrl.searchParams.set("page", String(page));
-  const response = await fetch(workerUrl, { cache: "no-store" });
-  if (!response.ok) throw new Error(`Failed to load ${category} shops`);
-  return response.json() as Promise<TikTokShopsResponse>;
-}
-
-async function aggregateAllCategories(page: number): Promise<TikTokShopsResponse> {
-  const responses = await Promise.all(commerceParentCategories.map(async (category) => {
-    const data = await getShopPage(category, 1);
-    return data.shops.map((shop) => ({ ...shop, category }));
-  }));
-  const uniqueShops = new Map<string, RankedShop>();
-  responses.flat().forEach((shop) => {
-    if (!uniqueShops.has(shop.seller_id)) uniqueShops.set(shop.seller_id, shop);
-  });
-  const rankedShops = [...uniqueShops.values()].sort(
-    (left, right) => (right.day7_total_gmv ?? -1) - (left.day7_total_gmv ?? -1),
-  );
-  const total = rankedShops.length;
+async function loadShopPage(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number): Promise<TikTokShopsResponse> {
+  const sql = getDatabase();
+  const categoryFilter = categoryId ? sql`AND observation.category_id = ${categoryId}` : sql``;
+  const [{ count, capture_date }] = await sql<[{ count: number; capture_date: string | null }]>`
+    SELECT count(*)::integer AS count, max(observation.capture_date)::text AS capture_date
+    FROM partnerlinks.tiktok_shop_ranking_observations observation
+    WHERE observation.ranking_window = ${window}
+    ${categoryFilter}
+  `;
+  const total = count;
   const totalPages = Math.max(1, Math.ceil(total / allShopPageSize));
   const safePage = Math.min(page, totalPages);
-  const start = (safePage - 1) * allShopPageSize;
+  const offset = (safePage - 1) * allShopPageSize;
+  const rows = await sql<TikTokShop[]>`
+    SELECT
+      entity.shop_id,
+      entity.shop_name,
+      entity.shop_thumb_image_url,
+      entity.shop_status,
+      entity.shop_share_link,
+      entity.tiktok_username,
+      entity.tiktok_profile_url,
+      entity.tiktok_profile_source,
+      entity.tiktok_profile_verified_at::text,
+      observation.category_id,
+      observation.category_name,
+      observation.ranking_window AS "window",
+      ${metric}::text AS ranking_metric,
+      CASE ${metric}
+        WHEN 'total_gmv' THEN observation.total_gmv_rank
+        WHEN 'product_card_gmv' THEN observation.product_card_gmv_rank
+        WHEN 'live_gmv' THEN observation.live_gmv_rank
+        WHEN 'video_gmv' THEN observation.video_gmv_rank
+      END::text AS current_rank,
+      CASE ${metric}
+        WHEN 'total_gmv' THEN observation.total_gmv_previous_rank
+        WHEN 'product_card_gmv' THEN observation.product_card_gmv_previous_rank
+        WHEN 'live_gmv' THEN observation.live_gmv_previous_rank
+        WHEN 'video_gmv' THEN observation.video_gmv_previous_rank
+      END::text AS previous_rank,
+      CASE ${metric}
+        WHEN 'total_gmv' THEN observation.total_gmv_rank_change
+        WHEN 'product_card_gmv' THEN observation.product_card_gmv_rank_change
+        WHEN 'live_gmv' THEN observation.live_gmv_rank_change
+        WHEN 'video_gmv' THEN observation.video_gmv_rank_change
+      END::text AS rank_change,
+      observation.capture_date::text
+    FROM partnerlinks.tiktok_shop_ranking_observations observation
+    JOIN partnerlinks.tiktok_shop_entities entity USING (shop_id)
+    WHERE observation.ranking_window = ${window}
+    ${categoryFilter}
+    ORDER BY
+      CASE ${metric}
+        WHEN 'total_gmv' THEN observation.total_gmv_rank
+        WHEN 'product_card_gmv' THEN observation.product_card_gmv_rank
+        WHEN 'live_gmv' THEN observation.live_gmv_rank
+        WHEN 'video_gmv' THEN observation.video_gmv_rank
+      END ASC NULLS LAST,
+      observation.category_id ASC,
+      entity.shop_id ASC
+    LIMIT ${allShopPageSize} OFFSET ${offset}
+  `;
+  const category = categoryId ? tiktokShopCategories.find((item) => item.id === categoryId) : null;
 
   return {
-    category: "All",
-    categories: commerceParentCategories,
+    categoryId,
+    categoryName: category?.name ?? "All Categories",
+    categories: [...tiktokShopCategories],
+    window,
+    metric,
+    captureDate: capture_date,
     total,
     page: safePage,
     pageSize: allShopPageSize,
     totalPages,
-    count: Math.min(allShopPageSize, Math.max(0, total - start)),
-    shops: rankedShops.slice(start, start + allShopPageSize),
+    count: rows.length,
+    shops: rows,
   };
 }
 

@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit",
     "import:taaft": "node scripts/import-taaft.mjs",
     "import:creators": "node scripts/import-favikon-creators.mjs",
+    "import:tiktok-shop-rankings": "node scripts/import-tiktok-shop-rankings.mjs",
     "graph:audit": "node scripts/graph-audit.mjs",
     "ingest:evidence": "node scripts/ingest-evidence.mjs",
     "ingest:sources:v1": "node scripts/ingest-source-v1.mjs",

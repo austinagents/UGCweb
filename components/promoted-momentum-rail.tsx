@@ -3,22 +3,15 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { tools } from "@/lib/data";
 import { loadCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
-import { displayShopName } from "@/lib/shop-display-name";
 import type { CommerceCategory } from "@/lib/commerce-categories";
 import type { CreatorTrendingResponse, CreatorTrendingRow } from "@/lib/creator-screener";
+import { defaultTikTokShopCategoryId } from "@/lib/commerce-categories";
+import type { TikTokShop } from "@/lib/types";
 
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const safeSponsoredTextColor = "#789F99";
 const temporaryDiscoverySlotSlug = "clocsy";
-type RankedShop = {
-  seller_id: string;
-  name: string | null;
-  avatar_url: string | null;
-  tiktok_unique_id: string | null;
-  day7_total_gmv: number | null;
-  category?: string;
-};
-type TrendingShopsResponse = { shops: RankedShop[] };
+type TrendingShopsResponse = { shops: TikTokShop[] };
 
 export const INDUSTRY_LEADER_EXCLUSIONS = [
   "chatgpt", "claude", "perplexity", "cursor", "windsurf", "lovable", "replit", "runway", "kling", "pika",
@@ -49,7 +42,7 @@ function DiscoverySlotName({ name }: { name: string }) {
 }
 
 export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mode?: "shops" | "creators"; category?: "All" | CommerceCategory }) {
-  const [shops, setShops] = useState<RankedShop[]>([]);
+  const [shops, setShops] = useState<TikTokShop[]>([]);
   const [creators, setCreators] = useState<CreatorTrendingRow[]>([]);
   const discoveryCandidate = tools.find((tool) => tool.slug === temporaryDiscoverySlotSlug) ?? discoveryCandidateForDay();
   const discoveryHref = discoveryCandidate?.websiteUrl || `/tools/${discoveryCandidate?.slug}`;
@@ -60,7 +53,7 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
     if (mode !== "shops") return;
     let cancelled = false;
     const key = "shops:trending";
-    const url = "/api/shops?view=trending";
+    const url = `/api/shops?view=trending&category_id=${defaultTikTokShopCategoryId}&window=7d&metric=total_gmv`;
     const cached = readCommerceQuery<TrendingShopsResponse>(key);
     if (cached) setShops(cached.data.shops);
     loadCommerceQuery<TrendingShopsResponse>(key, url, cached?.stale ?? false)
@@ -122,28 +115,28 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
           ) : railItems.length > 0 ? railItems.map((shop, index) => {
             const itemRank = index % shops.length;
             const itemClassName = `railItem${itemRank < 3 ? " leader" : ""}`;
-            const category = categoryContext(shop.name, shop.category);
+            const category = categoryContext(shop.shop_name, shop.category_name);
             const content = (
               <>
                 <span className="railRank">#{itemRank + 1}</span>
                 <ShopRailLogo shop={shop} />
-                <strong title={shop.name ?? "Unknown Shop"}>{displayShopName(shop.name, shop.category)}</strong>
+                <strong title={shop.shop_name ?? "Unknown Shop"}>{shop.shop_name ?? "Unknown Shop"}</strong>
                 {category ? <small>{category}</small> : null}
               </>
             );
 
-            return shop.tiktok_unique_id ? (
+            return shop.shop_share_link ? (
               <a
                 className={itemClassName}
-                href={`https://www.tiktok.com/@${shop.tiktok_unique_id}`}
-                key={`${shop.seller_id}-${index}`}
+                href={shop.shop_share_link}
+                key={`${shop.shop_id}:${shop.category_id}:${index}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {content}
               </a>
             ) : (
-              <div className={itemClassName} key={`${shop.seller_id}-${index}`}>
+              <div className={itemClassName} key={`${shop.shop_id}:${shop.category_id}:${index}`}>
                 {content}
               </div>
             );
@@ -170,11 +163,11 @@ function formatCreatorGmv(creator: CreatorTrendingRow) {
   return creator.med_gmv_revenue_range ?? "GMV unavailable";
 }
 
-function ShopRailLogo({ shop }: { shop: RankedShop }) {
+function ShopRailLogo({ shop }: { shop: TikTokShop }) {
   return (
     <span className="railShopLogo" aria-hidden="true">
-      {initials(shop.name)}
-      {shop.avatar_url ? <img src={shop.avatar_url} alt="" width={28} height={28} loading="eager" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
+      {initials(shop.shop_name)}
+      {shop.shop_thumb_image_url ? <img src={shop.shop_thumb_image_url} alt="" width={28} height={28} loading="eager" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
     </span>
   );
 }

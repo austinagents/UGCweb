@@ -3,25 +3,25 @@
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
-import { displayShopName } from "@/lib/shop-display-name";
-import type { TikTokShop, TikTokShopsResponse } from "@/lib/types";
+import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
 
 type ShopTableResult = { category: string; data: TikTokShopsResponse };
 
-export function ShopTable({ category, active = true }: { category: string; active?: boolean }) {
-  const [pagination, setPagination] = useState({ category, page: 1 });
+export function ShopTable({ categoryId, window, metric, active = true }: { categoryId: string | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean }) {
+  const scope = `${categoryId ?? "all"}:${window}:${metric}`;
+  const [pagination, setPagination] = useState({ scope, page: 1 });
   const [result, setResult] = useState<ShopTableResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const page = pagination.category === category ? pagination.page : 1;
+  const page = pagination.scope === scope ? pagination.page : 1;
 
   useEffect(() => {
     let cancelled = false;
-    const key = shopQueryKey(category, page);
-    const url = shopQueryUrl(category, page);
+    const key = shopQueryKey(categoryId, window, metric, page);
+    const url = shopQueryUrl(categoryId, window, metric, page);
     const cached = readCommerceQuery<TikTokShopsResponse>(key);
     if (cached) {
-      setResult({ category, data: cached.data });
+      setResult({ category: categoryId ?? "All", data: cached.data });
       setIsLoading(false);
     } else {
       setIsLoading(true);
@@ -31,10 +31,10 @@ export function ShopTable({ category, active = true }: { category: string; activ
     loadCommerceQuery<TikTokShopsResponse>(key, url, cached?.stale ?? false)
       .then((data) => {
         if (cancelled) return;
-        setResult({ category, data });
+        setResult({ category: categoryId ?? "All", data });
         if (active && data.page < data.totalPages) {
           const nextPage = data.page + 1;
-          prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(category, nextPage), shopQueryUrl(category, nextPage));
+          prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, window, metric, nextPage), shopQueryUrl(categoryId, window, metric, nextPage));
         }
       })
       .catch((cause) => {
@@ -46,17 +46,15 @@ export function ShopTable({ category, active = true }: { category: string; activ
       });
 
     return () => { cancelled = true; };
-  }, [active, category, page]);
+  }, [active, categoryId, metric, page, window]);
 
   const data = result?.data;
   const shops = data?.shops ?? [];
-  const renderedCategory = result?.category ?? category;
+  const renderedCategory = data?.categoryName ?? "All Categories";
   const renderedPage = data?.page ?? page;
-  const pageSize = data?.pageSize ?? 100;
   const total = data?.total ?? 0;
   const totalPages = data?.totalPages ?? 1;
-  const firstRank = (renderedPage - 1) * pageSize;
-  const setPage = (nextPage: number) => setPagination({ category, page: nextPage });
+  const setPage = (nextPage: number) => setPagination({ scope, page: nextPage });
 
   return (
     <>
@@ -85,22 +83,22 @@ export function ShopTable({ category, active = true }: { category: string; activ
             </tr>
           </thead>
           <tbody>
-            {isLoading && shops.length === 0 ? <ShopStateRow>Loading {category} shops…</ShopStateRow> : null}
+            {isLoading && shops.length === 0 ? <ShopStateRow>Loading {renderedCategory} shops…</ShopStateRow> : null}
             {error ? <ShopStateRow error={error}>Unable to load shops.</ShopStateRow> : null}
-            {!error && !isLoading && shops.length === 0 ? <ShopStateRow>No shops found for {category}.</ShopStateRow> : null}
+            {!error && !isLoading && shops.length === 0 ? <ShopStateRow>No shops found for {renderedCategory}.</ShopStateRow> : null}
 
-            {!error && shops.map((shop, index) => (
-              <tr key={shop.seller_id}>
-                <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
-                <td data-label="Shop"><ShopIdentity shop={shop} category={shopCategory(shop, renderedCategory)} /></td>
+            {!error && shops.map((shop) => (
+              <tr key={`${shop.shop_id}:${shop.category_id}`}>
+                <td className="rank" data-label="Rank"><ShopRank shop={shop} /></td>
+                <td data-label="Shop"><ShopIdentity shop={shop} /></td>
                 <td data-label="Category">
-                  <span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{shopCategory(shop, renderedCategory)}</span>
+                  <span className="categoryCell commerceCategoryCell" title={`TikTok L1 category ${shop.category_id}`}><span className="categoryDot" />{shop.category_name}</span>
                 </td>
-                <td data-label="7D GMV"><strong className="commerceMetric">{formatCurrency(shop.day7_total_gmv)}</strong></td>
-                <td data-label="Lifetime GMV">{formatCurrency(shop.total_gmv)}</td>
-                <td data-label="7D Units">{formatNumber(shop.day7_units_sold)}</td>
-                <td data-label="Products">{formatNumber(shop.on_sale_product_count)}</td>
-                <td data-label="Socials"><span className="signalCount">{formatNumber(shop.affiliate_creator_count)}</span></td>
+                <UnavailableCell label="7D GMV" />
+                <UnavailableCell label="Lifetime GMV" />
+                <UnavailableCell label="7D Units" />
+                <UnavailableCell label="Products" />
+                <td data-label="Socials"><SocialProfile shop={shop} /></td>
               </tr>
             ))}
           </tbody>
@@ -108,7 +106,7 @@ export function ShopTable({ category, active = true }: { category: string; activ
       </div>
 
       <div className="shopPagination" aria-label="Shop results pagination">
-        <span>{isLoading ? `Updating ${category} shops…` : `${total.toLocaleString()} shops · ranked by 7D GMV`}</span>
+        <span>{isLoading ? `Updating ${renderedCategory} shops…` : `${total.toLocaleString()} shops · ranked by ${window.toUpperCase()} GMV`}</span>
         <div>
           <button type="button" disabled={isLoading || renderedPage <= 1} onClick={() => setPage(Math.max(1, renderedPage - 1))}>← Previous</button>
           <strong>Page {renderedPage} of {totalPages}</strong>
@@ -119,46 +117,60 @@ export function ShopTable({ category, active = true }: { category: string; activ
   );
 }
 
-function shopQueryKey(category: string, page: number) {
-  return `shops:${category}:${page}`;
+function shopQueryKey(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+  return `shops:${categoryId ?? "all"}:${window}:${metric}:${page}`;
 }
 
-function shopQueryUrl(category: string, page: number) {
-  return `/api/shops?category=${encodeURIComponent(category)}&page=${page}`;
-}
-
-function shopCategory(shop: TikTokShop, fallback: string) {
-  return (shop as TikTokShop & { category?: string }).category ?? fallback;
+function shopQueryUrl(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+  const params = new URLSearchParams({ category_id: categoryId ?? "all", window, metric, page: String(page) });
+  return `/api/shops?${params}`;
 }
 
 function ShopStateRow({ children, error }: { children: ReactNode; error?: string }) {
   return <tr className="shopStateRow"><td colSpan={8}><strong>{children}</strong>{error ? <small>{error}</small> : null}</td></tr>;
 }
 
-function ShopIdentity({ shop, category }: { shop: TikTokShop; category: string }) {
-  const displayName = displayShopName(shop.name, category);
+function ShopIdentity({ shop }: { shop: TikTokShop }) {
   const content = (
     <>
       <span className="shopAvatarFallback" aria-hidden="true">
-        {initials(shop.name)}
-        {shop.avatar_url ? <img src={shop.avatar_url} alt="" width={32} height={32} loading="lazy" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
+        {initials(shop.shop_name)}
+        {shop.shop_thumb_image_url ? <img src={shop.shop_thumb_image_url} alt="" width={32} height={32} loading="lazy" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
       </span>
-      <span><strong title={shop.name ?? undefined}>{displayName}</strong></span>
+      <span><strong title={shop.shop_name ?? undefined}>{shop.shop_name ?? "Unknown Shop"}</strong></span>
     </>
   );
 
-  if (!shop.tiktok_unique_id) return <div className="toolCell shopCell">{content}</div>;
-  return <a className="toolCell shopCell" href={`https://www.tiktok.com/@${shop.tiktok_unique_id}`} target="_blank" rel="noreferrer">{content}</a>;
+  if (!shop.shop_share_link) return <div className="toolCell shopCell">{content}</div>;
+  return <a className="toolCell shopCell" href={shop.shop_share_link} target="_blank" rel="noreferrer" title="Open TikTok Shop">{content}</a>;
 }
 
-function formatCurrency(value: number | null) {
-  if (value === null) return "—";
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 }).format(value);
+function ShopRank({ shop }: { shop: TikTokShop }) {
+  const current = Number(shop.current_rank);
+  const previous = Number(shop.previous_rank);
+  const movement = shop.current_rank && shop.previous_rank && Number.isFinite(current) && Number.isFinite(previous) ? previous - current : 0;
+  return (
+    <span title={`${shop.window.toUpperCase()} ${metricLabel(shop.ranking_metric)} rank in ${shop.category_name}`}>
+      <strong>{shop.current_rank ? `#${shop.current_rank}` : "—"}</strong>
+      {movement !== 0 ? <small className={movement > 0 ? "shopRankUp" : "shopRankDown"}>{movement > 0 ? "↑" : "↓"}{Math.abs(movement)}</small> : null}
+    </span>
+  );
 }
 
-function formatNumber(value: number | null) {
-  if (value === null) return "—";
-  return new Intl.NumberFormat("en-US", { notation: value >= 10_000 ? "compact" : "standard", maximumFractionDigits: 1 }).format(value);
+function UnavailableCell({ label }: { label: string }) {
+  return <td data-label={label}><span title={`${label} is not available from the official TikTok ranking source`}>—</span></td>;
+}
+
+function SocialProfile({ shop }: { shop: TikTokShop }) {
+  if (!shop.tiktok_profile_url || !shop.tiktok_username) return <span title="TikTok social profile not yet verified">—</span>;
+  return <a className="shopSocialLink" href={shop.tiktok_profile_url} target="_blank" rel="noreferrer" aria-label={`Open @${shop.tiktok_username} on TikTok`} title={`@${shop.tiktok_username}`}><span aria-hidden="true">♪</span></a>;
+}
+
+function metricLabel(metric: ShopRankingMetric) {
+  if (metric === "product_card_gmv") return "Product-card GMV";
+  if (metric === "live_gmv") return "LIVE GMV";
+  if (metric === "video_gmv") return "Video GMV";
+  return "Total GMV";
 }
 
 function initials(name: string | null) {

@@ -148,24 +148,36 @@ export type Category = {
   sparkline: number[];
 };
 
+export type ShopRankingWindow = "1d" | "7d" | "30d";
+export type ShopRankingMetric = "total_gmv" | "product_card_gmv" | "live_gmv" | "video_gmv";
+
 export type TikTokShop = {
-  seller_id: string;
-  name: string | null;
-  brand: string | null;
-  shop_rating: number | null;
-  total_units_sold: number | null;
-  total_gmv: number | null;
-  day7_units_sold: number | null;
-  day7_total_gmv: number | null;
-  on_sale_product_count: number | null;
-  affiliate_creator_count: number | null;
-  tiktok_unique_id: string | null;
-  avatar_url: string | null;
+  shop_id: string;
+  shop_name: string | null;
+  shop_thumb_image_url: string | null;
+  shop_status: string | null;
+  shop_share_link: string | null;
+  tiktok_username: string | null;
+  tiktok_profile_url: string | null;
+  tiktok_profile_source: string | null;
+  tiktok_profile_verified_at: string | null;
+  category_id: string;
+  category_name: string;
+  window: ShopRankingWindow;
+  ranking_metric: ShopRankingMetric;
+  current_rank: string | null;
+  previous_rank: string | null;
+  rank_change: string | null;
+  capture_date: string;
 };
 
 export type TikTokShopsResponse = {
-  category: string;
-  categories: string[];
+  categoryId: string | null;
+  categoryName: string;
+  categories: Array<{ id: string; name: string }>;
+  window: ShopRankingWindow;
+  metric: ShopRankingMetric;
+  captureDate: string | null;
   total: number;
   page: number;
   pageSize: number;
