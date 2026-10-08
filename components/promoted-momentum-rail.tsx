@@ -3,7 +3,7 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { tools } from "@/lib/data";
 import { loadCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
-import type { CommerceCategory } from "@/lib/commerce-categories";
+import type { TikTokShopCategoryName } from "@/lib/commerce-categories";
 import type { CreatorTrendingResponse, CreatorTrendingRow } from "@/lib/creator-screener";
 import { defaultTikTokShopCategoryId } from "@/lib/commerce-categories";
 import type { TikTokShop } from "@/lib/types";
@@ -41,7 +41,7 @@ function DiscoverySlotName({ name }: { name: string }) {
   return <span>{name.toUpperCase()}</span>;
 }
 
-export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mode?: "shops" | "creators"; category?: "All" | CommerceCategory }) {
+export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mode?: "shops" | "creators"; category?: "All" | TikTokShopCategoryName }) {
   const [shops, setShops] = useState<TikTokShop[]>([]);
   const [creators, setCreators] = useState<CreatorTrendingRow[]>([]);
   const discoveryCandidate = tools.find((tool) => tool.slug === temporaryDiscoverySlotSlug) ?? discoveryCandidateForDay();

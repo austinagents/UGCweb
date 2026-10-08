@@ -5,10 +5,10 @@ import { CreatorTable } from "@/components/creator-table";
 import { CommerceCategoryMap } from "@/components/heatmap";
 import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ShopTable } from "@/components/shop-table";
-import { commerceCategoryGroups, commerceParentCategories, tiktokShopCategories, type CommerceCategory } from "@/lib/commerce-categories";
+import { tiktokShopCategories, type TikTokShopCategoryName } from "@/lib/commerce-categories";
 import type { ShopRankingWindow } from "@/lib/types";
 
-type ScreenerCategory = "All" | CommerceCategory;
+type ScreenerCategory = "All" | TikTokShopCategoryName;
 type ScreenerMode = "shops" | "creators";
 
 export function HomeTrendingFilter() {
@@ -16,21 +16,15 @@ export function HomeTrendingFilter() {
   const [shopCategoryId, setShopCategoryId] = useState<string>("all");
   const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>("All");
   const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("7d");
-  const creatorCategories: ScreenerCategory[] = [
-    "All",
-    ...commerceParentCategories,
-    ...commerceCategoryGroups.flatMap((group) => [...group.children]),
-  ];
-
   return (
     <>
       <PromotedMomentumRail mode={mode} category={creatorCategory} />
 
       <nav className="screenTabs" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category filters`}>
-        {(mode === "shops" ? [{ id: "all", name: "All" }, ...tiktokShopCategories] : creatorCategories.map((name) => ({ id: name, name }))).map((category) => (
+        {([{ id: "all", name: "All" }, ...tiktokShopCategories]).map((category) => (
           <button
-            className={(mode === "shops" ? shopCategoryId === category.id : creatorCategory === category.id) ? "active" : ""}
-            onClick={() => mode === "shops" ? setShopCategoryId(category.id) : setCreatorCategory(category.id as ScreenerCategory)}
+            className={(mode === "shops" ? shopCategoryId === category.id : creatorCategory === category.name) ? "active" : ""}
+            onClick={() => mode === "shops" ? setShopCategoryId(category.id) : setCreatorCategory(category.name as ScreenerCategory)}
             type="button"
             key={category.id ?? "all"}
           >

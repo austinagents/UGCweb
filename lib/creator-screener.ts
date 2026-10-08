@@ -1,4 +1,4 @@
-import type { CommerceCategory } from "@/lib/commerce-categories";
+import type { CommerceCategory, TikTokShopCategoryName } from "@/lib/commerce-categories";
 
 export type CreatorSocial = {
   platform: string;
@@ -25,7 +25,7 @@ export type CreatorScreenerRow = {
   snapshotTimestamp: string;
 };
 
-export type CreatorListRow = Pick<CreatorScreenerRow,
+export type CreatorListRow = Omit<Pick<CreatorScreenerRow,
   | "creator_oecuid"
   | "handle"
   | "nickname"
@@ -38,7 +38,7 @@ export type CreatorListRow = Pick<CreatorScreenerRow,
   | "units_sold_range"
   | "audience_gender"
   | "socials"
->;
+>, "categoryMemberships"> & { categoryMemberships: TikTokShopCategoryName[] };
 
 export type CreatorTrendingRow = Pick<CreatorListRow,
   | "creator_oecuid"
@@ -51,7 +51,7 @@ export type CreatorTrendingRow = Pick<CreatorListRow,
 
 export type CreatorScreenerResponse = {
   creators: CreatorListRow[];
-  categoryCounts: Partial<Record<CommerceCategory, number>>;
+  categoryCounts: Partial<Record<TikTokShopCategoryName, number>>;
   page: number;
   pageSize: number;
   total: number;

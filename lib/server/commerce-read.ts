@@ -5,29 +5,26 @@ import { DatabaseSync } from "node:sqlite";
 import { unstable_cache } from "next/cache";
 import creatorData from "@/data/creator-screener.json";
 import {
-  commerceCategoryGroups,
+  creatorShopCategories,
   tiktokShopCategories,
-  type CommerceCategory,
+  type TikTokShopCategoryName,
 } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerRow, CreatorTrendingRow } from "@/lib/creator-screener";
 import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
 
-type ScreenerCategory = "All" | CommerceCategory;
+type ScreenerCategory = "All" | TikTokShopCategoryName;
 const shopCacheSeconds = 60;
 const allShopPageSize = 100;
 const visibleRailSlots = 8;
 
 const sourceCreators = creatorData.creators as CreatorScreenerRow[];
 const creatorCategoryIndex = new Map<ScreenerCategory, CreatorListRow[]>();
-const creatorCategoryCounts: Partial<Record<CommerceCategory, number>> = {};
+const creatorCategoryCounts: Partial<Record<TikTokShopCategoryName, number>> = {};
 const shopPageInflight = new Map<string, Promise<TikTokShopsResponse>>();
 
 const allCreatorRows = sourceCreators.map(toCreatorListRow);
 creatorCategoryIndex.set("All", allCreatorRows);
-for (const group of commerceCategoryGroups) {
-  creatorCategoryCounts[group.name] = 0;
-  for (const child of group.children) creatorCategoryCounts[child] = 0;
-}
+for (const category of tiktokShopCategories) creatorCategoryCounts[category.name] = 0;
 
 for (const creator of allCreatorRows) {
   for (const category of creator.categoryMemberships) {
@@ -93,10 +90,10 @@ export function getCategoryAvailability(mode: "shops" | "creators") {
     return tiktokShopCategories.map((category) => ({ category: category.name, available: true }));
   }
 
-  return commerceCategoryGroups.flatMap((group) => [group.name, ...group.children]).map((category) => ({
-    category,
-    available: (creatorCategoryCounts[category] ?? 0) > 0,
-    count: creatorCategoryCounts[category] ?? null,
+  return tiktokShopCategories.map(({ name }) => ({
+    category: name,
+    available: (creatorCategoryCounts[name] ?? 0) > 0,
+    count: creatorCategoryCounts[name] ?? null,
   }));
 }
 
@@ -174,7 +171,7 @@ function toCreatorListRow(creator: CreatorScreenerRow): CreatorListRow {
     nickname: creator.nickname,
     avatar: creator.avatar,
     followers: creator.followers,
-    categoryMemberships: creator.categoryMemberships,
+    categoryMemberships: creatorShopCategories(creator.categoryMemberships),
     med_gmv_revenue: creator.med_gmv_revenue,
     med_gmv_revenue_range: creator.med_gmv_revenue_range,
     units_sold: creator.units_sold,

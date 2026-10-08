@@ -2,11 +2,11 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
-import { commerceParentCategories, type CommerceCategory } from "@/lib/commerce-categories";
+import type { TikTokShopCategoryName } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerResponse } from "@/lib/creator-screener";
 
 type CreatorTableResult = {
-  category: "All" | CommerceCategory;
+  category: "All" | TikTokShopCategoryName;
   data: CreatorScreenerResponse;
 };
 
@@ -14,7 +14,7 @@ export function CreatorTable({
   category,
   active = true,
 }: {
-  category: "All" | CommerceCategory;
+  category: "All" | TikTokShopCategoryName;
   active?: boolean;
 }) {
   const [pagination, setPagination] = useState({ category, page: 1 });
@@ -127,11 +127,11 @@ export function CreatorTable({
   );
 }
 
-function creatorQueryKey(category: "All" | CommerceCategory, page: number) {
+function creatorQueryKey(category: "All" | TikTokShopCategoryName, page: number) {
   return `creators:${category}:${page}`;
 }
 
-function creatorQueryUrl(category: "All" | CommerceCategory, page: number) {
+function creatorQueryUrl(category: "All" | TikTokShopCategoryName, page: number) {
   return `/api/creators?category=${encodeURIComponent(category)}&page=${page}`;
 }
 
@@ -152,11 +152,9 @@ function CreatorStateRow({ children }: { children: ReactNode }) {
   return <tr className="shopStateRow creatorStateRow"><td colSpan={8}>{children}</td></tr>;
 }
 
-function displayCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | CommerceCategory) {
+function displayCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | TikTokShopCategoryName) {
   if (selectedCategory !== "All" && creator.categoryMemberships.includes(selectedCategory)) return selectedCategory;
-  return creator.categoryMemberships.find((category) => !commerceParentCategories.some((parent) => parent === category))
-    ?? creator.categoryMemberships[0]
-    ?? "Unmapped";
+  return creator.categoryMemberships[0] ?? "Unmapped";
 }
 
 function formatCreatorGmv(creator: CreatorListRow) {

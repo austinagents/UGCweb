@@ -90,3 +90,52 @@ export const tiktokShopCategoryDisplayNames: Record<string, string> = {
 
 export type TikTokShopCategoryId = typeof tiktokShopCategories[number]["id"];
 export type TikTokShopCategoryName = typeof tiktokShopCategories[number]["name"];
+
+const creatorCategoryAliases: Partial<Record<CommerceCategory, TikTokShopCategoryName>> = {
+  "Sports & Outdoors": "Sports & Outdoor",
+  Golf: "Sports & Outdoor",
+  Pickleball: "Sports & Outdoor",
+  Fitness: "Sports & Outdoor",
+  Running: "Sports & Outdoor",
+  Camping: "Sports & Outdoor",
+  Fishing: "Sports & Outdoor",
+  Fashion: "Fashion Accessories",
+  Dresses: "Womenswear & Underwear",
+  Activewear: "Sports & Outdoor",
+  Shoes: "Shoes",
+  Jewelry: "Jewelry Accessories & Derivatives",
+  Handbags: "Luggage & Bags",
+  Menswear: "Menswear & Underwear",
+  "Beauty & Care": "Beauty & Personal Care",
+  Skincare: "Beauty & Personal Care",
+  Makeup: "Beauty & Personal Care",
+  Haircare: "Beauty & Personal Care",
+  Fragrance: "Beauty & Personal Care",
+  Bodycare: "Beauty & Personal Care",
+  Nails: "Beauty & Personal Care",
+  "Food & Beverage": "Food & Beverages",
+  Energy: "Food & Beverages",
+  Snacks: "Food & Beverages",
+  Coffee: "Food & Beverages",
+  Protein: "Health",
+  Hydration: "Food & Beverages",
+  Candy: "Food & Beverages",
+  "Home & Living": "Home Supplies",
+  Kitchen: "Kitchenware",
+  Cleaning: "Home Supplies",
+  Storage: "Home Supplies",
+  Decor: "Home Supplies",
+  Bedding: "Textiles & Soft Furnishings",
+  Bathroom: "Home Supplies",
+  "Pets & Hobbies": "Pet Supplies",
+  Dogs: "Pet Supplies",
+  Cats: "Pet Supplies",
+  Toys: "Toys & Hobbies",
+  Collectibles: "Collectibles",
+  Cards: "Collectibles",
+  Crafts: "Toys & Hobbies",
+};
+
+export function creatorShopCategories(categories: readonly CommerceCategory[]) {
+  return [...new Set(categories.flatMap((category) => creatorCategoryAliases[category] ?? []))];
+}
