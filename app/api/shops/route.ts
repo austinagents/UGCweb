@@ -1,5 +1,5 @@
 import { getShopPage, getTrendingShops } from "@/lib/server/commerce-read";
-import { defaultTikTokShopCategoryId, tiktokShopCategories } from "@/lib/commerce-categories";
+import { tiktokShopCategories } from "@/lib/commerce-categories";
 import type { ShopRankingMetric, ShopRankingWindow } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -8,15 +8,15 @@ const responseCacheControl = "public, s-maxage=60, stale-while-revalidate=120";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const categoryId = validCategoryId(searchParams.get("category_id"));
+  const categoryIds = validCategoryIds(searchParams.get("category_id"));
   const window = validWindow(searchParams.get("window"));
   const metric = validMetric(searchParams.get("metric"));
   const page = Math.max(1, Number.parseInt(searchParams.get("page") ?? "1", 10) || 1);
 
   try {
     const data = searchParams.get("view") === "trending"
-      ? await getTrendingShops(categoryId, window, metric)
-      : await getShopPage(categoryId, window, metric, page);
+      ? await getTrendingShops(categoryIds, window, metric)
+      : await getShopPage(categoryIds, window, metric, page);
     return Response.json(data, {
       headers: { "Cache-Control": responseCacheControl },
     });
@@ -26,9 +26,11 @@ export async function GET(request: Request) {
   }
 }
 
-function validCategoryId(value: string | null) {
+function validCategoryIds(value: string | null) {
   if (!value || value === "all") return null;
-  return tiktokShopCategories.some((category) => category.id === value) ? value : defaultTikTokShopCategoryId;
+  const validIds = new Set(tiktokShopCategories.map((category) => category.id));
+  const requestedIds = value.split(",").filter((id) => validIds.has(id as typeof tiktokShopCategories[number]["id"]));
+  return requestedIds.length > 0 ? requestedIds : null;
 }
 
 function validWindow(value: string | null): ShopRankingWindow {

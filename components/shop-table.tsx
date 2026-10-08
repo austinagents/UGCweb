@@ -76,7 +76,7 @@ export function ShopTable({ categoryId, window, metric, active = true }: { categ
               <th>Shop</th>
               <th>Category</th>
               <th>Est. 30D GMV</th>
-              <th>Lifetime GMV</th>
+              <th>Audience</th>
               <th>Units Sold</th>
               <th>Followers</th>
               <th>Socials</th>
@@ -94,10 +94,10 @@ export function ShopTable({ categoryId, window, metric, active = true }: { categ
                 <td data-label="Category">
                   <span className="categoryCell commerceCategoryCell" title={`TikTok L1 category ${shop.category_id}`}><span className="categoryDot" />{shop.category_name}</span>
                 </td>
-                <td data-label="Est. 30D GMV">{formatCurrencyOrDash(shop.estimated_30d_gmv)}</td>
-                <UnavailableCell label="Lifetime GMV" />
-                <td data-label="Units Sold">{formatNumberOrDash(shop.shop_sold_count)}</td>
-                <td data-label="Followers">{formatNumberOrDash(shop.followers)}</td>
+                <td data-label="Est. 30D GMV"><strong className="commerceMetric">{formatCurrencyOrDash(shop.estimated_30d_gmv)}</strong></td>
+                <UnavailableCell label="Audience" />
+                <td data-label="Units Sold">{formatUnits(shop.shop_sold_count)}</td>
+                <td data-label="Followers"><span className="signalCount">{formatFollowers(shop.followers)}</span></td>
                 <td data-label="Socials"><SocialProfile shop={shop} /></td>
               </tr>
             ))}
@@ -151,7 +151,7 @@ function ShopRank({ shop }: { shop: TikTokShop }) {
   const movement = shop.current_rank && shop.previous_rank && Number.isFinite(current) && Number.isFinite(previous) ? previous - current : 0;
   return (
     <span title={`${shop.window.toUpperCase()} ${metricLabel(shop.ranking_metric)} rank in ${shop.category_name}`}>
-      <strong>{shop.current_rank ? `#${shop.current_rank}` : "—"}</strong>
+      {shop.current_rank ? `#${shop.current_rank}` : "—"}
       {movement !== 0 ? <small className={movement > 0 ? "shopRankUp" : "shopRankDown"}>{movement > 0 ? "↑" : "↓"}{Math.abs(movement)}</small> : null}
     </span>
   );
@@ -161,15 +161,28 @@ function UnavailableCell({ label }: { label: string }) {
   return <td data-label={label}><span title={`${label} is not available from the official TikTok ranking source`}>—</span></td>;
 }
 
-function formatNumberOrDash(value: number | null) {
-  return value === null ? "—" : new Intl.NumberFormat("en-US").format(value);
+function formatUnits(value: number | null) {
+  if (value === null) return "—";
+  return new Intl.NumberFormat("en-US", {
+    notation: value >= 10_000 ? "compact" : "standard",
+    maximumFractionDigits: value >= 1_000_000 ? 2 : value >= 100_000 ? 0 : value >= 10_000 ? 1 : 2,
+  }).format(value);
+}
+
+function formatFollowers(value: number | null) {
+  if (value === null) return "—";
+  return new Intl.NumberFormat("en-US", {
+    notation: value >= 10_000 ? "compact" : "standard",
+    maximumFractionDigits: 1,
+  }).format(value);
 }
 
 function formatCurrencyOrDash(value: number | null) {
   return value === null ? "—" : new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    maximumFractionDigits: 0,
+    notation: "compact",
+    maximumFractionDigits: 1,
   }).format(value);
 }
 

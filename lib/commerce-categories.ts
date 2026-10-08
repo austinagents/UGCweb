@@ -91,7 +91,34 @@ export const tiktokShopCategoryDisplayNames: Record<string, string> = {
 export type TikTokShopCategoryId = typeof tiktokShopCategories[number]["id"];
 export type TikTokShopCategoryName = typeof tiktokShopCategories[number]["name"];
 
-const creatorCategoryAliases: Partial<Record<CommerceCategory, TikTokShopCategoryName>> = {
+export const commerceNavigationCategories = [
+  { key: "sports-outdoor", name: "Sports & Outdoor", categoryIds: ["603014"] },
+  { key: "food-beverages", name: "Food & Beverages", categoryIds: ["700437"] },
+  { key: "womenswear-underwear", name: "Womenswear", categoryIds: ["601152", "601303"] },
+  { key: "menswear-underwear", name: "Menswear", categoryIds: ["824328"] },
+  { key: "shoes", name: "Shoes", categoryIds: ["601352"] },
+  { key: "beauty-personal-care", name: "Beauty", categoryIds: ["601450"] },
+  { key: "kitchenware", name: "Kitchenware", categoryIds: ["600024"] },
+  { key: "textiles-furniture", name: "Textiles & Furnishings", categoryIds: ["600154", "604453"] },
+  { key: "electronics", name: "Electronics", categoryIds: ["601739", "601755"] },
+  { key: "home-supplies", name: "Home Supplies", categoryIds: ["600001", "600942"] },
+  { key: "pet-supplies", name: "Pet Supplies", categoryIds: ["602118"] },
+  { key: "health", name: "Health", categoryIds: ["700645"] },
+  { key: "fashion-jewelry", name: "Fashion Accessories", categoryIds: ["605248", "953224"] },
+  { key: "toys-hobbies", name: "Toys & Hobbies", categoryIds: ["604206"] },
+  { key: "tools-home-improvement", name: "Tools & Hardware", categoryIds: ["604579", "604968"] },
+  { key: "automotive-motorcycle", name: "Automotive & Motorcycle", categoryIds: ["605196"] },
+  { key: "books-audio", name: "Books, Magazines & Audio", categoryIds: ["801928"] },
+  { key: "luggage-bags", name: "Luggage & Bags", categoryIds: ["824584"] },
+  { key: "collectibles", name: "Collectibles", categoryIds: ["951432", "856720"] },
+  { key: "virtual-products", name: "Virtual Products", categoryIds: ["834312"] },
+  { key: "kids-fashion", name: "Kids", categoryIds: ["802184"] },
+  { key: "baby-maternity", name: "Baby & Maternity", categoryIds: ["602284"] },
+] as const;
+
+export type CommerceNavigationCategoryName = typeof commerceNavigationCategories[number]["name"];
+
+const creatorCategoryAliases: Record<CommerceCategory, CommerceNavigationCategoryName> = {
   "Sports & Outdoors": "Sports & Outdoor",
   Golf: "Sports & Outdoor",
   Pickleball: "Sports & Outdoor",
@@ -100,19 +127,19 @@ const creatorCategoryAliases: Partial<Record<CommerceCategory, TikTokShopCategor
   Camping: "Sports & Outdoor",
   Fishing: "Sports & Outdoor",
   Fashion: "Fashion Accessories",
-  Dresses: "Womenswear & Underwear",
+  Dresses: "Womenswear",
   Activewear: "Sports & Outdoor",
   Shoes: "Shoes",
-  Jewelry: "Jewelry Accessories & Derivatives",
+  Jewelry: "Fashion Accessories",
   Handbags: "Luggage & Bags",
-  Menswear: "Menswear & Underwear",
-  "Beauty & Care": "Beauty & Personal Care",
-  Skincare: "Beauty & Personal Care",
-  Makeup: "Beauty & Personal Care",
-  Haircare: "Beauty & Personal Care",
-  Fragrance: "Beauty & Personal Care",
-  Bodycare: "Beauty & Personal Care",
-  Nails: "Beauty & Personal Care",
+  Menswear: "Menswear",
+  "Beauty & Care": "Beauty",
+  Skincare: "Beauty",
+  Makeup: "Beauty",
+  Haircare: "Beauty",
+  Fragrance: "Beauty",
+  Bodycare: "Beauty",
+  Nails: "Beauty",
   "Food & Beverage": "Food & Beverages",
   Energy: "Food & Beverages",
   Snacks: "Food & Beverages",
@@ -125,7 +152,7 @@ const creatorCategoryAliases: Partial<Record<CommerceCategory, TikTokShopCategor
   Cleaning: "Home Supplies",
   Storage: "Home Supplies",
   Decor: "Home Supplies",
-  Bedding: "Textiles & Soft Furnishings",
+  Bedding: "Textiles & Furnishings",
   Bathroom: "Home Supplies",
   "Pets & Hobbies": "Pet Supplies",
   Dogs: "Pet Supplies",
@@ -136,6 +163,38 @@ const creatorCategoryAliases: Partial<Record<CommerceCategory, TikTokShopCategor
   Crafts: "Toys & Hobbies",
 };
 
-export function creatorShopCategories(categories: readonly CommerceCategory[]) {
-  return [...new Set(categories.flatMap((category) => creatorCategoryAliases[category] ?? []))];
+const creatorQueryCategoryRules: Array<[CommerceNavigationCategoryName, RegExp]> = [
+  ["Sports & Outdoor", /sport|fitness|running|golf|camp|fish|workout|gym|yoga|cycling|outdoor/],
+  ["Food & Beverages", /food|snack|coffee|drink|beverage|candy|fruit|protein|grocery|tea|water|hydration/],
+  ["Womenswear", /women|dress|lingerie|bra|skirt|blouse/],
+  ["Menswear", /men|suit|necktie/],
+  ["Shoes", /shoe|sneaker|boot|footwear|sandal/],
+  ["Beauty", /beauty|cosmetic|makeup|skin|hair|fragrance|perfume|nail|self care/],
+  ["Kitchenware", /kitchen|cook|bake|dining|tableware|barbecue/],
+  ["Textiles & Furnishings", /textile|furniture|bedding|pillow|blanket|curtain|rug|mattress/],
+  ["Electronics", /phone|computer|laptop|tablet|electronic|audio|camera|cable|wi-fi|printer|smartwatch|drone/],
+  ["Pet Supplies", /pet|dog|cat|aquarium/],
+  ["Health", /health|medical|first aid|supplement|massage|recovery|wheelchair/],
+  ["Fashion Accessories", /jewelry|jewellery|bracelet|necklace|watch|accessor|sunglass/],
+  ["Toys & Hobbies", /toy|game|craft|hobby|doll|plush|kite/],
+  ["Tools & Hardware", /tool|hardware|repair|building|workshop|electrical equipment/],
+  ["Automotive & Motorcycle", /car|auto|vehicle|motorcycle|engine|truck/],
+  ["Books, Magazines & Audio", /book|magazine|vinyl|record|literature/],
+  ["Luggage & Bags", /bag|luggage|purse|backpack|travel case/],
+  ["Collectibles", /collectible|memorabilia|trading card|pre-owned|antique/],
+  ["Virtual Products", /virtual|software|digital|download/],
+  ["Kids", /kid|child|boy|girl|school/],
+  ["Baby & Maternity", /baby|maternity|infant|toddler/],
+  ["Home Supplies", /home|clean|storage|decor|bathroom|garden|household|organizer/],
+];
+
+export function creatorShopCategories(categories: readonly CommerceCategory[], sourceQueries: readonly string[] = []) {
+  const mapped = [...new Set(categories.map((category) => creatorCategoryAliases[category]))];
+  if (mapped.length > 0) return mapped;
+  const queryText = sourceQueries.join(" ").toLowerCase();
+  return [creatorQueryCategoryRules.find(([, pattern]) => pattern.test(queryText))?.[0] ?? "Home Supplies"];
+}
+
+export function commerceNavigationCategoryForId(categoryId: string) {
+  return commerceNavigationCategories.find((category) => category.categoryIds.some((id) => id === categoryId))?.name ?? "Home Supplies";
 }

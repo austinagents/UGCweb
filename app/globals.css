@@ -5922,6 +5922,15 @@ a:hover .toolLogo {
   }
 }
 
+.screenTabs {
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.screenTabs::-webkit-scrollbar {
+  display: none;
+}
+
 .screenTabs button {
   flex: 0 0 auto;
   padding: 7px 10px;

@@ -5,15 +5,15 @@ import { CreatorTable } from "@/components/creator-table";
 import { CommerceCategoryMap } from "@/components/heatmap";
 import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ShopTable } from "@/components/shop-table";
-import { tiktokShopCategories, type TikTokShopCategoryName } from "@/lib/commerce-categories";
+import { commerceNavigationCategories, creatorShopCategories, type CommerceCategory, type CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import type { ShopRankingWindow } from "@/lib/types";
 
-type ScreenerCategory = "All" | TikTokShopCategoryName;
+type ScreenerCategory = "All" | CommerceNavigationCategoryName;
 type ScreenerMode = "shops" | "creators";
 
 export function HomeTrendingFilter() {
   const [mode, setMode] = useState<ScreenerMode>("shops");
-  const [shopCategoryId, setShopCategoryId] = useState<string>("all");
+  const [shopCategoryKey, setShopCategoryKey] = useState<string>("all");
   const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>("All");
   const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("7d");
   return (
@@ -21,12 +21,12 @@ export function HomeTrendingFilter() {
       <PromotedMomentumRail mode={mode} category={creatorCategory} />
 
       <nav className="screenTabs" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category filters`}>
-        {([{ id: "all", name: "All" }, ...tiktokShopCategories]).map((category) => (
+        {([{ key: "all", name: "All", categoryIds: [] }, ...commerceNavigationCategories]).map((category) => (
           <button
-            className={(mode === "shops" ? shopCategoryId === category.id : creatorCategory === category.name) ? "active" : ""}
-            onClick={() => mode === "shops" ? setShopCategoryId(category.id) : setCreatorCategory(category.name as ScreenerCategory)}
+            className={(mode === "shops" ? shopCategoryKey === category.key : creatorCategory === category.name) ? "active" : ""}
+            onClick={() => mode === "shops" ? setShopCategoryKey(category.key) : setCreatorCategory(category.name as ScreenerCategory)}
             type="button"
-            key={category.id ?? "all"}
+            key={category.key}
           >
             {category.name}
           </button>
@@ -49,7 +49,7 @@ export function HomeTrendingFilter() {
               <button className={(mode === "shops" && shopWindow === "30d") || mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators" || shopWindow === "30d"} onClick={() => mode === "shops" && setShopWindow("30d")}>30D</button>
             </div>
           </div>
-          <div hidden={mode !== "shops"}><ShopTable categoryId={shopCategoryId} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
+          <div hidden={mode !== "shops"}><ShopTable categoryId={commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds.join(",") ?? "all"} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
           <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} active={mode === "creators"} /></div>
         </div>
         <aside className="homeRail">
@@ -62,8 +62,8 @@ export function HomeTrendingFilter() {
             </div>
             <CommerceCategoryMap
               mode={mode}
-              activeCategory={mode === "shops" ? shopCategoryId : creatorCategory}
-              onSelect={(category) => mode === "shops" ? setShopCategoryId(category as string) : setCreatorCategory(category as ScreenerCategory)}
+              activeCategory={mode === "shops" ? shopCategoryKey : creatorCategory}
+              onSelect={(category) => mode === "shops" ? setShopCategoryKey(category) : setCreatorCategory(creatorShopCategories([category as CommerceCategory])[0] ?? "All")}
             />
           </section>
         </aside>

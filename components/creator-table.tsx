@@ -2,11 +2,11 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
-import type { TikTokShopCategoryName } from "@/lib/commerce-categories";
+import type { CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerResponse } from "@/lib/creator-screener";
 
 type CreatorTableResult = {
-  category: "All" | TikTokShopCategoryName;
+  category: "All" | CommerceNavigationCategoryName;
   data: CreatorScreenerResponse;
 };
 
@@ -14,7 +14,7 @@ export function CreatorTable({
   category,
   active = true,
 }: {
-  category: "All" | TikTokShopCategoryName;
+  category: "All" | CommerceNavigationCategoryName;
   active?: boolean;
 }) {
   const [pagination, setPagination] = useState({ category, page: 1 });
@@ -127,11 +127,11 @@ export function CreatorTable({
   );
 }
 
-function creatorQueryKey(category: "All" | TikTokShopCategoryName, page: number) {
+function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, page: number) {
   return `creators:${category}:${page}`;
 }
 
-function creatorQueryUrl(category: "All" | TikTokShopCategoryName, page: number) {
+function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, page: number) {
   return `/api/creators?category=${encodeURIComponent(category)}&page=${page}`;
 }
 
@@ -152,7 +152,7 @@ function CreatorStateRow({ children }: { children: ReactNode }) {
   return <tr className="shopStateRow creatorStateRow"><td colSpan={8}>{children}</td></tr>;
 }
 
-function displayCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | TikTokShopCategoryName) {
+function displayCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | CommerceNavigationCategoryName) {
   if (selectedCategory !== "All" && creator.categoryMemberships.includes(selectedCategory)) return selectedCategory;
   return creator.categoryMemberships[0] ?? "Unmapped";
 }

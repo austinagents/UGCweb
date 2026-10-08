@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { tiktokShopCategories, type TikTokShopCategoryName } from "@/lib/commerce-categories";
+import { commerceNavigationCategories, type CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import { getCreatorPage, getTrendingCreators } from "@/lib/server/commerce-read";
 
-type ScreenerCategory = "All" | TikTokShopCategoryName;
+type ScreenerCategory = "All" | CommerceNavigationCategoryName;
 
 const responseCacheControl = "public, s-maxage=300, stale-while-revalidate=600";
 const validCategories = new Set<string>([
   "All",
-  ...tiktokShopCategories.map((category) => category.name),
+  ...commerceNavigationCategories.map((category) => category.name),
 ]);
 
 export function GET(request: NextRequest) {
