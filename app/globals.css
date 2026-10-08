@@ -2685,6 +2685,8 @@ body {
 
 .homeStack {
   --boost-extra-height: 159px;
+  --trending-extension: 406px;
+  --boost-lift-height: calc(var(--boost-extra-height) + var(--trending-extension));
   display: grid;
   gap: var(--space-4);
 }
@@ -2698,16 +2700,17 @@ body {
   grid-template-columns: minmax(0, 1fr) 380px;
   gap: var(--space-4);
   align-items: start;
-  min-height: 690px;
+  min-height: calc(690px + var(--trending-extension));
 }
 
 .primaryTable {
   min-width: 0;
-  min-height: 690px;
+  min-height: calc(690px + var(--trending-extension));
 }
 
 .primaryTable .tableWrap {
-  max-height: 585px;
+  height: calc(592px + var(--trending-extension));
+  max-height: calc(592px + var(--trending-extension));
   overflow: auto;
   overscroll-behavior: contain;
 }
@@ -3685,6 +3688,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
+  grid-column: 1;
+  grid-row: 1;
   min-width: 0;
 }
 
@@ -3694,13 +3699,26 @@ body {
 }
 
 .homeRail {
-  height: calc(100% - var(--boost-extra-height));
+  height: calc(100% - var(--boost-lift-height));
 }
 
 .homeSecondary > .boostPanel {
-  margin-top: calc(-1 * var(--boost-extra-height));
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: calc(-1 * var(--boost-lift-height));
   height: calc(var(--lower-card-height) + var(--boost-extra-height));
   min-height: 0;
+  overflow: hidden;
+}
+
+.homeNewsPanel {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.homeNewsPanel > .previewPanel {
+  height: var(--lower-card-height);
   overflow: hidden;
 }
 
@@ -7347,5 +7365,54 @@ body {
 
   .marketplaceVideoGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Homepage layout reset must follow the later production overrides above. */
+@media (max-width: 1180px) {
+  .homePrimary,
+  .homeSecondary {
+    grid-template-columns: 1fr;
+  }
+
+  .homePrimary,
+  .primaryTable {
+    min-height: 690px;
+  }
+
+  .primaryTable .tableWrap {
+    height: auto;
+    max-height: 585px;
+  }
+
+  .homeRail {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .lowerDiscoveryRow,
+  .homeSecondary > .boostPanel,
+  .homeNewsPanel {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .homeSecondary > .boostPanel {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .homeNewsPanel > .previewPanel {
+    height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .lowerDiscoveryRow {
+    grid-template-columns: 1fr;
+  }
+
+  .lowerDiscoveryRow > .previewPanel {
+    height: auto;
   }
 }
