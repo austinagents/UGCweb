@@ -1,5 +1,7 @@
 import "server-only";
 
+import path from "node:path";
+import { DatabaseSync } from "node:sqlite";
 import { unstable_cache } from "next/cache";
 import creatorData from "@/data/creator-screener.json";
 import {
@@ -8,7 +10,6 @@ import {
   type CommerceCategory,
 } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerRow, CreatorTrendingRow } from "@/lib/creator-screener";
-import { getDatabase } from "@/lib/server/database";
 import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
 
 type ScreenerCategory = "All" | CommerceCategory;
@@ -100,68 +101,55 @@ export function getCategoryAvailability(mode: "shops" | "creators") {
 }
 
 async function loadShopPage(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number): Promise<TikTokShopsResponse> {
-  const sql = getDatabase();
-  const categoryFilter = categoryId ? sql`AND observation.category_id = ${categoryId}` : sql``;
-  const [{ count, capture_date }] = await sql<[{ count: number; capture_date: string | null }]>`
-    SELECT count(*)::integer AS count, max(observation.capture_date)::text AS capture_date
-    FROM partnerlinks.tiktok_shop_ranking_observations observation
-    WHERE observation.ranking_window = ${window}
-    ${categoryFilter}
-  `;
-  const total = count;
+  const database = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shops.sqlite"), { readOnly: true });
+  const rankColumn = `rank_${window}_${metric}`;
+  const categoryWhere = categoryId
+    ? "WHERE instr('|' || replace(category_ids, ' ', '') || '|', '|' || ? || '|') > 0"
+    : "";
+  const parameters = categoryId ? [categoryId] : [];
+  const total = Number((database.prepare(`SELECT count(*) AS count FROM shops ${categoryWhere}`).get(...parameters) as { count: number }).count);
   const totalPages = Math.max(1, Math.ceil(total / allShopPageSize));
   const safePage = Math.min(page, totalPages);
   const offset = (safePage - 1) * allShopPageSize;
-  const rows = await sql<TikTokShop[]>`
+  const sourceRows = database.prepare(`
     SELECT
-      entity.shop_id,
-      entity.shop_name,
-      entity.shop_thumb_image_url,
-      entity.shop_status,
-      entity.shop_share_link,
-      entity.tiktok_username,
-      entity.tiktok_profile_url,
-      entity.tiktok_profile_source,
-      entity.tiktok_profile_verified_at::text,
-      observation.category_id,
-      observation.category_name,
-      observation.ranking_window AS "window",
-      ${metric}::text AS ranking_metric,
-      CASE ${metric}
-        WHEN 'total_gmv' THEN observation.total_gmv_rank
-        WHEN 'product_card_gmv' THEN observation.product_card_gmv_rank
-        WHEN 'live_gmv' THEN observation.live_gmv_rank
-        WHEN 'video_gmv' THEN observation.video_gmv_rank
-      END::text AS current_rank,
-      CASE ${metric}
-        WHEN 'total_gmv' THEN observation.total_gmv_previous_rank
-        WHEN 'product_card_gmv' THEN observation.product_card_gmv_previous_rank
-        WHEN 'live_gmv' THEN observation.live_gmv_previous_rank
-        WHEN 'video_gmv' THEN observation.video_gmv_previous_rank
-      END::text AS previous_rank,
-      CASE ${metric}
-        WHEN 'total_gmv' THEN observation.total_gmv_rank_change
-        WHEN 'product_card_gmv' THEN observation.product_card_gmv_rank_change
-        WHEN 'live_gmv' THEN observation.live_gmv_rank_change
-        WHEN 'video_gmv' THEN observation.video_gmv_rank_change
-      END::text AS rank_change,
-      observation.capture_date::text
-    FROM partnerlinks.tiktok_shop_ranking_observations observation
-    JOIN partnerlinks.tiktok_shop_entities entity USING (shop_id)
-    WHERE observation.ranking_window = ${window}
-    ${categoryFilter}
-    ORDER BY
-      CASE ${metric}
-        WHEN 'total_gmv' THEN observation.total_gmv_rank
-        WHEN 'product_card_gmv' THEN observation.product_card_gmv_rank
-        WHEN 'live_gmv' THEN observation.live_gmv_rank
-        WHEN 'video_gmv' THEN observation.video_gmv_rank
-      END ASC NULLS LAST,
-      observation.category_id ASC,
-      entity.shop_id ASC
-    LIMIT ${allShopPageSize} OFFSET ${offset}
-  `;
+      shop_id, shop_name, shop_logo_url, storefront_url, category_ids, category_names,
+      shop_sold_count, followers, estimated_30d_gmv,
+      ${rankColumn} AS current_rank
+    FROM shops
+    ${categoryWhere}
+    ORDER BY current_rank IS NULL, current_rank ASC, shop_name COLLATE NOCASE, shop_id
+    LIMIT ? OFFSET ?
+  `).all(...parameters, allShopPageSize, offset) as Array<Record<string, string | number | null>>;
+  database.close();
   const category = categoryId ? tiktokShopCategories.find((item) => item.id === categoryId) : null;
+  const rows: TikTokShop[] = sourceRows.map((row) => {
+    const ids = String(row.category_ids ?? "").split("|").map((value) => value.trim()).filter(Boolean);
+    const names = String(row.category_names ?? "").split("|").map((value) => value.trim()).filter(Boolean);
+    const selectedIndex = categoryId ? Math.max(0, ids.indexOf(categoryId)) : 0;
+    return {
+      shop_id: String(row.shop_id),
+      shop_name: row.shop_name ? String(row.shop_name) : null,
+      shop_thumb_image_url: row.shop_logo_url ? String(row.shop_logo_url) : null,
+      shop_status: null,
+      shop_share_link: row.storefront_url ? String(row.storefront_url) : null,
+      tiktok_username: null,
+      tiktok_profile_url: null,
+      tiktok_profile_source: null,
+      tiktok_profile_verified_at: null,
+      category_id: ids[selectedIndex] ?? "unknown",
+      category_name: names[selectedIndex] ?? "Uncategorized",
+      window,
+      ranking_metric: metric,
+      current_rank: row.current_rank === null ? null : String(row.current_rank),
+      previous_rank: null,
+      rank_change: null,
+      capture_date: "2026-10-07",
+      shop_sold_count: row.shop_sold_count === null ? null : Number(row.shop_sold_count),
+      followers: row.followers === null ? null : Number(row.followers),
+      estimated_30d_gmv: row.estimated_30d_gmv === null ? null : Number(row.estimated_30d_gmv),
+    };
+  });
 
   return {
     categoryId,
@@ -169,7 +157,7 @@ async function loadShopPage(categoryId: string | null, window: ShopRankingWindow
     categories: [...tiktokShopCategories],
     window,
     metric,
-    captureDate: capture_date,
+    captureDate: "2026-10-07",
     total,
     page: safePage,
     pageSize: allShopPageSize,
@@ -189,10 +177,10 @@ function toCreatorListRow(creator: CreatorScreenerRow): CreatorListRow {
     categoryMemberships: creator.categoryMemberships,
     med_gmv_revenue: creator.med_gmv_revenue,
     med_gmv_revenue_range: creator.med_gmv_revenue_range,
-    live_gmv: creator.live_gmv,
     units_sold: creator.units_sold,
     units_sold_range: creator.units_sold_range,
     audience_gender: creator.audience_gender,
+    socials: creator.socials,
   };
 }
 

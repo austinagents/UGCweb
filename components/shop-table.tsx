@@ -75,10 +75,10 @@ export function ShopTable({ categoryId, window, metric, active = true }: { categ
               <th>Rank</th>
               <th>Shop</th>
               <th>Category</th>
-              <th>7D GMV</th>
+              <th>Est. 30D GMV</th>
               <th>Lifetime GMV</th>
-              <th>7D Units</th>
-              <th>Products</th>
+              <th>Units Sold</th>
+              <th>Followers</th>
               <th>Socials</th>
             </tr>
           </thead>
@@ -94,10 +94,10 @@ export function ShopTable({ categoryId, window, metric, active = true }: { categ
                 <td data-label="Category">
                   <span className="categoryCell commerceCategoryCell" title={`TikTok L1 category ${shop.category_id}`}><span className="categoryDot" />{shop.category_name}</span>
                 </td>
-                <UnavailableCell label="7D GMV" />
+                <td data-label="Est. 30D GMV">{formatCurrencyOrDash(shop.estimated_30d_gmv)}</td>
                 <UnavailableCell label="Lifetime GMV" />
-                <UnavailableCell label="7D Units" />
-                <UnavailableCell label="Products" />
+                <td data-label="Units Sold">{formatNumberOrDash(shop.shop_sold_count)}</td>
+                <td data-label="Followers">{formatNumberOrDash(shop.followers)}</td>
                 <td data-label="Socials"><SocialProfile shop={shop} /></td>
               </tr>
             ))}
@@ -159,6 +159,18 @@ function ShopRank({ shop }: { shop: TikTokShop }) {
 
 function UnavailableCell({ label }: { label: string }) {
   return <td data-label={label}><span title={`${label} is not available from the official TikTok ranking source`}>—</span></td>;
+}
+
+function formatNumberOrDash(value: number | null) {
+  return value === null ? "—" : new Intl.NumberFormat("en-US").format(value);
+}
+
+function formatCurrencyOrDash(value: number | null) {
+  return value === null ? "—" : new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(value);
 }
 
 function SocialProfile({ shop }: { shop: TikTokShop }) {

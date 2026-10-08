@@ -108,7 +108,7 @@ export function CreatorTable({
                 <td data-label="Audience"><span className="creatorAudience">{formatAudience(creator)}</span></td>
                 <td data-label="Units Sold">{creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatNumber(creator.followers)}</span></td>
-                <td data-label="Socials">{formatCurrencyOrDash(creator.live_gmv)}</td>
+                <td data-label="Socials" />
               </tr>
             ))}
           </tbody>
@@ -166,10 +166,6 @@ function formatCreatorGmv(creator: CreatorListRow) {
 
 function formatCurrency(value: number) {
   return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 }).format(value);
-}
-
-function formatCurrencyOrDash(value: number | null) {
-  return value === null ? "—" : formatCurrency(value);
 }
 
 function formatAudience(creator: CreatorListRow) {

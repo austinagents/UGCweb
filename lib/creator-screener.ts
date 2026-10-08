@@ -1,5 +1,10 @@
 import type { CommerceCategory } from "@/lib/commerce-categories";
 
+export type CreatorSocial = {
+  platform: string;
+  url: string;
+};
+
 export type CreatorScreenerRow = {
   creator_oecuid: string;
   handle: string;
@@ -10,14 +15,13 @@ export type CreatorScreenerRow = {
   sourceQueries: string[];
   med_gmv_revenue: number | null;
   med_gmv_revenue_range: string | null;
-  video_gmv: number | null;
-  live_gmv: number | null;
   units_sold: number | null;
   units_sold_range: string | null;
   audience_gender: {
     gender: "Female" | "Male";
     percentage: number;
   } | null;
+  socials: CreatorSocial[];
   snapshotTimestamp: string;
 };
 
@@ -30,10 +34,10 @@ export type CreatorListRow = Pick<CreatorScreenerRow,
   | "categoryMemberships"
   | "med_gmv_revenue"
   | "med_gmv_revenue_range"
-  | "live_gmv"
   | "units_sold"
   | "units_sold_range"
   | "audience_gender"
+  | "socials"
 >;
 
 export type CreatorTrendingRow = Pick<CreatorListRow,

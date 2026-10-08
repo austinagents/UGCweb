@@ -27,7 +27,7 @@ export async function GET(request: Request) {
 }
 
 function validCategoryId(value: string | null) {
-  if (!value || value === "all") return defaultTikTokShopCategoryId;
+  if (!value || value === "all") return null;
   return tiktokShopCategories.some((category) => category.id === value) ? value : defaultTikTokShopCategoryId;
 }
 

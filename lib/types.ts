@@ -169,6 +169,9 @@ export type TikTokShop = {
   previous_rank: string | null;
   rank_change: string | null;
   capture_date: string;
+  shop_sold_count: number | null;
+  followers: number | null;
+  estimated_30d_gmv: number | null;
 };
 
 export type TikTokShopsResponse = {
