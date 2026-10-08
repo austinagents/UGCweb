@@ -13,9 +13,11 @@ type CreatorTableResult = {
 export function CreatorTable({
   category,
   active = true,
+  rowLimit,
 }: {
   category: "All" | CommerceNavigationCategoryName;
   active?: boolean;
+  rowLimit?: number;
 }) {
   const [pagination, setPagination] = useState({ category, page: 1 });
   const [result, setResult] = useState<CreatorTableResult | null>(null);
@@ -99,7 +101,7 @@ export function CreatorTable({
                 <small>{category === "All" ? "No persisted creator records are available." : `${category} does not have mapped creator coverage in the current sample.`}</small>
               </CreatorStateRow>
             ) : null}
-            {!error && creators.map((creator, index) => (
+            {!error && (rowLimit ? creators.slice(0, rowLimit) : creators).map((creator, index) => (
               <tr key={creator.creator_oecuid}>
                 <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
                 <td data-label="Creator"><CreatorIdentity creator={creator} /></td>

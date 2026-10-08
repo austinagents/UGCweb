@@ -261,6 +261,17 @@ p { color: var(--muted); line-height: 1.5; }
 .miniRow strong, .miniRow small, .workflowRow strong, .workflowRow small { display: block; }
 .miniRow small, .workflowRow small { color: var(--muted); white-space: normal; }
 .workflowGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.productImageStack { display: inline-flex; align-items: center; padding-left: 3px; }
+.productImageStack img {
+  width: 32px;
+  height: 32px;
+  margin-left: -3px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  object-fit: cover;
+  background: var(--panel);
+}
+.productImageStack img:first-child { margin-left: 0; }
 .workflowNameCell { display: inline-flex; gap: 8px; align-items: center; }
 .workflowProcess {
   padding: 14px;
@@ -1955,6 +1966,17 @@ p { color: var(--muted); line-height: 1.5; }
   background: rgba(149, 184, 123, 0.06);
 }
 
+.heatmapSearch input {
+  width: 126px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.heatmapSearch input::placeholder { color: var(--text-secondary); opacity: 1; }
+
 .heatmapExplorerLayout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 330px;
@@ -1995,6 +2017,18 @@ p { color: var(--muted); line-height: 1.5; }
   font-weight: 820;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.heatmapMarketTitle {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: color-mix(in srgb, var(--cluster-color) 82%, white);
+  font-size: 13px;
+  font-weight: 820;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .ecosystemCluster header small {
@@ -2100,6 +2134,40 @@ p { color: var(--muted); line-height: 1.5; }
   color: var(--text-muted);
   font-size: 11px;
 }
+
+.commerceBucketRow { width: 100%; color: inherit; text-align: left; cursor: pointer; }
+.heatmapBucketIcon,
+.heatmapShopLogo { display: inline-flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.heatmapShopLogo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.heatmapShowAll {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: color-mix(in srgb, var(--cluster-color) 82%, white);
+  font-size: 11px;
+  font-weight: 760;
+  cursor: pointer;
+}
+.heatmapShowAll:hover { text-decoration: underline; }
+.workflowLayer button,
+.workflowLayer a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 7px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.018);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.workflowLayer button:hover,
+.workflowLayer a:hover { border-color: color-mix(in srgb, var(--cluster-color) 42%, transparent); background: rgba(255, 255, 255, 0.035); }
+.heatmapRankBadge { color: var(--text-muted); font-size: 10px; font-style: normal; font-weight: 760; }
+.heatmapEmptyState { grid-column: 1 / -1; min-height: 120px; place-items: center; color: var(--text-secondary); }
 
 .heatmapIntelRail {
   display: grid;
@@ -6262,6 +6330,45 @@ a:hover .toolLogo {
   font-weight: 620;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.commerceCategoryNodes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 24px;
+  padding: 4px 5px;
+  overflow: hidden;
+  border: 1px solid #22343f;
+  border-radius: 3px;
+  background: rgba(9, 17, 23, 0.72);
+  color: #a4d0cc;
+  font-size: 9px;
+  font-weight: 620;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.commerceCategoryNodes a:hover,
+.commerceCategoryNodes a.active { border-color: var(--border-active); background: rgba(149, 184, 123, 0.055); color: var(--accent-primary); }
+.commerceCategoryNodes a.active { box-shadow: inset 2px 0 0 rgba(149, 184, 123, 0.68); }
+.commerceSlugCategoryMap { display: block; }
+.commerceSlugCategoryMap .commerceCategoryCluster { height: 100%; }
+.commerceSlugCategoryMap .commerceCategoryNodes { grid-template-rows: none; align-content: start; overflow: auto; }
+.commerceSlugBucketGrid { grid-template-rows: none; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.categoryDetailRail { display: grid; align-content: start; gap: 18px; }
+.categoryDetailRail > section + section { padding-top: 14px; border-top: 1px solid var(--line-soft); }
+.categoryDetailBucketGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; }
+.gridTwo.wideLeft > .commerceSlugResults { min-height: 0; height: var(--category-result-height, 1113px); overflow: hidden; }
+.commerceSlugResults { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.commerceSlugResults > div:not(.sectionHeader) { min-height: 0; display: flex; flex-direction: column; }
+.commerceSlugResults > div[hidden] { display: none !important; }
+.commerceSlugResults .tableWrap { flex: 1; min-height: 0; overflow-y: auto; }
+.commerceSlugResults .shopPagination { flex: 0 0 auto; }
+
+@media (max-width: 860px) {
+  .gridTwo.wideLeft > .commerceSlugResults { height: min(78vh, var(--category-result-height, 1113px)); }
 }
 
 

@@ -1,9 +1,6 @@
 import { notFound } from "next/navigation";
-import type { ReactNode } from "react";
-import { AttentionChart } from "@/components/chart";
 import { CategoryHeatmap } from "@/components/heatmap";
 import { MovementBadge } from "@/components/movement-badge";
-import { SaveButton } from "@/components/save-button";
 import { TimeframeToggle } from "@/components/timeframe-toggle";
 import { ToolTable } from "@/components/tool-table";
 import { WorkflowStack } from "@/components/workflow-stack";
@@ -23,22 +20,6 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="stack">
-      <section className="detailHeader">
-        <div>
-          <p className="eyebrow">Sector dashboard</p>
-          <h1>{displayCategory(category.name)}</h1>
-          <p>{category.description}</p>
-        </div>
-        <SaveButton kind="categories" id={category.slug} />
-      </section>
-      <section className="terminalStatus">
-        <Metric label="Momentum Score" value={category.momentumScore} />
-        <Metric label="24h" value={<MovementBadge value={category.growth24h} />} />
-        <Metric label="7d" value={<MovementBadge value={category.growth7d} />} />
-        <Metric label="Tools tracked" value={category.toolsTracked} />
-        <TimeframeToggle compact />
-      </section>
-      <AttentionChart data={category.sparkline.concat(category.sparkline.map((value) => value + 8))} title={`${displayCategory(category.name)} Momentum`} />
       <section className="gridTwo wideLeft">
         <div><div className="sectionHeader"><h2>Top Tools</h2><TimeframeToggle compact /></div><ToolTable tools={scopedTools} /></div>
         <aside className="sidePanel">
@@ -58,8 +39,4 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       <section><div className="sectionHeader"><h2>Related Workflows</h2></div><div className="workflowGrid">{relatedWorkflows.map((workflow) => <a className="workflowRow" href={`/workflows/${workflow.slug}`} key={workflow.id}><WorkflowStack toolSlugs={workflow.toolSlugs} /><span><strong>{workflow.name}</strong><small>{workflow.outcome}</small></span><MovementBadge value={workflow.growth24h} /></a>)}</div></section>
     </div>
   );
-}
-
-function Metric({ label, value }: { label: string; value: ReactNode }) {
-  return <div className="metric"><span>{label}</span><strong>{value}</strong></div>;
 }

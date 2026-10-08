@@ -7,7 +7,7 @@ import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsRespo
 
 type ShopTableResult = { category: string; data: TikTokShopsResponse };
 
-export function ShopTable({ categoryId, window, metric, active = true }: { categoryId: string | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean }) {
+export function ShopTable({ categoryId, window, metric, active = true, rowLimit }: { categoryId: string | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
   const scope = `${categoryId ?? "all"}:${window}:${metric}`;
   const [pagination, setPagination] = useState({ scope, page: 1 });
   const [result, setResult] = useState<ShopTableResult | null>(null);
@@ -50,6 +50,7 @@ export function ShopTable({ categoryId, window, metric, active = true }: { categ
 
   const data = result?.data;
   const shops = data?.shops ?? [];
+  const visibleShops = rowLimit ? shops.slice(0, rowLimit) : shops;
   const renderedCategory = data?.categoryName ?? "All Categories";
   const renderedPage = data?.page ?? page;
   const total = data?.total ?? 0;
@@ -87,7 +88,7 @@ export function ShopTable({ categoryId, window, metric, active = true }: { categ
             {error ? <ShopStateRow error={error}>Unable to load shops.</ShopStateRow> : null}
             {!error && !isLoading && shops.length === 0 ? <ShopStateRow>No shops found for {renderedCategory}.</ShopStateRow> : null}
 
-            {!error && shops.map((shop) => (
+            {!error && visibleShops.map((shop) => (
               <tr key={`${shop.shop_id}:${shop.category_id}`}>
                 <td className="rank" data-label="Rank"><ShopRank shop={shop} /></td>
                 <td data-label="Shop"><ShopIdentity shop={shop} /></td>
