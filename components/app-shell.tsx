@@ -1,6 +1,6 @@
 "use client";
 
-import { Bookmark, Grid2X2, Store, UserPlus, UserRound, Workflow } from "lucide-react";
+import { Bookmark, Grid2X2, Store, UserPlus, UserRound } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -10,7 +10,6 @@ import { CommandSearch } from "./command-search";
 
 const tabs = [
   { href: "/marketplace", label: "Marketplace", icon: Store, className: "marketplaceNavTab" },
-  { href: "/workflows", label: "Workflows", icon: Workflow },
   { label: "BETA", className: "betaNavTab" },
   { href: "/heatmap", label: "Heatmap", icon: Grid2X2 },
   { href: "/watchlist", label: "Watchlist", icon: Bookmark }
@@ -26,7 +25,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <span className="brandMark"><Image src="/logo.png" alt="" width={36} height={36} priority /></span>
           <span>
             <strong>PartnerLinks</strong>
-            <small>By UGC NETWORK</small>
+            <small>BY UGC NETWORK</small>
           </span>
         </Link>
         <CommandSearch />

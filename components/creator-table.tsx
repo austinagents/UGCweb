@@ -4,6 +4,8 @@ import { useEffect, useState, type ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import type { CommerceChildCategory, CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerResponse } from "@/lib/creator-screener";
+import { CommerceWatchlistButton } from "@/components/commerce-watchlist-button";
+import type { CommerceWatchlistItem } from "@/lib/commerce-watchlist";
 
 type CreatorTableResult = {
   category: "All" | CommerceNavigationCategoryName;
@@ -92,7 +94,7 @@ export function CreatorTable({
               <th>Audience</th>
               <th>Units Sold</th>
               <th>Followers</th>
-              <th>Socials</th>
+              <th>Watchlist</th>
             </tr>
           </thead>
           <tbody>
@@ -113,7 +115,7 @@ export function CreatorTable({
                 <td data-label="Audience"><span className="creatorAudience">{formatAudience(creator)}</span></td>
                 <td data-label="Units Sold">{creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatNumber(creator.followers)}</span></td>
-                <td data-label="Socials" />
+                <td data-label="Watchlist"><CommerceWatchlistButton item={creatorWatchlistItem(creator, firstRank + index + 1, heatmapCategory ?? displayCreatorCategory(creator, renderedCategory))} /></td>
               </tr>
             ))}
           </tbody>
@@ -181,6 +183,24 @@ function formatAudience(creator: CreatorListRow) {
 function formatNumber(value: number | null) {
   if (value === null) return "—";
   return new Intl.NumberFormat("en-US", { notation: value >= 10_000 ? "compact" : "standard", maximumFractionDigits: 1 }).format(value);
+}
+
+function creatorWatchlistItem(creator: CreatorListRow, rank: number, category: string): CommerceWatchlistItem {
+  const handle = creator.handle.replace(/^@/, "");
+  return {
+    kind: "creator",
+    id: creator.creator_oecuid,
+    name: creator.nickname || `@${handle}`,
+    imageUrl: creator.avatar,
+    href: `https://www.tiktok.com/@${handle}`,
+    rank: `#${rank}`,
+    category,
+    gmv: formatCreatorGmv(creator),
+    audience: formatAudience(creator),
+    unitsSold: creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold),
+    followers: formatNumber(creator.followers),
+    savedAt: new Date().toISOString(),
+  };
 }
 
 function initials(value: string) {

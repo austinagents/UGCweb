@@ -5,6 +5,8 @@ import type { ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
 import type { CommerceChildCategory } from "@/lib/commerce-categories";
+import { CommerceWatchlistButton } from "@/components/commerce-watchlist-button";
+import type { CommerceWatchlistItem } from "@/lib/commerce-watchlist";
 
 type ShopTableResult = { category: string; data: TikTokShopsResponse };
 
@@ -81,7 +83,7 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
               <th>Audience</th>
               <th>Units Sold</th>
               <th>Followers</th>
-              <th>Socials</th>
+              <th>Watchlist</th>
             </tr>
           </thead>
           <tbody>
@@ -100,7 +102,7 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
                 <td data-label="Units Sold">{formatUnits(shop.shop_sold_count)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatFollowers(shop.followers)}</span></td>
-                <td data-label="Socials"><SocialProfile shop={shop} /></td>
+                <td data-label="Watchlist"><CommerceWatchlistButton item={shopWatchlistItem(shop, heatmapCategory)} /></td>
               </tr>
             ))}
           </tbody>
@@ -196,9 +198,21 @@ function formatCurrencyOrDash(value: number | null) {
   }).format(value);
 }
 
-function SocialProfile({ shop }: { shop: TikTokShop }) {
-  if (!shop.tiktok_profile_url || !shop.tiktok_username) return <span title="TikTok social profile not yet verified">—</span>;
-  return <a className="shopSocialLink" href={shop.tiktok_profile_url} target="_blank" rel="noreferrer" aria-label={`Open @${shop.tiktok_username} on TikTok`} title={`@${shop.tiktok_username}`}><span aria-hidden="true">♪</span></a>;
+function shopWatchlistItem(shop: TikTokShop, heatmapCategory: CommerceChildCategory | null): CommerceWatchlistItem {
+  return {
+    kind: "shop",
+    id: shop.shop_id,
+    name: shop.shop_name ?? "Unknown Shop",
+    imageUrl: shop.shop_thumb_image_url,
+    href: `https://shop.tiktok.com/us/store/partnerlinks/${shop.shop_id}`,
+    rank: shop.rank_display_scope === "ugcweb_estimated" ? `#${shop.display_rank ?? "—"}` : shop.current_rank ? `#${shop.current_rank}` : "—",
+    category: heatmapCategory ?? shop.category_name,
+    gmv: formatCurrencyOrDash(shop.estimated_gmv),
+    audience: formatShopAudience(shop),
+    unitsSold: formatUnits(shop.shop_sold_count),
+    followers: formatFollowers(shop.followers),
+    savedAt: new Date().toISOString(),
+  };
 }
 
 function metricLabel(metric: ShopRankingMetric) {
