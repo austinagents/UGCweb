@@ -76,7 +76,7 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
               <th>Rank</th>
               <th>Shop</th>
               <th>Category</th>
-              <th>Est. 30D GMV</th>
+              <th title="UGCWEB estimate; not official TikTok GMV">Est. {window.toUpperCase()} GMV</th>
               <th>Audience</th>
               <th>Units Sold</th>
               <th>Followers</th>
@@ -95,8 +95,8 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
                 <td data-label="Category">
                   <span className="categoryCell commerceCategoryCell" title={`TikTok L1 category ${shop.category_id}`}><span className="categoryDot" />{shop.category_name}</span>
                 </td>
-                <td data-label="Est. 30D GMV"><strong className="commerceMetric">{formatCurrencyOrDash(shop.estimated_30d_gmv)}</strong></td>
-                <UnavailableCell label="Audience" />
+                <td data-label={`Est. ${window.toUpperCase()} GMV`}><strong className="commerceMetric" title={shop.estimate_is_provisional ? "UGCWEB modeled estimate; not official TikTok GMV" : undefined}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
+                <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
                 <td data-label="Units Sold">{formatUnits(shop.shop_sold_count)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatFollowers(shop.followers)}</span></td>
                 <td data-label="Socials"><SocialProfile shop={shop} /></td>
@@ -107,7 +107,7 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
       </div>
 
       <div className="shopPagination" aria-label="Shop results pagination">
-        <span>{isLoading ? `Updating ${renderedCategory} shops…` : `${total.toLocaleString()} shops · ranked by ${window.toUpperCase()} GMV`}</span>
+        <span>{isLoading ? `Updating ${renderedCategory} shops…` : data?.categoryId === null ? `${total.toLocaleString()} shops · UGCWEB provisional ${window.toUpperCase()} estimate order` : `${total.toLocaleString()} ranking observations · official ${window.toUpperCase()} category ranks`}</span>
         <div>
           <button type="button" disabled={isLoading || renderedPage <= 1} onClick={() => setPage(Math.max(1, renderedPage - 1))}>← Previous</button>
           <strong>Page {renderedPage} of {totalPages}</strong>
@@ -151,15 +151,11 @@ function ShopRank({ shop }: { shop: TikTokShop }) {
   const previous = Number(shop.previous_rank);
   const movement = shop.current_rank && shop.previous_rank && Number.isFinite(current) && Number.isFinite(previous) ? previous - current : 0;
   return (
-    <span title={`${shop.window.toUpperCase()} ${metricLabel(shop.ranking_metric)} rank in ${shop.category_name}`}>
-      {shop.current_rank ? `#${shop.current_rank}` : "—"}
-      {movement !== 0 ? <small className={movement > 0 ? "shopRankUp" : "shopRankDown"}>{movement > 0 ? "↑" : "↓"}{Math.abs(movement)}</small> : null}
+    <span title={shop.rank_display_scope === "ugcweb_estimated" ? `UGCWEB provisional ${shop.window.toUpperCase()} estimated-GMV position; official TikTok category rank ${shop.current_rank ? `#${shop.current_rank}` : "unavailable"} in ${shop.official_category_name}` : `${shop.window.toUpperCase()} ${metricLabel(shop.ranking_metric)} official TikTok rank in ${shop.official_category_name}`}>
+      {shop.rank_display_scope === "ugcweb_estimated" ? `#${shop.display_rank}` : shop.current_rank ? `#${shop.current_rank}` : "—"}
+      {shop.rank_display_scope === "official_category" && movement !== 0 ? <small className={movement > 0 ? "shopRankUp" : "shopRankDown"}>{movement > 0 ? "↑" : "↓"}{Math.abs(movement)}</small> : null}
     </span>
   );
-}
-
-function UnavailableCell({ label }: { label: string }) {
-  return <td data-label={label}><span title={`${label} is not available from the official TikTok ranking source`}>—</span></td>;
 }
 
 function formatUnits(value: number | null) {
@@ -168,6 +164,17 @@ function formatUnits(value: number | null) {
     notation: value >= 10_000 ? "compact" : "standard",
     maximumFractionDigits: value >= 1_000_000 ? 2 : value >= 100_000 ? 0 : value >= 10_000 ? 1 : 2,
   }).format(value);
+}
+
+function formatShopAudience(shop: TikTokShop) {
+  if (!shop.audience_gender) return "—";
+  return `${shop.audience_gender.gender} ${Math.round(shop.audience_gender.percentage)}%`;
+}
+
+function audienceEstimateTitle(shop: TikTokShop) {
+  if (shop.audience_estimate_source === "matched_creator") return "Estimated shop audience based on its matched creator/storefront profile";
+  if (shop.audience_estimate_source === "category_model") return "Estimated shop audience based on category-level creator demographics";
+  return "Shop audience estimate unavailable";
 }
 
 function formatFollowers(value: number | null) {

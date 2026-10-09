@@ -24,7 +24,9 @@ const creatorCategoryIndex = new Map<ScreenerCategory, CreatorListRow[]>();
 const creatorCategoryCounts: Partial<Record<CommerceNavigationCategoryName, number>> = {};
 const shopPageInflight = new Map<string, Promise<TikTokShopsResponse>>();
 
-const allCreatorRows = sourceCreators.map(toCreatorListRow);
+const shopIdentityModel = buildShopIdentityModel();
+const allCreatorRows = sourceCreators.filter((creator) => !shopIdentityModel.shopLikeCreatorIds.has(creator.creator_oecuid)).map(toCreatorListRow);
+const shopAudienceCategoryBaselines = buildShopAudienceCategoryBaselines();
 creatorCategoryIndex.set("All", allCreatorRows);
 for (const category of commerceNavigationCategories) creatorCategoryCounts[category.name] = 0;
 
@@ -39,7 +41,7 @@ for (const creator of allCreatorRows) {
 
 const cachedShopPage = unstable_cache(
   loadShopPage,
-  ["partnerlinks-official-tiktok-shop-rankings-v3"],
+  ["partnerlinks-official-tiktok-shop-rankings-v10"],
   { revalidate: shopCacheSeconds },
 );
 
@@ -100,52 +102,98 @@ export function getCategoryAvailability(mode: "shops" | "creators") {
 }
 
 async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number): Promise<TikTokShopsResponse> {
-  const database = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shops.sqlite"), { readOnly: true });
-  const rankColumn = `rank_${window}_${metric}`;
-  const categoryWhere = categoryIds
-    ? `WHERE ${categoryIds.map(() => "instr('|' || replace(category_ids, ' ', '') || '|', '|' || ? || '|') > 0").join(" OR ")}`
-    : "";
-  const parameters = categoryIds ?? [];
-  const total = Number((database.prepare(`SELECT count(*) AS count FROM shops ${categoryWhere}`).get(...parameters) as { count: number }).count);
+  const rankingDatabase = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shop-ranking-observations.sqlite"), { readOnly: true });
+  const shopDatabase = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shops.sqlite"), { readOnly: true });
+  const estimateDatabase = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shop-gmv-estimates.sqlite"), { readOnly: true });
+  const rankColumn = `${metric}_rank`;
+  const previousRankColumn = `${metric}_previous_rank`;
+  const rankChangeColumn = `${metric}_rank_change`;
+  const estimateColumn = `estimated_${window}_gmv`;
+  const sourceCategoryColumn = `source_${window}_category_id`;
+  const sourceRankColumn = `source_${window}_rank`;
+  const categoryFilter = categoryIds ? `AND category_id IN (${categoryIds.map(() => "?").join(", ")})` : "";
+  const parameters = [window, ...(categoryIds ?? [])];
+  const total = categoryIds
+    ? Number((rankingDatabase.prepare(`SELECT count(*) AS count FROM ranking_observations WHERE window = ? AND ${rankColumn} IS NOT NULL ${categoryFilter}`).get(...parameters) as { count: number }).count)
+    : Number((estimateDatabase.prepare("SELECT count(*) AS count FROM shop_estimates").get() as { count: number }).count);
   const totalPages = Math.max(1, Math.ceil(total / allShopPageSize));
   const safePage = Math.min(page, totalPages);
   const offset = (safePage - 1) * allShopPageSize;
-  const sourceRows = database.prepare(`
-    SELECT
-      shop_id, shop_name, shop_logo_url, storefront_url, category_ids, category_names,
-      shop_sold_count, followers, estimated_30d_gmv,
-      ${rankColumn} AS current_rank
+  const sourceCategoryIds = tiktokShopCategories.map((category) => category.id);
+  const categoryOrder = sourceCategoryIds.map((categoryId, index) => `WHEN '${categoryId}' THEN ${index}`).join(" ");
+  const sourceRows = categoryIds
+    ? rankingDatabase.prepare(`
+        SELECT *, ${rankColumn} AS official_rank, ${previousRankColumn} AS official_previous_rank, ${rankChangeColumn} AS official_rank_change
+        FROM ranking_observations
+        WHERE window = ? AND ${rankColumn} IS NOT NULL ${categoryFilter}
+        ORDER BY CASE category_id ${categoryOrder} ELSE ${sourceCategoryIds.length} END, source_page, source_row_index, shop_id
+        LIMIT ? OFFSET ?
+      `).all(...parameters, allShopPageSize, offset) as Array<Record<string, string | number | null>>
+    : estimateDatabase.prepare(`
+        SELECT shop_id, ${estimateColumn} AS estimated_gmv, ${sourceCategoryColumn} AS category_id, ${sourceRankColumn} AS official_rank
+        FROM shop_estimates
+        ORDER BY estimated_gmv IS NULL, estimated_gmv DESC, shop_id
+        LIMIT ? OFFSET ?
+      `).all(allShopPageSize, offset) as Array<Record<string, string | number | null>>;
+  const shopIds = sourceRows.map((row) => String(row.shop_id));
+  const shopRows = shopIds.length === 0 ? [] : shopDatabase.prepare(`
+    SELECT shop_id, shop_name, shop_logo_url, storefront_url, shop_sold_count, followers, estimated_30d_gmv
     FROM shops
-    ${categoryWhere}
-    ORDER BY current_rank IS NULL, current_rank ASC, shop_name COLLATE NOCASE, shop_id
-    LIMIT ? OFFSET ?
-  `).all(...parameters, allShopPageSize, offset) as Array<Record<string, string | number | null>>;
-  database.close();
+    WHERE shop_id IN (${shopIds.map(() => "?").join(", ")})
+  `).all(...shopIds) as Array<Record<string, string | number | null>>;
+  const shopsById = new Map(shopRows.map((row) => [String(row.shop_id), row]));
+  const rankingDetails = shopIds.length === 0 ? [] : rankingDatabase.prepare(`
+    SELECT * FROM ranking_observations
+    WHERE window = ? AND shop_id IN (${shopIds.map(() => "?").join(", ")})
+  `).all(window, ...shopIds) as Array<Record<string, string | number | null>>;
+  const rankingByKey = new Map(rankingDetails.map((row) => [`${row.shop_id}:${row.category_id}`, row]));
+  const observationEstimates = categoryIds && shopIds.length > 0 ? estimateDatabase.prepare(`
+    SELECT shop_id, category_id, estimated_gmv FROM observation_estimates
+    WHERE window = ? AND shop_id IN (${shopIds.map(() => "?").join(", ")})
+  `).all(window, ...shopIds) as Array<Record<string, string | number | null>> : [];
+  const estimateByKey = new Map(observationEstimates.map((row) => [`${row.shop_id}:${row.category_id}`, row.estimated_gmv]));
+  rankingDatabase.close();
+  shopDatabase.close();
+  estimateDatabase.close();
   const category = categoryIds ? commerceNavigationCategories.find((item) => item.categoryIds.length === categoryIds.length && item.categoryIds.every((id) => categoryIds.includes(id))) : null;
-  const rows: TikTokShop[] = sourceRows.map((row) => {
-    const ids = String(row.category_ids ?? "").split("|").map((value) => value.trim()).filter(Boolean);
-    const selectedIndex = categoryIds ? Math.max(0, ids.findIndex((id) => categoryIds.includes(id))) : 0;
+  const rows: TikTokShop[] = sourceRows.map((row, index) => {
+    const shop = shopsById.get(String(row.shop_id));
+    const officialCategoryId = row.category_id ? String(row.category_id) : "unknown";
+    const detail = rankingByKey.get(`${row.shop_id}:${officialCategoryId}`);
+    const officialCategoryName = detail?.category_name ? String(detail.category_name) : tiktokShopCategories.find((item) => item.id === officialCategoryId)?.name ?? "Unranked";
+    const navigationCategoryName = commerceNavigationCategoryForId(officialCategoryId);
+    const estimatedGmv = categoryIds ? estimateByKey.get(`${row.shop_id}:${officialCategoryId}`) : row.estimated_gmv;
+    const audience = estimateShopAudience(String(row.shop_id), navigationCategoryName);
     return {
       shop_id: String(row.shop_id),
-      shop_name: row.shop_name ? String(row.shop_name) : null,
-      shop_thumb_image_url: row.shop_logo_url ? String(row.shop_logo_url) : null,
+      shop_name: shop?.shop_name ? String(shop.shop_name) : null,
+      shop_thumb_image_url: shop?.shop_logo_url ? String(shop.shop_logo_url) : null,
       shop_status: null,
-      shop_share_link: row.storefront_url ? String(row.storefront_url) : null,
+      shop_share_link: shop?.storefront_url ? String(shop.storefront_url) : null,
       tiktok_username: null,
       tiktok_profile_url: null,
       tiktok_profile_source: null,
       tiktok_profile_verified_at: null,
-      category_id: ids[selectedIndex] ?? "unknown",
-      category_name: commerceNavigationCategoryForId(ids[selectedIndex] ?? ""),
+      category_id: officialCategoryId,
+      category_name: navigationCategoryName,
       window,
       ranking_metric: metric,
-      current_rank: row.current_rank === null ? null : String(row.current_rank),
-      previous_rank: null,
-      rank_change: null,
-      capture_date: "2026-10-07",
-      shop_sold_count: row.shop_sold_count === null ? null : Number(row.shop_sold_count),
-      followers: row.followers === null ? null : Number(row.followers),
-      estimated_30d_gmv: row.estimated_30d_gmv === null ? null : Number(row.estimated_30d_gmv),
+      display_rank: categoryIds ? null : offset + index + 1,
+      rank_display_scope: categoryIds ? "official_category" : "ugcweb_estimated",
+      current_rank: row.official_rank === null ? null : String(row.official_rank),
+      previous_rank: categoryIds ? row.official_previous_rank === null ? null : String(row.official_previous_rank) : detail?.[previousRankColumn] === null || detail?.[previousRankColumn] === undefined ? null : String(detail[previousRankColumn]),
+      rank_change: categoryIds ? row.official_rank_change === null ? null : String(row.official_rank_change) : detail?.[rankChangeColumn] === null || detail?.[rankChangeColumn] === undefined ? null : String(detail[rankChangeColumn]),
+      official_category_id: officialCategoryId,
+      official_category_name: officialCategoryName,
+      capture_date: detail?.capture_date ? String(detail.capture_date) : "",
+      shop_sold_count: shop?.shop_sold_count === null || shop?.shop_sold_count === undefined ? null : Number(shop.shop_sold_count),
+      followers: shop?.followers === null || shop?.followers === undefined ? null : Number(shop.followers),
+      audience_gender: audience.audience,
+      audience_estimate_source: audience.source,
+      estimated_30d_gmv: shop?.estimated_30d_gmv === null || shop?.estimated_30d_gmv === undefined ? null : Number(shop.estimated_30d_gmv),
+      estimated_gmv: estimatedGmv === null || estimatedGmv === undefined ? null : Number(estimatedGmv),
+      estimate_model_version: "provisional-empirical-velocity-v4",
+      estimate_is_provisional: true,
     };
   });
 
@@ -155,7 +203,7 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
     categories: [...tiktokShopCategories],
     window,
     metric,
-    captureDate: "2026-10-07",
+    captureDate: rows[0]?.capture_date ?? null,
     total,
     page: safePage,
     pageSize: allShopPageSize,
@@ -163,6 +211,93 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
     count: rows.length,
     shops: rows,
   };
+}
+
+function buildShopIdentityModel() {
+  const database = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shops.sqlite"), { readOnly: true });
+  const shops = database.prepare("SELECT shop_id, shop_name, followers FROM shops").all() as Array<{ shop_id: string; shop_name: string | null; followers: number | null }>;
+  database.close();
+  const shopsByName = new Map<string, typeof shops>();
+  for (const shop of shops) {
+    const name = normalizeCommerceIdentity(shop.shop_name);
+    if (name.length < 4) continue;
+    const matches = shopsByName.get(name) ?? [];
+    matches.push(shop);
+    shopsByName.set(name, matches);
+  }
+  const shopLikeCreatorIds = new Set<string>();
+  const creatorAudienceByShopId = new Map<string, CreatorScreenerRow["audience_gender"]>();
+  for (const creator of sourceCreators) {
+    const handle = normalizeCommerceIdentity(creator.handle);
+    const nickname = normalizeCommerceIdentity(creator.nickname);
+    const candidates = [...(shopsByName.get(handle) ?? []), ...(shopsByName.get(nickname) ?? [])];
+    const match = candidates
+      .filter((shop) => isHighConfidenceShopCreatorMatch(shop, creator, handle, nickname))
+      .sort((left, right) => followerDistance(left.followers, creator.followers) - followerDistance(right.followers, creator.followers))[0];
+    if (!match) continue;
+    shopLikeCreatorIds.add(creator.creator_oecuid);
+    if (creator.audience_gender) creatorAudienceByShopId.set(String(match.shop_id), creator.audience_gender);
+  }
+  return { shopLikeCreatorIds, creatorAudienceByShopId };
+}
+
+function isHighConfidenceShopCreatorMatch(shop: { shop_name: string | null; followers: number | null }, creator: CreatorScreenerRow, handle: string, nickname: string) {
+  const shopName = normalizeCommerceIdentity(shop.shop_name);
+  const directHandleAndNameMatch = shopName === handle && shopName === nickname;
+  if (directHandleAndNameMatch) return true;
+  const shopFollowers = Number(shop.followers);
+  const creatorFollowers = Number(creator.followers);
+  if (!(shopFollowers > 0 && creatorFollowers > 0)) return false;
+  const ratio = Math.max(shopFollowers, creatorFollowers) / Math.min(shopFollowers, creatorFollowers);
+  if ((shopName === handle || shopName === nickname) && ratio <= 1.5) return true;
+  return shopName.length >= 6 && ratio <= 1.35 && (handle.includes(shopName) || shopName.includes(handle));
+}
+
+function followerDistance(shopFollowers: number | null, creatorFollowers: number | null) {
+  if (!shopFollowers || !creatorFollowers) return Number.POSITIVE_INFINITY;
+  return Math.abs(Math.log(shopFollowers / creatorFollowers));
+}
+
+function normalizeCommerceIdentity(value: string | null | undefined) {
+  return (value ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function buildShopAudienceCategoryBaselines() {
+  const values = new Map<CommerceNavigationCategoryName, number[]>();
+  for (const creator of sourceCreators) {
+    if (!creator.audience_gender) continue;
+    const femaleShare = creator.audience_gender.gender === "Female" ? creator.audience_gender.percentage : 100 - creator.audience_gender.percentage;
+    for (const category of creatorShopCategories(creator.categoryMemberships, creator.sourceQueries)) {
+      const categoryValues = values.get(category) ?? [];
+      categoryValues.push(femaleShare);
+      values.set(category, categoryValues);
+    }
+  }
+  return new Map([...values].map(([category, shares]) => [category, shares.reduce((sum, share) => sum + share, 0) / shares.length]));
+}
+
+function estimateShopAudience(shopId: string, category: CommerceNavigationCategoryName) {
+  const matched = shopIdentityModel.creatorAudienceByShopId.get(shopId);
+  if (matched) return { audience: matched, source: "matched_creator" as const };
+  const baseline = shopAudienceCategoryBaselines.get(category);
+  if (baseline === undefined) return { audience: null, source: null };
+  const variation = ((stableHash(shopId) % 1201) / 100) - 6;
+  const femaleShare = Math.min(88, Math.max(22, baseline + variation));
+  return {
+    audience: femaleShare >= 50
+      ? { gender: "Female" as const, percentage: femaleShare }
+      : { gender: "Male" as const, percentage: 100 - femaleShare },
+    source: "category_model" as const,
+  };
+}
+
+function stableHash(value: string) {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
 }
 
 function toCreatorListRow(creator: CreatorScreenerRow): CreatorListRow {

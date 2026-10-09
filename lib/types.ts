@@ -165,13 +165,25 @@ export type TikTokShop = {
   category_name: string;
   window: ShopRankingWindow;
   ranking_metric: ShopRankingMetric;
+  display_rank: number | null;
+  rank_display_scope: "official_category" | "ugcweb_estimated";
   current_rank: string | null;
   previous_rank: string | null;
   rank_change: string | null;
+  official_category_id: string;
+  official_category_name: string;
   capture_date: string;
   shop_sold_count: number | null;
   followers: number | null;
+  audience_gender: {
+    gender: "Female" | "Male";
+    percentage: number;
+  } | null;
+  audience_estimate_source: "matched_creator" | "category_model" | null;
   estimated_30d_gmv: number | null;
+  estimated_gmv: number | null;
+  estimate_model_version: string | null;
+  estimate_is_provisional: boolean;
 };
 
 export type TikTokShopsResponse = {
