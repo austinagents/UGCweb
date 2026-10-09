@@ -72,7 +72,7 @@ kbd { padding: 2px 6px; border: 1px solid var(--line); color: var(--green); back
 .commandResults span { color: var(--green); text-transform: uppercase; font-size: 10px; }
 .commandResults small { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .navTabs { display: flex; gap: 4px; align-items: center; }
-.navTabs a, .profilePill, .iconTextButton, .toggleRow button, .pickerGrid button, .primaryButton, .adminGrid button {
+.navTabs a, .navTabs .googleSignupNavTab, .profilePill, .iconTextButton, .toggleRow button, .pickerGrid button, .primaryButton, .adminGrid button {
   display: inline-flex;
   gap: 6px;
   align-items: center;
@@ -85,6 +85,15 @@ kbd { padding: 2px 6px; border: 1px solid var(--line); color: var(--green); back
   cursor: pointer;
 }
 .navTabs a:hover, .iconTextButton:hover, .profilePill:hover, .pickerGrid .selected { border-color: var(--green); color: var(--green); }
+
+.navTabs .googleSignupNavTab {
+  cursor: default;
+}
+.googleMark {
+  flex: 0 0 15px;
+  width: 15px;
+  height: 15px;
+}
 
 .navTabs a.marketplaceNavTab {
   gap: 4px;
@@ -2339,6 +2348,7 @@ body {
 .brand small { color: #95a1a5; }
 .searchBox,
 .navTabs a,
+.navTabs .googleSignupNavTab,
 .profilePill,
 .iconTextButton,
 .pickerGrid button,
@@ -3422,6 +3432,7 @@ body {
 }
 
 .topbar .navTabs a,
+.topbar .navTabs .googleSignupNavTab,
 .topbar .navTabs .betaNavTab {
   flex: 0 0 auto;
   white-space: nowrap;
@@ -3461,6 +3472,7 @@ body {
 
 .searchBox,
 .navTabs a,
+.navTabs .googleSignupNavTab,
 .profilePill,
 .iconTextButton,
 .primaryButton,
@@ -3552,12 +3564,14 @@ body {
 
 .railAdSlot span {
   color: var(--rail-ad-brand-color);
-  max-width: 100%;
+  max-width: 220px;
+  overflow: hidden;
   font-size: 20px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: normal;
   text-transform: uppercase;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -4034,6 +4048,31 @@ body {
     radial-gradient(circle at 80% 8%, rgba(120, 159, 153, 0.12), transparent 34%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
     rgba(14, 20, 26, 0.92);
+}
+
+.boostPanelComingSoon {
+  position: relative;
+}
+
+.boostComingSoon {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  border-radius: inherit;
+  background: rgba(6, 8, 11, 0.22);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 780;
+  letter-spacing: 0.12em;
+  opacity: 0;
+  pointer-events: auto;
+  transition: opacity 160ms var(--ease-out);
+}
+
+.boostPanelComingSoon:hover .boostComingSoon {
+  opacity: 1;
 }
 
 .boostZone {
@@ -5738,6 +5777,7 @@ a:hover .toolLogo {
   }
 
   .navTabs a,
+  .navTabs .googleSignupNavTab,
   .profilePill {
     min-height: 36px;
     white-space: nowrap;
@@ -6783,6 +6823,7 @@ body {
 .brandMark,
 .searchBox,
 .navTabs a,
+.navTabs .googleSignupNavTab,
 .profilePill,
 .iconTextButton,
 .primaryButton,

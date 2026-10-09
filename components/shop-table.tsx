@@ -100,7 +100,7 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
                 </td>
                 <td data-label={`Est. ${window.toUpperCase()} GMV`}><strong className="commerceMetric" title={shop.estimate_is_provisional ? "UGCWEB modeled estimate; not official TikTok GMV" : undefined}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
-                <td data-label="Units Sold">{formatUnits(shop.shop_sold_count)}</td>
+                <td data-label="Units Sold" title={unitsSoldEstimateTitle(shop)}>{formatUnits(shop.estimated_units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatFollowers(shop.followers)}</span></td>
                 <td data-label="Watchlist"><CommerceWatchlistButton item={shopWatchlistItem(shop, heatmapCategory)} /></td>
               </tr>
@@ -181,6 +181,13 @@ function audienceEstimateTitle(shop: TikTokShop) {
   return "Shop audience estimate unavailable";
 }
 
+function unitsSoldEstimateTitle(shop: TikTokShop) {
+  if (shop.units_sold_estimate_source === "weighted_median_product_price") {
+    return `UGCWEB modeled ${shop.window.toUpperCase()} units based on estimated GMV and observed weighted-median product price`;
+  }
+  return `${shop.window.toUpperCase()} units estimate unavailable`;
+}
+
 function formatFollowers(value: number | null) {
   if (value === null) return "—";
   return new Intl.NumberFormat("en-US", {
@@ -209,7 +216,7 @@ function shopWatchlistItem(shop: TikTokShop, heatmapCategory: CommerceChildCateg
     category: heatmapCategory ?? shop.category_name,
     gmv: formatCurrencyOrDash(shop.estimated_gmv),
     audience: formatShopAudience(shop),
-    unitsSold: formatUnits(shop.shop_sold_count),
+    unitsSold: formatUnits(shop.estimated_units_sold),
     followers: formatFollowers(shop.followers),
     savedAt: new Date().toISOString(),
   };

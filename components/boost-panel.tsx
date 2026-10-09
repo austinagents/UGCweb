@@ -54,7 +54,8 @@ export function BoostPanel({ tiers }: { tiers: BoostTier[] }) {
   }, [boostModalOpen]);
 
   return (
-    <section className="previewPanel boostPanel">
+    <section className="previewPanel boostPanel boostPanelComingSoon" aria-disabled="true">
+      <span className="boostComingSoon" aria-hidden="true">COMING SOON!</span>
       <div className="boostZone boostAdsZone">
         <span className="boostKicker"><Megaphone size={14} /> Ads</span>
         <div className="boostZoneHeader">
@@ -66,6 +67,7 @@ export function BoostPanel({ tiers }: { tiers: BoostTier[] }) {
               aria-expanded={adPackageOpen}
               aria-haspopup="listbox"
               className="adPackageTrigger"
+              disabled
               type="button"
               onClick={() => setAdPackageOpen((isOpen) => !isOpen)}
             >
@@ -102,7 +104,7 @@ export function BoostPanel({ tiers }: { tiers: BoostTier[] }) {
           <h2>Boost Visibility</h2>
         </div>
         <div className="boostCollapsedAction">
-          <button type="button" onClick={() => setBoostModalOpen(true)}>🔋 Boost</button>
+          <button type="button" disabled onClick={() => setBoostModalOpen(true)}>🔋 Boost</button>
         </div>
       </div>
 
@@ -151,7 +153,7 @@ export function BoostPanel({ tiers }: { tiers: BoostTier[] }) {
             <li>Offer free samples</li>
             <li>Grow affiliate sales</li>
           </ul>
-          <button type="button" onClick={() => router.push("/onboarding/product")}>List your product</button>
+          <button type="button" disabled onClick={() => router.push("/onboarding/product")}>List your product</button>
         </div>
         <div className="boostMarketplaceCard">
           <span className="boostKicker"><Users size={14} /> Creators</span>
@@ -162,7 +164,7 @@ export function BoostPanel({ tiers }: { tiers: BoostTier[] }) {
             <li>Earn commissions</li>
             <li>Grow your GMV</li>
           </ul>
-          <button type="button" onClick={() => router.push("/onboarding/creator")}>Match with brands</button>
+          <button type="button" disabled onClick={() => router.push("/onboarding/creator")}>Match with brands</button>
         </div>
       </div>
     </section>

@@ -174,6 +174,8 @@ export type TikTokShop = {
   official_category_name: string;
   capture_date: string;
   shop_sold_count: number | null;
+  estimated_units_sold: number | null;
+  units_sold_estimate_source: "weighted_median_product_price" | null;
   followers: number | null;
   audience_gender: {
     gender: "Female" | "Male";

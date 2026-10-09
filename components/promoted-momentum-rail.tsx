@@ -1,40 +1,16 @@
 "use client";
 
-import { useEffect, useState, type CSSProperties } from "react";
-import { tools } from "@/lib/data";
+import { useEffect, useState } from "react";
 import { loadCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import type { CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import type { CreatorTrendingResponse, CreatorTrendingRow } from "@/lib/creator-screener";
-import { defaultTikTokShopCategoryId } from "@/lib/commerce-categories";
 import type { TikTokShop } from "@/lib/types";
 
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
-const safeSponsoredTextColor = "#789F99";
-const temporaryDiscoverySlotSlug = "clocsy";
 type TrendingShopsResponse = { shops: TikTokShop[] };
-
-export const INDUSTRY_LEADER_EXCLUSIONS = [
-  "chatgpt", "claude", "perplexity", "cursor", "windsurf", "lovable", "replit", "runway", "kling", "pika",
-  "elevenlabs", "midjourney", "ideogram", "heygen", "synthesia", "notion-ai", "zapier", "gamma", "v0", "bolt",
-  "linear", "capcut", "descript", "suno", "notebooklm", "grok", "clay", "jasper", "glean", "make", "framer-ai",
-  "vercel", "n8n", "apollo", "framer", "slack", "hubspot", "linkedin", "google-maps", "manus", "udio", "granola",
-  "lindy", "tome", "typefully", "instantly", "taplio"
-] as const;
-
-const industryLeaderExclusions = new Set<string>(INDUSTRY_LEADER_EXCLUSIONS);
-const sponsoredBrandColors: Record<string, string> = { "biela-dev": "#4ADE80", clocsy: "#16F1FD" };
-const discoveryCandidateTools = tools.filter((tool) => tool.name && tool.slug && !industryLeaderExclusions.has(tool.slug));
 
 function utcDayIndex(date = new Date()) {
   return Math.floor(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()) / millisecondsPerDay);
-}
-
-function discoveryCandidateForDay(dayIndex = utcDayIndex()) {
-  return discoveryCandidateTools[dayIndex % discoveryCandidateTools.length];
-}
-
-function sponsoredBrandColorFor(slug: string) {
-  return sponsoredBrandColors[slug] ?? safeSponsoredTextColor;
 }
 
 function DiscoverySlotName({ name }: { name: string }) {
@@ -44,16 +20,12 @@ function DiscoverySlotName({ name }: { name: string }) {
 export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mode?: "shops" | "creators"; category?: "All" | CommerceNavigationCategoryName }) {
   const [shops, setShops] = useState<TikTokShop[]>([]);
   const [creators, setCreators] = useState<CreatorTrendingRow[]>([]);
-  const discoveryCandidate = tools.find((tool) => tool.slug === temporaryDiscoverySlotSlug) ?? discoveryCandidateForDay();
-  const discoveryHref = discoveryCandidate?.websiteUrl || `/tools/${discoveryCandidate?.slug}`;
-  const discoveryIsExternal = Boolean(discoveryCandidate?.websiteUrl);
-  const discoveryLinkProps = discoveryIsExternal ? { target: "_blank", rel: "noopener noreferrer" } : {};
+  const discoveryCandidate = discoveryShopForDay(shops);
 
   useEffect(() => {
-    if (mode !== "shops") return;
     let cancelled = false;
-    const key = "shops:trending";
-    const url = `/api/shops?view=trending&category_id=${defaultTikTokShopCategoryId}&window=7d&metric=total_gmv`;
+    const key = "shops:trending:all:30d";
+    const url = "/api/shops?view=trending&category_id=all&window=30d&metric=total_gmv";
     const cached = readCommerceQuery<TrendingShopsResponse>(key);
     if (cached) setShops(cached.data.shops);
     loadCommerceQuery<TrendingShopsResponse>(key, url, cached?.stale ?? false)
@@ -88,12 +60,13 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
       {discoveryCandidate ? (
         <a
           className="railLabel railAdSlot"
-          aria-label={`Discovery candidate: ${discoveryCandidate.name}`}
-          href={discoveryHref}
-          style={{ "--rail-ad-brand-color": sponsoredBrandColorFor(discoveryCandidate.slug) } as CSSProperties}
-          {...discoveryLinkProps}
+          aria-label={`Featured shop: ${discoveryCandidate.shop_name}`}
+          href={discoveryCandidate.shop_share_link!}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={discoveryCandidate.shop_name ?? undefined}
         >
-          <DiscoverySlotName name={discoveryCandidate.name} />
+          <DiscoverySlotName name={discoveryCandidate.shop_name!} />
         </a>
       ) : null}
       <div className="railViewport">
@@ -145,6 +118,11 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
       </div>
     </section>
   );
+}
+
+function discoveryShopForDay(shops: TikTokShop[], dayIndex = utcDayIndex()) {
+  const eligibleShops = shops.filter((shop) => shop.shop_name && shop.shop_share_link);
+  return eligibleShops.length > 0 ? eligibleShops[dayIndex % eligibleShops.length] : null;
 }
 
 function CreatorRailAvatar({ creator }: { creator: CreatorTrendingRow }) {

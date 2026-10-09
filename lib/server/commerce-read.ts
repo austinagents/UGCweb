@@ -18,7 +18,8 @@ import { followerDistance, isHighConfidenceShopCreatorMatch, normalizeCommerceId
 type ScreenerCategory = "All" | CommerceNavigationCategoryName;
 const shopCacheSeconds = 60;
 const allShopPageSize = 100;
-const visibleRailSlots = 8;
+const visibleShopRailSlots = 10;
+const visibleCreatorRailSlots = 8;
 
 const sourceCreators = creatorData.creators as CreatorScreenerRow[];
 const creatorCategoryIndex = new Map<ScreenerCategory, CreatorListRow[]>();
@@ -42,7 +43,7 @@ for (const creator of allCreatorRows) {
 
 const cachedShopPage = unstable_cache(
   loadShopPage,
-  ["partnerlinks-official-tiktok-shop-rankings-v10"],
+  ["partnerlinks-official-tiktok-shop-rankings-v11"],
   { revalidate: shopCacheSeconds },
 );
 
@@ -61,7 +62,7 @@ export async function getShopPage(categoryIds: string[] | null, window: ShopRank
 
 export async function getTrendingShops(categoryIds: string[] | null, window: ShopRankingWindow, metric: ShopRankingMetric) {
   const page = await getShopPage(categoryIds, window, metric, 1);
-  return { shops: page.shops.slice(0, visibleRailSlots) };
+  return { shops: page.shops.slice(0, visibleShopRailSlots) };
 }
 
 export function getCreatorPage(category: ScreenerCategory, page: number, pageSize: number, creatorIds: Set<string> | null = null) {
@@ -84,7 +85,7 @@ export function getCreatorPage(category: ScreenerCategory, page: number, pageSiz
 }
 
 export function getTrendingCreators(category: ScreenerCategory) {
-  const page = getCreatorPage(category, 1, visibleRailSlots);
+  const page = getCreatorPage(category, 1, visibleCreatorRailSlots);
   return {
     creators: page.creators.map(toCreatorTrendingRow),
     snapshotTimestamp: page.snapshotTimestamp,
@@ -143,7 +144,7 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
       `).all(...(selectedShopIds ?? []), allShopPageSize, offset) as Array<Record<string, string | number | null>>;
   const shopIds = sourceRows.map((row) => String(row.shop_id));
   const shopRows = shopIds.length === 0 ? [] : shopDatabase.prepare(`
-    SELECT shop_id, shop_name, shop_logo_url, storefront_url, shop_sold_count, followers, estimated_30d_gmv
+    SELECT shop_id, shop_name, shop_logo_url, storefront_url, shop_sold_count, weighted_median_price, followers, estimated_30d_gmv
     FROM shops
     WHERE shop_id IN (${shopIds.map(() => "?").join(", ")})
   `).all(...shopIds) as Array<Record<string, string | number | null>>;
@@ -169,6 +170,11 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
     const officialCategoryName = detail?.category_name ? String(detail.category_name) : tiktokShopCategories.find((item) => item.id === officialCategoryId)?.name ?? "Unranked";
     const navigationCategoryName = commerceNavigationCategoryForId(officialCategoryId);
     const estimatedGmv = categoryIds ? estimateByKey.get(`${row.shop_id}:${officialCategoryId}`) : row.estimated_gmv;
+    const numericEstimatedGmv = estimatedGmv === null || estimatedGmv === undefined ? null : Number(estimatedGmv);
+    const weightedMedianPrice = shop?.weighted_median_price === null || shop?.weighted_median_price === undefined ? null : Number(shop.weighted_median_price);
+    const estimatedUnitsSold = numericEstimatedGmv !== null && numericEstimatedGmv > 0 && weightedMedianPrice !== null && weightedMedianPrice > 0
+      ? Math.max(1, Math.round(numericEstimatedGmv / weightedMedianPrice))
+      : null;
     const audience = estimateShopAudience(String(row.shop_id), navigationCategoryName);
     return {
       shop_id: String(row.shop_id),
@@ -193,11 +199,13 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
       official_category_name: officialCategoryName,
       capture_date: detail?.capture_date ? String(detail.capture_date) : "",
       shop_sold_count: shop?.shop_sold_count === null || shop?.shop_sold_count === undefined ? null : Number(shop.shop_sold_count),
+      estimated_units_sold: estimatedUnitsSold,
+      units_sold_estimate_source: estimatedUnitsSold === null ? null : "weighted_median_product_price",
       followers: shop?.followers === null || shop?.followers === undefined ? null : Number(shop.followers),
       audience_gender: audience.audience,
       audience_estimate_source: audience.source,
       estimated_30d_gmv: shop?.estimated_30d_gmv === null || shop?.estimated_30d_gmv === undefined ? null : Number(shop.estimated_30d_gmv),
-      estimated_gmv: estimatedGmv === null || estimatedGmv === undefined ? null : Number(estimatedGmv),
+      estimated_gmv: numericEstimatedGmv,
       estimate_model_version: "provisional-empirical-velocity-v4",
       estimate_is_provisional: true,
     };
