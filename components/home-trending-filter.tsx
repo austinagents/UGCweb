@@ -6,17 +6,19 @@ import { CommerceCategoryMap } from "@/components/heatmap";
 import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ShopTable } from "@/components/shop-table";
 import { commerceNavigationCategories, type CommerceChildCategory, type CommerceNavigationCategoryName } from "@/lib/commerce-categories";
+import { isCommerceHeatmapCategory } from "@/lib/commerce-heatmap-categories";
 import type { ShopRankingWindow } from "@/lib/types";
 
 type ScreenerCategory = "All" | CommerceNavigationCategoryName;
 type ScreenerMode = "shops" | "creators";
 
-export function HomeTrendingFilter() {
-  const [mode, setMode] = useState<ScreenerMode>("shops");
-  const [shopCategoryKey, setShopCategoryKey] = useState<string>("all");
-  const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>("All");
+export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatmapCategory }: { initialMode?: string; initialCategory?: string; initialHeatmapCategory?: string }) {
+  const initialNavigationCategory = commerceNavigationCategories.find((category) => category.key === initialCategory);
+  const [mode, setMode] = useState<ScreenerMode>(initialMode === "creators" ? "creators" : "shops");
+  const [shopCategoryKey, setShopCategoryKey] = useState<string>(initialNavigationCategory?.key ?? "all");
+  const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>(initialNavigationCategory?.name ?? "All");
   const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("7d");
-  const [heatmapCategory, setHeatmapCategory] = useState<CommerceChildCategory | null>(null);
+  const [heatmapCategory, setHeatmapCategory] = useState<CommerceChildCategory | null>(isCommerceHeatmapCategory(initialHeatmapCategory ?? null) ? initialHeatmapCategory as CommerceChildCategory : null);
   return (
     <>
       <PromotedMomentumRail mode={mode} category={creatorCategory} />

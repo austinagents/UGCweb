@@ -13,6 +13,7 @@ import {
 } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerRow, CreatorTrendingRow } from "@/lib/creator-screener";
 import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
+import { followerDistance, isHighConfidenceShopCreatorMatch, normalizeCommerceIdentity } from "@/lib/commerce-identity";
 
 type ScreenerCategory = "All" | CommerceNavigationCategoryName;
 const shopCacheSeconds = 60;
@@ -244,27 +245,6 @@ function buildShopIdentityModel() {
     if (creator.audience_gender) creatorAudienceByShopId.set(String(match.shop_id), creator.audience_gender);
   }
   return { shopLikeCreatorIds, creatorAudienceByShopId };
-}
-
-function isHighConfidenceShopCreatorMatch(shop: { shop_name: string | null; followers: number | null }, creator: CreatorScreenerRow, handle: string, nickname: string) {
-  const shopName = normalizeCommerceIdentity(shop.shop_name);
-  const directHandleAndNameMatch = shopName === handle && shopName === nickname;
-  if (directHandleAndNameMatch) return true;
-  const shopFollowers = Number(shop.followers);
-  const creatorFollowers = Number(creator.followers);
-  if (!(shopFollowers > 0 && creatorFollowers > 0)) return false;
-  const ratio = Math.max(shopFollowers, creatorFollowers) / Math.min(shopFollowers, creatorFollowers);
-  if ((shopName === handle || shopName === nickname) && ratio <= 1.5) return true;
-  return shopName.length >= 6 && ratio <= 1.35 && (handle.includes(shopName) || shopName.includes(handle));
-}
-
-function followerDistance(shopFollowers: number | null, creatorFollowers: number | null) {
-  if (!shopFollowers || !creatorFollowers) return Number.POSITIVE_INFINITY;
-  return Math.abs(Math.log(shopFollowers / creatorFollowers));
-}
-
-function normalizeCommerceIdentity(value: string | null | undefined) {
-  return (value ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
 function buildShopAudienceCategoryBaselines() {

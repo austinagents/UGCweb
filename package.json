@@ -14,6 +14,7 @@
     "import:tiktok-shop-rankings": "node scripts/import-tiktok-shop-rankings.mjs",
     "build:tiktok-shop-ranking-read-model": "node scripts/build-tiktok-shop-ranking-read-model.mjs",
     "build:tiktok-shop-gmv-read-model": "node scripts/build-tiktok-shop-gmv-read-model.mjs",
+    "build:commerce-search": "node scripts/build-commerce-search-index.mjs",
     "graph:audit": "node scripts/graph-audit.mjs",
     "ingest:evidence": "node scripts/ingest-evidence.mjs",
     "ingest:sources:v1": "node scripts/ingest-source-v1.mjs",

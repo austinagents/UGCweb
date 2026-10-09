@@ -1,6 +1,6 @@
 "use client";
 
-import { Bookmark, Grid2X2, Palette, Store, UserPlus, UserRound, Workflow } from "lucide-react";
+import { Bookmark, Grid2X2, Store, UserPlus, UserRound, Workflow } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -11,7 +11,7 @@ import { CommandSearch } from "./command-search";
 const tabs = [
   { href: "/marketplace", label: "Marketplace", icon: Store, className: "marketplaceNavTab" },
   { href: "/workflows", label: "Workflows", icon: Workflow },
-  { href: "/creators", label: "Creators", icon: Palette },
+  { label: "BETA", className: "betaNavTab" },
   { href: "/heatmap", label: "Heatmap", icon: Grid2X2 },
   { href: "/watchlist", label: "Watchlist", icon: Bookmark }
 ];
@@ -31,12 +31,12 @@ export function AppShell({ children }: { children: ReactNode }) {
         </Link>
         <CommandSearch />
         <nav className="navTabs">
-          {tabs.map((tab) => (
+          {tabs.map((tab) => tab.href && tab.icon ? (
             <Link className={tab.className} href={tab.href} key={tab.href}>
               <tab.icon size={15} />
               {tab.label}
             </Link>
-          ))}
+          ) : <span className={tab.className} aria-disabled="true" key={tab.label}>{tab.label}</span>)}
           <Link href="/dashboard">
             {hasProfile ? <UserRound size={15} /> : <UserPlus size={15} />}
             {hasProfile ? "Profile" : "Sign Up"}

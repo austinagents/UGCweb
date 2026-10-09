@@ -9,12 +9,12 @@ import { boostTiers, creatorIntelligenceStatus, creators, movementEvents, tools,
 import { creatorTagDisplayLabel } from "@/lib/creator-tags";
 import { displayCategory } from "@/lib/format";
 
-export default function DiscoverPage() {
+export default function DiscoverPage({ searchParams }: { searchParams: { mode?: string; category?: string; heatmap_category?: string } }) {
   const newlyListedSlugs = ["wingbits-ai", "integuru", "branda", "crewai", "voxdeck"];
   const newLaunches = newlyListedSlugs.flatMap((slug) => tools.find((tool) => tool.slug === slug) ?? []);
   return (
     <div className="homeStack">
-      <HomeTrendingFilter />
+      <HomeTrendingFilter initialMode={searchParams.mode} initialCategory={searchParams.category} initialHeatmapCategory={searchParams.heatmap_category} />
       <section className="homeSecondary">
         <BoostPanel tiers={boostTiers} />
       </section>

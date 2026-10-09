@@ -2,39 +2,64 @@
 
 import { Search, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ToolLogo } from "@/components/tool-logo";
-import { WorkflowStack } from "@/components/workflow-stack";
-import { getTool } from "@/lib/data";
-import { trackBetaEvent } from "@/lib/events";
-import { type PublicSearchResultType, type SearchResult, searchEcosystem } from "@/lib/search";
+import type { CommerceSearchResponse, CommerceSearchResult, CommerceSearchResultType } from "@/lib/commerce-search";
 
-type CommandSearchResult = SearchResult & { score?: number };
+const groupOrder: CommerceSearchResultType[] = ["shop", "creator", "category"];
 
 export function CommandSearch() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [results, setResults] = useState<CommerceSearchResult[]>([]);
+  const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [active, setActive] = useState(0);
+  const rootRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const searchState = useMemo(() => searchEcosystem(query), [query]);
-  const results = useMemo(() => {
-    return searchState.results.slice(0, query.trim() ? 10 : 8);
-  }, [query, searchState.results]);
-  const grouped = useMemo(() => {
-    const groups = results.reduce<Record<PublicSearchResultType, typeof results>>((groups, item) => {
-      const type = item.type as PublicSearchResultType;
-      groups[type] = [...(groups[type] ?? []), item];
-      return groups;
-    }, {
-      product: [],
-      creator: [],
-      workflow: [],
-      micro_workflow: []
-    });
+  const grouped = useMemo(() => groupOrder.map((type) => [type, results.filter((item) => item.type === type)] as const).filter(([, items]) => items.length), [results]);
 
-    return searchState.groupOrder
-      .map((type) => [type, groups[type]] as const)
-      .filter(([, items]) => items.length > 0);
-  }, [results, searchState.groupOrder]);
+  useEffect(() => {
+    const normalized = query.trim();
+    if (normalized.length < 2) {
+      if (!open) return;
+      const controller = new AbortController();
+      setStatus("loading");
+      fetch("/api/search?preview=true", { signal: controller.signal })
+        .then(async (response) => {
+          const data = await response.json() as CommerceSearchResponse & { error?: string };
+          if (!response.ok) throw new Error(data.error ?? "Search failed");
+          setResults(data.results);
+          setActive(0);
+          setStatus("ready");
+        })
+        .catch((error) => {
+          if ((error as Error).name !== "AbortError") {
+            setResults([]);
+            setStatus("error");
+          }
+        });
+      return () => controller.abort();
+    }
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      setStatus("loading");
+      try {
+        const response = await fetch(`/api/search?${new URLSearchParams({ q: normalized, mode: "command", pageSize: "10" })}`, { signal: controller.signal });
+        const data = await response.json() as CommerceSearchResponse & { error?: string };
+        if (!response.ok) throw new Error(data.error ?? "Search failed");
+        setResults(data.results);
+        setActive(0);
+        setStatus("ready");
+      } catch (error) {
+        if ((error as Error).name !== "AbortError") {
+          setResults([]);
+          setStatus("error");
+        }
+      }
+    }, 175);
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [open, query]);
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -54,109 +79,89 @@ export function CommandSearch() {
         event.preventDefault();
         setActive((current) => Math.max(current - 1, 0));
       }
-      if (event.key === "Enter" && results[active]) {
-        trackBetaEvent("search_performed", { query });
-        trackBetaEvent("search_result_clicked", {
-          query,
-          resultType: results[active].type,
-          resultId: results[active].id,
-          resultHref: results[active].href,
-          resultRank: active + 1
-        });
-        window.location.href = results[active].href;
-      }
+      if (event.key === "Enter" && results[active]) window.location.href = results[active].href;
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [active, open, query, results]);
+  }, [active, open, results]);
 
   useEffect(() => {
     if (open) inputRef.current?.focus();
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    function onPointerDown(event: PointerEvent) {
+      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+    }
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [open]);
+
   return (
-    <>
-      {open && <button className="commandOverlay" onClick={() => setOpen(false)} type="button" aria-label="Close command search" />}
-      <div className={`commandSearchRoot${open ? " open" : ""}`} role={open ? "dialog" : undefined} aria-label={open ? "Command search" : undefined}>
+      <div ref={rootRef} className={`commandSearchRoot${open ? " open" : ""}`} role={open ? "dialog" : undefined} aria-label={open ? "Commerce search" : undefined}>
         {open ? (
           <div className="searchBox commandInput">
             <Search size={16} />
-            <input ref={inputRef} value={query} onChange={(event) => { setQuery(event.target.value); setActive(0); }} placeholder="Search products, creators, workflows..." />
+            <input ref={inputRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search shops, creators, categories..." aria-label="Search shops, creators, categories" />
             <button onClick={() => setOpen(false)} type="button"><X size={16} /></button>
           </div>
         ) : (
           <button className="searchBox commandTrigger" onClick={() => setOpen(true)} type="button">
             <Search size={16} />
-            <span>Search products, creators, workflows...</span>
+            <span>Search shops, creators, categories...</span>
             <kbd>/</kbd>
           </button>
         )}
         {open && (
           <div className="commandPanel">
-            <div className="commandResults">
-              {results.length ? grouped.map(([type, items]) => (
+            <div className="commandResults" aria-live="polite">
+              {status === "loading" ? <p className="emptyState">Searching commerce data…</p> : null}
+              {status === "error" ? <p className="emptyState">Search is temporarily unavailable.</p> : null}
+              {status === "ready" && !results.length ? <p className="emptyState">No matching shops, creators, or categories.</p> : null}
+              {status === "ready" ? grouped.map(([type, items]) => (
                 <div className="commandGroup" key={type}>
-                  <span>{typeLabel(type)}</span>
+                  <span>{groupLabel(type)}</span>
                   {items.map((item) => {
-                    const index = results.findIndex((result) => result.href === item.href && result.type === item.type);
-                    return (
-                      <a className={index === active ? "active" : ""} href={item.href} key={`${item.type}-${item.href}`} onClick={() => {
-                        trackBetaEvent("search_result_clicked", {
-                          query,
-                          resultType: item.type,
-                          resultId: item.id,
-                          resultHref: item.href,
-                          resultRank: index + 1
-                        });
-                      }}>
-                        <CommandResultTitle item={item} />
-                        <CommandResultContext item={item} />
-                      </a>
-                    );
+                    const index = results.findIndex((result) => result.type === item.type && result.id === item.id);
+                    return <CommerceSearchLink active={index === active} item={item} key={`${item.type}:${item.id}`} />;
                   })}
                 </div>
-              )) : <p className="emptyState">No matching ecosystem nodes found.</p>}
+              )) : null}
             </div>
           </div>
         )}
       </div>
-    </>
   );
 }
 
-function CommandResultTitle({ item }: { item: CommandSearchResult }) {
-  if (item.type === "product") {
-    const tool = getTool(item.slug);
-
-    if (tool) {
-      return (
-        <strong className="commandResultTitle">
-          <ToolLogo officialSrc={tool.officialLogoUrl} src={tool.logoUrl} faviconSrc={tool.faviconUrl} fallback={tool.iconUrl} alt={tool.name} size={22} />
-          {item.name}
-        </strong>
-      );
-    }
-  }
-
-  return <strong>{item.name}</strong>;
+function CommerceSearchLink({ item, active }: { item: CommerceSearchResult; active: boolean }) {
+  const external = item.type !== "category";
+  return (
+    <a className={active ? "active" : ""} href={item.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>
+      <strong className="commandResultTitle"><SearchAvatar item={item} />{item.name}</strong>
+      <small>{resultContext(item)}</small>
+    </a>
+  );
 }
 
-function CommandResultContext({ item }: { item: CommandSearchResult }) {
-  if ((item.type === "workflow" || item.type === "micro_workflow") && item.toolSlugs.length) {
-    return <WorkflowStack toolSlugs={item.toolSlugs} limit={5} />;
-  }
-
-  if (item.type === "product") {
-    return <small>{item.description}</small>;
-  }
-
-  return <small>{item.graphContext}</small>;
+export function SearchAvatar({ item, size = 22 }: { item: CommerceSearchResult; size?: number }) {
+  if (item.imageUrl) return <img className="commerceSearchAvatar" src={item.imageUrl} alt="" width={size} height={size} />;
+  return <span className={`commerceSearchAvatar commerceSearchAvatarFallback ${item.type}`} style={{ width: size, height: size }}>{item.name.slice(0, 1).toUpperCase()}</span>;
 }
 
-function typeLabel(type: PublicSearchResultType) {
-  if (type === "product") return "Products";
+export function resultContext(item: CommerceSearchResult) {
+  if (item.type === "category") return `${item.categoryKind === "heatmap" ? "Category Map" : "Navigation"} · ${item.category ?? "Commerce"}`;
+  const identity = item.type === "creator" && item.secondary ? item.secondary : item.type === "shop" ? "Shop" : "Creator";
+  return [identity, item.category, item.followers === null ? null : `${formatCompactNumber(item.followers)} followers`].filter(Boolean).join(" · ");
+}
+
+export function groupLabel(type: CommerceSearchResultType) {
+  if (type === "shop") return "Shops";
   if (type === "creator") return "Creators";
-  if (type === "workflow") return "Workflows";
-  if (type === "micro_workflow") return "Micro Workflows";
-  return "Results";
+  return "Categories";
+}
+
+function formatCompactNumber(value: number) {
+  return new Intl.NumberFormat("en-US", { notation: value >= 10_000 ? "compact" : "standard", maximumFractionDigits: 1 }).format(value);
 }

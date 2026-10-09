@@ -21,6 +21,7 @@ data/tiktok-shop-ranking-observations.sqlite
 data/tiktok-shop-gmv-estimates.sqlite
 data/tiktok-shop-gmv-estimates-v2-backup.sqlite
 data/tiktok-shop-gmv-estimates-v3-backup.sqlite
+data/commerce-search.sqlite*
 node_modules/
 .next/
 .env*
