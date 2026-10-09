@@ -3471,7 +3471,7 @@ body {
 
 .pageShell {
   width: min(1720px, 100%);
-  padding: var(--space-4) var(--space-5) var(--space-6);
+  padding: var(--space-4) var(--space-5) calc(var(--space-6) - 1px);
 }
 
 .homeStack {
@@ -6291,14 +6291,17 @@ a:hover .toolLogo {
   text-transform: uppercase;
 }
 
+.commerceCategoryLabelStatic {
+  cursor: default;
+}
+
 .commerceCategoryLabel svg {
   flex: 0 0 auto;
   color: #5c8583;
 }
 
 
-.commerceCategoryCluster.active .commerceCategoryLabel,
-.commerceCategoryLabel:hover {
+.commerceCategoryCluster.active .commerceCategoryLabel {
   color: var(--accent-primary);
 }
 
@@ -7532,3 +7535,11 @@ body {
     height: auto;
   }
 }
+
+
+
+
+
+/* PartnerLinks unified page gutters */
+.topbar { padding-left: 29px; padding-right: 29px; }
+.pageShell { padding-left: 29px; padding-right: 29px; }

@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
+import type { CommerceChildCategory } from "@/lib/commerce-categories";
 
 type ShopTableResult = { category: string; data: TikTokShopsResponse };
 
-export function ShopTable({ categoryId, window, metric, active = true, rowLimit }: { categoryId: string | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
-  const scope = `${categoryId ?? "all"}:${window}:${metric}`;
+export function ShopTable({ categoryId, heatmapCategory = null, window, metric, active = true, rowLimit }: { categoryId: string | null; heatmapCategory?: CommerceChildCategory | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
+  const scope = `${categoryId ?? "all"}:${heatmapCategory ?? "none"}:${window}:${metric}`;
   const [pagination, setPagination] = useState({ scope, page: 1 });
   const [result, setResult] = useState<ShopTableResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,8 +18,8 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
 
   useEffect(() => {
     let cancelled = false;
-    const key = shopQueryKey(categoryId, window, metric, page);
-    const url = shopQueryUrl(categoryId, window, metric, page);
+    const key = shopQueryKey(categoryId, heatmapCategory, window, metric, page);
+    const url = shopQueryUrl(categoryId, heatmapCategory, window, metric, page);
     const cached = readCommerceQuery<TikTokShopsResponse>(key);
     if (cached) {
       setResult({ category: categoryId ?? "All", data: cached.data });
@@ -34,7 +35,7 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
         setResult({ category: categoryId ?? "All", data });
         if (active && data.page < data.totalPages) {
           const nextPage = data.page + 1;
-          prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, window, metric, nextPage), shopQueryUrl(categoryId, window, metric, nextPage));
+          prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, heatmapCategory, window, metric, nextPage), shopQueryUrl(categoryId, heatmapCategory, window, metric, nextPage));
         }
       })
       .catch((cause) => {
@@ -46,7 +47,7 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
       });
 
     return () => { cancelled = true; };
-  }, [active, categoryId, metric, page, window]);
+  }, [active, categoryId, heatmapCategory, metric, page, window]);
 
   const data = result?.data;
   const shops = data?.shops ?? [];
@@ -93,7 +94,7 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
                 <td className="rank" data-label="Rank"><ShopRank shop={shop} /></td>
                 <td data-label="Shop"><ShopIdentity shop={shop} /></td>
                 <td data-label="Category">
-                  <span className="categoryCell commerceCategoryCell" title={`TikTok L1 category ${shop.category_id}`}><span className="categoryDot" />{shop.category_name}</span>
+                  <span className="categoryCell commerceCategoryCell" title={`TikTok L1 category ${shop.category_id}`}><span className="categoryDot" />{heatmapCategory ?? shop.category_name}</span>
                 </td>
                 <td data-label={`Est. ${window.toUpperCase()} GMV`}><strong className="commerceMetric" title={shop.estimate_is_provisional ? "UGCWEB modeled estimate; not official TikTok GMV" : undefined}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
@@ -118,12 +119,13 @@ export function ShopTable({ categoryId, window, metric, active = true, rowLimit 
   );
 }
 
-function shopQueryKey(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
-  return `shops:${categoryId ?? "all"}:${window}:${metric}:${page}`;
+function shopQueryKey(categoryId: string | null, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+  return `shops:${categoryId ?? "all"}:${heatmapCategory ?? "none"}:${window}:${metric}:${page}`;
 }
 
-function shopQueryUrl(categoryId: string | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+function shopQueryUrl(categoryId: string | null, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
   const params = new URLSearchParams({ category_id: categoryId ?? "all", window, metric, page: String(page) });
+  if (heatmapCategory) params.set("heatmap_category", heatmapCategory);
   return `/api/shops?${params}`;
 }
 

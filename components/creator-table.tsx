@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
-import type { CommerceNavigationCategoryName } from "@/lib/commerce-categories";
+import type { CommerceChildCategory, CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import type { CreatorListRow, CreatorScreenerResponse } from "@/lib/creator-screener";
 
 type CreatorTableResult = {
@@ -12,23 +12,26 @@ type CreatorTableResult = {
 
 export function CreatorTable({
   category,
+  heatmapCategory = null,
   active = true,
   rowLimit,
 }: {
   category: "All" | CommerceNavigationCategoryName;
+  heatmapCategory?: CommerceChildCategory | null;
   active?: boolean;
   rowLimit?: number;
 }) {
-  const [pagination, setPagination] = useState({ category, page: 1 });
+  const scope = `${category}:${heatmapCategory ?? "none"}`;
+  const [pagination, setPagination] = useState({ category: scope, page: 1 });
   const [result, setResult] = useState<CreatorTableResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const page = pagination.category === category ? pagination.page : 1;
+  const page = pagination.category === scope ? pagination.page : 1;
 
   useEffect(() => {
     let cancelled = false;
-    const key = creatorQueryKey(category, page);
-    const url = creatorQueryUrl(category, page);
+    const key = creatorQueryKey(category, heatmapCategory, page);
+    const url = creatorQueryUrl(category, heatmapCategory, page);
     const cached = readCommerceQuery<CreatorScreenerResponse>(key, 300_000);
     if (cached) {
       setResult({ category, data: cached.data });
@@ -43,7 +46,7 @@ export function CreatorTable({
         setResult({ category, data });
         if (active && data.page < data.totalPages) {
           const nextPage = data.page + 1;
-          prefetchCommerceQuery<CreatorScreenerResponse>(creatorQueryKey(category, nextPage), creatorQueryUrl(category, nextPage));
+          prefetchCommerceQuery<CreatorScreenerResponse>(creatorQueryKey(category, heatmapCategory, nextPage), creatorQueryUrl(category, heatmapCategory, nextPage));
         }
       })
       .catch((cause) => {
@@ -54,7 +57,7 @@ export function CreatorTable({
         if (!cancelled) setIsLoading(false);
       });
     return () => { cancelled = true; };
-  }, [active, category, page]);
+  }, [active, category, heatmapCategory, page]);
 
   const data = result?.data;
   const creators = data?.creators ?? [];
@@ -64,7 +67,7 @@ export function CreatorTable({
   const total = data?.total ?? 0;
   const totalPages = data?.totalPages ?? 1;
   const firstRank = (renderedPage - 1) * pageSize;
-  const setPage = (nextPage: number) => setPagination({ category, page: nextPage });
+  const setPage = (nextPage: number) => setPagination({ category: scope, page: nextPage });
 
   return (
     <>
@@ -105,7 +108,7 @@ export function CreatorTable({
               <tr key={creator.creator_oecuid}>
                 <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
                 <td data-label="Creator"><CreatorIdentity creator={creator} /></td>
-                <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{displayCreatorCategory(creator, renderedCategory)}</span></td>
+                <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{heatmapCategory ?? displayCreatorCategory(creator, renderedCategory)}</span></td>
                 <td data-label="30D GMV"><strong className="commerceMetric">{formatCreatorGmv(creator)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience">{formatAudience(creator)}</span></td>
                 <td data-label="Units Sold">{creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold)}</td>
@@ -129,12 +132,14 @@ export function CreatorTable({
   );
 }
 
-function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, page: number) {
-  return `creators:${category}:${page}`;
+function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, heatmapCategory: CommerceChildCategory | null, page: number) {
+  return `creators:${category}:${heatmapCategory ?? "none"}:${page}`;
 }
 
-function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, page: number) {
-  return `/api/creators?category=${encodeURIComponent(category)}&page=${page}`;
+function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, heatmapCategory: CommerceChildCategory | null, page: number) {
+  const params = new URLSearchParams({ category, page: String(page) });
+  if (heatmapCategory) params.set("heatmap_category", heatmapCategory);
+  return `/api/creators?${params}`;
 }
 
 function CreatorIdentity({ creator }: { creator: CreatorListRow }) {

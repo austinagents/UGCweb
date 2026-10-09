@@ -5,7 +5,7 @@ import { CreatorTable } from "@/components/creator-table";
 import { CommerceCategoryMap } from "@/components/heatmap";
 import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ShopTable } from "@/components/shop-table";
-import { commerceNavigationCategories, creatorShopCategories, type CommerceCategory, type CommerceNavigationCategoryName } from "@/lib/commerce-categories";
+import { commerceNavigationCategories, type CommerceChildCategory, type CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import type { ShopRankingWindow } from "@/lib/types";
 
 type ScreenerCategory = "All" | CommerceNavigationCategoryName;
@@ -16,6 +16,7 @@ export function HomeTrendingFilter() {
   const [shopCategoryKey, setShopCategoryKey] = useState<string>("all");
   const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>("All");
   const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("7d");
+  const [heatmapCategory, setHeatmapCategory] = useState<CommerceChildCategory | null>(null);
   return (
     <>
       <PromotedMomentumRail mode={mode} category={creatorCategory} />
@@ -23,8 +24,8 @@ export function HomeTrendingFilter() {
       <nav className="screenTabs" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category filters`}>
         {([{ key: "all", name: "All", categoryIds: [] }, ...commerceNavigationCategories]).map((category) => (
           <button
-            className={(mode === "shops" ? shopCategoryKey === category.key : creatorCategory === category.name) ? "active" : ""}
-            onClick={() => mode === "shops" ? setShopCategoryKey(category.key) : setCreatorCategory(category.name as ScreenerCategory)}
+            className={!heatmapCategory && (mode === "shops" ? shopCategoryKey === category.key : creatorCategory === category.name) ? "active" : ""}
+            onClick={() => { setHeatmapCategory(null); mode === "shops" ? setShopCategoryKey(category.key) : setCreatorCategory(category.name as ScreenerCategory); }}
             type="button"
             key={category.key}
           >
@@ -49,21 +50,21 @@ export function HomeTrendingFilter() {
               <button className={(mode === "shops" && shopWindow === "30d") || mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators" || shopWindow === "30d"} onClick={() => mode === "shops" && setShopWindow("30d")}>30D</button>
             </div>
           </div>
-          <div hidden={mode !== "shops"}><ShopTable categoryId={commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds.join(",") ?? "all"} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
-          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} active={mode === "creators"} /></div>
+          <div hidden={mode !== "shops"}><ShopTable categoryId={commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds.join(",") ?? "all"} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
+          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
         </div>
         <aside className="homeRail">
           <section className="previewPanel commerceCategoryPanel">
             <div className="panelHeader">
               <div>
                 <h2>Category Map</h2>
-                <small>TikTok Creator taxonomy</small>
+                <small>TikTok {mode === "shops" ? "Shop" : "Creator"} taxonomy</small>
               </div>
             </div>
             <CommerceCategoryMap
               mode={mode}
-              activeCategory={mode === "shops" ? shopCategoryKey : creatorCategory}
-              onSelect={(category) => mode === "shops" ? setShopCategoryKey(category) : setCreatorCategory(creatorShopCategories([category as CommerceCategory])[0] ?? "All")}
+              activeCategory={heatmapCategory}
+              onSelect={setHeatmapCategory}
             />
           </section>
         </aside>

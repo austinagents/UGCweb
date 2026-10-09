@@ -45,13 +45,13 @@ const cachedShopPage = unstable_cache(
   { revalidate: shopCacheSeconds },
 );
 
-export async function getShopPage(categoryIds: string[] | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+export async function getShopPage(categoryIds: string[] | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number, shopIds: string[] | null = null, resultLabel: string | null = null) {
   const safePage = Math.max(1, Math.floor(page) || 1);
-  const key = `${categoryIds?.join(",") ?? "all"}:${window}:${metric}:${safePage}`;
+  const key = `${categoryIds?.join(",") ?? "all"}:${shopIds?.join(",") ?? "all"}:${window}:${metric}:${safePage}`;
   const pending = shopPageInflight.get(key);
   if (pending) return pending;
 
-  const request = cachedShopPage(categoryIds, window, metric, safePage).finally(() => {
+  const request = cachedShopPage(categoryIds, window, metric, safePage, shopIds, resultLabel).finally(() => {
     shopPageInflight.delete(key);
   });
   shopPageInflight.set(key, request);
@@ -63,8 +63,9 @@ export async function getTrendingShops(categoryIds: string[] | null, window: Sho
   return { shops: page.shops.slice(0, visibleRailSlots) };
 }
 
-export function getCreatorPage(category: ScreenerCategory, page: number, pageSize: number) {
-  const rows = creatorCategoryIndex.get(category) ?? [];
+export function getCreatorPage(category: ScreenerCategory, page: number, pageSize: number, creatorIds: Set<string> | null = null) {
+  const categoryRows = creatorCategoryIndex.get(category) ?? [];
+  const rows = creatorIds ? allCreatorRows.filter((creator) => creatorIds.has(creator.creator_oecuid)) : categoryRows;
   const safePageSize = Math.min(100, Math.max(1, Math.floor(pageSize) || 100));
   const totalPages = Math.max(1, Math.ceil(rows.length / safePageSize));
   const safePage = Math.min(Math.max(1, Math.floor(page) || 1), totalPages);
@@ -101,7 +102,7 @@ export function getCategoryAvailability(mode: "shops" | "creators") {
   }));
 }
 
-async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number): Promise<TikTokShopsResponse> {
+async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number, selectedShopIds: string[] | null = null, resultLabel: string | null = null): Promise<TikTokShopsResponse> {
   const rankingDatabase = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shop-ranking-observations.sqlite"), { readOnly: true });
   const shopDatabase = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shops.sqlite"), { readOnly: true });
   const estimateDatabase = new DatabaseSync(path.join(process.cwd(), "data/tiktok-shop-gmv-estimates.sqlite"), { readOnly: true });
@@ -113,7 +114,10 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
   const sourceRankColumn = `source_${window}_rank`;
   const categoryFilter = categoryIds ? `AND category_id IN (${categoryIds.map(() => "?").join(", ")})` : "";
   const parameters = [window, ...(categoryIds ?? [])];
-  const total = categoryIds
+  const selectedShopFilter = selectedShopIds ? `WHERE shop_id IN (${selectedShopIds.map(() => "?").join(", ") || "NULL"})` : "";
+  const total = selectedShopIds
+    ? Number((estimateDatabase.prepare(`SELECT count(*) AS count FROM shop_estimates ${selectedShopFilter}`).get(...selectedShopIds) as { count: number }).count)
+    : categoryIds
     ? Number((rankingDatabase.prepare(`SELECT count(*) AS count FROM ranking_observations WHERE window = ? AND ${rankColumn} IS NOT NULL ${categoryFilter}`).get(...parameters) as { count: number }).count)
     : Number((estimateDatabase.prepare("SELECT count(*) AS count FROM shop_estimates").get() as { count: number }).count);
   const totalPages = Math.max(1, Math.ceil(total / allShopPageSize));
@@ -132,9 +136,10 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
     : estimateDatabase.prepare(`
         SELECT shop_id, ${estimateColumn} AS estimated_gmv, ${sourceCategoryColumn} AS category_id, ${sourceRankColumn} AS official_rank
         FROM shop_estimates
+        ${selectedShopFilter}
         ORDER BY estimated_gmv IS NULL, estimated_gmv DESC, shop_id
         LIMIT ? OFFSET ?
-      `).all(allShopPageSize, offset) as Array<Record<string, string | number | null>>;
+      `).all(...(selectedShopIds ?? []), allShopPageSize, offset) as Array<Record<string, string | number | null>>;
   const shopIds = sourceRows.map((row) => String(row.shop_id));
   const shopRows = shopIds.length === 0 ? [] : shopDatabase.prepare(`
     SELECT shop_id, shop_name, shop_logo_url, storefront_url, shop_sold_count, followers, estimated_30d_gmv
@@ -199,7 +204,7 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
 
   return {
     categoryId: categoryIds?.join(",") ?? null,
-    categoryName: category?.name ?? "All Categories",
+    categoryName: resultLabel ?? category?.name ?? "All Categories",
     categories: [...tiktokShopCategories],
     window,
     metric,

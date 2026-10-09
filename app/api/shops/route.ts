@@ -1,6 +1,8 @@
 import { getShopPage, getTrendingShops } from "@/lib/server/commerce-read";
 import { tiktokShopCategories } from "@/lib/commerce-categories";
 import type { ShopRankingMetric, ShopRankingWindow } from "@/lib/types";
+import { isCommerceHeatmapCategory } from "@/lib/commerce-heatmap-categories";
+import { shopIdsForHeatmapCategory } from "@/lib/server/commerce-heatmap-affiliations";
 
 export const dynamic = "force-dynamic";
 
@@ -12,11 +14,13 @@ export async function GET(request: Request) {
   const window = validWindow(searchParams.get("window"));
   const metric = validMetric(searchParams.get("metric"));
   const page = Math.max(1, Number.parseInt(searchParams.get("page") ?? "1", 10) || 1);
+  const requestedHeatmapCategory = searchParams.get("heatmap_category");
+  const heatmapCategory = isCommerceHeatmapCategory(requestedHeatmapCategory) ? requestedHeatmapCategory : null;
 
   try {
     const data = searchParams.get("view") === "trending"
       ? await getTrendingShops(categoryIds, window, metric)
-      : await getShopPage(categoryIds, window, metric, page);
+      : await getShopPage(heatmapCategory ? null : categoryIds, window, metric, page, heatmapCategory ? shopIdsForHeatmapCategory(heatmapCategory) : null, heatmapCategory);
     return Response.json(data, {
       headers: { "Cache-Control": responseCacheControl },
     });

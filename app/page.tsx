@@ -15,45 +15,11 @@ export default function DiscoverPage() {
   return (
     <div className="homeStack">
       <HomeTrendingFilter />
-
       <section className="homeSecondary">
-        <div className="lowerDiscoveryRow">
-          <PreviewPanel href="/creators" title="Creator Graph" meta="accepted creator taxonomy">
-            {creatorIntelligenceStatus.publicReady ? creators.slice(0, 4).map((creator) => (
-              <Link href={`/creators/${creator.id}`} className="miniRow creatorMini" key={creator.id}>
-                <CreatorAvatar name={creator.name} src={creator.avatarUrl} size={24} />
-                <span><strong>{creator.name}</strong><small>{creator.specializationTags.slice(0, 2).map(creatorTagDisplayLabel).join(" · ")}</small></span>
-              </Link>
-            )) : <p className="emptyState">Creator graph expanding. Accepted creators appear after identity and taxonomy review.</p>}
-          </PreviewPanel>
-
-          <PreviewPanel href="/workflows" title="Trending Workflows" meta="stacks spreading now">
-            {workflows.slice(0, 4).map((workflow) => (
-              <Link href={`/workflows/${workflow.slug}`} className="workflowPreview" key={workflow.id}>
-                <WorkflowStack toolSlugs={workflow.toolSlugs} />
-                <span><strong>{workflow.name}</strong></span>
-              </Link>
-            ))}
-          </PreviewPanel>
-
-          <PreviewPanel href="/events" title="Newly Listed" meta="recent products">
-            <div className="launchRail">
-              {newLaunches.map((tool) => (
-                <Link href={`/tools/${tool.slug}`} className="miniRow creatorMini launchItem" key={tool.slug}>
-                  <ToolLogo officialSrc={tool.officialLogoUrl} src={tool.logoUrl} faviconSrc={tool.faviconUrl} fallback={tool.iconUrl} alt="" size={26} />
-                  <span><strong>{tool.name}</strong><small>{displayCategory(tool.category)}</small></span>
-                </Link>
-              ))}
-            </div>
-          </PreviewPanel>
-        </div>
         <BoostPanel tiers={boostTiers} />
-        <div className="homeNewsPanel">
-          <PreviewPanel href="/events" title="News & Events" meta="curated highlights">
-            {movementEvents.slice(0, 4).map((event) => <FeedLine key={event.id} time={event.timestamp} title={event.title} />)}
-          </PreviewPanel>
-        </div>
       </section>
+
+
     </div>
   );
 }

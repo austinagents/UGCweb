@@ -93,41 +93,35 @@ const commerceCategoryIcons: Record<string, LucideIcon> = {
   "Pets & Hobbies": PawPrint,
 };
 
-const creatorAmbiguousChildren = new Set<CommerceChildCategory>(
-  ["Dogs", "Cats"]
-);
-
 export function CommerceCategoryMap({
   mode = "shops",
   activeCategory,
   onSelect
 }: {
   mode?: "shops" | "creators";
-  activeCategory: string | null;
-  onSelect: (category: string) => void;
+  activeCategory: CommerceChildCategory | null;
+  onSelect: (category: CommerceChildCategory) => void;
 }) {
-  const interactive = mode === "creators";
-
   return (
-    <div className="commerceCategoryMap" aria-label="TikTok Creator category map">
+    <div className="commerceCategoryMap" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category map`}>
       {commerceCategoryGroups.map((group) => {
         const Icon = commerceCategoryIcons[group.name];
-        const groupActive = interactive && (activeCategory === group.name || group.children.some((category) => category === activeCategory));
+        const groupActive = (group.children as readonly CommerceChildCategory[]).includes(activeCategory as CommerceChildCategory);
 
         return (
           <section className={`commerceCategoryCluster ${groupActive ? "active" : ""}`} key={group.name}>
-            <button className="commerceCategoryLabel" type="button" onClick={interactive ? () => onSelect(group.name) : undefined}>
+            <div className="commerceCategoryLabel commerceCategoryLabelStatic">
               <Icon size={13} />
               <span>{group.name}</span>
-            </button>
+            </div>
             <div className="commerceCategoryNodes">
               {group.children.map((category) => (
                 <button
-                  className={interactive && activeCategory === category ? "active" : ""}
+                  className={activeCategory === category ? "active" : ""}
                   type="button"
-                  onClick={interactive ? () => onSelect(category) : undefined}
+                  onClick={() => onSelect(category)}
                   key={category}
-                  title={creatorAmbiguousChildren.has(category) ? "Collected creator data cannot yet distinguish Dogs from Cats" : undefined}
+                  title={`Show ${category} ${mode}`}
                 >
                   {category}
                 </button>
