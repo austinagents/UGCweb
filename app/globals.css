@@ -6177,6 +6177,7 @@ a:hover .toolLogo {
   color: var(--text-muted);
   cursor: pointer;
   line-height: 1;
+  vertical-align: middle;
   transition: color 140ms var(--ease-out), transform 140ms var(--ease-out);
 }
 
@@ -6194,8 +6195,12 @@ a:hover .toolLogo {
   text-align: left;
 }
 
+.shopScreenerTable th:last-child {
+  text-indent: 12px;
+}
+
 .shopScreenerTable td[data-label="Watchlist"] .commerceWatchlistTag {
-  margin-left: 15.2px;
+  margin-left: 27.2px;
 }
 
 .watchlistScreen {
@@ -6635,6 +6640,20 @@ a:hover .toolLogo {
 }
 
 @media (max-width: 760px) {
+  .shopScreenerTable {
+    width: 100%;
+    min-width: 0;
+    table-layout: auto;
+  }
+
+  .shopScreenerTable colgroup {
+    display: none;
+  }
+
+  .shopScreenerTable td[data-label="Watchlist"] .commerceWatchlistTag {
+    margin-left: 15.2px;
+  }
+
   .entityModeHeading {
     align-items: flex-start;
   }

@@ -28,7 +28,7 @@ export function CommerceWatchlistButton({ item }: { item: CommerceWatchlistItem 
 
 function WatchlistGlyph() {
   return (
-    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" fill="none">
       <path d="M5 2.5h6A1.5 1.5 0 0 1 12.5 4v9L8 10.5 3.5 13V4A1.5 1.5 0 0 1 5 2.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
