@@ -8,14 +8,14 @@ import { heatmapSlug } from "@/lib/heatmap-markets";
 import type { TikTokShop } from "@/lib/types";
 import type { CreatorListRow } from "@/lib/creator-screener";
 import { ProductImageStack } from "@/components/product-image-stack";
-import { productImagesForCategory } from "@/lib/category-product-images";
+import type { CategoryProductImage } from "@/lib/category-product-images";
 
 type SidebarGroup = { title: string; icon: "activity" | "users" | "product" | "live" | "rotation"; shops: TikTokShop[] };
 const marketColors = ["#70b7ad", "#b38bd4", "#d28b9c", "#d5a15a", "#7fa9d8", "#81b77a", "#6da8b7", "#cb8e70", "#8aaa64", "#d09a76", "#9a83cf", "#d2aa70", "#6db09f", "#79a0c9", "#b18ab8"];
 const mockMovements = [42, 31, 24, 18, 11] as const;
 const mockCreatorSignals = [214, 168, 128, 103, 86] as const;
 
-export function CommerceHeatmapExplorer({ markets, sidebarGroups, creatorPool, initialQuery, initialBucket }: { markets: readonly HeatmapMarket[]; sidebarGroups: SidebarGroup[]; creatorPool: CreatorListRow[]; initialQuery: string; initialBucket: string }) {
+export function CommerceHeatmapExplorer({ markets, sidebarGroups, creatorPool, productImages, initialQuery, initialBucket }: { markets: readonly HeatmapMarket[]; sidebarGroups: SidebarGroup[]; creatorPool: CreatorListRow[]; productImages: Record<string, CategoryProductImage[]>; initialQuery: string; initialBucket: string }) {
   const [query, setQuery] = useState(initialQuery);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const normalizedQuery = query.trim().toLowerCase();
@@ -41,7 +41,7 @@ export function CommerceHeatmapExplorer({ markets, sidebarGroups, creatorPool, i
           return <section className="ecosystemCluster" style={{ "--cluster-color": marketColors[marketIndex] } as Record<string, string>} key={market.name}>
             <header><div><Link className="heatmapMarketTitle" href={`/heatmap/${heatmapSlug(market.name)}`}>{market.name}</Link><small>{market.buckets.length} approved buckets</small></div></header>
             <div className="clusterToolGrid">{visibleBuckets.map((bucket) => {
-              const products = productImagesForCategory(bucket);
+              const products = productImages[bucket] ?? [];
               return <Link className="ecosystemToolNode commerceBucketRow" href={`/heatmap/${heatmapSlug(bucket)}`} title={`Open ${bucket}`} key={bucket}>
                 {products.length ? <ProductImageStack products={products} /> : <span className="shopAvatarFallback heatmapBucketIcon" aria-hidden="true"><Store size={15} /></span>}
                 <span><strong>{bucket}</strong><small>Shop results</small></span>

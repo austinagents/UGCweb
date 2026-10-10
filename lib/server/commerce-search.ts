@@ -1,8 +1,7 @@
 import "server-only";
 
-import path from "node:path";
-import { DatabaseSync } from "node:sqlite";
 import type { CommerceSearchResponse, CommerceSearchResult, CommerceSearchResultType } from "@/lib/commerce-search";
+import { getSearchDatabase } from "@/lib/server/cloudflare-d1";
 
 type SearchEntityRow = {
   entity_type: CommerceSearchResultType;
@@ -24,26 +23,25 @@ type SearchEntityRow = {
 };
 
 type RankedEntity = { row: SearchEntityRow; relevance: number };
+let metadataPromise: Promise<Record<string, string>> | null = null;
 
-let database: DatabaseSync | null = null;
-
-export function commerceSearchPreview(): CommerceSearchResponse {
-  const db = getDatabase();
-  const shops = previewEntities(`
-    SELECT ${entityColumns}
-    FROM search_entities
-    WHERE entity_type = 'shop' AND followers IS NOT NULL
-    ORDER BY followers DESC, name, entity_id
-    LIMIT 5
-  `);
-  const creators = previewEntities(`
-    SELECT ${entityColumns}
-    FROM search_entities
-    WHERE entity_type = 'creator' AND followers IS NOT NULL
-    ORDER BY followers DESC, name, entity_id
-    LIMIT 5
-  `);
-  const metadata = getMetadata();
+export async function commerceSearchPreview(): Promise<CommerceSearchResponse> {
+  const db = getSearchDatabase();
+  const [previewRows, metadata] = await Promise.all([
+    previewEntities(db, `
+      SELECT ${entityColumns}
+      FROM search_entities
+      WHERE rowid IN (
+        SELECT rowid FROM (SELECT rowid FROM search_entities WHERE entity_type = 'shop' AND followers IS NOT NULL ORDER BY followers DESC, name, entity_id LIMIT 5)
+        UNION ALL
+        SELECT rowid FROM (SELECT rowid FROM search_entities WHERE entity_type = 'creator' AND followers IS NOT NULL ORDER BY followers DESC, name, entity_id LIMIT 5)
+      )
+      ORDER BY CASE entity_type WHEN 'shop' THEN 0 ELSE 1 END, followers DESC, name, entity_id
+    `),
+    getMetadata(db),
+  ]);
+  const shops = previewRows.filter((row) => row.entity_type === "shop");
+  const creators = previewRows.filter((row) => row.entity_type === "creator");
   const results = [...shops, ...creators].map((row) => toResult({ row, relevance: 0 }));
   return {
     query: "",
@@ -58,32 +56,26 @@ export function commerceSearchPreview(): CommerceSearchResponse {
   };
 }
 
-export function searchCommerce(input: {
+export async function searchCommerce(input: {
   query: string;
   type: CommerceSearchResultType | "all";
   page: number;
   pageSize: number;
   commandMode?: boolean;
-}): CommerceSearchResponse {
+}): Promise<CommerceSearchResponse> {
   const query = input.query.trim();
   const normalizedQuery = normalize(query);
   const pageSize = Math.min(50, Math.max(1, Math.floor(input.pageSize) || 20));
   const requestedPage = Math.max(1, Math.floor(input.page) || 1);
-  const metadata = getMetadata();
-  const empty = {
-    query,
-    results: [],
-    page: 1,
-    pageSize,
-    total: 0,
-    totalPages: 1,
-    groupCounts: { shop: 0, creator: 0, category: 0 },
-    indexVersion: metadata.model_version ?? "unknown",
-    indexBuiltAt: metadata.built_at ?? "",
-  } satisfies CommerceSearchResponse;
-  if (normalizedQuery.length < 2) return empty;
+  const db = getSearchDatabase();
+  const pendingMetadata = getMetadata(db);
+  if (normalizedQuery.length < 2) {
+    const metadata = await pendingMetadata;
+    return emptySearchResponse(query, pageSize, metadata);
+  }
 
-  const rows = candidateRows(normalizedQuery, input.type);
+  const [rows, metadata] = await Promise.all([candidateRows(db, normalizedQuery, input.type), pendingMetadata]);
+  const empty = emptySearchResponse(query, pageSize, metadata);
   const ranked = rows
     .map((row) => ({ row, relevance: relevanceFor(row, query, normalizedQuery) }))
     .filter((item) => Number.isFinite(item.relevance))
@@ -118,13 +110,27 @@ export function searchCommerce(input: {
   };
 }
 
-function candidateRows(query: string, type: CommerceSearchResultType | "all") {
-  const db = getDatabase();
+function emptySearchResponse(query: string, pageSize: number, metadata: Record<string, string>) {
+  const empty = {
+    query,
+    results: [],
+    page: 1,
+    pageSize,
+    total: 0,
+    totalPages: 1,
+    groupCounts: { shop: 0, creator: 0, category: 0 },
+    indexVersion: metadata.model_version ?? "unknown",
+    indexBuiltAt: metadata.built_at ?? "",
+  } satisfies CommerceSearchResponse;
+  return empty;
+}
+
+async function candidateRows(db: D1Database, query: string, type: CommerceSearchResultType | "all") {
   const tokens = query.split(" ").filter(Boolean);
   const ftsQuery = tokens.map((token) => `"${token.replaceAll('"', '""')}"*`).join(" AND ");
   const typeClause = type === "all" ? "" : "AND entity_type = ?";
   const parameters = type === "all" ? [ftsQuery, `%${query}%`] : [ftsQuery, `%${query}%`, type];
-  return db.prepare(`
+  const statement = db.prepare(`
     SELECT entity_type, entity_id, name, secondary, normalized_name, normalized_secondary,
            normalized_id, aliases, normalized_aliases, descendants, normalized_descendants,
            category, category_kind, followers, image_url, destination_url
@@ -137,7 +143,8 @@ function candidateRows(query: string, type: CommerceSearchResultType | "all") {
       OR normalized_aliases LIKE ?2
       OR normalized_descendants LIKE ?2
     ) ${typeClause}
-  `).all(...parameters) as SearchEntityRow[];
+  `).bind(...parameters);
+  return (await statement.all<SearchEntityRow>()).results;
 }
 
 const entityColumns = `
@@ -146,8 +153,8 @@ const entityColumns = `
   category, category_kind, followers, image_url, destination_url
 `;
 
-function previewEntities(sql: string) {
-  return getDatabase().prepare(sql).all() as SearchEntityRow[];
+async function previewEntities(db: D1Database, sql: string) {
+  return (await db.prepare(sql).all<SearchEntityRow>()).results;
 }
 
 function relevanceFor(row: SearchEntityRow, rawQuery: string, query: string) {
@@ -194,14 +201,16 @@ function toResult({ row }: RankedEntity): CommerceSearchResult {
   };
 }
 
-function getDatabase() {
-  database ??= new DatabaseSync(path.join(process.cwd(), "data/commerce-search.sqlite"), { readOnly: true });
-  return database;
-}
-
-function getMetadata() {
-  const rows = getDatabase().prepare("SELECT key, value FROM search_metadata").all() as Array<{ key: string; value: string }>;
-  return Object.fromEntries(rows.map((row) => [row.key, row.value]));
+async function getMetadata(db: D1Database) {
+  if (!metadataPromise) {
+    metadataPromise = db.prepare("SELECT key, value FROM search_metadata").all<{ key: string; value: string }>()
+      .then(({ results }) => Object.fromEntries(results.map((row) => [row.key, row.value])))
+      .catch((error) => {
+        metadataPromise = null;
+        throw error;
+      });
+  }
+  return metadataPromise;
 }
 
 function normalize(value: string) {

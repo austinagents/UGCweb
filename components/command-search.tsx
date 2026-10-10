@@ -1,10 +1,13 @@
 "use client";
 
 import { Search, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CommerceSearchResponse, CommerceSearchResult, CommerceSearchResultType } from "@/lib/commerce-search";
 
 const groupOrder: CommerceSearchResultType[] = ["shop", "creator", "category"];
+let previewResponse: CommerceSearchResponse | null = null;
+let previewRequest: Promise<CommerceSearchResponse> | null = null;
 
 export function CommandSearch() {
   const [open, setOpen] = useState(false);
@@ -17,26 +20,36 @@ export function CommandSearch() {
   const grouped = useMemo(() => groupOrder.map((type) => [type, results.filter((item) => item.type === type)] as const).filter(([, items]) => items.length), [results]);
 
   useEffect(() => {
+    const preload = () => { void loadPreview().catch(() => undefined); };
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(preload, { timeout: 2000 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+    const timeoutId = globalThis.setTimeout(preload, 500);
+    return () => globalThis.clearTimeout(timeoutId);
+  }, []);
+
+  useEffect(() => {
     const normalized = query.trim();
     if (normalized.length < 2) {
       if (!open) return;
-      const controller = new AbortController();
+      let cancelled = false;
       setStatus("loading");
-      fetch("/api/search?preview=true", { signal: controller.signal })
-        .then(async (response) => {
-          const data = await response.json() as CommerceSearchResponse & { error?: string };
-          if (!response.ok) throw new Error(data.error ?? "Search failed");
+      loadPreview()
+        .then((data) => {
+          if (cancelled) return;
           setResults(data.results);
           setActive(0);
           setStatus("ready");
         })
         .catch((error) => {
+          if (cancelled) return;
           if ((error as Error).name !== "AbortError") {
             setResults([]);
             setStatus("error");
           }
         });
-      return () => controller.abort();
+      return () => { cancelled = true; };
     }
     const controller = new AbortController();
     const timer = window.setTimeout(async () => {
@@ -137,12 +150,25 @@ export function CommandSearch() {
 
 function CommerceSearchLink({ item, active }: { item: CommerceSearchResult; active: boolean }) {
   const external = item.type !== "category";
+  const content = <><strong className="commandResultTitle"><SearchAvatar item={item} />{item.name}</strong><small>{resultContext(item)}</small></>;
+  if (!external) return <Link className={active ? "active" : ""} href={item.href}>{content}</Link>;
   return (
-    <a className={active ? "active" : ""} href={item.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>
-      <strong className="commandResultTitle"><SearchAvatar item={item} />{item.name}</strong>
-      <small>{resultContext(item)}</small>
-    </a>
+    <a className={active ? "active" : ""} href={item.href} target="_blank" rel="noreferrer">{content}</a>
   );
+}
+
+function loadPreview() {
+  if (previewResponse) return Promise.resolve(previewResponse);
+  if (previewRequest) return previewRequest;
+  previewRequest = fetch("/api/search?preview=true")
+    .then(async (response) => {
+      const data = await response.json() as CommerceSearchResponse & { error?: string };
+      if (!response.ok) throw new Error(data.error ?? "Search failed");
+      previewResponse = data;
+      return data;
+    })
+    .finally(() => { previewRequest = null; });
+  return previewRequest;
 }
 
 export function SearchAvatar({ item, size = 22 }: { item: CommerceSearchResult; size?: number }) {

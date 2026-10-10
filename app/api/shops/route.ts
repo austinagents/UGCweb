@@ -2,11 +2,9 @@ import { getShopPage, getTrendingShops } from "@/lib/server/commerce-read";
 import { tiktokShopCategories } from "@/lib/commerce-categories";
 import type { ShopRankingMetric, ShopRankingWindow } from "@/lib/types";
 import { isCommerceHeatmapCategory } from "@/lib/commerce-heatmap-categories";
-import { shopIdsForHeatmapCategory } from "@/lib/server/commerce-heatmap-affiliations";
+import { edgeCachedJson } from "@/lib/server/edge-cache";
 
 export const dynamic = "force-dynamic";
-
-const responseCacheControl = "public, s-maxage=60, stale-while-revalidate=120";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -18,12 +16,9 @@ export async function GET(request: Request) {
   const heatmapCategory = isCommerceHeatmapCategory(requestedHeatmapCategory) ? requestedHeatmapCategory : null;
 
   try {
-    const data = searchParams.get("view") === "trending"
-      ? await getTrendingShops(categoryIds, window, metric)
-      : await getShopPage(heatmapCategory ? null : categoryIds, window, metric, page, heatmapCategory ? shopIdsForHeatmapCategory(heatmapCategory) : null, heatmapCategory);
-    return Response.json(data, {
-      headers: { "Cache-Control": responseCacheControl },
-    });
+    return edgeCachedJson(request, { edgeTtlSeconds: 120 }, () => searchParams.get("view") === "trending"
+      ? getTrendingShops(categoryIds, window, metric)
+      : getShopPage(heatmapCategory ? null : categoryIds, window, metric, page, heatmapCategory, heatmapCategory));
   } catch (error) {
     console.error("TikTok Shop API request failed", error);
     return Response.json({ error: "Failed to reach shops API" }, { status: 500 });

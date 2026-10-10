@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
 import { attentionSubCategories } from "@/lib/data";
+import { edgeCachedJson } from "@/lib/server/edge-cache";
 
-export function GET() {
-  return NextResponse.json({ data: attentionSubCategories, generatedFrom: "local-attention-pressure-model" });
+export function GET(request: Request) {
+  return edgeCachedJson(request, { edgeTtlSeconds: 3600 }, async () => ({ data: attentionSubCategories, generatedFrom: "local-attention-pressure-model" }));
 }

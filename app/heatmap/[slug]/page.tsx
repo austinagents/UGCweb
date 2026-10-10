@@ -5,6 +5,8 @@ import { MovementBadge } from "@/components/movement-badge";
 import { heatmapMarkets, heatmapScopeForSlug, heatmapSlug } from "@/lib/heatmap-markets";
 import { getCreatorPage, getShopPage } from "@/lib/server/commerce-read";
 
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() { return heatmapMarkets.flatMap((market) => [{ slug: heatmapSlug(market.name) }, ...market.buckets.map((bucket) => ({ slug: heatmapSlug(bucket) }))]); }
 
 export default async function HeatmapScopePage({ params }: { params: { slug: string } }) {
@@ -12,7 +14,7 @@ export default async function HeatmapScopePage({ params }: { params: { slug: str
   if (!scope) notFound();
   const shopPage = await getShopPage(null, "7d", "total_gmv", 1);
   const shops = shopPage.shops.slice(0, 5);
-  const creators = getCreatorPage("All", 1, 8).creators.slice(0, 5);
+  const creators = (await getCreatorPage("All", 1, 8)).creators.slice(0, 5);
   return <div className="stack">
     <section className="gridTwo wideLeft" style={{ "--category-result-height": `${861 + Math.ceil(scope.market.buckets.length / 2) * 28}px` } as Record<string, string>}><CommerceSlugTrending name={scope.name} /><aside className="sidePanel categoryDetailRail">
       <section><div className="panelHeader"><h2>Fastest Growing</h2></div>{shops.map((shop, index) => <a className="miniRow" href={shop.shop_share_link ?? "#"} target="_blank" rel="noreferrer" key={shop.shop_id}><span><strong>{shop.shop_name}</strong><small>{shop.category_name}</small></span><MovementBadge value={31 - index * 4} /></a>)}</section>

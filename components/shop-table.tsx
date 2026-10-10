@@ -35,6 +35,14 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
       .then((data) => {
         if (cancelled) return;
         setResult({ category: categoryId ?? "All", data });
+        if (active && page === 1 && !heatmapCategory) {
+          scheduleIdleWork(() => {
+            for (const nextWindow of (["1d", "7d", "30d"] as ShopRankingWindow[])) {
+              if (nextWindow === window) continue;
+              prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, null, nextWindow, metric, 1), shopQueryUrl(categoryId, null, nextWindow, metric, 1));
+            }
+          });
+        }
         if (active && data.page < data.totalPages) {
           const nextPage = data.page + 1;
           prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, heatmapCategory, window, metric, nextPage), shopQueryUrl(categoryId, heatmapCategory, window, metric, nextPage));
@@ -119,6 +127,11 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
       </div>
     </>
   );
+}
+
+function scheduleIdleWork(callback: () => void) {
+  if ("requestIdleCallback" in window) window.requestIdleCallback(callback, { timeout: 1500 });
+  else globalThis.setTimeout(callback, 250);
 }
 
 function shopQueryKey(categoryId: string | null, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {

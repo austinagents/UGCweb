@@ -11,6 +11,10 @@ coverage
 .env.*
 !.env.example
 .vercel
+.open-next
+.wrangler
+cloudflare-env.d.ts
+data/cloudflare-import/
 
 .DS_Store
 supabase/.temp/

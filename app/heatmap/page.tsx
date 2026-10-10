@@ -2,6 +2,7 @@ import { CommerceHeatmapExplorer } from "@/components/commerce-heatmap-explorer"
 import { heatmapMarkets } from "@/lib/heatmap-markets";
 import { getCreatorPage, getShopPage } from "@/lib/server/commerce-read";
 import type { TikTokShop } from "@/lib/types";
+import { productImagesForCategory } from "@/lib/category-product-images";
 
 export const dynamic = "force-dynamic";
 
@@ -25,8 +26,9 @@ export default async function HeatmapPage({ searchParams }: { searchParams?: { m
     { title: "LIVE Commerce Leaders", icon: "live" as const, shops: takeUnique(live.shops, 5) },
     { title: "Attention rotation", icon: "rotation" as const, shops: takeUnique(video.shops, 5) },
   ];
-  const creatorPool = getCreatorPage("All", 1, 100).creators;
+  const creatorPool = (await getCreatorPage("All", 1, 75)).creators;
+  const productImages = Object.fromEntries(heatmapMarkets.flatMap((market) => market.buckets.slice(0, 5)).map((bucket) => [bucket, productImagesForCategory(bucket)]));
 
   const initialQuery = searchParams?.bucket ?? searchParams?.market ?? "";
-  return <CommerceHeatmapExplorer key={`${searchParams?.market ?? "all"}:${searchParams?.bucket ?? "all"}:${searchParams?.view ?? "default"}`} markets={heatmapMarkets} sidebarGroups={sidebarGroups} creatorPool={creatorPool} initialQuery={initialQuery} initialBucket={searchParams?.bucket ?? ""} />;
+  return <CommerceHeatmapExplorer key={`${searchParams?.market ?? "all"}:${searchParams?.bucket ?? "all"}:${searchParams?.view ?? "default"}`} markets={heatmapMarkets} sidebarGroups={sidebarGroups} creatorPool={creatorPool} productImages={productImages} initialQuery={initialQuery} initialBucket={searchParams?.bucket ?? ""} />;
 }

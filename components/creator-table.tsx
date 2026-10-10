@@ -139,7 +139,7 @@ function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, heatm
 }
 
 function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, heatmapCategory: CommerceChildCategory | null, page: number) {
-  const params = new URLSearchParams({ category, page: String(page) });
+  const params = new URLSearchParams({ category, page: String(page), pageSize: "25" });
   if (heatmapCategory) params.set("heatmap_category", heatmapCategory);
   return `/api/creators?${params}`;
 }

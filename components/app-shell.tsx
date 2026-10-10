@@ -3,6 +3,7 @@
 import { Bookmark, Grid2X2, Store, UserRound } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { LOCAL_CREATORS_KEY, LOCAL_PRODUCTS_KEY } from "@/lib/local-graph";
@@ -17,12 +18,13 @@ const tabs = [
 
 export function AppShell({ children }: { children: ReactNode }) {
   const hasProfile = useHasLocalProfile();
+  usePrimaryNavigationPrefetch();
 
   return (
     <>
       <header className="topbar">
         <Link href="/" className="brand" aria-label="AppScreener home">
-          <span className="brandMark"><Image src="/logo.png" alt="" width={36} height={36} priority /></span>
+          <span className="brandMark"><Image src="/logo.png" alt="" width={36} height={36} priority unoptimized /></span>
           <span>
             <strong>PartnerLinks</strong>
             <small>BY UGC NETWORK</small>
@@ -52,6 +54,17 @@ export function AppShell({ children }: { children: ReactNode }) {
       <main className="pageShell">{children}</main>
     </>
   );
+}
+
+function usePrimaryNavigationPrefetch() {
+  const router = useRouter();
+  useEffect(() => {
+    const prefetch = () => {
+      for (const route of ["/", "/marketplace", "/heatmap", "/watchlist", "/search"]) router.prefetch(route);
+    };
+    const idleId = window.requestIdleCallback(prefetch, { timeout: 2500 });
+    return () => window.cancelIdleCallback(idleId);
+  }, [router]);
 }
 
 function GoogleMark() {
