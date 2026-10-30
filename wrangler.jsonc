@@ -3,7 +3,9 @@
   "name": "ugcweb",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-09",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
@@ -12,6 +14,14 @@
     "enabled": true
   },
   "routes": [
+    {
+      "pattern": "partnerlinks.ai",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.partnerlinks.ai",
+      "custom_domain": true
+    },
     {
       "pattern": "partnerlinks.dev",
       "custom_domain": true
