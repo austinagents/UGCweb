@@ -12,6 +12,7 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://partnerlinks.ai"),
   title: "PartnerLinks",
   description: "TikTok Shop intelligence, marketplace, and brand partnerships."
 };
