@@ -1,3 +1,4 @@
+import { suppressedCreator } from "@/lib/server/creator-visibility";
 import { getCreatorAvatarArchive, getCreatorDatabase } from "@/lib/server/cloudflare-d1";
 
 export const dynamic = "force-dynamic";
@@ -5,6 +6,8 @@ export const dynamic = "force-dynamic";
 export async function GET(_: Request, { params }: { params: { id: string } }) {
   const graphCreatorId = decodeURIComponent(params.id);
   if (!/^creator:\d+$/.test(graphCreatorId)) return new Response("Invalid creator ID", { status: 400 });
+
+  if (graphCreatorId === suppressedCreator.graphId) return new Response("Avatar not found", { status: 404 });
 
   const row = await getCreatorDatabase().prepare(
     `SELECT COALESCE(a.avatar_object_key, m.avatar_object_key) avatar_object_key

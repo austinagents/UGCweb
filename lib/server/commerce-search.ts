@@ -1,4 +1,5 @@
 import "server-only";
+import { suppressedCreator } from "@/lib/server/creator-visibility";
 
 import type { CommerceSearchResponse, CommerceSearchResult, CommerceSearchResultType } from "@/lib/commerce-search";
 import { getCreatorDatabase, getSearchDatabase } from "@/lib/server/cloudflare-d1";
@@ -23,6 +24,11 @@ type SearchEntityRow = {
 };
 
 type RankedEntity = { row: SearchEntityRow; relevance: number };
+const visibleSearchEntity = `(entity_type <> 'creator' OR (
+  entity_id NOT IN ('${suppressedCreator.accountId}', '${suppressedCreator.tiktokUid}', '${suppressedCreator.graphId}')
+  AND lower(ltrim(secondary, '@')) <> '${suppressedCreator.handle}'
+  AND lower(ltrim(name, '@')) <> '${suppressedCreator.handle}'
+))`;
 let metadataPromise: Promise<Record<string, string>> | null = null;
 
 export async function commerceSearchPreview(): Promise<CommerceSearchResponse> {
@@ -34,7 +40,7 @@ export async function commerceSearchPreview(): Promise<CommerceSearchResponse> {
       WHERE rowid IN (
         SELECT rowid FROM (SELECT rowid FROM search_entities WHERE entity_type = 'shop' AND followers IS NOT NULL ORDER BY followers DESC, name, entity_id LIMIT 5)
         UNION ALL
-        SELECT rowid FROM (SELECT rowid FROM search_entities WHERE entity_type = 'creator' AND followers IS NOT NULL ORDER BY followers DESC, name, entity_id LIMIT 5)
+        SELECT rowid FROM (SELECT rowid FROM search_entities WHERE entity_type = 'creator' AND ${visibleSearchEntity} AND followers IS NOT NULL ORDER BY followers DESC, name, entity_id LIMIT 5)
       )
       ORDER BY CASE entity_type WHEN 'shop' THEN 0 ELSE 1 END, followers DESC, name, entity_id
     `),
@@ -123,6 +129,7 @@ async function candidateMasterCreators(query:string):Promise<SearchEntityRow[]> 
     )
     SELECT account_id,canonical_graph_creator_id,username,tiktok_uid,display_name,follower_count,profile_url
     FROM matches JOIN creator_accounts USING(account_id)
+    WHERE account_id <> '${suppressedCreator.accountId}'
     ORDER BY CASE WHEN normalized_username=? THEN 0 ELSE 1 END,follower_count DESC,canonical_graph_creator_id LIMIT 200
   `).bind(query,`${query}\uffff`,query,`${query}\uffff`,query).all<Record<string,string|number|null>>()).results;
   return rows.map((row)=>({entity_type:"creator",entity_id:String(row.account_id),name:String(row.display_name||row.username||row.account_id),secondary:row.username?`@${row.username}`:"",normalized_name:normalize(String(row.display_name||row.username||"")),normalized_secondary:normalize(String(row.username||"")),normalized_id:normalize(String(row.canonical_graph_creator_id)),aliases:String(row.tiktok_uid||""),normalized_aliases:normalize(String(row.tiktok_uid||"")),descendants:"",normalized_descendants:"",category:null,category_kind:null,followers:row.follower_count==null?null:Number(row.follower_count),image_url:null,destination_url:`/creators/explore/${encodeURIComponent(String(row.account_id))}`}));
@@ -172,7 +179,7 @@ async function candidateRows(db: D1Database, query: string, type: CommerceSearch
       OR normalized_id LIKE ?2
       OR normalized_aliases LIKE ?2
       OR normalized_descendants LIKE ?2
-    ) ${typeClause}
+    ) AND ${visibleSearchEntity} ${typeClause}
   `).bind(...parameters);
   return (await statement.all<SearchEntityRow>()).results;
 }

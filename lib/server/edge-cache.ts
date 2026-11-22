@@ -4,12 +4,14 @@ type CloudflareCacheStorage = CacheStorage & { default?: Cache };
 
 export async function edgeCachedJson<T>(
   request: Request,
-  options: { edgeTtlSeconds: number; browserTtlSeconds?: number; staleWhileRevalidateSeconds?: number },
+  options: { edgeTtlSeconds: number; browserTtlSeconds?: number; staleWhileRevalidateSeconds?: number; cacheVersion?: string },
   load: () => Promise<T>,
 ) {
   const startedAt = performance.now();
   const cache = (globalThis.caches as CloudflareCacheStorage | undefined)?.default;
-  const cacheKey = new Request(normalizedCacheUrl(request.url), { method: "GET" });
+  const cacheUrl = new URL(normalizedCacheUrl(request.url));
+  if (options.cacheVersion) cacheUrl.searchParams.set("_cache_version", options.cacheVersion);
+  const cacheKey = new Request(cacheUrl, { method: "GET" });
 
   if (cache) {
     const cached = await cache.match(cacheKey);

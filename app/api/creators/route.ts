@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
   }
   const classification = classificationRequest.category;
   const heatmapCategory = !classification && !classificationIdsRequest.categories.length && isCommerceHeatmapCategory(requestedHeatmapCategory) ? requestedHeatmapCategory : null;
-  return edgeCachedJson(request, { edgeTtlSeconds: 300 }, () => request.nextUrl.searchParams.get("view") === "trending"
+  return edgeCachedJson(request, { edgeTtlSeconds: 300, cacheVersion: "creator-visibility-1" }, () => request.nextUrl.searchParams.get("view") === "trending"
     ? getTrendingCreators(category)
     : classificationIdsRequest.categories.length
       ? getClassificationCreatorPage(classificationIdsRequest.categories.map((category) => category.id), page, pageSize)

@@ -1,4 +1,5 @@
 import "server-only";
+import { suppressedCreator } from "@/lib/server/creator-visibility";
 
 import { unstable_cache } from "next/cache";
 import creatorIdentityData from "@/data/commerce-shop-creator-identity.json";
@@ -68,6 +69,7 @@ export async function getTrendingShops(categoryIds: string[] | null, window: Sho
 export async function getCreatorPage(category: ScreenerCategory, page: number, pageSize: number, heatmapCategory: string | null = null, preferMaster = true): Promise<CreatorScreenerResponse> {
   const database = getCommerceDatabase();
   const safePageSize = Math.min(100, Math.max(1, Math.floor(pageSize) || 100));
+  const visibleCreator = `cr.creator_id <> '${suppressedCreator.tiktokUid}' AND lower(COALESCE(cr.handle, '')) <> '${suppressedCreator.handle}'`;
   if (preferMaster && category === "All" && !heatmapCategory) {
     const master = await getCreatorMasterPage(page, "", safePageSize, "gmv");
     const accountIds = master.creators.map((creator) => String(creator.accountId));
@@ -139,13 +141,14 @@ export async function getCreatorPage(category: ScreenerCategory, page: number, p
   const categoryJoin = category === "All" ? "" : "JOIN creator_categories cc ON cc.creator_id = cr.creator_id AND cc.category = ?";
   const heatmapJoin = heatmapCategory ? "JOIN creator_heatmap_affiliations ch ON ch.creator_id = cr.creator_id AND ch.category = ?" : "";
   const parameters = [...(category === "All" ? [] : [category]), ...(heatmapCategory ? [heatmapCategory] : [])];
-  const total = Number((await database.prepare(`SELECT count(*) AS count FROM creator_records cr ${categoryJoin} ${heatmapJoin}`).bind(...parameters).first<{ count: number }>())?.count ?? 0);
+  const total = Number((await database.prepare(`SELECT count(*) AS count FROM creator_records cr ${categoryJoin} ${heatmapJoin} WHERE ${visibleCreator}`).bind(...parameters).first<{ count: number }>())?.count ?? 0);
   const totalPages = Math.max(1, Math.ceil(total / safePageSize));
   const safePage = Math.min(Math.max(1, Math.floor(page) || 1), totalPages);
   const start = (safePage - 1) * safePageSize;
   const [recordsResult, countResult, metadataResult] = await Promise.all([
     database.prepare(`
       SELECT cr.* FROM creator_records cr ${categoryJoin} ${heatmapJoin}
+      WHERE ${visibleCreator}
       ORDER BY cr.source_index, cr.creator_id LIMIT ? OFFSET ?
     `).bind(...parameters, safePageSize, start).all<CreatorRecord>(),
     database.prepare("SELECT category, count(*) AS count FROM creator_categories GROUP BY category").all<{ category: CommerceNavigationCategoryName; count: number }>(),
@@ -181,7 +184,10 @@ export async function getClassificationCreatorPage(classificationId: string | re
   const safePageSize = Math.min(100, Math.max(1, Math.floor(pageSize) || 25));
   if (!ids.length) return { creators: [], categoryCounts: {}, page: 1, pageSize: safePageSize, total: 0, totalPages: 1, snapshotTimestamp: "" };
   const classificationIds = ids.map(sqlCategoryId).join(",");
-  const total = Number((await database.prepare(`SELECT count(DISTINCT COALESCE('tiktok:'||NULLIF(tiktok_uid,''),graph_creator_id)) count FROM classification_creators WHERE visible_classification_id IN (${classificationIds})`).first<{count:number}>())?.count ?? 0);
+  const visiblePredicate = `c.graph_creator_id <> '${suppressedCreator.graphId}'
+    AND COALESCE(c.tiktok_uid, '') <> '${suppressedCreator.tiktokUid}'
+    AND lower(COALESCE(c.handle, '')) <> '${suppressedCreator.handle}'`;
+  const total = Number((await database.prepare(`SELECT count(DISTINCT COALESCE('tiktok:'||NULLIF(tiktok_uid,''),graph_creator_id)) count FROM classification_creators c WHERE visible_classification_id IN (${classificationIds}) AND ${visiblePredicate}`).first<{count:number}>())?.count ?? 0);
   const totalPages = Math.max(1, Math.ceil(total / safePageSize));
   const safePage = Math.min(Math.max(1, page), totalPages);
   const offset = (safePage - 1) * safePageSize;
@@ -194,7 +200,7 @@ export async function getClassificationCreatorPage(classificationId: string | re
       cr.creator_id website_creator_id, cr.*
     FROM classification_creators c
     LEFT JOIN creator_records cr ON cr.creator_id=c.tiktok_uid AND c.tiktok_uid IS NOT NULL AND c.tiktok_uid<>''
-    WHERE c.visible_classification_id IN (${classificationIds})
+    WHERE c.visible_classification_id IN (${classificationIds}) AND ${visiblePredicate}
     GROUP BY evidence_account_key
     ORDER BY recent_count DESC,latest_timestamp DESC,video_count DESC,evidence_account_key
     LIMIT ? OFFSET ?
