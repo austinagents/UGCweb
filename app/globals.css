@@ -3446,14 +3446,40 @@ body {
 
 @media (min-width: 1380px) {
   .topbar .navTabs {
-    gap: 8px;
+    justify-self: stretch;
+    gap: 2px;
   }
 
-  .topbar .navTabs > :is(a, .googleSignupNavTab, .betaNavTab) {
-    gap: 6px;
+  .topbar .navTabs > :is(a, .googleSignupNavTab) {
+    gap: 5px;
     min-height: 36px;
-    padding-inline: 8px;
+    padding-inline: 7px;
     font-size: 13px;
+  }
+
+  .topbar .navTabs > a {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    color: var(--text-secondary);
+  }
+
+  .topbar .navTabs > a.discordNavTab {
+    font-weight: 600;
+  }
+
+  .topbar .navTabs > a.discordNavTab svg {
+    color: #969eff;
+  }
+
+  .topbar .navTabs > a:hover {
+    background: var(--bg-panel);
+    color: var(--text-primary);
+  }
+
+  .topbar .navTabs > .googleSignupNavTab {
+    margin-inline-start: auto;
+    padding-inline: 10px;
   }
 }
 
