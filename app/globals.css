@@ -6419,6 +6419,13 @@ a:hover .toolLogo {
   color: var(--text-secondary);
 }
 
+.commerceCategoryCell > .categoryText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .commerceMetric {
   color: var(--positive);
   font-weight: 760;
@@ -6710,6 +6717,10 @@ a:hover .toolLogo {
   border-color: var(--border-active);
   background: rgba(149, 184, 123, 0.055);
   color: var(--accent-primary);
+}
+
+.commerceCategoryNodes button.inScope {
+  border-color: var(--border-active);
 }
 
 .commerceCategoryNodes button.active {

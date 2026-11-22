@@ -16,6 +16,7 @@ type CreatorTableResult = {
 };
 
 export function CreatorTable({
+  categoryLabel,
   category,
   classificationId = null,
   classificationIds = [],
@@ -24,6 +25,7 @@ export function CreatorTable({
   rowLimit,
 }: {
   category: "All" | CommerceNavigationCategoryName;
+  categoryLabel?: string;
   classificationId?: string | null;
   classificationIds?: readonly string[];
   heatmapCategory?: CommerceChildCategory | null;
@@ -120,7 +122,7 @@ export function CreatorTable({
               <tr key={creator.creator_oecuid}>
                 <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
                 <td data-label="Creator"><CreatorIdentity creator={creator} /></td>
-                <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{displayVerifiedCreatorCategory(creator, renderedCategory)}</span></td>
+                <td data-label="Category"><span className="categoryCell commerceCategoryCell" title={matchedCreatorCategoryNames(creator).join(" · ") || displayCreatorCategory(creator, renderedCategory)}><span className="categoryDot" /><span className="categoryText">{categoryLabel ?? displayVerifiedCreatorCategory(creator, renderedCategory)}</span></span></td>
                 <td data-label="30D GMV"><strong className="commerceMetric">{formatCreatorGmv(creator)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience">{formatAudience(creator)}</span></td>
                 <td data-label="Units Sold">{creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold)}</td>
@@ -144,11 +146,11 @@ export function CreatorTable({
   );
 }
 
-function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, page: number) {
+export function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, page: number) {
   return `creators:v5:${category}:${classificationId ?? "none"}:${classificationIds}:${heatmapCategory ?? "none"}:${page}`;
 }
 
-function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, page: number) {
+export function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, page: number) {
   const params = new URLSearchParams({ category, page: String(page), pageSize: "25", release: "graph-ui-v3" });
   if (category === "All" && !classificationId && !heatmapCategory) params.set("population", "master-v2");
   if (classificationId) params.set("classification_id", classificationId);
@@ -180,17 +182,16 @@ function displayCreatorCategory(creator: CreatorListRow, selectedCategory: "All"
   return creator.categoryMemberships[0] ?? "—";
 }
 
-function displayVerifiedCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | CommerceNavigationCategoryName) {
-  const matchedNames = [...new Set((creator.classificationEvidence?.matchedClassificationIds ?? [])
+function matchedCreatorCategoryNames(creator: CreatorListRow) {
+  return [...new Set((creator.classificationEvidence?.matchedClassificationIds ?? [])
     .map((id) => visibleClassificationById(id)?.name)
     .filter((name): name is string => Boolean(name)))];
-  if (matchedNames.length) return summarizeClassificationNames(matchedNames);
-  return displayCreatorCategory(creator, selectedCategory);
 }
 
-function summarizeClassificationNames(names: string[]) {
-  if (names.length <= 2) return names.join(" · ");
-  return `${names.slice(0, 2).join(" · ")} +${names.length - 2}`;
+function displayVerifiedCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | CommerceNavigationCategoryName) {
+  const matchedNames = matchedCreatorCategoryNames(creator);
+  if (matchedNames.length) return matchedNames.length === 1 ? matchedNames[0] : `${matchedNames[0]} +${matchedNames.length - 1}`;
+  return displayCreatorCategory(creator, selectedCategory);
 }
 
 function formatCreatorGmv(creator: CreatorListRow) {

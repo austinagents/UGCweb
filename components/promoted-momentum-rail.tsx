@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { loadCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
-import type { CommerceNavigationCategoryName } from "@/lib/commerce-categories";
-import type { CreatorTrendingResponse, CreatorTrendingRow } from "@/lib/creator-screener";
-import type { TikTokShop } from "@/lib/types";
+import { creatorQueryKey, creatorQueryUrl } from "@/components/creator-table";
+import { shopQueryKey, shopQueryUrl } from "@/components/shop-table";
+import type { CommerceChildCategory, CommerceNavigationCategoryName } from "@/lib/commerce-categories";
+import type { CreatorScreenerResponse, CreatorTrendingResponse, CreatorTrendingRow } from "@/lib/creator-screener";
+import type { TikTokShop, TikTokShopsResponse } from "@/lib/types";
 
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 type TrendingShopsResponse = { shops: TikTokShop[] };
@@ -17,10 +19,40 @@ function DiscoverySlotName({ name }: { name: string }) {
   return <span>{name.toUpperCase()}</span>;
 }
 
-export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mode?: "shops" | "creators"; category?: "All" | CommerceNavigationCategoryName }) {
+export function PromotedMomentumRail({
+  mode, category, shopCategoryId, classificationId, classificationIds, heatmapCategory,
+}: {
+  mode: "shops" | "creators";
+  category: "All" | CommerceNavigationCategoryName;
+  shopCategoryId: string;
+  classificationId: string | null;
+  classificationIds: readonly string[];
+  heatmapCategory: CommerceChildCategory | null;
+}) {
   const [shops, setShops] = useState<TikTokShop[]>([]);
   const [creators, setCreators] = useState<CreatorTrendingRow[]>([]);
   const discoveryCandidate = discoveryShopForDay(shops);
+  const classificationKey = classificationIds.join(",");
+  const scoped = Boolean(classificationId || classificationKey || heatmapCategory);
+  const unavailable = Boolean(heatmapCategory && !classificationId && !classificationKey);
+  const scopedKey = mode === "creators"
+    ? creatorQueryKey(category, classificationId, classificationKey, heatmapCategory, 1)
+    : shopQueryKey(shopCategoryId, classificationId, classificationKey, heatmapCategory, "30d", "total_gmv", 1);
+  const scopedUrl = mode === "creators"
+    ? creatorQueryUrl(category, classificationId, classificationKey, heatmapCategory, 1)
+    : shopQueryUrl(shopCategoryId, classificationId, classificationKey, heatmapCategory, "30d", "total_gmv", 1);
+  const [scopedResponse, setScopedResponse] = useState<{ key: string; data: CreatorScreenerResponse | TikTokShopsResponse } | null>(null);
+
+  useEffect(() => {
+    if (!scoped || unavailable) return;
+    let cancelled = false;
+    const cached = readCommerceQuery<CreatorScreenerResponse | TikTokShopsResponse>(scopedKey);
+    if (cached) setScopedResponse({ key: scopedKey, data: cached.data });
+    loadCommerceQuery<CreatorScreenerResponse | TikTokShopsResponse>(scopedKey, scopedUrl, cached?.stale ?? false)
+      .then((data) => { if (!cancelled) setScopedResponse({ key: scopedKey, data }); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [scoped, unavailable, scopedKey, scopedUrl]);
 
   useEffect(() => {
     let cancelled = false;
@@ -37,7 +69,7 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
   }, [mode]);
 
   useEffect(() => {
-    if (mode !== "creators") return;
+    if (mode !== "creators" || scoped) return;
     let cancelled = false;
     const key = `creators:trending:${category}`;
     const url = `/api/creators?view=trending&category=${encodeURIComponent(category)}`;
@@ -50,10 +82,13 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
         if (!cancelled && !cached) setCreators([]);
       });
     return () => { cancelled = true; };
-  }, [category, mode]);
+  }, [category, mode, scoped]);
 
-  const railItems = shops.length > 0 ? [...shops, ...shops] : [];
-  const creatorRailItems = creators.length > 0 ? [...creators, ...creators] : [];
+  const currentScope = scopedResponse?.key === scopedKey ? scopedResponse.data : null;
+  const railShops = scoped ? currentScope && "shops" in currentScope ? currentScope.shops.slice(0, 8) : [] : shops;
+  const railCreators = scoped ? currentScope && "creators" in currentScope ? currentScope.creators.slice(0, 8) : [] : creators;
+  const railItems = [...railShops, ...railShops];
+  const creatorRailItems = [...railCreators, ...railCreators];
 
   return (
     <section className="promotedRail" aria-label={`Trending TikTok ${mode === "shops" ? "Shops" : "Creators"}`} aria-busy={mode === "shops" && shops.length === 0}>
@@ -72,7 +107,7 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
       <div className="railViewport">
         <div className={`railTrack ${mode === "creators" && creatorRailItems.length === 0 ? "railEmptyTrack" : ""}`}>
           {mode === "creators" ? creatorRailItems.length > 0 ? creatorRailItems.map((creator, index) => {
-            const itemRank = index % creators.length;
+            const itemRank = index % railCreators.length;
             const handle = creator.handle.replace(/^@/, "");
             const displayName = creator.nickname || `@${handle}`;
             return (
@@ -86,7 +121,7 @@ export function PromotedMomentumRail({ mode = "shops", category = "All" }: { mod
           }) : (
             <div className="railItem creatorRailEmpty"><strong>No collected creators in {category === "All" ? "this view" : category}</strong></div>
           ) : railItems.length > 0 ? railItems.map((shop, index) => {
-            const itemRank = index % shops.length;
+            const itemRank = index % railShops.length;
             const itemClassName = `railItem${itemRank < 3 ? " leader" : ""}`;
             const category = categoryContext(shop.shop_name, shop.category_name);
             const content = (

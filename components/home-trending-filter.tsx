@@ -20,14 +20,23 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
   const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>(initialNavigationCategory?.name ?? "All");
   const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("30d");
   const [heatmapCategory, setHeatmapCategory] = useState<CommerceChildCategory | null>(isCommerceHeatmapCategory(initialHeatmapCategory ?? null) ? initialHeatmapCategory as CommerceChildCategory : null);
-  const shopCategoryIds = commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds ?? [];
+  const shopCategory = commerceNavigationCategories.find((category) => category.key === shopCategoryKey);
+  const shopCategoryIds = shopCategory?.categoryIds ?? [];
   const creatorCategoryIds = commerceNavigationCategories.find((category) => category.name === creatorCategory)?.categoryIds ?? [];
   const mapClassificationIds = heatmapCategory ? commerceHeatmapClassificationIds[heatmapCategory] : null;
   const shopClassification = classificationFilter(shopCategoryIds, mapClassificationIds);
   const creatorClassification = classificationFilter(creatorCategoryIds, mapClassificationIds);
+  const mapScopeIds = heatmapCategory ? [] : mode === "shops" ? shopCategoryIds : creatorCategoryIds;
+  const selectedCategoryName = heatmapCategory ?? (mode === "shops" ? shopCategory?.name : creatorCategory);
   return (
     <>
-      <PromotedMomentumRail mode={mode} category={creatorCategory} />
+      <PromotedMomentumRail
+        mode={mode}
+        category={creatorCategory}
+        shopCategoryId={shopCategoryIds.join(",") || "all"}
+        heatmapCategory={heatmapCategory}
+        {...(mode === "shops" ? shopClassification : creatorClassification)}
+      />
 
       <nav className="screenTabs" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category filters`}>
         {([{ key: "all", name: "All", categoryIds: [] }, ...commerceNavigationCategories]).map((category) => (
@@ -61,8 +70,8 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
           {mapClassificationIds?.length === 0 ? (
             <p className="creatorTableStatus shopPagination" role="status">No verified graph classification is available for {heatmapCategory}.</p>
           ) : <>
-          <div hidden={mode !== "shops"}><ShopTable categoryId={shopCategoryIds.join(",") || "all"} {...shopClassification} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
-          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} {...creatorClassification} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
+          <div hidden={mode !== "shops"}><ShopTable categoryLabel={heatmapCategory ?? shopCategory?.name} categoryId={shopCategoryIds.join(",") || "all"} {...shopClassification} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
+          <div hidden={mode !== "creators"}><CreatorTable categoryLabel={heatmapCategory ?? (creatorCategory === "All" ? undefined : creatorCategory)} category={creatorCategory} {...creatorClassification} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
           </>}
         </div>
         <aside className="homeRail">
@@ -70,12 +79,13 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
             <div className="panelHeader">
               <div>
                 <h2>Category Map</h2>
-                <small>TikTok {mode === "shops" ? "Shop" : "Creator"} taxonomy</small>
+                <small>{selectedCategoryName && selectedCategoryName !== "All" ? selectedCategoryName : `TikTok ${mode === "shops" ? "Shop" : "Creator"} taxonomy`}</small>
               </div>
             </div>
             <CommerceCategoryMap
               mode={mode}
               activeCategory={heatmapCategory}
+              scopeIds={mapScopeIds}
               onSelect={setHeatmapCategory}
             />
           </section>

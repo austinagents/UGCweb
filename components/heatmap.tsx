@@ -1,3 +1,5 @@
+import { commerceHeatmapClassificationIds } from "@/lib/commerce-classification-map";
+import { getPartnerlinksVisibleCategory } from "@/lib/partnerlinks-taxonomy";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import {
@@ -96,17 +98,22 @@ const commerceCategoryIcons: Record<string, LucideIcon> = {
 export function CommerceCategoryMap({
   mode = "shops",
   activeCategory,
+  scopeIds = [],
   onSelect
 }: {
   mode?: "shops" | "creators";
   activeCategory: CommerceChildCategory | null;
+  scopeIds?: readonly string[];
   onSelect: (category: CommerceChildCategory) => void;
 }) {
   return (
     <div className="commerceCategoryMap" aria-label={`TikTok ${mode === "shops" ? "Shop" : "Creator"} category map`}>
       {commerceCategoryGroups.map((group) => {
         const Icon = commerceCategoryIcons[group.name];
-        const groupActive = (group.children as readonly CommerceChildCategory[]).includes(activeCategory as CommerceChildCategory);
+        const isInScope = (category: CommerceChildCategory) => commerceHeatmapClassificationIds[category].some(
+          (id) => getPartnerlinksVisibleCategory(id)?.path.some((ancestor) => scopeIds.includes(ancestor)),
+        );
+        const groupActive = group.children.some((category) => activeCategory === category || isInScope(category));
 
         return (
           <section className={`commerceCategoryCluster ${groupActive ? "active" : ""}`} key={group.name}>
@@ -117,7 +124,8 @@ export function CommerceCategoryMap({
             <div className="commerceCategoryNodes">
               {group.children.map((category) => (
                 <button
-                  className={activeCategory === category ? "active" : ""}
+                  className={activeCategory === category ? "active" : isInScope(category) ? "inScope" : ""}
+                  aria-pressed={activeCategory === category}
                   type="button"
                   onClick={() => onSelect(category)}
                   key={category}

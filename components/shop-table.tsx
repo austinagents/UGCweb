@@ -11,7 +11,7 @@ import type { CommerceWatchlistItem } from "@/lib/commerce-watchlist";
 
 type ShopTableResult = { scope: string; data: TikTokShopsResponse };
 
-export function ShopTable({ categoryId, classificationId = null, classificationIds = [], heatmapCategory = null, window, metric, active = true, rowLimit }: { categoryId: string | null; classificationId?: string | null; classificationIds?: readonly string[]; heatmapCategory?: CommerceChildCategory | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
+export function ShopTable({ categoryLabel, categoryId, classificationId = null, classificationIds = [], heatmapCategory = null, window, metric, active = true, rowLimit }: { categoryLabel?: string; categoryId: string | null; classificationId?: string | null; classificationIds?: readonly string[]; heatmapCategory?: CommerceChildCategory | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
   const classificationIdsKey = classificationIds.join(",");
   const scope = `${categoryId ?? "all"}:${classificationId ?? "none"}:${classificationIdsKey}:${heatmapCategory ?? "none"}:${window}:${metric}`;
   const [pagination, setPagination] = useState({ scope, page: 1 });
@@ -110,7 +110,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
                 <td className="rank" data-label="Rank"><ShopRank shop={shop} /></td>
                 <td data-label="Shop"><ShopIdentity shop={shop} /></td>
                 <td data-label="Category">
-                  <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" />{isGraphFiltered ? matchedShopClassificationNames(shop)[0] ?? displayShopCategory(shop) : displayShopCategory(shop)}</span>
+                  <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" /><span className="categoryText">{categoryLabel ?? (isGraphFiltered ? matchedShopClassificationNames(shop)[0] ?? displayShopCategory(shop) : displayShopCategory(shop))}</span></span>
                 </td>
                 <td data-label={gmvLabel}><strong className="commerceMetric" title={gmvDescription}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
@@ -155,11 +155,11 @@ function scheduleIdleWork(callback: () => void) {
   else globalThis.setTimeout(callback, 250);
 }
 
-function shopQueryKey(categoryId: string | null, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+export function shopQueryKey(categoryId: string | null, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
   return `shops:v2:${categoryId ?? "all"}:${classificationId ?? "none"}:${classificationIds}:${heatmapCategory ?? "none"}:${window}:${metric}:${page}`;
 }
 
-function shopQueryUrl(categoryId: string | null, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+export function shopQueryUrl(categoryId: string | null, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
   const params = new URLSearchParams({ category_id: categoryId ?? "all", window, metric, page: String(page) });
   if (classificationId) params.set("classification_id", classificationId);
   if (classificationIds) params.set("classification_ids", classificationIds);
