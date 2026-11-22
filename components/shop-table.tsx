@@ -66,8 +66,8 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
   const visibleShops = rowLimit ? shops.slice(0, rowLimit) : shops;
   const isGraphFiltered = Boolean(classificationId || classificationIdsKey);
   const selectedClassification = visibleClassificationById(classificationId);
-  const gmvLabel = `${window.toUpperCase()} Shop GMV`;
-  const gmvDescription = "Verified shop revenue for this period is unavailable. The captured data includes category ranks, but no dated revenue totals.";
+  const gmvLabel = `Est. ${window.toUpperCase()} GMV`;
+  const gmvDescription = "Modeled revenue for the entire shop over the selected period.";
   const renderedCategory = data?.categoryName ?? selectedClassification?.name ?? "All Categories";
   const renderedPage = data?.page ?? page;
   const total = data?.total ?? 0;
@@ -112,7 +112,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
                 <td data-label="Category">
                   <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" />{displayShopCategory(shop)}</span>
                 </td>
-                <td data-label={gmvLabel}><strong className="commerceMetric" title={gmvDescription}>{formatCurrencyOrDash(shop.estimate_is_provisional ? null : shop.estimated_gmv)}</strong></td>
+                <td data-label={gmvLabel}><strong className="commerceMetric" title={gmvDescription}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
                 <td data-label="Units Sold" title={unitsSoldEstimateTitle(shop)}>{formatUnits(shop.estimated_units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatFollowers(shop.followers)}</span></td>
@@ -251,7 +251,7 @@ function shopWatchlistItem(shop: TikTokShop, heatmapCategory: CommerceChildCateg
     href: `https://shop.tiktok.com/us/store/partnerlinks/${shop.shop_id}`,
     rank: shop.rank_display_scope === "ugcweb_estimated" ? `#${shop.display_rank ?? "—"}` : shop.current_rank ? `#${shop.current_rank}` : "—",
     category: heatmapCategory ?? shop.category_name,
-    gmv: formatCurrencyOrDash(shop.estimate_is_provisional ? null : shop.estimated_gmv),
+    gmv: formatCurrencyOrDash(shop.estimated_gmv),
     audience: formatShopAudience(shop),
     unitsSold: formatUnits(shop.estimated_units_sold),
     followers: formatFollowers(shop.followers),
