@@ -2792,6 +2792,7 @@ body {
   --boost-lift-height: calc(var(--boost-extra-height) + var(--trending-extension));
   display: grid;
   gap: var(--space-4);
+  margin-bottom: -39px;
 }
 
 .compactStats {
@@ -6103,7 +6104,7 @@ a:hover .toolLogo {
 /* TikTok Shop homepage conversion */
 .commerceScreenerHeader {
   align-items: center;
-  min-height: 40px;
+  min-height: 36px;
   margin-bottom: 10px;
 }
 
