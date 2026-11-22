@@ -36,8 +36,8 @@ export function CreatorTable({
   const scope = `${category}:${classificationId ?? "none"}:${classificationIdsKey}:${heatmapCategory ?? "none"}`;
   const [pagination, setPagination] = useState({ category: scope, page: 1 });
   const [result, setResult] = useState<CreatorTableResult | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [requestLoading, setIsLoading] = useState(true);
+  const [failure, setError] = useState<{ scope: string; message: string } | null>(null);
   const page = pagination.category === scope ? pagination.page : 1;
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export function CreatorTable({
       })
       .catch((cause) => {
         if (cancelled) return;
-        setError(cause instanceof Error ? cause.message : "Failed to load creators.");
+        setError({ scope, message: cause instanceof Error ? cause.message : "Failed to load creators." });
       })
       .finally(() => {
         if (!cancelled) setIsLoading(false);
@@ -72,6 +72,8 @@ export function CreatorTable({
   }, [active, category, classificationId, classificationIdsKey, heatmapCategory, page, scope]);
 
   const data = result?.scope === scope ? result.data : undefined;
+  const error = failure?.scope === scope ? failure.message : null;
+  const isLoading = requestLoading || (!data && !error);
   const creators = data?.creators ?? [];
   const renderedCategory = result?.category ?? category;
   const selectedClassification = visibleClassificationById(classificationId);
@@ -112,9 +114,9 @@ export function CreatorTable({
           <tbody>
             {isLoading && creators.length === 0 ? <CreatorStateRow><strong>Loading creators…</strong></CreatorStateRow> : null}
             {error ? <CreatorStateRow><strong>Unable to load creators.</strong><small>{error}</small></CreatorStateRow> : null}
-            {!isLoading && !error && creators.length === 0 ? (
+            {data && !isLoading && !error && creators.length === 0 ? (
               <CreatorStateRow>
-                <strong>No collected creators in this category yet.</strong>
+                <strong>No creators match this category.</strong>
                 <small>{selectedClassification ? `${selectedClassification.name} has no exact creator-category relationships in the current sample.` : category === "All" ? "No persisted creator records are available." : `${category} does not have mapped creator coverage in the current sample.`}</small>
               </CreatorStateRow>
             ) : null}
