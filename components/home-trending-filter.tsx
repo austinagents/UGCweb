@@ -20,9 +20,11 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
   const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>(initialNavigationCategory?.name ?? "All");
   const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("30d");
   const [heatmapCategory, setHeatmapCategory] = useState<CommerceChildCategory | null>(isCommerceHeatmapCategory(initialHeatmapCategory ?? null) ? initialHeatmapCategory as CommerceChildCategory : null);
-  const selectedNavigationCategory = commerceNavigationCategories.find((category) => mode === "shops" ? category.key === shopCategoryKey : category.name === creatorCategory);
-  const classificationId = heatmapCategory ? null : selectedNavigationCategory?.categoryIds[0] ?? null;
-  const classificationIds = heatmapCategory ? commerceHeatmapClassificationIds[heatmapCategory] : [];
+  const shopCategoryIds = commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds ?? [];
+  const creatorCategoryIds = commerceNavigationCategories.find((category) => category.name === creatorCategory)?.categoryIds ?? [];
+  const mapClassificationIds = heatmapCategory ? commerceHeatmapClassificationIds[heatmapCategory] : null;
+  const shopClassification = classificationFilter(shopCategoryIds, mapClassificationIds);
+  const creatorClassification = classificationFilter(creatorCategoryIds, mapClassificationIds);
   return (
     <>
       <PromotedMomentumRail mode={mode} category={creatorCategory} />
@@ -56,8 +58,8 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
               <button className={(mode === "shops" && shopWindow === "30d") || mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators" || shopWindow === "30d"} onClick={() => mode === "shops" && setShopWindow("30d")}>30D</button>
             </div>
           </div>
-          <div hidden={mode !== "shops"}><ShopTable categoryId={commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds.join(",") ?? "all"} classificationId={classificationId} classificationIds={classificationIds} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
-          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} classificationId={classificationId} classificationIds={classificationIds} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
+          <div hidden={mode !== "shops"}><ShopTable categoryId={shopCategoryIds.join(",") || "all"} {...shopClassification} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
+          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} {...creatorClassification} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
         </div>
         <aside className="homeRail">
           <section className="previewPanel commerceCategoryPanel">
@@ -77,4 +79,12 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
       </section>
     </>
   );
+}
+
+
+function classificationFilter(categoryIds: readonly string[], mapIds: readonly string[] | null) {
+  if (mapIds) return { classificationId: null, classificationIds: mapIds };
+  return categoryIds.length === 1
+    ? { classificationId: categoryIds[0], classificationIds: [] }
+    : { classificationId: null, classificationIds: categoryIds };
 }

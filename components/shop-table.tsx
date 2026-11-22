@@ -64,7 +64,10 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
   const data = result?.data;
   const shops = data?.shops ?? [];
   const visibleShops = rowLimit ? shops.slice(0, rowLimit) : shops;
+  const isGraphFiltered = Boolean(classificationId || classificationIdsKey);
   const selectedClassification = visibleClassificationById(classificationId);
+  const gmvLabel = `${window.toUpperCase()} Shop GMV`;
+  const gmvDescription = "Verified shop revenue for this period is unavailable. The captured data includes category ranks, but no dated revenue totals.";
   const renderedCategory = data?.categoryName ?? selectedClassification?.name ?? "All Categories";
   const renderedPage = data?.page ?? page;
   const total = data?.total ?? 0;
@@ -90,9 +93,9 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
               <th>Rank</th>
               <th>Shop</th>
               <th>Category</th>
-              <th title="UGCWEB estimate; not official TikTok GMV">Est. {window.toUpperCase()} GMV</th>
+              <th title={gmvDescription}>{gmvLabel}</th>
               <th>Audience</th>
-              <th>Units Sold</th>
+              <th title="Modeled from estimated GMV and product prices">Est. Units</th>
               <th>Followers</th>
               <th>Watchlist</th>
             </tr>
@@ -109,7 +112,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
                 <td data-label="Category">
                   <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" />{displayShopCategory(shop)}</span>
                 </td>
-                <td data-label={`Est. ${window.toUpperCase()} GMV`}><strong className="commerceMetric" title={shop.estimate_is_provisional ? "UGCWEB modeled estimate; not official TikTok GMV" : undefined}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
+                <td data-label={gmvLabel}><strong className="commerceMetric" title={gmvDescription}>{formatCurrencyOrDash(shop.estimate_is_provisional ? null : shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
                 <td data-label="Units Sold" title={unitsSoldEstimateTitle(shop)}>{formatUnits(shop.estimated_units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatFollowers(shop.followers)}</span></td>
@@ -121,7 +124,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
       </div>
 
       <div className="shopPagination" aria-label="Shop results pagination">
-        <span>{isLoading ? `Updating ${renderedCategory} shops…` : data?.categoryId === null ? `${total.toLocaleString()} shops · UGCWEB provisional ${window.toUpperCase()} estimate order` : `${total.toLocaleString()} ranking observations · official ${window.toUpperCase()} category ranks`}</span>
+        <span>{isLoading ? `Updating ${renderedCategory} shops…` : isGraphFiltered ? `${total.toLocaleString()} graph-matched shops · ordered by estimated shop-wide ${window.toUpperCase()} GMV` : data?.categoryId === null ? `${total.toLocaleString()} shops · UGCWEB provisional ${window.toUpperCase()} estimate order` : `${total.toLocaleString()} unique shops · official ${window.toUpperCase()} category ranks`}</span>
         <div>
           <button type="button" disabled={isLoading || renderedPage <= 1} onClick={() => setPage(Math.max(1, renderedPage - 1))}>← Previous</button>
           <strong>Page {renderedPage} of {totalPages}</strong>
@@ -248,7 +251,7 @@ function shopWatchlistItem(shop: TikTokShop, heatmapCategory: CommerceChildCateg
     href: `https://shop.tiktok.com/us/store/partnerlinks/${shop.shop_id}`,
     rank: shop.rank_display_scope === "ugcweb_estimated" ? `#${shop.display_rank ?? "—"}` : shop.current_rank ? `#${shop.current_rank}` : "—",
     category: heatmapCategory ?? shop.category_name,
-    gmv: formatCurrencyOrDash(shop.estimated_gmv),
+    gmv: formatCurrencyOrDash(shop.estimate_is_provisional ? null : shop.estimated_gmv),
     audience: formatShopAudience(shop),
     unitsSold: formatUnits(shop.estimated_units_sold),
     followers: formatFollowers(shop.followers),

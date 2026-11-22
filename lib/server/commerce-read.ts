@@ -315,27 +315,34 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
   const parameters = [window];
   const heatmapJoin = heatmapCategory ? "JOIN heatmap_shop_affiliations h ON h.shop_id = se.shop_id AND h.category = ?" : "";
   const heatmapCountJoin = heatmapCategory ? "JOIN heatmap_shop_affiliations h ON h.shop_id = shop_estimates.shop_id AND h.category = ?" : "";
+  const rankCategoryOrder = tiktokShopCategories.map(({ id }, index) => `WHEN '${id}' THEN ${index}`).join(" ");
+  const officialOrder = `CASE ro.category_id ${rankCategoryOrder} ELSE ${tiktokShopCategories.length} END, ro.source_page, ro.source_row_index, ro.shop_id`;
+  const officialFilter = `ro.window = ? AND ro.${rankColumn} IS NOT NULL ${categoryFilter.replaceAll("category_id", "ro.category_id")}`;
+  const multiCategory = (categoryIds?.length ?? 0) > 1;
+  const officialRankings = multiCategory
+    ? `(SELECT ro.*, ROW_NUMBER() OVER (PARTITION BY ro.shop_id ORDER BY ${officialOrder}) AS storefront_row
+        FROM ranking_observations ro WHERE ${officialFilter})`
+    : "ranking_observations";
+  const officialResultFilter = multiCategory ? "ro.storefront_row = 1" : officialFilter;
   const total = heatmapCategory
     ? Number((await database.prepare(`SELECT count(*) AS count FROM shop_estimates ${heatmapCountJoin}`).bind(heatmapCategory).first<{ count: number }>())?.count ?? 0)
     : categoryIds
-    ? Number((await database.prepare(`SELECT count(*) AS count FROM ranking_observations WHERE window = ? AND ${rankColumn} IS NOT NULL ${categoryFilter}`).bind(...parameters).first<{ count: number }>())?.count ?? 0)
+    ? Number((await database.prepare(`SELECT count(DISTINCT ro.shop_id) AS count FROM ranking_observations ro WHERE ${officialFilter}`).bind(...parameters).first<{ count: number }>())?.count ?? 0)
     : Number((await database.prepare("SELECT count(*) AS count FROM shop_estimates").first<{ count: number }>())?.count ?? 0);
   const totalPages = Math.max(1, Math.ceil(total / allShopPageSize));
   const safePage = Math.min(page, totalPages);
   const offset = (safePage - 1) * allShopPageSize;
-  const sourceCategoryIds = tiktokShopCategories.map((category) => category.id);
-  const categoryOrder = sourceCategoryIds.map((categoryId, index) => `WHEN '${categoryId}' THEN ${index}`).join(" ");
   const rows = categoryIds
     ? (await database.prepare(`
         SELECT ro.*, ro.${rankColumn} AS official_rank, ro.${previousRankColumn} AS official_previous_rank,
           ro.${rankChangeColumn} AS official_rank_change, oe.estimated_gmv,
           s.shop_name, s.shop_logo_url, s.storefront_url, s.shop_sold_count,
           s.weighted_median_price, s.followers, s.estimated_30d_gmv
-        FROM ranking_observations ro
+        FROM ${officialRankings} ro
         JOIN shops s ON s.shop_id = ro.shop_id
         LEFT JOIN observation_estimates oe ON oe.shop_id = ro.shop_id AND oe.category_id = ro.category_id AND oe.window = ro.window
-        WHERE ro.window = ? AND ro.${rankColumn} IS NOT NULL ${categoryFilter.replaceAll("category_id", "ro.category_id")}
-        ORDER BY CASE ro.category_id ${categoryOrder} ELSE ${sourceCategoryIds.length} END, ro.source_page, ro.source_row_index, ro.shop_id
+        WHERE ${officialResultFilter}
+        ORDER BY ${officialOrder}
         LIMIT ? OFFSET ?
       `).bind(...parameters, allShopPageSize, offset).all<Record<string, string | number | null>>()).results
     : (await database.prepare(`
