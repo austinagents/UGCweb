@@ -3447,7 +3447,13 @@ body {
 @media (min-width: 1380px) {
   .topbar .navTabs {
     gap: 8px;
-    justify-self: end;
+  }
+
+  .topbar .navTabs > :is(a, .googleSignupNavTab, .betaNavTab) {
+    gap: 6px;
+    min-height: 36px;
+    padding-inline: 8px;
+    font-size: 13px;
   }
 }
 
