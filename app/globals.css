@@ -7801,6 +7801,26 @@ body {
   }
 }
 
+@media (min-width: 1181px) {
+  .homeStack {
+    row-gap: 0;
+    margin-bottom: -23px;
+  }
+
+  .homeStack > :is(.promotedRail, .screenTabs) {
+    margin-bottom: var(--space-4);
+  }
+
+  .homeSecondary > .boostPanel {
+    margin-top: calc(var(--space-4) - var(--boost-lift-height));
+  }
+
+  .primaryTable .tableWrap {
+    height: calc(596px + var(--trending-extension));
+    max-height: calc(596px + var(--trending-extension));
+  }
+}
+
 /* Homepage layout reset must follow the later production overrides above. */
 @media (max-width: 1180px) {
   .homePrimary,
