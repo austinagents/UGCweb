@@ -19,7 +19,6 @@ export const tiktokShopCategories = [
   { id: "600154", name: "Textiles & Soft Furnishings" },
   { id: "600942", name: "Household Appliances" },
   { id: "601152", name: "Womenswear & Underwear" },
-  { id: "601303", name: "Modest Fashion" },
   { id: "601352", name: "Shoes" },
   { id: "601450", name: "Beauty & Personal Care" },
   { id: "601739", name: "Phones & Electronics" },
@@ -40,7 +39,6 @@ export const tiktokShopCategories = [
   { id: "824328", name: "Menswear & Underwear" },
   { id: "824584", name: "Luggage & Bags" },
   { id: "834312", name: "Virtual Products" },
-  { id: "856720", name: "Pre-Owned" },
   { id: "951432", name: "Collectibles" },
   { id: "953224", name: "Jewelry Accessories & Derivatives" },
 ] as const;
@@ -49,11 +47,11 @@ export const defaultTikTokShopCategoryId = "700645";
 
 export const tiktokShopCategoryGroups = [
   { name: "Home & Living", icon: "home", categoryIds: ["600001", "600024", "600154", "600942", "604453"] },
-  { name: "Fashion", icon: "fashion", categoryIds: ["601152", "601303", "601352", "605248", "824328"] },
+  { name: "Fashion", icon: "fashion", categoryIds: ["601152", "601352", "605248", "824328"] },
   { name: "Beauty & Health", icon: "beauty", categoryIds: ["601450", "700645", "602284", "802184", "953224"] },
   { name: "Electronics & Auto", icon: "electronics", categoryIds: ["601739", "601755", "604579", "605196", "604968"] },
   { name: "Family & Hobbies", icon: "hobbies", categoryIds: ["602118", "604206", "801928", "834312", "951432"] },
-  { name: "Food & Outdoors", icon: "outdoors", categoryIds: ["603014", "700437", "824584", "856720"] },
+  { name: "Food & Outdoors", icon: "outdoors", categoryIds: ["603014", "700437", "824584"] },
 ] as const;
 
 export const tiktokShopCategoryDisplayNames: Record<string, string> = {
@@ -94,7 +92,7 @@ export type TikTokShopCategoryName = typeof tiktokShopCategories[number]["name"]
 export const commerceNavigationCategories = [
   { key: "sports-outdoor", name: "Sports & Outdoor", categoryIds: ["603014"] },
   { key: "food-beverages", name: "Food & Beverages", categoryIds: ["700437"] },
-  { key: "womenswear-underwear", name: "Womenswear", categoryIds: ["601152", "601303"] },
+  { key: "womenswear-underwear", name: "Womenswear", categoryIds: ["601152"] },
   { key: "menswear-underwear", name: "Menswear", categoryIds: ["824328"] },
   { key: "shoes", name: "Shoes", categoryIds: ["601352"] },
   { key: "beauty-personal-care", name: "Beauty", categoryIds: ["601450"] },
@@ -110,7 +108,7 @@ export const commerceNavigationCategories = [
   { key: "automotive-motorcycle", name: "Automotive & Motorcycle", categoryIds: ["605196"] },
   { key: "books-audio", name: "Books, Magazines & Audio", categoryIds: ["801928"] },
   { key: "luggage-bags", name: "Luggage & Bags", categoryIds: ["824584"] },
-  { key: "collectibles", name: "Collectibles", categoryIds: ["951432", "856720"] },
+  { key: "collectibles", name: "Collectibles", categoryIds: ["951432"] },
   { key: "virtual-products", name: "Virtual Products", categoryIds: ["834312"] },
   { key: "kids-fashion", name: "Kids", categoryIds: ["802184"] },
   { key: "baby-maternity", name: "Baby & Maternity", categoryIds: ["602284"] },

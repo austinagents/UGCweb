@@ -163,6 +163,8 @@ export type TikTokShop = {
   tiktok_profile_verified_at: string | null;
   category_id: string;
   category_name: string;
+  classification_ids?: string[];
+  matched_classification_ids?: string[];
   window: ShopRankingWindow;
   ranking_metric: ShopRankingMetric;
   display_rank: number | null;

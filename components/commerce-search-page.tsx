@@ -57,7 +57,7 @@ export function CommerceSearchPage({ query, type, page }: { query: string; type:
 }
 
 function FullSearchResult({ result }: { result: CommerceSearchResult }) {
-  const external = result.type !== "category";
+  const external = /^https?:\/\//.test(result.href);
   return (
     <a className="searchResultRow commerceSearchResultRow" href={result.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>
       <div className="searchResultIdentity"><span><SearchAvatar item={result} size={28} /><strong>{result.name}</strong></span><span className={`searchTypeBadge ${result.type}`}>{groupLabel(result.type).slice(0, -1)}</span></div>

@@ -5,13 +5,15 @@ import type { ReactNode } from "react";
 import { loadCommerceQuery, prefetchCommerceQuery, readCommerceQuery } from "@/lib/commerce-query-cache";
 import type { ShopRankingMetric, ShopRankingWindow, TikTokShop, TikTokShopsResponse } from "@/lib/types";
 import type { CommerceChildCategory } from "@/lib/commerce-categories";
+import { visibleClassificationById } from "@/lib/partnerlinks-visible-taxonomy";
 import { CommerceWatchlistButton } from "@/components/commerce-watchlist-button";
 import type { CommerceWatchlistItem } from "@/lib/commerce-watchlist";
 
 type ShopTableResult = { category: string; data: TikTokShopsResponse };
 
-export function ShopTable({ categoryId, heatmapCategory = null, window, metric, active = true, rowLimit }: { categoryId: string | null; heatmapCategory?: CommerceChildCategory | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
-  const scope = `${categoryId ?? "all"}:${heatmapCategory ?? "none"}:${window}:${metric}`;
+export function ShopTable({ categoryId, classificationId = null, classificationIds = [], heatmapCategory = null, window, metric, active = true, rowLimit }: { categoryId: string | null; classificationId?: string | null; classificationIds?: readonly string[]; heatmapCategory?: CommerceChildCategory | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
+  const classificationIdsKey = classificationIds.join(",");
+  const scope = `${categoryId ?? "all"}:${classificationId ?? "none"}:${classificationIdsKey}:${heatmapCategory ?? "none"}:${window}:${metric}`;
   const [pagination, setPagination] = useState({ scope, page: 1 });
   const [result, setResult] = useState<ShopTableResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -20,8 +22,8 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
 
   useEffect(() => {
     let cancelled = false;
-    const key = shopQueryKey(categoryId, heatmapCategory, window, metric, page);
-    const url = shopQueryUrl(categoryId, heatmapCategory, window, metric, page);
+    const key = shopQueryKey(categoryId, classificationId, classificationIdsKey, heatmapCategory, window, metric, page);
+    const url = shopQueryUrl(categoryId, classificationId, classificationIdsKey, heatmapCategory, window, metric, page);
     const cached = readCommerceQuery<TikTokShopsResponse>(key);
     if (cached) {
       setResult({ category: categoryId ?? "All", data: cached.data });
@@ -37,15 +39,15 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
         setResult({ category: categoryId ?? "All", data });
         if (active && page === 1 && !heatmapCategory) {
           scheduleIdleWork(() => {
-            for (const nextWindow of (["1d", "7d", "30d"] as ShopRankingWindow[])) {
+            for (const nextWindow of (["30d"] as ShopRankingWindow[])) {
               if (nextWindow === window) continue;
-              prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, null, nextWindow, metric, 1), shopQueryUrl(categoryId, null, nextWindow, metric, 1));
+              prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, classificationId, classificationIdsKey, null, nextWindow, metric, 1), shopQueryUrl(categoryId, classificationId, classificationIdsKey, null, nextWindow, metric, 1));
             }
           });
         }
         if (active && data.page < data.totalPages) {
           const nextPage = data.page + 1;
-          prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, heatmapCategory, window, metric, nextPage), shopQueryUrl(categoryId, heatmapCategory, window, metric, nextPage));
+          prefetchCommerceQuery<TikTokShopsResponse>(shopQueryKey(categoryId, classificationId, classificationIdsKey, heatmapCategory, window, metric, nextPage), shopQueryUrl(categoryId, classificationId, classificationIdsKey, heatmapCategory, window, metric, nextPage));
         }
       })
       .catch((cause) => {
@@ -57,12 +59,13 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
       });
 
     return () => { cancelled = true; };
-  }, [active, categoryId, heatmapCategory, metric, page, window]);
+  }, [active, categoryId, classificationId, classificationIdsKey, heatmapCategory, metric, page, window]);
 
   const data = result?.data;
   const shops = data?.shops ?? [];
   const visibleShops = rowLimit ? shops.slice(0, rowLimit) : shops;
-  const renderedCategory = data?.categoryName ?? "All Categories";
+  const selectedClassification = visibleClassificationById(classificationId);
+  const renderedCategory = data?.categoryName ?? selectedClassification?.name ?? "All Categories";
   const renderedPage = data?.page ?? page;
   const total = data?.total ?? 0;
   const totalPages = data?.totalPages ?? 1;
@@ -104,7 +107,7 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
                 <td className="rank" data-label="Rank"><ShopRank shop={shop} /></td>
                 <td data-label="Shop"><ShopIdentity shop={shop} /></td>
                 <td data-label="Category">
-                  <span className="categoryCell commerceCategoryCell" title={`TikTok L1 category ${shop.category_id}`}><span className="categoryDot" />{heatmapCategory ?? shop.category_name}</span>
+                  <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" />{displayShopCategory(shop)}</span>
                 </td>
                 <td data-label={`Est. ${window.toUpperCase()} GMV`}><strong className="commerceMetric" title={shop.estimate_is_provisional ? "UGCWEB modeled estimate; not official TikTok GMV" : undefined}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
@@ -129,18 +132,36 @@ export function ShopTable({ categoryId, heatmapCategory = null, window, metric, 
   );
 }
 
+function matchedShopClassificationNames(shop: TikTokShop) {
+  return [...new Set((shop.matched_classification_ids ?? [])
+    .map((id) => visibleClassificationById(id)?.name)
+    .filter((name): name is string => Boolean(name)))];
+}
+
+function displayShopCategory(shop: TikTokShop) {
+  return shop.category_name || "—";
+}
+
+function shopCategoryTitle(shop: TikTokShop) {
+  const names = matchedShopClassificationNames(shop);
+  return names.length ? `Verified classifications: ${names.join(", ")}` : `Source category ${shop.official_category_id}`;
+}
+
 function scheduleIdleWork(callback: () => void) {
   if ("requestIdleCallback" in window) window.requestIdleCallback(callback, { timeout: 1500 });
   else globalThis.setTimeout(callback, 250);
 }
 
-function shopQueryKey(categoryId: string | null, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
-  return `shops:${categoryId ?? "all"}:${heatmapCategory ?? "none"}:${window}:${metric}:${page}`;
+function shopQueryKey(categoryId: string | null, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+  return `shops:v2:${categoryId ?? "all"}:${classificationId ?? "none"}:${classificationIds}:${heatmapCategory ?? "none"}:${window}:${metric}:${page}`;
 }
 
-function shopQueryUrl(categoryId: string | null, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
+function shopQueryUrl(categoryId: string | null, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, window: ShopRankingWindow, metric: ShopRankingMetric, page: number) {
   const params = new URLSearchParams({ category_id: categoryId ?? "all", window, metric, page: String(page) });
+  if (classificationId) params.set("classification_id", classificationId);
+  if (classificationIds) params.set("classification_ids", classificationIds);
   if (heatmapCategory) params.set("heatmap_category", heatmapCategory);
+  params.set("release", "graph-ui-v3");
   return `/api/shops?${params}`;
 }
 

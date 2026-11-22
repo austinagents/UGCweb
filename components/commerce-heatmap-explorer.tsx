@@ -67,7 +67,6 @@ export function CommerceHeatmapExplorer({ markets, sidebarGroups, creatorPool, p
     </section>
   </div>;
 }
-
 function sidebarDetail(groupIndex: number, shop: TikTokShop, index: number) {
   if (groupIndex < 2) return shop.category_name;
   if (groupIndex === 2) return shop.current_rank ? `Product Card rank #${shop.current_rank}` : "Product Card rank unavailable";
@@ -113,3 +112,4 @@ function creatorSignalCount(index: number, bucketCount: number) {
 function initials(name: string | null) {
   return (name ?? "Shop").split(/\s+/).slice(0, 2).map((part) => part[0]).join("").toUpperCase();
 }
+

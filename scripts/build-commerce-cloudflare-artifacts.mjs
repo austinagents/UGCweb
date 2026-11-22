@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { DatabaseSync } from "node:sqlite";
-import { appendFileSync, closeSync, mkdirSync, openSync, readFileSync, writeFileSync, writeSync } from "node:fs";
+import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, writeFileSync, writeSync } from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
@@ -12,6 +12,21 @@ const commerceSources = [
   ["data/tiktok-shop-ranking-observations.sqlite", ["ranking_observations"]],
   ["data/tiktok-shop-gmv-estimates.sqlite", ["calibration_parameters", "model_metadata", "observation_estimates", "shop_estimates"]],
 ];
+
+// Validate every input before opening any output file. This generator writes its
+// outputs incrementally, so failing later would otherwise leave a truncated file
+// that could be mistaken for a usable import artifact.
+const requiredInputs = [
+  ...commerceSources.map(([databasePath]) => databasePath),
+  "data/commerce-search.sqlite",
+  "data/creator-screener.json",
+  "data/commerce-heatmap-affinity-terms.json",
+  "data/commerce-heatmap-shop-affiliations.json",
+];
+const missingInputs = [...new Set(requiredInputs)].filter((relativePath) => !existsSync(path.join(root, relativePath)));
+if (missingInputs.length > 0) {
+  throw new Error(`Missing source artifacts; no outputs were changed:\n${missingInputs.join("\n")}`);
+}
 
 const commerceSchema = exportTables("commerce-schema.sql", commerceSources, false);
 const commerceData = exportTables("commerce-data.sql", commerceSources, true);

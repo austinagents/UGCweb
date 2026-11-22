@@ -6,6 +6,8 @@ import type { CommerceChildCategory, CommerceNavigationCategoryName } from "@/li
 import type { CreatorListRow, CreatorScreenerResponse } from "@/lib/creator-screener";
 import { CommerceWatchlistButton } from "@/components/commerce-watchlist-button";
 import type { CommerceWatchlistItem } from "@/lib/commerce-watchlist";
+import { visibleClassificationById } from "@/lib/partnerlinks-visible-taxonomy";
+import { formatUtcCalendarDate } from "@/lib/utc-date";
 
 type CreatorTableResult = {
   category: "All" | CommerceNavigationCategoryName;
@@ -14,16 +16,21 @@ type CreatorTableResult = {
 
 export function CreatorTable({
   category,
+  classificationId = null,
+  classificationIds = [],
   heatmapCategory = null,
   active = true,
   rowLimit,
 }: {
   category: "All" | CommerceNavigationCategoryName;
+  classificationId?: string | null;
+  classificationIds?: readonly string[];
   heatmapCategory?: CommerceChildCategory | null;
   active?: boolean;
   rowLimit?: number;
 }) {
-  const scope = `${category}:${heatmapCategory ?? "none"}`;
+  const classificationIdsKey = classificationIds.join(",");
+  const scope = `${category}:${classificationId ?? "none"}:${classificationIdsKey}:${heatmapCategory ?? "none"}`;
   const [pagination, setPagination] = useState({ category: scope, page: 1 });
   const [result, setResult] = useState<CreatorTableResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,8 +39,8 @@ export function CreatorTable({
 
   useEffect(() => {
     let cancelled = false;
-    const key = creatorQueryKey(category, heatmapCategory, page);
-    const url = creatorQueryUrl(category, heatmapCategory, page);
+    const key = creatorQueryKey(category, classificationId, classificationIdsKey, heatmapCategory, page);
+    const url = creatorQueryUrl(category, classificationId, classificationIdsKey, heatmapCategory, page);
     const cached = readCommerceQuery<CreatorScreenerResponse>(key, 300_000);
     if (cached) {
       setResult({ category, data: cached.data });
@@ -48,7 +55,7 @@ export function CreatorTable({
         setResult({ category, data });
         if (active && data.page < data.totalPages) {
           const nextPage = data.page + 1;
-          prefetchCommerceQuery<CreatorScreenerResponse>(creatorQueryKey(category, heatmapCategory, nextPage), creatorQueryUrl(category, heatmapCategory, nextPage));
+          prefetchCommerceQuery<CreatorScreenerResponse>(creatorQueryKey(category, classificationId, classificationIdsKey, heatmapCategory, nextPage), creatorQueryUrl(category, classificationId, classificationIdsKey, heatmapCategory, nextPage));
         }
       })
       .catch((cause) => {
@@ -59,15 +66,17 @@ export function CreatorTable({
         if (!cancelled) setIsLoading(false);
       });
     return () => { cancelled = true; };
-  }, [active, category, heatmapCategory, page]);
+  }, [active, category, classificationId, classificationIdsKey, heatmapCategory, page]);
 
   const data = result?.data;
   const creators = data?.creators ?? [];
   const renderedCategory = result?.category ?? category;
+  const selectedClassification = visibleClassificationById(classificationId);
   const renderedPage = data?.page ?? page;
   const pageSize = data?.pageSize ?? 100;
   const total = data?.total ?? 0;
   const totalPages = data?.totalPages ?? 1;
+  const isMasterPopulation = data?.population === "master";
   const firstRank = (renderedPage - 1) * pageSize;
   const setPage = (nextPage: number) => setPagination({ category: scope, page: nextPage });
 
@@ -103,19 +112,19 @@ export function CreatorTable({
             {!isLoading && !error && creators.length === 0 ? (
               <CreatorStateRow>
                 <strong>No collected creators in this category yet.</strong>
-                <small>{category === "All" ? "No persisted creator records are available." : `${category} does not have mapped creator coverage in the current sample.`}</small>
+                <small>{selectedClassification ? `${selectedClassification.name} has no exact creator-category relationships in the current sample.` : category === "All" ? "No persisted creator records are available." : `${category} does not have mapped creator coverage in the current sample.`}</small>
               </CreatorStateRow>
             ) : null}
             {!error && (rowLimit ? creators.slice(0, rowLimit) : creators).map((creator, index) => (
               <tr key={creator.creator_oecuid}>
                 <td className="rank" data-label="Rank">#{firstRank + index + 1}</td>
                 <td data-label="Creator"><CreatorIdentity creator={creator} /></td>
-                <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{heatmapCategory ?? displayCreatorCategory(creator, renderedCategory)}</span></td>
+                <td data-label="Category"><span className="categoryCell commerceCategoryCell"><span className="categoryDot" />{displayVerifiedCreatorCategory(creator, renderedCategory)}</span></td>
                 <td data-label="30D GMV"><strong className="commerceMetric">{formatCreatorGmv(creator)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience">{formatAudience(creator)}</span></td>
                 <td data-label="Units Sold">{creator.units_sold === null ? creator.units_sold_range ?? "—" : formatNumber(creator.units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatNumber(creator.followers)}</span></td>
-                <td data-label="Watchlist"><CommerceWatchlistButton item={creatorWatchlistItem(creator, firstRank + index + 1, heatmapCategory ?? displayCreatorCategory(creator, renderedCategory))} /></td>
+                <td data-label="Watchlist"><CommerceWatchlistButton item={creatorWatchlistItem(creator, firstRank + index + 1, displayVerifiedCreatorCategory(creator, renderedCategory))} /></td>
               </tr>
             ))}
           </tbody>
@@ -123,7 +132,7 @@ export function CreatorTable({
       </div>
 
       <div className="shopPagination creatorTableStatus" aria-label="Creator results status">
-        <span>{isLoading ? `Updating ${category} creators…` : `${total.toLocaleString()} creators · ranked by 30D GMV`}</span>
+        <span>{isLoading ? `Updating ${category} creators…` : isMasterPopulation ? `${total.toLocaleString()} collected creators · complete identity master` : selectedClassification ? `${total.toLocaleString()} verified creators · snapshot activity through ${data?.snapshotTimestamp ? formatUtcCalendarDate(data.snapshotTimestamp) ?? "the graph cutoff" : "the graph cutoff"}` : `${total.toLocaleString()} creators · ranked by 30D GMV`}</span>
         <div>
           <button type="button" disabled={isLoading || renderedPage <= 1} onClick={() => setPage(Math.max(1, renderedPage - 1))}>← Previous</button>
           <strong>Page {renderedPage} of {totalPages}</strong>
@@ -134,18 +143,22 @@ export function CreatorTable({
   );
 }
 
-function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, heatmapCategory: CommerceChildCategory | null, page: number) {
-  return `creators:${category}:${heatmapCategory ?? "none"}:${page}`;
+function creatorQueryKey(category: "All" | CommerceNavigationCategoryName, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, page: number) {
+  return `creators:v5:${category}:${classificationId ?? "none"}:${classificationIds}:${heatmapCategory ?? "none"}:${page}`;
 }
 
-function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, heatmapCategory: CommerceChildCategory | null, page: number) {
-  const params = new URLSearchParams({ category, page: String(page), pageSize: "25" });
+function creatorQueryUrl(category: "All" | CommerceNavigationCategoryName, classificationId: string | null, classificationIds: string, heatmapCategory: CommerceChildCategory | null, page: number) {
+  const params = new URLSearchParams({ category, page: String(page), pageSize: "25", release: "graph-ui-v3" });
+  if (category === "All" && !classificationId && !heatmapCategory) params.set("population", "master-v2");
+  if (classificationId) params.set("classification_id", classificationId);
+  if (classificationIds) params.set("classification_ids", classificationIds);
   if (heatmapCategory) params.set("heatmap_category", heatmapCategory);
   return `/api/creators?${params}`;
 }
 
 function CreatorIdentity({ creator }: { creator: CreatorListRow }) {
   const handle = creator.handle.replace(/^@/, "");
+  if (!handle) return <span className="toolCell shopCell creatorCell"><span className="shopAvatarFallback" aria-hidden="true">{initials(creator.nickname)}</span><span><strong>{creator.nickname}</strong></span></span>;
   return (
     <a className="toolCell shopCell creatorCell" href={`https://www.tiktok.com/@${handle}`} target="_blank" rel="noreferrer">
       <span className="shopAvatarFallback" aria-hidden="true">
@@ -163,7 +176,20 @@ function CreatorStateRow({ children }: { children: ReactNode }) {
 
 function displayCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | CommerceNavigationCategoryName) {
   if (selectedCategory !== "All" && creator.categoryMemberships.includes(selectedCategory)) return selectedCategory;
-  return creator.categoryMemberships[0] ?? "Unmapped";
+  return creator.categoryMemberships[0] ?? "—";
+}
+
+function displayVerifiedCreatorCategory(creator: CreatorListRow, selectedCategory: "All" | CommerceNavigationCategoryName) {
+  const matchedNames = [...new Set((creator.classificationEvidence?.matchedClassificationIds ?? [])
+    .map((id) => visibleClassificationById(id)?.name)
+    .filter((name): name is string => Boolean(name)))];
+  if (matchedNames.length) return summarizeClassificationNames(matchedNames);
+  return displayCreatorCategory(creator, selectedCategory);
+}
+
+function summarizeClassificationNames(names: string[]) {
+  if (names.length <= 2) return names.join(" · ");
+  return `${names.slice(0, 2).join(" · ")} +${names.length - 2}`;
 }
 
 function formatCreatorGmv(creator: CreatorListRow) {

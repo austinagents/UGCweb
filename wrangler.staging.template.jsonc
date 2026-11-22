@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "account_id": "44cc721515baade8fe3514e0e5a1f33b",
+  "name": "partnerlinks-release-candidate-staging",
+  "main": "staging-worker.mjs",
+  "compatibility_date": "2026-10-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS", "run_worker_first": true },
+  "observability": { "enabled": true },
+  "limits": { "cpu_ms": 30000, "subrequests": 50 },
+  "d1_databases": [
+    {
+      "binding": "COMMERCE_DB",
+      "database_name": "partnerlinks-staging-commerce-v1",
+      "database_id": "REPLACE_WITH_STAGING_COMMERCE_DATABASE_ID",
+      "remote": true
+    },
+    {
+      "binding": "SEARCH_DB",
+      "database_name": "partnerlinks-staging-search-v1",
+      "database_id": "REPLACE_WITH_STAGING_SEARCH_DATABASE_ID",
+      "remote": true
+    },
+    {
+      "binding": "CREATOR_DB",
+      "database_name": "partnerlinks-staging-creator-identity-v1",
+      "database_id": "REPLACE_WITH_STAGING_CREATOR_IDENTITY_DATABASE_ID",
+      "remote": true
+    },
+    {
+      "binding": "CREATOR_EVIDENCE_DB",
+      "database_name": "partnerlinks-staging-creator-evidence-v1",
+      "database_id": "REPLACE_WITH_STAGING_CREATOR_EVIDENCE_DATABASE_ID",
+      "remote": true
+    }
+  ]
+}

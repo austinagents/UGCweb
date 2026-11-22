@@ -1,0 +1,220 @@
+{
+  "version": "2026-11-18-v1",
+  "purpose": "PartnerLinks visible taxonomy cutoffs and source-category rollups",
+  "source": {
+    "filename": "TikTokShopTaxonomy(2).csv",
+    "sha256": "7e80d147c9497de48bd3ba88154e9fb255bc4c064fef622398eb0bd8b4e95c83",
+    "category_count": 7201,
+    "l1_root_count": 29
+  },
+  "semantics": {
+    "scope": "User-facing classification hierarchy and read-time/query-time source-category rollup; never prune source taxonomy",
+    "original_category_ids_and_parent_links": "immutable",
+    "visible_categories": "source nodes with level <= effective cutoff within included roots",
+    "rolled_up_descendants": "source nodes deeper than cutoff map to nearest ancestor at cutoff",
+    "hidden_roots": "excluded from PartnerLinks taxonomy UI and rollups; retain original source records; no automatic reassignment",
+    "branch_override": "When descendant is beneath override node, use override cutoff instead of its root cutoff",
+    "naming": "Do not rename source category labels or invent user-facing aliases in this implementation",
+    "mapping_cardinality": "Each source category maps to exactly one visible bucket OR is explicitly UI-excluded"
+  },
+  "root_rules": [
+    {
+      "root_category_id": "605196",
+      "root_category_name": "Automotive & Motorcycle",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "602284",
+      "root_category_name": "Baby & Maternity",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "601450",
+      "root_category_name": "Beauty & Personal Care",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "801928",
+      "root_category_name": "Books, Magazines & Audio",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "951432",
+      "root_category_name": "Collectibles",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "601755",
+      "root_category_name": "Computers & Office Equipment",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "605248",
+      "root_category_name": "Fashion Accessories",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "700437",
+      "root_category_name": "Food & Beverages",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "604453",
+      "root_category_name": "Furniture",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "700645",
+      "root_category_name": "Health",
+      "visibility": "included",
+      "max_visible_level": 4
+    },
+    {
+      "root_category_id": "604968",
+      "root_category_name": "Home Improvement",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "600001",
+      "root_category_name": "Home Supplies",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "600942",
+      "root_category_name": "Household Appliances",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "953224",
+      "root_category_name": "Jewelry Accessories & Derivatives",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "802184",
+      "root_category_name": "Kids' Fashion",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "600024",
+      "root_category_name": "Kitchenware",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "824584",
+      "root_category_name": "Luggage & Bags",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "824328",
+      "root_category_name": "Menswear & Underwear",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "601303",
+      "root_category_name": "Modest Fashion",
+      "visibility": "excluded_from_ui",
+      "max_visible_level": null
+    },
+    {
+      "root_category_id": "602118",
+      "root_category_name": "Pet Supplies",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "601739",
+      "root_category_name": "Phones & Electronics",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "856720",
+      "root_category_name": "Pre-Owned",
+      "visibility": "excluded_from_ui",
+      "max_visible_level": null
+    },
+    {
+      "root_category_id": "601352",
+      "root_category_name": "Shoes",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "603014",
+      "root_category_name": "Sports & Outdoor",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "600154",
+      "root_category_name": "Textiles & Soft Furnishings",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "604579",
+      "root_category_name": "Tools & Hardware",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "604206",
+      "root_category_name": "Toys & Hobbies",
+      "visibility": "included",
+      "max_visible_level": 2
+    },
+    {
+      "root_category_id": "834312",
+      "root_category_name": "Virtual Products",
+      "visibility": "included",
+      "max_visible_level": 3
+    },
+    {
+      "root_category_id": "601152",
+      "root_category_name": "Womenswear & Underwear",
+      "visibility": "included",
+      "max_visible_level": 3
+    }
+  ],
+  "branch_overrides": [
+    {
+      "category_id": "950792",
+      "category_name": "Alternative Medications & Treatments",
+      "root_category_id": "700645",
+      "max_visible_level": 2,
+      "note": "L2 subcategory under Health; override applies to descendants of this node. Health otherwise displays to L4."
+    }
+  ],
+  "expected": {
+    "source_categories": 7201,
+    "source_roots": 29,
+    "ui_roots": 27,
+    "visible_by_level": {
+      "1": 27,
+      "2": 204,
+      "3": 642,
+      "4": 72
+    },
+    "visible_total": 945,
+    "rolled_up_total": 6185,
+    "excluded_from_ui_total": 71,
+    "health_alternative_branch_rows": 8
+  }
+}

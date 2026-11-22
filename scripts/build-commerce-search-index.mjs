@@ -2,16 +2,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { DatabaseSync } from "node:sqlite";
 import creatorData from "../data/creator-screener.json" with { type: "json" };
-import heatmapAffinityTerms from "../data/commerce-heatmap-affinity-terms.json" with { type: "json" };
 import {
-  commerceCategoryGroups,
   commerceNavigationCategories,
   commerceNavigationCategoryForId,
   creatorShopCategories,
-  tiktokShopCategories,
 } from "../lib/commerce-categories.ts";
-import { commerceHeatmapBucketAliases, commerceHeatmapCategories } from "../lib/commerce-heatmap-categories.ts";
-import { normalizeCommerceIdentity, shopLikeCreatorIds } from "../lib/commerce-identity.ts";
+import { visibleClassifications, visibleClassificationSlug } from "../lib/partnerlinks-visible-taxonomy.ts";
+import { shopLikeCreatorIds } from "../lib/commerce-identity.ts";
 
 const root = process.cwd();
 const sourcePath = path.join(root, "data/tiktok-shops.sqlite");
@@ -104,26 +101,13 @@ for (const creator of creators) {
   indexedCreators += 1;
 }
 
-for (const navigation of commerceNavigationCategories) {
-  const sourceAliases = tiktokShopCategories.filter((item) => navigation.categoryIds.some((id) => id === item.id)).map((item) => item.name);
-  const childCategories = commerceHeatmapCategories.filter((child) => creatorShopCategories([child]).includes(navigation.name));
-  const parentAliases = commerceCategoryGroups.filter((group) => creatorShopCategories([group.name]).includes(navigation.name)).map((group) => group.name);
-  const descendants = childCategories.flatMap((child) => [child, ...commerceHeatmapBucketAliases[child], ...(heatmapAffinityTerms[child] ?? [])]);
-  const aliases = unique([navigation.key, ...sourceAliases, ...parentAliases]);
+for (const classification of visibleClassifications) {
+  const descendants = visibleClassifications.filter((item) => item.path.includes(classification.id) && item.id !== classification.id).map((item) => item.name);
+  const ancestors = classification.path.slice(0, -1).map((id) => visibleClassifications.find((item) => item.id === id)?.name).filter(Boolean);
   insert.run(
-    "category", `navigation:${navigation.key}`, navigation.name, "Navigation category", normalize(navigation.name), normalize("Navigation category"),
-    normalize(navigation.key), aliases.join(" | "), normalize(aliases.join(" ")), unique(descendants).join(" | "), normalize(unique(descendants).join(" ")),
-    navigation.name, navigation.key, "navigation", null, null, `/?mode=shops&category=${encodeURIComponent(navigation.key)}`,
-  );
-}
-
-for (const category of commerceHeatmapCategories) {
-  const aliases = unique([...commerceHeatmapBucketAliases[category], ...(heatmapAffinityTerms[category] ?? [])]);
-  const navigationCategory = creatorShopCategories([category])[0];
-  insert.run(
-    "category", `heatmap:${slugify(category)}`, category, "Category Map", normalize(category), normalize("Category Map"),
-    normalize(slugify(category)), aliases.join(" | "), normalize(aliases.join(" ")), aliases.join(" | "), normalize(aliases.join(" ")),
-    navigationCategory, slugify(category), "heatmap", null, null, `/?mode=shops&heatmap_category=${encodeURIComponent(category)}`,
+    "category", `classification:${classification.id}`, classification.name, `L${classification.level} classification`, normalize(classification.name), normalize(`L${classification.level} classification`),
+    classification.id, ancestors.join(" | "), normalize(ancestors.join(" ")), descendants.join(" | "), normalize(descendants.join(" ")),
+    classification.name, classification.id, "classification", null, null, `/heatmap/${visibleClassificationSlug(classification)}`,
   );
 }
 
@@ -136,8 +120,7 @@ const metadataRows = {
   indexed_shop_count: String(shops.length),
   indexed_creator_count: String(indexedCreators),
   excluded_shop_like_creator_count: String(excludedCreatorIds.size),
-  indexed_navigation_category_count: String(commerceNavigationCategories.length),
-  indexed_heatmap_category_count: String(commerceHeatmapCategories.length),
+  indexed_visible_classification_count: String(visibleClassifications.length),
 };
 for (const [key, value] of Object.entries(metadataRows)) metadata.run(key, value);
 database.exec("COMMIT");
@@ -172,4 +155,3 @@ function normalize(value) { return clean(value).toLowerCase().normalize("NFKD").
 function nullableNumber(value) { return value === null || value === undefined || !Number.isFinite(Number(value)) ? null : Number(value); }
 function splitCategoryIds(value) { return clean(value).split("|").map((item) => item.trim()).filter(Boolean); }
 function unique(values) { return [...new Set(values.map(clean).filter(Boolean))]; }
-function slugify(value) { return normalizeCommerceIdentity(value).replace(/([a-z])([0-9])/g, "$1-$2") || normalize(value).replace(/\s+/g, "-"); }

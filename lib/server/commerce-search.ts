@@ -1,7 +1,7 @@
 import "server-only";
 
 import type { CommerceSearchResponse, CommerceSearchResult, CommerceSearchResultType } from "@/lib/commerce-search";
-import { getSearchDatabase } from "@/lib/server/cloudflare-d1";
+import { getCreatorDatabase, getSearchDatabase } from "@/lib/server/cloudflare-d1";
 
 type SearchEntityRow = {
   entity_type: CommerceSearchResultType;
@@ -16,7 +16,7 @@ type SearchEntityRow = {
   descendants: string;
   normalized_descendants: string;
   category: string | null;
-  category_kind: "navigation" | "heatmap" | null;
+  category_kind: "navigation" | "heatmap" | "classification" | null;
   followers: number | null;
   image_url: string | null;
   destination_url: string;
@@ -63,8 +63,8 @@ export async function searchCommerce(input: {
   pageSize: number;
   commandMode?: boolean;
 }): Promise<CommerceSearchResponse> {
-  const query = input.query.trim();
-  const normalizedQuery = normalize(query);
+  const query = input.query.trim().slice(0, 100);
+  const normalizedQuery = normalize(query).slice(0, 48);
   const pageSize = Math.min(50, Math.max(1, Math.floor(input.pageSize) || 20));
   const requestedPage = Math.max(1, Math.floor(input.page) || 1);
   const db = getSearchDatabase();
@@ -74,7 +74,11 @@ export async function searchCommerce(input: {
     return emptySearchResponse(query, pageSize, metadata);
   }
 
-  const [rows, metadata] = await Promise.all([candidateRows(db, normalizedQuery, input.type), pendingMetadata]);
+  const [legacyRows, masterRows, metadata] = await Promise.all([candidateRows(db, normalizedQuery, input.type), input.type === "shop" || input.type === "category" ? [] : candidateMasterCreators(normalizedQuery), pendingMetadata]);
+  // Prefer the canonical master result when an older curated row resolves to
+  // the same exact TikTok UID. The curated row still supplies ranking data on
+  // the creator detail page; it must not create a duplicate search identity.
+  const rows = dedupeRows([...masterRows, ...legacyRows]);
   const empty = emptySearchResponse(query, pageSize, metadata);
   const ranked = rows
     .map((row) => ({ row, relevance: relevanceFor(row, query, normalizedQuery) }))
@@ -108,6 +112,32 @@ export async function searchCommerce(input: {
     totalPages,
     groupCounts,
   };
+}
+
+async function candidateMasterCreators(query:string):Promise<SearchEntityRow[]> {
+  const rows=(await getCreatorDatabase().prepare(`
+    WITH matches AS (
+      SELECT account_id FROM creator_accounts WHERE normalized_username>=? AND normalized_username<?
+      UNION
+      SELECT account_id FROM creator_accounts WHERE normalized_display_name>=? AND normalized_display_name<?
+    )
+    SELECT account_id,canonical_graph_creator_id,username,tiktok_uid,display_name,follower_count,profile_url
+    FROM matches JOIN creator_accounts USING(account_id)
+    ORDER BY CASE WHEN normalized_username=? THEN 0 ELSE 1 END,follower_count DESC,canonical_graph_creator_id LIMIT 200
+  `).bind(query,`${query}\uffff`,query,`${query}\uffff`,query).all<Record<string,string|number|null>>()).results;
+  return rows.map((row)=>({entity_type:"creator",entity_id:String(row.account_id),name:String(row.display_name||row.username||row.account_id),secondary:row.username?`@${row.username}`:"",normalized_name:normalize(String(row.display_name||row.username||"")),normalized_secondary:normalize(String(row.username||"")),normalized_id:normalize(String(row.canonical_graph_creator_id)),aliases:String(row.tiktok_uid||""),normalized_aliases:normalize(String(row.tiktok_uid||"")),descendants:"",normalized_descendants:"",category:null,category_kind:null,followers:row.follower_count==null?null:Number(row.follower_count),image_url:null,destination_url:`/creators/explore/${encodeURIComponent(String(row.account_id))}`}));
+}
+function dedupeRows(rows: SearchEntityRow[]) {
+  const seen = new Set<string>();
+  return rows.filter((row) => {
+    const keys = [`${row.entity_type}:${normalize(row.entity_id)}`];
+    if (row.entity_type === "creator") {
+      keys.push(...row.normalized_aliases.split(" ").filter(Boolean).map((alias) => `creator:${alias}`));
+    }
+    if (keys.some((key) => seen.has(key))) return false;
+    keys.forEach((key) => seen.add(key));
+    return true;
+  });
 }
 
 function emptySearchResponse(query: string, pageSize: number, metadata: Record<string, string>) {

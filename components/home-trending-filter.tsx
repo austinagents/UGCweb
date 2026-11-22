@@ -7,6 +7,7 @@ import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ShopTable } from "@/components/shop-table";
 import { commerceNavigationCategories, type CommerceChildCategory, type CommerceNavigationCategoryName } from "@/lib/commerce-categories";
 import { isCommerceHeatmapCategory } from "@/lib/commerce-heatmap-categories";
+import { commerceHeatmapClassificationIds } from "@/lib/commerce-classification-map";
 import type { ShopRankingWindow } from "@/lib/types";
 
 type ScreenerCategory = "All" | CommerceNavigationCategoryName;
@@ -17,8 +18,11 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
   const [mode, setMode] = useState<ScreenerMode>(initialMode === "creators" ? "creators" : "shops");
   const [shopCategoryKey, setShopCategoryKey] = useState<string>(initialNavigationCategory?.key ?? "all");
   const [creatorCategory, setCreatorCategory] = useState<ScreenerCategory>(initialNavigationCategory?.name ?? "All");
-  const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("7d");
+  const [shopWindow, setShopWindow] = useState<ShopRankingWindow>("30d");
   const [heatmapCategory, setHeatmapCategory] = useState<CommerceChildCategory | null>(isCommerceHeatmapCategory(initialHeatmapCategory ?? null) ? initialHeatmapCategory as CommerceChildCategory : null);
+  const selectedNavigationCategory = commerceNavigationCategories.find((category) => mode === "shops" ? category.key === shopCategoryKey : category.name === creatorCategory);
+  const classificationId = heatmapCategory ? null : selectedNavigationCategory?.categoryIds[0] ?? null;
+  const classificationIds = heatmapCategory ? commerceHeatmapClassificationIds[heatmapCategory] : [];
   return (
     <>
       <PromotedMomentumRail mode={mode} category={creatorCategory} />
@@ -46,14 +50,14 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
                 <button className={mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators"} onClick={() => setMode("creators")}>Creators</button>
               </span>
             </h1>
-            <div className="timeframeToggle compact commerceTimeframe" aria-label={`${mode === "shops" ? "Shop" : "Creator"} performance timeframe`}>
-              <button className={mode === "shops" && shopWindow === "1d" ? "active" : ""} type="button" disabled={mode === "creators"} onClick={() => setShopWindow("1d")} title="Yesterday">1D</button>
-              <button className={mode === "shops" && shopWindow === "7d" ? "active" : ""} type="button" disabled={mode === "creators"} onClick={() => setShopWindow("7d")}>7D</button>
+            <div hidden className="timeframeToggle compact commerceTimeframe" aria-label={`${mode === "shops" ? "Shop" : "Creator"} performance timeframe`}>
+              <button hidden className={mode === "shops" && shopWindow === "1d" ? "active" : ""} type="button" disabled={mode === "creators"} onClick={() => setShopWindow("1d")} title="Yesterday">1D</button>
+              <button hidden className={mode === "shops" && shopWindow === "7d" ? "active" : ""} type="button" disabled={mode === "creators"} onClick={() => setShopWindow("7d")}>7D</button>
               <button className={(mode === "shops" && shopWindow === "30d") || mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators" || shopWindow === "30d"} onClick={() => mode === "shops" && setShopWindow("30d")}>30D</button>
             </div>
           </div>
-          <div hidden={mode !== "shops"}><ShopTable categoryId={commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds.join(",") ?? "all"} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
-          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
+          <div hidden={mode !== "shops"}><ShopTable categoryId={commerceNavigationCategories.find((category) => category.key === shopCategoryKey)?.categoryIds.join(",") ?? "all"} classificationId={classificationId} classificationIds={classificationIds} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
+          <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} classificationId={classificationId} classificationIds={classificationIds} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
         </div>
         <aside className="homeRail">
           <section className="previewPanel commerceCategoryPanel">

@@ -38,7 +38,29 @@ export type CreatorListRow = Omit<Pick<CreatorScreenerRow,
   | "units_sold_range"
   | "audience_gender"
   | "socials"
->, "categoryMemberships"> & { categoryMemberships: CommerceNavigationCategoryName[] };
+>, "categoryMemberships"> & {
+  categoryMemberships: CommerceNavigationCategoryName[];
+  classificationMembershipIds?: string[];
+  classificationEvidence?: CreatorClassificationEvidence;
+  masterEvidence?: CreatorMasterEvidence;
+};
+
+export type CreatorMasterEvidence = {
+  canonicalVideoCount: number;
+  recentSnapshotVideoCount: number;
+  verifiedProductEvidence: boolean;
+  approvedClassificationEvidence: boolean;
+};
+
+export type CreatorClassificationEvidence = {
+  graphCreatorId: string;
+  matchedClassificationIds?: string[];
+  productCount: number;
+  videoCount: number;
+  recentVideoCount: number;
+  latestObservedTimestamp: string | null;
+  hasWebsiteMetrics: boolean;
+};
 
 export type CreatorTrendingRow = Pick<CreatorListRow,
   | "creator_oecuid"
@@ -57,6 +79,7 @@ export type CreatorScreenerResponse = {
   total: number;
   totalPages: number;
   snapshotTimestamp: string;
+  population?: "ranked" | "master" | "classified";
 };
 
 export type CreatorTrendingResponse = {

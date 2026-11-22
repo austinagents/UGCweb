@@ -43,6 +43,24 @@
       "database_name": "ugcweb-search",
       "database_id": "fdd85d9f-797b-4875-99c6-dcaf98b71769",
       "remote": true
+    },
+    {
+      "binding": "CREATOR_DB",
+      "database_name": "partnerlinks-creator-identity-v1",
+      "database_id": "a3efd91a-8379-4a43-b2d7-aef0b830df7b",
+      "remote": true
+    },
+    {
+      "binding": "CREATOR_EVIDENCE_DB",
+      "database_name": "partnerlinks-creator-evidence-v1",
+      "database_id": "3bfa36dc-c9fd-4903-a8d4-fec3074dccc5",
+      "remote": true
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "CREATOR_AVATAR_ARCHIVE",
+      "bucket_name": "ugcweb-tiktok-archive"
     }
   ]
 }

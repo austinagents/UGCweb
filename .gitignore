@@ -14,6 +14,7 @@ coverage
 .open-next
 .wrangler
 cloudflare-env.d.ts
+wrangler.staging.jsonc
 data/cloudflare-import/
 
 .DS_Store
@@ -26,6 +27,7 @@ data/tiktok-shop-gmv-estimates.sqlite
 data/tiktok-shop-gmv-estimates-v2-backup.sqlite
 data/tiktok-shop-gmv-estimates-v3-backup.sqlite
 data/commerce-search.sqlite*
+/work/
 node_modules/
 .next/
 .env*

@@ -6478,6 +6478,62 @@ a:hover .toolLogo {
   gap: 6px;
 }
 
+.commerceCategoryMap > .commerceCategoryCluster:only-child {
+  grid-column: 1 / -1;
+}
+
+.commerceCategoryBreadcrumbs,
+.taxonomyDetailBreadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow-x: auto;
+  padding-bottom: 7px;
+  scrollbar-width: thin;
+}
+
+.commerceCategoryBreadcrumbs button,
+.taxonomyDetailBreadcrumbs a {
+  flex: 0 0 auto;
+  padding: 4px 7px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  background: rgba(9, 17, 23, 0.72);
+  color: var(--text-muted);
+  font-size: 9px;
+}
+
+.commerceCategoryBreadcrumbs button.active,
+.taxonomyDetailBreadcrumbs a.active {
+  border-color: var(--border-active);
+  color: var(--accent-primary);
+}
+
+.commerceCanonicalNodes {
+  grid-template-rows: none;
+  align-content: start;
+  overflow-y: auto;
+}
+
+.taxonomyExploreLink {
+  margin-top: 7px;
+  color: var(--accent-primary);
+  font-size: 10px;
+}
+
+.taxonomyLeafState,
+.taxonomyClusterEmpty,
+.taxonomyDetailCopy {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.taxonomyLeafState { grid-column: 1 / -1; padding: 8px; border: 1px dashed var(--border-subtle); }
+.taxonomyClusterEmpty { padding: 8px 0; }
+.taxonomyDetailBreadcrumbs { padding: 0 0 2px; }
+.taxonomyDetailCopy { margin: 8px 0 0; }
+
 .commerceCategoryCluster {
   display: flex;
   flex-direction: column;
@@ -6642,12 +6698,20 @@ a:hover .toolLogo {
 @media (max-width: 760px) {
   .shopScreenerTable {
     width: 100%;
+    max-width: 100%;
     min-width: 0;
-    table-layout: auto;
+    table-layout: fixed;
   }
 
   .shopScreenerTable colgroup {
     display: none;
+  }
+
+  .shopScreenerTable tbody,
+  .shopScreenerTable tr,
+  .shopScreenerTable .shopStateRow td {
+    width: 100%;
+    max-width: 100%;
   }
 
   .shopScreenerTable td[data-label="Watchlist"] .commerceWatchlistTag {
@@ -7780,3 +7844,7 @@ body {
 /* PartnerLinks unified page gutters */
 .topbar { padding-left: 29px; padding-right: 29px; }
 .pageShell { padding-left: 29px; padding-right: 29px; }
+.commerceTimeframe[hidden] {
+  display: none !important;
+}
+

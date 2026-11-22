@@ -177,7 +177,7 @@ export function SearchAvatar({ item, size = 22 }: { item: CommerceSearchResult; 
 }
 
 export function resultContext(item: CommerceSearchResult) {
-  if (item.type === "category") return `${item.categoryKind === "heatmap" ? "Category Map" : "Navigation"} · ${item.category ?? "Commerce"}`;
+  if (item.type === "category") return `${item.categoryKind === "classification" ? "Classification" : item.categoryKind === "heatmap" ? "Category Map" : "Navigation"} · ${item.category ?? "Commerce"}`;
   const identity = item.type === "creator" && item.secondary ? item.secondary : item.type === "shop" ? "Shop" : "Creator";
   return [identity, item.category, item.followers === null ? null : `${formatCompactNumber(item.followers)} followers`].filter(Boolean).join(" · ");
 }

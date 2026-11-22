@@ -6,7 +6,7 @@ export type CommerceSearchResult = {
   name: string;
   secondary: string;
   category: string | null;
-  categoryKind: "navigation" | "heatmap" | null;
+  categoryKind: "navigation" | "heatmap" | "classification" | null;
   followers: number | null;
   imageUrl: string | null;
   href: string;
