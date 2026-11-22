@@ -1,3 +1,5 @@
+import { pickleballEvidenceId } from "@/lib/graph-topic";
+import pickleballEvidence from "@/data/graph-topics/pickleball.json";
 import "server-only";
 import { suppressedCreator } from "@/lib/server/creator-visibility";
 
@@ -180,14 +182,25 @@ export async function getTrendingCreators(category: ScreenerCategory) {
 export async function getClassificationCreatorPage(classificationId: string | readonly string[], page: number, pageSize: number) {
   const database = getCommerceDatabase();
   const requestedIds = Array.isArray(classificationId) ? classificationId : [classificationId];
+  const isPickleball = requestedIds.includes(pickleballEvidenceId);
   const ids = [...new Set(requestedIds.flatMap((id) => getPartnerlinksVisibleIdsForSubtree(id)))];
   const safePageSize = Math.min(100, Math.max(1, Math.floor(pageSize) || 25));
-  if (!ids.length) return { creators: [], categoryCounts: {}, page: 1, pageSize: safePageSize, total: 0, totalPages: 1, snapshotTimestamp: "" };
+  if (!ids.length && !isPickleball) return { creators: [], categoryCounts: {}, page: 1, pageSize: safePageSize, total: 0, totalPages: 1, snapshotTimestamp: "" };
   const classificationIds = ids.map(sqlCategoryId).join(",");
+  const source = isPickleball ? `(SELECT
+    json_extract(value, '$.graph_creator_id') graph_creator_id,
+    json_extract(value, '$.tiktok_uid') tiktok_uid, json_extract(value, '$.handle') handle,
+    json_extract(value, '$.display_name') display_name, json_extract(value, '$.follower_count') follower_count,
+    json_extract(value, '$.product_count') product_count, json_extract(value, '$.video_count') video_count,
+    json_extract(value, '$.recent_count') snapshot_30d_video_count,
+    json_extract(value, '$.latest_observed_timestamp') latest_observed_timestamp
+    FROM json_each(?))` : "classification_creators";
+  const sourceArgs = isPickleball ? [JSON.stringify(pickleballEvidence.creators)] : [];
+  const scopePredicate = isPickleball ? "1=1" : `c.visible_classification_id IN (${classificationIds})`;
   const visiblePredicate = `c.graph_creator_id <> '${suppressedCreator.graphId}'
     AND COALESCE(c.tiktok_uid, '') <> '${suppressedCreator.tiktokUid}'
     AND lower(COALESCE(c.handle, '')) <> '${suppressedCreator.handle}'`;
-  const total = Number((await database.prepare(`SELECT count(DISTINCT COALESCE('tiktok:'||NULLIF(tiktok_uid,''),graph_creator_id)) count FROM classification_creators c WHERE visible_classification_id IN (${classificationIds}) AND ${visiblePredicate}`).first<{count:number}>())?.count ?? 0);
+  const total = Number((await database.prepare(`SELECT count(DISTINCT COALESCE('tiktok:'||NULLIF(tiktok_uid,''),graph_creator_id)) count FROM ${source} c WHERE ${scopePredicate} AND ${visiblePredicate}`).bind(...sourceArgs).first<{count:number}>())?.count ?? 0);
   const totalPages = Math.max(1, Math.ceil(total / safePageSize));
   const safePage = Math.min(Math.max(1, page), totalPages);
   const offset = (safePage - 1) * safePageSize;
@@ -198,13 +211,13 @@ export async function getClassificationCreatorPage(classificationId: string | re
       max(c.follower_count) graph_followers, sum(c.product_count) product_count, sum(c.video_count) video_count,
       sum(c.snapshot_30d_video_count) recent_count, max(c.latest_observed_timestamp) latest_timestamp,
       cr.creator_id website_creator_id, cr.*
-    FROM classification_creators c
+    FROM ${source} c
     LEFT JOIN creator_records cr ON cr.creator_id=c.tiktok_uid AND c.tiktok_uid IS NOT NULL AND c.tiktok_uid<>''
-    WHERE c.visible_classification_id IN (${classificationIds}) AND ${visiblePredicate}
+    WHERE ${scopePredicate} AND ${visiblePredicate}
     GROUP BY evidence_account_key
     ORDER BY recent_count DESC,latest_timestamp DESC,video_count DESC,evidence_account_key
     LIMIT ? OFFSET ?
-  `).bind(safePageSize, offset).all<Row>();
+  `).bind(...sourceArgs, safePageSize, offset).all<Row>();
   const graphCreatorIds = result.results.map((row) => String(row.graph_creator_id));
   type MasterMetricRow = { graph_creator_id:string; account_id:string; canonical_graph_creator_id:string; username:string; display_name:string|null; follower_count:number|null; avatar_object_key:string|null; gmv_30d:number|null; units_sold_30d:number|null; audience_gender:string|null; audience_gender_percentage:number|null };
   const masterMetrics = new Map<string, MasterMetricRow>();
@@ -255,7 +268,7 @@ export async function getClassificationCreatorPage(classificationId: string | re
       avatar: null, followers: row.graph_followers, categoryMemberships: [], med_gmv_revenue: null, med_gmv_revenue_range: null,
       units_sold: null, units_sold_range: null, audience_gender: null, socials: [],
     };
-    return { ...base, classificationEvidence: { graphCreatorId, matchedClassificationIds:master?matchedClassificationsByAccount.get(master.account_id)??[]:[], productCount: Number(row.product_count), videoCount: Number(row.video_count), recentVideoCount: Number(row.recent_count), latestObservedTimestamp: row.latest_timestamp, hasWebsiteMetrics: Boolean(master) || matched } };
+    return { ...base, classificationEvidence: { graphCreatorId, matchedClassificationIds:isPickleball?[pickleballEvidenceId]:master?matchedClassificationsByAccount.get(master.account_id)??[]:[], productCount: Number(row.product_count), videoCount: Number(row.video_count), recentVideoCount: Number(row.recent_count), latestObservedTimestamp: row.latest_timestamp, hasWebsiteMetrics: Boolean(master) || matched } };
   });
   const snapshot = await database.prepare("SELECT value FROM classification_metadata WHERE key='snapshot_30d_end_utc'").first<{value:string}>();
   return { creators, categoryCounts: {}, page: safePage, pageSize: safePageSize, total, totalPages, snapshotTimestamp: snapshot?.value ?? "", population:"classified" as const };
@@ -264,33 +277,41 @@ export async function getClassificationCreatorPage(classificationId: string | re
 export async function getClassificationProductPage(classificationId: string | readonly string[], page: number, pageSize = 25) {
   const database = getCommerceDatabase();
   const requestedIds = Array.isArray(classificationId) ? classificationId : [classificationId];
+  const isPickleball = requestedIds.includes(pickleballEvidenceId);
   const ids = [...new Set(requestedIds.flatMap((id) => getPartnerlinksVisibleIdsForSubtree(id)))];
   const safePageSize = Math.min(100, Math.max(1, pageSize));
-  if (!ids.length) return { products: [], page: 1, pageSize: safePageSize, total: 0, totalPages: 1, snapshotTimestamp: "" };
-  const placeholders = ids.map(() => "?").join(",");
-  const total = Number((await database.prepare(`SELECT count(*) count FROM classification_products WHERE visible_classification_id IN (${placeholders})`).bind(...ids).first<{count:number}>())?.count ?? 0);
+  if (!ids.length && !isPickleball) return { products: [], page: 1, pageSize: safePageSize, total: 0, totalPages: 1, snapshotTimestamp: "" };
+  const scope = isPickleball ? "product_id IN (SELECT value FROM json_each(?))" : `visible_classification_id IN (${ids.map(() => "?").join(",")})`;
+  const args = isPickleball ? [JSON.stringify(pickleballEvidence.products)] : ids;
+  const total = Number((await database.prepare(`SELECT count(*) count FROM classification_products WHERE ${scope}`).bind(...args).first<{count:number}>())?.count ?? 0);
   const totalPages = Math.max(1, Math.ceil(total / safePageSize)), safePage = Math.min(Math.max(1,page), totalPages);
-  const products = (await database.prepare(`SELECT product_id productId, source_category_id sourceCategoryId, visible_classification_id visibleClassificationId, relationship_count relationshipCount, video_count videoCount, creator_count creatorCount, seller_count sellerCount, latest_observed_timestamp latestObservedTimestamp, snapshot_30d_video_count recentVideoCount, source_kind sourceKind FROM classification_products WHERE visible_classification_id IN (${placeholders}) ORDER BY snapshot_30d_video_count DESC, latest_observed_timestamp DESC, video_count DESC, product_id LIMIT ? OFFSET ?`).bind(...ids,safePageSize,(safePage-1)*safePageSize).all()).results;
+  const products = (await database.prepare(`SELECT product_id productId, source_category_id sourceCategoryId, visible_classification_id visibleClassificationId, relationship_count relationshipCount, video_count videoCount, creator_count creatorCount, seller_count sellerCount, latest_observed_timestamp latestObservedTimestamp, snapshot_30d_video_count recentVideoCount, source_kind sourceKind FROM classification_products WHERE ${scope} ORDER BY snapshot_30d_video_count DESC, latest_observed_timestamp DESC, video_count DESC, product_id LIMIT ? OFFSET ?`).bind(...args,safePageSize,(safePage-1)*safePageSize).all()).results;
   const snapshot = await database.prepare("SELECT value FROM classification_metadata WHERE key='snapshot_30d_end_utc'").first<{value:string}>();
   return { products, page:safePage, pageSize:safePageSize, total, totalPages, snapshotTimestamp:snapshot?.value ?? "" };
 }
 
 export async function getClassificationShopPage(classificationId:string | readonly string[], window:ShopRankingWindow, metric:ShopRankingMetric, page:number, resultLabel:string) {
   const requestedIds=Array.isArray(classificationId)?classificationId:[classificationId];
+  const isPickleball = requestedIds.includes(pickleballEvidenceId);
   const database=getCommerceDatabase(), ids=[...new Set(requestedIds.flatMap((id)=>getPartnerlinksVisibleIdsForSubtree(id)))], pageSize=25;
-  if(!ids.length)return {categoryId:requestedIds[0]??null,categoryName:resultLabel,categories:[...tiktokShopCategories],window,metric,captureDate:null,total:0,page:1,pageSize,totalPages:1,count:0,shops:[]};
+  if(!ids.length && !isPickleball)return {categoryId:requestedIds[0]??null,categoryName:resultLabel,categories:[...tiktokShopCategories],window,metric,captureDate:null,total:0,page:1,pageSize,totalPages:1,count:0,shops:[]};
   // These IDs come exclusively from the validated, static taxonomy. Embedding the
   // digit-only values avoids D1's bound-parameter ceiling for large L1 subtrees.
   const classificationIds=ids.map(sqlCategoryId).join(","), estimateColumn=`estimated_${window}_gmv`, sourceCategoryColumn=`source_${window}_category_id`, sourceRankColumn=`source_${window}_rank`;
-  const total=Number((await database.prepare(`SELECT count(DISTINCT cm.shop_id) count FROM classification_shops cm JOIN shop_estimates se ON se.shop_id=cm.shop_id WHERE cm.visible_classification_id IN (${classificationIds})`).first<{count:number}>())?.count??0);
-  const totalPages=Math.max(1,Math.ceil(total/pageSize)),safePage=Math.min(Math.max(1,page),totalPages);
-  const rows=(await database.prepare(`SELECT se.shop_id,se.${estimateColumn} estimated_gmv,se.${sourceCategoryColumn} category_id,se.${sourceRankColumn} official_rank,s.shop_name,s.shop_logo_url,s.storefront_url,s.shop_sold_count,s.weighted_median_price,s.followers,s.estimated_30d_gmv,ro.category_name,ro.capture_date,ro.${metric}_previous_rank official_previous_rank,ro.${metric}_rank_change official_rank_change FROM shop_estimates se JOIN shops s ON s.shop_id=se.shop_id JOIN (
-    SELECT shop_id, MAX(snapshot_30d_video_count) recent_activity,
+  const scope = isPickleball ? `SELECT
+      json_extract(value, '$.shop_id') shop_id,
+      json_extract(value, '$.recent_count') recent_activity,
+      json_extract(value, '$.product_count') matched_products,
+      json_extract(value, '$.video_count') matched_videos
+    FROM json_each(?)` : `SELECT shop_id, MAX(snapshot_30d_video_count) recent_activity,
       MAX(product_count) matched_products, MAX(video_count) matched_videos
-    FROM classification_shops WHERE visible_classification_id IN (${classificationIds})
-    GROUP BY shop_id
-  ) cm ON cm.shop_id=se.shop_id LEFT JOIN ranking_observations ro ON ro.shop_id=se.shop_id AND ro.window=? AND ro.category_id=se.${sourceCategoryColumn} ORDER BY cm.recent_activity DESC, cm.matched_products DESC, cm.matched_videos DESC, se.shop_id LIMIT ? OFFSET ?`).bind(window,pageSize,(safePage-1)*pageSize).all<Record<string,string|number|null>>()).results;
-  const shops=await attachVerifiedShopClassifications(rows.map((row,index)=>toShopRow(row,index+(safePage-1)*pageSize,window,metric)),ids);
+    FROM classification_shops WHERE visible_classification_id IN (${classificationIds}) GROUP BY shop_id`;
+  const args = isPickleball ? [JSON.stringify(pickleballEvidence.shops)] : [];
+  const total=Number((await database.prepare(`SELECT count(*) count FROM (${scope}) cm JOIN shop_estimates se ON se.shop_id=cm.shop_id`).bind(...args).first<{count:number}>())?.count??0);
+  const totalPages=Math.max(1,Math.ceil(total/pageSize)),safePage=Math.min(Math.max(1,page),totalPages);
+  const rows=(await database.prepare(`SELECT se.shop_id,se.${estimateColumn} estimated_gmv,se.${sourceCategoryColumn} category_id,se.${sourceRankColumn} official_rank,s.shop_name,s.shop_logo_url,s.storefront_url,s.shop_sold_count,s.weighted_median_price,s.followers,s.estimated_30d_gmv,ro.category_name,ro.capture_date,ro.${metric}_previous_rank official_previous_rank,ro.${metric}_rank_change official_rank_change FROM shop_estimates se JOIN shops s ON s.shop_id=se.shop_id JOIN (${scope}) cm ON cm.shop_id=se.shop_id LEFT JOIN ranking_observations ro ON ro.shop_id=se.shop_id AND ro.window=? AND ro.category_id=se.${sourceCategoryColumn} ORDER BY cm.recent_activity DESC, cm.matched_products DESC, cm.matched_videos DESC, se.shop_id LIMIT ? OFFSET ?`).bind(...args,window,pageSize,(safePage-1)*pageSize).all<Record<string,string|number|null>>()).results;
+  const classifiedShops=await attachVerifiedShopClassifications(rows.map((row,index)=>toShopRow(row,index+(safePage-1)*pageSize,window,metric)),ids);
+  const shops=isPickleball?classifiedShops.map((shop)=>({...shop,matched_classification_ids:[pickleballEvidenceId]})):classifiedShops;
   return {categoryId:requestedIds[0]??null,categoryName:resultLabel,categories:[...tiktokShopCategories],window,metric,captureDate:shops[0]?.capture_date??null,total,page:safePage,pageSize,totalPages,count:shops.length,shops};
 }
 

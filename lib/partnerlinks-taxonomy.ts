@@ -1,3 +1,4 @@
+import { pickleballEvidence, pickleballEvidenceId } from "./graph-topic";
 import projection from "../data/partnerlinks-taxonomy/taxonomy_projection.json" with { type: "json" };
 
 export type TaxonomyUiStatus = "visible" | "rolled_up" | "excluded_from_ui";
@@ -7,7 +8,12 @@ const sources=projection.sourceCategories as SourceTaxonomyCategory[], visible=p
 const sourceById=new Map(sources.map(row=>[row.id,row])), visibleById=new Map(visible.map(row=>[row.id,row]));
 export const partnerlinksTaxonomyVersion=projection.version;
 export const getPartnerlinksSourceCategory=(id:string)=>sourceById.get(id)??null;
-export const getPartnerlinksVisibleCategory=(id:string)=>visibleById.get(id)??null;
+export function getPartnerlinksVisibleCategory(id: string): VisibleTaxonomyCategory | null {
+  if (id === pickleballEvidenceId) {
+    return pickleballEvidence;
+  }
+  return visibleById.get(id) ?? null;
+}
 export function resolvePartnerlinksVisibleClassification(value:string|null|undefined) {
   if (!value) return { status:"absent" as const, category:null };
   const category=getPartnerlinksVisibleCategory(value);

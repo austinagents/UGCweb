@@ -1,3 +1,4 @@
+import { pickleballEvidence } from "./graph-topic";
 import hierarchy from "../data/partnerlinks-taxonomy/taxonomy_visible.json" with { type: "json" };
 
 export type VisibleClassification = {
@@ -20,7 +21,7 @@ for (const category of visibleClassifications) {
 }
 
 export const visibleClassificationRoots = visibleClassifications.filter((category) => category.level === 1);
-export const visibleClassificationById = (id: string | null | undefined) => id ? byId.get(id) ?? null : null;
+export const visibleClassificationById = (id: string | null | undefined) => id === pickleballEvidence.id ? pickleballEvidence : id ? byId.get(id) ?? null : null;
 export const visibleClassificationChildren = (id: string) => childrenByParent.get(id) ?? [];
 export const visibleClassificationAncestors = (id: string) => {
   const category = byId.get(id);

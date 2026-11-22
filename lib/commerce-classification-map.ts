@@ -1,9 +1,10 @@
+import { pickleballEvidenceId } from "@/lib/graph-topic";
 import type { CommerceChildCategory } from "@/lib/commerce-categories";
 
 // Explicit UI-to-taxonomy crosswalk. Commerce membership still comes only from
 // the graph's exact source IDs and verified typed relationships.
 export const commerceHeatmapClassificationIds: Record<CommerceChildCategory, readonly string[]> = {
-  Golf: ["603573", "937224"], Pickleball: [], Fitness: ["835336"], Running: ["969992", "603751"], Camping: ["835464"], Fishing: ["603818"],
+  Golf: ["603573", "937224"], Pickleball: [pickleballEvidenceId], Fitness: ["835336"], Running: ["969992", "603751"], Camping: ["835464"], Fishing: ["603818"],
   Dresses: ["842504"], Activewear: ["834568"], Shoes: ["601352"], Jewelry: ["953224"], Handbags: ["902408", "902536"], Menswear: ["824328"],
   Skincare: ["848776"], Makeup: ["848648"], Haircare: ["848904"], Fragrance: ["856208"], Bodycare: ["849160"], Nails: ["1086856"],
   Energy: ["917256"], Snacks: ["915336"], Coffee: ["700612"], Protein: ["1302416", "819984"], Hydration: ["917512"], Candy: ["921736"],
