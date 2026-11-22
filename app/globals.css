@@ -7801,53 +7801,6 @@ body {
 }
 
 /* Homepage layout reset must follow the later production overrides above. */
-.homeStack {
-  --trending-extension: 0px;
-  --boost-extra-height: 0px;
-  --boost-lift-height: 0px;
-}
-
-.homePrimary,
-.primaryTable {
-  min-height: 0;
-}
-
-.homePrimary {
-  height: 980px;
-}
-
-.primaryTable {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.primaryTable > div:not(.sectionHeader):not([hidden]) {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  min-height: 0;
-}
-
-.primaryTable .tableWrap {
-  flex: 1 1 auto;
-  height: 0;
-  max-height: none;
-  min-height: 0;
-  overflow: auto;
-}
-
-.homeRail {
-  align-content: start;
-  grid-template-rows: auto auto;
-  height: auto;
-}
-
-.homeRail > .boostPanel {
-  height: auto;
-  min-height: 0;
-}
-
 @media (max-width: 1180px) {
   .homePrimary,
   .homeSecondary {
@@ -7856,7 +7809,6 @@ body {
 
   .homePrimary,
   .primaryTable {
-    height: auto;
     min-height: 690px;
   }
 
