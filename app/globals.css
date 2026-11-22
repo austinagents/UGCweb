@@ -3444,6 +3444,12 @@ body {
   justify-self: start;
 }
 
+@media (min-width: 1380px) {
+  .topbar .navTabs {
+    gap: 8px;
+  }
+}
+
 .topbar .navTabs a,
 .topbar .navTabs .googleSignupNavTab,
 .topbar .navTabs .betaNavTab {
