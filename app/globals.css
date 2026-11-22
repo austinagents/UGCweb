@@ -3447,6 +3447,7 @@ body {
 @media (min-width: 1380px) {
   .topbar .navTabs {
     gap: 8px;
+    justify-self: end;
   }
 }
 
