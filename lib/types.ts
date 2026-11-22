@@ -154,6 +154,7 @@ export type ShopRankingMetric = "total_gmv" | "product_card_gmv" | "live_gmv" | 
 export type TikTokShop = {
   shop_id: string;
   shop_name: string | null;
+  brand?: import("./shop-brand-family").ShopBrandFamily;
   shop_thumb_image_url: string | null;
   shop_status: string | null;
   shop_share_link: string | null;

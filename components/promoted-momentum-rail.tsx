@@ -128,7 +128,7 @@ export function PromotedMomentumRail({
               <>
                 <span className="railRank">#{itemRank + 1}</span>
                 <ShopRailLogo shop={shop} />
-                <strong title={shop.shop_name ?? "Unknown Shop"}>{shop.shop_name ?? "Unknown Shop"}</strong>
+                <strong title={shop.shop_name ?? "Unknown Shop"}>{shop.brand?.name ?? shop.shop_name ?? "Unknown Shop"}</strong>
                 {category ? <small>{category}</small> : null}
               </>
             );

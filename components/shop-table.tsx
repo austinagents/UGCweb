@@ -112,7 +112,7 @@ export function ShopTable({ categoryLabel, categoryId, classificationId = null, 
                 <td data-label="Category">
                   <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" /><span className="categoryText">{categoryLabel ?? (isGraphFiltered ? matchedShopClassificationNames(shop)[0] ?? displayShopCategory(shop) : displayShopCategory(shop))}</span></span>
                 </td>
-                <td data-label={gmvLabel}><strong className="commerceMetric" title={gmvDescription}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
+                <td data-label={gmvLabel}><strong className="commerceMetric" title={shop.brand ? `${gmvDescription} Storefront shown: ${shop.shop_name}.` : gmvDescription}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
                 <td data-label="Units Sold" title={unitsSoldEstimateTitle(shop)}>{formatUnits(shop.estimated_units_sold)}</td>
                 <td data-label="Followers"><span className="signalCount">{formatFollowers(shop.followers)}</span></td>
@@ -173,16 +173,35 @@ function ShopStateRow({ children, error }: { children: ReactNode; error?: string
 }
 
 function ShopIdentity({ shop }: { shop: TikTokShop }) {
+  const avatar = (
+    <span className="shopAvatarFallback" aria-hidden="true">
+      {initials(shop.brand?.name ?? shop.shop_name)}
+      {shop.shop_thumb_image_url ? <img src={shop.shop_thumb_image_url} alt="" width={32} height={32} loading="lazy" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
+    </span>
+  );
   const content = (
     <>
-      <span className="shopAvatarFallback" aria-hidden="true">
-        {initials(shop.shop_name)}
-        {shop.shop_thumb_image_url ? <img src={shop.shop_thumb_image_url} alt="" width={32} height={32} loading="lazy" decoding="async" onError={(event) => { event.currentTarget.style.display = "none"; }} /> : null}
-      </span>
+      {avatar}
       <span><strong title={shop.shop_name ?? undefined}>{shop.shop_name ?? "Unknown Shop"}</strong></span>
     </>
   );
 
+  if (shop.brand) {
+    return (
+      <details className="shopBrandFamily">
+        <summary title={`Metrics shown for ${shop.shop_name ?? "the listed storefront"}`}>
+          <span className="toolCell shopCell">{avatar}<span><strong>{shop.brand.name}</strong><small>{shop.brand.storefronts.length} storefronts</small></span></span>
+        </summary>
+        <ul>
+          {shop.brand.storefronts.map((storefront) => (
+            <li key={storefront.id}>
+              <a href={`https://shop.tiktok.com/us/store/partnerlinks/${storefront.id}`} target="_blank" rel="noreferrer">{storefront.name}</a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    );
+  }
   if (!shop.shop_share_link) return <div className="toolCell shopCell">{content}</div>;
   return <a className="toolCell shopCell" href={"https:" + "//shop.tiktok.com/us/store/partnerlinks/" + shop.shop_id} target="_blank" rel="noreferrer" title="Open TikTok Shop">{content}</a>;
 }

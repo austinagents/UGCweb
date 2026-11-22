@@ -1,3 +1,4 @@
+import { shopBrandFamily, shopBrandFamilySqlMap } from "@/lib/shop-brand-family";
 import { pickleballEvidenceId } from "@/lib/graph-topic";
 import pickleballEvidence from "@/data/graph-topics/pickleball.json";
 import "server-only";
@@ -46,7 +47,7 @@ const shopAudienceCategoryBaselines = new Map(Object.entries(creatorIdentityData
 
 const cachedShopPage = unstable_cache(
   loadShopPage,
-  ["partnerlinks-official-tiktok-shop-rankings-v11"],
+  ["partnerlinks-official-tiktok-shop-rankings-v12-brands"],
   { revalidate: shopCacheSeconds },
 );
 
@@ -290,6 +291,19 @@ export async function getClassificationProductPage(classificationId: string | re
   return { products, page:safePage, pageSize:safePageSize, total, totalPages, snapshotTimestamp:snapshot?.value ?? "" };
 }
 
+function shopBrandExclusion(candidateSql: string) {
+  return `WITH family_members AS (
+    SELECT key shop_id, value family_id FROM json_each(?)
+  ), hidden_brand_shops AS (
+    SELECT DISTINCT shop_id FROM (${candidateSql}) WHERE brand_position > 1
+  )`;
+}
+
+function attachShopBrand(shop: TikTokShop): TikTokShop {
+  const brand = shopBrandFamily(shop.shop_id);
+  return brand ? { ...shop, brand } : shop;
+}
+
 export async function getClassificationShopPage(classificationId:string | readonly string[], window:ShopRankingWindow, metric:ShopRankingMetric, page:number, resultLabel:string) {
   const requestedIds=Array.isArray(classificationId)?classificationId:[classificationId];
   const isPickleball = requestedIds.includes(pickleballEvidenceId);
@@ -307,11 +321,16 @@ export async function getClassificationShopPage(classificationId:string | readon
       MAX(product_count) matched_products, MAX(video_count) matched_videos
     FROM classification_shops WHERE visible_classification_id IN (${classificationIds}) GROUP BY shop_id`;
   const args = isPickleball ? [JSON.stringify(pickleballEvidence.shops)] : [];
-  const total=Number((await database.prepare(`SELECT count(*) count FROM (${scope}) cm JOIN shop_estimates se ON se.shop_id=cm.shop_id`).bind(...args).first<{count:number}>())?.count??0);
+  const brands = shopBrandExclusion(`SELECT cm.shop_id, ROW_NUMBER() OVER (
+      PARTITION BY fm.family_id ORDER BY cm.recent_activity DESC, cm.matched_products DESC, cm.matched_videos DESC, cm.shop_id
+    ) brand_position FROM (${scope}) cm JOIN family_members fm ON fm.shop_id=cm.shop_id
+    JOIN shop_estimates se ON se.shop_id=cm.shop_id`);
+  const brandArgs = [shopBrandFamilySqlMap, ...args];
+  const total=Number((await database.prepare(`${brands} SELECT count(*) count FROM (${scope}) cm JOIN shop_estimates se ON se.shop_id=cm.shop_id WHERE cm.shop_id NOT IN (SELECT shop_id FROM hidden_brand_shops)`).bind(...brandArgs,...args).first<{count:number}>())?.count??0);
   const totalPages=Math.max(1,Math.ceil(total/pageSize)),safePage=Math.min(Math.max(1,page),totalPages);
-  const rows=(await database.prepare(`SELECT se.shop_id,se.${estimateColumn} estimated_gmv,se.${sourceCategoryColumn} category_id,se.${sourceRankColumn} official_rank,s.shop_name,s.shop_logo_url,s.storefront_url,s.shop_sold_count,s.weighted_median_price,s.followers,s.estimated_30d_gmv,ro.category_name,ro.capture_date,ro.${metric}_previous_rank official_previous_rank,ro.${metric}_rank_change official_rank_change FROM shop_estimates se JOIN shops s ON s.shop_id=se.shop_id JOIN (${scope}) cm ON cm.shop_id=se.shop_id LEFT JOIN ranking_observations ro ON ro.shop_id=se.shop_id AND ro.window=? AND ro.category_id=se.${sourceCategoryColumn} ORDER BY cm.recent_activity DESC, cm.matched_products DESC, cm.matched_videos DESC, se.shop_id LIMIT ? OFFSET ?`).bind(...args,window,pageSize,(safePage-1)*pageSize).all<Record<string,string|number|null>>()).results;
+  const rows=(await database.prepare(`${brands} SELECT se.shop_id,se.${estimateColumn} estimated_gmv,se.${sourceCategoryColumn} category_id,se.${sourceRankColumn} official_rank,s.shop_name,s.shop_logo_url,s.storefront_url,s.shop_sold_count,s.weighted_median_price,s.followers,s.estimated_30d_gmv,ro.category_name,ro.capture_date,ro.${metric}_previous_rank official_previous_rank,ro.${metric}_rank_change official_rank_change FROM shop_estimates se JOIN shops s ON s.shop_id=se.shop_id JOIN (${scope}) cm ON cm.shop_id=se.shop_id LEFT JOIN ranking_observations ro ON ro.shop_id=se.shop_id AND ro.window=? AND ro.category_id=se.${sourceCategoryColumn} WHERE se.shop_id NOT IN (SELECT shop_id FROM hidden_brand_shops) ORDER BY cm.recent_activity DESC, cm.matched_products DESC, cm.matched_videos DESC, se.shop_id LIMIT ? OFFSET ?`).bind(...brandArgs,...args,window,pageSize,(safePage-1)*pageSize).all<Record<string,string|number|null>>()).results;
   const classifiedShops=await attachVerifiedShopClassifications(rows.map((row,index)=>toShopRow(row,index+(safePage-1)*pageSize,window,metric)),ids);
-  const shops=isPickleball?classifiedShops.map((shop)=>({...shop,matched_classification_ids:[pickleballEvidenceId]})):classifiedShops;
+  const shops=(isPickleball?classifiedShops.map((shop)=>({...shop,matched_classification_ids:[pickleballEvidenceId]})):classifiedShops).map(attachShopBrand);
   return {categoryId:requestedIds[0]??null,categoryName:resultLabel,categories:[...tiktokShopCategories],window,metric,captureDate:shops[0]?.capture_date??null,total,page:safePage,pageSize,totalPages,count:shops.length,shops};
 }
 
@@ -350,16 +369,27 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
         FROM ranking_observations ro WHERE ${officialFilter})`
     : "ranking_observations";
   const officialResultFilter = multiCategory ? "ro.storefront_row = 1" : officialFilter;
+  const brands = shopBrandExclusion(categoryIds
+    ? `SELECT shop_id, ROW_NUMBER() OVER (PARTITION BY family_id ORDER BY category_order, source_page, source_row_index, shop_id) brand_position
+       FROM (
+         SELECT ro.*, fm.family_id, CASE ro.category_id ${rankCategoryOrder} ELSE ${tiktokShopCategories.length} END category_order,
+           ROW_NUMBER() OVER (PARTITION BY ro.shop_id ORDER BY ${officialOrder}) storefront_position
+         FROM family_members fm CROSS JOIN ranking_observations ro WHERE ro.shop_id=fm.shop_id AND ${officialFilter}
+       ) WHERE storefront_position=1`
+    : `SELECT se.shop_id, ROW_NUMBER() OVER (PARTITION BY fm.family_id ORDER BY se.${estimateColumn} DESC, se.shop_id) brand_position
+       FROM shop_estimates se JOIN family_members fm ON fm.shop_id=se.shop_id ${heatmapJoin}`);
+  const brandArgs = [shopBrandFamilySqlMap, ...(categoryIds ? parameters : heatmapCategory ? [heatmapCategory] : [])];
+  const retainedShop = "NOT IN (SELECT shop_id FROM hidden_brand_shops)";
   const total = heatmapCategory
-    ? Number((await database.prepare(`SELECT count(*) AS count FROM shop_estimates ${heatmapCountJoin}`).bind(heatmapCategory).first<{ count: number }>())?.count ?? 0)
+    ? Number((await database.prepare(`${brands} SELECT count(*) AS count FROM shop_estimates ${heatmapCountJoin} WHERE shop_estimates.shop_id ${retainedShop}`).bind(...brandArgs, heatmapCategory).first<{ count: number }>())?.count ?? 0)
     : categoryIds
-    ? Number((await database.prepare(`SELECT count(DISTINCT ro.shop_id) AS count FROM ranking_observations ro WHERE ${officialFilter}`).bind(...parameters).first<{ count: number }>())?.count ?? 0)
-    : Number((await database.prepare("SELECT count(*) AS count FROM shop_estimates").first<{ count: number }>())?.count ?? 0);
+    ? Number((await database.prepare(`${brands} SELECT count(DISTINCT ro.shop_id) AS count FROM ranking_observations ro WHERE ${officialFilter} AND ro.shop_id ${retainedShop}`).bind(...brandArgs,...parameters).first<{ count: number }>())?.count ?? 0)
+    : Number((await database.prepare(`${brands} SELECT count(*) AS count FROM shop_estimates WHERE shop_id ${retainedShop}`).bind(...brandArgs).first<{ count: number }>())?.count ?? 0);
   const totalPages = Math.max(1, Math.ceil(total / allShopPageSize));
   const safePage = Math.min(page, totalPages);
   const offset = (safePage - 1) * allShopPageSize;
   const rows = categoryIds
-    ? (await database.prepare(`
+    ? (await database.prepare(`${brands}
         SELECT ro.*, ro.${rankColumn} AS official_rank, ro.${previousRankColumn} AS official_previous_rank,
           ro.${rankChangeColumn} AS official_rank_change, oe.estimated_gmv,
           s.shop_name, s.shop_logo_url, s.storefront_url, s.shop_sold_count,
@@ -367,11 +397,11 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
         FROM ${officialRankings} ro
         JOIN shops s ON s.shop_id = ro.shop_id
         LEFT JOIN observation_estimates oe ON oe.shop_id = ro.shop_id AND oe.category_id = ro.category_id AND oe.window = ro.window
-        WHERE ${officialResultFilter}
+        WHERE ${officialResultFilter} AND ro.shop_id ${retainedShop}
         ORDER BY ${officialOrder}
         LIMIT ? OFFSET ?
-      `).bind(...parameters, allShopPageSize, offset).all<Record<string, string | number | null>>()).results
-    : (await database.prepare(`
+      `).bind(...brandArgs,...parameters, allShopPageSize, offset).all<Record<string, string | number | null>>()).results
+    : (await database.prepare(`${brands}
         SELECT se.shop_id, se.${estimateColumn} AS estimated_gmv, se.${sourceCategoryColumn} AS category_id,
           se.${sourceRankColumn} AS official_rank, s.shop_name, s.shop_logo_url, s.storefront_url,
           s.shop_sold_count, s.weighted_median_price, s.followers, s.estimated_30d_gmv,
@@ -381,9 +411,10 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
         JOIN shops s ON s.shop_id = se.shop_id
         LEFT JOIN ranking_observations ro ON ro.shop_id = se.shop_id AND ro.window = ? AND ro.category_id = se.${sourceCategoryColumn}
         ${heatmapJoin}
+        WHERE se.shop_id ${retainedShop}
         ORDER BY se.${estimateColumn} DESC, se.shop_id
         LIMIT ? OFFSET ?
-      `).bind(window, ...(heatmapCategory ? [heatmapCategory] : []), allShopPageSize, offset).all<Record<string, string | number | null>>()).results;
+      `).bind(...brandArgs,window, ...(heatmapCategory ? [heatmapCategory] : []), allShopPageSize, offset).all<Record<string, string | number | null>>()).results;
   const category = categoryIds ? commerceNavigationCategories.find((item) => item.categoryIds.length === categoryIds.length && item.categoryIds.every((id) => categoryIds.includes(id))) : null;
   const unclassifiedShops: TikTokShop[] = rows.map((row, index) => {
     const officialCategoryId = row.category_id ? String(row.category_id) : "unknown";
@@ -431,7 +462,7 @@ async function loadShopPage(categoryIds: string[] | null, window: ShopRankingWin
     };
   });
 
-  const shops = await attachVerifiedShopClassifications(unclassifiedShops);
+  const shops = (await attachVerifiedShopClassifications(unclassifiedShops)).map(attachShopBrand);
   return {
     categoryId: categoryIds?.join(",") ?? null,
     categoryName: resultLabel ?? category?.name ?? "All Categories",

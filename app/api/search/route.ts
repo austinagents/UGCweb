@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const preview = request.nextUrl.searchParams.get("preview") === "true";
-    return edgeCachedJson(request, { edgeTtlSeconds: preview ? 900 : 60, cacheVersion: "creator-visibility-1" }, () => preview
+    return edgeCachedJson(request, { edgeTtlSeconds: preview ? 900 : 60, cacheVersion: "shop-brand-families-v1" }, () => preview
       ? commerceSearchPreview()
       : searchCommerce({ query, type, page, pageSize, commandMode }));
   } catch (error) {

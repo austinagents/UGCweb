@@ -6414,6 +6414,38 @@ a:hover .toolLogo {
   color: var(--accent-primary);
 }
 
+.shopBrandFamily summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.shopBrandFamily summary::-webkit-details-marker {
+  display: none;
+}
+
+.shopBrandFamily summary .shopCell > span:last-child {
+  min-width: 0;
+}
+
+.shopBrandFamily summary small {
+  display: block;
+  line-height: 1.1;
+}
+
+.shopBrandFamily summary small {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.shopBrandFamily ul {
+  margin: 6px 0 0;
+  padding-inline-start: 20px;
+}
+
+.shopBrandFamily li a:hover {
+  text-decoration: underline;
+}
+
 .commerceCategoryCell {
   --ecosystem-color: var(--accent-primary);
   color: var(--text-secondary);

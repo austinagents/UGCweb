@@ -1,4 +1,5 @@
 import "server-only";
+import { shopBrandFamily } from "@/lib/shop-brand-family";
 import { suppressedCreator } from "@/lib/server/creator-visibility";
 
 import type { CommerceSearchResponse, CommerceSearchResult, CommerceSearchResultType } from "@/lib/commerce-search";
@@ -46,7 +47,7 @@ export async function commerceSearchPreview(): Promise<CommerceSearchResponse> {
     `),
     getMetadata(db),
   ]);
-  const shops = previewRows.filter((row) => row.entity_type === "shop");
+  const shops = distinctShopFamilies(previewRows.filter((row) => row.entity_type === "shop"), (row) => row);
   const creators = previewRows.filter((row) => row.entity_type === "creator");
   const results = [...shops, ...creators].map((row) => toResult({ row, relevance: 0 }));
   return {
@@ -86,10 +87,10 @@ export async function searchCommerce(input: {
   // the creator detail page; it must not create a duplicate search identity.
   const rows = dedupeRows([...masterRows, ...legacyRows]);
   const empty = emptySearchResponse(query, pageSize, metadata);
-  const ranked = rows
+  const ranked = distinctShopFamilies(rows
     .map((row) => ({ row, relevance: relevanceFor(row, query, normalizedQuery) }))
     .filter((item) => Number.isFinite(item.relevance))
-    .sort(compareRanked);
+    .sort(compareRanked), ({ row }) => row);
   const groupCounts = ranked.reduce<CommerceSearchResponse["groupCounts"]>((counts, item) => {
     counts[item.row.entity_type] += 1;
     return counts;
@@ -224,12 +225,25 @@ function compareRanked(left: RankedEntity, right: RankedEntity) {
     || left.row.entity_id.localeCompare(right.row.entity_id);
 }
 
+function distinctShopFamilies<T>(items: T[], entity: (item: T) => SearchEntityRow): T[] {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    const row = entity(item);
+    const family = row.entity_type === "shop" ? shopBrandFamily(row.entity_id) : undefined;
+    if (!family) return true;
+    if (seen.has(family.id)) return false;
+    seen.add(family.id);
+    return true;
+  });
+}
+
 function toResult({ row }: RankedEntity): CommerceSearchResult {
+  const family = row.entity_type === "shop" ? shopBrandFamily(row.entity_id) : undefined;
   return {
     type: row.entity_type,
     id: row.entity_id,
-    name: row.name,
-    secondary: row.secondary,
+    name: family?.name ?? row.name,
+    secondary: family ? `${family.storefronts.length} storefronts · ${row.name}` : row.secondary,
     category: row.category,
     categoryKind: row.category_kind,
     followers: row.followers,
