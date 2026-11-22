@@ -9,7 +9,7 @@ import { visibleClassificationById } from "@/lib/partnerlinks-visible-taxonomy";
 import { CommerceWatchlistButton } from "@/components/commerce-watchlist-button";
 import type { CommerceWatchlistItem } from "@/lib/commerce-watchlist";
 
-type ShopTableResult = { category: string; data: TikTokShopsResponse };
+type ShopTableResult = { scope: string; data: TikTokShopsResponse };
 
 export function ShopTable({ categoryId, classificationId = null, classificationIds = [], heatmapCategory = null, window, metric, active = true, rowLimit }: { categoryId: string | null; classificationId?: string | null; classificationIds?: readonly string[]; heatmapCategory?: CommerceChildCategory | null; window: ShopRankingWindow; metric: ShopRankingMetric; active?: boolean; rowLimit?: number }) {
   const classificationIdsKey = classificationIds.join(",");
@@ -26,7 +26,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
     const url = shopQueryUrl(categoryId, classificationId, classificationIdsKey, heatmapCategory, window, metric, page);
     const cached = readCommerceQuery<TikTokShopsResponse>(key);
     if (cached) {
-      setResult({ category: categoryId ?? "All", data: cached.data });
+      setResult({ scope, data: cached.data });
       setIsLoading(false);
     } else {
       setIsLoading(true);
@@ -36,7 +36,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
     loadCommerceQuery<TikTokShopsResponse>(key, url, cached?.stale ?? false)
       .then((data) => {
         if (cancelled) return;
-        setResult({ category: categoryId ?? "All", data });
+        setResult({ scope, data });
         if (active && page === 1 && !heatmapCategory) {
           scheduleIdleWork(() => {
             for (const nextWindow of (["30d"] as ShopRankingWindow[])) {
@@ -59,9 +59,9 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
       });
 
     return () => { cancelled = true; };
-  }, [active, categoryId, classificationId, classificationIdsKey, heatmapCategory, metric, page, window]);
+  }, [active, categoryId, classificationId, classificationIdsKey, heatmapCategory, metric, page, scope, window]);
 
-  const data = result?.data;
+  const data = result?.scope === scope ? result.data : undefined;
   const shops = data?.shops ?? [];
   const visibleShops = rowLimit ? shops.slice(0, rowLimit) : shops;
   const isGraphFiltered = Boolean(classificationId || classificationIdsKey);
@@ -110,7 +110,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
                 <td className="rank" data-label="Rank"><ShopRank shop={shop} /></td>
                 <td data-label="Shop"><ShopIdentity shop={shop} /></td>
                 <td data-label="Category">
-                  <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" />{displayShopCategory(shop)}</span>
+                  <span className="categoryCell commerceCategoryCell" title={shopCategoryTitle(shop)}><span className="categoryDot" />{isGraphFiltered ? matchedShopClassificationNames(shop)[0] ?? displayShopCategory(shop) : displayShopCategory(shop)}</span>
                 </td>
                 <td data-label={gmvLabel}><strong className="commerceMetric" title={gmvDescription}>{formatCurrencyOrDash(shop.estimated_gmv)}</strong></td>
                 <td data-label="Audience"><span className="creatorAudience" title={audienceEstimateTitle(shop)}>{formatShopAudience(shop)}</span></td>
@@ -124,7 +124,7 @@ export function ShopTable({ categoryId, classificationId = null, classificationI
       </div>
 
       <div className="shopPagination" aria-label="Shop results pagination">
-        <span>{isLoading ? `Updating ${renderedCategory} shops…` : isGraphFiltered ? `${total.toLocaleString()} graph-matched shops · ordered by estimated shop-wide ${window.toUpperCase()} GMV` : data?.categoryId === null ? `${total.toLocaleString()} shops · UGCWEB provisional ${window.toUpperCase()} estimate order` : `${total.toLocaleString()} unique shops · official ${window.toUpperCase()} category ranks`}</span>
+        <span>{isLoading ? `Updating ${renderedCategory} shops…` : isGraphFiltered ? `${total.toLocaleString()} graph-matched shops · ranked by category activity` : data?.categoryId === null ? `${total.toLocaleString()} shops · UGCWEB provisional ${window.toUpperCase()} estimate order` : `${total.toLocaleString()} unique shops · official ${window.toUpperCase()} category ranks`}</span>
         <div>
           <button type="button" disabled={isLoading || renderedPage <= 1} onClick={() => setPage(Math.max(1, renderedPage - 1))}>← Previous</button>
           <strong>Page {renderedPage} of {totalPages}</strong>
@@ -192,8 +192,8 @@ function ShopRank({ shop }: { shop: TikTokShop }) {
   const previous = Number(shop.previous_rank);
   const movement = shop.current_rank && shop.previous_rank && Number.isFinite(current) && Number.isFinite(previous) ? previous - current : 0;
   return (
-    <span title={shop.rank_display_scope === "ugcweb_estimated" ? `UGCWEB provisional ${shop.window.toUpperCase()} estimated-GMV position; official TikTok category rank ${shop.current_rank ? `#${shop.current_rank}` : "unavailable"} in ${shop.official_category_name}` : `${shop.window.toUpperCase()} ${metricLabel(shop.ranking_metric)} official TikTok rank in ${shop.official_category_name}`}>
-      {shop.rank_display_scope === "ugcweb_estimated" ? `#${shop.display_rank}` : shop.current_rank ? `#${shop.current_rank}` : "—"}
+    <span title={shop.rank_display_scope === "graph_activity" ? "Position by matched 30-day video activity, then matched products and videos" : shop.rank_display_scope === "ugcweb_estimated" ? `UGCWEB provisional ${shop.window.toUpperCase()} estimated-GMV position; official TikTok category rank ${shop.current_rank ? `#${shop.current_rank}` : "unavailable"} in ${shop.official_category_name}` : `${shop.window.toUpperCase()} ${metricLabel(shop.ranking_metric)} official TikTok rank in ${shop.official_category_name}`}>
+      {shop.rank_display_scope !== "official_category" ? `#${shop.display_rank}` : shop.current_rank ? `#${shop.current_rank}` : "—"}
       {shop.rank_display_scope === "official_category" && movement !== 0 ? <small className={movement > 0 ? "shopRankUp" : "shopRankDown"}>{movement > 0 ? "↑" : "↓"}{Math.abs(movement)}</small> : null}
     </span>
   );
@@ -249,7 +249,7 @@ function shopWatchlistItem(shop: TikTokShop, heatmapCategory: CommerceChildCateg
     name: shop.shop_name ?? "Unknown Shop",
     imageUrl: shop.shop_thumb_image_url,
     href: `https://shop.tiktok.com/us/store/partnerlinks/${shop.shop_id}`,
-    rank: shop.rank_display_scope === "ugcweb_estimated" ? `#${shop.display_rank ?? "—"}` : shop.current_rank ? `#${shop.current_rank}` : "—",
+    rank: shop.rank_display_scope !== "official_category" ? `#${shop.display_rank ?? "—"}` : shop.current_rank ? `#${shop.current_rank}` : "—",
     category: heatmapCategory ?? shop.category_name,
     gmv: formatCurrencyOrDash(shop.estimated_gmv),
     audience: formatShopAudience(shop),

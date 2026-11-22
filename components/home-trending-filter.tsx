@@ -58,8 +58,12 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
               <button className={(mode === "shops" && shopWindow === "30d") || mode === "creators" ? "active" : ""} type="button" aria-pressed={mode === "creators" || shopWindow === "30d"} onClick={() => mode === "shops" && setShopWindow("30d")}>30D</button>
             </div>
           </div>
+          {mapClassificationIds?.length === 0 ? (
+            <p className="creatorTableStatus shopPagination" role="status">No verified graph classification is available for {heatmapCategory}.</p>
+          ) : <>
           <div hidden={mode !== "shops"}><ShopTable categoryId={shopCategoryIds.join(",") || "all"} {...shopClassification} heatmapCategory={heatmapCategory} window={shopWindow} metric="total_gmv" active={mode === "shops"} /></div>
           <div hidden={mode !== "creators"}><CreatorTable category={creatorCategory} {...creatorClassification} heatmapCategory={heatmapCategory} active={mode === "creators"} /></div>
+          </>}
         </div>
         <aside className="homeRail">
           <section className="previewPanel commerceCategoryPanel">

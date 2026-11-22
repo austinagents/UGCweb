@@ -29,7 +29,7 @@ export async function GET(request: Request) {
   const heatmapCategory = !requestedClassification && !requestedClassifications.length && isCommerceHeatmapCategory(requestedHeatmapCategory) ? requestedHeatmapCategory : null;
 
   try {
-    return edgeCachedJson(request, { edgeTtlSeconds: 120, cacheVersion: "unique-storefronts-v1" }, () => searchParams.get("view") === "trending"
+    return edgeCachedJson(request, { edgeTtlSeconds: 120, cacheVersion: "category-activity-v2" }, () => searchParams.get("view") === "trending"
       ? getTrendingShops(categoryIds, window, metric)
       : requestedClassifications.length
         ? getClassificationShopPage(requestedClassifications.map((category) => category.id), window, metric, page, requestedHeatmapCategory ?? "Selected category")

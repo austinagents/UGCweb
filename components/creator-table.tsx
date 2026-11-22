@@ -10,6 +10,7 @@ import { visibleClassificationById } from "@/lib/partnerlinks-visible-taxonomy";
 import { formatUtcCalendarDate } from "@/lib/utc-date";
 
 type CreatorTableResult = {
+  scope: string;
   category: "All" | CommerceNavigationCategoryName;
   data: CreatorScreenerResponse;
 };
@@ -43,7 +44,7 @@ export function CreatorTable({
     const url = creatorQueryUrl(category, classificationId, classificationIdsKey, heatmapCategory, page);
     const cached = readCommerceQuery<CreatorScreenerResponse>(key, 300_000);
     if (cached) {
-      setResult({ category, data: cached.data });
+      setResult({ scope, category, data: cached.data });
       setIsLoading(false);
     } else {
       setIsLoading(true);
@@ -52,7 +53,7 @@ export function CreatorTable({
     loadCommerceQuery<CreatorScreenerResponse>(key, url, cached?.stale ?? false)
       .then((data) => {
         if (cancelled) return;
-        setResult({ category, data });
+        setResult({ scope, category, data });
         if (active && data.page < data.totalPages) {
           const nextPage = data.page + 1;
           prefetchCommerceQuery<CreatorScreenerResponse>(creatorQueryKey(category, classificationId, classificationIdsKey, heatmapCategory, nextPage), creatorQueryUrl(category, classificationId, classificationIdsKey, heatmapCategory, nextPage));
@@ -66,9 +67,9 @@ export function CreatorTable({
         if (!cancelled) setIsLoading(false);
       });
     return () => { cancelled = true; };
-  }, [active, category, classificationId, classificationIdsKey, heatmapCategory, page]);
+  }, [active, category, classificationId, classificationIdsKey, heatmapCategory, page, scope]);
 
-  const data = result?.data;
+  const data = result?.scope === scope ? result.data : undefined;
   const creators = data?.creators ?? [];
   const renderedCategory = result?.category ?? category;
   const selectedClassification = visibleClassificationById(classificationId);

@@ -284,7 +284,12 @@ export async function getClassificationShopPage(classificationId:string | readon
   const classificationIds=ids.map(sqlCategoryId).join(","), estimateColumn=`estimated_${window}_gmv`, sourceCategoryColumn=`source_${window}_category_id`, sourceRankColumn=`source_${window}_rank`;
   const total=Number((await database.prepare(`SELECT count(DISTINCT cm.shop_id) count FROM classification_shops cm JOIN shop_estimates se ON se.shop_id=cm.shop_id WHERE cm.visible_classification_id IN (${classificationIds})`).first<{count:number}>())?.count??0);
   const totalPages=Math.max(1,Math.ceil(total/pageSize)),safePage=Math.min(Math.max(1,page),totalPages);
-  const rows=(await database.prepare(`SELECT se.shop_id,se.${estimateColumn} estimated_gmv,se.${sourceCategoryColumn} category_id,se.${sourceRankColumn} official_rank,s.shop_name,s.shop_logo_url,s.storefront_url,s.shop_sold_count,s.weighted_median_price,s.followers,s.estimated_30d_gmv,ro.category_name,ro.capture_date,ro.${metric}_previous_rank official_previous_rank,ro.${metric}_rank_change official_rank_change FROM shop_estimates se JOIN shops s ON s.shop_id=se.shop_id JOIN (SELECT DISTINCT shop_id FROM classification_shops WHERE visible_classification_id IN (${classificationIds})) cm ON cm.shop_id=se.shop_id LEFT JOIN ranking_observations ro ON ro.shop_id=se.shop_id AND ro.window=? AND ro.category_id=se.${sourceCategoryColumn} ORDER BY se.${estimateColumn} DESC,se.shop_id LIMIT ? OFFSET ?`).bind(window,pageSize,(safePage-1)*pageSize).all<Record<string,string|number|null>>()).results;
+  const rows=(await database.prepare(`SELECT se.shop_id,se.${estimateColumn} estimated_gmv,se.${sourceCategoryColumn} category_id,se.${sourceRankColumn} official_rank,s.shop_name,s.shop_logo_url,s.storefront_url,s.shop_sold_count,s.weighted_median_price,s.followers,s.estimated_30d_gmv,ro.category_name,ro.capture_date,ro.${metric}_previous_rank official_previous_rank,ro.${metric}_rank_change official_rank_change FROM shop_estimates se JOIN shops s ON s.shop_id=se.shop_id JOIN (
+    SELECT shop_id, MAX(snapshot_30d_video_count) recent_activity,
+      MAX(product_count) matched_products, MAX(video_count) matched_videos
+    FROM classification_shops WHERE visible_classification_id IN (${classificationIds})
+    GROUP BY shop_id
+  ) cm ON cm.shop_id=se.shop_id LEFT JOIN ranking_observations ro ON ro.shop_id=se.shop_id AND ro.window=? AND ro.category_id=se.${sourceCategoryColumn} ORDER BY cm.recent_activity DESC, cm.matched_products DESC, cm.matched_videos DESC, se.shop_id LIMIT ? OFFSET ?`).bind(window,pageSize,(safePage-1)*pageSize).all<Record<string,string|number|null>>()).results;
   const shops=await attachVerifiedShopClassifications(rows.map((row,index)=>toShopRow(row,index+(safePage-1)*pageSize,window,metric)),ids);
   return {categoryId:requestedIds[0]??null,categoryName:resultLabel,categories:[...tiktokShopCategories],window,metric,captureDate:shops[0]?.capture_date??null,total,page:safePage,pageSize,totalPages,count:shops.length,shops};
 }
@@ -471,7 +476,7 @@ function toShopRow(row: Record<string, string | number | null>, index: number, w
     shop_id:String(row.shop_id), shop_name:row.shop_name?String(row.shop_name):null, shop_thumb_image_url:row.shop_logo_url?String(row.shop_logo_url):null,
     shop_status:null, shop_share_link:row.storefront_url?String(row.storefront_url):null, tiktok_username:null, tiktok_profile_url:null,
     tiktok_profile_source:null, tiktok_profile_verified_at:null, category_id:officialCategoryId, category_name:navigationCategoryName,
-    window, ranking_metric:metric, display_rank:index+1, rank_display_scope:"ugcweb_estimated",
+    window, ranking_metric:metric, display_rank:index+1, rank_display_scope:"graph_activity",
     current_rank:row.official_rank==null?null:String(row.official_rank), previous_rank:row.official_previous_rank==null?null:String(row.official_previous_rank),
     rank_change:row.official_rank_change==null?null:String(row.official_rank_change), official_category_id:officialCategoryId,
     official_category_name:row.category_name?String(row.category_name):tiktokShopCategories.find((item)=>item.id===officialCategoryId)?.name??"Unranked",

@@ -168,7 +168,7 @@ export type TikTokShop = {
   window: ShopRankingWindow;
   ranking_metric: ShopRankingMetric;
   display_rank: number | null;
-  rank_display_scope: "official_category" | "ugcweb_estimated";
+  rank_display_scope: "official_category" | "ugcweb_estimated" | "graph_activity";
   current_rank: string | null;
   previous_rank: string | null;
   rank_change: string | null;
