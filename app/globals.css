@@ -95,11 +95,23 @@ kbd { padding: 2px 6px; border: 1px solid var(--line); color: var(--green); back
   height: 15px;
 }
 
-.navTabs a.marketplaceNavTab {
-  gap: 4px;
-  padding-inline: 7px;
+.navTabs a.discordNavTab {
+  gap: 7px;
+  padding-inline: 12px;
+  border-color: #5865f2;
+  background: #5865f2;
+  color: #fff;
+  font-weight: 700;
   white-space: nowrap;
 }
+
+.navTabs a.discordNavTab:hover {
+  border-color: #6d78f5;
+  background: #6571f3;
+  color: #fff;
+}
+
+.discordMark { flex: 0 0 auto; }
 
 .navTabs .betaNavTab {
   display: inline-flex;
@@ -7789,6 +7801,39 @@ body {
 }
 
 /* Homepage layout reset must follow the later production overrides above. */
+.homeStack {
+  --trending-extension: 0px;
+  --boost-extra-height: 0px;
+  --boost-lift-height: 0px;
+}
+
+.homePrimary,
+.primaryTable {
+  min-height: 0;
+}
+
+.primaryTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.primaryTable .tableWrap {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.homeRail {
+  align-content: start;
+  grid-template-rows: auto 1fr;
+  height: auto;
+}
+
+.homeRail > .boostPanel {
+  height: 100%;
+  min-height: 0;
+}
+
 @media (max-width: 1180px) {
   .homePrimary,
   .homeSecondary {

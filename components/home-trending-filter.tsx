@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CreatorTable } from "@/components/creator-table";
+import { BoostPanel } from "@/components/boost-panel";
 import { CommerceCategoryMap } from "@/components/heatmap";
 import { PromotedMomentumRail } from "@/components/promoted-momentum-rail";
 import { ShopTable } from "@/components/shop-table";
@@ -9,6 +10,7 @@ import { commerceNavigationCategories, type CommerceChildCategory, type Commerce
 import { isCommerceHeatmapCategory } from "@/lib/commerce-heatmap-categories";
 import { commerceHeatmapClassificationIds } from "@/lib/commerce-classification-map";
 import type { ShopRankingWindow } from "@/lib/types";
+import { boostTiers } from "@/lib/data";
 
 type ScreenerCategory = "All" | CommerceNavigationCategoryName;
 type ScreenerMode = "shops" | "creators";
@@ -73,6 +75,7 @@ export function HomeTrendingFilter({ initialMode, initialCategory, initialHeatma
               onSelect={setHeatmapCategory}
             />
           </section>
+          <BoostPanel tiers={boostTiers} />
         </aside>
       </section>
     </>

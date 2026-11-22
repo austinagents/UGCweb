@@ -1,11 +1,10 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CreatorAvatar } from "@/components/creator-avatar";
-import { BoostPanel } from "@/components/boost-panel";
 import { HomeTrendingFilter } from "@/components/home-trending-filter";
 import { ToolLogo } from "@/components/tool-logo";
 import { WorkflowStack } from "@/components/workflow-stack";
-import { boostTiers, creatorIntelligenceStatus, creators, movementEvents, tools, workflows } from "@/lib/data";
+import { creatorIntelligenceStatus, creators, movementEvents, tools, workflows } from "@/lib/data";
 import { creatorTagDisplayLabel } from "@/lib/creator-tags";
 import { displayCategory } from "@/lib/format";
 
@@ -15,11 +14,6 @@ export default function DiscoverPage({ searchParams }: { searchParams: { mode?: 
   return (
     <div className="homeStack">
       <HomeTrendingFilter initialMode={searchParams.mode} initialCategory={searchParams.category} initialHeatmapCategory={searchParams.heatmap_category} />
-      <section className="homeSecondary">
-        <BoostPanel tiers={boostTiers} />
-      </section>
-
-
     </div>
   );
 }
