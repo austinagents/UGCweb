@@ -6255,6 +6255,24 @@ a:hover .toolLogo {
   margin-left: 27.2px;
 }
 
+@media (min-width: 761px) {
+  .homePrimary .shopScreenerTable th:last-child,
+  .homePrimary .shopScreenerTable td[data-label="Watchlist"] {
+    text-align: center;
+    text-indent: 0;
+  }
+
+  .homePrimary .shopScreenerTable td[data-label="Watchlist"] .commerceWatchlistTag {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1181px) {
+  .homePrimary .shopScreenerTable :is(th, td):nth-child(5) {
+    padding-inline-start: 15px;
+  }
+}
+
 .watchlistScreen {
   display: grid;
   gap: 14px;
@@ -7890,7 +7908,7 @@ body {
   }
 
   .homeStack > :is(.promotedRail, .screenTabs) {
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
   }
 
   .homeSecondary > .boostPanel {
