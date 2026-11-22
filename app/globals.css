@@ -87,8 +87,119 @@ kbd { padding: 2px 6px; border: 1px solid var(--line); color: var(--green); back
 .navTabs a:hover, .iconTextButton:hover, .profilePill:hover, .pickerGrid .selected { border-color: var(--green); color: var(--green); }
 
 .navTabs .googleSignupNavTab {
-  cursor: default;
+  font: inherit;
+  padding-inline: 20.5px;
 }
+
+.authDialog {
+  width: min(100% - 32px, 400px);
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  box-shadow: 0 20px 64px rgb(0 0 0 / 48%);
+}
+
+.authDialog::backdrop {
+  background: rgb(0 0 0 / 68%);
+}
+
+html:has(.authDialog[open]) {
+  overflow: hidden;
+}
+
+.authDialogPanel {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+}
+
+.authDialogPanel h2 {
+  margin: 0 28px 2px 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.authDialogClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.authDialogClose:hover {
+  background: var(--bg-main);
+}
+
+.authDialogActions {
+  display: grid;
+  gap: 10px;
+}
+
+.authDialogAction {
+  min-width: 0;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 7px;
+  background: #0b1014;
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.authDialogAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.authDialogAction:disabled,
+.authDialogLink:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.authDialogFooter,
+.authDialogAvailability {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.authDialogFooter,
+.authDialogAvailability {
+  text-align: center;
+}
+
+.authDialogLink {
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .googleMark {
   flex: 0 0 15px;
   width: 15px;
@@ -3479,7 +3590,7 @@ body {
 
   .topbar .navTabs > .googleSignupNavTab {
     margin-inline-start: auto;
-    padding-inline: 10px;
+    padding-inline: 20px;
   }
 }
 
