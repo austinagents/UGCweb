@@ -10,7 +10,7 @@ import { LOCAL_CREATORS_KEY, LOCAL_PRODUCTS_KEY } from "@/lib/local-graph";
 import { CommandSearch } from "./command-search";
 
 const tabs = [
-  { href: "https://discord.com", label: "Discord", icon: DiscordMark, className: "discordNavTab", external: true },
+  { href: "https://discord.gg/RbWjMUdFte", label: "Discord", icon: DiscordMark, className: "discordNavTab", external: true },
   { href: "/heatmap", label: "Heatmap", icon: Grid2X2 },
   { href: "/watchlist", label: "Watchlist", icon: Bookmark }
 ];
