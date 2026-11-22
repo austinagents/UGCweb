@@ -59,8 +59,12 @@ function usePrimaryNavigationPrefetch() {
     const prefetch = () => {
       for (const route of ["/", "/marketplace", "/heatmap", "/watchlist", "/search"]) router.prefetch(route);
     };
-    const idleId = window.requestIdleCallback(prefetch, { timeout: 2500 });
-    return () => window.cancelIdleCallback(idleId);
+    if (typeof window.requestIdleCallback === "function" && typeof window.cancelIdleCallback === "function") {
+      const idleId = window.requestIdleCallback(prefetch, { timeout: 2500 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+    const timeoutId = window.setTimeout(prefetch, 500);
+    return () => window.clearTimeout(timeoutId);
   }, [router]);
 }
 
